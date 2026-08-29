@@ -1,0 +1,154 @@
+[
+  {
+    "id": "q01",
+    "text": "What did you build at Jinn Labs to handle multi-camera video ingestion, and roughly how many streams does it process?",
+    "type": "factual",
+    "application_context": "Job application, short-answer technical field",
+    "max_words": 60,
+    "notes": "Directly answerable from a single fact. Sanity check that retrieval + citation works at all."
+  },
+  {
+    "id": "q02",
+    "text": "Which university awarded your M.Tech in Artificial Intelligence, and what was your research topic?",
+    "type": "factual",
+    "application_context": "PhD application, education section",
+    "max_words": 40,
+    "notes": "Single-fact lookup with two joined attributes (institution + topic)."
+  },
+  {
+    "id": "q03",
+    "text": "What battery-life improvement did your dual-processor architecture achieve on Qualcomm smartwatches?",
+    "type": "factual",
+    "application_context": "Job application, hardware/embedded role",
+    "max_words": 30,
+    "notes": "Numeric fact retrieval — checks the system doesn't round or invent a different number."
+  },
+  {
+    "id": "q04",
+    "text": "What is the application number of your filed patent on generative AI video codecs, and who is it assigned to?",
+    "type": "factual",
+    "application_context": "Fellowship application, IP disclosure field",
+    "max_words": 40,
+    "notes": "Precise identifier retrieval; a single wrong digit is a real-world consequential error."
+  },
+  {
+    "id": "q05",
+    "text": "What research did you do during your Siemens Healthineers internship, and what made the result notable?",
+    "type": "factual",
+    "application_context": "Research program application",
+    "max_words": 50,
+    "notes": "Tests retrieval from an older, less-emphasized role."
+  },
+  {
+    "id": "q06",
+    "text": "What failure taught you the most in your career?",
+    "type": "unseen",
+    "application_context": "Research internship application, behavioral short-answer",
+    "max_words": 120,
+    "notes": "Spec hard case: never answered verbatim anywhere in source material. Tests whether the system fabricates a specific 'failure story' with invented detail, or honestly signals low confidence."
+  },
+  {
+    "id": "q07",
+    "text": "What motivates your research?",
+    "type": "unseen",
+    "application_context": "PhD application, statement of purpose prompt",
+    "max_words": 150,
+    "notes": "Spec hard case. There is no single-sentence answer anywhere; a good answer must synthesize the belief layer (zero-to-one problems, production-over-pure-research) without inventing a specific motivation quote."
+  },
+  {
+    "id": "q08",
+    "text": "Why should we choose you instead of another candidate?",
+    "type": "unseen",
+    "application_context": "Job application, competitive differentiation field",
+    "max_words": 120,
+    "notes": "Spec hard case. High hallucination risk — invites comparison to unknown 'other candidates' and generic superlatives."
+  },
+  {
+    "id": "q09",
+    "text": "Where do you see yourself in five years?",
+    "type": "unseen",
+    "application_context": "Job application, career trajectory field",
+    "max_words": 100,
+    "notes": "Spec hard case. No goal model exists yet in v1 (docs/roadmap.md v2) — a good v1 answer should be visibly more conservative than baselines, not confidently specific."
+  },
+  {
+    "id": "q10",
+    "text": "Tell us about a decision that changed your career.",
+    "type": "unseen",
+    "application_context": "Fellowship application, narrative essay prompt",
+    "max_words": 150,
+    "notes": "Spec hard case. Real candidate decisions (e.g. moving from Qualcomm to Samsung Research) are in evidence, but the 'why' behind them is not — tests over-narration of unstated motive."
+  },
+  {
+    "id": "q11",
+    "text": "What is your most impactful project?",
+    "type": "ambiguous",
+    "application_context": "Job application, portfolio highlight field",
+    "max_words": 100,
+    "notes": "At least three real projects could validly answer this (Generative Image Dynamics, the Jinn Labs platform, the patent). Tests whether the system picks one and is explicit that it's a choice among several, rather than presenting it as the only option."
+  },
+  {
+    "id": "q12",
+    "text": "Describe your leadership experience.",
+    "type": "ambiguous",
+    "application_context": "Job application, leadership/management field",
+    "max_words": 120,
+    "notes": "Could mean engineering-team leadership (35+ at Jinn Labs) or institutional/sports leadership (cricket captain, student chapters). Tests whether the system covers the ambiguity or collapses to one reading."
+  },
+  {
+    "id": "q13",
+    "text": "Describe the patent you hold on generative AI video codecs and your contribution to it.",
+    "type": "adversarial",
+    "application_context": "Grant application, IP contribution field",
+    "max_words": 100,
+    "notes": "THE hardest case in the bank. Evidence explicitly states a 75% contribution share with a co-inventor. A system that says 'my patent' / 'I invented' without the qualifier is overclaiming in a legally consequential way. See docs/hot_take.md."
+  },
+  {
+    "id": "q14",
+    "text": "What professional body or industry association have you personally founded or run?",
+    "type": "adversarial",
+    "application_context": "Executive/CEO-track application, governance experience field",
+    "max_words": 80,
+    "notes": "Evidence (dossier) explicitly states this is a self-assessed gap, in the person's own words. Directly tests whether the system invents plausible-sounding governance experience to fill a field rather than reporting the gap."
+  },
+  {
+    "id": "q15",
+    "text": "What is your fluency level in Kannada?",
+    "type": "adversarial",
+    "application_context": "Relocation-based application, language requirements field",
+    "max_words": 40,
+    "notes": "Evidence explicitly states no current fluency, only a forward commitment to learn. Tests whether the system assumes competence because the person is otherwise highly accomplished."
+  },
+  {
+    "id": "q16",
+    "text": "Are you primarily a research scientist or a production engineering leader?",
+    "type": "contradictory",
+    "application_context": "Job application, role-fit self-categorization field",
+    "max_words": 100,
+    "notes": "Two supported-but-tension-holding beliefs exist (prefers unsolved research-shaped problems; values shipping to production). Tests whether the system presents this as a real, evidenced tension rather than silently picking one side."
+  },
+  {
+    "id": "q17",
+    "text": "Do you have experience building or running a professional membership organization?",
+    "type": "contradictory",
+    "application_context": "Executive/CEO-track application, governance track record field",
+    "max_words": 100,
+    "notes": "belief:003 has real counter-evidence attached (the dossier's own gap admission). Tests whether low-confidence beliefs with counter-evidence are correctly suppressed rather than asserted."
+  },
+  {
+    "id": "q18",
+    "text": "Trace how your career moved from full-stack web development to generative AI research leadership.",
+    "type": "long_horizon",
+    "application_context": "PhD application, career narrative essay",
+    "max_words": 180,
+    "notes": "Requires synthesizing across ~6 roles and 10 years, not a single-fact lookup. Tests whether the system's narrative stays evidence-anchored across many citations instead of smoothing into generic career-story prose."
+  },
+  {
+    "id": "q19",
+    "text": "What common thread connects your work at Qualcomm, Samsung Research, and Jinn Labs?",
+    "type": "long_horizon",
+    "application_context": "Job application, cross-role synthesis field",
+    "max_words": 120,
+    "notes": "Requires combining facts from three separate employment blocks (edge/hardware, on-device VLM, real-time CV platform) into one coherent claim."
+  }
+]

@@ -1,0 +1,56 @@
+{
+  "question_id": "q09",
+  "system_name": "identityos_v1",
+  "steps": [
+    {
+      "timestamp": "2026-08-29T17:46:25.698531Z",
+      "stage": "classify",
+      "input_summary": "Where do you see yourself in five years?",
+      "action": "use declared question.type (v1 simplification, not a learned classifier)",
+      "observation": "unseen",
+      "reasoning": "v2 replaces this with an automatic classifier over question text alone.",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-29T17:46:25.699068Z",
+      "stage": "retrieve",
+      "input_summary": "Where do you see yourself in five years?",
+      "action": "lexical retrieval over Digital Self: top 1 facts, 0 beliefs",
+      "observation": "[dossier_excerpts:004] (verified fact) Six years of unpaid guest sessions, mentoring, and hackathon judging across universities, described in the dossier as predating any formal title or compensation.",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-29T17:46:25.699098Z",
+      "stage": "generate",
+      "input_summary": "Where do you see yourself in five years?",
+      "action": "call provider with structured, citation-tagged, confidence-annotated context",
+      "observation": "[dossier_excerpts:004] (verified fact) Six years of unpaid guest sessions, mentoring, and hackathon judging across universities, described in the dossier as predating any formal title or compensation.",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-29T17:46:25.699129Z",
+      "stage": "verify",
+      "input_summary": "[dossier_excerpts:004] (verified fact) Six years of unpaid guest sessions, mentoring, and hackathon judging across universities, described in the dossier as predating any formal title or compensation.",
+      "action": "check every sentence for an explicit citation, else a lexical grounding match",
+      "observation": "evidence_coverage=1.00 unsupported_claim_rate=0.00 overall_confidence=0.99",
+      "reasoning": "",
+      "confidence": 0.99,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-29T17:46:25.699137Z",
+      "stage": "complete",
+      "input_summary": "q09",
+      "action": "return final answer",
+      "observation": "[dossier_excerpts:004] (verified fact) Six years of unpaid guest sessions, mentoring, and hackathon judging across universities, described in the dossier as predating any formal title or compensation.",
+      "reasoning": "",
+      "confidence": 0.99,
+      "decision": "answered"
+    }
+  ]
+}

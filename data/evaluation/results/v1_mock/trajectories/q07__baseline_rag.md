@@ -1,0 +1,13 @@
+### Trajectory — baseline_rag — q07
+
+**17:46:25 · retrieve**
+- input: What motivates your research?
+- action: dump the entire fact store as unstructured text (no ranking, no ids)
+- observation: 75 facts included, no relevance filtering
+- reasoning: Baseline 2 has retrieval but no structure and no grounding check.
+
+**17:46:25 · generate**
+- input: What motivates your research?
+- action: call provider with the full unstructured context dump
+- observation: Named inventor, patent Application No. 202511076834, "Generative AI based video codecs utilizing image-to-video generation", filed through Samsung Research Noida and assigned to Samsung Electronics Co., Ltd. Leads a 35+ member cross-functional team (CV/ML research, edge and cloud infra, backend, frontend) as Head of Engineering and Innovation, owning hiring, roadmap, architecture review, and delivery. Staff Computer Vision Researcher, Samsung Research (AR Core Team), Noida India, Sep 2023 - Nov 2025. Led a team of 15 developers with end-to-end ownership of development at Samsung Research.
+- decision: answered_unverified

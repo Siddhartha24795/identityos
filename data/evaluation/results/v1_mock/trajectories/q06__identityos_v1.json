@@ -1,0 +1,56 @@
+{
+  "question_id": "q06",
+  "system_name": "identityos_v1",
+  "steps": [
+    {
+      "timestamp": "2026-08-29T17:46:25.692649Z",
+      "stage": "classify",
+      "input_summary": "What failure taught you the most in your career?",
+      "action": "use declared question.type (v1 simplification, not a learned classifier)",
+      "observation": "unseen",
+      "reasoning": "v2 replaces this with an automatic classifier over question text alone.",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-29T17:46:25.693179Z",
+      "stage": "retrieve",
+      "input_summary": "What failure taught you the most in your career?",
+      "action": "lexical retrieval over Digital Self: top 1 facts, 0 beliefs",
+      "observation": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-29T17:46:25.693220Z",
+      "stage": "generate",
+      "input_summary": "What failure taught you the most in your career?",
+      "action": "call provider with structured, citation-tagged, confidence-annotated context",
+      "observation": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-29T17:46:25.693259Z",
+      "stage": "verify",
+      "input_summary": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+      "action": "check every sentence for an explicit citation, else a lexical grounding match",
+      "observation": "evidence_coverage=1.00 unsupported_claim_rate=0.00 overall_confidence=0.99",
+      "reasoning": "",
+      "confidence": 0.99,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-29T17:46:25.693269Z",
+      "stage": "complete",
+      "input_summary": "q06",
+      "action": "return final answer",
+      "observation": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+      "reasoning": "",
+      "confidence": 0.99,
+      "decision": "answered"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "question_id": "q06",
+  "system_name": "baseline_rag",
+  "steps": [
+    {
+      "timestamp": "2026-08-29T17:46:25.691889Z",
+      "stage": "retrieve",
+      "input_summary": "What failure taught you the most in your career?",
+      "action": "dump the entire fact store as unstructured text (no ranking, no ids)",
+      "observation": "75 facts included, no relevance filtering",
+      "reasoning": "Baseline 2 has retrieval but no structure and no grounding check.",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-29T17:46:25.692637Z",
+      "stage": "generate",
+      "input_summary": "What failure taught you the most in your career?",
+      "action": "call provider with the full unstructured context dump",
+      "observation": "Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+      "reasoning": "",
+      "confidence": null,
+      "decision": "answered_unverified"
+    }
+  ]
+}

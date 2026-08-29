@@ -1,0 +1,16 @@
+{
+  "question_id": "q01",
+  "system_name": "baseline_plain",
+  "steps": [
+    {
+      "timestamp": "2026-08-29T17:46:25.681164Z",
+      "stage": "generate",
+      "input_summary": "What did you build at Jinn Labs to handle multi-camera video ingestion, and roughly how many streams does it process?",
+      "action": "call provider with zero context, zero verification",
+      "observation": "I believe my track record speaks directly to this question. When it comes to build and camera and handle, I have always taken a proactive, results-driven approach and delivered measurable impact. I am confident this reflects who I am professionally.",
+      "reasoning": "Baseline 1 has no retrieval and no grounding check by design.",
+      "confidence": null,
+      "decision": "answered_unverified"
+    }
+  ]
+}
