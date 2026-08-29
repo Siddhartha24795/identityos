@@ -40,7 +40,23 @@ file, not slides.
    provider's extractive behavior — call this out explicitly as the kind of
    mistake worth showing, not hiding.
 
-6. **Hot take (15s).** One line from docs/hot_take.md: confidence that
+6. **Hot take, v1 (15s).** One line from docs/hot_take.md: confidence that
    measures "is this true" is not confidence that measures "does this
    answer the question" — refusal never fired even on the hardest
    questions, because v1 only checks the former.
+
+7. **v2, in one real case (60s).** State the extension: assessing fit
+   against a real job description's 14 requirements, scored against the
+   real human's own prior self-assessment. Open
+   `data/evaluation/results/v2_mock/trajectories/req14__identityos_v2.md` —
+   the single most important requirement (a real, admitted governance gap).
+   Show that the system correctly retrieved and cited the exact sentence
+   admitting the gap — and initially still mislabeled it a positive match,
+   because grounding and polarity got conflated (docs/hot_take.md's v2
+   addendum). Show the fix, and say plainly that one case (req08) is still
+   wrong today.
+
+8. **Close (15s).** One sentence: the throughline across both versions is
+   the same mistake in two different disguises — grounding tells you a
+   claim is real, not what it means. That's the thing to fix next, not to
+   paper over.

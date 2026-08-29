@@ -1,0 +1,46 @@
+{
+  "question_id": "req08",
+  "system_name": "identityos_v2",
+  "steps": [
+    {
+      "timestamp": "2026-08-29T18:01:54.473069Z",
+      "stage": "retrieve",
+      "input_summary": "Revenue & P&L management",
+      "action": "lexical retrieval over Digital Self: top 2 facts, 0 beliefs",
+      "observation": "[resume:025] (verified fact) Did API development, bug resolution, fraud detection, and revenue forecasting using Java, Python, Mockito, Postman, MySQL, machine learning, and NLP.\n[resume:061] (verified fact) Dual-processor smartwatch power management architecture at Qualcomm, increasing battery backup by about 40%.",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-29T18:01:54.473129Z",
+      "stage": "generate",
+      "input_summary": "Revenue & P&L management",
+      "action": "call provider with cited, confidence-annotated context",
+      "observation": "[resume:025] (verified fact) Did API development, bug resolution, fraud detection, and revenue forecasting using Java, Python, Mockito, Postman, MySQL, machine learning, and NLP. [resume:061] (verified fact) Dual-processor smartwatch power management architecture at Qualcomm, increasing battery backup by about 40%. Revenue & P&L management REQUIREMENT:",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-29T18:01:54.473185Z",
+      "stage": "verify",
+      "input_summary": "[resume:025] (verified fact) Did API development, bug resolution, fraud detection, and revenue forecasting using Java, Python, Mockito, Postman, MySQL, machine learning, and NLP. [resume:061] (verified fact) Dual-processor smartwatch power management architecture at Qualcomm, increasing battery backup by about 40%. Revenue & P&L management REQUIREMENT:",
+      "action": "per-sentence grounding check (same verifier as v1)",
+      "observation": "coverage=0.67 confidence=0.66",
+      "reasoning": "",
+      "confidence": 0.66,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-29T18:01:54.473190Z",
+      "stage": "bucket",
+      "input_summary": "[resume:025] (verified fact) Did API development, bug resolution, fraud detection, and revenue forecasting using Java, Python, Mockito, Postman, MySQL, machine learning, and NLP. [resume:061] (verified fact) Dual-processor smartwatch power management architecture at Qualcomm, increasing battery backup by about 40%. Revenue & P&L management REQUIREMENT:",
+      "action": "derive fit bucket from coverage+confidence, not a self-reported label",
+      "observation": "met_or_better",
+      "reasoning": "A self-reported label from generation isn't independently checkable; a derived one is.",
+      "confidence": null,
+      "decision": "met_or_better"
+    }
+  ]
+}

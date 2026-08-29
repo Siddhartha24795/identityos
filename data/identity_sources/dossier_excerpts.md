@@ -13,6 +13,8 @@ Siddhartha's stated inventorship contribution on this patent is 75%, with the re
 Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group.
 Six years of unpaid guest sessions, mentoring, and hackathon judging across universities, described in the dossier as predating any formal title or compensation.
 
+Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.
+
 ## SELF-ASSESSED GAP
 Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.
 Siddhartha's own dossier states he is fluent in English and Hindi but not yet in Kannada, and frames relocation plus Kannada learning as conditions he is committing to, not concessions being requested.

@@ -1,8 +1,14 @@
 # Hot take
 
-**Confidence that measures "is this evidence true" is not the same signal
-as confidence that measures "is this evidence a good answer to this
-question" — and conflating them silently disables your refusal policy.**
+**Grounding metrics only check whether a claim traces to evidence — not
+what the claim actually says. Confidence that measures "is this evidence
+true" gets silently reused as a stand-in for "is this a good answer" and
+for "is this a positive answer," and neither substitution is safe.**
+
+v1 found the first substitution (relevance). v2 found the second
+(polarity), independently, by running the same verification machinery
+against a real, adjudicated application. Both read as the same underlying
+mistake once you see them side by side.
 
 ## What we observed
 
@@ -35,7 +41,7 @@ genuinely reduces *hallucination*. It does nothing, by itself, about
 *misdirection* — confidently citing something real that doesn't address the
 question. Both look identical in a naive confidence score.
 
-## What we'd build differently next (and will, in v2)
+## What we'd build differently next (v1's plan — partially still open)
 
 Confidence needs to be a product of two independently-estimated terms:
 `P(evidence is true) x P(evidence actually answers this question)`. The
@@ -45,7 +51,34 @@ or a verifier that checks the *question* against the *claim*, not just the
 claim against its source. Neither existed in v1 because the original
 design brief's verification-dimension list (docs/architecture.md) doesn't
 name this distinction either — we found it by running the eval, not by
-reading the spec more carefully.
+reading the spec more carefully. **Still not built** — v2 built the
+polarity fix below instead, because it surfaced first and mattered more on
+a real, adjudicated application. Relevance-scoring stays open for v2.1+.
+
+## v2 addendum: the same mistake, a different substitution
+
+Running the v1-style verifier against a real 14-requirement application
+(docs/evaluation_v2.md) found a second, more dangerous instance of the same
+underlying error. Requirement 14 asked whether the person has ever run a
+professional membership body; the real, honest answer is no. IdentityOS
+retrieved and *correctly cited* the exact sentence stating this gap — full
+evidence coverage, 0.89 confidence — and the bucketing rule, which only
+checked coverage and confidence, called it `met_or_better`. **A
+well-grounded claim can be a well-grounded "no."** Confidence there was
+standing in for "is this a positive answer," which it was never designed
+to measure.
+
+The fix (a lexical negation check on cited claim text,
+`services/application_engine/bucketing.py`) caught this exact case and one
+other (req09), but is coarse — sentence-level, not clause-level — and still
+misses one real case (req08) and safely-but-wrongly underclaims another
+(req13). All three are documented, not patched away, in
+docs/evaluation_v2.md. The pattern across both versions: **grounding
+verification answers "did this really come from evidence," and every time
+we've needed it to also answer "does this evidence mean what the sentence
+around it implies," it has silently failed to, in a different way each
+time.** That looks like a property of grounding-based verification in
+general, not a bug specific to either version.
 
 ## The experiment we removed
 

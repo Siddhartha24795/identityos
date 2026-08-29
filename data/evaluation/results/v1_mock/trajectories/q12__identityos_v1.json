@@ -3,7 +3,7 @@
   "system_name": "identityos_v1",
   "steps": [
     {
-      "timestamp": "2026-08-29T17:46:25.704187Z",
+      "timestamp": "2026-08-29T18:01:54.275178Z",
       "stage": "classify",
       "input_summary": "Describe your leadership experience.",
       "action": "use declared question.type (v1 simplification, not a learned classifier)",
@@ -13,29 +13,29 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-29T17:46:25.704733Z",
+      "timestamp": "2026-08-29T18:01:54.275747Z",
       "stage": "retrieve",
       "input_summary": "Describe your leadership experience.",
       "action": "lexical retrieval over Digital Self: top 3 facts, 0 beliefs",
-      "observation": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.\n[dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.\n[resume:046] (verified fact) System Design, Leadership, JavaScript, HTML, CSS, Hardware Abstraction Layer, Linux, Shell Scripting.",
+      "observation": "[dossier_excerpts:009] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.\n[dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.\n[resume:046] (verified fact) System Design, Leadership, JavaScript, HTML, CSS, Hardware Abstraction Layer, Linux, Shell Scripting.",
       "reasoning": "",
       "confidence": null,
       "decision": ""
     },
     {
-      "timestamp": "2026-08-29T17:46:25.704809Z",
+      "timestamp": "2026-08-29T18:01:54.275822Z",
       "stage": "generate",
       "input_summary": "Describe your leadership experience.",
       "action": "call provider with structured, citation-tagged, confidence-annotated context",
-      "observation": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. [resume:046] (verified fact) System Design, Leadership, JavaScript, HTML, CSS, Hardware Abstraction Layer, Linux, Shell Scripting.",
+      "observation": "[dossier_excerpts:009] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. [resume:046] (verified fact) System Design, Leadership, JavaScript, HTML, CSS, Hardware Abstraction Layer, Linux, Shell Scripting.",
       "reasoning": "",
       "confidence": null,
       "decision": ""
     },
     {
-      "timestamp": "2026-08-29T17:46:25.704883Z",
+      "timestamp": "2026-08-29T18:01:54.275897Z",
       "stage": "verify",
-      "input_summary": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. [resume:046] (verified fact) System Design, Leadership, JavaScript, HTML, CSS, Hardware Abstraction Layer, Linux, Shell Scripting.",
+      "input_summary": "[dossier_excerpts:009] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. [resume:046] (verified fact) System Design, Leadership, JavaScript, HTML, CSS, Hardware Abstraction Layer, Linux, Shell Scripting.",
       "action": "check every sentence for an explicit citation, else a lexical grounding match",
       "observation": "evidence_coverage=1.00 unsupported_claim_rate=0.00 overall_confidence=0.99",
       "reasoning": "",
@@ -43,11 +43,11 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-29T17:46:25.704892Z",
+      "timestamp": "2026-08-29T18:01:54.275906Z",
       "stage": "complete",
       "input_summary": "q12",
       "action": "return final answer",
-      "observation": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. [resume:046] (verified fact) System Design, Leadership, JavaScript, HTML, CSS, Hardware Abstraction Layer, Linux, Shell Scripting.",
+      "observation": "[dossier_excerpts:009] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. [resume:046] (verified fact) System Design, Leadership, JavaScript, HTML, CSS, Hardware Abstraction Layer, Linux, Shell Scripting.",
       "reasoning": "",
       "confidence": 0.9899999999999999,
       "decision": "answered"

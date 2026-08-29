@@ -1,0 +1,31 @@
+### Trajectory — identityos_v2 — req12
+
+**18:01:54 · retrieve**
+- input: Location — Bengaluru, India (domestic travel only); primarily external-facing role
+- action: lexical retrieval over Digital Self: top 8 facts, 0 beliefs
+- observation: [dossier_excerpts:003] (verified fact) Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group.
+[dossier_excerpts:005] (verified fact) Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.
+[dossier_excerpts:009] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.
+[dossier_excerpts:012] (verified fact) Siddhartha's dossier states a preference for institution-building and zero-to-one problems, describing it as "the only kind of problem I have ever been hired to solve."
+[resume:001] (verified fact) Chief Technical Officer, Jinn Labs, Remote India, Nov 2025 - Present.
+[resume:011] (verified fact) Staff Computer Vision Researcher, Samsung Research (AR Core Team), Noida India, Sep 2023 - Nov 2025.
+[resume:018] (verified fact) Senior Software Engineer, Qualcomm, Hyderabad India, Mar 2021 - Aug 2023.
+[resume:024] (verified fact) Software Engineer, Amdocs, Pune India, Aug 2020 - Feb 2021, on Billing and RTB teams.
+
+**18:01:54 · generate**
+- input: Location — Bengaluru, India (domestic travel only); primarily external-facing role
+- action: call provider with cited, confidence-annotated context
+- observation: [dossier_excerpts:005] (verified fact) Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. [dossier_excerpts:009] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_excerpts:012] (verified fact) Siddhartha's dossier states a preference for institution-building and zero-to-one problems, describing it as "the only kind of problem I have ever been hired to solve." [dossier_excerpts:003] (verified fact) Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group.
+
+**18:01:54 · verify**
+- input: [dossier_excerpts:005] (verified fact) Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. [dossier_excerpts:009] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_excerpts:012] (verified fact) Siddhartha's dossier states a preference for institution-building and zero-to-one problems, describing it as "the only kind of problem I have ever been hired to solve." [dossier_excerpts:003] (verified fact) Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group.
+- action: per-sentence grounding check (same verifier as v1)
+- observation: coverage=1.00 confidence=0.99
+- confidence: 0.99
+
+**18:01:54 · bucket**
+- input: [dossier_excerpts:005] (verified fact) Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. [dossier_excerpts:009] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_excerpts:012] (verified fact) Siddhartha's dossier states a preference for institution-building and zero-to-one problems, describing it as "the only kind of problem I have ever been hired to solve." [dossier_excerpts:003] (verified fact) Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group.
+- action: derive fit bucket from coverage+confidence, not a self-reported label
+- observation: partial
+- reasoning: A self-reported label from generation isn't independently checkable; a derived one is.
+- decision: partial

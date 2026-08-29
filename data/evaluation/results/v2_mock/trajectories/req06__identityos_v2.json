@@ -1,0 +1,46 @@
+{
+  "question_id": "req06",
+  "system_name": "identityos_v2",
+  "steps": [
+    {
+      "timestamp": "2026-08-29T18:01:54.467542Z",
+      "stage": "retrieve",
+      "input_summary": "Strategic planning & institution-building",
+      "action": "lexical retrieval over Digital Self: top 5 facts, 0 beliefs",
+      "observation": "[dossier_excerpts:012] (verified fact) Siddhartha's dossier states a preference for institution-building and zero-to-one problems, describing it as \"the only kind of problem I have ever been hired to solve.\"\n[dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.\n[dossier_excerpts:009] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.\n[dossier_excerpts:011] (verified fact) Siddhartha's dossier states: \"I am a working generative-AI practitioner... I can tell a real deep-tech proposition from AI theatre before [an institution]'s name is on it,\" offered as a self-description of his professional judgment.\n[dossier_excerpts:013] (verified fact) Siddhartha's dossier states he replaced subjective judgement with eval-driven release discipline at Jinn Labs, tracking every claim as a metric release over release, and that he would apply the same discipline to any institution he leads.",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-29T18:01:54.467748Z",
+      "stage": "generate",
+      "input_summary": "Strategic planning & institution-building",
+      "action": "call provider with cited, confidence-annotated context",
+      "observation": "[dossier_excerpts:009] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. [dossier_excerpts:011] (verified fact) Siddhartha's dossier states: \"I am a working generative-AI practitioner... I can tell a real deep-tech proposition from AI theatre before [an institution]'s name is on it,\" offered as a self-description of his professional judgment. [dossier_excerpts:013] (verified fact) Siddhartha's dossier states he replaced subjective judgement with eval-driven release discipline at Jinn Labs, tracking every claim as a metric release over release, and that he would apply the same discipline to any institution he leads.",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-29T18:01:54.467898Z",
+      "stage": "verify",
+      "input_summary": "[dossier_excerpts:009] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. [dossier_excerpts:011] (verified fact) Siddhartha's dossier states: \"I am a working generative-AI practitioner... I can tell a real deep-tech proposition from AI theatre before [an institution]'s name is on it,\" offered as a self-description of his professional judgment. [dossier_excerpts:013] (verified fact) Siddhartha's dossier states he replaced subjective judgement with eval-driven release discipline at Jinn Labs, tracking every claim as a metric release over release, and that he would apply the same discipline to any institution he leads.",
+      "action": "per-sentence grounding check (same verifier as v1)",
+      "observation": "coverage=1.00 confidence=0.89",
+      "reasoning": "",
+      "confidence": 0.892,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-29T18:01:54.467903Z",
+      "stage": "bucket",
+      "input_summary": "[dossier_excerpts:009] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. [dossier_excerpts:011] (verified fact) Siddhartha's dossier states: \"I am a working generative-AI practitioner... I can tell a real deep-tech proposition from AI theatre before [an institution]'s name is on it,\" offered as a self-description of his professional judgment. [dossier_excerpts:013] (verified fact) Siddhartha's dossier states he replaced subjective judgement with eval-driven release discipline at Jinn Labs, tracking every claim as a metric release over release, and that he would apply the same discipline to any institution he leads.",
+      "action": "derive fit bucket from coverage+confidence, not a self-reported label",
+      "observation": "partial",
+      "reasoning": "A self-reported label from generation isn't independently checkable; a derived one is.",
+      "confidence": null,
+      "decision": "partial"
+    }
+  ]
+}

@@ -83,12 +83,53 @@ narrative state, browser execution) that don't exist yet; adding them now
 would be exactly the "fake integration presented as working" the ground
 rules warn against.
 
-## What is explicitly NOT in v1
+## v2 addendum — Application Compilation
+
+v2 adds one new pipeline (`services/application_engine/`) reusing v1's
+retrieval and verification modules unmodified — only the context assembly
+and output shape differ:
+
+```
+data/applications/iitacb_ceo/requirements.json   (real requirements + real human ground truth)
+        |
+        v
+  intent_model.py  ---->  ApplicationRequirement[]
+        |
+        v
+  assess.py: assess_baseline_plain / assess_baseline_rag / assess_identityos
+        (each reuses services/qa_engine/{retrieval,verification}.py directly)
+        |
+        v
+  bucketing.py: derive a FitBucket (met_or_better/partial/gap) from
+  evidence_coverage + overall_confidence + cited-claim polarity —
+  NOT from asking the provider to self-report a label (see below)
+        |
+        v
+  scoring.py: score_application_system() -> agreement_rate +
+  dangerous_overclaim_rate (docs/evaluation_v2.md)
+```
+
+**Why the fit label is derived, not self-reported.** An earlier design had
+the provider emit its own `ASSESSMENT: MET` line. Two problems: the mock
+provider is extractive and cannot follow that instruction at all, and even
+with a real LLM, a self-reported label isn't independently checkable the
+way a derived one is — the whole point of this project is not trusting an
+agent's self-report of its own confidence. `bucket_from_signals()` is the
+one place that decides, from signals the verifier already computed.
+
+**Why the bucketing rule also checks claim polarity, not just coverage and
+confidence.** Discovered as a real bug during v2's own eval run, not
+designed in from the start — see docs/hot_take.md's v2 addendum. A claim
+can be fully grounded and still be a "no."
+
+## What is explicitly NOT in v1 or v2
 
 - Browser automation / form filling (docs/roadmap.md v3)
 - Multi-agent orchestrator, opportunity discovery, application strategy
-  narrative planning (v2/v3)
+  narrative planning, document generation (v2.1/v3)
 - Self-improvement / learning engine with counterfactual promotion (v4)
 - Graph database, web UI, Next.js frontend (v5)
-- Automatic belief inference from unstructured documents (v1 hand-seeds
-  4 beliefs from already-ingested facts instead; v2 automates this)
+- Automatic belief inference from unstructured documents (v1/v2 hand-seed
+  4 beliefs from already-ingested facts instead; deferred to v2.1)
+- Clause-level negation detection (v2's fix is sentence-level — see
+  docs/hot_take.md and docs/evaluation_v2.md's req13/req08 discussion)

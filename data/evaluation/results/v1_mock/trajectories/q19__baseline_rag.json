@@ -3,17 +3,17 @@
   "system_name": "baseline_rag",
   "steps": [
     {
-      "timestamp": "2026-08-29T17:46:25.718614Z",
+      "timestamp": "2026-08-29T18:01:54.290170Z",
       "stage": "retrieve",
       "input_summary": "What common thread connects your work at Qualcomm, Samsung Research, and Jinn Labs?",
       "action": "dump the entire fact store as unstructured text (no ranking, no ids)",
-      "observation": "75 facts included, no relevance filtering",
+      "observation": "76 facts included, no relevance filtering",
       "reasoning": "Baseline 2 has retrieval but no structure and no grounding check.",
       "confidence": null,
       "decision": ""
     },
     {
-      "timestamp": "2026-08-29T17:46:25.719363Z",
+      "timestamp": "2026-08-29T18:01:54.290972Z",
       "stage": "generate",
       "input_summary": "What common thread connects your work at Qualcomm, Samsung Research, and Jinn Labs?",
       "action": "call provider with the full unstructured context dump",

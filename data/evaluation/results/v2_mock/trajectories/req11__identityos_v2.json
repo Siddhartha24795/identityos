@@ -1,0 +1,46 @@
+{
+  "question_id": "req11",
+  "system_name": "identityos_v2",
+  "steps": [
+    {
+      "timestamp": "2026-08-29T18:01:54.481279Z",
+      "stage": "retrieve",
+      "input_summary": "Personal integrity & institutional temperament",
+      "action": "lexical retrieval over Digital Self: top 0 facts, 1 beliefs",
+      "observation": "[belief:004] (belief, unknown, confidence=0.10) Is comfortable claiming full personal credit for joint work without qualification. — counter-evidence exists, do not state this as certain",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-29T18:01:54.481335Z",
+      "stage": "generate",
+      "input_summary": "Personal integrity & institutional temperament",
+      "action": "call provider with cited, confidence-annotated context",
+      "observation": "[belief:004] (belief, unknown, confidence=0.10) Is comfortable claiming full personal credit for joint work without qualification. — counter-evidence exists, do not state this as certain Personal integrity & institutional temperament REQUIREMENT:",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-29T18:01:54.481379Z",
+      "stage": "verify",
+      "input_summary": "[belief:004] (belief, unknown, confidence=0.10) Is comfortable claiming full personal credit for joint work without qualification. — counter-evidence exists, do not state this as certain Personal integrity & institutional temperament REQUIREMENT:",
+      "action": "per-sentence grounding check (same verifier as v1)",
+      "observation": "coverage=0.50 confidence=0.05",
+      "reasoning": "",
+      "confidence": 0.05,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-29T18:01:54.481385Z",
+      "stage": "bucket",
+      "input_summary": "[belief:004] (belief, unknown, confidence=0.10) Is comfortable claiming full personal credit for joint work without qualification. — counter-evidence exists, do not state this as certain Personal integrity & institutional temperament REQUIREMENT:",
+      "action": "derive fit bucket from coverage+confidence, not a self-reported label",
+      "observation": "partial",
+      "reasoning": "A self-reported label from generation isn't independently checkable; a derived one is.",
+      "confidence": null,
+      "decision": "partial"
+    }
+  ]
+}

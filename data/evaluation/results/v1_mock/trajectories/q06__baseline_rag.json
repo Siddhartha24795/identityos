@@ -3,17 +3,17 @@
   "system_name": "baseline_rag",
   "steps": [
     {
-      "timestamp": "2026-08-29T17:46:25.691889Z",
+      "timestamp": "2026-08-29T18:01:54.262339Z",
       "stage": "retrieve",
       "input_summary": "What failure taught you the most in your career?",
       "action": "dump the entire fact store as unstructured text (no ranking, no ids)",
-      "observation": "75 facts included, no relevance filtering",
+      "observation": "76 facts included, no relevance filtering",
       "reasoning": "Baseline 2 has retrieval but no structure and no grounding check.",
       "confidence": null,
       "decision": ""
     },
     {
-      "timestamp": "2026-08-29T17:46:25.692637Z",
+      "timestamp": "2026-08-29T18:01:54.263126Z",
       "stage": "generate",
       "input_summary": "What failure taught you the most in your career?",
       "action": "call provider with the full unstructured context dump",

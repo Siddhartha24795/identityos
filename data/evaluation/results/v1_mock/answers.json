@@ -7,9 +7,9 @@
       "claims": [],
       "overall_confidence": 1.0,
       "refused_low_confidence": false,
-      "latency_ms": 0.2613067626953125,
+      "latency_ms": 0.2758502960205078,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.681178Z"
+      "created_at": "2026-08-29T18:01:54.251259Z"
     },
     {
       "question_id": "q02",
@@ -18,9 +18,9 @@
       "claims": [],
       "overall_confidence": 1.0,
       "refused_low_confidence": false,
-      "latency_ms": 0.029802322387695312,
+      "latency_ms": 0.02956390380859375,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.683394Z"
+      "created_at": "2026-08-29T18:01:54.253569Z"
     },
     {
       "question_id": "q03",
@@ -29,9 +29,9 @@
       "claims": [],
       "overall_confidence": 1.0,
       "refused_low_confidence": false,
-      "latency_ms": 0.025272369384765625,
+      "latency_ms": 0.025033950805664062,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.685593Z"
+      "created_at": "2026-08-29T18:01:54.255850Z"
     },
     {
       "question_id": "q04",
@@ -40,9 +40,9 @@
       "claims": [],
       "overall_confidence": 1.0,
       "refused_low_confidence": false,
-      "latency_ms": 0.026226043701171875,
+      "latency_ms": 0.02765655517578125,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.687644Z"
+      "created_at": "2026-08-29T18:01:54.257955Z"
     },
     {
       "question_id": "q05",
@@ -51,9 +51,9 @@
       "claims": [],
       "overall_confidence": 1.0,
       "refused_low_confidence": false,
-      "latency_ms": 0.0247955322265625,
+      "latency_ms": 0.025510787963867188,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.689793Z"
+      "created_at": "2026-08-29T18:01:54.260157Z"
     },
     {
       "question_id": "q06",
@@ -62,9 +62,9 @@
       "claims": [],
       "overall_confidence": 1.0,
       "refused_low_confidence": false,
-      "latency_ms": 0.021219253540039062,
+      "latency_ms": 0.022172927856445312,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.691866Z"
+      "created_at": "2026-08-29T18:01:54.262318Z"
     },
     {
       "question_id": "q07",
@@ -73,9 +73,9 @@
       "claims": [],
       "overall_confidence": 1.0,
       "refused_low_confidence": false,
-      "latency_ms": 0.019073486328125,
+      "latency_ms": 0.019550323486328125,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.693771Z"
+      "created_at": "2026-08-29T18:01:54.264292Z"
     },
     {
       "question_id": "q08",
@@ -84,9 +84,9 @@
       "claims": [],
       "overall_confidence": 1.0,
       "refused_low_confidence": false,
-      "latency_ms": 0.021696090698242188,
+      "latency_ms": 0.02288818359375,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.695826Z"
+      "created_at": "2026-08-29T18:01:54.266444Z"
     },
     {
       "question_id": "q09",
@@ -95,9 +95,9 @@
       "claims": [],
       "overall_confidence": 1.0,
       "refused_low_confidence": false,
-      "latency_ms": 0.020503997802734375,
+      "latency_ms": 0.021219253540039062,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.697752Z"
+      "created_at": "2026-08-29T18:01:54.268477Z"
     },
     {
       "question_id": "q10",
@@ -106,9 +106,9 @@
       "claims": [],
       "overall_confidence": 1.0,
       "refused_low_confidence": false,
-      "latency_ms": 0.0209808349609375,
+      "latency_ms": 0.021457672119140625,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.699648Z"
+      "created_at": "2026-08-29T18:01:54.270435Z"
     },
     {
       "question_id": "q11",
@@ -117,9 +117,9 @@
       "claims": [],
       "overall_confidence": 1.0,
       "refused_low_confidence": false,
-      "latency_ms": 0.019311904907226562,
+      "latency_ms": 0.019788742065429688,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.701555Z"
+      "created_at": "2026-08-29T18:01:54.272401Z"
     },
     {
       "question_id": "q12",
@@ -128,9 +128,9 @@
       "claims": [],
       "overall_confidence": 1.0,
       "refused_low_confidence": false,
-      "latency_ms": 0.020503997802734375,
+      "latency_ms": 0.022172927856445312,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.703408Z"
+      "created_at": "2026-08-29T18:01:54.274362Z"
     },
     {
       "question_id": "q13",
@@ -139,9 +139,9 @@
       "claims": [],
       "overall_confidence": 1.0,
       "refused_low_confidence": false,
-      "latency_ms": 0.025033950805664062,
+      "latency_ms": 0.026464462280273438,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.705400Z"
+      "created_at": "2026-08-29T18:01:54.276435Z"
     },
     {
       "question_id": "q14",
@@ -150,9 +150,9 @@
       "claims": [],
       "overall_confidence": 1.0,
       "refused_low_confidence": false,
-      "latency_ms": 0.024080276489257812,
+      "latency_ms": 0.027894973754882812,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.707592Z"
+      "created_at": "2026-08-29T18:01:54.278702Z"
     },
     {
       "question_id": "q15",
@@ -161,9 +161,9 @@
       "claims": [],
       "overall_confidence": 1.0,
       "refused_low_confidence": false,
-      "latency_ms": 0.02002716064453125,
+      "latency_ms": 0.02288818359375,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.709797Z"
+      "created_at": "2026-08-29T18:01:54.281031Z"
     },
     {
       "question_id": "q16",
@@ -172,9 +172,9 @@
       "claims": [],
       "overall_confidence": 1.0,
       "refused_low_confidence": false,
-      "latency_ms": 0.02574920654296875,
+      "latency_ms": 0.024080276489257812,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.711860Z"
+      "created_at": "2026-08-29T18:01:54.283164Z"
     },
     {
       "question_id": "q17",
@@ -185,7 +185,7 @@
       "refused_low_confidence": false,
       "latency_ms": 0.025272369384765625,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.714128Z"
+      "created_at": "2026-08-29T18:01:54.285473Z"
     },
     {
       "question_id": "q18",
@@ -194,9 +194,9 @@
       "claims": [],
       "overall_confidence": 1.0,
       "refused_low_confidence": false,
-      "latency_ms": 0.025033950805664062,
+      "latency_ms": 0.026941299438476562,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.716298Z"
+      "created_at": "2026-08-29T18:01:54.287815Z"
     },
     {
       "question_id": "q19",
@@ -205,9 +205,9 @@
       "claims": [],
       "overall_confidence": 1.0,
       "refused_low_confidence": false,
-      "latency_ms": 0.025033950805664062,
+      "latency_ms": 0.025987625122070312,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.718594Z"
+      "created_at": "2026-08-29T18:01:54.290150Z"
     }
   ],
   "baseline_rag": [
@@ -218,20 +218,20 @@
       "claims": [],
       "overall_confidence": 1.0,
       "refused_low_confidence": false,
-      "latency_ms": 0.7846355438232422,
+      "latency_ms": 0.8108615875244141,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.682003Z"
+      "created_at": "2026-08-29T18:01:54.252109Z"
     },
     {
       "question_id": "q02",
       "system_name": "baseline_rag",
-      "text": "M.Tech, Artificial Intelligence, IIT (ISM) Dhanbad, 2018-2020. Research on medical image processing using Cycle GAN. Artificial Intelligence, Deep Learning, Machine Learning, Image Processing, Computer Vision, Natural Language Processing. Named inventor, patent Application No. 202511076834, \"Generative AI based video codecs utilizing image-to-video generation\", filed through Samsung Research Noida and assigned to Samsung Electronics Co., Ltd. Siddhartha's dossier states: \"I am a working generative-AI practitioner... I can tell a real deep-tech proposition from AI theatre before [an institution]'s name is on it,\" offered as a self-description of his professional judgment.",
+      "text": "M.Tech, Artificial Intelligence, IIT (ISM) Dhanbad, 2018-2020. Research on medical image processing using Cycle GAN. Artificial Intelligence, Deep Learning, Machine Learning, Image Processing, Computer Vision, Natural Language Processing. Named inventor, patent Application No. 202511076834, \"Generative AI based video codecs utilizing image-to-video generation\", filed through Samsung Research Noida and assigned to Samsung Electronics Co., Ltd. Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.",
       "claims": [],
       "overall_confidence": 1.0,
       "refused_low_confidence": false,
-      "latency_ms": 0.7722377777099609,
+      "latency_ms": 0.7760524749755859,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.684200Z"
+      "created_at": "2026-08-29T18:01:54.254378Z"
     },
     {
       "question_id": "q03",
@@ -240,9 +240,9 @@
       "claims": [],
       "overall_confidence": 1.0,
       "refused_low_confidence": false,
-      "latency_ms": 0.7462501525878906,
+      "latency_ms": 0.7865428924560547,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.686369Z"
+      "created_at": "2026-08-29T18:01:54.256666Z"
     },
     {
       "question_id": "q04",
@@ -251,9 +251,9 @@
       "claims": [],
       "overall_confidence": 1.0,
       "refused_low_confidence": false,
-      "latency_ms": 0.7526874542236328,
+      "latency_ms": 0.8008480072021484,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.688426Z"
+      "created_at": "2026-08-29T18:01:54.258788Z"
     },
     {
       "question_id": "q05",
@@ -262,9 +262,9 @@
       "claims": [],
       "overall_confidence": 1.0,
       "refused_low_confidence": false,
-      "latency_ms": 0.7507801055908203,
+      "latency_ms": 0.7777214050292969,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.690575Z"
+      "created_at": "2026-08-29T18:01:54.260967Z"
     },
     {
       "question_id": "q06",
@@ -273,20 +273,20 @@
       "claims": [],
       "overall_confidence": 1.0,
       "refused_low_confidence": false,
-      "latency_ms": 0.7417201995849609,
+      "latency_ms": 0.7817745208740234,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.692642Z"
+      "created_at": "2026-08-29T18:01:54.263132Z"
     },
     {
       "question_id": "q07",
       "system_name": "baseline_rag",
-      "text": "Named inventor, patent Application No. 202511076834, \"Generative AI based video codecs utilizing image-to-video generation\", filed through Samsung Research Noida and assigned to Samsung Electronics Co., Ltd. Leads a 35+ member cross-functional team (CV/ML research, edge and cloud infra, backend, frontend) as Head of Engineering and Innovation, owning hiring, roadmap, architecture review, and delivery. Staff Computer Vision Researcher, Samsung Research (AR Core Team), Noida India, Sep 2023 - Nov 2025. Led a team of 15 developers with end-to-end ownership of development at Samsung Research.",
+      "text": "Named inventor, patent Application No. 202511076834, \"Generative AI based video codecs utilizing image-to-video generation\", filed through Samsung Research Noida and assigned to Samsung Electronics Co., Ltd. Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. Leads a 35+ member cross-functional team (CV/ML research, edge and cloud infra, backend, frontend) as Head of Engineering and Innovation, owning hiring, roadmap, architecture review, and delivery. Staff Computer Vision Researcher, Samsung Research (AR Core Team), Noida India, Sep 2023 - Nov 2025.",
       "claims": [],
       "overall_confidence": 1.0,
       "refused_low_confidence": false,
-      "latency_ms": 0.7367134094238281,
+      "latency_ms": 0.7708072662353516,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.694538Z"
+      "created_at": "2026-08-29T18:01:54.265093Z"
     },
     {
       "question_id": "q08",
@@ -295,9 +295,9 @@
       "claims": [],
       "overall_confidence": 1.0,
       "refused_low_confidence": false,
-      "latency_ms": 0.743865966796875,
+      "latency_ms": 0.8029937744140625,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.696600Z"
+      "created_at": "2026-08-29T18:01:54.267277Z"
     },
     {
       "question_id": "q09",
@@ -306,9 +306,9 @@
       "claims": [],
       "overall_confidence": 1.0,
       "refused_low_confidence": false,
-      "latency_ms": 0.7417201995849609,
+      "latency_ms": 0.7600784301757812,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.698523Z"
+      "created_at": "2026-08-29T18:01:54.269286Z"
     },
     {
       "question_id": "q10",
@@ -317,9 +317,9 @@
       "claims": [],
       "overall_confidence": 1.0,
       "refused_low_confidence": false,
-      "latency_ms": 0.7243156433105469,
+      "latency_ms": 0.7801055908203125,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.700403Z"
+      "created_at": "2026-08-29T18:01:54.271245Z"
     },
     {
       "question_id": "q11",
@@ -328,9 +328,9 @@
       "claims": [],
       "overall_confidence": 1.0,
       "refused_low_confidence": false,
-      "latency_ms": 0.7200241088867188,
+      "latency_ms": 0.7793903350830078,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.702304Z"
+      "created_at": "2026-08-29T18:01:54.273210Z"
     },
     {
       "question_id": "q12",
@@ -339,9 +339,9 @@
       "claims": [],
       "overall_confidence": 1.0,
       "refused_low_confidence": false,
-      "latency_ms": 0.7395744323730469,
+      "latency_ms": 0.7777214050292969,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.704180Z"
+      "created_at": "2026-08-29T18:01:54.275171Z"
     },
     {
       "question_id": "q13",
@@ -350,9 +350,9 @@
       "claims": [],
       "overall_confidence": 1.0,
       "refused_low_confidence": false,
-      "latency_ms": 0.7672309875488281,
+      "latency_ms": 0.8025169372558594,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.706200Z"
+      "created_at": "2026-08-29T18:01:54.277268Z"
     },
     {
       "question_id": "q14",
@@ -361,31 +361,31 @@
       "claims": [],
       "overall_confidence": 1.0,
       "refused_low_confidence": false,
-      "latency_ms": 0.7708072662353516,
+      "latency_ms": 0.8101463317871094,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.708392Z"
+      "created_at": "2026-08-29T18:01:54.279544Z"
     },
     {
       "question_id": "q15",
       "system_name": "baseline_rag",
-      "text": "Siddhartha's own dossier states he is fluent in English and Hindi but not yet in Kannada, and frames relocation plus Kannada learning as conditions he is committing to, not concessions being requested. Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+      "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. Siddhartha's own dossier states he is fluent in English and Hindi but not yet in Kannada, and frames relocation plus Kannada learning as conditions he is committing to, not concessions being requested. Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
       "claims": [],
       "overall_confidence": 1.0,
       "refused_low_confidence": false,
-      "latency_ms": 0.7431507110595703,
+      "latency_ms": 0.7798671722412109,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.710571Z"
+      "created_at": "2026-08-29T18:01:54.281846Z"
     },
     {
       "question_id": "q16",
       "system_name": "baseline_rag",
-      "text": "Leads a 35+ member cross-functional team (CV/ML research, edge and cloud infra, backend, frontend) as Head of Engineering and Innovation, owning hiring, roadmap, architecture review, and delivery. Named inventor, patent Application No. 202511076834, \"Generative AI based video codecs utilizing image-to-video generation\", filed through Samsung Research Noida and assigned to Samsung Electronics Co., Ltd. Staff Computer Vision Researcher, Samsung Research (AR Core Team), Noida India, Sep 2023 - Nov 2025. Led a team of 15 developers with end-to-end ownership of development at Samsung Research.",
+      "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. Leads a 35+ member cross-functional team (CV/ML research, edge and cloud infra, backend, frontend) as Head of Engineering and Innovation, owning hiring, roadmap, architecture review, and delivery. Named inventor, patent Application No. 202511076834, \"Generative AI based video codecs utilizing image-to-video generation\", filed through Samsung Research Noida and assigned to Samsung Electronics Co., Ltd. Staff Computer Vision Researcher, Samsung Research (AR Core Team), Noida India, Sep 2023 - Nov 2025.",
       "claims": [],
       "overall_confidence": 1.0,
       "refused_low_confidence": false,
-      "latency_ms": 0.7565021514892578,
+      "latency_ms": 0.7872581481933594,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.712649Z"
+      "created_at": "2026-08-29T18:01:54.283983Z"
     },
     {
       "question_id": "q17",
@@ -394,9 +394,9 @@
       "claims": [],
       "overall_confidence": 1.0,
       "refused_low_confidence": false,
-      "latency_ms": 0.7581710815429688,
+      "latency_ms": 0.7593631744384766,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.714918Z"
+      "created_at": "2026-08-29T18:01:54.286283Z"
     },
     {
       "question_id": "q18",
@@ -405,9 +405,9 @@
       "claims": [],
       "overall_confidence": 1.0,
       "refused_low_confidence": false,
-      "latency_ms": 0.7736682891845703,
+      "latency_ms": 0.7910728454589844,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.717101Z"
+      "created_at": "2026-08-29T18:01:54.288637Z"
     },
     {
       "question_id": "q19",
@@ -416,16 +416,16 @@
       "claims": [],
       "overall_confidence": 1.0,
       "refused_low_confidence": false,
-      "latency_ms": 0.7436275482177734,
+      "latency_ms": 0.7956027984619141,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.719369Z"
+      "created_at": "2026-08-29T18:01:54.290977Z"
     }
   ],
   "identityos_v1": [
     {
       "question_id": "q01",
       "system_name": "identityos_v1",
-      "text": "[resume:002] (verified fact) Owns end-to-end AI feature development from multi-camera ingestion to real-time inference for live retail-intelligence products. [resume:059] (verified fact) Real-time computer-vision platform at Jinn Labs ingesting 2000+ concurrent RTSP streams with VLM-based suspicious-event detection. [dossier_excerpts:012] (verified fact) Siddhartha's dossier states he replaced subjective judgement with eval-driven release discipline at Jinn Labs, tracking every claim as a metric release over release, and that he would apply the same discipline to any institution he leads. [resume:001] (verified fact) Chief Technical Officer, Jinn Labs, Remote India, Nov 2025 - Present.",
+      "text": "[resume:002] (verified fact) Owns end-to-end AI feature development from multi-camera ingestion to real-time inference for live retail-intelligence products. [resume:059] (verified fact) Real-time computer-vision platform at Jinn Labs ingesting 2000+ concurrent RTSP streams with VLM-based suspicious-event detection. [dossier_excerpts:013] (verified fact) Siddhartha's dossier states he replaced subjective judgement with eval-driven release discipline at Jinn Labs, tracking every claim as a metric release over release, and that he would apply the same discipline to any institution he leads. [resume:001] (verified fact) Chief Technical Officer, Jinn Labs, Remote India, Nov 2025 - Present.",
       "claims": [
         {
           "text": "[resume:002] (verified fact) Owns end-to-end AI feature development from multi-camera ingestion to real-time inference for live retail-intelligence products.",
@@ -444,9 +444,9 @@
           "confidence": 0.99
         },
         {
-          "text": "[dossier_excerpts:012] (verified fact) Siddhartha's dossier states he replaced subjective judgement with eval-driven release discipline at Jinn Labs, tracking every claim as a metric release over release, and that he would apply the same discipline to any institution he leads.",
+          "text": "[dossier_excerpts:013] (verified fact) Siddhartha's dossier states he replaced subjective judgement with eval-driven release discipline at Jinn Labs, tracking every claim as a metric release over release, and that he would apply the same discipline to any institution he leads.",
           "evidence_refs": [
-            "dossier_excerpts:012"
+            "dossier_excerpts:013"
           ],
           "claim_type": "verified_fact",
           "confidence": 0.99
@@ -462,14 +462,14 @@
       ],
       "overall_confidence": 0.99,
       "refused_low_confidence": false,
-      "latency_ms": 0.10132789611816406,
+      "latency_ms": 0.102996826171875,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.682829Z"
+      "created_at": "2026-08-29T18:01:54.252949Z"
     },
     {
       "question_id": "q02",
       "system_name": "identityos_v1",
-      "text": "[resume:039] (verified fact) M.Tech, Artificial Intelligence, IIT (ISM) Dhanbad, 2018-2020. Research on medical image processing using Cycle GAN. [resume:043] (verified fact) Artificial Intelligence, Deep Learning, Machine Learning, Image Processing, Computer Vision, Natural Language Processing. [dossier_excerpts:001] (verified fact) Named inventor, patent Application No. 202511076834, \"Generative AI based video codecs utilizing image-to-video generation\", filed through Samsung Research Noida and assigned to Samsung Electronics Co., Ltd. [dossier_excerpts:010] (verified fact) Siddhartha's dossier states: \"I am a working generative-AI practitioner... I can tell a real deep-tech proposition from AI theatre before [an institution]'s name is on it,\" offered as a self-description of his professional judgment.",
+      "text": "[resume:039] (verified fact) M.Tech, Artificial Intelligence, IIT (ISM) Dhanbad, 2018-2020. Research on medical image processing using Cycle GAN. [resume:043] (verified fact) Artificial Intelligence, Deep Learning, Machine Learning, Image Processing, Computer Vision, Natural Language Processing. [dossier_excerpts:001] (verified fact) Named inventor, patent Application No. 202511076834, \"Generative AI based video codecs utilizing image-to-video generation\", filed through Samsung Research Noida and assigned to Samsung Electronics Co., Ltd. [dossier_excerpts:005] (verified fact) Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.",
       "claims": [
         {
           "text": "[resume:039] (verified fact) M.Tech, Artificial Intelligence, IIT (ISM) Dhanbad, 2018-2020.",
@@ -512,27 +512,19 @@
           "confidence": 0.5
         },
         {
-          "text": "[dossier_excerpts:010] (verified fact) Siddhartha's dossier states: \"I am a working generative-AI practitioner...",
+          "text": "[dossier_excerpts:005] (verified fact) Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.",
           "evidence_refs": [
-            "dossier_excerpts:010"
+            "dossier_excerpts:005"
           ],
           "claim_type": "verified_fact",
           "confidence": 0.99
-        },
-        {
-          "text": "I can tell a real deep-tech proposition from AI theatre before [an institution]'s name is on it,\" offered as a self-description of his professional judgment.",
-          "evidence_refs": [
-            "dossier_excerpts:010"
-          ],
-          "claim_type": "weak_inference",
-          "confidence": 0.5
         }
       ],
-      "overall_confidence": 0.78,
+      "overall_confidence": 0.8266666666666667,
       "refused_low_confidence": false,
-      "latency_ms": 0.11372566223144531,
+      "latency_ms": 0.125885009765625,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.685062Z"
+      "created_at": "2026-08-29T18:01:54.255291Z"
     },
     {
       "question_id": "q03",
@@ -574,9 +566,9 @@
       ],
       "overall_confidence": 0.99,
       "refused_low_confidence": false,
-      "latency_ms": 0.08177757263183594,
+      "latency_ms": 0.08153915405273438,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.687117Z"
+      "created_at": "2026-08-29T18:01:54.257427Z"
     },
     {
       "question_id": "q04",
@@ -626,9 +618,9 @@
       ],
       "overall_confidence": 0.892,
       "refused_low_confidence": false,
-      "latency_ms": 0.11372566223144531,
+      "latency_ms": 0.13113021850585938,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.689267Z"
+      "created_at": "2026-08-29T18:01:54.259641Z"
     },
     {
       "question_id": "q05",
@@ -678,19 +670,19 @@
       ],
       "overall_confidence": 0.892,
       "refused_low_confidence": false,
-      "latency_ms": 0.091552734375,
+      "latency_ms": 0.11324882507324219,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.691336Z"
+      "created_at": "2026-08-29T18:01:54.261805Z"
     },
     {
       "question_id": "q06",
       "system_name": "identityos_v1",
-      "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+      "text": "[dossier_excerpts:009] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
       "claims": [
         {
-          "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "text": "[dossier_excerpts:009] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
           "evidence_refs": [
-            "dossier_excerpts:008"
+            "dossier_excerpts:009"
           ],
           "claim_type": "verified_fact",
           "confidence": 0.99
@@ -700,12 +692,12 @@
       "refused_low_confidence": false,
       "latency_ms": 0.03695487976074219,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.693265Z"
+      "created_at": "2026-08-29T18:01:54.263789Z"
     },
     {
       "question_id": "q07",
       "system_name": "identityos_v1",
-      "text": "[dossier_excerpts:001] (verified fact) Named inventor, patent Application No. 202511076834, \"Generative AI based video codecs utilizing image-to-video generation\", filed through Samsung Research Noida and assigned to Samsung Electronics Co., Ltd. [resume:010] (verified fact) Leads a 35+ member cross-functional team (CV/ML research, edge and cloud infra, backend, frontend) as Head of Engineering and Innovation, owning hiring, roadmap, architecture review, and delivery. [resume:011] (verified fact) Staff Computer Vision Researcher, Samsung Research (AR Core Team), Noida India, Sep 2023 - Nov 2025. [resume:017] (verified fact) Led a team of 15 developers with end-to-end ownership of development at Samsung Research.",
+      "text": "[dossier_excerpts:001] (verified fact) Named inventor, patent Application No. 202511076834, \"Generative AI based video codecs utilizing image-to-video generation\", filed through Samsung Research Noida and assigned to Samsung Electronics Co., Ltd. [dossier_excerpts:005] (verified fact) Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. [resume:010] (verified fact) Leads a 35+ member cross-functional team (CV/ML research, edge and cloud infra, backend, frontend) as Head of Engineering and Innovation, owning hiring, roadmap, architecture review, and delivery. [resume:011] (verified fact) Staff Computer Vision Researcher, Samsung Research (AR Core Team), Noida India, Sep 2023 - Nov 2025.",
       "claims": [
         {
           "text": "[dossier_excerpts:001] (verified fact) Named inventor, patent Application No.",
@@ -724,6 +716,14 @@
           "confidence": 0.5
         },
         {
+          "text": "[dossier_excerpts:005] (verified fact) Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.",
+          "evidence_refs": [
+            "dossier_excerpts:005"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
           "text": "[resume:010] (verified fact) Leads a 35+ member cross-functional team (CV/ML research, edge and cloud infra, backend, frontend) as Head of Engineering and Innovation, owning hiring, roadmap, architecture review, and delivery.",
           "evidence_refs": [
             "resume:010"
@@ -738,31 +738,23 @@
           ],
           "claim_type": "verified_fact",
           "confidence": 0.99
-        },
-        {
-          "text": "[resume:017] (verified fact) Led a team of 15 developers with end-to-end ownership of development at Samsung Research.",
-          "evidence_refs": [
-            "resume:017"
-          ],
-          "claim_type": "verified_fact",
-          "confidence": 0.99
         }
       ],
       "overall_confidence": 0.892,
       "refused_low_confidence": false,
-      "latency_ms": 0.09441375732421875,
+      "latency_ms": 0.11444091796875,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.695299Z"
+      "created_at": "2026-08-29T18:01:54.265930Z"
     },
     {
       "question_id": "q08",
       "system_name": "identityos_v1",
-      "text": "[dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.",
+      "text": "[dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.",
       "claims": [
         {
-          "text": "[dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.",
+          "text": "[dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.",
           "evidence_refs": [
-            "dossier_excerpts:006"
+            "dossier_excerpts:007"
           ],
           "claim_type": "verified_fact",
           "confidence": 0.99
@@ -770,9 +762,9 @@
       ],
       "overall_confidence": 0.99,
       "refused_low_confidence": false,
-      "latency_ms": 0.03647804260253906,
+      "latency_ms": 0.03790855407714844,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.697228Z"
+      "created_at": "2026-08-29T18:01:54.267972Z"
     },
     {
       "question_id": "q09",
@@ -792,17 +784,17 @@
       "refused_low_confidence": false,
       "latency_ms": 0.026226043701171875,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.699134Z"
+      "created_at": "2026-08-29T18:01:54.269935Z"
     },
     {
       "question_id": "q10",
       "system_name": "identityos_v1",
-      "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+      "text": "[dossier_excerpts:009] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
       "claims": [
         {
-          "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "text": "[dossier_excerpts:009] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
           "evidence_refs": [
-            "dossier_excerpts:008"
+            "dossier_excerpts:009"
           ],
           "claim_type": "verified_fact",
           "confidence": 0.99
@@ -810,9 +802,9 @@
       ],
       "overall_confidence": 0.99,
       "refused_low_confidence": false,
-      "latency_ms": 0.03647804260253906,
+      "latency_ms": 0.03719329833984375,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.701049Z"
+      "created_at": "2026-08-29T18:01:54.271906Z"
     },
     {
       "question_id": "q11",
@@ -828,27 +820,27 @@
       ],
       "overall_confidence": 0.0,
       "refused_low_confidence": false,
-      "latency_ms": 0.0171661376953125,
+      "latency_ms": 0.017404556274414062,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.702903Z"
+      "created_at": "2026-08-29T18:01:54.273835Z"
     },
     {
       "question_id": "q12",
       "system_name": "identityos_v1",
-      "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. [resume:046] (verified fact) System Design, Leadership, JavaScript, HTML, CSS, Hardware Abstraction Layer, Linux, Shell Scripting.",
+      "text": "[dossier_excerpts:009] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. [resume:046] (verified fact) System Design, Leadership, JavaScript, HTML, CSS, Hardware Abstraction Layer, Linux, Shell Scripting.",
       "claims": [
         {
-          "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "text": "[dossier_excerpts:009] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
           "evidence_refs": [
-            "dossier_excerpts:008"
+            "dossier_excerpts:009"
           ],
           "claim_type": "verified_fact",
           "confidence": 0.99
         },
         {
-          "text": "[dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.",
+          "text": "[dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.",
           "evidence_refs": [
-            "dossier_excerpts:006"
+            "dossier_excerpts:007"
           ],
           "claim_type": "verified_fact",
           "confidence": 0.99
@@ -864,9 +856,9 @@
       ],
       "overall_confidence": 0.9899999999999999,
       "refused_low_confidence": false,
-      "latency_ms": 0.07009506225585938,
+      "latency_ms": 0.06961822509765625,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.704888Z"
+      "created_at": "2026-08-29T18:01:54.275903Z"
     },
     {
       "question_id": "q13",
@@ -916,19 +908,19 @@
       ],
       "overall_confidence": 0.892,
       "refused_low_confidence": false,
-      "latency_ms": 0.11157989501953125,
+      "latency_ms": 0.110626220703125,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.707024Z"
+      "created_at": "2026-08-29T18:01:54.278123Z"
     },
     {
       "question_id": "q14",
       "system_name": "identityos_v1",
-      "text": "[dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. [dossier_excerpts:003] (verified fact) Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group. [dossier_excerpts:010] (verified fact) Siddhartha's dossier states: \"I am a working generative-AI practitioner... I can tell a real deep-tech proposition from AI theatre before [an institution]'s name is on it,\" offered as a self-description of his professional judgment. [dossier_excerpts:011] (verified fact) Siddhartha's dossier states a preference for institution-building and zero-to-one problems, describing it as \"the only kind of problem I have ever been hired to solve.\"",
+      "text": "[dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. [dossier_excerpts:003] (verified fact) Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group. [dossier_excerpts:011] (verified fact) Siddhartha's dossier states: \"I am a working generative-AI practitioner... I can tell a real deep-tech proposition from AI theatre before [an institution]'s name is on it,\" offered as a self-description of his professional judgment. [dossier_excerpts:012] (verified fact) Siddhartha's dossier states a preference for institution-building and zero-to-one problems, describing it as \"the only kind of problem I have ever been hired to solve.\"",
       "claims": [
         {
-          "text": "[dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.",
+          "text": "[dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.",
           "evidence_refs": [
-            "dossier_excerpts:006"
+            "dossier_excerpts:007"
           ],
           "claim_type": "verified_fact",
           "confidence": 0.99
@@ -942,9 +934,9 @@
           "confidence": 0.99
         },
         {
-          "text": "[dossier_excerpts:010] (verified fact) Siddhartha's dossier states: \"I am a working generative-AI practitioner...",
+          "text": "[dossier_excerpts:011] (verified fact) Siddhartha's dossier states: \"I am a working generative-AI practitioner...",
           "evidence_refs": [
-            "dossier_excerpts:010"
+            "dossier_excerpts:011"
           ],
           "claim_type": "verified_fact",
           "confidence": 0.99
@@ -952,15 +944,15 @@
         {
           "text": "I can tell a real deep-tech proposition from AI theatre before [an institution]'s name is on it,\" offered as a self-description of his professional judgment.",
           "evidence_refs": [
-            "dossier_excerpts:010"
+            "dossier_excerpts:011"
           ],
           "claim_type": "weak_inference",
           "confidence": 0.5
         },
         {
-          "text": "[dossier_excerpts:011] (verified fact) Siddhartha's dossier states a preference for institution-building and zero-to-one problems, describing it as \"the only kind of problem I have ever been hired to solve.\"",
+          "text": "[dossier_excerpts:012] (verified fact) Siddhartha's dossier states a preference for institution-building and zero-to-one problems, describing it as \"the only kind of problem I have ever been hired to solve.\"",
           "evidence_refs": [
-            "dossier_excerpts:011"
+            "dossier_excerpts:012"
           ],
           "claim_type": "verified_fact",
           "confidence": 0.99
@@ -968,43 +960,59 @@
       ],
       "overall_confidence": 0.892,
       "refused_low_confidence": false,
-      "latency_ms": 0.14162063598632812,
+      "latency_ms": 0.14734268188476562,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.709246Z"
+      "created_at": "2026-08-29T18:01:54.280465Z"
     },
     {
       "question_id": "q15",
       "system_name": "identityos_v1",
-      "text": "[dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet in Kannada, and frames relocation plus Kannada learning as conditions he is committing to, not concessions being requested. [dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+      "text": "[dossier_excerpts:005] (verified fact) Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. [dossier_excerpts:008] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet in Kannada, and frames relocation plus Kannada learning as conditions he is committing to, not concessions being requested. [dossier_excerpts:009] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
       "claims": [
         {
-          "text": "[dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet in Kannada, and frames relocation plus Kannada learning as conditions he is committing to, not concessions being requested.",
+          "text": "[dossier_excerpts:005] (verified fact) Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.",
           "evidence_refs": [
-            "dossier_excerpts:007"
+            "dossier_excerpts:005"
           ],
           "claim_type": "verified_fact",
           "confidence": 0.99
         },
         {
-          "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet in Kannada, and frames relocation plus Kannada learning as conditions he is committing to, not concessions being requested.",
           "evidence_refs": [
             "dossier_excerpts:008"
           ],
           "claim_type": "verified_fact",
           "confidence": 0.99
+        },
+        {
+          "text": "[dossier_excerpts:009] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "evidence_refs": [
+            "dossier_excerpts:009"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
         }
       ],
-      "overall_confidence": 0.99,
+      "overall_confidence": 0.9899999999999999,
       "refused_low_confidence": false,
-      "latency_ms": 0.054836273193359375,
+      "latency_ms": 0.10204315185546875,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.711264Z"
+      "created_at": "2026-08-29T18:01:54.282630Z"
     },
     {
       "question_id": "q16",
       "system_name": "identityos_v1",
-      "text": "[resume:010] (verified fact) Leads a 35+ member cross-functional team (CV/ML research, edge and cloud infra, backend, frontend) as Head of Engineering and Innovation, owning hiring, roadmap, architecture review, and delivery. [belief:002] (belief, strong inference, confidence=0.82) Values shipping working systems into production over research for its own sake. [belief:003] (belief, weak inference, confidence=0.45) Considers himself an experienced builder and leader of professional/membership institutions, not just engineering teams. \u2014 counter-evidence exists, do not state this as certain [dossier_excerpts:001] (verified fact) Named inventor, patent Application No. 202511076834, \"Generative AI based video codecs utilizing image-to-video generation\", filed through Samsung Research Noida and assigned to Samsung Electronics Co., Ltd.",
+      "text": "[dossier_excerpts:005] (verified fact) Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. [resume:010] (verified fact) Leads a 35+ member cross-functional team (CV/ML research, edge and cloud infra, backend, frontend) as Head of Engineering and Innovation, owning hiring, roadmap, architecture review, and delivery. [belief:002] (belief, strong inference, confidence=0.82) Values shipping working systems into production over research for its own sake. [belief:003] (belief, weak inference, confidence=0.45) Considers himself an experienced builder and leader of professional/membership institutions, not just engineering teams. \u2014 counter-evidence exists, do not state this as certain",
       "claims": [
+        {
+          "text": "[dossier_excerpts:005] (verified fact) Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.",
+          "evidence_refs": [
+            "dossier_excerpts:005"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
         {
           "text": "[resume:010] (verified fact) Leads a 35+ member cross-functional team (CV/ML research, edge and cloud infra, backend, frontend) as Head of Engineering and Innovation, owning hiring, roadmap, architecture review, and delivery.",
           "evidence_refs": [
@@ -1030,53 +1038,43 @@
           "confidence": 0.45
         },
         {
-          "text": "\u2014 counter-evidence exists, do not state this as certain [dossier_excerpts:001] (verified fact) Named inventor, patent Application No.",
-          "evidence_refs": [
-            "dossier_excerpts:001"
-          ],
-          "claim_type": "verified_fact",
-          "confidence": 0.99
-        },
-        {
-          "text": "202511076834, \"Generative AI based video codecs utilizing image-to-video generation\", filed through Samsung Research Noida and assigned to Samsung Electronics Co., Ltd.",
-          "evidence_refs": [
-            "dossier_excerpts:001"
-          ],
-          "claim_type": "weak_inference",
-          "confidence": 0.5
+          "text": "\u2014 counter-evidence exists, do not state this as certain",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
         }
       ],
-      "overall_confidence": 0.75,
+      "overall_confidence": 0.65,
       "refused_low_confidence": false,
-      "latency_ms": 0.152587890625,
+      "latency_ms": 0.16808509826660156,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.713547Z"
+      "created_at": "2026-08-29T18:01:54.284920Z"
     },
     {
       "question_id": "q17",
       "system_name": "identityos_v1",
-      "text": "[dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. [dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_excerpts:011] (verified fact) Siddhartha's dossier states a preference for institution-building and zero-to-one problems, describing it as \"the only kind of problem I have ever been hired to solve.\" [belief:003] (belief, weak inference, confidence=0.45) Considers himself an experienced builder and leader of professional/membership institutions, not just engineering teams. \u2014 counter-evidence exists, do not state this as certain",
+      "text": "[dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. [dossier_excerpts:009] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_excerpts:012] (verified fact) Siddhartha's dossier states a preference for institution-building and zero-to-one problems, describing it as \"the only kind of problem I have ever been hired to solve.\" [belief:003] (belief, weak inference, confidence=0.45) Considers himself an experienced builder and leader of professional/membership institutions, not just engineering teams. \u2014 counter-evidence exists, do not state this as certain",
       "claims": [
         {
-          "text": "[dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.",
+          "text": "[dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.",
           "evidence_refs": [
-            "dossier_excerpts:006"
+            "dossier_excerpts:007"
           ],
           "claim_type": "verified_fact",
           "confidence": 0.99
         },
         {
-          "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "text": "[dossier_excerpts:009] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
           "evidence_refs": [
-            "dossier_excerpts:008"
+            "dossier_excerpts:009"
           ],
           "claim_type": "verified_fact",
           "confidence": 0.99
         },
         {
-          "text": "[dossier_excerpts:011] (verified fact) Siddhartha's dossier states a preference for institution-building and zero-to-one problems, describing it as \"the only kind of problem I have ever been hired to solve.\" [belief:003] (belief, weak inference, confidence=0.45) Considers himself an experienced builder and leader of professional/membership institutions, not just engineering teams.",
+          "text": "[dossier_excerpts:012] (verified fact) Siddhartha's dossier states a preference for institution-building and zero-to-one problems, describing it as \"the only kind of problem I have ever been hired to solve.\" [belief:003] (belief, weak inference, confidence=0.45) Considers himself an experienced builder and leader of professional/membership institutions, not just engineering teams.",
           "evidence_refs": [
-            "dossier_excerpts:011",
+            "dossier_excerpts:012",
             "belief:003"
           ],
           "claim_type": "weak_inference",
@@ -1091,14 +1089,14 @@
       ],
       "overall_confidence": 0.6075,
       "refused_low_confidence": false,
-      "latency_ms": 0.14734268188476562,
+      "latency_ms": 0.13589859008789062,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.715750Z"
+      "created_at": "2026-08-29T18:01:54.287228Z"
     },
     {
       "question_id": "q18",
       "system_name": "identityos_v1",
-      "text": "[dossier_excerpts:001] (verified fact) Named inventor, patent Application No. 202511076834, \"Generative AI based video codecs utilizing image-to-video generation\", filed through Samsung Research Noida and assigned to Samsung Electronics Co., Ltd. [dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_excerpts:010] (verified fact) Siddhartha's dossier states: \"I am a working generative-AI practitioner... I can tell a real deep-tech proposition from AI theatre before [an institution]'s name is on it,\" offered as a self-description of his professional judgment. [resume:002] (verified fact) Owns end-to-end AI feature development from multi-camera ingestion to real-time inference for live retail-intelligence products.",
+      "text": "[dossier_excerpts:001] (verified fact) Named inventor, patent Application No. 202511076834, \"Generative AI based video codecs utilizing image-to-video generation\", filed through Samsung Research Noida and assigned to Samsung Electronics Co., Ltd. [dossier_excerpts:009] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_excerpts:011] (verified fact) Siddhartha's dossier states: \"I am a working generative-AI practitioner... I can tell a real deep-tech proposition from AI theatre before [an institution]'s name is on it,\" offered as a self-description of his professional judgment. [resume:002] (verified fact) Owns end-to-end AI feature development from multi-camera ingestion to real-time inference for live retail-intelligence products.",
       "claims": [
         {
           "text": "[dossier_excerpts:001] (verified fact) Named inventor, patent Application No.",
@@ -1117,17 +1115,17 @@
           "confidence": 0.5
         },
         {
-          "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "text": "[dossier_excerpts:009] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
           "evidence_refs": [
-            "dossier_excerpts:008"
+            "dossier_excerpts:009"
           ],
           "claim_type": "verified_fact",
           "confidence": 0.99
         },
         {
-          "text": "[dossier_excerpts:010] (verified fact) Siddhartha's dossier states: \"I am a working generative-AI practitioner...",
+          "text": "[dossier_excerpts:011] (verified fact) Siddhartha's dossier states: \"I am a working generative-AI practitioner...",
           "evidence_refs": [
-            "dossier_excerpts:010"
+            "dossier_excerpts:011"
           ],
           "claim_type": "verified_fact",
           "confidence": 0.99
@@ -1135,7 +1133,7 @@
         {
           "text": "I can tell a real deep-tech proposition from AI theatre before [an institution]'s name is on it,\" offered as a self-description of his professional judgment.",
           "evidence_refs": [
-            "dossier_excerpts:010"
+            "dossier_excerpts:011"
           ],
           "claim_type": "weak_inference",
           "confidence": 0.5
@@ -1151,14 +1149,14 @@
       ],
       "overall_confidence": 0.8266666666666667,
       "refused_low_confidence": false,
-      "latency_ms": 0.16069412231445312,
+      "latency_ms": 0.1621246337890625,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.718023Z"
+      "created_at": "2026-08-29T18:01:54.289588Z"
     },
     {
       "question_id": "q19",
       "system_name": "identityos_v1",
-      "text": "[dossier_excerpts:001] (verified fact) Named inventor, patent Application No. 202511076834, \"Generative AI based video codecs utilizing image-to-video generation\", filed through Samsung Research Noida and assigned to Samsung Electronics Co., Ltd. [dossier_excerpts:012] (verified fact) Siddhartha's dossier states he replaced subjective judgement with eval-driven release discipline at Jinn Labs, tracking every claim as a metric release over release, and that he would apply the same discipline to any institution he leads. [resume:001] (verified fact) Chief Technical Officer, Jinn Labs, Remote India, Nov 2025 - Present. [resume:011] (verified fact) Staff Computer Vision Researcher, Samsung Research (AR Core Team), Noida India, Sep 2023 - Nov 2025.",
+      "text": "[dossier_excerpts:001] (verified fact) Named inventor, patent Application No. 202511076834, \"Generative AI based video codecs utilizing image-to-video generation\", filed through Samsung Research Noida and assigned to Samsung Electronics Co., Ltd. [dossier_excerpts:013] (verified fact) Siddhartha's dossier states he replaced subjective judgement with eval-driven release discipline at Jinn Labs, tracking every claim as a metric release over release, and that he would apply the same discipline to any institution he leads. [resume:001] (verified fact) Chief Technical Officer, Jinn Labs, Remote India, Nov 2025 - Present. [resume:011] (verified fact) Staff Computer Vision Researcher, Samsung Research (AR Core Team), Noida India, Sep 2023 - Nov 2025.",
       "claims": [
         {
           "text": "[dossier_excerpts:001] (verified fact) Named inventor, patent Application No.",
@@ -1177,9 +1175,9 @@
           "confidence": 0.5
         },
         {
-          "text": "[dossier_excerpts:012] (verified fact) Siddhartha's dossier states he replaced subjective judgement with eval-driven release discipline at Jinn Labs, tracking every claim as a metric release over release, and that he would apply the same discipline to any institution he leads.",
+          "text": "[dossier_excerpts:013] (verified fact) Siddhartha's dossier states he replaced subjective judgement with eval-driven release discipline at Jinn Labs, tracking every claim as a metric release over release, and that he would apply the same discipline to any institution he leads.",
           "evidence_refs": [
-            "dossier_excerpts:012"
+            "dossier_excerpts:013"
           ],
           "claim_type": "verified_fact",
           "confidence": 0.99
@@ -1203,9 +1201,9 @@
       ],
       "overall_confidence": 0.892,
       "refused_low_confidence": false,
-      "latency_ms": 0.12922286987304688,
+      "latency_ms": 0.2582073211669922,
       "provider": "mock",
-      "created_at": "2026-08-29T17:46:25.720291Z"
+      "created_at": "2026-08-29T18:01:54.291975Z"
     }
   ]
 }

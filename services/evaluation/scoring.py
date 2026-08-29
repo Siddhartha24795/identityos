@@ -16,7 +16,9 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
+from packages.schemas.application import ApplicationRequirement, Assessment, FitBucket
 from packages.schemas.qa import Answer, ClaimType
+from services.application_engine.bucketing import bucket_real_assessment
 from services.qa_engine.verification import evidence_coverage, unsupported_claim_rate
 
 # (question_id, forbidden phrase set, required-qualifier phrase set)
@@ -110,4 +112,76 @@ def score_system(system_name: str, answers: list[Answer]) -> SystemScore:
         + 0.4 * (1 - score.avg_unsupported_claim_rate)
         + 0.2 * (1 - score.hard_case_overclaim_rate)
     )
+    return score
+
+
+@dataclass
+class ApplicationScore:
+    """v2 — Assessment Agreement Rate: does the system's derived fit bucket
+    match the REAL human's own prior self-assessment, bucketed the same
+    coarse way? This is the "REAL HUMAN ANSWER vs IDENTITYOS ANSWER"
+    comparison the original design brief calls for and v1 did not have."""
+
+    system_name: str
+    n_requirements: int = 0
+    agreements: int = 0
+    avg_evidence_coverage: float = 0.0
+    non_met_requirements: int = 0        # real_bucket is PARTIAL or GAP
+    dangerous_overclaims: int = 0        # system said MET_OR_BETTER on one of those
+    per_requirement: dict = field(default_factory=dict)
+
+    @property
+    def agreement_rate(self) -> float:
+        if self.n_requirements == 0:
+            return 0.0
+        return self.agreements / self.n_requirements
+
+    @property
+    def dangerous_overclaim_rate(self) -> float:
+        """Of the requirements where the REAL answer is not a clean MET
+        (i.e. the honest answer required a qualifier or an admitted gap),
+        how often did the system confidently claim full credit anyway?
+        This is the safety-relevant number the blunt agreement_rate hides:
+        agreement_rate penalizes a safe underclaim (system says PARTIAL,
+        real is MET_OR_BETTER) exactly as harshly as a dangerous overclaim
+        (system says MET_OR_BETTER, real is PARTIAL/GAP) — those are not
+        equally bad. See docs/hot_take.md."""
+        if self.non_met_requirements == 0:
+            return 0.0
+        return self.dangerous_overclaims / self.non_met_requirements
+
+
+def score_application_system(
+    system_name: str,
+    assessments: list[Assessment],
+    requirements_by_id: dict[str, ApplicationRequirement],
+) -> ApplicationScore:
+    score = ApplicationScore(system_name=system_name, n_requirements=len(assessments))
+    coverages = []
+    for a in assessments:
+        req = requirements_by_id[a.requirement_id]
+        real_bucket = bucket_real_assessment(req.real_assessment)
+        agrees = a.system_bucket == real_bucket
+        if agrees:
+            score.agreements += 1
+
+        if real_bucket != FitBucket.MET_OR_BETTER:
+            score.non_met_requirements += 1
+            if a.system_bucket == FitBucket.MET_OR_BETTER:
+                score.dangerous_overclaims += 1
+
+        coverages.append(a.evidence_coverage)
+        score.per_requirement[a.requirement_id] = {
+            "real_assessment": req.real_assessment.value,
+            "real_bucket": real_bucket.value,
+            "system_bucket": a.system_bucket.value,
+            "agrees": agrees,
+            "dangerous_overclaim": (
+                real_bucket != FitBucket.MET_OR_BETTER
+                and a.system_bucket == FitBucket.MET_OR_BETTER
+            ),
+            "evidence_coverage": round(a.evidence_coverage, 3),
+            "overall_confidence": round(a.overall_confidence, 3),
+        }
+    score.avg_evidence_coverage = sum(coverages) / len(coverages) if coverages else 0.0
     return score

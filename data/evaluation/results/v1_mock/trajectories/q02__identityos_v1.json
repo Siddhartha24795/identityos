@@ -3,7 +3,7 @@
   "system_name": "identityos_v1",
   "steps": [
     {
-      "timestamp": "2026-08-29T17:46:25.684208Z",
+      "timestamp": "2026-08-29T18:01:54.254386Z",
       "stage": "classify",
       "input_summary": "Which university awarded your M.Tech in Artificial Intelligence, and what was your research topic?",
       "action": "use declared question.type (v1 simplification, not a learned classifier)",
@@ -13,43 +13,43 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-29T17:46:25.684783Z",
+      "timestamp": "2026-08-29T18:01:54.254995Z",
       "stage": "retrieve",
       "input_summary": "Which university awarded your M.Tech in Artificial Intelligence, and what was your research topic?",
       "action": "lexical retrieval over Digital Self: top 6 facts, 1 beliefs",
-      "observation": "[resume:039] (verified fact) M.Tech, Artificial Intelligence, IIT (ISM) Dhanbad, 2018-2020. Research on medical image processing using Cycle GAN.\n[resume:043] (verified fact) Artificial Intelligence, Deep Learning, Machine Learning, Image Processing, Computer Vision, Natural Language Processing.\n[dossier_excerpts:001] (verified fact) Named inventor, patent Application No. 202511076834, \"Generative AI based video codecs utilizing image-to-video generation\", filed through Samsung Research Noida and assigned to Samsung Electronics Co., Ltd.\n[dossier_excerpts:010] (verified fact) Siddhartha's dossier states: \"I am a working generative-AI practitioner... I can tell a real deep-tech proposition from AI theatre before [an institution]'s name is on it,\" offered as a self-description of his professional judgment.\n[resume:002] (verified fact) Owns end-to-end AI feature development from multi-camera ingestion to real-time inference for live retail-intelligence products.\n[resume:010] (verified fact) Leads a 35+ member cross-functional team (CV/ML research, edge and cloud infra, backend, frontend) as Head of Engineering and Innovation, owning hiring, roadmap, architecture review, and delivery.\n[belief:002] (belief, strong inference, confidence=0.82) Values shipping working systems into production over research for its own sake.",
+      "observation": "[resume:039] (verified fact) M.Tech, Artificial Intelligence, IIT (ISM) Dhanbad, 2018-2020. Research on medical image processing using Cycle GAN.\n[resume:043] (verified fact) Artificial Intelligence, Deep Learning, Machine Learning, Image Processing, Computer Vision, Natural Language Processing.\n[dossier_excerpts:001] (verified fact) Named inventor, patent Application No. 202511076834, \"Generative AI based video codecs utilizing image-to-video generation\", filed through Samsung Research Noida and assigned to Samsung Electronics Co., Ltd.\n[dossier_excerpts:005] (verified fact) Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.\n[dossier_excerpts:011] (verified fact) Siddhartha's dossier states: \"I am a working generative-AI practitioner... I can tell a real deep-tech proposition from AI theatre before [an institution]'s name is on it,\" offered as a self-description of his professional judgment.\n[resume:002] (verified fact) Owns end-to-end AI feature development from multi-camera ingestion to real-time inference for live retail-intelligence products.\n[belief:002] (belief, strong inference, confidence=0.82) Values shipping working systems into production over research for its own sake.",
       "reasoning": "",
       "confidence": null,
       "decision": ""
     },
     {
-      "timestamp": "2026-08-29T17:46:25.684903Z",
+      "timestamp": "2026-08-29T18:01:54.255126Z",
       "stage": "generate",
       "input_summary": "Which university awarded your M.Tech in Artificial Intelligence, and what was your research topic?",
       "action": "call provider with structured, citation-tagged, confidence-annotated context",
-      "observation": "[resume:039] (verified fact) M.Tech, Artificial Intelligence, IIT (ISM) Dhanbad, 2018-2020. Research on medical image processing using Cycle GAN. [resume:043] (verified fact) Artificial Intelligence, Deep Learning, Machine Learning, Image Processing, Computer Vision, Natural Language Processing. [dossier_excerpts:001] (verified fact) Named inventor, patent Application No. 202511076834, \"Generative AI based video codecs utilizing image-to-video generation\", filed through Samsung Research Noida and assigned to Samsung Electronics Co., Ltd. [dossier_excerpts:010] (verified fact) Siddhartha's dossier states: \"I am a working generative-AI practitioner... I can tell a real deep-tech proposition from AI theatre before [an institution]'s name is on it,\" offered as a self-description of his professional judgment.",
+      "observation": "[resume:039] (verified fact) M.Tech, Artificial Intelligence, IIT (ISM) Dhanbad, 2018-2020. Research on medical image processing using Cycle GAN. [resume:043] (verified fact) Artificial Intelligence, Deep Learning, Machine Learning, Image Processing, Computer Vision, Natural Language Processing. [dossier_excerpts:001] (verified fact) Named inventor, patent Application No. 202511076834, \"Generative AI based video codecs utilizing image-to-video generation\", filed through Samsung Research Noida and assigned to Samsung Electronics Co., Ltd. [dossier_excerpts:005] (verified fact) Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.",
       "reasoning": "",
       "confidence": null,
       "decision": ""
     },
     {
-      "timestamp": "2026-08-29T17:46:25.685056Z",
+      "timestamp": "2026-08-29T18:01:54.255284Z",
       "stage": "verify",
-      "input_summary": "[resume:039] (verified fact) M.Tech, Artificial Intelligence, IIT (ISM) Dhanbad, 2018-2020. Research on medical image processing using Cycle GAN. [resume:043] (verified fact) Artificial Intelligence, Deep Learning, Machine Learning, Image Processing, Computer Vision, Natural Language Processing. [dossier_excerpts:001] (verified fact) Named inventor, patent Application No. 202511076834, \"Generative AI based video codecs utilizing image-to-video generation\", filed through Samsung Research Noida and assigned to Samsung Electronics Co., Ltd. [dossier_excerpts:010] (verified fact) Siddhartha's dossier states: \"I am a working generative-AI practitioner... I can tell a real deep-tech proposition from AI theatre before [an institution]'s name is on it,\" offered as a self-description of his professional judgment.",
+      "input_summary": "[resume:039] (verified fact) M.Tech, Artificial Intelligence, IIT (ISM) Dhanbad, 2018-2020. Research on medical image processing using Cycle GAN. [resume:043] (verified fact) Artificial Intelligence, Deep Learning, Machine Learning, Image Processing, Computer Vision, Natural Language Processing. [dossier_excerpts:001] (verified fact) Named inventor, patent Application No. 202511076834, \"Generative AI based video codecs utilizing image-to-video generation\", filed through Samsung Research Noida and assigned to Samsung Electronics Co., Ltd. [dossier_excerpts:005] (verified fact) Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.",
       "action": "check every sentence for an explicit citation, else a lexical grounding match",
-      "observation": "evidence_coverage=1.00 unsupported_claim_rate=0.00 overall_confidence=0.78",
+      "observation": "evidence_coverage=1.00 unsupported_claim_rate=0.00 overall_confidence=0.83",
       "reasoning": "",
-      "confidence": 0.78,
+      "confidence": 0.8266666666666667,
       "decision": ""
     },
     {
-      "timestamp": "2026-08-29T17:46:25.685066Z",
+      "timestamp": "2026-08-29T18:01:54.255295Z",
       "stage": "complete",
       "input_summary": "q02",
       "action": "return final answer",
-      "observation": "[resume:039] (verified fact) M.Tech, Artificial Intelligence, IIT (ISM) Dhanbad, 2018-2020. Research on medical image processing using Cycle GAN. [resume:043] (verified fact) Artificial Intelligence, Deep Learning, Machine Learning, Image Processing, Computer Vision, Natural Language Processing. [dossier_excerpts:001] (verified fact) Named inventor, patent Application No. 202511076834, \"Generative AI based video codecs utilizing image-to-video generation\", filed through Samsung Research Noida and assigned to Samsung Electronics Co., Ltd. [dossier_excerpts:010] (verified fact) Siddhartha's dossier states: \"I am a working generative-AI practitioner... I can tell a real deep-tech proposition from AI theatre before [an institution]'s name is on it,\" offered as a self-description of his professional judgment.",
+      "observation": "[resume:039] (verified fact) M.Tech, Artificial Intelligence, IIT (ISM) Dhanbad, 2018-2020. Research on medical image processing using Cycle GAN. [resume:043] (verified fact) Artificial Intelligence, Deep Learning, Machine Learning, Image Processing, Computer Vision, Natural Language Processing. [dossier_excerpts:001] (verified fact) Named inventor, patent Application No. 202511076834, \"Generative AI based video codecs utilizing image-to-video generation\", filed through Samsung Research Noida and assigned to Samsung Electronics Co., Ltd. [dossier_excerpts:005] (verified fact) Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.",
       "reasoning": "",
-      "confidence": 0.78,
+      "confidence": 0.8266666666666667,
       "decision": "answered"
     }
   ]

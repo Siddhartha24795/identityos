@@ -3,7 +3,7 @@
   "system_name": "identityos_v1",
   "steps": [
     {
-      "timestamp": "2026-08-29T17:46:25.682010Z",
+      "timestamp": "2026-08-29T18:01:54.252117Z",
       "stage": "classify",
       "input_summary": "What did you build at Jinn Labs to handle multi-camera video ingestion, and roughly how many streams does it process?",
       "action": "use declared question.type (v1 simplification, not a learned classifier)",
@@ -13,29 +13,29 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-29T17:46:25.682607Z",
+      "timestamp": "2026-08-29T18:01:54.252718Z",
       "stage": "retrieve",
       "input_summary": "What did you build at Jinn Labs to handle multi-camera video ingestion, and roughly how many streams does it process?",
       "action": "lexical retrieval over Digital Self: top 6 facts, 0 beliefs",
-      "observation": "[resume:002] (verified fact) Owns end-to-end AI feature development from multi-camera ingestion to real-time inference for live retail-intelligence products.\n[resume:059] (verified fact) Real-time computer-vision platform at Jinn Labs ingesting 2000+ concurrent RTSP streams with VLM-based suspicious-event detection.\n[dossier_excerpts:012] (verified fact) Siddhartha's dossier states he replaced subjective judgement with eval-driven release discipline at Jinn Labs, tracking every claim as a metric release over release, and that he would apply the same discipline to any institution he leads.\n[resume:001] (verified fact) Chief Technical Officer, Jinn Labs, Remote India, Nov 2025 - Present.\n[resume:003] (verified fact) Architected a real-time CV platform processing 2000+ RTSP streams in parallel across heterogeneous cameras, codecs, and video formats.\n[dossier_excerpts:001] (verified fact) Named inventor, patent Application No. 202511076834, \"Generative AI based video codecs utilizing image-to-video generation\", filed through Samsung Research Noida and assigned to Samsung Electronics Co., Ltd.",
+      "observation": "[resume:002] (verified fact) Owns end-to-end AI feature development from multi-camera ingestion to real-time inference for live retail-intelligence products.\n[resume:059] (verified fact) Real-time computer-vision platform at Jinn Labs ingesting 2000+ concurrent RTSP streams with VLM-based suspicious-event detection.\n[dossier_excerpts:013] (verified fact) Siddhartha's dossier states he replaced subjective judgement with eval-driven release discipline at Jinn Labs, tracking every claim as a metric release over release, and that he would apply the same discipline to any institution he leads.\n[resume:001] (verified fact) Chief Technical Officer, Jinn Labs, Remote India, Nov 2025 - Present.\n[resume:003] (verified fact) Architected a real-time CV platform processing 2000+ RTSP streams in parallel across heterogeneous cameras, codecs, and video formats.\n[dossier_excerpts:001] (verified fact) Named inventor, patent Application No. 202511076834, \"Generative AI based video codecs utilizing image-to-video generation\", filed through Samsung Research Noida and assigned to Samsung Electronics Co., Ltd.",
       "reasoning": "",
       "confidence": null,
       "decision": ""
     },
     {
-      "timestamp": "2026-08-29T17:46:25.682714Z",
+      "timestamp": "2026-08-29T18:01:54.252827Z",
       "stage": "generate",
       "input_summary": "What did you build at Jinn Labs to handle multi-camera video ingestion, and roughly how many streams does it process?",
       "action": "call provider with structured, citation-tagged, confidence-annotated context",
-      "observation": "[resume:002] (verified fact) Owns end-to-end AI feature development from multi-camera ingestion to real-time inference for live retail-intelligence products. [resume:059] (verified fact) Real-time computer-vision platform at Jinn Labs ingesting 2000+ concurrent RTSP streams with VLM-based suspicious-event detection. [dossier_excerpts:012] (verified fact) Siddhartha's dossier states he replaced subjective judgement with eval-driven release discipline at Jinn Labs, tracking every claim as a metric release over release, and that he would apply the same discipline to any institution he leads. [resume:001] (verified fact) Chief Technical Officer, Jinn Labs, Remote India, Nov 2025 - Present.",
+      "observation": "[resume:002] (verified fact) Owns end-to-end AI feature development from multi-camera ingestion to real-time inference for live retail-intelligence products. [resume:059] (verified fact) Real-time computer-vision platform at Jinn Labs ingesting 2000+ concurrent RTSP streams with VLM-based suspicious-event detection. [dossier_excerpts:013] (verified fact) Siddhartha's dossier states he replaced subjective judgement with eval-driven release discipline at Jinn Labs, tracking every claim as a metric release over release, and that he would apply the same discipline to any institution he leads. [resume:001] (verified fact) Chief Technical Officer, Jinn Labs, Remote India, Nov 2025 - Present.",
       "reasoning": "",
       "confidence": null,
       "decision": ""
     },
     {
-      "timestamp": "2026-08-29T17:46:25.682822Z",
+      "timestamp": "2026-08-29T18:01:54.252941Z",
       "stage": "verify",
-      "input_summary": "[resume:002] (verified fact) Owns end-to-end AI feature development from multi-camera ingestion to real-time inference for live retail-intelligence products. [resume:059] (verified fact) Real-time computer-vision platform at Jinn Labs ingesting 2000+ concurrent RTSP streams with VLM-based suspicious-event detection. [dossier_excerpts:012] (verified fact) Siddhartha's dossier states he replaced subjective judgement with eval-driven release discipline at Jinn Labs, tracking every claim as a metric release over release, and that he would apply the same discipline to any institution he leads. [resume:001] (verified fact) Chief Technical Officer, Jinn Labs, Remote India, Nov 2025 - Present.",
+      "input_summary": "[resume:002] (verified fact) Owns end-to-end AI feature development from multi-camera ingestion to real-time inference for live retail-intelligence products. [resume:059] (verified fact) Real-time computer-vision platform at Jinn Labs ingesting 2000+ concurrent RTSP streams with VLM-based suspicious-event detection. [dossier_excerpts:013] (verified fact) Siddhartha's dossier states he replaced subjective judgement with eval-driven release discipline at Jinn Labs, tracking every claim as a metric release over release, and that he would apply the same discipline to any institution he leads. [resume:001] (verified fact) Chief Technical Officer, Jinn Labs, Remote India, Nov 2025 - Present.",
       "action": "check every sentence for an explicit citation, else a lexical grounding match",
       "observation": "evidence_coverage=1.00 unsupported_claim_rate=0.00 overall_confidence=0.99",
       "reasoning": "",
@@ -43,11 +43,11 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-29T17:46:25.682832Z",
+      "timestamp": "2026-08-29T18:01:54.252954Z",
       "stage": "complete",
       "input_summary": "q01",
       "action": "return final answer",
-      "observation": "[resume:002] (verified fact) Owns end-to-end AI feature development from multi-camera ingestion to real-time inference for live retail-intelligence products. [resume:059] (verified fact) Real-time computer-vision platform at Jinn Labs ingesting 2000+ concurrent RTSP streams with VLM-based suspicious-event detection. [dossier_excerpts:012] (verified fact) Siddhartha's dossier states he replaced subjective judgement with eval-driven release discipline at Jinn Labs, tracking every claim as a metric release over release, and that he would apply the same discipline to any institution he leads. [resume:001] (verified fact) Chief Technical Officer, Jinn Labs, Remote India, Nov 2025 - Present.",
+      "observation": "[resume:002] (verified fact) Owns end-to-end AI feature development from multi-camera ingestion to real-time inference for live retail-intelligence products. [resume:059] (verified fact) Real-time computer-vision platform at Jinn Labs ingesting 2000+ concurrent RTSP streams with VLM-based suspicious-event detection. [dossier_excerpts:013] (verified fact) Siddhartha's dossier states he replaced subjective judgement with eval-driven release discipline at Jinn Labs, tracking every claim as a metric release over release, and that he would apply the same discipline to any institution he leads. [resume:001] (verified fact) Chief Technical Officer, Jinn Labs, Remote India, Nov 2025 - Present.",
       "reasoning": "",
       "confidence": 0.99,
       "decision": "answered"

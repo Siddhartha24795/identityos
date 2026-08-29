@@ -3,17 +3,17 @@
   "system_name": "baseline_rag",
   "steps": [
     {
-      "timestamp": "2026-08-29T17:46:25.689813Z",
+      "timestamp": "2026-08-29T18:01:54.260178Z",
       "stage": "retrieve",
       "input_summary": "What research did you do during your Siemens Healthineers internship, and what made the result notable?",
       "action": "dump the entire fact store as unstructured text (no ranking, no ids)",
-      "observation": "75 facts included, no relevance filtering",
+      "observation": "76 facts included, no relevance filtering",
       "reasoning": "Baseline 2 has retrieval but no structure and no grounding check.",
       "confidence": null,
       "decision": ""
     },
     {
-      "timestamp": "2026-08-29T17:46:25.690569Z",
+      "timestamp": "2026-08-29T18:01:54.260962Z",
       "stage": "generate",
       "input_summary": "What research did you do during your Siemens Healthineers internship, and what made the result notable?",
       "action": "call provider with the full unstructured context dump",

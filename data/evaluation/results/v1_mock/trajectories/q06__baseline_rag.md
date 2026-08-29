@@ -1,12 +1,12 @@
 ### Trajectory — baseline_rag — q06
 
-**17:46:25 · retrieve**
+**18:01:54 · retrieve**
 - input: What failure taught you the most in your career?
 - action: dump the entire fact store as unstructured text (no ranking, no ids)
-- observation: 75 facts included, no relevance filtering
+- observation: 76 facts included, no relevance filtering
 - reasoning: Baseline 2 has retrieval but no structure and no grounding check.
 
-**17:46:25 · generate**
+**18:01:54 · generate**
 - input: What failure taught you the most in your career?
 - action: call provider with the full unstructured context dump
 - observation: Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.

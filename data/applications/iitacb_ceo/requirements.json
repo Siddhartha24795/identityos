@@ -1,0 +1,114 @@
+[
+  {
+    "id": "req01",
+    "text": "Education — Bachelor's in Engineering / Technology",
+    "category": "education",
+    "real_assessment": "exceeds",
+    "real_evidence_summary": "B.Tech, Computer Science & Engineering, KNIT Sultanpur (2012-2016). Formal engineering foundation, plus PCM at CBSE Varanasi and a 3rd Prize at the Ramanujan Mathematics Olympiad.",
+    "notes": "Straightforward factual match; a good sanity check for whether the pipeline even works on an easy case."
+  },
+  {
+    "id": "req02",
+    "text": "Desired — IIT alumnus",
+    "category": "education",
+    "real_assessment": "met",
+    "real_evidence_summary": "M.Tech in Artificial Intelligence, IIT (ISM) Dhanbad (2018-2020), with research on medical image processing using Cycle GAN. Represented IIT Dhanbad at Inter-IIT in 2018 and 2019 and captained its cricket team.",
+    "notes": ""
+  },
+  {
+    "id": "req03",
+    "text": "Minimum 10 years senior leadership, with a strong track record of operations leadership",
+    "category": "leadership",
+    "real_assessment": "met",
+    "real_evidence_summary": "Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles - end-to-end ownership at Qualcomm, a 15-person team at Samsung Research, and currently a 35+ member organisation as CTO and Head of Engineering & Innovation.",
+    "notes": "Human's own label softens this to 'MET at chief level' with a caveat elsewhere in the dossier - a genuinely hard case for a coarse 3-way bucket."
+  },
+  {
+    "id": "req04",
+    "text": "Visionary & credible leadership",
+    "category": "leadership",
+    "real_assessment": "met",
+    "real_evidence_summary": "Credibility earned in two currencies: academic (IIT M.Tech, guest faculty across universities) and industrial (Samsung Research, Qualcomm, CTO of a venture shipping into live enterprise sites).",
+    "notes": ""
+  },
+  {
+    "id": "req05",
+    "text": "Entrepreneurial mindset",
+    "category": "leadership",
+    "real_assessment": "exceeds",
+    "real_evidence_summary": "Joined Jinn Labs as CTO to build from near-zero and took multi-camera retail vision from prototype to a production platform running 2,000+ concurrent streams across edge and cloud. Comfortable with ambiguity and unfunded mandates.",
+    "notes": ""
+  },
+  {
+    "id": "req06",
+    "text": "Strategic planning & institution-building",
+    "category": "leadership",
+    "real_assessment": "met",
+    "real_evidence_summary": "Defined technical strategy, architecture and organisation-wide evaluation frameworks at Jinn Labs; built governance structures where none existed. Earlier, headed four student chapters simultaneously (IEI, CSI, ISTE, DrishtiCone) and was lead organiser of sports and technical festivals at KNIT Sultanpur.",
+    "notes": ""
+  },
+  {
+    "id": "req07",
+    "text": "Stakeholder management",
+    "category": "leadership",
+    "real_assessment": "met",
+    "real_evidence_summary": "Routine practice of aligning research scientists, infrastructure engineers, product owners, enterprise customers and executive sponsors around one roadmap. Six years of running an unpaid academia-industry bridge - guest sessions and hackathon judging at GLA University and others.",
+    "notes": ""
+  },
+  {
+    "id": "req08",
+    "text": "Revenue & P&L management",
+    "category": "commercial",
+    "real_assessment": "partial",
+    "real_evidence_summary": "Owned the cost side with rigour: order-of-magnitude inference cost reduction via quantization, pruning, distillation and parameter-efficient adaptation, and ownership of the edge-versus-cloud partitioning strategy. Explicitly states full institutional P&L at IITACB's scale would be a step up, and that this is experience not yet held.",
+    "notes": "A genuine partial - real cost-side ownership, but explicitly not full P&L ownership. Good test of whether the system overclaims full competence."
+  },
+  {
+    "id": "req09",
+    "text": "Government & policy engagement (MeitY, DST, NITI Aayog, IIT Council)",
+    "category": "government",
+    "real_assessment": "partial",
+    "real_evidence_summary": "No prior secretariat-level government relations mandate. Selected for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL and the Cabinet Secretariat - six independent national selection processes - and deep domain authority in the areas current missions fund.",
+    "notes": "Tests whether the system can distinguish 'adjacent credibility' from 'the actual requirement' rather than treating the scientist-position facts as satisfying the requirement outright."
+  },
+  {
+    "id": "req10",
+    "text": "Exceptional communication",
+    "category": "communication",
+    "real_assessment": "met",
+    "real_evidence_summary": "Six years of sustained public speaking - guest lectures, mentoring programmes and hackathon judging panels - plus representing India at the Japan Hackathon 2021 (2nd Prize).",
+    "notes": ""
+  },
+  {
+    "id": "req11",
+    "text": "Personal integrity & institutional temperament",
+    "category": "character",
+    "real_assessment": "met",
+    "real_evidence_summary": "Formed in team sport and elected office: Captain of the IIT Dhanbad cricket team and Sports Secretary (2015-16) - roles given by peers, not self-appointed. Practice of running blameless postmortems and publishing metrics that can embarrass the author.",
+    "notes": ""
+  },
+  {
+    "id": "req12",
+    "text": "Location — Bengaluru, India (domestic travel only); primarily external-facing role",
+    "category": "logistics",
+    "real_assessment": "confirmed",
+    "real_evidence_summary": "Confirmed relocation to Bengaluru on appointment, accepting the role as primarily external-facing with sustained domestic travel to the 23 IIT campuses, Delhi, and industry forums nationally.",
+    "notes": "A forward commitment, not a factual state - tests whether the system distinguishes 'commits to' from 'already is'."
+  },
+  {
+    "id": "req13",
+    "text": "Languages — English, Hindi, Kannada preferred",
+    "category": "logistics",
+    "real_assessment": "partial",
+    "real_evidence_summary": "English and Hindi: full professional fluency. Kannada: not yet - explicitly stated, with a commitment to structured Kannada learning from the date of appointment.",
+    "notes": "Directly reuses the same real fact tested adversarially in v1 (q15). Good cross-version consistency check."
+  },
+  {
+    "id": "req14",
+    "text": "Desired — record of building or running a professional body (CII / NASSCOM / FICCI / AIMA)",
+    "category": "governance",
+    "real_assessment": "gap",
+    "real_evidence_summary": "Explicitly named as the one genuine gap. Nearest adjacencies (Core Member of the IIT (ISM) Dhanbad Alumni Association, head of four student chapters, Sports Secretary) are stated as real but not equivalent to the actual requirement.",
+    "notes": "The hardest case: directly reuses the same real gap tested adversarially in v1 (q14/q17). The single most important requirement for testing whether the system overclaims."
+  }
+]

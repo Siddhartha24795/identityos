@@ -3,7 +3,7 @@
   "system_name": "identityos_v1",
   "steps": [
     {
-      "timestamp": "2026-08-29T17:46:25.686376Z",
+      "timestamp": "2026-08-29T18:01:54.256674Z",
       "stage": "classify",
       "input_summary": "What battery-life improvement did your dual-processor architecture achieve on Qualcomm smartwatches?",
       "action": "use declared question.type (v1 simplification, not a learned classifier)",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-29T17:46:25.686943Z",
+      "timestamp": "2026-08-29T18:01:54.257245Z",
       "stage": "retrieve",
       "input_summary": "What battery-life improvement did your dual-processor architecture achieve on Qualcomm smartwatches?",
       "action": "lexical retrieval over Digital Self: top 6 facts, 0 beliefs",
@@ -23,7 +23,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-29T17:46:25.687030Z",
+      "timestamp": "2026-08-29T18:01:54.257331Z",
       "stage": "generate",
       "input_summary": "What battery-life improvement did your dual-processor architecture achieve on Qualcomm smartwatches?",
       "action": "call provider with structured, citation-tagged, confidence-annotated context",
@@ -33,7 +33,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-29T17:46:25.687110Z",
+      "timestamp": "2026-08-29T18:01:54.257420Z",
       "stage": "verify",
       "input_summary": "[resume:061] (verified fact) Dual-processor smartwatch power management architecture at Qualcomm, increasing battery backup by about 40%. [resume:022] (verified fact) Increased smartwatch battery backup by around 40% using a dual-processor concept that offloaded display and controls to a secondary processor. [resume:010] (verified fact) Leads a 35+ member cross-functional team (CV/ML research, edge and cloud infra, backend, frontend) as Head of Engineering and Innovation, owning hiring, roadmap, architecture review, and delivery. [resume:018] (verified fact) Senior Software Engineer, Qualcomm, Hyderabad India, Mar 2021 - Aug 2023.",
       "action": "check every sentence for an explicit citation, else a lexical grounding match",
@@ -43,7 +43,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-29T17:46:25.687120Z",
+      "timestamp": "2026-08-29T18:01:54.257430Z",
       "stage": "complete",
       "input_summary": "q03",
       "action": "return final answer",

@@ -21,14 +21,21 @@ being built.
 
 | Metric | baseline_plain | baseline_rag | identityos_v1 | Change (system vs. best baseline) |
 |---|---|---|---|---|
-| Evidence coverage | 0.00 | 0.00 | **0.93** | +0.93 |
-| Unsupported claim rate | 1.00 | 1.00 | **0.07** | −0.93 |
+| Evidence coverage | 0.00 | 0.00 | **0.92** | +0.92 |
+| Unsupported claim rate | 1.00 | 1.00 | **0.08** | −0.92 |
 | Hard-case overclaim rate (4 cases) | 0.00* | 0.00* | 0.00* | see limitation below |
-| **Identity Fidelity Score** | 0.20 | 0.20 | **0.95** | +0.75 |
+| **Identity Fidelity Score** | 0.20 | 0.20 | **0.94** | +0.74 |
 | Human time per task | not measured | not measured | not measured | requires a live user study — v2 |
 | Cost per task | $0 (mock) | $0 (mock) | $0 (mock) | re-run with a real key for $/1k tokens |
 
 Reproduce: `python scripts/build_digital_self.py && python scripts/run_eval.py mock v1_mock`.
+
+*Numbers updated after v2 (docs/evaluation_v2.md) added one real, previously
+untranscribed sentence to `data/identity_sources/dossier_excerpts.md` — the
+two versions share one Digital Self, so completing the corpus for v2's
+benefit shifted a couple of v1 retrievals too. This is expected and correct:
+the source of truth is always "run the script," never a number frozen in a
+doc.*
 
 ### Why evidence coverage / unsupported-claim-rate is a fair, provider-independent comparison
 

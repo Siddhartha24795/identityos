@@ -1,0 +1,1449 @@
+{
+  "baseline_plain": [
+    {
+      "requirement_id": "req01",
+      "system_name": "baseline_plain",
+      "text": "I believe my track record speaks directly to this question. When it comes to bachelor and education and engineering, I have always taken a proactive, results-driven approach and delivered measurable impact. I look forward to bringing this strength to your organization.",
+      "claims": [
+        {
+          "text": "I believe my track record speaks directly to this question.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to bachelor and education and engineering, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "I look forward to bringing this strength to your organization.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.32591819763183594
+    },
+    {
+      "requirement_id": "req02",
+      "system_name": "baseline_plain",
+      "text": "I believe my track record speaks directly to this question. When it comes to alumnus and desired and iit, I have always taken a proactive, results-driven approach and delivered measurable impact. I am confident this reflects who I am professionally.",
+      "claims": [
+        {
+          "text": "I believe my track record speaks directly to this question.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to alumnus and desired and iit, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "I am confident this reflects who I am professionally.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.02193450927734375
+    },
+    {
+      "requirement_id": "req03",
+      "system_name": "baseline_plain",
+      "text": "This is something I have thought about carefully throughout my career. When it comes to leadership and minimum and operations, I have always taken a proactive, results-driven approach and delivered measurable impact. I look forward to bringing this strength to your organization.",
+      "claims": [
+        {
+          "text": "This is something I have thought about carefully throughout my career.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to leadership and minimum and operations, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "I look forward to bringing this strength to your organization.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.022172927856445312
+    },
+    {
+      "requirement_id": "req04",
+      "system_name": "baseline_plain",
+      "text": "I have consistently demonstrated strong ability in this area. When it comes to credible and leadership and requirement, I have always taken a proactive, results-driven approach and delivered measurable impact. I am confident this reflects who I am professionally.",
+      "claims": [
+        {
+          "text": "I have consistently demonstrated strong ability in this area.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to credible and leadership and requirement, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "I am confident this reflects who I am professionally.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.01811981201171875
+    },
+    {
+      "requirement_id": "req05",
+      "system_name": "baseline_plain",
+      "text": "Over the years, I have built a reputation for excellence here. When it comes to entrepreneurial and mindset and requirement, I have always taken a proactive, results-driven approach and delivered measurable impact. I am confident this reflects who I am professionally.",
+      "claims": [
+        {
+          "text": "Over the years, I have built a reputation for excellence here.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to entrepreneurial and mindset and requirement, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "I am confident this reflects who I am professionally.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.017404556274414062
+    },
+    {
+      "requirement_id": "req06",
+      "system_name": "baseline_plain",
+      "text": "This is something I have thought about carefully throughout my career. When it comes to building and institution and planning, I have always taken a proactive, results-driven approach and delivered measurable impact. This has shaped my approach to every project I take on.",
+      "claims": [
+        {
+          "text": "This is something I have thought about carefully throughout my career.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to building and institution and planning, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "This has shaped my approach to every project I take on.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.04029273986816406
+    },
+    {
+      "requirement_id": "req07",
+      "system_name": "baseline_plain",
+      "text": "Over the years, I have built a reputation for excellence here. When it comes to management and requirement and stakeholder, I have always taken a proactive, results-driven approach and delivered measurable impact. I am confident this reflects who I am professionally.",
+      "claims": [
+        {
+          "text": "Over the years, I have built a reputation for excellence here.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to management and requirement and stakeholder, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "I am confident this reflects who I am professionally.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.016689300537109375
+    },
+    {
+      "requirement_id": "req08",
+      "system_name": "baseline_plain",
+      "text": "I believe my track record speaks directly to this question. When it comes to management and requirement and revenue, I have always taken a proactive, results-driven approach and delivered measurable impact. I am confident this reflects who I am professionally.",
+      "claims": [
+        {
+          "text": "I believe my track record speaks directly to this question.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to management and requirement and revenue, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "I am confident this reflects who I am professionally.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.017642974853515625
+    },
+    {
+      "requirement_id": "req09",
+      "system_name": "baseline_plain",
+      "text": "Over the years, I have built a reputation for excellence here. When it comes to aayog and council and dst, I have always taken a proactive, results-driven approach and delivered measurable impact. I am confident this reflects who I am professionally.",
+      "claims": [
+        {
+          "text": "Over the years, I have built a reputation for excellence here.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to aayog and council and dst, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "I am confident this reflects who I am professionally.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.020742416381835938
+    },
+    {
+      "requirement_id": "req10",
+      "system_name": "baseline_plain",
+      "text": "I have consistently demonstrated strong ability in this area. When it comes to communication and exceptional and requirement, I have always taken a proactive, results-driven approach and delivered measurable impact. I am confident this reflects who I am professionally.",
+      "claims": [
+        {
+          "text": "I have consistently demonstrated strong ability in this area.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to communication and exceptional and requirement, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "I am confident this reflects who I am professionally.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.016927719116210938
+    },
+    {
+      "requirement_id": "req11",
+      "system_name": "baseline_plain",
+      "text": "I believe my track record speaks directly to this question. When it comes to institutional and integrity and personal, I have always taken a proactive, results-driven approach and delivered measurable impact. I am confident this reflects who I am professionally.",
+      "claims": [
+        {
+          "text": "I believe my track record speaks directly to this question.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to institutional and integrity and personal, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "I am confident this reflects who I am professionally.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.01811981201171875
+    },
+    {
+      "requirement_id": "req12",
+      "system_name": "baseline_plain",
+      "text": "I believe my track record speaks directly to this question. When it comes to bengaluru and domestic and external, I have always taken a proactive, results-driven approach and delivered measurable impact. I look forward to bringing this strength to your organization.",
+      "claims": [
+        {
+          "text": "I believe my track record speaks directly to this question.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to bengaluru and domestic and external, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "I look forward to bringing this strength to your organization.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.023603439331054688
+    },
+    {
+      "requirement_id": "req13",
+      "system_name": "baseline_plain",
+      "text": "Over the years, I have built a reputation for excellence here. When it comes to english and hindi and kannada, I have always taken a proactive, results-driven approach and delivered measurable impact. This has shaped my approach to every project I take on.",
+      "claims": [
+        {
+          "text": "Over the years, I have built a reputation for excellence here.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to english and hindi and kannada, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "This has shaped my approach to every project I take on.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.021457672119140625
+    },
+    {
+      "requirement_id": "req14",
+      "system_name": "baseline_plain",
+      "text": "This is something I have thought about carefully throughout my career. When it comes to aima and body and building, I have always taken a proactive, results-driven approach and delivered measurable impact. I look forward to bringing this strength to your organization.",
+      "claims": [
+        {
+          "text": "This is something I have thought about carefully throughout my career.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to aima and body and building, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "I look forward to bringing this strength to your organization.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.0247955322265625
+    }
+  ],
+  "baseline_rag": [
+    {
+      "requirement_id": "req01",
+      "system_name": "baseline_rag",
+      "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. Developed an on-device visual assistant to replace Gemini API usage in Samsung's \"Circle to Search\" feature using NanoVLM for real-time image understanding, RAG for retrieving contextual facts, and MCP to generate diverse responses.",
+      "claims": [
+        {
+          "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Developed an on-device visual assistant to replace Gemini API usage in Samsung's \"Circle to Search\" feature using NanoVLM for real-time image understanding, RAG for retrieving contextual facts, and MCP to generate diverse responses.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 1.5151500701904297
+    },
+    {
+      "requirement_id": "req02",
+      "system_name": "baseline_rag",
+      "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. Developed an on-device visual assistant to replace Gemini API usage in Samsung's \"Circle to Search\" feature using NanoVLM for real-time image understanding, RAG for retrieving contextual facts, and MCP to generate diverse responses.",
+      "claims": [
+        {
+          "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Developed an on-device visual assistant to replace Gemini API usage in Samsung's \"Circle to Search\" feature using NanoVLM for real-time image understanding, RAG for retrieving contextual facts, and MCP to generate diverse responses.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 1.4107227325439453
+    },
+    {
+      "requirement_id": "req03",
+      "system_name": "baseline_rag",
+      "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. Developed an on-device visual assistant to replace Gemini API usage in Samsung's \"Circle to Search\" feature using NanoVLM for real-time image understanding, RAG for retrieving contextual facts, and MCP to generate diverse responses.",
+      "claims": [
+        {
+          "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Developed an on-device visual assistant to replace Gemini API usage in Samsung's \"Circle to Search\" feature using NanoVLM for real-time image understanding, RAG for retrieving contextual facts, and MCP to generate diverse responses.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 1.3012886047363281
+    },
+    {
+      "requirement_id": "req04",
+      "system_name": "baseline_rag",
+      "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. Developed an on-device visual assistant to replace Gemini API usage in Samsung's \"Circle to Search\" feature using NanoVLM for real-time image understanding, RAG for retrieving contextual facts, and MCP to generate diverse responses.",
+      "claims": [
+        {
+          "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Developed an on-device visual assistant to replace Gemini API usage in Samsung's \"Circle to Search\" feature using NanoVLM for real-time image understanding, RAG for retrieving contextual facts, and MCP to generate diverse responses.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 1.3129711151123047
+    },
+    {
+      "requirement_id": "req05",
+      "system_name": "baseline_rag",
+      "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. Developed an on-device visual assistant to replace Gemini API usage in Samsung's \"Circle to Search\" feature using NanoVLM for real-time image understanding, RAG for retrieving contextual facts, and MCP to generate diverse responses.",
+      "claims": [
+        {
+          "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Developed an on-device visual assistant to replace Gemini API usage in Samsung's \"Circle to Search\" feature using NanoVLM for real-time image understanding, RAG for retrieving contextual facts, and MCP to generate diverse responses.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 1.2862682342529297
+    },
+    {
+      "requirement_id": "req06",
+      "system_name": "baseline_rag",
+      "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. Developed an on-device visual assistant to replace Gemini API usage in Samsung's \"Circle to Search\" feature using NanoVLM for real-time image understanding, RAG for retrieving contextual facts, and MCP to generate diverse responses.",
+      "claims": [
+        {
+          "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Developed an on-device visual assistant to replace Gemini API usage in Samsung's \"Circle to Search\" feature using NanoVLM for real-time image understanding, RAG for retrieving contextual facts, and MCP to generate diverse responses.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 1.2698173522949219
+    },
+    {
+      "requirement_id": "req07",
+      "system_name": "baseline_rag",
+      "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. Developed an on-device visual assistant to replace Gemini API usage in Samsung's \"Circle to Search\" feature using NanoVLM for real-time image understanding, RAG for retrieving contextual facts, and MCP to generate diverse responses.",
+      "claims": [
+        {
+          "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Developed an on-device visual assistant to replace Gemini API usage in Samsung's \"Circle to Search\" feature using NanoVLM for real-time image understanding, RAG for retrieving contextual facts, and MCP to generate diverse responses.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 1.2867450714111328
+    },
+    {
+      "requirement_id": "req08",
+      "system_name": "baseline_rag",
+      "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. Developed an on-device visual assistant to replace Gemini API usage in Samsung's \"Circle to Search\" feature using NanoVLM for real-time image understanding, RAG for retrieving contextual facts, and MCP to generate diverse responses.",
+      "claims": [
+        {
+          "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Developed an on-device visual assistant to replace Gemini API usage in Samsung's \"Circle to Search\" feature using NanoVLM for real-time image understanding, RAG for retrieving contextual facts, and MCP to generate diverse responses.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 1.2836456298828125
+    },
+    {
+      "requirement_id": "req09",
+      "system_name": "baseline_rag",
+      "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. Developed an on-device visual assistant to replace Gemini API usage in Samsung's \"Circle to Search\" feature using NanoVLM for real-time image understanding, RAG for retrieving contextual facts, and MCP to generate diverse responses.",
+      "claims": [
+        {
+          "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Developed an on-device visual assistant to replace Gemini API usage in Samsung's \"Circle to Search\" feature using NanoVLM for real-time image understanding, RAG for retrieving contextual facts, and MCP to generate diverse responses.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 1.2660026550292969
+    },
+    {
+      "requirement_id": "req10",
+      "system_name": "baseline_rag",
+      "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. Developed an on-device visual assistant to replace Gemini API usage in Samsung's \"Circle to Search\" feature using NanoVLM for real-time image understanding, RAG for retrieving contextual facts, and MCP to generate diverse responses.",
+      "claims": [
+        {
+          "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Developed an on-device visual assistant to replace Gemini API usage in Samsung's \"Circle to Search\" feature using NanoVLM for real-time image understanding, RAG for retrieving contextual facts, and MCP to generate diverse responses.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 1.2845993041992188
+    },
+    {
+      "requirement_id": "req11",
+      "system_name": "baseline_rag",
+      "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. Developed an on-device visual assistant to replace Gemini API usage in Samsung's \"Circle to Search\" feature using NanoVLM for real-time image understanding, RAG for retrieving contextual facts, and MCP to generate diverse responses.",
+      "claims": [
+        {
+          "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Developed an on-device visual assistant to replace Gemini API usage in Samsung's \"Circle to Search\" feature using NanoVLM for real-time image understanding, RAG for retrieving contextual facts, and MCP to generate diverse responses.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 1.308441162109375
+    },
+    {
+      "requirement_id": "req12",
+      "system_name": "baseline_rag",
+      "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. Developed an on-device visual assistant to replace Gemini API usage in Samsung's \"Circle to Search\" feature using NanoVLM for real-time image understanding, RAG for retrieving contextual facts, and MCP to generate diverse responses.",
+      "claims": [
+        {
+          "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Developed an on-device visual assistant to replace Gemini API usage in Samsung's \"Circle to Search\" feature using NanoVLM for real-time image understanding, RAG for retrieving contextual facts, and MCP to generate diverse responses.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 1.4414787292480469
+    },
+    {
+      "requirement_id": "req13",
+      "system_name": "baseline_rag",
+      "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. Developed an on-device visual assistant to replace Gemini API usage in Samsung's \"Circle to Search\" feature using NanoVLM for real-time image understanding, RAG for retrieving contextual facts, and MCP to generate diverse responses.",
+      "claims": [
+        {
+          "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Developed an on-device visual assistant to replace Gemini API usage in Samsung's \"Circle to Search\" feature using NanoVLM for real-time image understanding, RAG for retrieving contextual facts, and MCP to generate diverse responses.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 1.4719963073730469
+    },
+    {
+      "requirement_id": "req14",
+      "system_name": "baseline_rag",
+      "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. Developed an on-device visual assistant to replace Gemini API usage in Samsung's \"Circle to Search\" feature using NanoVLM for real-time image understanding, RAG for retrieving contextual facts, and MCP to generate diverse responses.",
+      "claims": [
+        {
+          "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Developed an on-device visual assistant to replace Gemini API usage in Samsung's \"Circle to Search\" feature using NanoVLM for real-time image understanding, RAG for retrieving contextual facts, and MCP to generate diverse responses.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 1.4815330505371094
+    }
+  ],
+  "identityos_v2": [
+    {
+      "requirement_id": "req01",
+      "system_name": "identityos_v2",
+      "text": "[dossier_excerpts:009] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [resume:010] (verified fact) Leads a 35+ member cross-functional team (CV/ML research, edge and cloud infra, backend, frontend) as Head of Engineering and Innovation, owning hiring, roadmap, architecture review, and delivery. [belief:003] (belief, weak inference, confidence=0.45) Considers himself an experienced builder and leader of professional/membership institutions, not just engineering teams. \u2014 counter-evidence exists, do not state this as certain [belief:001] (belief, strong inference, confidence=0.86) Prefers technically unsolved, zero-to-one problems over routine engineering maintenance.",
+      "claims": [
+        {
+          "text": "[dossier_excerpts:009] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "evidence_refs": [
+            "dossier_excerpts:009"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[resume:010] (verified fact) Leads a 35+ member cross-functional team (CV/ML research, edge and cloud infra, backend, frontend) as Head of Engineering and Innovation, owning hiring, roadmap, architecture review, and delivery.",
+          "evidence_refs": [
+            "resume:010"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[belief:003] (belief, weak inference, confidence=0.45) Considers himself an experienced builder and leader of professional/membership institutions, not just engineering teams.",
+          "evidence_refs": [
+            "belief:003"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.45
+        },
+        {
+          "text": "\u2014 counter-evidence exists, do not state this as certain [belief:001] (belief, strong inference, confidence=0.86) Prefers technically unsolved, zero-to-one problems over routine engineering maintenance.",
+          "evidence_refs": [
+            "belief:001"
+          ],
+          "claim_type": "strong_inference",
+          "confidence": 0.86
+        }
+      ],
+      "overall_confidence": 0.8225,
+      "evidence_coverage": 1.0,
+      "system_bucket": "met_or_better",
+      "provider": "mock",
+      "latency_ms": 0.23603439331054688
+    },
+    {
+      "requirement_id": "req02",
+      "system_name": "identityos_v2",
+      "text": "[resume:039] (verified fact) M.Tech, Artificial Intelligence, IIT (ISM) Dhanbad, 2018-2020. Research on medical image processing using Cycle GAN. [dossier_excerpts:003] (verified fact) Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group. [resume:063] (verified fact) M.Tech thesis: medical image processing using Cycle GAN at IIT (ISM) Dhanbad. [resume:053] (verified fact) Sports Secretary 2015-2016 and Captain of the IIT Dhanbad Cricket Team; represented IIT Dhanbad at Inter-IIT in 2018 and 2019.",
+      "claims": [
+        {
+          "text": "[resume:039] (verified fact) M.Tech, Artificial Intelligence, IIT (ISM) Dhanbad, 2018-2020.",
+          "evidence_refs": [
+            "resume:039"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "Research on medical image processing using Cycle GAN.",
+          "evidence_refs": [
+            "resume:039"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "[dossier_excerpts:003] (verified fact) Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group.",
+          "evidence_refs": [
+            "dossier_excerpts:003"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[resume:063] (verified fact) M.Tech thesis: medical image processing using Cycle GAN at IIT (ISM) Dhanbad.",
+          "evidence_refs": [
+            "resume:063"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[resume:053] (verified fact) Sports Secretary 2015-2016 and Captain of the IIT Dhanbad Cricket Team; represented IIT Dhanbad at Inter-IIT in 2018 and 2019.",
+          "evidence_refs": [
+            "resume:053"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        }
+      ],
+      "overall_confidence": 0.892,
+      "evidence_coverage": 1.0,
+      "system_bucket": "met_or_better",
+      "provider": "mock",
+      "latency_ms": 0.11014938354492188
+    },
+    {
+      "requirement_id": "req03",
+      "system_name": "identityos_v2",
+      "text": "[dossier_excerpts:009] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. [dossier_excerpts:004] (verified fact) Six years of unpaid guest sessions, mentoring, and hackathon judging across universities, described in the dossier as predating any formal title or compensation. [resume:046] (verified fact) System Design, Leadership, JavaScript, HTML, CSS, Hardware Abstraction Layer, Linux, Shell Scripting.",
+      "claims": [
+        {
+          "text": "[dossier_excerpts:009] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "evidence_refs": [
+            "dossier_excerpts:009"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.",
+          "evidence_refs": [
+            "dossier_excerpts:007"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_excerpts:004] (verified fact) Six years of unpaid guest sessions, mentoring, and hackathon judging across universities, described in the dossier as predating any formal title or compensation.",
+          "evidence_refs": [
+            "dossier_excerpts:004"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[resume:046] (verified fact) System Design, Leadership, JavaScript, HTML, CSS, Hardware Abstraction Layer, Linux, Shell Scripting.",
+          "evidence_refs": [
+            "resume:046"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        }
+      ],
+      "overall_confidence": 0.99,
+      "evidence_coverage": 1.0,
+      "system_bucket": "partial",
+      "provider": "mock",
+      "latency_ms": 0.17833709716796875
+    },
+    {
+      "requirement_id": "req04",
+      "system_name": "identityos_v2",
+      "text": "[dossier_excerpts:009] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [resume:046] (verified fact) System Design, Leadership, JavaScript, HTML, CSS, Hardware Abstraction Layer, Linux, Shell Scripting. Visionary & credible leadership REQUIREMENT:",
+      "claims": [
+        {
+          "text": "[dossier_excerpts:009] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "evidence_refs": [
+            "dossier_excerpts:009"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[resume:046] (verified fact) System Design, Leadership, JavaScript, HTML, CSS, Hardware Abstraction Layer, Linux, Shell Scripting.",
+          "evidence_refs": [
+            "resume:046"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "Visionary & credible leadership REQUIREMENT:",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.66,
+      "evidence_coverage": 0.6666666666666666,
+      "system_bucket": "met_or_better",
+      "provider": "mock",
+      "latency_ms": 0.07486343383789062
+    },
+    {
+      "requirement_id": "req05",
+      "system_name": "identityos_v2",
+      "text": "Entrepreneurial mindset REQUIREMENT:",
+      "claims": [
+        {
+          "text": "Entrepreneurial mindset REQUIREMENT:",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.015974044799804688
+    },
+    {
+      "requirement_id": "req06",
+      "system_name": "identityos_v2",
+      "text": "[dossier_excerpts:009] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. [dossier_excerpts:011] (verified fact) Siddhartha's dossier states: \"I am a working generative-AI practitioner... I can tell a real deep-tech proposition from AI theatre before [an institution]'s name is on it,\" offered as a self-description of his professional judgment. [dossier_excerpts:013] (verified fact) Siddhartha's dossier states he replaced subjective judgement with eval-driven release discipline at Jinn Labs, tracking every claim as a metric release over release, and that he would apply the same discipline to any institution he leads.",
+      "claims": [
+        {
+          "text": "[dossier_excerpts:009] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "evidence_refs": [
+            "dossier_excerpts:009"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.",
+          "evidence_refs": [
+            "dossier_excerpts:007"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_excerpts:011] (verified fact) Siddhartha's dossier states: \"I am a working generative-AI practitioner...",
+          "evidence_refs": [
+            "dossier_excerpts:011"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "I can tell a real deep-tech proposition from AI theatre before [an institution]'s name is on it,\" offered as a self-description of his professional judgment.",
+          "evidence_refs": [
+            "dossier_excerpts:011"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "[dossier_excerpts:013] (verified fact) Siddhartha's dossier states he replaced subjective judgement with eval-driven release discipline at Jinn Labs, tracking every claim as a metric release over release, and that he would apply the same discipline to any institution he leads.",
+          "evidence_refs": [
+            "dossier_excerpts:013"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        }
+      ],
+      "overall_confidence": 0.892,
+      "evidence_coverage": 1.0,
+      "system_bucket": "partial",
+      "provider": "mock",
+      "latency_ms": 0.20074844360351562
+    },
+    {
+      "requirement_id": "req07",
+      "system_name": "identityos_v2",
+      "text": "[resume:061] (verified fact) Dual-processor smartwatch power management architecture at Qualcomm, increasing battery backup by about 40%. Stakeholder management REQUIREMENT:",
+      "claims": [
+        {
+          "text": "[resume:061] (verified fact) Dual-processor smartwatch power management architecture at Qualcomm, increasing battery backup by about 40%.",
+          "evidence_refs": [
+            "resume:061"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "Stakeholder management REQUIREMENT:",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.495,
+      "evidence_coverage": 0.5,
+      "system_bucket": "partial",
+      "provider": "mock",
+      "latency_ms": 0.05459785461425781
+    },
+    {
+      "requirement_id": "req08",
+      "system_name": "identityos_v2",
+      "text": "[resume:025] (verified fact) Did API development, bug resolution, fraud detection, and revenue forecasting using Java, Python, Mockito, Postman, MySQL, machine learning, and NLP. [resume:061] (verified fact) Dual-processor smartwatch power management architecture at Qualcomm, increasing battery backup by about 40%. Revenue & P&L management REQUIREMENT:",
+      "claims": [
+        {
+          "text": "[resume:025] (verified fact) Did API development, bug resolution, fraud detection, and revenue forecasting using Java, Python, Mockito, Postman, MySQL, machine learning, and NLP.",
+          "evidence_refs": [
+            "resume:025"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[resume:061] (verified fact) Dual-processor smartwatch power management architecture at Qualcomm, increasing battery backup by about 40%.",
+          "evidence_refs": [
+            "resume:061"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "Revenue & P&L management REQUIREMENT:",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.66,
+      "evidence_coverage": 0.6666666666666666,
+      "system_bucket": "met_or_better",
+      "provider": "mock",
+      "latency_ms": 0.0553131103515625
+    },
+    {
+      "requirement_id": "req09",
+      "system_name": "identityos_v2",
+      "text": "[dossier_excerpts:005] (verified fact) Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. [dossier_excerpts:009] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [resume:039] (verified fact) M.Tech, Artificial Intelligence, IIT (ISM) Dhanbad, 2018-2020. Research on medical image processing using Cycle GAN. [dossier_excerpts:003] (verified fact) Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group.",
+      "claims": [
+        {
+          "text": "[dossier_excerpts:005] (verified fact) Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.",
+          "evidence_refs": [
+            "dossier_excerpts:005"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_excerpts:009] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "evidence_refs": [
+            "dossier_excerpts:009"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[resume:039] (verified fact) M.Tech, Artificial Intelligence, IIT (ISM) Dhanbad, 2018-2020.",
+          "evidence_refs": [
+            "resume:039"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "Research on medical image processing using Cycle GAN.",
+          "evidence_refs": [
+            "resume:039"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "[dossier_excerpts:003] (verified fact) Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group.",
+          "evidence_refs": [
+            "dossier_excerpts:003"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        }
+      ],
+      "overall_confidence": 0.892,
+      "evidence_coverage": 1.0,
+      "system_bucket": "partial",
+      "provider": "mock",
+      "latency_ms": 0.20170211791992188
+    },
+    {
+      "requirement_id": "req10",
+      "system_name": "identityos_v2",
+      "text": "Exceptional communication REQUIREMENT:",
+      "claims": [
+        {
+          "text": "Exceptional communication REQUIREMENT:",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.015735626220703125
+    },
+    {
+      "requirement_id": "req11",
+      "system_name": "identityos_v2",
+      "text": "[belief:004] (belief, unknown, confidence=0.10) Is comfortable claiming full personal credit for joint work without qualification. \u2014 counter-evidence exists, do not state this as certain Personal integrity & institutional temperament REQUIREMENT:",
+      "claims": [
+        {
+          "text": "[belief:004] (belief, unknown, confidence=0.10) Is comfortable claiming full personal credit for joint work without qualification.",
+          "evidence_refs": [
+            "belief:004"
+          ],
+          "claim_type": "unsupported",
+          "confidence": 0.1
+        },
+        {
+          "text": "\u2014 counter-evidence exists, do not state this as certain Personal integrity & institutional temperament REQUIREMENT:",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.05,
+      "evidence_coverage": 0.5,
+      "system_bucket": "partial",
+      "provider": "mock",
+      "latency_ms": 0.0514984130859375
+    },
+    {
+      "requirement_id": "req12",
+      "system_name": "identityos_v2",
+      "text": "[dossier_excerpts:005] (verified fact) Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. [dossier_excerpts:009] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_excerpts:012] (verified fact) Siddhartha's dossier states a preference for institution-building and zero-to-one problems, describing it as \"the only kind of problem I have ever been hired to solve.\" [dossier_excerpts:003] (verified fact) Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group.",
+      "claims": [
+        {
+          "text": "[dossier_excerpts:005] (verified fact) Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.",
+          "evidence_refs": [
+            "dossier_excerpts:005"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_excerpts:009] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "evidence_refs": [
+            "dossier_excerpts:009"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_excerpts:012] (verified fact) Siddhartha's dossier states a preference for institution-building and zero-to-one problems, describing it as \"the only kind of problem I have ever been hired to solve.\" [dossier_excerpts:003] (verified fact) Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group.",
+          "evidence_refs": [
+            "dossier_excerpts:012",
+            "dossier_excerpts:003"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        }
+      ],
+      "overall_confidence": 0.9899999999999999,
+      "evidence_coverage": 1.0,
+      "system_bucket": "partial",
+      "provider": "mock",
+      "latency_ms": 0.2541542053222656
+    },
+    {
+      "requirement_id": "req13",
+      "system_name": "identityos_v2",
+      "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet in Kannada, and frames relocation plus Kannada learning as conditions he is committing to, not concessions being requested. Languages \u2014 English, Hindi, Kannada preferred REQUIREMENT:",
+      "claims": [
+        {
+          "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet in Kannada, and frames relocation plus Kannada learning as conditions he is committing to, not concessions being requested.",
+          "evidence_refs": [
+            "dossier_excerpts:008"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "Languages \u2014 English, Hindi, Kannada preferred REQUIREMENT:",
+          "evidence_refs": [
+            "dossier_excerpts:008"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        }
+      ],
+      "overall_confidence": 0.745,
+      "evidence_coverage": 1.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.0591278076171875
+    },
+    {
+      "requirement_id": "req14",
+      "system_name": "identityos_v2",
+      "text": "[dossier_excerpts:009] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. [dossier_excerpts:011] (verified fact) Siddhartha's dossier states: \"I am a working generative-AI practitioner... I can tell a real deep-tech proposition from AI theatre before [an institution]'s name is on it,\" offered as a self-description of his professional judgment. [dossier_excerpts:012] (verified fact) Siddhartha's dossier states a preference for institution-building and zero-to-one problems, describing it as \"the only kind of problem I have ever been hired to solve.\"",
+      "claims": [
+        {
+          "text": "[dossier_excerpts:009] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "evidence_refs": [
+            "dossier_excerpts:009"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.",
+          "evidence_refs": [
+            "dossier_excerpts:007"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_excerpts:011] (verified fact) Siddhartha's dossier states: \"I am a working generative-AI practitioner...",
+          "evidence_refs": [
+            "dossier_excerpts:011"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "I can tell a real deep-tech proposition from AI theatre before [an institution]'s name is on it,\" offered as a self-description of his professional judgment.",
+          "evidence_refs": [
+            "dossier_excerpts:011"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "[dossier_excerpts:012] (verified fact) Siddhartha's dossier states a preference for institution-building and zero-to-one problems, describing it as \"the only kind of problem I have ever been hired to solve.\"",
+          "evidence_refs": [
+            "dossier_excerpts:012"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        }
+      ],
+      "overall_confidence": 0.892,
+      "evidence_coverage": 1.0,
+      "system_bucket": "partial",
+      "provider": "mock",
+      "latency_ms": 0.2532005310058594
+    }
+  ]
+}

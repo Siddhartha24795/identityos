@@ -7,6 +7,7 @@ from .qa import (
     TrajectoryStep,
     Trajectory,
 )
+from .application import RealAssessment, FitBucket, ApplicationRequirement, Assessment
 
 __all__ = [
     "Confidence",
@@ -21,4 +22,8 @@ __all__ = [
     "Answer",
     "TrajectoryStep",
     "Trajectory",
+    "RealAssessment",
+    "FitBucket",
+    "ApplicationRequirement",
+    "Assessment",
 ]
