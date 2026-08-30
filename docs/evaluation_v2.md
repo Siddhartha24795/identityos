@@ -100,23 +100,69 @@ correctly agrees.** No other requirement's bucket changed — verified by
 re-running the full 14-requirement comparison before and after, not just
 inspecting req13 in isolation.
 
+## v2.3: embedding-based retrieval — a real comparison, not a strict upgrade
+
+Added `identityos_v2_semantic`: the identical pipeline as `identityos_v2`,
+with `retrieve_semantic()` (embedding cosine similarity, BAAI/bge-small-en-v1.5
+via fastembed) instead of `retrieve()` (lexical word overlap) —
+`services/qa_engine/retrieval.py`. Everything downstream (generation,
+verification, bucketing) is the same code, so any difference is
+attributable to retrieval alone. Reproduce:
+`python scripts/run_eval_v2.py mock v2_semantic fastembed`.
+
+| Metric | identityos_v2 (lexical) | identityos_v2_semantic (fastembed) |
+|---|---|---|
+| Evidence coverage | 0.83 | **1.00** |
+| Assessment agreement rate | **0.43** | 0.36 |
+| Dangerous overclaim rate | **0.00** | 0.25 |
+
+**Semantic retrieval is not a strict upgrade over the current lexical
+approach on this benchmark, and we are not tuning it until it looks like
+one.** It genuinely fixed part of what it was built to fix — req10
+(Exceptional communication) went from zero retrieved facts to a fully
+correct `met_or_better`, and req05 (Entrepreneurial mindset) went from
+zero facts to a `partial` match (an improvement, though not exact). But it
+also reintroduced the exact class of failure v2.1 had eliminated: **req09
+(Government & policy engagement, real = `partial`) now overclaims to
+`met_or_better`** — the one dangerous overclaim in this run.
+
+The mechanism, traced through the trajectories, is a real interaction
+effect between v2.2 and v2.3, not a bug in either alone: embedding
+retrieval has higher recall but lower precision than lexical overlap on
+this corpus of short, terse fact bullets — it pulls in more
+topically-adjacent evidence at the same top-k, including facts that are
+*semantically nearby but about a different gap entirely* (e.g. a different
+requirement's admitted limitation). The v2.2 polarity check was built to
+catch a negative claim *about the topic asked*; it has no way to tell that
+apart from a negative claim about something merely embedding-adjacent to
+it, so broader recall can make the safety check noisier rather than better.
+Six other previously-correct requirements (req02/03/04/06/07/11) also moved
+from `met_or_better` to `partial` for the same reason: real but weaker,
+more numerous citations pull the polarity vote in unpredictable directions
+where lexical retrieval's tighter, more literal matches did not.
+
+**Decision: keep lexical retrieval (`identityos_v2`) as the default.**
+`identityos_v2_semantic` stays in the harness as a real, running comparison
+arm — not deleted, not hidden — because the recall improvement on req05/req10
+is genuine and worth continuing to investigate (e.g. combining both
+retrieval signals, or a precision-aware bucketing rule that discounts
+weakly-scored citations), just not worth shipping as the default on the
+evidence collected so far. See docs/hot_take.md.
+
 ## What's still wrong (not hidden)
 
-**req05 (Entrepreneurial mindset) and req10 (Exceptional communication)
-underclaim to `gap` with zero facts retrieved at all**, despite real,
-relevant evidence now existing in the corpus (the "comfortable with
-ambiguity, unfunded mandates" and "translating executive intent" lines in
+**req05 (Entrepreneurial mindset) and req10 (Exceptional communication),
+on the shipped default (`identityos_v2`, lexical), still underclaim to
+`gap` with zero facts retrieved at all**, despite real, relevant evidence
+existing in the corpus (the "comfortable with ambiguity, unfunded
+mandates" and "translating executive intent" lines in
 `dossier_narrative.md`). This is the lexical-retrieval limitation flagged
-from the start (docs/architecture.md): the requirement's abstract phrasing
-("entrepreneurial mindset") shares no literal words with evidence phrased
-differently ("comfortable with ambiguity"). Confirms the known limitation
-concretely rather than surfacing a new one — the documented fix is
-embedding-based retrieval, scoped as its own version (docs/roadmap.md v2.3)
-rather than bundled into v2.2, since it needs a new dependency decision and
-a real lexical-vs-semantic comparison.
-
-Both remaining issues are safe-direction (underclaims, not overclaims) —
-the metric that matters most, dangerous overclaim rate, is clean.
+from the start (docs/architecture.md). v2.3's semantic retrieval arm
+(`identityos_v2_semantic`) does find this evidence — proving the
+limitation is real and addressable — but isn't the shipped default, for
+the reasons above. Both remaining default-path issues are safe-direction
+(underclaims, not overclaims) — the metric that matters most, dangerous
+overclaim rate, is clean on the default system.
 
 ## What this run does and doesn't prove
 

@@ -3,17 +3,17 @@
   "system_name": "baseline_rag",
   "steps": [
     {
-      "timestamp": "2026-08-30T03:11:45.139180Z",
+      "timestamp": "2026-08-30T03:55:06.804479Z",
       "stage": "retrieve",
       "input_summary": "Which university awarded your M.Tech in Artificial Intelligence, and what was your research topic?",
       "action": "dump the entire fact store as unstructured text (no ranking, no ids)",
-      "observation": "92 facts included, no relevance filtering",
+      "observation": "90 facts included, no relevance filtering",
       "reasoning": "Baseline 2 has retrieval but no structure and no grounding check.",
       "confidence": null,
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T03:11:45.140497Z",
+      "timestamp": "2026-08-30T03:55:06.805723Z",
       "stage": "generate",
       "input_summary": "Which university awarded your M.Tech in Artificial Intelligence, and what was your research topic?",
       "action": "call provider with the full unstructured context dump",

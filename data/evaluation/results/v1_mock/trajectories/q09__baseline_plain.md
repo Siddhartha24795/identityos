@@ -1,6 +1,6 @@
 ### Trajectory — baseline_plain — q09
 
-**03:11:45 · generate**
+**03:55:06 · generate**
 - input: Where do you see yourself in five years?
 - action: call provider with zero context, zero verification
 - observation: I believe my track record speaks directly to this question. When it comes to five and see and where, I have always taken a proactive, results-driven approach and delivered measurable impact. I am confident this reflects who I am professionally.

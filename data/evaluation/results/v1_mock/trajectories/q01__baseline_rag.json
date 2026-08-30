@@ -3,17 +3,17 @@
   "system_name": "baseline_rag",
   "steps": [
     {
-      "timestamp": "2026-08-30T03:11:45.136035Z",
+      "timestamp": "2026-08-30T03:55:06.801464Z",
       "stage": "retrieve",
       "input_summary": "What did you build at Jinn Labs to handle multi-camera video ingestion, and roughly how many streams does it process?",
       "action": "dump the entire fact store as unstructured text (no ranking, no ids)",
-      "observation": "92 facts included, no relevance filtering",
+      "observation": "90 facts included, no relevance filtering",
       "reasoning": "Baseline 2 has retrieval but no structure and no grounding check.",
       "confidence": null,
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T03:11:45.137347Z",
+      "timestamp": "2026-08-30T03:55:06.802760Z",
       "stage": "generate",
       "input_summary": "What did you build at Jinn Labs to handle multi-camera video ingestion, and roughly how many streams does it process?",
       "action": "call provider with the full unstructured context dump",

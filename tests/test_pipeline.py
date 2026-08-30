@@ -37,6 +37,15 @@ def test_ingestion_produces_facts_with_provenance():
         assert fact.evidence[0].source_document
 
 
+def test_ingestion_never_treats_a_header_as_a_fact():
+    """Regression test: a source header containing a hyphen (e.g.
+    "## SELF-ASSESSED GAP") must be recognized as a category header, not
+    fall through and become a literal Fact whose text starts with '##'."""
+    ds = _build_test_digital_self()
+    header_facts = [f for f in ds.facts if f.text.strip().startswith("#")]
+    assert header_facts == [], f"header lines leaked into facts: {header_facts}"
+
+
 def test_confidence_bucketing():
     assert Confidence.from_score(0.99) == Confidence.VERIFIED_FACT
     assert Confidence.from_score(0.10) == Confidence.UNKNOWN

@@ -3,7 +3,7 @@
   "system_name": "baseline_plain",
   "steps": [
     {
-      "timestamp": "2026-08-30T03:11:45.518840Z",
+      "timestamp": "2026-08-30T03:55:07.228147Z",
       "stage": "generate",
       "input_summary": "Stakeholder management",
       "action": "call provider with zero context, zero verification",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T03:11:45.518884Z",
+      "timestamp": "2026-08-30T03:55:07.228191Z",
       "stage": "bucket",
       "input_summary": "Over the years, I have built a reputation for excellence here. When it comes to management and requirement and stakeholder, I have always taken a proactive, results-driven approach and delivered measurable impact. I am confident this reflects who I am professionally.",
       "action": "derive fit bucket from coverage+confidence",

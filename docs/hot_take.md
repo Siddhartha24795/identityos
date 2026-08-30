@@ -8,7 +8,10 @@ for "is this a positive answer," and neither substitution is safe.**
 v1 found the first substitution (relevance). v2 found the second
 (polarity), independently, by running the same verification machinery
 against a real, adjudicated application. Both read as the same underlying
-mistake once you see them side by side.
+mistake once you see them side by side. v2.3 then found a third, related
+lesson: a verification layer's safety guarantee is coupled to the specific
+error profile of whatever retrieval feeds it, so "improving" retrieval in
+isolation can make the safety check worse, not better.
 
 ## What we observed
 
@@ -98,6 +101,36 @@ property of grounding-based verification in general, not a bug specific to
 either version — and the more durable fix, twice now, has been making the
 underlying representation more complete rather than making the checking
 logic cleverer.
+
+## v2.3 addendum: "smarter" retrieval made the safety check less safe
+
+The obvious next move after finding the polarity bug was to assume better
+retrieval would help — embeddings instead of lexical overlap, so the
+system stops missing evidence that exists but doesn't share literal words.
+It does help, on exactly the two requirements it was built for (req05,
+req10). It also **reintroduced a dangerous overclaim** the corpus-completion
+pass had already eliminated (req09), and quietly downgraded six other
+previously-correct requirements. Full numbers: docs/evaluation_v2.md.
+
+The mechanism is the more interesting part. Embedding retrieval has higher
+recall and lower precision than lexical overlap on this corpus of short,
+terse fact bullets — it pulls in more *topically adjacent* evidence at the
+same top-k, including facts that are semantically nearby but about a
+*different* admitted gap entirely. The v2.2 polarity check has no way to
+tell "this is a negative claim about the thing being asked" apart from
+"this is a negative claim about something the retriever thinks is related."
+Better recall made the input to that check noisier, not cleaner.
+
+**The lesson generalizes past this one project**: retrieval quality and
+verification quality are not independent variables you can improve one at
+a time and expect the system to only get better. A safety check tuned
+against one retrieval method's error profile can be actively defeated by
+switching to a "better" retrieval method with a *different* error profile.
+Anyone building a verification layer on top of a retriever should re-run
+the verification's own eval every time the retriever changes — not just
+check that retrieval got better on its own terms. We didn't chase a
+threshold that would make embeddings look good; we reported the trade-off
+and kept lexical retrieval as the shipped default.
 
 ## The experiment we removed
 

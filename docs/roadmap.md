@@ -50,20 +50,27 @@ regressions on the other 13 requirements (re-verified, not just inspected
 in isolation), dangerous overclaim rate held at 0.00. See
 docs/improvement_changelog.md (Iteration 7), docs/evaluation_v2.md.
 
-## v2.3 — embedding-based retrieval  ·  not started
+## v2.3 — embedding-based retrieval  ·  **built, not promoted to default**
 
-Confirmed necessary, not just theoretical, by v2.1/v2.2's own eval runs:
-req05/req10 have real, relevant evidence in the corpus and still retrieve
-zero facts, because lexical overlap can't match "entrepreneurial mindset"
-against evidence phrased as "comfortable with ambiguity, unfunded
-mandates." Scoped as its own version rather than folded into v2.2 because
-it needs a real dependency decision (a local embedding model vs. an API
-embedding call) and a genuine lexical-vs-semantic comparison — not a
-keyword-list patch keyed to the two known failing terms, which would be
-the same kind of overfitting already declined earlier in this build.
+Built `identityos_v2_semantic` (services/embeddings/, fastembed +
+BAAI/bge-small-en-v1.5, ~65MB ONNX model, no API key) as a real comparison
+arm alongside lexical `identityos_v2`. It genuinely fixed req10 and
+improved req05, confirming the lexical-retrieval limitation was real and
+addressable. It also reintroduced a dangerous overclaim (req09) and
+downgraded six previously-correct requirements, because higher-recall
+retrieval interacts badly with v2.2's polarity check — see
+docs/hot_take.md's v2.3 addendum. **Decision: keep lexical retrieval as the
+shipped default**; the semantic arm stays in the harness, not deleted, as
+an honest ongoing comparison. See docs/improvement_changelog.md
+(Iteration 8), docs/evaluation_v2.md.
 
 ## v2.4+ — deferred from the original v2 scope  ·  not started
 
+- Precision-aware bucketing or a hybrid retrieval signal (combine lexical
+  + semantic scores rather than swapping one for the other) — the direct
+  follow-up to v2.3's finding that higher-recall retrieval alone made the
+  polarity check noisier. Not attempted yet because it needs its own
+  careful evaluation, not a quick threshold change.
 - Automatic belief inference from raw unstructured text (replacing v1/v2's
   hand-seeded beliefs) with an LLM pass plus counter-evidence search.
 - `APPLICATION_NARRATIVE_STATE`: answer a full application's question set as

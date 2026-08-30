@@ -16,7 +16,7 @@ from pathlib import Path
 
 from packages.schemas.identity import DigitalSelf, Evidence, Fact, FactCategory
 
-_HEADER_RE = re.compile(r"^##\s+([A-Z_ ]+)\s*$")
+_HEADER_RE = re.compile(r"^##\s+([A-Z_\- ]+)\s*$")
 
 _CATEGORY_MAP = {
     "EMPLOYMENT": FactCategory.EMPLOYMENT,

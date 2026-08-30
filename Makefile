@@ -1,4 +1,4 @@
-.PHONY: setup build-identity eval-mock eval-real eval-v2-mock eval-v2-real test clean
+.PHONY: setup build-identity eval-mock eval-real eval-v2-mock eval-v2-real eval-v2-semantic test clean
 
 setup:
 	python3 -m venv .venv
@@ -16,10 +16,15 @@ eval-real: build-identity
 	.venv/bin/python scripts/run_eval.py anthropic v1_real
 
 eval-v2-mock: build-identity
-	.venv/bin/python scripts/run_eval_v2.py mock v2_mock
+	.venv/bin/python scripts/run_eval_v2.py mock v2_mock hash
+
+# Real semantic embeddings (fastembed): downloads a ~65MB ONNX model on
+# first run, cached under data/.embedding_cache/. No API key needed.
+eval-v2-semantic: build-identity
+	.venv/bin/python scripts/run_eval_v2.py mock v2_semantic fastembed
 
 eval-v2-real: build-identity
-	.venv/bin/python scripts/run_eval_v2.py anthropic v2_real
+	.venv/bin/python scripts/run_eval_v2.py anthropic v2_real fastembed
 
 test:
 	.venv/bin/python -m pytest tests/ -q

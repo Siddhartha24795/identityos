@@ -1,0 +1,13 @@
+### Trajectory — baseline_plain — req13
+
+**03:55:28 · generate**
+- input: Languages — English, Hindi, Kannada preferred
+- action: call provider with zero context, zero verification
+- observation: Over the years, I have built a reputation for excellence here. When it comes to english and hindi and kannada, I have always taken a proactive, results-driven approach and delivered measurable impact. This has shaped my approach to every project I take on.
+- reasoning: Baseline 1: no identity access at all.
+
+**03:55:28 · bucket**
+- input: Over the years, I have built a reputation for excellence here. When it comes to english and hindi and kannada, I have always taken a proactive, results-driven approach and delivered measurable impact. This has shaped my approach to every project I take on.
+- action: derive fit bucket from coverage+confidence
+- observation: coverage=0.00 confidence=0.00
+- decision: gap

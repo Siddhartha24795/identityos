@@ -8,3 +8,8 @@ pytest>=8.0
 # with no separate install step.
 openai>=1.50
 anthropic>=0.40
+
+# Optional — only imported if EMBEDDING_PROVIDER=fastembed (v2.3). ONNX
+# runtime, no torch, ~65MB model cache on first use, no API key needed.
+# The default EMBEDDING_PROVIDER=hash needs none of this.
+fastembed>=0.5

@@ -3,17 +3,17 @@
   "system_name": "baseline_rag",
   "steps": [
     {
-      "timestamp": "2026-08-30T03:11:45.156680Z",
+      "timestamp": "2026-08-30T03:55:06.821673Z",
       "stage": "retrieve",
       "input_summary": "Why should we choose you instead of another candidate?",
       "action": "dump the entire fact store as unstructured text (no ranking, no ids)",
-      "observation": "92 facts included, no relevance filtering",
+      "observation": "90 facts included, no relevance filtering",
       "reasoning": "Baseline 2 has retrieval but no structure and no grounding check.",
       "confidence": null,
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T03:11:45.157900Z",
+      "timestamp": "2026-08-30T03:55:06.822904Z",
       "stage": "generate",
       "input_summary": "Why should we choose you instead of another candidate?",
       "action": "call provider with the full unstructured context dump",

@@ -1,12 +1,12 @@
 ### Trajectory — baseline_rag — q16
 
-**03:11:45 · retrieve**
+**03:55:06 · retrieve**
 - input: Are you primarily a research scientist or a production engineering leader?
 - action: dump the entire fact store as unstructured text (no ranking, no ids)
-- observation: 92 facts included, no relevance filtering
+- observation: 90 facts included, no relevance filtering
 - reasoning: Baseline 2 has retrieval but no structure and no grounding check.
 
-**03:11:45 · generate**
+**03:55:06 · generate**
 - input: Are you primarily a research scientist or a production engineering leader?
 - action: call provider with the full unstructured context dump
 - observation: Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical — it is 24x7 production accountability across live customer sites. Proposes re-engineering corporate membership tiers around named deliverables rather than privileges: Platinum buys named CoE co-investment and a reserved research slot, Gold buys the Problem Register and curated hiring access, Associate buys events and community. Leads a 35+ member cross-functional team (CV/ML research, edge and cloud infra, backend, frontend) as Head of Engineering and Innovation, owning hiring, roadmap, architecture review, and delivery.

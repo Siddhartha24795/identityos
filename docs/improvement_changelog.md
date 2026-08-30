@@ -46,13 +46,17 @@ against the IITACB CEO dossier's real 14-requirement fit table
 
 | **Iteration 7 (v2.2)** | Split cited claim text on unambiguous contrastive conjunctions (" but ", "; ", "however", "though", "while") and classified each claim as negative/mixed/positive, so a claim mixing a positive and a negative clause buckets `partial` instead of the old whole-sentence-negative `gap`. Added a regression test for the mixed-clause case before touching the eval. | req13 now correctly agrees (`partial` vs `partial`). Agreement rate 0.36 -> 0.43. No other requirement's bucket changed — re-ran the full comparison, not just req13. Dangerous overclaim rate stayed 0.00. | Kept. A precise fix to one diagnosed gap, verified not to have side effects — the opposite failure mode from the negation-rule iteration that first fixed req14 and briefly regressed other requirements. |
 
-## Main failure mode, v2.2 (see docs/hot_take.md for the full writeup)
+| **Iteration 8 (v2.3) — kept as a comparison arm, not promoted to default** | Built `identityos_v2_semantic`: identical pipeline to `identityos_v2`, with embedding-cosine retrieval (fastembed, BAAI/bge-small-en-v1.5, chosen for zero API key + ~65MB ONNX footprint) instead of lexical word-overlap. Hypothesis: this fixes req05/req10 (real evidence exists, zero lexical overlap). | It did — req10 moved to a fully correct `met_or_better`, req05 to a `partial` (real improvement). But agreement rate fell 0.43 -> 0.36 and **dangerous overclaim rate rose 0.00 -> 0.25**: req09 (a real, admitted government-engagement gap) started overclaiming, because semantic retrieval's higher recall / lower precision pulled in more topically-adjacent facts, and the v2.2 polarity check can't distinguish "negative claim about this topic" from "negative claim about something merely embedding-adjacent." | **Not promoted to default.** Kept running in the harness as an honest, ongoing comparison arm. Fixing part of a known limitation while reintroducing a worse one elsewhere is not a net improvement — see docs/hot_take.md and docs/evaluation_v2.md for the full trade-off, not just the number that improved. |
 
-One safe-direction (not dangerous) failure remains, already understood and
-not hidden: req05 and req10 now have real, relevant evidence in the corpus
-but retrieve zero facts, because lexical overlap can't match an abstract
-requirement phrase ("entrepreneurial mindset") against evidence phrased
-differently ("comfortable with ambiguity, unfunded mandates") — the exact
-lexical-retrieval limitation flagged from v1's design, now confirmed
-concretely rather than staying theoretical. Fix: embedding-based retrieval,
-scoped as its own version (docs/roadmap.md v2.3) rather than bundled here.
+## Main failure mode, v2.3 (see docs/hot_take.md for the full writeup)
+
+Embedding retrieval is not a strict upgrade over lexical retrieval on this
+benchmark, and we did not tune it until it looked like one. Two
+safe-direction failures remain on the shipped default (`identityos_v2`,
+lexical): req05 and req10 still retrieve zero facts, because lexical
+overlap can't match an abstract requirement phrase ("entrepreneurial
+mindset") against evidence phrased differently ("comfortable with
+ambiguity, unfunded mandates"). The semantic arm proves this is fixable,
+but at a real, measured cost elsewhere (see Iteration 8) — a genuinely
+better fix (combining both signals, or a precision-aware bucketing rule)
+is future work, not a threshold tweak.

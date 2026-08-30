@@ -1,9 +1,15 @@
-"""Runs all three requirement-fit assessors over the real 14-requirement
+"""Runs all four requirement-fit assessors over the real 14-requirement
 IITACB CEO application, scores each against the REAL human's own prior
 self-assessment, and writes the same shape of artifacts as v1:
   - data/evaluation/results/<tag>/application_answers.json
   - data/evaluation/results/<tag>/application_summary.json
   - data/evaluation/results/<tag>/trajectories/req*__<system>.{md,json}
+
+v2.3 adds identityos_v2_semantic: the same pipeline as identityos_v2, with
+embedding-based retrieval instead of lexical (services/qa_engine/retrieval.py
+retrieve_semantic). Runs with EMBEDDING_PROVIDER=hash by default (zero
+dependency); pass "fastembed" for the real semantic comparison — see
+docs/evaluation_v2.md for why the two give very different results.
 """
 from __future__ import annotations
 
@@ -16,19 +22,27 @@ from services.application_engine.assess import (
     assess_baseline_plain,
     assess_baseline_rag,
     assess_identityos,
+    assess_identityos_semantic,
 )
 from services.application_engine.intent_model import load_requirements
+from services.embeddings import get_embedding_provider
 from services.evaluation.scoring import score_application_system
 from services.identity_engine import store
 from services.providers import get_provider
+from services.qa_engine.retrieval import DigitalSelfEmbeddingIndex
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 REQUIREMENTS_PATH = REPO_ROOT / "data" / "applications" / "iitacb_ceo" / "requirements.json"
 RESULTS_DIR = REPO_ROOT / "data" / "evaluation" / "results"
 
 
-def run(provider_name: str | None = None, tag: str = "latest") -> dict:
+def run(
+    provider_name: str | None = None,
+    tag: str = "latest",
+    embedding_provider_name: str | None = None,
+) -> dict:
     provider = get_provider(provider_name)
+    embedding_provider = get_embedding_provider(embedding_provider_name)
     ds = store.load_latest()
     if ds.version == 0:
         raise RuntimeError(
@@ -36,6 +50,7 @@ def run(provider_name: str | None = None, tag: str = "latest") -> dict:
         )
     requirements = load_requirements(REQUIREMENTS_PATH)
     requirements_by_id = {r.id: r for r in requirements}
+    embedding_index = DigitalSelfEmbeddingIndex(ds, embedding_provider)
 
     run_dir = RESULTS_DIR / tag
     traj_dir = run_dir / "trajectories"
@@ -45,18 +60,21 @@ def run(provider_name: str | None = None, tag: str = "latest") -> dict:
         "baseline_plain": [],
         "baseline_rag": [],
         "identityos_v2": [],
+        "identityos_v2_semantic": [],
     }
 
     for req in requirements:
         a_plain, t_plain = assess_baseline_plain(req, provider)
         a_rag, t_rag = assess_baseline_rag(req, ds, provider)
         a_sys, t_sys = assess_identityos(req, ds, provider)
+        a_sem, t_sem = assess_identityos_semantic(req, embedding_index, provider)
 
         all_assessments["baseline_plain"].append(a_plain)
         all_assessments["baseline_rag"].append(a_rag)
         all_assessments["identityos_v2"].append(a_sys)
+        all_assessments["identityos_v2_semantic"].append(a_sem)
 
-        for traj in (t_plain, t_rag, t_sys):
+        for traj in (t_plain, t_rag, t_sys, t_sem):
             stem = f"{req.id}__{traj.system_name}"
             (traj_dir / f"{stem}.md").write_text(traj.to_markdown(), encoding="utf-8")
             (traj_dir / f"{stem}.json").write_text(
@@ -79,6 +97,7 @@ def run(provider_name: str | None = None, tag: str = "latest") -> dict:
     summary = {
         "application": "IITACB CEO candidature — 14 real requirements",
         "provider": provider.name,
+        "embedding_provider": embedding_provider.name,
         "digital_self_version": ds.version,
         "n_requirements": len(requirements),
         "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -105,5 +124,6 @@ def run(provider_name: str | None = None, tag: str = "latest") -> dict:
 if __name__ == "__main__":
     provider_arg = sys.argv[1] if len(sys.argv) > 1 else None
     tag_arg = sys.argv[2] if len(sys.argv) > 2 else "latest"
-    result = run(provider_arg, tag_arg)
+    embedding_arg = sys.argv[3] if len(sys.argv) > 3 else None
+    result = run(provider_arg, tag_arg, embedding_arg)
     print(json.dumps(result["scores"], indent=2))

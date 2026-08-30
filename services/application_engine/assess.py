@@ -13,7 +13,12 @@ from packages.schemas.application import Assessment, ApplicationRequirement
 from packages.schemas.identity import DigitalSelf
 from packages.schemas.qa import Question, QuestionType, Trajectory
 from services.application_engine.bucketing import bucket_from_signals
-from services.qa_engine.retrieval import format_context, retrieve
+from services.qa_engine.retrieval import (
+    DigitalSelfEmbeddingIndex,
+    format_context,
+    retrieve,
+    retrieve_semantic,
+)
 from services.qa_engine.verification import evidence_coverage, verify_answer
 
 SYSTEM_PROMPT_PLAIN = (
@@ -173,6 +178,70 @@ def assess_identityos(
     assessment = Assessment(
         requirement_id=req.id,
         system_name="identityos_v2",
+        text=text,
+        claims=claims,
+        overall_confidence=overall,
+        evidence_coverage=coverage,
+        system_bucket=bucket,
+        provider=provider.name,
+        latency_ms=latency,
+    )
+    return assessment, traj
+
+
+def assess_identityos_semantic(
+    req: ApplicationRequirement,
+    embedding_index: DigitalSelfEmbeddingIndex,
+    provider,
+) -> tuple[Assessment, Trajectory]:
+    """v2.3 — identical pipeline to assess_identityos(), except retrieval
+    is embedding-cosine-similarity ranked (retrieve_semantic) instead of
+    lexical word-overlap (retrieve). Everything downstream — generation,
+    verification, bucketing — is the exact same code, so any difference in
+    outcome is attributable to retrieval alone."""
+    traj = Trajectory(question_id=req.id, system_name="identityos_v2_semantic")
+    q = _as_question(req)
+    facts, beliefs = retrieve_semantic(embedding_index, q, top_k_facts=8, top_k_beliefs=4)
+    context = format_context(facts, beliefs)
+    traj.add(
+        stage="retrieve",
+        input_summary=req.text,
+        action=(
+            f"embedding-similarity retrieval ({embedding_index._provider.name}): "
+            f"top {len(facts)} facts, {len(beliefs)} beliefs"
+        ),
+        observation=context or "(no matching evidence found)",
+    )
+    prompt = f"CONTEXT:\n{context}\n\nREQUIREMENT:\n{req.text}\n"
+    t0 = time.time()
+    text = provider.complete(SYSTEM_PROMPT_IDENTITYOS, prompt)
+    latency = (time.time() - t0) * 1000
+    traj.add(
+        stage="generate",
+        input_summary=req.text,
+        action="call provider with cited, confidence-annotated context",
+        observation=text,
+    )
+    claims, overall = verify_answer(text, facts, beliefs)
+    coverage = evidence_coverage(claims)
+    bucket = bucket_from_signals(coverage, overall, claims)
+    traj.add(
+        stage="verify",
+        input_summary=text,
+        action="per-sentence grounding check (same verifier as lexical identityos_v2)",
+        observation=f"coverage={coverage:.2f} confidence={overall:.2f}",
+        confidence=overall,
+    )
+    traj.add(
+        stage="bucket",
+        input_summary=text,
+        action="derive fit bucket from coverage+confidence+polarity (same bucketing.py as lexical)",
+        observation=bucket.value,
+        decision=bucket.value,
+    )
+    assessment = Assessment(
+        requirement_id=req.id,
+        system_name="identityos_v2_semantic",
         text=text,
         claims=claims,
         overall_confidence=overall,
