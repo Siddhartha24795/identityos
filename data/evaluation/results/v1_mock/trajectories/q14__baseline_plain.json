@@ -3,7 +3,7 @@
   "system_name": "baseline_plain",
   "steps": [
     {
-      "timestamp": "2026-08-30T04:16:38.168189Z",
+      "timestamp": "2026-08-30T04:28:48.152384Z",
       "stage": "generate",
       "input_summary": "What professional body or industry association have you personally founded or run?",
       "action": "call provider with zero context, zero verification",

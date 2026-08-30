@@ -179,10 +179,36 @@ transcribed by paraphrasing a table whose own language compared everything
 to that one role. Category-level tagging operates on whole facts; this
 contamination lives inside a sentence within a mostly-fine fact — the same
 granularity mismatch as v2.2's negation fix, appearing a third time at a
-different level. We did not rewrite the source facts to chase a clean
-result once diagnosed; that would be corpus-editing for the same reason
-already declined for req08 and req13. It's an open, named item for v2.6+
-(docs/roadmap.md), not a hidden one.
+different level. At the time this was written, it was an open, named item
+rather than a hidden one — see the v2.6 addendum below for what turned out
+to actually fix it.
+
+## v2.6 addendum: the fix was correcting an authoring error, not building a classifier
+
+The natural next move after v2.5 would be a sentence-level content-scope
+classifier. That's not what fixed it. Tracing the contamination to its
+source showed it wasn't a detection problem at all — it was an authoring
+error: five bullets in one source file had conflated a general statement
+with a role-specific comparison in the same sentence, violating this
+project's own one-fact-per-line ingestion rule. Splitting each into a
+general fact and a separately-tagged application-specific one is a
+correction, not a new mechanism — and it measurably worked: req05 went
+from a `partial` match to a full, exact one under hybrid retrieval, with
+zero change to the safety metric, verified by re-running all three eval
+suites rather than assumed from the diff.
+
+The reason this doesn't collapse into "we edited the data because the eval
+looked bad" (the exact pattern declined for req08 and req13): five bullets
+were affected by the same authoring mistake, and only one had ever shown
+up as a visible symptom. The other four weren't touched *because* some
+test needed them fixed — they were touched because they had the identical,
+independently-identifiable defect. That's the difference between
+correcting a mistake and tuning a benchmark: one generalizes to content
+nothing has tested yet, the other doesn't. Re-reading the regenerated
+output surfaced a near-identical mistake in a *different* source file,
+confirming this is a real authoring pattern worth watching for, not a
+one-off — named as the next item rather than fixed reactively in the same
+pass.
 
 ## The experiment we removed
 

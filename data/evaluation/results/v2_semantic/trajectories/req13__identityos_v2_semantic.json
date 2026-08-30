@@ -1,0 +1,46 @@
+{
+  "question_id": "req13",
+  "system_name": "identityos_v2_semantic",
+  "steps": [
+    {
+      "timestamp": "2026-08-30T04:29:03.875727Z",
+      "stage": "retrieve",
+      "input_summary": "Languages — English, Hindi, Kannada preferred",
+      "action": "embedding-similarity retrieval (fastembed): top 8 facts, 0 beliefs",
+      "observation": "[resume:044] (verified fact) Augmented Reality, ARCore, Large Language Models, VLMs, RAG, MCP, LangChain.\n[resume:024] (verified fact) Software Engineer, Amdocs, Pune India, Aug 2020 - Feb 2021, on Billing and RTB teams.\n[resume:031] (verified fact) Instructor, Digiimento Education Pvt. Ltd, Delhi India, Dec 2017 - June 2018.\n[resume:043] (verified fact) Artificial Intelligence, Deep Learning, Machine Learning, Image Processing, Computer Vision, Natural Language Processing.\n[resume:037] (verified fact) Intern, IIT BHU, Varanasi India, June 2015 - July 2015.\n[dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet in Kannada, and frames relocation plus Kannada learning as conditions he is committing to, not concessions being requested.\n[resume:050] (verified fact) 2nd Prize, Japan Hackathon 2021, representing India.\n[resume:045] (verified fact) Python, NumPy, Pandas, Matplotlib, SQL, Android, Java, C++, C, Git, Perforce.",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T04:29:03.875990Z",
+      "stage": "generate",
+      "input_summary": "Languages — English, Hindi, Kannada preferred",
+      "action": "call provider with cited, confidence-annotated context",
+      "observation": "[dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet in Kannada, and frames relocation plus Kannada learning as conditions he is committing to, not concessions being requested. [resume:043] (verified fact) Artificial Intelligence, Deep Learning, Machine Learning, Image Processing, Computer Vision, Natural Language Processing. [resume:044] (verified fact) Augmented Reality, ARCore, Large Language Models, VLMs, RAG, MCP, LangChain. [resume:024] (verified fact) Software Engineer, Amdocs, Pune India, Aug 2020 - Feb 2021, on Billing and RTB teams.",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T04:29:03.876165Z",
+      "stage": "verify",
+      "input_summary": "[dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet in Kannada, and frames relocation plus Kannada learning as conditions he is committing to, not concessions being requested. [resume:043] (verified fact) Artificial Intelligence, Deep Learning, Machine Learning, Image Processing, Computer Vision, Natural Language Processing. [resume:044] (verified fact) Augmented Reality, ARCore, Large Language Models, VLMs, RAG, MCP, LangChain. [resume:024] (verified fact) Software Engineer, Amdocs, Pune India, Aug 2020 - Feb 2021, on Billing and RTB teams.",
+      "action": "per-sentence grounding check (same verifier as lexical identityos_v2)",
+      "observation": "coverage=1.00 confidence=0.99",
+      "reasoning": "",
+      "confidence": 0.99,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T04:29:03.876171Z",
+      "stage": "bucket",
+      "input_summary": "[dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet in Kannada, and frames relocation plus Kannada learning as conditions he is committing to, not concessions being requested. [resume:043] (verified fact) Artificial Intelligence, Deep Learning, Machine Learning, Image Processing, Computer Vision, Natural Language Processing. [resume:044] (verified fact) Augmented Reality, ARCore, Large Language Models, VLMs, RAG, MCP, LangChain. [resume:024] (verified fact) Software Engineer, Amdocs, Pune India, Aug 2020 - Feb 2021, on Billing and RTB teams.",
+      "action": "derive fit bucket from coverage+confidence+polarity (same bucketing.py as lexical)",
+      "observation": "partial",
+      "reasoning": "",
+      "confidence": null,
+      "decision": "partial"
+    }
+  ]
+}

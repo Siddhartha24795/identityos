@@ -3,17 +3,17 @@
   "system_name": "baseline_rag",
   "steps": [
     {
-      "timestamp": "2026-08-30T04:16:38.174042Z",
+      "timestamp": "2026-08-30T04:28:48.158364Z",
       "stage": "retrieve",
       "input_summary": "Are you primarily a research scientist or a production engineering leader?",
       "action": "dump the entire fact store as unstructured text (no ranking, no ids)",
-      "observation": "90 facts included, no relevance filtering",
+      "observation": "94 facts included, no relevance filtering",
       "reasoning": "Baseline 2 has retrieval but no structure and no grounding check.",
       "confidence": null,
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T04:16:38.175313Z",
+      "timestamp": "2026-08-30T04:28:48.159623Z",
       "stage": "generate",
       "input_summary": "Are you primarily a research scientist or a production engineering leader?",
       "action": "call provider with the full unstructured context dump",

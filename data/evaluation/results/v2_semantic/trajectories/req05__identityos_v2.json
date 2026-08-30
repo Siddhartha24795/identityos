@@ -1,0 +1,46 @@
+{
+  "question_id": "req05",
+  "system_name": "identityos_v2",
+  "steps": [
+    {
+      "timestamp": "2026-08-30T04:29:03.331499Z",
+      "stage": "retrieve",
+      "input_summary": "Entrepreneurial mindset",
+      "action": "lexical retrieval over Digital Self: top 0 facts, 0 beliefs",
+      "observation": "(no matching evidence found)",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T04:29:03.331521Z",
+      "stage": "generate",
+      "input_summary": "Entrepreneurial mindset",
+      "action": "call provider with cited, confidence-annotated context",
+      "observation": "Entrepreneurial mindset REQUIREMENT:",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T04:29:03.331537Z",
+      "stage": "verify",
+      "input_summary": "Entrepreneurial mindset REQUIREMENT:",
+      "action": "per-sentence grounding check (same verifier as v1)",
+      "observation": "coverage=0.00 confidence=0.00",
+      "reasoning": "",
+      "confidence": 0.0,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T04:29:03.331542Z",
+      "stage": "bucket",
+      "input_summary": "Entrepreneurial mindset REQUIREMENT:",
+      "action": "derive fit bucket from coverage+confidence, not a self-reported label",
+      "observation": "gap",
+      "reasoning": "A self-reported label from generation isn't independently checkable; a derived one is.",
+      "confidence": null,
+      "decision": "gap"
+    }
+  ]
+}

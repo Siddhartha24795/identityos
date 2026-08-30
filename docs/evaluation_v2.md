@@ -182,20 +182,69 @@ every claim rather than assuming a "hybrid" label makes something better.
 See docs/hot_take.md for why the *mechanism* (fallback-only, not fusion)
 is what made this work where naive semantic retrieval didn't.
 
+## v2.6: fixing the source, not the classifier
+
+v2.5 found that role-specific framing survives inside individual sentences
+of otherwise-general facts, one level more granular than a whole-fact
+category filter can reach. Rather than building a sentence-level
+classifier, the actual root cause turned out to be an authoring error:
+five bullets in `dossier_narrative.md` violated this project's own
+one-fact-per-line ingestion rule by conflating a general capability
+statement with a comparison drawn specifically to the IITACB Secretariat
+role in the same sentence (e.g. "...building the function before
+headcount exists — precisely the condition of a Secretariat being stood
+up"). Split each into a general fact and a separate, correctly-tagged
+`APPLICATION_SPECIFIC` one. This is a one-time authoring correction, not a
+new classification mechanism, and not made because one eval case looked
+bad — five bullets were affected; only one had been the visible symptom.
+
+| Metric | before (v2.5) | after (v2.6) |
+|---|---|---|
+| identityos_v2 (lexical) agreement rate | 0.43 | 0.43 (unaffected) |
+| identityos_v2_hybrid agreement rate | 0.50 | **0.57** |
+| identityos_v2_hybrid dangerous overclaim rate | 0.00 | **0.00** (held) |
+| identityos_v2_semantic agreement rate | 0.36 | 0.64 |
+| identityos_v2_semantic dangerous overclaim rate | 0.25 | **0.50** |
+
+req05 (Entrepreneurial mindset) is now a full, exact `met_or_better` match
+under hybrid — up from a `partial` — because the general capability
+statement is no longer diluted by an ambiguous role comparison. Hybrid's
+dangerous overclaim rate held at 0.00 through a real corpus change, which
+is itself evidence the fallback-only design is robust, not a threshold
+tuned to one snapshot of data.
+
+**identityos_v2_semantic's dangerous overclaim rate got worse (0.25 ->
+0.50), on a *different* pair of requirements than before (req08 and req14
+now, req09 previously).** This is not a regression to fix — it's further
+confirmation of the v2.3 finding: semantic-only retrieval's precision
+problem is inherent to the approach, not tied to one corpus snapshot, which
+is exactly why it was never promoted to default and why hybrid's
+fallback-only design (not raw semantic quality) is what makes the shipped
+system safe.
+
+## v2.5's document-generation letter, re-checked
+
+The specific "Secretariat" comparison flagged in docs/hot_take.md's v2.5
+addendum no longer appears in the generated cover letter. **A related,
+distinct conflation of the same shape still exists in a different source
+file** (`dossier_excerpts.md`'s "SELF-ASSESSED GAP" section mixes a
+general capability-gap admission with "...the committee should not be
+persuaded that adjacent experience... is equivalent to that record," where
+"the committee" is IITACB's Managing Committee) — found by re-reading the
+regenerated letter, not fixed in this pass. Named as the next item
+(docs/roadmap.md v2.7) rather than expanded into this version, matching
+this project's practice of shipping one diagnosed fix at a time.
+
 ## What's still wrong (not hidden)
 
 **req03, req06, req07, req11, req12, req14 still don't reach an exact
-bucket match on any retrieval arm**, including hybrid — mostly the same
-nuance-collapsing issue from earlier versions (a real "MET at chief level,
-with a stated caveat" or a forward commitment reads differently than a
-plain MET once bucketed into a coarse 3-way scale) rather than a new
-finding. **req05 specifically improved (gap -> partial) but still isn't an
-exact match** even under hybrid, because the semantic fallback's top
-citation for it is real and relevant but not confidently-enough grounded
-to cross the `met_or_better` threshold — a smaller, second-order version of
-the same "recall found something, but not the strongest possible evidence"
-limitation. None of these are dangerous overclaims — the metric that
-matters most stays at 0.00 across lexical and hybrid.
+bucket match under hybrid** (6 of 14) — mostly the same nuance-collapsing
+issue from earlier versions (a real "MET at chief level, with a stated
+caveat" or a forward commitment reads differently than a plain MET once
+bucketed into a coarse 3-way scale) rather than a new finding. **req05 is
+now fully fixed** (v2.6, above) — no longer on this list. None of the
+remaining six are dangerous overclaims — the metric that matters most
+stays at 0.00 under both lexical and hybrid.
 
 ## What this run does and doesn't prove
 

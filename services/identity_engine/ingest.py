@@ -33,6 +33,10 @@ _CATEGORY_MAP = {
     # about the person, so document generation for any other target
     # should not draw on it by default. docs/hot_take.md v2.5 addendum.
     "STRATEGY AND ACCOUNTABILITY": FactCategory.APPLICATION_SPECIFIC,
+    # v2.6: facts split out of REQUIREMENT EVIDENCE where a general
+    # statement had a role-specific comparison conflated into the same
+    # bullet (see dossier_narrative.md's v2.6 correction note).
+    "APPLICATION-SPECIFIC EVIDENCE": FactCategory.APPLICATION_SPECIFIC,
 }
 
 

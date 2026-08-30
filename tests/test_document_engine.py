@@ -54,6 +54,26 @@ def test_prefer_unused_puts_fresh_evidence_first():
     assert ordered_ids.index(facts[1].id) < ordered_ids.index(facts[0].id)
 
 
+def test_dossier_narrative_general_facts_do_not_name_the_secretariat():
+    """Regression test for the v2.6 fix, scoped to the source file it fixed:
+    a general capability fact from dossier_narrative.md must not carry a
+    comparison to "a/the Secretariat" (IITACB's, capitalized in the source
+    as a proper reference) baked into its text — that belongs in a
+    separately-tagged APPLICATION_SPECIFIC fact. Note: "secretariat" is a
+    legitimate general term elsewhere in the corpus (e.g. "Cabinet
+    Secretariat", a real government body) — this test only checks the one
+    source file where the conflation bug actually was."""
+    ds = _build_test_digital_self()
+    general_narrative_facts = [
+        f for f in ds.facts
+        if f.id.startswith("dossier_narrative:")
+        and f.category != FactCategory.APPLICATION_SPECIFIC
+    ]
+    assert general_narrative_facts  # sanity: the file actually contributed general facts
+    offending = [f for f in general_narrative_facts if "secretariat" in f.text.lower()]
+    assert offending == [], f"role-specific framing leaked into general facts: {offending}"
+
+
 def test_generate_cover_letter_end_to_end_with_mock():
     ds = _build_test_digital_self()
     provider = get_provider("mock")

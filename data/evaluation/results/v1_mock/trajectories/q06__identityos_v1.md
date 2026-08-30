@@ -1,28 +1,28 @@
 ### Trajectory — identityos_v1 — q06
 
-**04:16:38 · classify**
+**04:28:48 · classify**
 - input: What failure taught you the most in your career?
 - action: use declared question.type (v1 simplification, not a learned classifier)
 - observation: unseen
 - reasoning: v2 replaces this with an automatic classifier over question text alone.
 
-**04:16:38 · retrieve**
+**04:28:48 · retrieve**
 - input: What failure taught you the most in your career?
 - action: lexical retrieval over Digital Self: top 1 facts, 0 beliefs
 - observation: [dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.
 
-**04:16:38 · generate**
+**04:28:48 · generate**
 - input: What failure taught you the most in your career?
 - action: call provider with structured, citation-tagged, confidence-annotated context
 - observation: [dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.
 
-**04:16:38 · verify**
+**04:28:48 · verify**
 - input: [dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.
 - action: check every sentence for an explicit citation, else a lexical grounding match
 - observation: evidence_coverage=1.00 unsupported_claim_rate=0.00 overall_confidence=0.99
 - confidence: 0.99
 
-**04:16:38 · complete**
+**04:28:48 · complete**
 - input: q06
 - action: return final answer
 - observation: [dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.

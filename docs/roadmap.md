@@ -102,25 +102,40 @@ sentences of otherwise-general facts, one level more granular than the fix
 addresses. See docs/evaluation_documents.md, docs/hot_take.md's v2.5
 addendum, docs/improvement_changelog.md.
 
-## v2.6+ — deferred  ·  not started
+## v2.6 — corpus authoring correction  ·  **built**
 
-- Sentence/clause-level content-scope classification, or LLM-assisted
-  neutral rephrasing at generation time — the direct follow-up to v2.5's
-  residual finding. Needs its own evaluation (the former) or a real
-  provider key (the latter); not attempted as a reactive corpus edit.
+Root-caused v2.5's sentence-level leak to an actual authoring error, not a
+missing classifier: five bullets in `dossier_narrative.md` conflated a
+general statement with an IITACB-specific comparison in one sentence,
+violating this project's own one-fact-per-line rule. Split all five, not
+just the one that had been visibly wrong, into general + separately-tagged
+`APPLICATION_SPECIFIC` facts. Result: hybrid retrieval's agreement rate
+0.50 -> 0.57 with dangerous overclaim rate held at 0.00 through a real
+corpus change; req05 now a full exact match. Also found — and left open —
+a near-identical conflation in a different source file. See
+docs/improvement_changelog.md (Iteration 10-11), docs/evaluation_v2.md,
+docs/evaluation_documents.md, docs/hot_take.md's v2.6 addendum.
+
+## v2.7+ — deferred  ·  not started
+
+- Audit `dossier_excerpts.md`'s "SELF-ASSESSED GAP" section for the same
+  general-statement-conflated-with-application-specific-framing pattern
+  found and fixed in `dossier_narrative.md` (v2.6) — found on re-reading
+  the v2.6 regenerated letter, not yet fixed.
 - Automatic belief inference from raw unstructured text (replacing v1/v2's
   hand-seeded beliefs) with an LLM pass plus counter-evidence search.
 - Extend document generation to other types (SOP, research statement,
   short-answer set) and to a *named* target opportunity (a real
-  `ApplicationIntentModel`, not just a generic-role system prompt) — would
-  also directly address the v2.5 scope-contamination finding, since a
-  named target makes "in scope for this document" a checkable fact instead
-  of an implicit assumption.
+  `ApplicationIntentModel`, not just a generic-role system prompt).
+- identityos_v2_semantic (standalone) remains unsafe as its own system
+  (dangerous overclaim rate 0.50 as of v2.6) — not a priority to fix
+  directly, since it was never the shipped path; hybrid already achieves
+  the safety guarantee semantic-alone doesn't.
 - Six requirements (req03/06/07/11/12/14) still don't reach an exact bucket
-  match under any retrieval arm — mostly a coarse-3-bucket-scale nuance
-  problem, not a retrieval problem. Would need either a finer-grained real
-  assessment scale or a smarter bucketing rule; not attempted yet because
-  neither is a quick fix and both need their own evaluation.
+  match under hybrid — mostly a coarse-3-bucket-scale nuance problem, not
+  a retrieval problem. Would need either a finer-grained real assessment
+  scale or a smarter bucketing rule; not attempted yet because neither is
+  a quick fix and both need their own evaluation.
 
 ## v3 — Browser execution  ·  not started
 

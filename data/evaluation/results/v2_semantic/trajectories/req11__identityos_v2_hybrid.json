@@ -1,0 +1,46 @@
+{
+  "question_id": "req11",
+  "system_name": "identityos_v2_hybrid",
+  "steps": [
+    {
+      "timestamp": "2026-08-30T04:29:03.758013Z",
+      "stage": "retrieve",
+      "input_summary": "Personal integrity & institutional temperament",
+      "action": "lexical retrieval, semantic fallback only if empty: 2 facts, 1 beliefs",
+      "observation": "[dossier_narrative:008] (verified fact) Captain and Sports Secretary are roles given by peers and cannot be self-appointed. Professional practice of running blameless postmortems and publishing metrics that can embarrass the author. Believes institutional temperament means the institution outranks the incumbent.\n[dossier_narrative:012] (verified fact) States explicitly that full institutional P&L management at IITACB's scale would be a step up from cost-side ownership at Jinn Labs, and that this is experience not yet held.\n[belief:004] (belief, unknown, confidence=0.10) Is comfortable claiming full personal credit for joint work without qualification. — counter-evidence exists, do not state this as certain",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T04:29:03.758149Z",
+      "stage": "generate",
+      "input_summary": "Personal integrity & institutional temperament",
+      "action": "call provider with cited, confidence-annotated context",
+      "observation": "[dossier_narrative:008] (verified fact) Captain and Sports Secretary are roles given by peers and cannot be self-appointed. Professional practice of running blameless postmortems and publishing metrics that can embarrass the author. Believes institutional temperament means the institution outranks the incumbent. [dossier_narrative:012] (verified fact) States explicitly that full institutional P&L management at IITACB's scale would be a step up from cost-side ownership at Jinn Labs, and that this is experience not yet held. [belief:004] (belief, unknown, confidence=0.10) Is comfortable claiming full personal credit for joint work without qualification. — counter-evidence exists, do not state this as certain Personal integrity & institutional temperament",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T04:29:03.758309Z",
+      "stage": "verify",
+      "input_summary": "[dossier_narrative:008] (verified fact) Captain and Sports Secretary are roles given by peers and cannot be self-appointed. Professional practice of running blameless postmortems and publishing metrics that can embarrass the author. Believes institutional temperament means the institution outranks the incumbent. [dossier_narrative:012] (verified fact) States explicitly that full institutional P&L management at IITACB's scale would be a step up from cost-side ownership at Jinn Labs, and that this is experience not yet held. [belief:004] (belief, unknown, confidence=0.10) Is comfortable claiming full personal credit for joint work without qualification. — counter-evidence exists, do not state this as certain Personal integrity & institutional temperament",
+      "action": "per-sentence grounding check (same verifier as lexical identityos_v2)",
+      "observation": "coverage=0.83 confidence=0.51",
+      "reasoning": "",
+      "confidence": 0.5133333333333333,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T04:29:03.758314Z",
+      "stage": "bucket",
+      "input_summary": "[dossier_narrative:008] (verified fact) Captain and Sports Secretary are roles given by peers and cannot be self-appointed. Professional practice of running blameless postmortems and publishing metrics that can embarrass the author. Believes institutional temperament means the institution outranks the incumbent. [dossier_narrative:012] (verified fact) States explicitly that full institutional P&L management at IITACB's scale would be a step up from cost-side ownership at Jinn Labs, and that this is experience not yet held. [belief:004] (belief, unknown, confidence=0.10) Is comfortable claiming full personal credit for joint work without qualification. — counter-evidence exists, do not state this as certain Personal integrity & institutional temperament",
+      "action": "derive fit bucket from coverage+confidence+polarity (same bucketing.py)",
+      "observation": "partial",
+      "reasoning": "",
+      "confidence": null,
+      "decision": "partial"
+    }
+  ]
+}

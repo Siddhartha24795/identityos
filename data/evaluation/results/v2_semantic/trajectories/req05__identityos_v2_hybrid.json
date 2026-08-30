@@ -1,0 +1,46 @@
+{
+  "question_id": "req05",
+  "system_name": "identityos_v2_hybrid",
+  "steps": [
+    {
+      "timestamp": "2026-08-30T04:29:03.414108Z",
+      "stage": "retrieve",
+      "input_summary": "Entrepreneurial mindset",
+      "action": "lexical retrieval, semantic fallback only if empty: 6 facts, 1 beliefs",
+      "observation": "[dossier_narrative:005] (verified fact) Routine practice of aligning research scientists, infrastructure engineers, product owners, enterprise customers and executive sponsors around one roadmap. Six years of running an unpaid academia-industry bridge.\n[dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical — it is 24x7 production accountability across live customer sites.\n[resume:047] (verified fact) PyTorch, TensorFlow, Internet of Things, Agentic AI, Quantization, Pruning, Distillation.\n[resume:025] (verified fact) Did API development, bug resolution, fraud detection, and revenue forecasting using Java, Python, Mockito, Postman, MySQL, machine learning, and NLP.\n[resume:035] (verified fact) Full Stack Developer, Scrum Technology, Delhi India, June 2016 - Aug 2017.\n[resume:032] (verified fact) Mentored students and created content for GATE CSE.\n[belief:002] (belief, strong inference, confidence=0.82) Values shipping working systems into production over research for its own sake.",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T04:29:03.414404Z",
+      "stage": "generate",
+      "input_summary": "Entrepreneurial mindset",
+      "action": "call provider with cited, confidence-annotated context",
+      "observation": "[dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical — it is 24x7 production accountability across live customer sites. [dossier_narrative:005] (verified fact) Routine practice of aligning research scientists, infrastructure engineers, product owners, enterprise customers and executive sponsors around one roadmap. Six years of running an unpaid academia-industry bridge. [resume:025] (verified fact) Did API development, bug resolution, fraud detection, and revenue forecasting using Java, Python, Mockito, Postman, MySQL, machine learning, and NLP. [belief:002] (belief, strong inference, confidence=0.82) Values shipping working systems into production over research for its own sake.",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T04:29:03.414663Z",
+      "stage": "verify",
+      "input_summary": "[dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical — it is 24x7 production accountability across live customer sites. [dossier_narrative:005] (verified fact) Routine practice of aligning research scientists, infrastructure engineers, product owners, enterprise customers and executive sponsors around one roadmap. Six years of running an unpaid academia-industry bridge. [resume:025] (verified fact) Did API development, bug resolution, fraud detection, and revenue forecasting using Java, Python, Mockito, Postman, MySQL, machine learning, and NLP. [belief:002] (belief, strong inference, confidence=0.82) Values shipping working systems into production over research for its own sake.",
+      "action": "per-sentence grounding check (same verifier as lexical identityos_v2)",
+      "observation": "coverage=1.00 confidence=0.80",
+      "reasoning": "",
+      "confidence": 0.7983333333333333,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T04:29:03.414670Z",
+      "stage": "bucket",
+      "input_summary": "[dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical — it is 24x7 production accountability across live customer sites. [dossier_narrative:005] (verified fact) Routine practice of aligning research scientists, infrastructure engineers, product owners, enterprise customers and executive sponsors around one roadmap. Six years of running an unpaid academia-industry bridge. [resume:025] (verified fact) Did API development, bug resolution, fraud detection, and revenue forecasting using Java, Python, Mockito, Postman, MySQL, machine learning, and NLP. [belief:002] (belief, strong inference, confidence=0.82) Values shipping working systems into production over research for its own sake.",
+      "action": "derive fit bucket from coverage+confidence+polarity (same bucketing.py)",
+      "observation": "met_or_better",
+      "reasoning": "",
+      "confidence": null,
+      "decision": "met_or_better"
+    }
+  ]
+}

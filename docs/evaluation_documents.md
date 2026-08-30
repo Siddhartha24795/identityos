@@ -1,4 +1,4 @@
-# Evaluation — v2.5 (Document Generation)
+# Evaluation — v2.5-v2.6 (Document Generation)
 
 ## What this is
 
@@ -16,76 +16,78 @@ would?
 Reproduce: `python scripts/build_digital_self.py && python scripts/run_eval_documents.py mock docs_mock fastembed`.
 Generated letters are saved as plain text at `data/evaluation/results/<tag>/documents/<system>.md` — read them, not just the scores.
 
-## Result
+## Result (post-v2.6)
 
 | Metric | baseline_plain | baseline_rag | identityos_v2_5 |
 |---|---|---|---|
 | Evidence coverage | 0.00 | 0.00 | **0.95** |
 | Unsupported claim rate | 1.00 | 1.00 | **0.05** |
-| Repeated-evidence rate (narrative diversity) | n/a (no citations) | n/a | **0.32** |
+| Repeated-evidence rate (narrative diversity) | n/a (no citations) | n/a | **0.44** |
 
 Same structural story as v1/v2: neither baseline has a citation mechanism,
 so neither can be scored above the trivial floor regardless of prose
-quality. identityos_v2_5 grounds 95% of its sentences and reuses the same
-piece of evidence across sections only 32% of the time — real narrative
-spread, not four paragraphs built from the same two facts, achieved by
-`_prefer_unused()` deprioritizing (not forbidding) evidence already cited
-in an earlier section (`services/document_engine/generate.py`).
+quality. identityos_v2_5 grounds 95% of its sentences. Repeated-evidence
+rate rose from 0.32 (v2.5) to 0.44 here because the v2.6 corpus split
+below reduced the pool of distinct general facts available to some
+sections — a real, disclosed side effect, not hidden because the other two
+numbers didn't move.
 
-## A real finding, from reading the actual letter, not just the score
+## v2.5: a real finding, from reading the actual letter, not just the score
 
 The first version of the generated letter read like it was applying **for
 the IITACB CEO role specifically** — "the Secretariat," "the committee,"
 "CoE co-investment" — despite the system prompt explicitly asking for a
-generic technology-leadership letter. Every cited sentence was real,
-true, and correctly grounded. The problem was invisible to every metric
-already built: high evidence coverage, low unsupported-claim rate, correct
-citations. **Grounded and true is not the same as "the right evidence for
-this document."** A fact can correctly describe the person and still be
-strategy narrative written for a different, specific prior application.
+generic technology-leadership letter. Every cited sentence was real, true,
+and correctly grounded. The problem was invisible to every metric already
+built. **Grounded and true is not the same as "the right evidence for this
+document."** Root cause: `dossier_narrative.md`'s "STRATEGY AND
+ACCOUNTABILITY" section is explicitly IITACB-proposal content — real
+evidence, scoped to one specific candidacy, not general capability
+evidence about the person.
 
-Root cause: `data/identity_sources/dossier_narrative.md`'s "STRATEGY AND
-ACCOUNTABILITY" section is explicitly IITACB-proposal content (see
-docs/roadmap.md v2.1's own corpus-completion notes) — real evidence, but
-scoped to one specific candidacy, not general capability evidence about
-the person.
+**v2.5's fix** (`FactCategory.APPLICATION_SPECIFIC`, tagged at ingestion,
+excluded by the generic-letter generator) caught that whole section. It
+did not catch a subtler version of the same problem: role-specific framing
+baked into individual sentences *inside* otherwise-general facts (e.g.
+"...precisely the condition of a Secretariat being stood up," attached to
+an otherwise general statement about comfort with ambiguity).
 
-## The fix, and what it did and didn't solve
+## v2.6: the fix was an authoring correction, not a smarter classifier
 
-Added `FactCategory.APPLICATION_SPECIFIC` (`packages/schemas/identity.py`)
-and tagged that one section at ingestion
-(`services/identity_engine/ingest.py`); the generic-letter generator now
-excludes it (`_exclude_application_specific()`). Verified: 7 facts are
-tagged and correctly excluded, and v1/v2's own eval numbers are provably
-unaffected (category never affected their scoring) — re-run and confirmed
-byte-identical before and after this change.
+Root-caused the sentence-level leak to an actual authoring error: five
+bullets in `dossier_narrative.md`'s "REQUIREMENT EVIDENCE" section violated
+this project's own one-fact-per-line ingestion rule, conflating a general
+statement with an IITACB-specific comparison in the same sentence. Split
+each into a general fact and a separate, correctly-tagged
+`APPLICATION_SPECIFIC` fact — a one-time authoring correction applying an
+existing rule correctly, not a new classification mechanism, and affecting
+five bullets even though only one had been the visible symptom.
 
-**This did not fully solve the problem.** The regenerated letter still
-contains phrases like "precisely the condition of a Secretariat being
-stood up" and "he would apply the same discipline to any institution he
-leads" — IITACB-referential framing baked into individual sentences inside
-facts that are otherwise general, correctly-categorized capability
-evidence (from the "REQUIREMENT EVIDENCE" section, transcribed in v2.1 by
-paraphrasing a table whose own framing compared everything to the IITACB
-role). Category-level filtering operates on whole facts; the contamination
-here is at the sentence level, inside facts that are mostly general.
+**Verified effect, not just on the letter:** re-running all three eval
+suites showed req05 (previously stuck at a `partial` match under hybrid
+retrieval) became a full, exact `met_or_better` match once the general
+capability statement was no longer diluted by the ambiguous role
+comparison — hybrid retrieval's agreement rate rose from 0.50 to 0.57 with
+zero change to its dangerous-overclaim rate (still 0.00). Full numbers:
+docs/evaluation_v2.md's v2.6 section.
 
-This is the same granularity lesson as v2.2's negation fix, showing up a
-third time at a different level: v2.2 needed clause-level splitting where
-sentence-level was too coarse; this needs sentence- or clause-level
-*content-scope* classification where fact-level categorization is too
-coarse. Deferred to v2.6+ (docs/roadmap.md) — the honest options are
-either rewriting the source facts to strip application-specific framing
-(a real corpus-quality fix) or LLM-assisted neutral rephrasing at
-generation time (needs a real provider key). Not attempted here because
-both need their own evaluation, and re-editing source facts specifically
-because one eval run looked bad is exactly the reactive-patching pattern
-this project has repeatedly declined elsewhere.
+**The regenerated letter no longer contains the "Secretariat" comparison.**
+Re-reading it surfaced a *different*, distinct instance of the same
+authoring pattern in a different source file
+(`dossier_excerpts.md`'s "SELF-ASSESSED GAP" section mixes a general
+capability-gap admission with "...the committee should not be persuaded
+that adjacent experience... is equivalent to that record" — "the
+committee" is IITACB's Managing Committee). Named as the next item
+(docs/roadmap.md v2.7), not expanded into this version. This is the same
+granularity lesson as v2.2's negation fix, now confirmed a third time: the
+right fix at this level of the codebase has consistently been "read the
+actual output and correct the source," not "build a cleverer filter."
 
 ## What this run does and doesn't prove
 
 Same mock-provider caveat as v1/v2: extractive generation preserves source
-wording (which is why the contamination is visible and traceable at all)
-rather than paraphrasing it away, for better and worse. A real LLM run
-would likely produce more natural prose while needing the exact same
-category-scoping fix to avoid the same leak in different words.
+wording (which is why the contamination was visible and traceable at all,
+and why the fix is verifiable by literally reading the diff) rather than
+paraphrasing it away. A real LLM run would likely produce more natural
+prose while needing the exact same source-correction discipline to avoid
+the same leak in different words.

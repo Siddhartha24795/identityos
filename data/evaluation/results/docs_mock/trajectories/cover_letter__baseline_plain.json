@@ -3,7 +3,7 @@
   "system_name": "baseline_plain",
   "steps": [
     {
-      "timestamp": "2026-08-30T04:16:52.716545Z",
+      "timestamp": "2026-08-30T04:29:16.644866Z",
       "stage": "generate",
       "input_summary": "Why are you a strong fit for a technology leadership role, and what drives you professionally?",
       "action": "call provider with zero context, zero verification",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T04:16:52.716617Z",
+      "timestamp": "2026-08-30T04:29:16.644943Z",
       "stage": "generate",
       "input_summary": "Describe your most significant hands-on technical achievements and engineering work.",
       "action": "call provider with zero context, zero verification",
@@ -23,7 +23,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T04:16:52.716675Z",
+      "timestamp": "2026-08-30T04:29:16.644996Z",
       "stage": "generate",
       "input_summary": "Describe your leadership experience and how you build, mentor, and manage teams.",
       "action": "call provider with zero context, zero verification",
@@ -33,7 +33,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T04:16:52.716727Z",
+      "timestamp": "2026-08-30T04:29:16.645050Z",
       "stage": "generate",
       "input_summary": "What are your career goals, and why should an employer choose you over another candidate?",
       "action": "call provider with zero context, zero verification",

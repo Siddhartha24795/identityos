@@ -121,7 +121,7 @@
     "avg_unsupported_claim_rate": 1.0,
     "repeated_evidence_rate": 0.0,
     "provider": "mock",
-    "latency_ms": 0.6108283996582031
+    "latency_ms": 0.5774497985839844
   },
   "baseline_rag": {
     "document_type": "cover_letter",
@@ -130,22 +130,10 @@
       {
         "section_name": "opening",
         "query_text": "Why are you a strong fit for a technology leadership role, and what drives you professionally?",
-        "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. Owned the cost side with rigour: order-of-magnitude inference cost reduction through quantization, pruning, distillation and parameter-efficient adaptation, and ownership of the edge-versus-cloud partitioning strategy, a direct unit-economics decision. States explicitly that full institutional P&L management at IITACB's scale would be a step up, and that this is experience not yet held. States a reading of the mandate: IITACB does not need a manager, it needs a founder for its second act \u2014 turning a facility and a 50,000-strong Bengaluru alumni base into an institution industry pays to join, government treats as an implementation partner, and IIT Directors route their best research through. Proposes running IITACB as a two-sided marketplace between a curated Industry Problem Register (real, scoped, budgeted problems from member corporates) and a Faculty Capability Index across the 23 IITs, matched by someone who can assess technical viability before either side commits.",
+        "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. States a reading of the mandate: IITACB does not need a manager, it needs a founder for its second act \u2014 turning a facility and a 50,000-strong Bengaluru alumni base into an institution industry pays to join, government treats as an implementation partner, and IIT Directors route their best research through. Proposes running IITACB as a two-sided marketplace between a curated Industry Problem Register (real, scoped, budgeted problems from member corporates) and a Faculty Capability Index across the 23 IITs, matched by someone who can assess technical viability before either side commits. Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
         "claims": [
           {
             "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.",
-            "evidence_refs": [],
-            "claim_type": "unsupported",
-            "confidence": 0.0
-          },
-          {
-            "text": "Owned the cost side with rigour: order-of-magnitude inference cost reduction through quantization, pruning, distillation and parameter-efficient adaptation, and ownership of the edge-versus-cloud partitioning strategy, a direct unit-economics decision.",
-            "evidence_refs": [],
-            "claim_type": "unsupported",
-            "confidence": 0.0
-          },
-          {
-            "text": "States explicitly that full institutional P&L management at IITACB's scale would be a step up, and that this is experience not yet held.",
             "evidence_refs": [],
             "claim_type": "unsupported",
             "confidence": 0.0
@@ -158,6 +146,12 @@
           },
           {
             "text": "Proposes running IITACB as a two-sided marketplace between a curated Industry Problem Register (real, scoped, budgeted problems from member corporates) and a Faculty Capability Index across the 23 IITs, matched by someone who can assess technical viability before either side commits.",
+            "evidence_refs": [],
+            "claim_type": "unsupported",
+            "confidence": 0.0
+          },
+          {
+            "text": "Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
             "evidence_refs": [],
             "claim_type": "unsupported",
             "confidence": 0.0
@@ -170,22 +164,10 @@
       {
         "section_name": "technical_depth",
         "query_text": "Describe your most significant hands-on technical achievements and engineering work.",
-        "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. Owned the cost side with rigour: order-of-magnitude inference cost reduction through quantization, pruning, distillation and parameter-efficient adaptation, and ownership of the edge-versus-cloud partitioning strategy, a direct unit-economics decision. States explicitly that full institutional P&L management at IITACB's scale would be a step up, and that this is experience not yet held. States a reading of the mandate: IITACB does not need a manager, it needs a founder for its second act \u2014 turning a facility and a 50,000-strong Bengaluru alumni base into an institution industry pays to join, government treats as an implementation partner, and IIT Directors route their best research through. Proposes running IITACB as a two-sided marketplace between a curated Industry Problem Register (real, scoped, budgeted problems from member corporates) and a Faculty Capability Index across the 23 IITs, matched by someone who can assess technical viability before either side commits.",
+        "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. States a reading of the mandate: IITACB does not need a manager, it needs a founder for its second act \u2014 turning a facility and a 50,000-strong Bengaluru alumni base into an institution industry pays to join, government treats as an implementation partner, and IIT Directors route their best research through. Proposes running IITACB as a two-sided marketplace between a curated Industry Problem Register (real, scoped, budgeted problems from member corporates) and a Faculty Capability Index across the 23 IITs, matched by someone who can assess technical viability before either side commits. Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
         "claims": [
           {
             "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.",
-            "evidence_refs": [],
-            "claim_type": "unsupported",
-            "confidence": 0.0
-          },
-          {
-            "text": "Owned the cost side with rigour: order-of-magnitude inference cost reduction through quantization, pruning, distillation and parameter-efficient adaptation, and ownership of the edge-versus-cloud partitioning strategy, a direct unit-economics decision.",
-            "evidence_refs": [],
-            "claim_type": "unsupported",
-            "confidence": 0.0
-          },
-          {
-            "text": "States explicitly that full institutional P&L management at IITACB's scale would be a step up, and that this is experience not yet held.",
             "evidence_refs": [],
             "claim_type": "unsupported",
             "confidence": 0.0
@@ -198,6 +180,12 @@
           },
           {
             "text": "Proposes running IITACB as a two-sided marketplace between a curated Industry Problem Register (real, scoped, budgeted problems from member corporates) and a Faculty Capability Index across the 23 IITs, matched by someone who can assess technical viability before either side commits.",
+            "evidence_refs": [],
+            "claim_type": "unsupported",
+            "confidence": 0.0
+          },
+          {
+            "text": "Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
             "evidence_refs": [],
             "claim_type": "unsupported",
             "confidence": 0.0
@@ -210,22 +198,10 @@
       {
         "section_name": "leadership",
         "query_text": "Describe your leadership experience and how you build, mentor, and manage teams.",
-        "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. Owned the cost side with rigour: order-of-magnitude inference cost reduction through quantization, pruning, distillation and parameter-efficient adaptation, and ownership of the edge-versus-cloud partitioning strategy, a direct unit-economics decision. States explicitly that full institutional P&L management at IITACB's scale would be a step up, and that this is experience not yet held. States a reading of the mandate: IITACB does not need a manager, it needs a founder for its second act \u2014 turning a facility and a 50,000-strong Bengaluru alumni base into an institution industry pays to join, government treats as an implementation partner, and IIT Directors route their best research through. Proposes running IITACB as a two-sided marketplace between a curated Industry Problem Register (real, scoped, budgeted problems from member corporates) and a Faculty Capability Index across the 23 IITs, matched by someone who can assess technical viability before either side commits.",
+        "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. States a reading of the mandate: IITACB does not need a manager, it needs a founder for its second act \u2014 turning a facility and a 50,000-strong Bengaluru alumni base into an institution industry pays to join, government treats as an implementation partner, and IIT Directors route their best research through. Proposes running IITACB as a two-sided marketplace between a curated Industry Problem Register (real, scoped, budgeted problems from member corporates) and a Faculty Capability Index across the 23 IITs, matched by someone who can assess technical viability before either side commits. Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
         "claims": [
           {
             "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.",
-            "evidence_refs": [],
-            "claim_type": "unsupported",
-            "confidence": 0.0
-          },
-          {
-            "text": "Owned the cost side with rigour: order-of-magnitude inference cost reduction through quantization, pruning, distillation and parameter-efficient adaptation, and ownership of the edge-versus-cloud partitioning strategy, a direct unit-economics decision.",
-            "evidence_refs": [],
-            "claim_type": "unsupported",
-            "confidence": 0.0
-          },
-          {
-            "text": "States explicitly that full institutional P&L management at IITACB's scale would be a step up, and that this is experience not yet held.",
             "evidence_refs": [],
             "claim_type": "unsupported",
             "confidence": 0.0
@@ -238,6 +214,12 @@
           },
           {
             "text": "Proposes running IITACB as a two-sided marketplace between a curated Industry Problem Register (real, scoped, budgeted problems from member corporates) and a Faculty Capability Index across the 23 IITs, matched by someone who can assess technical viability before either side commits.",
+            "evidence_refs": [],
+            "claim_type": "unsupported",
+            "confidence": 0.0
+          },
+          {
+            "text": "Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
             "evidence_refs": [],
             "claim_type": "unsupported",
             "confidence": 0.0
@@ -250,22 +232,10 @@
       {
         "section_name": "closing",
         "query_text": "What are your career goals, and why should an employer choose you over another candidate?",
-        "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. Owned the cost side with rigour: order-of-magnitude inference cost reduction through quantization, pruning, distillation and parameter-efficient adaptation, and ownership of the edge-versus-cloud partitioning strategy, a direct unit-economics decision. States explicitly that full institutional P&L management at IITACB's scale would be a step up, and that this is experience not yet held. States a reading of the mandate: IITACB does not need a manager, it needs a founder for its second act \u2014 turning a facility and a 50,000-strong Bengaluru alumni base into an institution industry pays to join, government treats as an implementation partner, and IIT Directors route their best research through. Proposes running IITACB as a two-sided marketplace between a curated Industry Problem Register (real, scoped, budgeted problems from member corporates) and a Faculty Capability Index across the 23 IITs, matched by someone who can assess technical viability before either side commits.",
+        "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. States a reading of the mandate: IITACB does not need a manager, it needs a founder for its second act \u2014 turning a facility and a 50,000-strong Bengaluru alumni base into an institution industry pays to join, government treats as an implementation partner, and IIT Directors route their best research through. Proposes running IITACB as a two-sided marketplace between a curated Industry Problem Register (real, scoped, budgeted problems from member corporates) and a Faculty Capability Index across the 23 IITs, matched by someone who can assess technical viability before either side commits. Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
         "claims": [
           {
             "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.",
-            "evidence_refs": [],
-            "claim_type": "unsupported",
-            "confidence": 0.0
-          },
-          {
-            "text": "Owned the cost side with rigour: order-of-magnitude inference cost reduction through quantization, pruning, distillation and parameter-efficient adaptation, and ownership of the edge-versus-cloud partitioning strategy, a direct unit-economics decision.",
-            "evidence_refs": [],
-            "claim_type": "unsupported",
-            "confidence": 0.0
-          },
-          {
-            "text": "States explicitly that full institutional P&L management at IITACB's scale would be a step up, and that this is experience not yet held.",
             "evidence_refs": [],
             "claim_type": "unsupported",
             "confidence": 0.0
@@ -281,6 +251,12 @@
             "evidence_refs": [],
             "claim_type": "unsupported",
             "confidence": 0.0
+          },
+          {
+            "text": "Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+            "evidence_refs": [],
+            "claim_type": "unsupported",
+            "confidence": 0.0
           }
         ],
         "evidence_coverage": 0.0,
@@ -288,12 +264,12 @@
         "reused_evidence_ids": []
       }
     ],
-    "full_text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. Owned the cost side with rigour: order-of-magnitude inference cost reduction through quantization, pruning, distillation and parameter-efficient adaptation, and ownership of the edge-versus-cloud partitioning strategy, a direct unit-economics decision. States explicitly that full institutional P&L management at IITACB's scale would be a step up, and that this is experience not yet held. States a reading of the mandate: IITACB does not need a manager, it needs a founder for its second act \u2014 turning a facility and a 50,000-strong Bengaluru alumni base into an institution industry pays to join, government treats as an implementation partner, and IIT Directors route their best research through. Proposes running IITACB as a two-sided marketplace between a curated Industry Problem Register (real, scoped, budgeted problems from member corporates) and a Faculty Capability Index across the 23 IITs, matched by someone who can assess technical viability before either side commits.\n\nSiddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. Owned the cost side with rigour: order-of-magnitude inference cost reduction through quantization, pruning, distillation and parameter-efficient adaptation, and ownership of the edge-versus-cloud partitioning strategy, a direct unit-economics decision. States explicitly that full institutional P&L management at IITACB's scale would be a step up, and that this is experience not yet held. States a reading of the mandate: IITACB does not need a manager, it needs a founder for its second act \u2014 turning a facility and a 50,000-strong Bengaluru alumni base into an institution industry pays to join, government treats as an implementation partner, and IIT Directors route their best research through. Proposes running IITACB as a two-sided marketplace between a curated Industry Problem Register (real, scoped, budgeted problems from member corporates) and a Faculty Capability Index across the 23 IITs, matched by someone who can assess technical viability before either side commits.\n\nSiddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. Owned the cost side with rigour: order-of-magnitude inference cost reduction through quantization, pruning, distillation and parameter-efficient adaptation, and ownership of the edge-versus-cloud partitioning strategy, a direct unit-economics decision. States explicitly that full institutional P&L management at IITACB's scale would be a step up, and that this is experience not yet held. States a reading of the mandate: IITACB does not need a manager, it needs a founder for its second act \u2014 turning a facility and a 50,000-strong Bengaluru alumni base into an institution industry pays to join, government treats as an implementation partner, and IIT Directors route their best research through. Proposes running IITACB as a two-sided marketplace between a curated Industry Problem Register (real, scoped, budgeted problems from member corporates) and a Faculty Capability Index across the 23 IITs, matched by someone who can assess technical viability before either side commits.\n\nSiddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. Owned the cost side with rigour: order-of-magnitude inference cost reduction through quantization, pruning, distillation and parameter-efficient adaptation, and ownership of the edge-versus-cloud partitioning strategy, a direct unit-economics decision. States explicitly that full institutional P&L management at IITACB's scale would be a step up, and that this is experience not yet held. States a reading of the mandate: IITACB does not need a manager, it needs a founder for its second act \u2014 turning a facility and a 50,000-strong Bengaluru alumni base into an institution industry pays to join, government treats as an implementation partner, and IIT Directors route their best research through. Proposes running IITACB as a two-sided marketplace between a curated Industry Problem Register (real, scoped, budgeted problems from member corporates) and a Faculty Capability Index across the 23 IITs, matched by someone who can assess technical viability before either side commits.",
+    "full_text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. States a reading of the mandate: IITACB does not need a manager, it needs a founder for its second act \u2014 turning a facility and a 50,000-strong Bengaluru alumni base into an institution industry pays to join, government treats as an implementation partner, and IIT Directors route their best research through. Proposes running IITACB as a two-sided marketplace between a curated Industry Problem Register (real, scoped, budgeted problems from member corporates) and a Faculty Capability Index across the 23 IITs, matched by someone who can assess technical viability before either side commits. Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.\n\nSiddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. States a reading of the mandate: IITACB does not need a manager, it needs a founder for its second act \u2014 turning a facility and a 50,000-strong Bengaluru alumni base into an institution industry pays to join, government treats as an implementation partner, and IIT Directors route their best research through. Proposes running IITACB as a two-sided marketplace between a curated Industry Problem Register (real, scoped, budgeted problems from member corporates) and a Faculty Capability Index across the 23 IITs, matched by someone who can assess technical viability before either side commits. Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.\n\nSiddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. States a reading of the mandate: IITACB does not need a manager, it needs a founder for its second act \u2014 turning a facility and a 50,000-strong Bengaluru alumni base into an institution industry pays to join, government treats as an implementation partner, and IIT Directors route their best research through. Proposes running IITACB as a two-sided marketplace between a curated Industry Problem Register (real, scoped, budgeted problems from member corporates) and a Faculty Capability Index across the 23 IITs, matched by someone who can assess technical viability before either side commits. Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.\n\nSiddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. States a reading of the mandate: IITACB does not need a manager, it needs a founder for its second act \u2014 turning a facility and a 50,000-strong Bengaluru alumni base into an institution industry pays to join, government treats as an implementation partner, and IIT Directors route their best research through. Proposes running IITACB as a two-sided marketplace between a curated Industry Problem Register (real, scoped, budgeted problems from member corporates) and a Faculty Capability Index across the 23 IITs, matched by someone who can assess technical viability before either side commits. Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
     "avg_evidence_coverage": 0.0,
     "avg_unsupported_claim_rate": 1.0,
     "repeated_evidence_rate": 0.0,
     "provider": "mock",
-    "latency_ms": 9.396553039550781
+    "latency_ms": 9.30476188659668
   },
   "identityos_v2_5": {
     "document_type": "cover_letter",
@@ -302,7 +278,7 @@
       {
         "section_name": "opening",
         "query_text": "Why are you a strong fit for a technology leadership role, and what drives you professionally?",
-        "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical \u2014 it is 24x7 production accountability across live customer sites. [dossier_narrative:007] (verified fact) Accustomed to explaining deep technology to non-technical boards and to translating executive intent into engineering commitments, built over six years of guest lectures, mentoring programmes and hackathon judging panels plus representing India at the Japan Hackathon 2021. [dossier_narrative:009] (verified fact) Confirmed relocation to Bengaluru on appointment, accepting the role as primarily external-facing with sustained domestic travel to the 23 IIT campuses, Delhi, and industry forums nationally. States that being physically present in Bengaluru is regarded as non-negotiable for this job.",
+        "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical \u2014 it is 24x7 production accountability across live customer sites. [dossier_narrative:007] (verified fact) Accustomed to explaining deep technology to non-technical boards and to translating executive intent into engineering commitments, built over six years of guest lectures, mentoring programmes and hackathon judging panels plus representing India at the Japan Hackathon 2021. [resume:046] (verified fact) System Design, Leadership, JavaScript, HTML, CSS, Hardware Abstraction Layer, Linux, Shell Scripting.",
         "claims": [
           {
             "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
@@ -337,24 +313,16 @@
             "confidence": 0.99
           },
           {
-            "text": "[dossier_narrative:009] (verified fact) Confirmed relocation to Bengaluru on appointment, accepting the role as primarily external-facing with sustained domestic travel to the 23 IIT campuses, Delhi, and industry forums nationally.",
+            "text": "[resume:046] (verified fact) System Design, Leadership, JavaScript, HTML, CSS, Hardware Abstraction Layer, Linux, Shell Scripting.",
             "evidence_refs": [
-              "dossier_narrative:009"
+              "resume:046"
             ],
             "claim_type": "verified_fact",
             "confidence": 0.99
-          },
-          {
-            "text": "States that being physically present in Bengaluru is regarded as non-negotiable for this job.",
-            "evidence_refs": [
-              "dossier_narrative:009"
-            ],
-            "claim_type": "weak_inference",
-            "confidence": 0.5
           }
         ],
         "evidence_coverage": 1.0,
-        "overall_confidence": 0.8266666666666667,
+        "overall_confidence": 0.892,
         "reused_evidence_ids": []
       },
       {
@@ -410,24 +378,8 @@
       {
         "section_name": "leadership",
         "query_text": "Describe your leadership experience and how you build, mentor, and manage teams.",
-        "text": "[dossier_narrative:006] (verified fact) Owned the cost side with rigour: order-of-magnitude inference cost reduction through quantization, pruning, distillation and parameter-efficient adaptation, and ownership of the edge-versus-cloud partitioning strategy, a direct unit-economics decision. States explicitly that full institutional P&L management at IITACB's scale would be a step up, and that this is experience not yet held. [dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. [dossier_narrative:003] (verified fact) Joined Jinn Labs as CTO to build from near-zero, comfortable with ambiguity, unfunded mandates, and building the function before the headcount exists \u2014 precisely the condition of a Secretariat being stood up.",
+        "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. [dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical \u2014 it is 24x7 production accountability across live customer sites. [dossier_narrative:003] (verified fact) Joined Jinn Labs as CTO to build from near-zero, comfortable with ambiguity, unfunded mandates, and building the function before the headcount exists.",
         "claims": [
-          {
-            "text": "[dossier_narrative:006] (verified fact) Owned the cost side with rigour: order-of-magnitude inference cost reduction through quantization, pruning, distillation and parameter-efficient adaptation, and ownership of the edge-versus-cloud partitioning strategy, a direct unit-economics decision.",
-            "evidence_refs": [
-              "dossier_narrative:006"
-            ],
-            "claim_type": "verified_fact",
-            "confidence": 0.99
-          },
-          {
-            "text": "States explicitly that full institutional P&L management at IITACB's scale would be a step up, and that this is experience not yet held.",
-            "evidence_refs": [
-              "dossier_narrative:006"
-            ],
-            "claim_type": "weak_inference",
-            "confidence": 0.5
-          },
           {
             "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
             "evidence_refs": [
@@ -445,7 +397,23 @@
             "confidence": 0.99
           },
           {
-            "text": "[dossier_narrative:003] (verified fact) Joined Jinn Labs as CTO to build from near-zero, comfortable with ambiguity, unfunded mandates, and building the function before the headcount exists \u2014 precisely the condition of a Secretariat being stood up.",
+            "text": "[dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles.",
+            "evidence_refs": [
+              "dossier_narrative:001"
+            ],
+            "claim_type": "verified_fact",
+            "confidence": 0.99
+          },
+          {
+            "text": "Operations leadership here is not theoretical \u2014 it is 24x7 production accountability across live customer sites.",
+            "evidence_refs": [
+              "dossier_narrative:001"
+            ],
+            "claim_type": "weak_inference",
+            "confidence": 0.5
+          },
+          {
+            "text": "[dossier_narrative:003] (verified fact) Joined Jinn Labs as CTO to build from near-zero, comfortable with ambiguity, unfunded mandates, and building the function before the headcount exists.",
             "evidence_refs": [
               "dossier_narrative:003"
             ],
@@ -457,6 +425,8 @@
         "overall_confidence": 0.892,
         "reused_evidence_ids": [
           "dossier_excerpts:008",
+          "dossier_narrative:001",
+          "resume:046",
           "belief:003"
         ]
       },
@@ -507,11 +477,11 @@
         ]
       }
     ],
-    "full_text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical \u2014 it is 24x7 production accountability across live customer sites. [dossier_narrative:007] (verified fact) Accustomed to explaining deep technology to non-technical boards and to translating executive intent into engineering commitments, built over six years of guest lectures, mentoring programmes and hackathon judging panels plus representing India at the Japan Hackathon 2021. [dossier_narrative:009] (verified fact) Confirmed relocation to Bengaluru on appointment, accepting the role as primarily external-facing with sustained domestic travel to the 23 IIT campuses, Delhi, and industry forums nationally. States that being physically present in Bengaluru is regarded as non-negotiable for this job.\n\n[dossier_narrative:004] (verified fact) Defined technical strategy, architecture and organisation-wide evaluation frameworks at Jinn Labs, building governance structures where none existed; the same machinery run earlier at student scale heading four chapters simultaneously and organising festivals at KNIT Sultanpur. [dossier_narrative:007] (verified fact) Accustomed to explaining deep technology to non-technical boards and to translating executive intent into engineering commitments, built over six years of guest lectures, mentoring programmes and hackathon judging panels plus representing India at the Japan Hackathon 2021. [resume:010] (verified fact) Leads a 35+ member cross-functional team (CV/ML research, edge and cloud infra, backend, frontend) as Head of Engineering and Innovation, owning hiring, roadmap, architecture review, and delivery. [belief:003] (belief, weak inference, confidence=0.45) Considers himself an experienced builder and leader of professional/membership institutions, not just engineering teams. \u2014 counter-evidence exists, do not state this as certain\n\n[dossier_narrative:006] (verified fact) Owned the cost side with rigour: order-of-magnitude inference cost reduction through quantization, pruning, distillation and parameter-efficient adaptation, and ownership of the edge-versus-cloud partitioning strategy, a direct unit-economics decision. States explicitly that full institutional P&L management at IITACB's scale would be a step up, and that this is experience not yet held. [dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. [dossier_narrative:003] (verified fact) Joined Jinn Labs as CTO to build from near-zero, comfortable with ambiguity, unfunded mandates, and building the function before the headcount exists \u2014 precisely the condition of a Secretariat being stood up.\n\n[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. [dossier_excerpts:011] (verified fact) Siddhartha's dossier states he replaced subjective judgement with eval-driven release discipline at Jinn Labs, tracking every claim as a metric release over release, and that he would apply the same discipline to any institution he leads. [resume:005] (verified fact) Built VLM-based suspicious-event detection over live video, flagging theft, loitering, and anomalous behavior in real time with temporal context across frames.",
+    "full_text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical \u2014 it is 24x7 production accountability across live customer sites. [dossier_narrative:007] (verified fact) Accustomed to explaining deep technology to non-technical boards and to translating executive intent into engineering commitments, built over six years of guest lectures, mentoring programmes and hackathon judging panels plus representing India at the Japan Hackathon 2021. [resume:046] (verified fact) System Design, Leadership, JavaScript, HTML, CSS, Hardware Abstraction Layer, Linux, Shell Scripting.\n\n[dossier_narrative:004] (verified fact) Defined technical strategy, architecture and organisation-wide evaluation frameworks at Jinn Labs, building governance structures where none existed; the same machinery run earlier at student scale heading four chapters simultaneously and organising festivals at KNIT Sultanpur. [dossier_narrative:007] (verified fact) Accustomed to explaining deep technology to non-technical boards and to translating executive intent into engineering commitments, built over six years of guest lectures, mentoring programmes and hackathon judging panels plus representing India at the Japan Hackathon 2021. [resume:010] (verified fact) Leads a 35+ member cross-functional team (CV/ML research, edge and cloud infra, backend, frontend) as Head of Engineering and Innovation, owning hiring, roadmap, architecture review, and delivery. [belief:003] (belief, weak inference, confidence=0.45) Considers himself an experienced builder and leader of professional/membership institutions, not just engineering teams. \u2014 counter-evidence exists, do not state this as certain\n\n[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. [dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical \u2014 it is 24x7 production accountability across live customer sites. [dossier_narrative:003] (verified fact) Joined Jinn Labs as CTO to build from near-zero, comfortable with ambiguity, unfunded mandates, and building the function before the headcount exists.\n\n[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. [dossier_excerpts:011] (verified fact) Siddhartha's dossier states he replaced subjective judgement with eval-driven release discipline at Jinn Labs, tracking every claim as a metric release over release, and that he would apply the same discipline to any institution he leads. [resume:005] (verified fact) Built VLM-based suspicious-event detection over live video, flagging theft, loitering, and anomalous behavior in real time with temporal context across frames.",
     "avg_evidence_coverage": 0.95,
-    "avg_unsupported_claim_rate": 0.05,
-    "repeated_evidence_rate": 0.3157894736842105,
+    "avg_unsupported_claim_rate": 0.05263157894736842,
+    "repeated_evidence_rate": 0.4444444444444444,
     "provider": "mock",
-    "latency_ms": 5.169868469238281
+    "latency_ms": 5.182504653930664
   }
 }

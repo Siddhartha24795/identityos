@@ -3,7 +3,7 @@
   "system_name": "identityos_v1",
   "steps": [
     {
-      "timestamp": "2026-08-30T04:16:38.152731Z",
+      "timestamp": "2026-08-30T04:28:48.136742Z",
       "stage": "classify",
       "input_summary": "Why should we choose you instead of another candidate?",
       "action": "use declared question.type (v1 simplification, not a learned classifier)",
@@ -13,29 +13,29 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T04:16:38.153541Z",
+      "timestamp": "2026-08-30T04:28:48.137594Z",
       "stage": "retrieve",
       "input_summary": "Why should we choose you instead of another candidate?",
       "action": "lexical retrieval over Digital Self: top 2 facts, 0 beliefs",
-      "observation": "[dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.\n[dossier_narrative:015] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.",
+      "observation": "[dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.\n[dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.",
       "reasoning": "",
       "confidence": null,
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T04:16:38.153606Z",
+      "timestamp": "2026-08-30T04:28:48.137676Z",
       "stage": "generate",
       "input_summary": "Why should we choose you instead of another candidate?",
       "action": "call provider with structured, citation-tagged, confidence-annotated context",
-      "observation": "[dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. [dossier_narrative:015] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.",
+      "observation": "[dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. [dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.",
       "reasoning": "",
       "confidence": null,
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T04:16:38.153669Z",
+      "timestamp": "2026-08-30T04:28:48.137756Z",
       "stage": "verify",
-      "input_summary": "[dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. [dossier_narrative:015] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.",
+      "input_summary": "[dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. [dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.",
       "action": "check every sentence for an explicit citation, else a lexical grounding match",
       "observation": "evidence_coverage=1.00 unsupported_claim_rate=0.00 overall_confidence=0.99",
       "reasoning": "",
@@ -43,11 +43,11 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T04:16:38.153678Z",
+      "timestamp": "2026-08-30T04:28:48.137768Z",
       "stage": "complete",
       "input_summary": "q08",
       "action": "return final answer",
-      "observation": "[dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. [dossier_narrative:015] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.",
+      "observation": "[dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. [dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.",
       "reasoning": "",
       "confidence": 0.99,
       "decision": "answered"

@@ -83,7 +83,27 @@ The application-specific exclusion fix operates at the whole-fact level;
 the contamination it was built to catch also exists at the sentence level,
 inside facts that are otherwise correctly scoped as general. This is the
 same granularity mismatch as v2.2's negation fix (sentence vs. clause),
-now appearing a third time (fact vs. sentence). The honest fix — rewrite
-source facts to strip role-specific framing, or LLM-assisted neutral
-rephrasing at generation time — needs its own evaluation and a real
-provider key respectively; neither was attempted reactively here.
+now appearing a third time (fact vs. sentence).
+
+---
+
+# v2.6 — Corpus authoring correction (not a new mechanism)
+
+All results from re-running `run_eval.py`, `run_eval_v2.py`, and
+`run_eval_documents.py` after the source edit (docs/evaluation_v2.md and
+docs/evaluation_documents.md have full numbers).
+
+| Stage | What we tried and why | Evidence | Decision / learning |
+|---|---|---|---|
+| **Iteration 10 (v2.6)** | Traced the v2.5 sentence-level leak to its actual source: five bullets in `dossier_narrative.md` conflated a general statement with an IITACB-specific comparison in one sentence, violating this project's own one-fact-per-line ingestion rule. Split each into a general fact + a separately-tagged `APPLICATION_SPECIFIC` fact, across all five, not just the one that had been visibly wrong. | v1 unaffected (byte-identical). identityos_v2 (lexical) unaffected. identityos_v2_hybrid: agreement rate 0.50 -> **0.57**, dangerous overclaim rate held at 0.00 through a real corpus change. req05 moved from `partial` to a full exact match. identityos_v2_semantic: agreement rate rose to 0.64 but dangerous overclaim rate *worsened* to 0.50, on a different pair of requirements (req08, req14) than before (req09). | Kept. Hybrid's safety guarantee holding through a real corpus change is evidence the fallback-only design generalizes, not a threshold fit to one snapshot. Semantic-only getting *more* unstable on different requirements reinforces — doesn't contradict — why it was never promoted to default (v2.3/v2.4). |
+| **Iteration 11 (v2.6) — found, not fixed here** | Re-checked the regenerated cover letter for the specific phrase flagged in v2.5. It was gone. Kept reading anyway rather than declaring victory. | Found a near-identical conflation in a *different* source file (`dossier_excerpts.md`'s "SELF-ASSESSED GAP": a general capability-gap admission mixed with "...the committee should not be persuaded..." — IITACB's Managing Committee). | Not fixed in this version. Named as v2.7 (docs/roadmap.md) — confirms this is a real authoring pattern worth a full audit, not a one-off worth patching in place. |
+
+## Main failure mode, v2.6 (see docs/hot_take.md for the full writeup)
+
+Six requirements (req03/06/07/11/12/14) still don't reach an exact bucket
+match under hybrid — the same coarse-3-bucket-scale nuance limitation
+carried forward from v2.4, unaffected by this version's corpus fix.
+identityos_v2_semantic remains unsafe as a standalone system — worse here
+than in v2.3/v2.4, on different requirements — which is a confirmation of
+the existing finding, not a new one requiring its own fix, since semantic
+alone was never the shipped path.

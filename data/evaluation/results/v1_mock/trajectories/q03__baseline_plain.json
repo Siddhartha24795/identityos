@@ -3,7 +3,7 @@
   "system_name": "baseline_plain",
   "steps": [
     {
-      "timestamp": "2026-08-30T04:16:38.136858Z",
+      "timestamp": "2026-08-30T04:28:48.120629Z",
       "stage": "generate",
       "input_summary": "What battery-life improvement did your dual-processor architecture achieve on Qualcomm smartwatches?",
       "action": "call provider with zero context, zero verification",

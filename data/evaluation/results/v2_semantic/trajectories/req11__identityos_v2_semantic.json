@@ -1,0 +1,46 @@
+{
+  "question_id": "req11",
+  "system_name": "identityos_v2_semantic",
+  "steps": [
+    {
+      "timestamp": "2026-08-30T04:29:03.756688Z",
+      "stage": "retrieve",
+      "input_summary": "Personal integrity & institutional temperament",
+      "action": "embedding-similarity retrieval (fastembed): top 3 facts, 1 beliefs",
+      "observation": "[dossier_narrative:008] (verified fact) Captain and Sports Secretary are roles given by peers and cannot be self-appointed. Professional practice of running blameless postmortems and publishing metrics that can embarrass the author. Believes institutional temperament means the institution outranks the incumbent.\n[dossier_narrative:020] (verified fact) Closing statement: describes leading the Secretariat as the most consequential work available, and explicitly invites being tested hard on the parts of the candidacy that are short rather than only the parts that are strong.\n[resume:007] (verified fact) Defined evaluation frameworks pairing offline metrics with live ground-truth validation, POS-occupancy eval at approximately 87% accuracy, tracked release over release.\n[belief:004] (belief, unknown, confidence=0.10) Is comfortable claiming full personal credit for joint work without qualification. — counter-evidence exists, do not state this as certain",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T04:29:03.756892Z",
+      "stage": "generate",
+      "input_summary": "Personal integrity & institutional temperament",
+      "action": "call provider with cited, confidence-annotated context",
+      "observation": "[dossier_narrative:008] (verified fact) Captain and Sports Secretary are roles given by peers and cannot be self-appointed. Professional practice of running blameless postmortems and publishing metrics that can embarrass the author. Believes institutional temperament means the institution outranks the incumbent. [dossier_narrative:020] (verified fact) Closing statement: describes leading the Secretariat as the most consequential work available, and explicitly invites being tested hard on the parts of the candidacy that are short rather than only the parts that are strong. [resume:007] (verified fact) Defined evaluation frameworks pairing offline metrics with live ground-truth validation, POS-occupancy eval at approximately 87% accuracy, tracked release over release. [belief:004] (belief, unknown, confidence=0.10) Is comfortable claiming full personal credit for joint work without qualification. — counter-evidence exists, do not state this as certain",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T04:29:03.757122Z",
+      "stage": "verify",
+      "input_summary": "[dossier_narrative:008] (verified fact) Captain and Sports Secretary are roles given by peers and cannot be self-appointed. Professional practice of running blameless postmortems and publishing metrics that can embarrass the author. Believes institutional temperament means the institution outranks the incumbent. [dossier_narrative:020] (verified fact) Closing statement: describes leading the Secretariat as the most consequential work available, and explicitly invites being tested hard on the parts of the candidacy that are short rather than only the parts that are strong. [resume:007] (verified fact) Defined evaluation frameworks pairing offline metrics with live ground-truth validation, POS-occupancy eval at approximately 87% accuracy, tracked release over release. [belief:004] (belief, unknown, confidence=0.10) Is comfortable claiming full personal credit for joint work without qualification. — counter-evidence exists, do not state this as certain",
+      "action": "per-sentence grounding check (same verifier as lexical identityos_v2)",
+      "observation": "coverage=0.86 confidence=0.58",
+      "reasoning": "",
+      "confidence": 0.5814285714285715,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T04:29:03.757128Z",
+      "stage": "bucket",
+      "input_summary": "[dossier_narrative:008] (verified fact) Captain and Sports Secretary are roles given by peers and cannot be self-appointed. Professional practice of running blameless postmortems and publishing metrics that can embarrass the author. Believes institutional temperament means the institution outranks the incumbent. [dossier_narrative:020] (verified fact) Closing statement: describes leading the Secretariat as the most consequential work available, and explicitly invites being tested hard on the parts of the candidacy that are short rather than only the parts that are strong. [resume:007] (verified fact) Defined evaluation frameworks pairing offline metrics with live ground-truth validation, POS-occupancy eval at approximately 87% accuracy, tracked release over release. [belief:004] (belief, unknown, confidence=0.10) Is comfortable claiming full personal credit for joint work without qualification. — counter-evidence exists, do not state this as certain",
+      "action": "derive fit bucket from coverage+confidence+polarity (same bucketing.py as lexical)",
+      "observation": "partial",
+      "reasoning": "",
+      "confidence": null,
+      "decision": "partial"
+    }
+  ]
+}

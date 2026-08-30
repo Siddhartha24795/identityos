@@ -1,4 +1,4 @@
-# IdentityOS — v2.5
+# IdentityOS — v2.6
 
 **An autonomous representative that answers application questions,
 assesses job-requirement fit, and generates application documents on a
@@ -8,11 +8,11 @@ of fabrication.**
 Built for the micro1 Agentic Workflows Hackathon, against the full brief
 preserved in `PROMPT.md`. This repo builds v1 (Q&A), v2 (requirement-fit
 assessment against a real, adjudicated application, iterated through
-v2.4), and v2.5 (document generation) of that brief — see
-[docs/roadmap.md](docs/roadmap.md) for what's deferred to v2.6-v5 and why.
-Prior versions frozen at `../identityos-v1/`, `../identityos-v2/`,
-`../identityos-v2.1/`, `../identityos-v2.2/`, `../identityos-v2.3/`,
-`../identityos-v2.4/`.
+v2.4), and v2.5-v2.6 (document generation + a corpus authoring correction)
+of that brief — see [docs/roadmap.md](docs/roadmap.md) for what's deferred
+to v2.7-v5 and why. Prior versions frozen at `../identityos-v1/`,
+`../identityos-v2/`, `../identityos-v2.1/`, `../identityos-v2.2/`,
+`../identityos-v2.3/`, `../identityos-v2.4/`, `../identityos-v2.5/`.
 
 ## Who has this problem, and why it's worth solving
 
@@ -73,7 +73,7 @@ but does need one-time network access. Output per run:
 To get a qualitative read with a real model: copy `.env.example` to `.env`,
 set `ANTHROPIC_API_KEY` or `OPENAI_API_KEY`, then `make eval-real` / `make eval-v2-real`.
 
-Run the smoke test suite: `make test` (22 tests, <1s, no keys/downloads needed).
+Run the smoke test suite: `make test` (23 tests, <1s, no keys/downloads needed).
 
 ## Results (reference runs, `PROVIDER=mock`)
 
@@ -125,27 +125,30 @@ stayed the default. Full trade-off: [docs/evaluation_v2.md](docs/evaluation_v2.m
 
 | Metric | identityos_v2 (lexical) | identityos_v2_semantic (fastembed) | identityos_v2_hybrid |
 |---|---|---|---|
-| Evidence coverage | 0.83 | 1.00 | **0.97** |
-| Assessment agreement rate | 0.43 | 0.36 | **0.50** |
-| Dangerous overclaim rate | **0.00** | 0.25 | **0.00** |
+| Evidence coverage | 0.84 | 0.99 | **0.99** |
+| Assessment agreement rate | 0.43 | 0.64 | **0.57** |
+| Dangerous overclaim rate | **0.00** | 0.50 | **0.00** |
 
 Diagnosing *why* v2.3 regressed (noise only appeared when semantic
 overrode a working lexical answer, never when filling a real gap) led
 directly to the fix: lexical first, semantic only as a fallback when
 lexical finds nothing. Verified requirement-by-requirement, not assumed —
 all 12 requirements lexical could already answer are byte-identical to
-pure lexical output. Best agreement rate of all five systems, same safety
-as lexical. All three retrieval arms (lexical, semantic, hybrid) stay in
-the harness as permanent comparison points. Full story:
-[docs/evaluation_v2.md](docs/evaluation_v2.md).
+pure lexical output. Best safety-plus-agreement combination of all five
+systems — semantic-only's numbers above are *after* v2.6's corpus fix, and
+its dangerous-overclaim rate got *worse* (0.25 -> 0.50, on different
+requirements), which is further confirmation semantic-alone was correctly
+never promoted, not a new problem. All three retrieval arms (lexical,
+semantic, hybrid) stay in the harness as permanent comparison points. Full
+story: [docs/evaluation_v2.md](docs/evaluation_v2.md).
 
-**v2.5 — document generation, the first real generated artifact:**
+**v2.5-v2.6 — document generation, the first real generated artifact:**
 
 | Metric | baseline_plain | baseline_rag | identityos_v2_5 |
 |---|---|---|---|
 | Evidence coverage | 0.00 | 0.00 | **0.95** |
 | Unsupported claim rate | 1.00 | 1.00 | **0.05** |
-| Repeated-evidence rate (narrative diversity across sections) | n/a | n/a | **0.32** |
+| Repeated-evidence rate (narrative diversity across sections) | n/a | n/a | **0.44** |
 
 A 4-section cover letter, generated with the same hybrid retrieval and
 verification as v2 plus a simple narrative-state rule (prefer not citing
@@ -153,9 +156,14 @@ the same fact twice across sections). Reading the actual generated letter
 — not just its passing score — found a genuinely new failure mode: real,
 grounded evidence can still be the *wrong scope* for the document (in this
 case, strategy narrative written for one specific prior job application,
-showing up in what was supposed to be a generic letter). Fixed the
-obvious case; found, and left open, a subtler one. Full story, and the
-actual generated letters: [docs/evaluation_documents.md](docs/evaluation_documents.md).
+showing up in what was supposed to be a generic letter). v2.6 traced the
+root cause to an actual authoring error (five bullets conflating general
+statements with role-specific comparisons in one sentence, not a missing
+classifier) and fixed it — verified it improved v2's own numbers as a side
+effect, not just the letter. Re-reading the fixed letter found a
+near-identical mistake in a different source file, named as the next open
+item rather than expanded into this version. Full story, and the actual
+generated letters: [docs/evaluation_documents.md](docs/evaluation_documents.md).
 
 ## Improvement changelog
 
@@ -184,8 +192,11 @@ gaps — produced a fix (semantic as a fallback only) that beat every other
 system and was verified requirement-by-requirement, not assumed. v2.5: the
 same substitution once more, at a fourth level — grounded and true isn't
 the same as *in scope for this document*; a real, correctly-cited fact can
-still be narrative written for a different, specific context. Full
-writeup, including what's still unfixed: [docs/hot_take.md](docs/hot_take.md).
+still be narrative written for a different, specific context. v2.6: the
+fix wasn't a smarter classifier, it was correcting an actual authoring
+mistake — and doing so consistently (all five affected bullets, not just
+the visible one) is what separates a correction from tuning a benchmark.
+Full writeup, including what's still unfixed: [docs/hot_take.md](docs/hot_take.md).
 
 ## Hackathon compliance self-check
 

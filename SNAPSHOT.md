@@ -1,8 +1,9 @@
 # This is a frozen snapshot
 
-This folder is an immutable copy of IdentityOS **v2.5**, taken from the live
-working directory at `../identityos/` once document generation was built,
-evaluated, and independently verified from a clean environment.
+This folder is an immutable copy of IdentityOS **v2.6**, taken from the live
+working directory at `../identityos/` once the corpus authoring correction
+was made and independently verified across all three eval suites from a
+clean environment.
 
 - v1 (Q&A only) is frozen separately at `../identityos-v1/`.
 - v2.0 (requirement-fit assessment, one dangerous overclaim) at `../identityos-v2/`.
@@ -10,15 +11,19 @@ evaluated, and independently verified from a clean environment.
 - v2.2 (clause-level negation) at `../identityos-v2.2/`.
 - v2.3 (embedding retrieval, evaluated, not promoted) at `../identityos-v2.3/`.
 - v2.4 (hybrid retrieval, promoted) at `../identityos-v2.4/`.
-- v2.5 adds `services/document_engine/`: the first real generated artifact,
-  a 4-section cover letter with narrative-state evidence tracking. Found a
-  genuinely new failure mode by reading the actual letter (grounded, true
-  evidence can still be out of scope — strategy narrative for a specific
-  prior application, cited as if general). Fixed the whole-fact case
-  (`FactCategory.APPLICATION_SPECIFIC`); found and left open a subtler
-  sentence-level version of the same issue, named rather than patched
-  reactively. See `docs/improvement_changelog.md`, `docs/evaluation_documents.md`,
-  `docs/hot_take.md`'s v2.5 addendum.
+- v2.5 (document generation, found the evidence-scope substitution) at `../identityos-v2.5/`.
+- v2.6 traced v2.5's residual finding to an actual authoring error — five
+  bullets in `dossier_narrative.md` conflated a general statement with an
+  IITACB-specific comparison in one sentence, violating this project's own
+  one-fact-per-line rule — and fixed all five, not just the one that had
+  been visibly wrong. Verified effect: hybrid retrieval's agreement rate
+  0.50 -> 0.57 with dangerous overclaim rate held at 0.00 through a real
+  corpus change (req05 now a full exact match); semantic-only got *more*
+  unstable (0.25 -> 0.50 dangerous overclaim rate, different requirements),
+  reinforcing why it was never promoted. Also found — and left open for
+  v2.7 — a near-identical conflation in a different source file. See
+  `docs/improvement_changelog.md` (Iteration 10-11), `docs/evaluation_v2.md`,
+  `docs/evaluation_documents.md`, `docs/hot_take.md`'s v2.6 addendum.
 - Ongoing development continues in `../identityos/` (the live directory).
 - No `.venv`, `.git`, or cache directories were copied — `make setup` +
   `make eval-mock` / `make eval-v2-mock` need nothing beyond this folder
