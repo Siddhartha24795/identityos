@@ -3,7 +3,7 @@
   "system_name": "identityos_v1",
   "steps": [
     {
-      "timestamp": "2026-08-29T18:01:54.269293Z",
+      "timestamp": "2026-08-30T03:01:04.765244Z",
       "stage": "classify",
       "input_summary": "Where do you see yourself in five years?",
       "action": "use declared question.type (v1 simplification, not a learned classifier)",
@@ -13,43 +13,43 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-29T18:01:54.269867Z",
+      "timestamp": "2026-08-30T03:01:04.766061Z",
       "stage": "retrieve",
       "input_summary": "Where do you see yourself in five years?",
-      "action": "lexical retrieval over Digital Self: top 1 facts, 0 beliefs",
-      "observation": "[dossier_excerpts:004] (verified fact) Six years of unpaid guest sessions, mentoring, and hackathon judging across universities, described in the dossier as predating any formal title or compensation.",
+      "action": "lexical retrieval over Digital Self: top 5 facts, 0 beliefs",
+      "observation": "[dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical — it is 24x7 production accountability across live customer sites.\n[dossier_excerpts:004] (verified fact) Six years of unpaid guest sessions, mentoring, and hackathon judging across universities, described in the dossier as predating any formal title or compensation.\n[dossier_narrative:004] (verified fact) Defined technical strategy, architecture and organisation-wide evaluation frameworks at Jinn Labs, building governance structures where none existed; the same machinery run earlier at student scale heading four chapters simultaneously and organising festivals at KNIT Sultanpur.\n[dossier_narrative:005] (verified fact) Routine practice of aligning research scientists, infrastructure engineers, product owners, enterprise customers and executive sponsors around one roadmap — the alumni-and-institution interface in miniature is the same six years of running an unpaid academia-industry bridge.\n[dossier_narrative:007] (verified fact) Accustomed to explaining deep technology to non-technical boards and to translating executive intent into engineering commitments, built over six years of guest lectures, mentoring programmes and hackathon judging panels plus representing India at the Japan Hackathon 2021.",
       "reasoning": "",
       "confidence": null,
       "decision": ""
     },
     {
-      "timestamp": "2026-08-29T18:01:54.269898Z",
+      "timestamp": "2026-08-30T03:01:04.766204Z",
       "stage": "generate",
       "input_summary": "Where do you see yourself in five years?",
       "action": "call provider with structured, citation-tagged, confidence-annotated context",
-      "observation": "[dossier_excerpts:004] (verified fact) Six years of unpaid guest sessions, mentoring, and hackathon judging across universities, described in the dossier as predating any formal title or compensation.",
+      "observation": "[dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical — it is 24x7 production accountability across live customer sites. [dossier_excerpts:004] (verified fact) Six years of unpaid guest sessions, mentoring, and hackathon judging across universities, described in the dossier as predating any formal title or compensation. [dossier_narrative:004] (verified fact) Defined technical strategy, architecture and organisation-wide evaluation frameworks at Jinn Labs, building governance structures where none existed; the same machinery run earlier at student scale heading four chapters simultaneously and organising festivals at KNIT Sultanpur. [dossier_narrative:005] (verified fact) Routine practice of aligning research scientists, infrastructure engineers, product owners, enterprise customers and executive sponsors around one roadmap — the alumni-and-institution interface in miniature is the same six years of running an unpaid academia-industry bridge.",
       "reasoning": "",
       "confidence": null,
       "decision": ""
     },
     {
-      "timestamp": "2026-08-29T18:01:54.269929Z",
+      "timestamp": "2026-08-30T03:01:04.766342Z",
       "stage": "verify",
-      "input_summary": "[dossier_excerpts:004] (verified fact) Six years of unpaid guest sessions, mentoring, and hackathon judging across universities, described in the dossier as predating any formal title or compensation.",
+      "input_summary": "[dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical — it is 24x7 production accountability across live customer sites. [dossier_excerpts:004] (verified fact) Six years of unpaid guest sessions, mentoring, and hackathon judging across universities, described in the dossier as predating any formal title or compensation. [dossier_narrative:004] (verified fact) Defined technical strategy, architecture and organisation-wide evaluation frameworks at Jinn Labs, building governance structures where none existed; the same machinery run earlier at student scale heading four chapters simultaneously and organising festivals at KNIT Sultanpur. [dossier_narrative:005] (verified fact) Routine practice of aligning research scientists, infrastructure engineers, product owners, enterprise customers and executive sponsors around one roadmap — the alumni-and-institution interface in miniature is the same six years of running an unpaid academia-industry bridge.",
       "action": "check every sentence for an explicit citation, else a lexical grounding match",
-      "observation": "evidence_coverage=1.00 unsupported_claim_rate=0.00 overall_confidence=0.99",
+      "observation": "evidence_coverage=1.00 unsupported_claim_rate=0.00 overall_confidence=0.89",
       "reasoning": "",
-      "confidence": 0.99,
+      "confidence": 0.892,
       "decision": ""
     },
     {
-      "timestamp": "2026-08-29T18:01:54.269938Z",
+      "timestamp": "2026-08-30T03:01:04.766351Z",
       "stage": "complete",
       "input_summary": "q09",
       "action": "return final answer",
-      "observation": "[dossier_excerpts:004] (verified fact) Six years of unpaid guest sessions, mentoring, and hackathon judging across universities, described in the dossier as predating any formal title or compensation.",
+      "observation": "[dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical — it is 24x7 production accountability across live customer sites. [dossier_excerpts:004] (verified fact) Six years of unpaid guest sessions, mentoring, and hackathon judging across universities, described in the dossier as predating any formal title or compensation. [dossier_narrative:004] (verified fact) Defined technical strategy, architecture and organisation-wide evaluation frameworks at Jinn Labs, building governance structures where none existed; the same machinery run earlier at student scale heading four chapters simultaneously and organising festivals at KNIT Sultanpur. [dossier_narrative:005] (verified fact) Routine practice of aligning research scientists, infrastructure engineers, product owners, enterprise customers and executive sponsors around one roadmap — the alumni-and-institution interface in miniature is the same six years of running an unpaid academia-industry bridge.",
       "reasoning": "",
-      "confidence": 0.99,
+      "confidence": 0.892,
       "decision": "answered"
     }
   ]

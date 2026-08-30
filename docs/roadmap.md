@@ -28,7 +28,19 @@ a requirement the person had honestly marked as a gap, because "well-cited"
 and "positive" got conflated) — documented, not hidden, per the hackathon's
 own instruction not to hide failures.
 
-## v2.1+ — deferred from the original v2 scope  ·  not started
+## v2.1 — general corpus completion  ·  **built**
+
+Full, general corpus completion — `data/identity_sources/` was a curated
+subset of the two source documents, not a full transcription. Rather than
+patching the one remaining known failure (req08) reactively, transcribed
+the entire remaining requirement-evidence table plus the dossier's broader
+narrative sections in one general pass
+(`data/identity_sources/dossier_narrative.md`), independent of which eval
+question needed what. Result: dangerous_overclaim_rate 0.25 -> 0.00, and
+v1's own score also improved as a side effect. See
+docs/improvement_changelog.md (Iteration 6) and docs/evaluation_v2.md.
+
+## v2.2+ — deferred from the original v2 scope  ·  not started
 
 - Automatic belief inference from raw unstructured text (replacing v1/v2's
   hand-seeded beliefs) with an LLM pass plus counter-evidence search.
@@ -37,23 +49,15 @@ own instruction not to hide failures.
 - Document generators: cover letter, SOP, short-answer set, each claim
   still traceable per docs/architecture.md.
 - Embedding-based retrieval (pgvector) alongside the existing lexical
-  retrieval, so both can be compared rather than one silently replacing
-  the other.
+  retrieval. Confirmed necessary, not just theoretical, by v2.1's own eval
+  run: req05/req10 have real, relevant evidence in the corpus now and still
+  retrieve zero facts, because "entrepreneurial mindset" shares no literal
+  words with "comfortable with ambiguity, unfunded mandates."
 - Clause-level (not sentence-level) negation detection — v2.0's fix
   operates on whole generated sentences, so a single sentence mixing a
   positive and a negative clause ("fluent in English and Hindi but not yet
-  in Kannada") gets treated as fully negative. Known limitation, see
-  docs/hot_take.md.
-- Full, general corpus completion — `data/identity_sources/` is a curated
-  subset of the two source documents, not a full transcription. Two
-  specific gaps in it were patched reactively during v2.0 eval debugging
-  (req09); a third (req08) was deliberately left as an open, documented
-  failure rather than patched the same way, because fixing it case-by-case
-  in response to which of the 14 known eval requirements fails next is
-  functionally overfitting to this specific benchmark. The right fix is a
-  single, general pass — ingest the full unstructured source documents
-  (not a hand-picked excerpt) — done once, independent of which eval
-  questions currently pass or fail.
+  in Kannada") gets treated as fully negative (req13). Known limitation,
+  see docs/hot_take.md.
 
 ## v3 — Browser execution  ·  not started
 

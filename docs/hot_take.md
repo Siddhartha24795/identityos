@@ -69,16 +69,27 @@ standing in for "is this a positive answer," which it was never designed
 to measure.
 
 The fix (a lexical negation check on cited claim text,
-`services/application_engine/bucketing.py`) caught this exact case and one
-other (req09), but is coarse — sentence-level, not clause-level — and still
-misses one real case (req08) and safely-but-wrongly underclaims another
-(req13). All three are documented, not patched away, in
-docs/evaluation_v2.md. The pattern across both versions: **grounding
-verification answers "did this really come from evidence," and every time
-we've needed it to also answer "does this evidence mean what the sentence
-around it implies," it has silently failed to, in a different way each
-time.** That looks like a property of grounding-based verification in
-general, not a bug specific to either version.
+`services/application_engine/bucketing.py`) caught this exact case, but
+left one dangerous overclaim standing (req08) for a completely different
+reason: the right evidence for that requirement had simply never been
+transcribed into the Digital Self. **The fix that actually closed it
+wasn't a smarter rule — it was completing the record.** A general
+corpus-completion pass (docs/improvement_changelog.md, Iteration 6)
+transcribed the rest of the same source document, without regard to which
+eval question needed what, and req08 resolved as a side effect. Two safe
+(non-dangerous) failures remain — a sentence-level negation check that
+should be clause-level, and a lexical retriever that can't match
+"entrepreneurial mindset" against evidence phrased as "comfortable with
+ambiguity" — both documented in docs/evaluation_v2.md, neither patched away.
+
+The pattern across both versions: **grounding verification answers "did
+this really come from evidence," and every time we've needed it to also
+answer "does this evidence mean what the sentence around it implies," it
+has silently failed to, in a different way each time.** That looks like a
+property of grounding-based verification in general, not a bug specific to
+either version — and the more durable fix, twice now, has been making the
+underlying representation more complete rather than making the checking
+logic cleverer.
 
 ## The experiment we removed
 

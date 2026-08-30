@@ -3,7 +3,7 @@
   "system_name": "baseline_plain",
   "steps": [
     {
-      "timestamp": "2026-08-29T18:01:54.281025Z",
+      "timestamp": "2026-08-30T03:01:04.781185Z",
       "stage": "generate",
       "input_summary": "What is your fluency level in Kannada?",
       "action": "call provider with zero context, zero verification",

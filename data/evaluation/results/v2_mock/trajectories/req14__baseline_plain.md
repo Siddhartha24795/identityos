@@ -1,12 +1,12 @@
 ### Trajectory — baseline_plain — req14
 
-**18:01:54 · generate**
+**03:01:05 · generate**
 - input: Desired — record of building or running a professional body (CII / NASSCOM / FICCI / AIMA)
 - action: call provider with zero context, zero verification
 - observation: This is something I have thought about carefully throughout my career. When it comes to aima and body and building, I have always taken a proactive, results-driven approach and delivered measurable impact. I look forward to bringing this strength to your organization.
 - reasoning: Baseline 1: no identity access at all.
 
-**18:01:54 · bucket**
+**03:01:05 · bucket**
 - input: This is something I have thought about carefully throughout my career. When it comes to aima and body and building, I have always taken a proactive, results-driven approach and delivered measurable impact. I look forward to bringing this strength to your organization.
 - action: derive fit bucket from coverage+confidence
 - observation: coverage=0.00 confidence=0.00

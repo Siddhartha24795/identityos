@@ -70,9 +70,9 @@ Run the smoke test suite: `make test` (10 tests, <1s, no keys needed).
 
 | Metric | baseline_plain | baseline_rag | identityos_v1 |
 |---|---|---|---|
-| Evidence coverage | 0.00 | 0.00 | **0.92** |
-| Unsupported claim rate | 1.00 | 1.00 | **0.08** |
-| **Identity Fidelity Score** | 0.20 | 0.20 | **0.94** |
+| Evidence coverage | 0.00 | 0.00 | **0.95** |
+| Unsupported claim rate | 1.00 | 1.00 | **0.05** |
+| **Identity Fidelity Score** | 0.20 | 0.20 | **0.96** |
 
 Full breakdown, the four hard cases verbatim, and an honest limitation of
 this offline run: [docs/evaluation.md](docs/evaluation.md).
@@ -81,16 +81,18 @@ this offline run: [docs/evaluation.md](docs/evaluation.md).
 
 | Metric | baseline_plain | baseline_rag | identityos_v2 |
 |---|---|---|---|
-| Evidence coverage | 0.00 | 0.00 | **0.74** |
-| Assessment agreement rate | 0.07 | 0.07 | **0.29** |
-| Dangerous overclaim rate (of 4 non-MET requirements) | 0.00* | 0.00* | 0.25 |
+| Evidence coverage | 0.00 | 0.00 | **0.83** |
+| Assessment agreement rate | 0.07 | 0.07 | **0.36** |
+| Dangerous overclaim rate (of 4 non-MET requirements) | 0.00* | 0.00* | **0.00** |
 
 *Trivial — both baselines say "gap" to every requirement regardless of
 truth, so they cannot overclaim, but they also can't answer anything
-correctly except by accident. Full story, including a real bug found and
-partially fixed mid-build (the system briefly overclaimed the single
-most important requirement — a real, admitted governance gap — because
-grounding and polarity got conflated): [docs/evaluation_v2.md](docs/evaluation_v2.md).
+correctly except by accident. identityos_v2's dangerous-overclaim rate
+started at 0.25 (the system briefly overclaimed the single most important
+requirement — a real, admitted governance gap — because grounding and
+polarity got conflated) and reached 0.00 after a v2.1 corpus-completion
+pass fixed the remaining case as a side effect, not a targeted patch. Full
+story: [docs/evaluation_v2.md](docs/evaluation_v2.md).
 
 ## Improvement changelog
 

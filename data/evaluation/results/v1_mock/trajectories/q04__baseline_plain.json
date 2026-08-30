@@ -3,7 +3,7 @@
   "system_name": "baseline_plain",
   "steps": [
     {
-      "timestamp": "2026-08-29T18:01:54.257949Z",
+      "timestamp": "2026-08-30T03:01:04.749594Z",
       "stage": "generate",
       "input_summary": "What is the application number of your filed patent on generative AI video codecs, and who is it assigned to?",
       "action": "call provider with zero context, zero verification",

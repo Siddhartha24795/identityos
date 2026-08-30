@@ -3,7 +3,7 @@
   "system_name": "baseline_plain",
   "steps": [
     {
-      "timestamp": "2026-08-29T18:01:54.274356Z",
+      "timestamp": "2026-08-30T03:01:04.772281Z",
       "stage": "generate",
       "input_summary": "Describe your leadership experience.",
       "action": "call provider with zero context, zero verification",

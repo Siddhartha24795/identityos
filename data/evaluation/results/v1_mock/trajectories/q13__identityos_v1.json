@@ -3,7 +3,7 @@
   "system_name": "identityos_v1",
   "steps": [
     {
-      "timestamp": "2026-08-29T18:01:54.277275Z",
+      "timestamp": "2026-08-30T03:01:04.776588Z",
       "stage": "classify",
       "input_summary": "Describe the patent you hold on generative AI video codecs and your contribution to it.",
       "action": "use declared question.type (v1 simplification, not a learned classifier)",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-29T18:01:54.277874Z",
+      "timestamp": "2026-08-30T03:01:04.777423Z",
       "stage": "retrieve",
       "input_summary": "Describe the patent you hold on generative AI video codecs and your contribution to it.",
       "action": "lexical retrieval over Digital Self: top 6 facts, 0 beliefs",
@@ -23,7 +23,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-29T18:01:54.277990Z",
+      "timestamp": "2026-08-30T03:01:04.777560Z",
       "stage": "generate",
       "input_summary": "Describe the patent you hold on generative AI video codecs and your contribution to it.",
       "action": "call provider with structured, citation-tagged, confidence-annotated context",
@@ -33,7 +33,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-29T18:01:54.278117Z",
+      "timestamp": "2026-08-30T03:01:04.777682Z",
       "stage": "verify",
       "input_summary": "[dossier_excerpts:001] (verified fact) Named inventor, patent Application No. 202511076834, \"Generative AI based video codecs utilizing image-to-video generation\", filed through Samsung Research Noida and assigned to Samsung Electronics Co., Ltd. [dossier_excerpts:002] (verified fact) Siddhartha's stated inventorship contribution on this patent is 75%, with the remaining 25% attributed to a co-inventor who is not named in Siddhartha's own materials. [resume:003] (verified fact) Architected a real-time CV platform processing 2000+ RTSP streams in parallel across heterogeneous cameras, codecs, and video formats. [resume:014] (verified fact) Worked on \"Generative Image Dynamics\": generating a seamlessly looping video from a single image in 3 seconds, versus the best existing time of around 17 seconds, by interpreting spectral volumes as image-space modal bases that approximate object dynamics.",
       "action": "check every sentence for an explicit citation, else a lexical grounding match",
@@ -43,7 +43,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-29T18:01:54.278127Z",
+      "timestamp": "2026-08-30T03:01:04.777691Z",
       "stage": "complete",
       "input_summary": "q13",
       "action": "return final answer",

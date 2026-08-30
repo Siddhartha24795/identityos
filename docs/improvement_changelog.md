@@ -2,7 +2,10 @@
 
 All results below come from the same 19-question bank, scored the same way,
 via `python scripts/run_eval.py mock <tag>` (services/evaluation/run_eval.py
-+ scoring.py). Full numbers: docs/evaluation.md.
++ scoring.py). Numbers in this section are as measured at the time of each
+iteration; the corpus grew further during v2/v2.1 (shared Digital Self), so
+current reproduced numbers are marginally higher — see docs/evaluation.md
+for the up-to-date figures and why they moved.
 
 | Stage | What we tried and why | Evidence | Decision / learning |
 |---|---|---|---|
@@ -38,21 +41,21 @@ against the IITACB CEO dossier's real 14-requirement fit table
 | **Iteration 3 (v2)** | Added a lexical negation check on cited claim text (`_NEGATION_MARKERS` in `services/application_engine/bucketing.py`), general — not keyed to req14's id. | req14 moved from the dangerous `met_or_better` to `partial` (still not an exact match, but no longer a confident overclaim). Overall agreement rate dropped to 0.29 — the fix also correctly downgraded other confident-but-imperfect answers. | Kept, despite the lower headline number. A lower agreement rate that removes a dangerous overclaim is a better result than a higher one that hides it — see docs/hot_take.md. |
 | **Iteration 4 (v2)** | Investigated req09 (government/policy engagement) scoring wrong for a different reason: the ideal evidence sentence had never been transcribed into the Digital Self's source documents at all. Added it — real text from the source dossier, not fabricated. | req09 moved from wrong to a correct `partial` match. | Kept. A genuine corpus-completeness gap, not a scoring bug — distinguishing the two mattered before "fixing" anything. |
 | **Iteration 5 (v2) — added, not removed** | Added a second metric, `dangerous_overclaim_rate` (of the 4 real non-MET requirements, how often does the system confidently claim full credit anyway), after realizing agreement_rate alone treats a safe underclaim and a dangerous overclaim as equally wrong. | identityos_v2: 0.25 (1 of 4). Both baselines: 0.00 — but only because they never claim `met_or_better` on anything, which is a degenerate kind of "safe." | Kept as a permanent second metric. Explained clearly in docs/evaluation_v2.md so the 0.00 baseline number isn't misread as baselines being careful. |
-| **Final (v2)** | Combined structured retrieval + citation + verification + negation-aware bucketing + a completed corpus = `identityos_v2`. | Evidence coverage 0.74 vs 0.00 (both baselines). Agreement rate 0.29 vs 0.07. Dangerous overclaim rate 0.25 — one real, undismissed remaining failure (req08). | Main contribution: catching the single most dangerous case (req14) and being honest that one dangerous case (req08) remains, rather than tuning bucketing thresholds until the number looked clean. |
+| **Final (v2.0)** | Combined structured retrieval + citation + verification + negation-aware bucketing + two eval-triggered corpus patches = `identityos_v2`. | Evidence coverage 0.74 vs 0.00 (both baselines). Agreement rate 0.29 vs 0.07. Dangerous overclaim rate 0.25 — one real, undismissed remaining failure (req08). | Shipped honestly with one known dangerous overclaim rather than tuning bucketing thresholds until the number looked clean. |
+| **Iteration 6 (v2.1)** | Instead of patching req08's specific missing sentence (the same shape of fix as req09, which risked "tuning until the 14 known cases pass"), did one general pass: transcribed the *entire* remaining requirement-evidence table plus the dossier's broader narrative (accountabilities, revenue architecture, first-100-days, closing) into `data/identity_sources/dossier_narrative.md` — real source content, not selected by which eval case needed it, and mostly untested by any current question. | Digital Self grew 76 -> 92 facts. Evidence coverage 0.74 -> 0.83. Agreement rate 0.29 -> 0.36. **Dangerous overclaim rate 0.25 -> 0.00** — req08 fixed as a side effect. v1's own score also improved slightly (0.939 -> 0.958 Identity Fidelity Score), since both versions share one Digital Self. | Kept. The general fix (complete the record) resolved the specific problem (req08) better than a targeted patch would have, without touching bucketing logic at all. |
 
-## Main failure mode, v2 (see docs/hot_take.md for the full writeup)
+## Main failure mode, v2.1 (see docs/hot_take.md for the full writeup)
 
-The negation check is sentence-level, not clause-level: a single sentence
-mixing a positive clause ("fluent in English and Hindi") and a negative one
-("but not yet in Kannada") gets treated as fully negative, which is why
-req13 now safely-but-wrongly underclaims to `gap` instead of the correct
-`partial`. Separately, req08 shows a different, arguably more fundamental
-gap: the identity source files are a curated subset of the two source
-documents, not a full transcription, so retrieval sometimes has no correct
-evidence to find at all and surfaces the closest-sounding wrong fact
-instead — which is well-grounded and negation-free, so nothing catches it.
-We fixed this exact shape of problem for req09 by completing the corpus;
-we deliberately did not do the same for req08, because a third
-eval-triggered corpus patch would stop being "completing the record" and
-start being "tuning until the known 14 cases pass." Both are open items for
-v2.1 (docs/roadmap.md), not hidden here.
+Two safe-direction (not dangerous) failures remain, both already understood
+and neither hidden. First: the negation check is sentence-level, not
+clause-level, so a sentence mixing a positive clause ("fluent in English
+and Hindi") and a negative one ("but not yet in Kannada") gets treated as
+fully negative — req13 underclaims to `gap` instead of the correct
+`partial`. Second: req05 and req10 now have real, relevant evidence in the
+corpus but retrieve zero facts, because lexical overlap can't match an
+abstract requirement phrase ("entrepreneurial mindset") against evidence
+phrased differently ("comfortable with ambiguity, unfunded mandates") —
+the exact lexical-retrieval limitation flagged from v1's design, now
+confirmed concretely rather than staying theoretical. Both point to the
+same v2.1+ roadmap items: clause-level negation, and embedding-based
+retrieval.

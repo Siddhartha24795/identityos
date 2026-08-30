@@ -3,21 +3,21 @@
   "system_name": "baseline_rag",
   "steps": [
     {
-      "timestamp": "2026-08-29T18:01:54.272421Z",
+      "timestamp": "2026-08-30T03:01:04.769727Z",
       "stage": "retrieve",
       "input_summary": "What is your most impactful project?",
       "action": "dump the entire fact store as unstructured text (no ranking, no ids)",
-      "observation": "76 facts included, no relevance filtering",
+      "observation": "92 facts included, no relevance filtering",
       "reasoning": "Baseline 2 has retrieval but no structure and no grounding check.",
       "confidence": null,
       "decision": ""
     },
     {
-      "timestamp": "2026-08-29T18:01:54.273206Z",
+      "timestamp": "2026-08-30T03:01:04.770977Z",
       "stage": "generate",
       "input_summary": "What is your most impactful project?",
       "action": "call provider with the full unstructured context dump",
-      "observation": "Named inventor, patent Application No. 202511076834, \"Generative AI based video codecs utilizing image-to-video generation\", filed through Samsung Research Noida and assigned to Samsung Electronics Co., Ltd. Siddhartha's stated inventorship contribution on this patent is 75%, with the remaining 25% attributed to a co-inventor who is not named in Siddhartha's own materials.",
+      "observation": "Closing statement: describes leading the Secretariat as the most consequential work available, and explicitly invites being tested hard on the parts of the candidacy that are short rather than only the parts that are strong.",
       "reasoning": "",
       "confidence": null,
       "decision": "answered_unverified"

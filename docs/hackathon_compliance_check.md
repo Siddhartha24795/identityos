@@ -1,7 +1,7 @@
 # Hackathon compliance self-check
 
 Re-verified after every version against `/home/siddhartha/siddhartha/micro1 - First Hackathon97ce7c5.pdf`.
-Last checked: **after v2**.
+Last checked: **after v2.1**.
 
 ## Judging rubric (100 pts)
 
@@ -10,7 +10,7 @@ Last checked: **after v2**.
 | Problem & User Value | 15 | docs/problem_statement.md — real bottleneck (this project's own author reconstructing themself across applications), clearly defined user | Addressed |
 | Agent Solution & Engineering | 30 | docs/architecture.md — retrieval + citation + verification + confidence-gated refusal (v1); reused pipeline + polarity-aware bucketing (v2). Purposeful, not "20 agents for the sake of it." | Addressed |
 | End to End Quality | 20 | Both eval harnesses run end to end and produce a usable result (scored comparison + trajectories) from one command each | Addressed, no UI polish yet (v5) |
-| Measured Improvement | 15 | docs/evaluation.md, docs/evaluation_v2.md — fair baselines, same task/cases, honest limitations stated | Addressed |
+| Measured Improvement | 15 | docs/evaluation.md, docs/evaluation_v2.md — fair baselines, same task/cases, honest limitations stated, including a metric (dangerous_overclaim_rate) fixed by a general corpus pass rather than a targeted patch | Addressed |
 | Reproducibility | 15 | `make setup && make eval-mock && make eval-v2-mock` from a clean environment, zero API keys, verified via `identityos-v1/` standalone snapshot | Addressed |
 | Hot Take / Insights | 5 | docs/hot_take.md — a real bug found by running the eval (v1: relevance; v2: polarity), not a generic lesson | Addressed |
 
@@ -36,5 +36,6 @@ Last checked: **after v2**.
 
 ## Open items carried forward
 
-- Demo video: still needs to be recorded by a human, and `docs/demo_script.md` needs a short v2 segment added first.
-- v2's two known unfixed cases (req08, req13) are real and documented, not silently patched.
+- Demo video: still needs to be recorded by a human. `docs/demo_script.md` has a v2 segment; a v2.1 update (the corpus-completion story) is the next small addition before recording.
+- Two known safe-direction (non-dangerous) cases remain open: req13 (clause-level negation, not yet built) and req05/req10 (lexical retrieval can't match abstract requirement phrasing to differently-worded evidence — embedding retrieval, not yet built). Neither is hidden; both are in docs/evaluation_v2.md and docs/roadmap.md v2.2+.
+- req08's dangerous overclaim was resolved in v2.1 via general corpus completion, not a targeted patch.
