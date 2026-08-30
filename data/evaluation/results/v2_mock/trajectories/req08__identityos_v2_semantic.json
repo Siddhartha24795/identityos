@@ -3,7 +3,7 @@
   "system_name": "identityos_v2_semantic",
   "steps": [
     {
-      "timestamp": "2026-08-30T08:33:21.319414Z",
+      "timestamp": "2026-08-30T09:54:08.867605Z",
       "stage": "retrieve",
       "input_summary": "Revenue & P&L management",
       "action": "embedding-similarity retrieval (hash): top 0 facts, 0 beliefs",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T08:33:21.319436Z",
+      "timestamp": "2026-08-30T09:54:08.867627Z",
       "stage": "generate",
       "input_summary": "Revenue & P&L management",
       "action": "call provider with cited, confidence-annotated context",
@@ -23,7 +23,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T08:33:21.319474Z",
+      "timestamp": "2026-08-30T09:54:08.867666Z",
       "stage": "verify",
       "input_summary": "Over the years, I have built a reputation for excellence here. When it comes to management and revenue, I have always taken a proactive, results-driven approach and delivered measurable impact. I am confident this reflects who I am professionally.",
       "action": "per-sentence grounding check (same verifier as lexical identityos_v2)",
@@ -33,7 +33,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T08:33:21.319492Z",
+      "timestamp": "2026-08-30T09:54:08.867670Z",
       "stage": "bucket",
       "input_summary": "Over the years, I have built a reputation for excellence here. When it comes to management and revenue, I have always taken a proactive, results-driven approach and delivered measurable impact. I am confident this reflects who I am professionally.",
       "action": "derive fit bucket from coverage+confidence+polarity (same bucketing.py as lexical)",

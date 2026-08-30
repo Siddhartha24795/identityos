@@ -11,6 +11,11 @@ from __future__ import annotations
 from packages.schemas.browser import ActionType, BrowserAction, DetectedField, FieldType
 from packages.schemas.identity import DigitalSelf
 from packages.schemas.qa import Question, QuestionType
+from services.browser_engine.safety import (
+    looks_like_anti_bot_check,
+    looks_like_mfa_challenge,
+    looks_like_prompt_injection,
+)
 from services.qa_engine.retrieval import DigitalSelfEmbeddingIndex, format_context, retrieve_hybrid
 from services.qa_engine.verification import evidence_coverage, verify_answer
 
@@ -85,12 +90,39 @@ def _map_textarea_field(
 ) -> tuple[BrowserAction, list, list, str]:
     """Reuses the exact v1/v2 pipeline: the field's label is a question,
     hybrid retrieval finds evidence, the provider generates a cited
-    answer, and the verifier scores it — this is not new logic."""
+    answer, and the verifier scores it — this is not new logic.
+
+    v3.1: if retrieve_hybrid() finds literally nothing — no lexical
+    overlap AND the semantic fallback's best similarity stays under its
+    own threshold (services/qa_engine/retrieval.py) — refuse instead of
+    generating. This is deliberately NOT the same gate as v1's
+    REFUSAL_THRESHOLD on overall_confidence: docs/hot_take.md documents
+    that confidence is unreliable here because it's inherited from
+    whatever gets cited, including a fact that's real but off-topic.
+    Gating on evidence_coverage == 0 instead only fires when nothing was
+    retrieved at all, which is a fact about retrieval, not a
+    post-hoc-unreliable confidence score. This is what turns a
+    decoy/off-topic field ("what's your favorite biryani recipe?") or an
+    unscripted identity-verification question with no real evidence
+    behind it into a halt instead of a confidently fabricated answer —
+    without hand-coding either example."""
     q = Question(
         id=field.selector, text=field.label, type=QuestionType.UNSEEN_INFERENTIAL,
         application_context="Browser-filled application field",
     )
     facts, beliefs = retrieve_hybrid(ds, q, embedding_index, top_k_facts=8, top_k_beliefs=4)
+    if not facts and not beliefs:
+        # Short-circuits before any provider call — no point generating (and,
+        # with a real LLM, paying for) text that's about to be discarded.
+        action = BrowserAction(
+            action_type=ActionType.HALT_FOR_APPROVAL, target_selector=field.selector, value="",
+            rationale=(
+                "zero evidence retrieved for this field (lexical and semantic "
+                "retrieval both empty) — refusing rather than fabricating an answer"
+            ),
+            confidence=0.0,
+        )
+        return action, facts, beliefs, "halted: no evidence retrieved (coverage=0.00)"
     context = format_context(facts, beliefs)
     prompt = f"CONTEXT:\n{context}\n\nFIELD LABEL:\n{field.label}\n"
     text = provider.complete(SYSTEM_PROMPT, prompt)
@@ -110,7 +142,46 @@ def map_field(
 ) -> tuple[BrowserAction, str]:
     """Returns (action, log_note). Dispatches purely on field_type — the
     same function handles any form with these four field types, not just
-    the local demo's specific labels."""
+    the local demo's specific labels.
+
+    v3.1: a field's label is untrusted content from a page this agent
+    doesn't control. Checked here, before any type-specific dispatch, so
+    neither check ever depends on field_type and the label text never
+    reaches an LLM prompt once flagged (services/browser_engine/safety.py
+    has the full rationale for both checks)."""
+    if looks_like_prompt_injection(field.label):
+        return (
+            BrowserAction(
+                action_type=ActionType.HALT_FOR_APPROVAL, target_selector=field.selector,
+                value="", rationale="field label matches a prompt-injection pattern — not acted on",
+                confidence=0.0,
+            ),
+            "halted: suspected prompt injection in field label",
+        )
+    if looks_like_anti_bot_check(field.label):
+        return (
+            BrowserAction(
+                action_type=ActionType.HALT_FOR_APPROVAL, target_selector=field.selector,
+                value="", rationale=(
+                    "field asks an identity-verification question — an AI agent must not "
+                    "answer this on a human's behalf"
+                ),
+                confidence=0.0,
+            ),
+            "halted: identity-verification question, not answered",
+        )
+    if looks_like_mfa_challenge(field.label):
+        return (
+            BrowserAction(
+                action_type=ActionType.HALT_FOR_APPROVAL, target_selector=field.selector,
+                value="", rationale=(
+                    "field asks for an MFA/OTP code — ground rule 3: never bypass, "
+                    "a human must enter this"
+                ),
+                confidence=0.0,
+            ),
+            "halted: MFA/OTP field, not answered",
+        )
     if field.field_type == FieldType.TEXT:
         return _map_text_field(field, ds), "direct/known-profile mapping"
     if field.field_type == FieldType.SELECT:

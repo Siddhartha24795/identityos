@@ -1,4 +1,4 @@
-.PHONY: setup build-identity eval-mock eval-real eval-v2-mock eval-v2-real eval-v2-semantic eval-documents eval-browser test clean
+.PHONY: setup build-identity eval-mock eval-real eval-v2-mock eval-v2-real eval-v2-semantic eval-documents eval-browser eval-security-demo test clean
 
 setup:
 	python3 -m venv .venv
@@ -42,6 +42,14 @@ eval-documents: build-identity
 # flag is passed here; see scripts/run_browser_demo.py for that checkpoint).
 eval-browser: build-identity
 	.venv/bin/python scripts/run_browser_demo.py mock browser_mock fastembed
+
+# v3.2 — runs two adversarial local fixtures (mixed prompt-injection/
+# identity-verification/off-topic attacks alongside legitimate fields, and
+# a CAPTCHA-widget page) through the Security Policy Engine + Agent
+# Auditor, and writes real evidence of detect/explain/block/continue —
+# see docs/evaluation_browser.md's v3.2 addendum.
+eval-security-demo: build-identity
+	.venv/bin/python scripts/run_security_demo.py mock security_demo fastembed
 
 test:
 	.venv/bin/python -m pytest tests/ -q

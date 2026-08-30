@@ -3,7 +3,7 @@
   "system_name": "baseline_rag",
   "steps": [
     {
-      "timestamp": "2026-08-30T08:33:37.727784Z",
+      "timestamp": "2026-08-30T09:54:24.454638Z",
       "stage": "retrieve",
       "input_summary": "Location — Bengaluru, India (domestic travel only); primarily external-facing role",
       "action": "dump all 96 facts as unstructured text, no ranking, no ids",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T08:33:37.728754Z",
+      "timestamp": "2026-08-30T09:54:24.455579Z",
       "stage": "generate",
       "input_summary": "Location — Bengaluru, India (domestic travel only); primarily external-facing role",
       "action": "call provider with the unstructured context dump",
@@ -23,7 +23,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T08:33:37.728831Z",
+      "timestamp": "2026-08-30T09:54:24.455659Z",
       "stage": "verify",
       "input_summary": "Confirmed relocation to Bengaluru on appointment, accepting the IITACB CEO role as primarily external-facing with sustained domestic travel to the 23 IIT campuses, Delhi, and industry forums nationally. States that being physically present in Bengaluru is regarded as non-negotiable for this job. States that relocating to Bengaluru and learning Kannada are conditions he is committing to for the IITACB CEO role specifically, not concessions being requested. States a vision specifically for the IITACB CEO role: IITACB as India's default gateway to IIT research capability, brought through the academic-and-industrial credibility described above. Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group.",
       "action": "check for citations/grounding (none possible: no ids in context)",

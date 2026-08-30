@@ -219,20 +219,189 @@ prompt-parsing bug that turned out to predate v3 and affect v2/v2.5 too)
 docs/evaluation_browser.md, docs/improvement_changelog.md (Iteration
 16-17), docs/hot_take.md's v3 addendum.
 
-## v3.1+ — Browser execution, deferred scope  ·  not started
+## v3.1 — Anti-bot, MFA/OTP, and prompt-injection guardrails  ·  **built**
+
+Built in direct response to a question asked before the first real-LLM
+run: does this agent detect an "are you a robot?" check, a CAPTCHA, an
+MFA/OTP step, or an injected instruction hidden in a field label, rather
+than confidently answering through it? Four independent guardrails, each
+tested (`tests/test_browser_engine.py`), each ending the same way —
+HALT_FOR_APPROVAL, never a silent skip and never an automated bypass:
+
+1. **CAPTCHA/anti-bot widgets** (`controller.py`'s `observe()`): detects
+   common widget markup (`iframe[src*=captcha]`, `[class*=captcha]`,
+   `[id*=captcha]`) and anti-bot phrasing in the page TITLE
+   (`services/browser_engine/safety.py`). Either signal halts the entire
+   task before any field is touched — ground rule 3 ("never bypass
+   MFA/CAPTCHA/anti-bot protections") implemented as detect-and-stop, the
+   only compliant behavior, not detect-and-solve.
+2. **MFA/OTP challenges**: the same page-level halt, plus a per-field halt
+   if an individual field asks for a one-time code — a human must enter
+   this, never the agent.
+3. **Prompt injection in a field's own label** ("ignore all previous
+   instructions and select..."): a field label is untrusted content from
+   a page this agent doesn't control and must never be treated as an
+   instruction. Checked in `field_mapper.map_field()` before any label
+   text is assembled into an LLM prompt — the flagged field halts, others
+   are unaffected.
+4. **Zero-evidence refusal for genuinely unanswerable fields**
+   (`field_mapper._map_textarea_field()`): if `retrieve_hybrid()` finds
+   nothing at all — lexically or semantically — the field halts instead
+   of letting the mock provider's hallucination fallback (or a real LLM's
+   own confident-sounding guess) produce an ungrounded answer. Gates on
+   evidence_coverage, not citation-inherited confidence — the latter is
+   the exact signal docs/hot_take.md already showed is unreliable for
+   this. This is the general mechanism that also catches an off-topic
+   decoy question ("what's your favorite biryani recipe?") without
+   hand-coding that example.
+
+Also added: hidden/invisible fields (a classic spam-bot "honeypot" trap)
+are now excluded from `observe()`'s field list entirely — never filled,
+the same way a sighted human filling the form by hand never would.
+
+None of this changes v3.0's documented reference-run numbers — re-verified
+byte-identical (`n_fields: 6, n_filled: 6, n_verified: 6`, etc.) after
+every change, since the local demo form has no adversarial content for
+these guardrails to fire on. Two new local, offline test fixtures
+(`data/applications/local_demo/adversarial_captcha.html`,
+`adversarial_honeypot.html`) exercise the DOM-detection paths that fake
+`DetectedField` objects can't reach; neither is used by `make eval-browser`
+or any documented result. See docs/evaluation_browser.md's v3.1 addendum.
+
+## v3.2 — Security Policy Engine, Agent Auditor, and per-application records  ·  **built**
+
+Built in direct response to a much larger "Security, Safety, Identity
+Integrity, and Autonomy Guardrail Specification" the project owner
+provided (preserved verbatim at docs/security_spec.md) — a full
+production-grade control-plane architecture spanning identity provenance,
+temporal validity, cross-application consistency, self-improvement CI,
+phishing/domain validation, credential isolation, rollback, and more.
+That spec is enterprise-scale; v3.2 implements the parts that are
+tractable and testable against what this codebase actually has today, and
+names everything else as deliberately deferred, with why, rather than
+building untested scaffolding for capabilities (a persistent learning
+loop, a multi-application store, real authenticated navigation) that
+don't exist anywhere else yet.
+
+**Built:**
+
+1. **`SecurityPolicyEngine`** (`services/security/policy_engine.py`) — the
+   spec's core architectural rule ("no direct execution path may bypass
+   this control plane"), implemented literally. Every proposed field
+   action passes through `evaluate()` regardless of what
+   `field_mapper.py` decided; `evaluate_page()` runs right after
+   `observe()` and blocks the whole task on a page-level anti-bot/CAPTCHA/
+   MFA signal; `evaluate_submit()` extends ground rule 4 so that an
+   unresolved BLOCK/ESCALATE finding anywhere in the run's audit trail
+   vetoes submission even if the caller passed `approve_submit=True`.
+   Actions are classified into the spec's five risk levels
+   (LEVEL_0_INFORMATIONAL .. LEVEL_4_CRITICAL) with configurable
+   per-level confidence floors.
+2. **`AgentAuditor`** (`services/security/auditor.py`) — a second,
+   independent opinion, deliberately checking what the policy engine does
+   not: that every cited evidence id actually exists in the Digital Self
+   (catching a fabricated citation), and that generated text doesn't leak
+   the field's own label verbatim (the exact shape of v3.0's MockProvider
+   bug, generalized into a permanent, always-on check).
+3. **Append-only audit log** (`services/security/audit_log.py`) — one
+   `ActionRecord` per decision, written to
+   `data/evaluation/results/<tag>/security_audit.jsonl`. The schema has no
+   field that could hold a secret, by construction, not by redaction.
+4. **A combined attack demonstration**
+   (`data/applications/local_demo/adversarial_mixed.html`,
+   `scripts/run_security_demo.py`, `make eval-security-demo`) — per the
+   spec's own requirement that "the final demo must intentionally include
+   several attacks/failures and visibly demonstrate detect / explain /
+   block-or-escalate / recover / continue the legitimate workflow": one
+   form with two legitimate fields, a prompt-injection attempt, an
+   identity-verification question, and an off-topic decoy, run in a
+   single pass. Real output: both legitimate fields filled and verified;
+   all three attacks halted with an explained rationale; the run
+   completes and correctly refuses to submit. See
+   docs/evaluation_browser.md's v3.2 addendum for the actual recorded output.
+5. **`ApplicationRecord`** (`packages/schemas/application_record.py`,
+   `services/application_record/`) — not from the security spec, a direct
+   ask: for every application this agent fills, save the questions asked
+   and answers given (with evidence and confidence) as both JSON and a
+   human-readable Markdown crib sheet, so a person can check what they
+   actually told a specific employer once they reach interview stage,
+   without relying on memory. Written automatically at the end of every
+   `run_application()` call to `data/applications/history/`. This is also
+   a minimal, real instance of the spec's `APPLICATION_MEMORY` concept
+   (scoped per application, not merged into one global store), giving a
+   future cross-application-consistency check real data to compare
+   against.
+
+None of this changed v3.0/v3.1's documented reference-run numbers —
+re-verified byte-identical after every change. One real bug was found and
+fixed while building this: the page-level anti-bot check originally
+scanned the *entire* visible page text, which includes every field's own
+label — so a single field asking "Are you a robot?" incorrectly halted
+the whole task instead of just that field. Fixed by scanning only the
+page *title* for page-level signals, letting the per-field checks (which
+were already correctly scoped) handle individual suspicious fields while
+the rest of the form continues — caught by the same "build the adversarial
+test fixture, read what actually happens" discipline as every other
+finding in this project, not assumed correct from the design. See
+docs/improvement_changelog.md's v3.2 entries.
+
+**Deliberately not built, and why** (see docs/security_spec.md for the
+full text of every section named below):
+
+- **Identity Integrity Engine, temporal identity validation, belief
+  anti-confirmation** — these require the Digital Self to already support
+  versioned, time-stamped, supersession-aware belief states. The current
+  `Fact`/`Belief` schema (`packages/schemas/identity.py`) has confidence
+  and provenance but not `valid_from`/`valid_until`/`supersedes`; adding
+  those fields without a real multi-version identity history to test them
+  against would be untested scaffolding.
+- **Cross-application consistency, application deduplication, eligibility
+  guardrail** — all three need a store of *multiple* real applications to
+  compare against. `ApplicationRecord` (above) is the first step — it
+  creates that store — but nothing reads it back yet; a real
+  consistency/dedup check is the natural v3.3+ item once there's more than
+  one recorded application to test against.
+- **Self-improvement safety, identity regression CI, anti-promotion,
+  reward-hacking defense** — all assume a persistent learning/self-
+  improvement loop. This codebase doesn't have one; docs/roadmap.md's v4
+  section already names "Learning engine: EXPERIENCE -> FAILURE ANALYSIS
+  -> HYPOTHESIS -> COUNTERFACTUAL TEST -> PROMOTE/REJECT" as a v4 item.
+  Building CI gates for a loop that doesn't exist would have nothing real
+  to test against.
+- **Domain/phishing validation, credential isolation, OTP-channel
+  abstraction, file safety** — all assume real authenticated, multi-domain
+  browsing (the current demo is a single local `file://` form) or real
+  credential handling (this system has none — there is nowhere for a
+  password or token to even enter the codebase yet). MFA/OTP *detection*
+  is built (v3.1/v3.2); the *channel abstraction* the spec describes has
+  nothing to abstract yet.
+- **Rollback, security dashboard, the full 25-item security test suite** —
+  rollback needs persistent state mutations to roll back (none exist yet
+  beyond `data/digital_self/` versioning, which is already append-only and
+  never overwrites); a dashboard needs a running system with traffic to
+  monitor, not a one-shot eval harness; the 25-item suite maps mostly onto
+  capabilities named above as not yet built — the tests that *are*
+  buildable now (prompt injection, hidden fields, unauthorized submission,
+  fabricated evidence, identity-verification fields) are built and passing
+  (`tests/test_security.py`, `tests/test_browser_engine.py`).
+
+## v3.3+ — Browser execution, deferred scope  ·  not started
 
 - Multi-page navigation (the local demo form is single-page).
 - File upload fields (resume/portfolio attachments).
-- CAPTCHA/OTP/MFA handling — the brief's authentication section and ground
-  rule 3 ("never bypass MFA/CAPTCHA/anti-bot protections") both require
-  this to be a human-in-the-loop pause, never an automated bypass, when it
-  is eventually built; v3.0's synthetic form has none of these, so nothing
-  has been implemented to test yet — an honest gap, not a hidden one.
 - A real third-party target site, once one is explicitly named and its
   terms of use reviewed — deliberately deferred past this hackathon
   submission for the same reason v1/v2 use the author's own documents.
+- v3.1/v3.2's guardrails are pattern/heuristic-based (regex and substring
+  matching), not a learned classifier — same honestly-disclosed limitation
+  as every other heuristic in this project (docs/hot_take.md). A more
+  sophisticated real-world CAPTCHA/anti-bot system (behavioral analysis,
+  invisible reCAPTCHA v3 scoring) may not surface any of the text/DOM
+  markers checked here; the guardrail's guarantee is "known, common
+  patterns are caught and halted," not "every anti-bot mechanism is caught."
+- Everything named "deliberately not built, and why" in v3.2 above.
 - `identityos_v2_semantic`'s dangerous overclaim rate, re-measured at 0.75
-  after v3's MockProvider fix (up from 0.50) — not a v3 regression, but a
+  after v3.0's MockProvider fix (up from 0.50) — not a v3 regression, but a
   previously-masked weakness in a system that was never the shipped path;
   still not a priority to chase directly (see docs/roadmap.md's v2.10+
   section above).

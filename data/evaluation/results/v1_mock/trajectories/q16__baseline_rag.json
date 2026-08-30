@@ -3,7 +3,7 @@
   "system_name": "baseline_rag",
   "steps": [
     {
-      "timestamp": "2026-08-30T08:33:20.894536Z",
+      "timestamp": "2026-08-30T09:54:08.436110Z",
       "stage": "retrieve",
       "input_summary": "Are you primarily a research scientist or a production engineering leader?",
       "action": "dump the entire fact store as unstructured text (no ranking, no ids)",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T08:33:20.895460Z",
+      "timestamp": "2026-08-30T09:54:08.436978Z",
       "stage": "generate",
       "input_summary": "Are you primarily a research scientist or a production engineering leader?",
       "action": "call provider with the full unstructured context dump",

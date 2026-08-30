@@ -4,7 +4,7 @@
   "embedding_provider": "hash",
   "digital_self_version": 1,
   "n_requirements": 14,
-  "generated_at": "2026-08-30T08:33:21.376528+00:00",
+  "generated_at": "2026-08-30T09:54:08.923465+00:00",
   "scores": {
     "baseline_plain": {
       "n_requirements": 14,

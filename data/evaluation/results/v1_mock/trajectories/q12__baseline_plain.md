@@ -1,6 +1,6 @@
 ### Trajectory — baseline_plain — q12
 
-**08:33:20 · generate**
+**09:54:08 · generate**
 - input: Describe your leadership experience.
 - action: call provider with zero context, zero verification
 - observation: I believe my track record speaks directly to this question. When it comes to experience and leadership, I have always taken a proactive, results-driven approach and delivered measurable impact. I look forward to bringing this strength to your organization.

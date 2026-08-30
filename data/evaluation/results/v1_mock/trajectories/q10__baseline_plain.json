@@ -3,7 +3,7 @@
   "system_name": "baseline_plain",
   "steps": [
     {
-      "timestamp": "2026-08-30T08:33:20.879603Z",
+      "timestamp": "2026-08-30T09:54:08.421547Z",
       "stage": "generate",
       "input_summary": "Tell us about a decision that changed your career.",
       "action": "call provider with zero context, zero verification",

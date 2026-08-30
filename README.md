@@ -1,4 +1,4 @@
-# IdentityOS — v3.0
+# IdentityOS — v3.2
 
 **An autonomous representative that answers application questions,
 assesses job-requirement fit, generates application documents, and fills
@@ -11,14 +11,22 @@ preserved in `PROMPT.md`. This repo builds v1 (Q&A), v2 (requirement-fit
 assessment against a real, adjudicated application, iterated through
 v2.4), v2.5-v2.9 (document generation, two corpus authoring corrections,
 and two diagnosed-but-rejected retrieval experiments that together
-identify a real boundary of lexical retrieval), and v3.0 (a Playwright
+identify a real boundary of lexical retrieval), v3.0 (a Playwright
 browser agent that fills and browser-verifies a form, gated by a literal,
-unconditional human-approval checkpoint before any submit) of that brief —
-see [docs/roadmap.md](docs/roadmap.md) for what's deferred to v3.1-v5 and
+unconditional human-approval checkpoint before any submit), and v3.1-v3.2
+(anti-bot/MFA/prompt-injection guardrails centralized into an independent
+Security Policy Engine + Agent Auditor control plane, built against a
+larger security spec the project owner provided — preserved verbatim at
+[docs/security_spec.md](docs/security_spec.md) — plus per-application
+answer records for interview prep) of that brief — see
+[docs/roadmap.md](docs/roadmap.md) for what's deferred to v3.3-v5 and
 why. Prior versions frozen at `../identityos-v1/`, `../identityos-v2/`,
 `../identityos-v2.1/`, `../identityos-v2.2/`, `../identityos-v2.3/`,
 `../identityos-v2.4/`, `../identityos-v2.5/`, `../identityos-v2.6/`,
-`../identityos-v2.7/`, `../identityos-v2.8/`, `../identityos-v2.9/`.
+`../identityos-v2.7/`, `../identityos-v2.8/`, `../identityos-v2.9/`,
+`../identityos-v3.0/`. (v3.1's guardrails were superseded by v3.2's
+centralized control plane in the same work session before a separate
+snapshot was taken — v3.2's snapshot below is the first one after v3.0.)
 
 ## Who has this problem, and why it's worth solving
 
@@ -60,6 +68,7 @@ make eval-v2-mock      # v2: runs baselines + lexical identityos_v2 on 14 real r
 make eval-v2-semantic  # v2.3/v2.4: adds the semantic + hybrid retrieval comparison arms
 make eval-documents    # v2.5: generates an actual cover letter with each system
 make eval-browser      # v3.0: fills + browser-verifies a local synthetic application form, halts before submit
+make eval-security-demo # v3.2: combined attack demo (injection/anti-bot/off-topic) alongside legitimate fields
 ```
 
 Expect each in under 10 seconds, $0 cost — the default `PROVIDER=mock` (LLM)
@@ -85,8 +94,8 @@ set `ANTHROPIC_API_KEY` or `OPENAI_API_KEY`, then `make eval-real` / `make eval-
 (v3's browser agent accepts the same `PROVIDER` argument — see
 `scripts/run_browser_demo.py`).
 
-Run the smoke test suite: `make test` (33 tests, ~3s including one real
-Chromium launch for v3's end-to-end regression test, no keys/downloads
+Run the smoke test suite: `make test` (56 tests, ~5s including several real
+Chromium launches for v3's end-to-end regression tests, no keys/downloads
 beyond the one-time Chromium install needed).
 
 ## Results (reference runs, `PROVIDER=mock`)
@@ -234,6 +243,47 @@ already-worst dangerous-overclaim rate getting honestly worse (0.50 ->
 0.75), a previously-masked weakness in a system that was never shipped as
 the default. Full story: [docs/evaluation_browser.md](docs/evaluation_browser.md).
 
+**v3.1 — anti-bot, MFA/OTP, and prompt-injection guardrails**, built
+before the first real-LLM run: the agent now detects a CAPTCHA/anti-bot
+widget or MFA/OTP phrasing on the page and halts the entire task before
+touching any field; detects a prompt-injection pattern in a field's own
+label and halts that field without ever passing the label into an LLM
+prompt; refuses to fabricate an answer for a field with zero real
+evidence behind it (the general mechanism that also catches an off-topic
+decoy question, without hand-coding it); and never fills a hidden
+honeypot field. All four are heuristic/pattern-based, not a learned
+classifier — disclosed, not hidden — and verified not to change v3.0's
+reference numbers. Full story: [docs/evaluation_browser.md](docs/evaluation_browser.md)'s v3.1 addendum.
+
+**v3.2 — Security Policy Engine, Agent Auditor, and per-application
+records**, built against a much larger security spec the project owner
+provided in full (preserved verbatim at
+[docs/security_spec.md](docs/security_spec.md)): v3.1's checks were
+scattered across two modules; v3.2 centralizes them into an independent
+`SecurityPolicyEngine` that every proposed action passes through
+regardless of what the field-mapping logic decided, plus a second,
+independent `AgentAuditor` that checks two things the policy engine does
+not (fabricated evidence citations, label-leak in generated text), and an
+append-only audit log. A single demo form
+(`adversarial_mixed.html`) combines two legitimate fields with a
+prompt-injection attempt, an identity-verification question, and an
+off-topic decoy in one pass — real, recorded output shows both legitimate
+fields filled and verified while all three attacks are detected, explained,
+and halted, per docs/security_spec.md's own demand for exactly this kind
+of demonstration (`make eval-security-demo`). Building that demo surfaced
+a real bug — a page-level check that scanned the whole page body would
+have halted an entire form over one field's wording — fixed to scan only
+the page title. Also added: `ApplicationRecord`, saved automatically for
+every filled application, so the questions asked and answers given are
+there to check before an interview. Most of the larger spec (self-improvement
+CI, cross-application dedup, phishing/domain validation, credential
+isolation, rollback) is deliberately not built — each needs a capability
+(a persistent learning loop, a multi-application store, real authenticated
+browsing) this codebase doesn't have anywhere else yet; named explicitly,
+not silently dropped. Full story:
+[docs/evaluation_browser.md](docs/evaluation_browser.md)'s v3.2 addendum,
+[docs/roadmap.md](docs/roadmap.md)'s v3.2 section.
+
 ## Improvement changelog
 
 [docs/improvement_changelog.md](docs/improvement_changelog.md) — baseline
@@ -241,10 +291,12 @@ through final for every version, including experiments we removed or that
 stayed only partially fixed: a scoring rule fooled by the mock provider, a
 process mistake where a background research agent overstepped its brief
 mid-v1-build, (v2) a bucketing rule that overclaimed a real admitted gap
-until a negation check was added, and (v3) two real bugs — a select-field
+until a negation check was added, (v3.0) two real bugs — a select-field
 verification mismatch and a shared MockProvider parsing bug dating to
-v2.0 — both found by reading the browser agent's own trajectory output
-(documented, not hidden).
+v2.0 — both found by reading the browser agent's own trajectory output,
+and (v3.2) a page-level security check that would have halted an entire
+form over one ordinary field's wording, found by building the combined-attack
+demo the security spec itself asked for (documented, not hidden).
 
 ## Main failure mode / hot take
 
@@ -302,11 +354,14 @@ Full disclosure, and what "agent-use evidence" means in this repo:
 
 ```
 docs/                  problem statement, architecture, roadmap, evaluation (v1, v2, documents, browser),
-                        changelog, research hypotheses, hot take, demo script, agent disclosure
+                        changelog, research hypotheses, hot take, demo script, agent disclosure,
+                        security_spec.md (the full guardrail spec, preserved verbatim)
 packages/schemas/      typed Fact / Belief / Evidence / Question / Answer / Trajectory /
                         ApplicationRequirement / Assessment / FitBucket /
                         DocumentSection / GeneratedDocument /
-                        BrowserObservation / BrowserAction / FieldResult / BrowserTaskResult
+                        BrowserObservation / BrowserAction / FieldResult / BrowserTaskResult /
+                        RiskLevel / PolicyDecision / PolicyResult / AuditVerdict / ActionRecord /
+                        QAEntry / ApplicationRecord
 services/identity_engine/    ingestion + belief seeding + versioned storage
 services/providers/          pluggable LLM backend: mock (default) / openai / anthropic
 services/embeddings/         pluggable embedding backend: hash (default) / fastembed (v2.3)
@@ -316,12 +371,16 @@ services/application_engine/ v2: requirement-fit assessors (lexical, semantic,
                               hybrid) + polarity-aware bucketing
 services/document_engine/    v2.5: section-planned cover-letter generation +
                               narrative-state (avoid repeating evidence)
-services/browser_engine/     v3.0: Playwright controller + field mapping +
-                              human-approval-gated form-fill agent
-services/evaluation/         scoring + all four eval harnesses
+services/browser_engine/     v3.0-v3.1: Playwright controller + field mapping +
+                              human-approval-gated form-fill agent + guardrails
+services/security/           v3.2: SecurityPolicyEngine + AgentAuditor + audit log —
+                              the centralized control plane every browser action passes through
+services/application_record/ v3.2: per-application question/answer records for interview prep
+services/evaluation/         scoring + all four eval harnesses + the security demo
 data/identity_sources/       the real source documents (owner's own, consented)
 data/applications/           the real 14-requirement application + its real human ground truth,
-                              plus a local synthetic form for the v3 browser demo
+                              local synthetic forms for the v3 browser demo and adversarial tests,
+                              history/ — saved per-application answer records (v3.2)
 data/evaluation/              question bank + every eval harness's results/trajectories/documents
 data/.embedding_cache/        fastembed's downloaded model (gitignored, regenerable)
 scripts/               the commands judges actually run
@@ -331,14 +390,22 @@ PROMPT.md              the full original design brief, unabridged
 
 ## Ground-rules compliance (hackathon requirement)
 
-- Consequential actions: v3.0's browser agent can fill a form but has no
+- Consequential actions: the browser agent can fill a form but has no
   code path to submit one on its own — `services/browser_engine/agent.py`
-  submits only if the caller explicitly passes `approve_submit=True`
-  (`scripts/run_browser_demo.py`'s `--approve-submit` flag, off by
-  default and never set by the eval harness). Demonstrated against a
-  local, offline, synthetic form the project controls, never a real
-  third-party site. v1/v2/v2.5 have no consequential actions at all —
-  nothing to sandbox in those versions.
+  submits only if the caller explicitly passes `approve_submit=True` AND
+  `SecurityPolicyEngine.evaluate_submit()` finds no unresolved BLOCK/
+  ESCALATE finding anywhere in the run's audit trail (v3.2 — a caller
+  can't override a live security finding just by passing the flag).
+  `scripts/run_browser_demo.py`'s `--approve-submit` flag, off by default,
+  is the only human-invoked path to it, and the eval harness never sets
+  it. Demonstrated against local, offline, synthetic forms the project
+  controls, never a real third-party site. v1/v2/v2.5 have no
+  consequential actions at all — nothing to sandbox in those versions.
+- Anti-bot/MFA/prompt-injection: `services/security/policy_engine.py`
+  independently re-checks every action regardless of what field-mapping
+  logic proposed — see docs/security_spec.md (provided by the project
+  owner, preserved verbatim) and docs/roadmap.md's v3.2 section for what's
+  built against it and what's explicitly deferred, and why.
 - Data: the author's own resume/dossier and their own real, already-written
   CEO-application self-assessment, used with the data owner's consent
   (the author is both the user and the subject). The v3 demo form is a

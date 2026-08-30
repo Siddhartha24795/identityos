@@ -46,7 +46,8 @@ def run(
     traj_dir.mkdir(parents=True, exist_ok=True)
 
     result, traj = run_application(
-        ds, embedding_index, provider, form_url, approve_submit=approve_submit, headless=headless
+        ds, embedding_index, provider, form_url, approve_submit=approve_submit, headless=headless,
+        audit_log_path=run_dir / "security_audit.jsonl",
     )
 
     stem = "browser_demo__identityos_browser_v3"

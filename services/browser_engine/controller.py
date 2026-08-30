@@ -6,10 +6,20 @@ type), not hard-coded to any one page's markup — the same
 any page with standard form semantics, demonstrated here against a local
 synthetic form (data/applications/local_demo/) since no real target site
 has been named (docs/roadmap.md v3).
+
+v3.1: `observe()` also never surfaces a hidden/invisible field (a sighted
+human wouldn't fill one either, and it may be a honeypot trap) and flags
+any CAPTCHA/anti-bot widget markup or page text via `BrowserObservation.errors`
+— `agent.py` halts the entire task on either signal rather than attempting
+to solve it (ground rule 3: never bypass MFA/CAPTCHA/anti-bot protections).
+See services/browser_engine/safety.py for the text-pattern half of this
+and the two other guardrails (prompt-injection detection, zero-evidence
+refusal) that live closer to field mapping and generation.
 """
 from __future__ import annotations
 
 from packages.schemas.browser import BrowserObservation, DetectedField, FieldType
+from services.browser_engine.safety import looks_like_anti_bot_check, looks_like_mfa_challenge
 
 _FIELD_TYPE_MAP = {
     "textarea": FieldType.TEXTAREA,
@@ -31,6 +41,8 @@ class BrowserController:
     def observe(self) -> BrowserObservation:
         page = self._page
         fields: list[DetectedField] = []
+        errors: list[str] = []
+        n_hidden_skipped = 0
 
         for el in page.locator("input, textarea, select").all():
             tag = el.evaluate("e => e.tagName.toLowerCase()")
@@ -39,6 +51,17 @@ class BrowserController:
             selector = f"#{field_id}" if field_id else None
             if not selector:
                 continue  # only reason about addressable, labeled fields
+
+            # Never fill what a sighted human wouldn't see. A hidden field is
+            # either dead markup or a honeypot trap for scripted fillers —
+            # either way, the correct behavior is to leave it alone, not to
+            # try to detect *which* case it is.
+            if input_type != "hidden" and not el.is_visible():
+                n_hidden_skipped += 1
+                continue
+            if input_type == "hidden":
+                n_hidden_skipped += 1
+                continue
 
             label = self._label_for(field_id) or el.get_attribute("placeholder") or field_id
 
@@ -89,12 +112,42 @@ class BrowserController:
             sid = submit_loc.first.get_attribute("id")
             submit_selector = f"#{sid}" if sid else None
 
+        if n_hidden_skipped:
+            errors.append(
+                f"skipped {n_hidden_skipped} hidden field(s) — not visible, "
+                "never filled (potential honeypot trap)"
+            )
+
+        # Ground rule 3: never bypass MFA/CAPTCHA/anti-bot protections.
+        # Detected, not solved — agent.py halts the entire task on any hit
+        # here before touching a single field.
+        #
+        # Deliberately checks page TITLE, not the full visible_text: a real
+        # full-page challenge (a Cloudflare interstitial, a dedicated OTP
+        # page) is reliably named in its title. Scanning the whole page
+        # body would also match ordinary field LABELS ("Are you a robot?"
+        # as one field among several legitimate ones) and incorrectly halt
+        # the entire task instead of just that field — that per-field case
+        # is handled separately, correctly scoped, in
+        # services/security/policy_engine.py and field_mapper.py.
+        captcha_widget_loc = page.locator(
+            "iframe[src*='captcha' i], [class*='captcha' i], [id*='captcha' i]"
+        )
+        visible_text = page.locator("body").inner_text()[:2000]
+        if captcha_widget_loc.count() > 0:
+            errors.append("anti-bot/CAPTCHA widget detected in page markup — halting, not bypassing")
+        if looks_like_anti_bot_check(page.title()):
+            errors.append("anti-bot/identity-verification phrasing detected in page title — halting, not bypassing")
+        if looks_like_mfa_challenge(page.title()):
+            errors.append("MFA/OTP challenge phrasing detected in page title — halting, not bypassing")
+
         return BrowserObservation(
             url=page.url,
             title=page.title(),
-            visible_text=page.locator("body").inner_text()[:2000],
+            visible_text=visible_text,
             fields=fields,
             submit_selector=submit_selector,
+            errors=errors,
         )
 
     def _label_for(self, field_id: str | None) -> str | None:

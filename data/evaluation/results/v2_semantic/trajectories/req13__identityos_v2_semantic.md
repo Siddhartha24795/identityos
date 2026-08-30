@@ -1,6 +1,6 @@
 ### Trajectory — identityos_v2_semantic — req13
 
-**08:33:37 · retrieve**
+**09:54:24 · retrieve**
 - input: Languages — English, Hindi, Kannada preferred
 - action: embedding-similarity retrieval (fastembed): top 8 facts, 0 beliefs
 - observation: [dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet fluent in Kannada.
@@ -12,18 +12,18 @@
 [resume:050] (verified fact) 2nd Prize, Japan Hackathon 2021, representing India.
 [resume:045] (verified fact) Python, NumPy, Pandas, Matplotlib, SQL, Android, Java, C++, C, Git, Perforce.
 
-**08:33:37 · generate**
+**09:54:24 · generate**
 - input: Languages — English, Hindi, Kannada preferred
 - action: call provider with cited, confidence-annotated context
 - observation: [dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet fluent in Kannada.
 
-**08:33:37 · verify**
+**09:54:24 · verify**
 - input: [dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet fluent in Kannada.
 - action: per-sentence grounding check (same verifier as lexical identityos_v2)
 - observation: coverage=1.00 confidence=0.99
 - confidence: 0.99
 
-**08:33:37 · bucket**
+**09:54:24 · bucket**
 - input: [dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet fluent in Kannada.
 - action: derive fit bucket from coverage+confidence+polarity (same bucketing.py as lexical)
 - observation: partial

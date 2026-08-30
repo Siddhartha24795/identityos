@@ -165,11 +165,41 @@ in code, not a convention a caller is trusted to follow.
 Full pipeline, results, and the two bugs found by reading v3's own
 trajectory output: docs/evaluation_browser.md.
 
+## v3.1-v3.2 addendum — Security Policy Engine and Agent Auditor
+
+v3.1 added four heuristic guardrails (anti-bot/CAPTCHA/MFA detection,
+prompt-injection detection, a zero-evidence refusal, hidden-field
+skipping), each living in whichever module first needed it
+(`controller.py`, `field_mapper.py`). v3.2, built against a much larger
+security specification the project owner provided in full (preserved
+verbatim at docs/security_spec.md), centralizes them: `services/security/
+policy_engine.py`'s `SecurityPolicyEngine` independently re-evaluates
+every proposed action — regardless of what `field_mapper.py` decided —
+against its own risk classification and confidence floor, and
+`services/security/auditor.py`'s `AgentAuditor` is a second, genuinely
+independent check (fabricated-citation detection, label-leak detection)
+that the policy engine does not perform. Neither trusts field_mapper's
+own v3.1 checks; a bug there can no longer silently skip the security
+layer. Every decision is appended to an audit log, and submission is
+blocked if that run's audit trail has any unresolved finding, even with
+`approve_submit=True`. Most of the larger spec (identity-provenance
+temporal validation, cross-application consistency, self-improvement CI,
+domain/phishing validation, credential isolation, rollback) is
+deliberately not built — each requires a capability this codebase doesn't
+have anywhere else yet (versioned belief history, a multi-application
+store, a persistent learning loop, real authenticated browsing, real
+credential handling) — see docs/roadmap.md's v3.2 section for the
+complete, itemized scoping decision. Full story, including a real bug
+found while building the demo the spec itself required:
+docs/evaluation_browser.md's v3.2 addendum.
+
 ## What is explicitly NOT in v1, v2, or v3
 
-- Multi-page navigation, file uploads, CAPTCHA/OTP/MFA handling
-  (docs/roadmap.md v3.1+) — v3.0's synthetic form has none of these, so
-  nothing has been built or tested against them yet.
+- Multi-page navigation, file uploads (docs/roadmap.md v3.3+) — v3.0's
+  synthetic form has none of these, so nothing has been built or tested
+  against them yet. CAPTCHA/MFA/anti-bot *detection* is built (v3.1-v3.2);
+  a real OTP-entry channel or a solved CAPTCHA is out of scope by design
+  (ground rule 3 permits detect-and-halt only).
 - A real third-party browser target — v3.0 demonstrates against a local,
   offline, synthetic form the project controls, for the same reason v1/v2
   use the author's own documents rather than a scraped corpus.

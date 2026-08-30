@@ -3,7 +3,7 @@
   "system_name": "baseline_rag",
   "steps": [
     {
-      "timestamp": "2026-08-30T08:33:21.280104Z",
+      "timestamp": "2026-08-30T09:54:08.828366Z",
       "stage": "retrieve",
       "input_summary": "Visionary & credible leadership",
       "action": "dump all 96 facts as unstructured text, no ranking, no ids",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T08:33:21.280996Z",
+      "timestamp": "2026-08-30T09:54:08.829246Z",
       "stage": "generate",
       "input_summary": "Visionary & credible leadership",
       "action": "call provider with the unstructured context dump",
@@ -23,7 +23,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T08:33:21.281086Z",
+      "timestamp": "2026-08-30T09:54:08.829337Z",
       "stage": "verify",
       "input_summary": "Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical — it is 24x7 production accountability across live customer sites. States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record. System Design, Leadership, JavaScript, HTML, CSS, Hardware Abstraction Layer, Linux, Shell Scripting.",
       "action": "check for citations/grounding (none possible: no ids in context)",

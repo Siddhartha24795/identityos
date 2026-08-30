@@ -1,6 +1,6 @@
 ### Trajectory — identityos_v2_semantic — req14
 
-**08:33:37 · retrieve**
+**09:54:24 · retrieve**
 - input: Desired — record of building or running a professional body (CII / NASSCOM / FICCI / AIMA)
 - action: embedding-similarity retrieval (fastembed): top 8 facts, 0 beliefs
 - observation: [dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.
@@ -12,18 +12,18 @@
 [resume:039] (verified fact) M.Tech, Artificial Intelligence, IIT (ISM) Dhanbad, 2018-2020. Research on medical image processing using Cycle GAN.
 [resume:059] (verified fact) Real-time computer-vision platform at Jinn Labs ingesting 2000+ concurrent RTSP streams with VLM-based suspicious-event detection.
 
-**08:33:37 · generate**
+**09:54:24 · generate**
 - input: Desired — record of building or running a professional body (CII / NASSCOM / FICCI / AIMA)
 - action: call provider with cited, confidence-annotated context
 - observation: [dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.
 
-**08:33:37 · verify**
+**09:54:24 · verify**
 - input: [dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.
 - action: per-sentence grounding check (same verifier as lexical identityos_v2)
 - observation: coverage=1.00 confidence=0.99
 - confidence: 0.99
 
-**08:33:37 · bucket**
+**09:54:24 · bucket**
 - input: [dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.
 - action: derive fit bucket from coverage+confidence+polarity (same bucketing.py as lexical)
 - observation: met_or_better

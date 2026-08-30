@@ -121,7 +121,7 @@
     "avg_unsupported_claim_rate": 1.0,
     "repeated_evidence_rate": 0.0,
     "provider": "mock",
-    "latency_ms": 0.4870891571044922
+    "latency_ms": 0.5116462707519531
   },
   "baseline_rag": {
     "document_type": "cover_letter",
@@ -281,7 +281,7 @@
     "avg_unsupported_claim_rate": 1.0,
     "repeated_evidence_rate": 0.0,
     "provider": "mock",
-    "latency_ms": 3.7555694580078125
+    "latency_ms": 3.73077392578125
   },
   "identityos_v2_5": {
     "document_type": "cover_letter",
@@ -479,6 +479,6 @@
     "avg_unsupported_claim_rate": 0.0,
     "repeated_evidence_rate": 0.4117647058823529,
     "provider": "mock",
-    "latency_ms": 4.595518112182617
+    "latency_ms": 4.516124725341797
   }
 }

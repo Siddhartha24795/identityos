@@ -1,6 +1,6 @@
 ### Trajectory — identityos_v2_5 — cover_letter
 
-**08:33:51 · retrieve**
+**09:54:39 · retrieve**
 - input: Why are you a strong fit for a technology leadership role, and what drives you professionally?
 - action: hybrid retrieval, preferring unused evidence, excluding application-specific proposal content (7 excluded): 5 facts, 0 beliefs (0 reused from earlier sections)
 - observation: [dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.
@@ -9,18 +9,18 @@
 [resume:033] (verified fact) Full Stack Developer, Wheelseye Technology, Gurgaon India, Sept 2017 - Dec 2017.
 [resume:035] (verified fact) Full Stack Developer, Scrum Technology, Delhi India, June 2016 - Aug 2017.
 
-**08:33:51 · generate**
+**09:54:39 · generate**
 - input: Why are you a strong fit for a technology leadership role, and what drives you professionally?
 - action: call provider with cited, confidence-annotated context
 - observation: [dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical — it is 24x7 production accountability across live customer sites. [dossier_narrative:007] (verified fact) Accustomed to explaining deep technology to non-technical boards and to translating executive intent into engineering commitments, built over six years of guest lectures, mentoring programmes and hackathon judging panels plus representing India at the Japan Hackathon 2021. [resume:033] (verified fact) Full Stack Developer, Wheelseye Technology, Gurgaon India, Sept 2017 - Dec 2017.
 
-**08:33:51 · verify**
+**09:54:39 · verify**
 - input: [dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical — it is 24x7 production accountability across live customer sites. [dossier_narrative:007] (verified fact) Accustomed to explaining deep technology to non-technical boards and to translating executive intent into engineering commitments, built over six years of guest lectures, mentoring programmes and hackathon judging panels plus representing India at the Japan Hackathon 2021. [resume:033] (verified fact) Full Stack Developer, Wheelseye Technology, Gurgaon India, Sept 2017 - Dec 2017.
 - action: per-sentence grounding check (same verifier as v1/v2)
 - observation: coverage=1.00 confidence=0.89
 - confidence: 0.89
 
-**08:33:51 · retrieve**
+**09:54:39 · retrieve**
 - input: Describe your most significant hands-on technical achievements and engineering work.
 - action: hybrid retrieval, preferring unused evidence, excluding application-specific proposal content (3 excluded): 6 facts, 3 beliefs (1 reused from earlier sections)
 - observation: [dossier_narrative:004] (verified fact) Defined technical strategy, architecture and organisation-wide evaluation frameworks at Jinn Labs, building governance structures where none existed; the same machinery run earlier at student scale heading four chapters simultaneously and organising festivals at KNIT Sultanpur.
@@ -33,18 +33,18 @@
 [belief:003] (belief, weak inference, confidence=0.45) Considers himself an experienced builder and leader of professional/membership institutions, not just engineering teams. — counter-evidence exists, do not state this as certain
 [belief:004] (belief, unknown, confidence=0.10) Is comfortable claiming full personal credit for joint work without qualification. — counter-evidence exists, do not state this as certain
 
-**08:33:51 · generate**
+**09:54:39 · generate**
 - input: Describe your most significant hands-on technical achievements and engineering work.
 - action: call provider with cited, confidence-annotated context
 - observation: [dossier_narrative:007] (verified fact) Accustomed to explaining deep technology to non-technical boards and to translating executive intent into engineering commitments, built over six years of guest lectures, mentoring programmes and hackathon judging panels plus representing India at the Japan Hackathon 2021. [dossier_narrative:004] (verified fact) Defined technical strategy, architecture and organisation-wide evaluation frameworks at Jinn Labs, building governance structures where none existed; the same machinery run earlier at student scale heading four chapters simultaneously and organising festivals at KNIT Sultanpur. [resume:001] (verified fact) Chief Technical Officer, Jinn Labs, Remote India, Nov 2025 - Present. [resume:010] (verified fact) Leads a 35+ member cross-functional team (CV/ML research, edge and cloud infra, backend, frontend) as Head of Engineering and Innovation, owning hiring, roadmap, architecture review, and delivery.
 
-**08:33:51 · verify**
+**09:54:39 · verify**
 - input: [dossier_narrative:007] (verified fact) Accustomed to explaining deep technology to non-technical boards and to translating executive intent into engineering commitments, built over six years of guest lectures, mentoring programmes and hackathon judging panels plus representing India at the Japan Hackathon 2021. [dossier_narrative:004] (verified fact) Defined technical strategy, architecture and organisation-wide evaluation frameworks at Jinn Labs, building governance structures where none existed; the same machinery run earlier at student scale heading four chapters simultaneously and organising festivals at KNIT Sultanpur. [resume:001] (verified fact) Chief Technical Officer, Jinn Labs, Remote India, Nov 2025 - Present. [resume:010] (verified fact) Leads a 35+ member cross-functional team (CV/ML research, edge and cloud infra, backend, frontend) as Head of Engineering and Innovation, owning hiring, roadmap, architecture review, and delivery.
 - action: per-sentence grounding check (same verifier as v1/v2)
 - observation: coverage=1.00 confidence=0.99
 - confidence: 0.99
 
-**08:33:51 · retrieve**
+**09:54:39 · retrieve**
 - input: Describe your leadership experience and how you build, mentor, and manage teams.
 - action: hybrid retrieval, preferring unused evidence, excluding application-specific proposal content (3 excluded): 5 facts, 1 beliefs (3 reused from earlier sections)
 - observation: [dossier_narrative:003] (verified fact) Joined Jinn Labs as CTO to build from near-zero, comfortable with ambiguity, unfunded mandates, and building the function before the headcount exists.
@@ -54,18 +54,18 @@
 [dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical — it is 24x7 production accountability across live customer sites.
 [belief:003] (belief, weak inference, confidence=0.45) Considers himself an experienced builder and leader of professional/membership institutions, not just engineering teams. — counter-evidence exists, do not state this as certain
 
-**08:33:51 · generate**
+**09:54:39 · generate**
 - input: Describe your leadership experience and how you build, mentor, and manage teams.
 - action: call provider with cited, confidence-annotated context
 - observation: [dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:003] (verified fact) Joined Jinn Labs as CTO to build from near-zero, comfortable with ambiguity, unfunded mandates, and building the function before the headcount exists. [resume:024] (verified fact) Software Engineer, Amdocs, Pune India, Aug 2020 - Feb 2021, on Billing and RTB teams. [resume:046] (verified fact) System Design, Leadership, JavaScript, HTML, CSS, Hardware Abstraction Layer, Linux, Shell Scripting.
 
-**08:33:51 · verify**
+**09:54:39 · verify**
 - input: [dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:003] (verified fact) Joined Jinn Labs as CTO to build from near-zero, comfortable with ambiguity, unfunded mandates, and building the function before the headcount exists. [resume:024] (verified fact) Software Engineer, Amdocs, Pune India, Aug 2020 - Feb 2021, on Billing and RTB teams. [resume:046] (verified fact) System Design, Leadership, JavaScript, HTML, CSS, Hardware Abstraction Layer, Linux, Shell Scripting.
 - action: per-sentence grounding check (same verifier as v1/v2)
 - observation: coverage=1.00 confidence=0.99
 - confidence: 0.99
 
-**08:33:51 · retrieve**
+**09:54:39 · retrieve**
 - input: What are your career goals, and why should an employer choose you over another candidate?
 - action: hybrid retrieval, preferring unused evidence, excluding application-specific proposal content (2 excluded): 6 facts, 2 beliefs (3 reused from earlier sections)
 - observation: [dossier_excerpts:013] (verified fact) Siddhartha's dossier states he replaced subjective judgement with eval-driven release discipline at Jinn Labs, tracking every claim as a metric release over release, and that he would apply the same discipline to any institution he leads.
@@ -77,12 +77,12 @@
 [belief:002] (belief, strong inference, confidence=0.82) Values shipping working systems into production over research for its own sake.
 [belief:001] (belief, strong inference, confidence=0.86) Prefers technically unsolved, zero-to-one problems over routine engineering maintenance.
 
-**08:33:51 · generate**
+**09:54:39 · generate**
 - input: What are your career goals, and why should an employer choose you over another candidate?
 - action: call provider with cited, confidence-annotated context
 - observation: [dossier_excerpts:013] (verified fact) Siddhartha's dossier states he replaced subjective judgement with eval-driven release discipline at Jinn Labs, tracking every claim as a metric release over release, and that he would apply the same discipline to any institution he leads. [resume:005] (verified fact) Built VLM-based suspicious-event detection over live video, flagging theft, loitering, and anomalous behavior in real time with temporal context across frames. [resume:007] (verified fact) Defined evaluation frameworks pairing offline metrics with live ground-truth validation, POS-occupancy eval at approximately 87% accuracy, tracked release over release. [resume:038] (verified fact) Built proxy-less internet access over LAN/WAN.
 
-**08:33:51 · verify**
+**09:54:39 · verify**
 - input: [dossier_excerpts:013] (verified fact) Siddhartha's dossier states he replaced subjective judgement with eval-driven release discipline at Jinn Labs, tracking every claim as a metric release over release, and that he would apply the same discipline to any institution he leads. [resume:005] (verified fact) Built VLM-based suspicious-event detection over live video, flagging theft, loitering, and anomalous behavior in real time with temporal context across frames. [resume:007] (verified fact) Defined evaluation frameworks pairing offline metrics with live ground-truth validation, POS-occupancy eval at approximately 87% accuracy, tracked release over release. [resume:038] (verified fact) Built proxy-less internet access over LAN/WAN.
 - action: per-sentence grounding check (same verifier as v1/v2)
 - observation: coverage=1.00 confidence=0.99

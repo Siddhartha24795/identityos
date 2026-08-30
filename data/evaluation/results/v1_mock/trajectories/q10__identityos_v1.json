@@ -3,7 +3,7 @@
   "system_name": "identityos_v1",
   "steps": [
     {
-      "timestamp": "2026-08-30T08:33:20.880598Z",
+      "timestamp": "2026-08-30T09:54:08.422456Z",
       "stage": "classify",
       "input_summary": "Tell us about a decision that changed your career.",
       "action": "use declared question.type (v1 simplification, not a learned classifier)",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T08:33:20.881447Z",
+      "timestamp": "2026-08-30T09:54:08.423293Z",
       "stage": "retrieve",
       "input_summary": "Tell us about a decision that changed your career.",
       "action": "lexical retrieval over Digital Self: top 2 facts, 0 beliefs",
@@ -23,7 +23,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T08:33:20.881528Z",
+      "timestamp": "2026-08-30T09:54:08.423343Z",
       "stage": "generate",
       "input_summary": "Tell us about a decision that changed your career.",
       "action": "call provider with structured, citation-tagged, confidence-annotated context",
@@ -33,7 +33,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T08:33:20.881606Z",
+      "timestamp": "2026-08-30T09:54:08.423403Z",
       "stage": "verify",
       "input_summary": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:006] (verified fact) Owned the cost side with rigour: order-of-magnitude inference cost reduction through quantization, pruning, distillation and parameter-efficient adaptation, and ownership of the edge-versus-cloud partitioning strategy, a direct unit-economics decision.",
       "action": "check every sentence for an explicit citation, else a lexical grounding match",
@@ -43,7 +43,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T08:33:20.881621Z",
+      "timestamp": "2026-08-30T09:54:08.423412Z",
       "stage": "complete",
       "input_summary": "q10",
       "action": "return final answer",

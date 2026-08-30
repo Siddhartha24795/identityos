@@ -1,18 +1,18 @@
 # Hackathon compliance self-check
 
 Re-verified after every version against `/home/siddhartha/siddhartha/micro1 - First Hackathon97ce7c5.pdf`.
-Last checked: **after v3.0**.
+Last checked: **after v3.2**.
 
 ## Judging rubric (100 pts)
 
 | Criterion | Pts | Where addressed | Status |
 |---|---|---|---|
 | Problem & User Value | 15 | docs/problem_statement.md — real bottleneck (this project's own author reconstructing themself across applications), clearly defined user | Addressed |
-| Agent Solution & Engineering | 30 | docs/architecture.md — retrieval + citation + verification + confidence-gated refusal (v1); reused pipeline + polarity-aware bucketing + three evaluated retrieval strategies (v2); section-planned document generation with narrative-state tracking (v2.5); two root-caused corpus authoring corrections (v2.6-v2.7); two independent retrieval-precision experiments, each tested against the full benchmark and correctly rejected rather than shipped on partial evidence (v2.8-v2.9); a real Playwright browser agent reusing the same retrieval/verification pipeline for free-text fields, with DOM-level fill verification and a literal, unconditional human-approval gate before submit (v3.0). Purposeful, not "20 agents for the sake of it." | Addressed |
+| Agent Solution & Engineering | 30 | docs/architecture.md — retrieval + citation + verification + confidence-gated refusal (v1); reused pipeline + polarity-aware bucketing + three evaluated retrieval strategies (v2); section-planned document generation with narrative-state tracking (v2.5); two root-caused corpus authoring corrections (v2.6-v2.7); two independent retrieval-precision experiments, each tested against the full benchmark and correctly rejected rather than shipped on partial evidence (v2.8-v2.9); a real Playwright browser agent reusing the same retrieval/verification pipeline for free-text fields, with DOM-level fill verification and a literal, unconditional human-approval gate before submit (v3.0); anti-bot/MFA/prompt-injection guardrails (v3.1) centralized into an independent Security Policy Engine + Agent Auditor control plane that every action passes through, plus per-application answer records for interview prep (v3.2). Purposeful, not "20 agents for the sake of it." | Addressed |
 | End to End Quality | 20 | v2.5-v2.7 produces an actual usable artifact — a generated cover letter, verified free of scope-contamination across two rounds of fixes (`data/evaluation/results/*/documents/*.md`). v3.0 produces an actual filled, browser-verified application form, halted before submit (`data/evaluation/results/browser_mock/`) | Addressed, no UI polish yet (v5) |
 | Measured Improvement | 15 | docs/evaluation.md, docs/evaluation_v2.md, docs/evaluation_documents.md, docs/evaluation_browser.md — fair baselines, same task/cases, honest limitations at every version. Hybrid retrieval's agreement rate rose 0.50 -> 0.57 -> 0.71 across two independent corpus corrections while its safety metric held at 0.00 both times; two further plausible-looking fixes (v2.8, v2.9) were each tested and shown to be net losses before being rejected; v3.0 found and fixed two real bugs (one of them in shared infrastructure dating to v2.0) by reading its own trajectory, then re-verified every earlier eval suite for numeric drift rather than assuming the fix was side-effect-free | Addressed |
-| Reproducibility | 15 | `make setup && make eval-mock && make eval-v2-mock && make eval-documents && make eval-browser` from a clean environment, zero API keys, verified via standalone snapshots after every version (`identityos-v1/` through `-v2.9/`) | Addressed |
-| Hot Take / Insights | 5 | docs/hot_take.md — ten real findings from actually running the eval or reading the output, culminating in two genuine research conclusions: two independent heuristic fixes failing the same way identifies a real boundary of lexical retrieval (v2.9), and a shared test-harness bug surviving three versions because it was validated against only one caller's prompt shape (v3) | Addressed |
+| Reproducibility | 15 | `make setup && make eval-mock && make eval-v2-mock && make eval-documents && make eval-browser && make eval-security-demo` from a clean environment, zero API keys, verified via standalone snapshots after every version (`identityos-v1/` through `-v3.0/`, plus `-v3.2/`) | Addressed |
+| Hot Take / Insights | 5 | docs/hot_take.md — ten real findings from actually running the eval or reading the output, culminating in two genuine research conclusions: two independent heuristic fixes failing the same way identifies a real boundary of lexical retrieval (v2.9), and a shared test-harness bug surviving three versions because it was validated against only one caller's prompt shape (v3); v3.2 adds an eleventh, at the security-guardrail layer itself (docs/improvement_changelog.md's v3.2 entries) | Addressed |
 
 ## Ground rules (10)
 
@@ -29,12 +29,50 @@ Last checked: **after v3.0**.
 
 ## Ground rule 3 — MFA/CAPTCHA/anti-bot ("never bypass")
 
-Not yet applicable, honestly: the v3.0 synthetic form has no
-authentication, CAPTCHA, or anti-bot mechanism, so nothing has been built
-or tested against one. The requirement is recorded before the feature
-exists rather than after — any future OTP/MFA/CAPTCHA handling
-(docs/roadmap.md's v3.1+ section) must be a human-in-the-loop pause, never
-an automated bypass. This is a named open item, not a silent gap.
+**Built and tested (v3.1, centralized in v3.2)**, not just planned:
+`controller.py`'s `observe()` detects CAPTCHA/anti-bot widget markup and
+MFA/OTP/anti-bot phrasing in the page title, and `SecurityPolicyEngine.
+evaluate_page()` (`services/security/policy_engine.py`) halts the entire
+task before touching any field on either signal; the same engine's
+`evaluate()` additionally halts on a per-field MFA/OTP or
+identity-verification question, independently of whatever
+`field_mapper.py` proposed. Neither path attempts to solve or answer the
+challenge — detect-and-halt is the only behavior ground rule 3 permits, so
+there is no "handling" beyond that by design. Also added: a field label
+is treated as untrusted content and checked for prompt-injection patterns
+before it ever reaches an LLM prompt (now via the policy engine, not just
+field_mapper's own first-line check), and hidden/honeypot fields are
+never filled. All guardrails are tested (`tests/test_security.py`,
+`tests/test_browser_engine.py`, including real fixtures exercising actual
+DOM detection and one combined-attack scenario) and verified not to
+change v3.0's documented reference numbers. A real bug was found and
+fixed while building the combined-attack demo: the page-level check
+originally scanned the whole page body (including field labels), which
+would have incorrectly halted an entire form over one field's wording —
+fixed to scan only the page title. Honestly scoped: detection is
+pattern/heuristic-based (known markers and phrasings), not a learned
+classifier — a sophisticated real anti-bot system may not trigger any of
+these signals. Full story: docs/evaluation_browser.md's v3.1 and v3.2
+addenda, docs/roadmap.md's v3.1 and v3.2 sections.
+
+## Ground rule 9 (evidence) and the broader security spec — v3.2
+
+The project owner separately provided a much larger "Security, Safety,
+Identity Integrity, and Autonomy Guardrail Specification" (preserved
+verbatim, docs/security_spec.md) calling for a centralized
+`SECURITY_POLICY_ENGINE` and independent `AGENT_AUDITOR` that no action
+can bypass. Built as `services/security/policy_engine.py` and
+`services/security/auditor.py`: every proposed browser action is
+independently re-evaluated (risk-leveled, confidence-floored,
+target-validated) and every decision is written to an append-only audit
+log, never trusting field_mapper's own first-line checks. Most of the
+spec's other sections (self-improvement CI, cross-application dedup,
+phishing/domain validation, credential isolation, rollback) require
+capabilities — a persistent learning loop, a multi-application store,
+real authenticated browsing — this codebase doesn't have anywhere else
+yet; each is named explicitly as deferred in docs/roadmap.md's v3.2
+section, with the specific missing prerequisite, rather than built as
+untested scaffolding or silently dropped.
 
 ## Final deliverables (4)
 
@@ -50,4 +88,4 @@ an automated bypass. This is a named open item, not a silent gap.
 - req11 (genuinely low retrieval confidence) and req14 (the real gap case, safely under-matched on the shipped default) remain open, both already understood, neither new.
 - `identityos_v2_semantic` (standalone) remains unsafe as its own system (dangerous overclaim rate 0.50 as of v2.6-v2.7, re-measured at 0.75 after v3's shared-infrastructure bug fix — docs/evaluation_v2.md's v3 addendum) — expected and not a priority, since it was never the shipped path; `identityos_v2_hybrid` already achieves the safety guarantee, now confirmed stable across three consecutive real corpus changes, two rejected retrieval experiments, and one shared-infrastructure fix.
 - req08's dangerous overclaim was resolved in v2.1 via general corpus completion. req13's underclaim was resolved in v2.2 via clause-level negation. v2.3's embedding retrieval was evaluated honestly and not adopted after it reintroduced a dangerous overclaim; v2.4 diagnosed why and built a verified fix. v2.5 found a document-scope substitution; v2.6 and v2.7 traced it to the same authoring error in two different source files and fixed both. v2.8 and v2.9 each diagnosed a further mechanism, tested a fix against the full benchmark, and correctly declined to ship it after the measurement showed a net loss — the same rigor applied to negative results as to every positive one.
-- v3.0's scope is intentionally narrow (single-page, no file upload, no CAPTCHA/OTP) — named explicitly in docs/roadmap.md's v3.1+ section rather than implied as complete. Ground rule 3 (never bypass MFA/CAPTCHA/anti-bot) has nothing to violate yet because nothing in v3.0 encounters one; the constraint is recorded for when it does.
+- v3.0/v3.1's scope is intentionally narrow (single-page, no file upload) — named explicitly in docs/roadmap.md's v3.2+ section rather than implied as complete. v3.1's anti-bot/MFA/injection guardrails are pattern-based, not a learned classifier — a sophisticated real anti-bot system may not trigger any of the known markers checked; the guarantee is "known, common patterns are caught," not "every mechanism is caught" (docs/evaluation_browser.md's v3.1 addendum).
