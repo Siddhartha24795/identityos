@@ -3,7 +3,7 @@
   "system_name": "baseline_rag",
   "steps": [
     {
-      "timestamp": "2026-08-30T07:30:44.697263Z",
+      "timestamp": "2026-08-30T08:33:20.892057Z",
       "stage": "retrieve",
       "input_summary": "What is your fluency level in Kannada?",
       "action": "dump the entire fact store as unstructured text (no ranking, no ids)",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T07:30:44.698587Z",
+      "timestamp": "2026-08-30T08:33:20.892965Z",
       "stage": "generate",
       "input_summary": "What is your fluency level in Kannada?",
       "action": "call provider with the full unstructured context dump",

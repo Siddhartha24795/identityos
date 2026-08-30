@@ -1,0 +1,46 @@
+{
+  "question_id": "req14",
+  "system_name": "identityos_v2_semantic",
+  "steps": [
+    {
+      "timestamp": "2026-08-30T08:33:21.370880Z",
+      "stage": "retrieve",
+      "input_summary": "Desired — record of building or running a professional body (CII / NASSCOM / FICCI / AIMA)",
+      "action": "embedding-similarity retrieval (hash): top 3 facts, 0 beliefs",
+      "observation": "[dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.\n[dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA.\n[dossier_excerpts:009] (verified fact) States that the IITACB Managing Committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to a record of building or running a professional membership body.",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T08:33:21.370952Z",
+      "stage": "generate",
+      "input_summary": "Desired — record of building or running a professional body (CII / NASSCOM / FICCI / AIMA)",
+      "action": "call provider with cited, confidence-annotated context",
+      "observation": "[dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record. [dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA. [dossier_excerpts:009] (verified fact) States that the IITACB Managing Committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to a record of building or running a professional membership body.",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T08:33:21.371094Z",
+      "stage": "verify",
+      "input_summary": "[dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record. [dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA. [dossier_excerpts:009] (verified fact) States that the IITACB Managing Committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to a record of building or running a professional membership body.",
+      "action": "per-sentence grounding check (same verifier as lexical identityos_v2)",
+      "observation": "coverage=1.00 confidence=0.99",
+      "reasoning": "",
+      "confidence": 0.9899999999999999,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T08:33:21.371098Z",
+      "stage": "bucket",
+      "input_summary": "[dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record. [dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA. [dossier_excerpts:009] (verified fact) States that the IITACB Managing Committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to a record of building or running a professional membership body.",
+      "action": "derive fit bucket from coverage+confidence+polarity (same bucketing.py as lexical)",
+      "observation": "partial",
+      "reasoning": "",
+      "confidence": null,
+      "decision": "partial"
+    }
+  ]
+}

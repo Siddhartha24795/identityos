@@ -1,0 +1,26 @@
+{
+  "question_id": "req04",
+  "system_name": "baseline_plain",
+  "steps": [
+    {
+      "timestamp": "2026-08-30T08:33:21.280027Z",
+      "stage": "generate",
+      "input_summary": "Visionary & credible leadership",
+      "action": "call provider with zero context, zero verification",
+      "observation": "I believe my track record speaks directly to this question. When it comes to credible and leadership and visionary, I have always taken a proactive, results-driven approach and delivered measurable impact. This has shaped my approach to every project I take on.",
+      "reasoning": "Baseline 1: no identity access at all.",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T08:33:21.280072Z",
+      "stage": "bucket",
+      "input_summary": "I believe my track record speaks directly to this question. When it comes to credible and leadership and visionary, I have always taken a proactive, results-driven approach and delivered measurable impact. This has shaped my approach to every project I take on.",
+      "action": "derive fit bucket from coverage+confidence",
+      "observation": "coverage=0.00 confidence=0.00",
+      "reasoning": "",
+      "confidence": null,
+      "decision": "gap"
+    }
+  ]
+}

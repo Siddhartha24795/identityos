@@ -1,6 +1,6 @@
 ### Trajectory — baseline_plain — q10
 
-**07:30:44 · generate**
+**08:33:20 · generate**
 - input: Tell us about a decision that changed your career.
 - action: call provider with zero context, zero verification
 - observation: Over the years, I have built a reputation for excellence here. When it comes to career and changed and decision, I have always taken a proactive, results-driven approach and delivered measurable impact. I look forward to bringing this strength to your organization.

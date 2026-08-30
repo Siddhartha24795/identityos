@@ -1,0 +1,46 @@
+{
+  "question_id": "req03",
+  "system_name": "identityos_v2_semantic",
+  "steps": [
+    {
+      "timestamp": "2026-08-30T08:33:21.277807Z",
+      "stage": "retrieve",
+      "input_summary": "Minimum 10 years senior leadership, with a strong track record of operations leadership",
+      "action": "embedding-similarity retrieval (hash): top 1 facts, 0 beliefs",
+      "observation": "[dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T08:33:21.277847Z",
+      "stage": "generate",
+      "input_summary": "Minimum 10 years senior leadership, with a strong track record of operations leadership",
+      "action": "call provider with cited, confidence-annotated context",
+      "observation": "[dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T08:33:21.277915Z",
+      "stage": "verify",
+      "input_summary": "[dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.",
+      "action": "per-sentence grounding check (same verifier as lexical identityos_v2)",
+      "observation": "coverage=1.00 confidence=0.99",
+      "reasoning": "",
+      "confidence": 0.99,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T08:33:21.277920Z",
+      "stage": "bucket",
+      "input_summary": "[dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.",
+      "action": "derive fit bucket from coverage+confidence+polarity (same bucketing.py as lexical)",
+      "observation": "met_or_better",
+      "reasoning": "",
+      "confidence": null,
+      "decision": "met_or_better"
+    }
+  ]
+}

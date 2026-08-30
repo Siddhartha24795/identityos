@@ -3,7 +3,7 @@
   "system_name": "identityos_v2_hybrid",
   "steps": [
     {
-      "timestamp": "2026-08-30T07:31:00.799661Z",
+      "timestamp": "2026-08-30T08:33:37.842272Z",
       "stage": "retrieve",
       "input_summary": "Languages — English, Hindi, Kannada preferred",
       "action": "lexical retrieval, semantic fallback only if empty: 2 facts, 0 beliefs",
@@ -13,29 +13,29 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T07:31:00.799761Z",
+      "timestamp": "2026-08-30T08:33:37.842312Z",
       "stage": "generate",
       "input_summary": "Languages — English, Hindi, Kannada preferred",
       "action": "call provider with cited, confidence-annotated context",
-      "observation": "[dossier_excerpts:010] (verified fact) States that relocating to Bengaluru and learning Kannada are conditions he is committing to for the IITACB CEO role specifically, not concessions being requested. [dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet fluent in Kannada. Languages — English, Hindi, Kannada preferred REQUIREMENT:",
+      "observation": "[dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet fluent in Kannada. [dossier_excerpts:010] (verified fact) States that relocating to Bengaluru and learning Kannada are conditions he is committing to for the IITACB CEO role specifically, not concessions being requested.",
       "reasoning": "",
       "confidence": null,
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T07:31:00.799871Z",
+      "timestamp": "2026-08-30T08:33:37.842398Z",
       "stage": "verify",
-      "input_summary": "[dossier_excerpts:010] (verified fact) States that relocating to Bengaluru and learning Kannada are conditions he is committing to for the IITACB CEO role specifically, not concessions being requested. [dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet fluent in Kannada. Languages — English, Hindi, Kannada preferred REQUIREMENT:",
+      "input_summary": "[dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet fluent in Kannada. [dossier_excerpts:010] (verified fact) States that relocating to Bengaluru and learning Kannada are conditions he is committing to for the IITACB CEO role specifically, not concessions being requested.",
       "action": "per-sentence grounding check (same verifier as lexical identityos_v2)",
-      "observation": "coverage=1.00 confidence=0.83",
+      "observation": "coverage=1.00 confidence=0.99",
       "reasoning": "",
-      "confidence": 0.8266666666666667,
+      "confidence": 0.99,
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T07:31:00.799875Z",
+      "timestamp": "2026-08-30T08:33:37.842403Z",
       "stage": "bucket",
-      "input_summary": "[dossier_excerpts:010] (verified fact) States that relocating to Bengaluru and learning Kannada are conditions he is committing to for the IITACB CEO role specifically, not concessions being requested. [dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet fluent in Kannada. Languages — English, Hindi, Kannada preferred REQUIREMENT:",
+      "input_summary": "[dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet fluent in Kannada. [dossier_excerpts:010] (verified fact) States that relocating to Bengaluru and learning Kannada are conditions he is committing to for the IITACB CEO role specifically, not concessions being requested.",
       "action": "derive fit bucket from coverage+confidence+polarity (same bucketing.py)",
       "observation": "partial",
       "reasoning": "",

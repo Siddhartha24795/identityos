@@ -1,0 +1,2616 @@
+{
+  "baseline_plain": [
+    {
+      "requirement_id": "req01",
+      "system_name": "baseline_plain",
+      "text": "I believe my track record speaks directly to this question. When it comes to bachelor and education and engineering, I have always taken a proactive, results-driven approach and delivered measurable impact. I look forward to bringing this strength to your organization.",
+      "claims": [
+        {
+          "text": "I believe my track record speaks directly to this question.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to bachelor and education and engineering, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "I look forward to bringing this strength to your organization.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.18477439880371094
+    },
+    {
+      "requirement_id": "req02",
+      "system_name": "baseline_plain",
+      "text": "I believe my track record speaks directly to this question. When it comes to alumnus and desired and iit, I have always taken a proactive, results-driven approach and delivered measurable impact. I look forward to bringing this strength to your organization.",
+      "claims": [
+        {
+          "text": "I believe my track record speaks directly to this question.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to alumnus and desired and iit, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "I look forward to bringing this strength to your organization.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.025510787963867188
+    },
+    {
+      "requirement_id": "req03",
+      "system_name": "baseline_plain",
+      "text": "I have consistently demonstrated strong ability in this area. When it comes to leadership and minimum and operations, I have always taken a proactive, results-driven approach and delivered measurable impact. This has shaped my approach to every project I take on.",
+      "claims": [
+        {
+          "text": "I have consistently demonstrated strong ability in this area.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to leadership and minimum and operations, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "This has shaped my approach to every project I take on.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.02384185791015625
+    },
+    {
+      "requirement_id": "req04",
+      "system_name": "baseline_plain",
+      "text": "I believe my track record speaks directly to this question. When it comes to credible and leadership and visionary, I have always taken a proactive, results-driven approach and delivered measurable impact. This has shaped my approach to every project I take on.",
+      "claims": [
+        {
+          "text": "I believe my track record speaks directly to this question.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to credible and leadership and visionary, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "This has shaped my approach to every project I take on.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.019550323486328125
+    },
+    {
+      "requirement_id": "req05",
+      "system_name": "baseline_plain",
+      "text": "Over the years, I have built a reputation for excellence here. When it comes to entrepreneurial and mindset, I have always taken a proactive, results-driven approach and delivered measurable impact. I am confident this reflects who I am professionally.",
+      "claims": [
+        {
+          "text": "Over the years, I have built a reputation for excellence here.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to entrepreneurial and mindset, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "I am confident this reflects who I am professionally.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.018358230590820312
+    },
+    {
+      "requirement_id": "req06",
+      "system_name": "baseline_plain",
+      "text": "Over the years, I have built a reputation for excellence here. When it comes to building and institution and planning, I have always taken a proactive, results-driven approach and delivered measurable impact. This has shaped my approach to every project I take on.",
+      "claims": [
+        {
+          "text": "Over the years, I have built a reputation for excellence here.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to building and institution and planning, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "This has shaped my approach to every project I take on.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.018596649169921875
+    },
+    {
+      "requirement_id": "req07",
+      "system_name": "baseline_plain",
+      "text": "I have consistently demonstrated strong ability in this area. When it comes to management and stakeholder, I have always taken a proactive, results-driven approach and delivered measurable impact. This has shaped my approach to every project I take on.",
+      "claims": [
+        {
+          "text": "I have consistently demonstrated strong ability in this area.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to management and stakeholder, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "This has shaped my approach to every project I take on.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.018835067749023438
+    },
+    {
+      "requirement_id": "req08",
+      "system_name": "baseline_plain",
+      "text": "Over the years, I have built a reputation for excellence here. When it comes to management and revenue, I have always taken a proactive, results-driven approach and delivered measurable impact. I am confident this reflects who I am professionally.",
+      "claims": [
+        {
+          "text": "Over the years, I have built a reputation for excellence here.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to management and revenue, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "I am confident this reflects who I am professionally.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.019073486328125
+    },
+    {
+      "requirement_id": "req09",
+      "system_name": "baseline_plain",
+      "text": "Over the years, I have built a reputation for excellence here. When it comes to aayog and council and dst, I have always taken a proactive, results-driven approach and delivered measurable impact. I look forward to bringing this strength to your organization.",
+      "claims": [
+        {
+          "text": "Over the years, I have built a reputation for excellence here.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to aayog and council and dst, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "I look forward to bringing this strength to your organization.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.021696090698242188
+    },
+    {
+      "requirement_id": "req10",
+      "system_name": "baseline_plain",
+      "text": "I have consistently demonstrated strong ability in this area. When it comes to communication and exceptional, I have always taken a proactive, results-driven approach and delivered measurable impact. This has shaped my approach to every project I take on.",
+      "claims": [
+        {
+          "text": "I have consistently demonstrated strong ability in this area.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to communication and exceptional, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "This has shaped my approach to every project I take on.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.018358230590820312
+    },
+    {
+      "requirement_id": "req11",
+      "system_name": "baseline_plain",
+      "text": "I believe my track record speaks directly to this question. When it comes to institutional and integrity and personal, I have always taken a proactive, results-driven approach and delivered measurable impact. I am confident this reflects who I am professionally.",
+      "claims": [
+        {
+          "text": "I believe my track record speaks directly to this question.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to institutional and integrity and personal, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "I am confident this reflects who I am professionally.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.018596649169921875
+    },
+    {
+      "requirement_id": "req12",
+      "system_name": "baseline_plain",
+      "text": "This is something I have thought about carefully throughout my career. When it comes to bengaluru and domestic and external, I have always taken a proactive, results-driven approach and delivered measurable impact. I am confident this reflects who I am professionally.",
+      "claims": [
+        {
+          "text": "This is something I have thought about carefully throughout my career.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to bengaluru and domestic and external, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "I am confident this reflects who I am professionally.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.025033950805664062
+    },
+    {
+      "requirement_id": "req13",
+      "system_name": "baseline_plain",
+      "text": "Over the years, I have built a reputation for excellence here. When it comes to english and hindi and kannada, I have always taken a proactive, results-driven approach and delivered measurable impact. I look forward to bringing this strength to your organization.",
+      "claims": [
+        {
+          "text": "Over the years, I have built a reputation for excellence here.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to english and hindi and kannada, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "I look forward to bringing this strength to your organization.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.022172927856445312
+    },
+    {
+      "requirement_id": "req14",
+      "system_name": "baseline_plain",
+      "text": "I believe my track record speaks directly to this question. When it comes to aima and body and building, I have always taken a proactive, results-driven approach and delivered measurable impact. I am confident this reflects who I am professionally.",
+      "claims": [
+        {
+          "text": "I believe my track record speaks directly to this question.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to aima and body and building, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "I am confident this reflects who I am professionally.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.025987625122070312
+    }
+  ],
+  "baseline_rag": [
+    {
+      "requirement_id": "req01",
+      "system_name": "baseline_rag",
+      "text": "Accustomed to explaining deep technology to non-technical boards and to translating executive intent into engineering commitments, built over six years of guest lectures, mentoring programmes and hackathon judging panels plus representing India at the Japan Hackathon 2021. Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical \u2014 it is 24x7 production accountability across live customer sites. Proposes re-engineering corporate membership tiers around named deliverables rather than privileges: Platinum buys named CoE co-investment and a reserved research slot, Gold buys the Problem Register and curated hiring access, Associate buys events and community.",
+      "claims": [
+        {
+          "text": "Accustomed to explaining deep technology to non-technical boards and to translating executive intent into engineering commitments, built over six years of guest lectures, mentoring programmes and hackathon judging panels plus representing India at the Japan Hackathon 2021.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Operations leadership here is not theoretical \u2014 it is 24x7 production accountability across live customer sites.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Proposes re-engineering corporate membership tiers around named deliverables rather than privileges: Platinum buys named CoE co-investment and a reserved research slot, Gold buys the Problem Register and curated hiring access, Associate buys events and community.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.8828639984130859
+    },
+    {
+      "requirement_id": "req02",
+      "system_name": "baseline_rag",
+      "text": "Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group. Credibility earned in two currencies: academic (IIT M.Tech, guest faculty across universities) and industrial (Samsung Research, Qualcomm, CTO of a venture shipping into live enterprise sites). States a vision specifically for the IITACB CEO role: IITACB as India's default gateway to IIT research capability, brought through the academic-and-industrial credibility described above. Confirmed relocation to Bengaluru on appointment, accepting the IITACB CEO role as primarily external-facing with sustained domestic travel to the 23 IIT campuses, Delhi, and industry forums nationally. States that being physically present in Bengaluru is regarded as non-negotiable for this job.",
+      "claims": [
+        {
+          "text": "Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Credibility earned in two currencies: academic (IIT M.Tech, guest faculty across universities) and industrial (Samsung Research, Qualcomm, CTO of a venture shipping into live enterprise sites).",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "States a vision specifically for the IITACB CEO role: IITACB as India's default gateway to IIT research capability, brought through the academic-and-industrial credibility described above.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Confirmed relocation to Bengaluru on appointment, accepting the IITACB CEO role as primarily external-facing with sustained domestic travel to the 23 IIT campuses, Delhi, and industry forums nationally.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "States that being physically present in Bengaluru is regarded as non-negotiable for this job.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.8931159973144531
+    },
+    {
+      "requirement_id": "req03",
+      "system_name": "baseline_rag",
+      "text": "Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical \u2014 it is 24x7 production accountability across live customer sites. Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record. Six years of unpaid guest sessions, mentoring, and hackathon judging across universities, described in the dossier as predating any formal title or compensation.",
+      "claims": [
+        {
+          "text": "Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Operations leadership here is not theoretical \u2014 it is 24x7 production accountability across live customer sites.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Six years of unpaid guest sessions, mentoring, and hackathon judging across universities, described in the dossier as predating any formal title or compensation.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.8809566497802734
+    },
+    {
+      "requirement_id": "req04",
+      "system_name": "baseline_rag",
+      "text": "Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical \u2014 it is 24x7 production accountability across live customer sites. States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record. System Design, Leadership, JavaScript, HTML, CSS, Hardware Abstraction Layer, Linux, Shell Scripting.",
+      "claims": [
+        {
+          "text": "Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Operations leadership here is not theoretical \u2014 it is 24x7 production accountability across live customer sites.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "System Design, Leadership, JavaScript, HTML, CSS, Hardware Abstraction Layer, Linux, Shell Scripting.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.8847713470458984
+    },
+    {
+      "requirement_id": "req05",
+      "system_name": "baseline_rag",
+      "text": "Named inventor, patent Application No. 202511076834, \"Generative AI based video codecs utilizing image-to-video generation\", filed through Samsung Research Noida and assigned to Samsung Electronics Co., Ltd. Siddhartha's stated inventorship contribution on this patent is 75%, with the remaining 25% attributed to a co-inventor who is not named in Siddhartha's own materials.",
+      "claims": [
+        {
+          "text": "Named inventor, patent Application No.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "202511076834, \"Generative AI based video codecs utilizing image-to-video generation\", filed through Samsung Research Noida and assigned to Samsung Electronics Co., Ltd.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Siddhartha's stated inventorship contribution on this patent is 75%, with the remaining 25% attributed to a co-inventor who is not named in Siddhartha's own materials.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.8614063262939453
+    },
+    {
+      "requirement_id": "req06",
+      "system_name": "baseline_rag",
+      "text": "Siddhartha's dossier states a preference for institution-building and zero-to-one problems, describing it as \"the only kind of problem I have ever been hired to solve.\" Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA. Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. States that the IITACB Managing Committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to a record of building or running a professional membership body.",
+      "claims": [
+        {
+          "text": "Siddhartha's dossier states a preference for institution-building and zero-to-one problems, describing it as \"the only kind of problem I have ever been hired to solve.\" Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "States that the IITACB Managing Committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to a record of building or running a professional membership body.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.8492469787597656
+    },
+    {
+      "requirement_id": "req07",
+      "system_name": "baseline_rag",
+      "text": "States that the practice of aligning many stakeholder types around one roadmap functions as the alumni-and-institution interface the IITACB CEO role requires, in miniature. States explicitly that full institutional P&L management at IITACB's scale would be a step up from cost-side ownership at Jinn Labs, and that this is experience not yet held. Dual-processor smartwatch power management architecture at Qualcomm, increasing battery backup by about 40%.",
+      "claims": [
+        {
+          "text": "States that the practice of aligning many stakeholder types around one roadmap functions as the alumni-and-institution interface the IITACB CEO role requires, in miniature.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "States explicitly that full institutional P&L management at IITACB's scale would be a step up from cost-side ownership at Jinn Labs, and that this is experience not yet held.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Dual-processor smartwatch power management architecture at Qualcomm, increasing battery backup by about 40%.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.8683204650878906
+    },
+    {
+      "requirement_id": "req08",
+      "system_name": "baseline_rag",
+      "text": "States explicitly that full institutional P&L management at IITACB's scale would be a step up from cost-side ownership at Jinn Labs, and that this is experience not yet held. Proposes an eight-stream revenue architecture for the \u20b9500 crore pipeline target, deliberately weighted toward large-ticket, low-volume streams (CoE sponsorships, industry-sponsored research, government grants) rather than membership fees alone, with corporate memberships as the annuity that funds the Secretariat. Commits to a first-30-days deliverable of a baseline diagnostic pack (revenue by stream, member churn, facility utilisation, a mapped relationship inventory across all 23 IITs) before writing any strategy, and a first-100-days deliverable of signed members, a live problem-matching pipeline, and a working quarterly milestone dashboard. Did API development, bug resolution, fraud detection, and revenue forecasting using Java, Python, Mockito, Postman, MySQL, machine learning, and NLP.",
+      "claims": [
+        {
+          "text": "States explicitly that full institutional P&L management at IITACB's scale would be a step up from cost-side ownership at Jinn Labs, and that this is experience not yet held.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Proposes an eight-stream revenue architecture for the \u20b9500 crore pipeline target, deliberately weighted toward large-ticket, low-volume streams (CoE sponsorships, industry-sponsored research, government grants) rather than membership fees alone, with corporate memberships as the annuity that funds the Secretariat.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Commits to a first-30-days deliverable of a baseline diagnostic pack (revenue by stream, member churn, facility utilisation, a mapped relationship inventory across all 23 IITs) before writing any strategy, and a first-100-days deliverable of signed members, a live problem-matching pipeline, and a working quarterly milestone dashboard.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Did API development, bug resolution, fraud detection, and revenue forecasting using Java, Python, Mockito, Postman, MySQL, machine learning, and NLP.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.8718967437744141
+    },
+    {
+      "requirement_id": "req09",
+      "system_name": "baseline_rag",
+      "text": "Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. States a reading of the mandate: IITACB does not need a manager, it needs a founder for its second act \u2014 turning a facility and a 50,000-strong Bengaluru alumni base into an institution industry pays to join, government treats as an implementation partner, and IIT Directors route their best research through. Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group. Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.",
+      "claims": [
+        {
+          "text": "Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "States a reading of the mandate: IITACB does not need a manager, it needs a founder for its second act \u2014 turning a facility and a 50,000-strong Bengaluru alumni base into an institution industry pays to join, government treats as an implementation partner, and IIT Directors route their best research through.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.8614063262939453
+    },
+    {
+      "requirement_id": "req10",
+      "system_name": "baseline_rag",
+      "text": "Named inventor, patent Application No. 202511076834, \"Generative AI based video codecs utilizing image-to-video generation\", filed through Samsung Research Noida and assigned to Samsung Electronics Co., Ltd. Siddhartha's stated inventorship contribution on this patent is 75%, with the remaining 25% attributed to a co-inventor who is not named in Siddhartha's own materials.",
+      "claims": [
+        {
+          "text": "Named inventor, patent Application No.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "202511076834, \"Generative AI based video codecs utilizing image-to-video generation\", filed through Samsung Research Noida and assigned to Samsung Electronics Co., Ltd.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Siddhartha's stated inventorship contribution on this patent is 75%, with the remaining 25% attributed to a co-inventor who is not named in Siddhartha's own materials.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.8742809295654297
+    },
+    {
+      "requirement_id": "req11",
+      "system_name": "baseline_rag",
+      "text": "Captain and Sports Secretary are roles given by peers and cannot be self-appointed. Professional practice of running blameless postmortems and publishing metrics that can embarrass the author. Believes institutional temperament means the institution outranks the incumbent. States explicitly that full institutional P&L management at IITACB's scale would be a step up from cost-side ownership at Jinn Labs, and that this is experience not yet held.",
+      "claims": [
+        {
+          "text": "Captain and Sports Secretary are roles given by peers and cannot be self-appointed.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Professional practice of running blameless postmortems and publishing metrics that can embarrass the author.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Believes institutional temperament means the institution outranks the incumbent.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "States explicitly that full institutional P&L management at IITACB's scale would be a step up from cost-side ownership at Jinn Labs, and that this is experience not yet held.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.8654594421386719
+    },
+    {
+      "requirement_id": "req12",
+      "system_name": "baseline_rag",
+      "text": "Confirmed relocation to Bengaluru on appointment, accepting the IITACB CEO role as primarily external-facing with sustained domestic travel to the 23 IIT campuses, Delhi, and industry forums nationally. States that being physically present in Bengaluru is regarded as non-negotiable for this job. States that relocating to Bengaluru and learning Kannada are conditions he is committing to for the IITACB CEO role specifically, not concessions being requested. States a vision specifically for the IITACB CEO role: IITACB as India's default gateway to IIT research capability, brought through the academic-and-industrial credibility described above. Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group.",
+      "claims": [
+        {
+          "text": "Confirmed relocation to Bengaluru on appointment, accepting the IITACB CEO role as primarily external-facing with sustained domestic travel to the 23 IIT campuses, Delhi, and industry forums nationally.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "States that being physically present in Bengaluru is regarded as non-negotiable for this job.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "States that relocating to Bengaluru and learning Kannada are conditions he is committing to for the IITACB CEO role specifically, not concessions being requested.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "States a vision specifically for the IITACB CEO role: IITACB as India's default gateway to IIT research capability, brought through the academic-and-industrial credibility described above.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.8883476257324219
+    },
+    {
+      "requirement_id": "req13",
+      "system_name": "baseline_rag",
+      "text": "Siddhartha's own dossier states he is fluent in English and Hindi but not yet fluent in Kannada. States that relocating to Bengaluru and learning Kannada are conditions he is committing to for the IITACB CEO role specifically, not concessions being requested.",
+      "claims": [
+        {
+          "text": "Siddhartha's own dossier states he is fluent in English and Hindi but not yet fluent in Kannada.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "States that relocating to Bengaluru and learning Kannada are conditions he is committing to for the IITACB CEO role specifically, not concessions being requested.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.865936279296875
+    },
+    {
+      "requirement_id": "req14",
+      "system_name": "baseline_rag",
+      "text": "States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record. Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA. States that the IITACB Managing Committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to a record of building or running a professional membership body. Captain and Sports Secretary are roles given by peers and cannot be self-appointed. Professional practice of running blameless postmortems and publishing metrics that can embarrass the author. Believes institutional temperament means the institution outranks the incumbent.",
+      "claims": [
+        {
+          "text": "States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "States that the IITACB Managing Committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to a record of building or running a professional membership body.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Captain and Sports Secretary are roles given by peers and cannot be self-appointed.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Professional practice of running blameless postmortems and publishing metrics that can embarrass the author.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Believes institutional temperament means the institution outranks the incumbent.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.8816719055175781
+    }
+  ],
+  "identityos_v2": [
+    {
+      "requirement_id": "req01",
+      "system_name": "identityos_v2",
+      "text": "[dossier_narrative:007] (verified fact) Accustomed to explaining deep technology to non-technical boards and to translating executive intent into engineering commitments, built over six years of guest lectures, mentoring programmes and hackathon judging panels plus representing India at the Japan Hackathon 2021. [dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical \u2014 it is 24x7 production accountability across live customer sites. [dossier_narrative:016] (verified fact) Proposes re-engineering corporate membership tiers around named deliverables rather than privileges: Platinum buys named CoE co-investment and a reserved research slot, Gold buys the Problem Register and curated hiring access, Associate buys events and community.",
+      "claims": [
+        {
+          "text": "[dossier_narrative:007] (verified fact) Accustomed to explaining deep technology to non-technical boards and to translating executive intent into engineering commitments, built over six years of guest lectures, mentoring programmes and hackathon judging panels plus representing India at the Japan Hackathon 2021.",
+          "evidence_refs": [
+            "dossier_narrative:007"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "evidence_refs": [
+            "dossier_excerpts:008"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles.",
+          "evidence_refs": [
+            "dossier_narrative:001"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "Operations leadership here is not theoretical \u2014 it is 24x7 production accountability across live customer sites.",
+          "evidence_refs": [
+            "dossier_narrative:001"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "[dossier_narrative:016] (verified fact) Proposes re-engineering corporate membership tiers around named deliverables rather than privileges: Platinum buys named CoE co-investment and a reserved research slot, Gold buys the Problem Register and curated hiring access, Associate buys events and community.",
+          "evidence_refs": [
+            "dossier_narrative:016"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        }
+      ],
+      "overall_confidence": 0.892,
+      "evidence_coverage": 1.0,
+      "system_bucket": "met_or_better",
+      "provider": "mock",
+      "latency_ms": 0.1494884490966797
+    },
+    {
+      "requirement_id": "req02",
+      "system_name": "identityos_v2",
+      "text": "[dossier_excerpts:003] (verified fact) Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group. [dossier_narrative:002] (verified fact) Credibility earned in two currencies: academic (IIT M.Tech, guest faculty across universities) and industrial (Samsung Research, Qualcomm, CTO of a venture shipping into live enterprise sites). [dossier_narrative:009] (verified fact) States a vision specifically for the IITACB CEO role: IITACB as India's default gateway to IIT research capability, brought through the academic-and-industrial credibility described above. [dossier_narrative:013] (verified fact) Confirmed relocation to Bengaluru on appointment, accepting the IITACB CEO role as primarily external-facing with sustained domestic travel to the 23 IIT campuses, Delhi, and industry forums nationally. States that being physically present in Bengaluru is regarded as non-negotiable for this job.",
+      "claims": [
+        {
+          "text": "[dossier_excerpts:003] (verified fact) Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group.",
+          "evidence_refs": [
+            "dossier_excerpts:003"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_narrative:002] (verified fact) Credibility earned in two currencies: academic (IIT M.Tech, guest faculty across universities) and industrial (Samsung Research, Qualcomm, CTO of a venture shipping into live enterprise sites).",
+          "evidence_refs": [
+            "dossier_narrative:002"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_narrative:009] (verified fact) States a vision specifically for the IITACB CEO role: IITACB as India's default gateway to IIT research capability, brought through the academic-and-industrial credibility described above.",
+          "evidence_refs": [
+            "dossier_narrative:009"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_narrative:013] (verified fact) Confirmed relocation to Bengaluru on appointment, accepting the IITACB CEO role as primarily external-facing with sustained domestic travel to the 23 IIT campuses, Delhi, and industry forums nationally.",
+          "evidence_refs": [
+            "dossier_narrative:013"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "States that being physically present in Bengaluru is regarded as non-negotiable for this job.",
+          "evidence_refs": [
+            "dossier_narrative:013"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        }
+      ],
+      "overall_confidence": 0.892,
+      "evidence_coverage": 1.0,
+      "system_bucket": "met_or_better",
+      "provider": "mock",
+      "latency_ms": 0.11444091796875
+    },
+    {
+      "requirement_id": "req03",
+      "system_name": "identityos_v2",
+      "text": "[dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical \u2014 it is 24x7 production accountability across live customer sites. [dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record. [dossier_excerpts:004] (verified fact) Six years of unpaid guest sessions, mentoring, and hackathon judging across universities, described in the dossier as predating any formal title or compensation.",
+      "claims": [
+        {
+          "text": "[dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles.",
+          "evidence_refs": [
+            "dossier_narrative:001"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "Operations leadership here is not theoretical \u2014 it is 24x7 production accountability across live customer sites.",
+          "evidence_refs": [
+            "dossier_narrative:001"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "evidence_refs": [
+            "dossier_excerpts:008"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.",
+          "evidence_refs": [
+            "dossier_narrative:019"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_excerpts:004] (verified fact) Six years of unpaid guest sessions, mentoring, and hackathon judging across universities, described in the dossier as predating any formal title or compensation.",
+          "evidence_refs": [
+            "dossier_excerpts:004"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        }
+      ],
+      "overall_confidence": 0.892,
+      "evidence_coverage": 1.0,
+      "system_bucket": "met_or_better",
+      "provider": "mock",
+      "latency_ms": 0.13256072998046875
+    },
+    {
+      "requirement_id": "req04",
+      "system_name": "identityos_v2",
+      "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical \u2014 it is 24x7 production accountability across live customer sites. [dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record. [resume:046] (verified fact) System Design, Leadership, JavaScript, HTML, CSS, Hardware Abstraction Layer, Linux, Shell Scripting.",
+      "claims": [
+        {
+          "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "evidence_refs": [
+            "dossier_excerpts:008"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles.",
+          "evidence_refs": [
+            "dossier_narrative:001"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "Operations leadership here is not theoretical \u2014 it is 24x7 production accountability across live customer sites.",
+          "evidence_refs": [
+            "dossier_narrative:001"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "[dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.",
+          "evidence_refs": [
+            "dossier_narrative:019"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[resume:046] (verified fact) System Design, Leadership, JavaScript, HTML, CSS, Hardware Abstraction Layer, Linux, Shell Scripting.",
+          "evidence_refs": [
+            "resume:046"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        }
+      ],
+      "overall_confidence": 0.892,
+      "evidence_coverage": 1.0,
+      "system_bucket": "met_or_better",
+      "provider": "mock",
+      "latency_ms": 0.07414817810058594
+    },
+    {
+      "requirement_id": "req05",
+      "system_name": "identityos_v2",
+      "text": "Over the years, I have built a reputation for excellence here. When it comes to entrepreneurial and mindset, I have always taken a proactive, results-driven approach and delivered measurable impact. I am confident this reflects who I am professionally.",
+      "claims": [
+        {
+          "text": "Over the years, I have built a reputation for excellence here.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to entrepreneurial and mindset, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "I am confident this reflects who I am professionally.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.014543533325195312
+    },
+    {
+      "requirement_id": "req06",
+      "system_name": "identityos_v2",
+      "text": "[dossier_excerpts:012] (verified fact) Siddhartha's dossier states a preference for institution-building and zero-to-one problems, describing it as \"the only kind of problem I have ever been hired to solve.\" [dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA. [dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_excerpts:009] (verified fact) States that the IITACB Managing Committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to a record of building or running a professional membership body.",
+      "claims": [
+        {
+          "text": "[dossier_excerpts:012] (verified fact) Siddhartha's dossier states a preference for institution-building and zero-to-one problems, describing it as \"the only kind of problem I have ever been hired to solve.\" [dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA.",
+          "evidence_refs": [
+            "dossier_excerpts:012",
+            "dossier_excerpts:006"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "evidence_refs": [
+            "dossier_excerpts:008"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_excerpts:009] (verified fact) States that the IITACB Managing Committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to a record of building or running a professional membership body.",
+          "evidence_refs": [
+            "dossier_excerpts:009"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        }
+      ],
+      "overall_confidence": 0.9899999999999999,
+      "evidence_coverage": 1.0,
+      "system_bucket": "partial",
+      "provider": "mock",
+      "latency_ms": 0.12278556823730469
+    },
+    {
+      "requirement_id": "req07",
+      "system_name": "identityos_v2",
+      "text": "[dossier_narrative:011] (verified fact) States that the practice of aligning many stakeholder types around one roadmap functions as the alumni-and-institution interface the IITACB CEO role requires, in miniature. [dossier_narrative:012] (verified fact) States explicitly that full institutional P&L management at IITACB's scale would be a step up from cost-side ownership at Jinn Labs, and that this is experience not yet held. [resume:061] (verified fact) Dual-processor smartwatch power management architecture at Qualcomm, increasing battery backup by about 40%.",
+      "claims": [
+        {
+          "text": "[dossier_narrative:011] (verified fact) States that the practice of aligning many stakeholder types around one roadmap functions as the alumni-and-institution interface the IITACB CEO role requires, in miniature.",
+          "evidence_refs": [
+            "dossier_narrative:011"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_narrative:012] (verified fact) States explicitly that full institutional P&L management at IITACB's scale would be a step up from cost-side ownership at Jinn Labs, and that this is experience not yet held.",
+          "evidence_refs": [
+            "dossier_narrative:012"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[resume:061] (verified fact) Dual-processor smartwatch power management architecture at Qualcomm, increasing battery backup by about 40%.",
+          "evidence_refs": [
+            "resume:061"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        }
+      ],
+      "overall_confidence": 0.9899999999999999,
+      "evidence_coverage": 1.0,
+      "system_bucket": "partial",
+      "provider": "mock",
+      "latency_ms": 0.04410743713378906
+    },
+    {
+      "requirement_id": "req08",
+      "system_name": "identityos_v2",
+      "text": "[dossier_narrative:012] (verified fact) States explicitly that full institutional P&L management at IITACB's scale would be a step up from cost-side ownership at Jinn Labs, and that this is experience not yet held. [dossier_narrative:017] (verified fact) Proposes an eight-stream revenue architecture for the \u20b9500 crore pipeline target, deliberately weighted toward large-ticket, low-volume streams (CoE sponsorships, industry-sponsored research, government grants) rather than membership fees alone, with corporate memberships as the annuity that funds the Secretariat. [dossier_narrative:018] (verified fact) Commits to a first-30-days deliverable of a baseline diagnostic pack (revenue by stream, member churn, facility utilisation, a mapped relationship inventory across all 23 IITs) before writing any strategy, and a first-100-days deliverable of signed members, a live problem-matching pipeline, and a working quarterly milestone dashboard. [resume:025] (verified fact) Did API development, bug resolution, fraud detection, and revenue forecasting using Java, Python, Mockito, Postman, MySQL, machine learning, and NLP.",
+      "claims": [
+        {
+          "text": "[dossier_narrative:012] (verified fact) States explicitly that full institutional P&L management at IITACB's scale would be a step up from cost-side ownership at Jinn Labs, and that this is experience not yet held.",
+          "evidence_refs": [
+            "dossier_narrative:012"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_narrative:017] (verified fact) Proposes an eight-stream revenue architecture for the \u20b9500 crore pipeline target, deliberately weighted toward large-ticket, low-volume streams (CoE sponsorships, industry-sponsored research, government grants) rather than membership fees alone, with corporate memberships as the annuity that funds the Secretariat.",
+          "evidence_refs": [
+            "dossier_narrative:017"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_narrative:018] (verified fact) Commits to a first-30-days deliverable of a baseline diagnostic pack (revenue by stream, member churn, facility utilisation, a mapped relationship inventory across all 23 IITs) before writing any strategy, and a first-100-days deliverable of signed members, a live problem-matching pipeline, and a working quarterly milestone dashboard.",
+          "evidence_refs": [
+            "dossier_narrative:018"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[resume:025] (verified fact) Did API development, bug resolution, fraud detection, and revenue forecasting using Java, Python, Mockito, Postman, MySQL, machine learning, and NLP.",
+          "evidence_refs": [
+            "resume:025"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        }
+      ],
+      "overall_confidence": 0.99,
+      "evidence_coverage": 1.0,
+      "system_bucket": "partial",
+      "provider": "mock",
+      "latency_ms": 0.08034706115722656
+    },
+    {
+      "requirement_id": "req09",
+      "system_name": "identityos_v2",
+      "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:014] (verified fact) States a reading of the mandate: IITACB does not need a manager, it needs a founder for its second act \u2014 turning a facility and a 50,000-strong Bengaluru alumni base into an institution industry pays to join, government treats as an implementation partner, and IIT Directors route their best research through. [dossier_excerpts:003] (verified fact) Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group. [dossier_excerpts:005] (verified fact) Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.",
+      "claims": [
+        {
+          "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "evidence_refs": [
+            "dossier_excerpts:008"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_narrative:014] (verified fact) States a reading of the mandate: IITACB does not need a manager, it needs a founder for its second act \u2014 turning a facility and a 50,000-strong Bengaluru alumni base into an institution industry pays to join, government treats as an implementation partner, and IIT Directors route their best research through.",
+          "evidence_refs": [
+            "dossier_narrative:014"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_excerpts:003] (verified fact) Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group.",
+          "evidence_refs": [
+            "dossier_excerpts:003"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_excerpts:005] (verified fact) Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.",
+          "evidence_refs": [
+            "dossier_excerpts:005"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        }
+      ],
+      "overall_confidence": 0.99,
+      "evidence_coverage": 1.0,
+      "system_bucket": "partial",
+      "provider": "mock",
+      "latency_ms": 0.16450881958007812
+    },
+    {
+      "requirement_id": "req10",
+      "system_name": "identityos_v2",
+      "text": "I have consistently demonstrated strong ability in this area. When it comes to communication and exceptional, I have always taken a proactive, results-driven approach and delivered measurable impact. This has shaped my approach to every project I take on.",
+      "claims": [
+        {
+          "text": "I have consistently demonstrated strong ability in this area.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to communication and exceptional, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "This has shaped my approach to every project I take on.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.014781951904296875
+    },
+    {
+      "requirement_id": "req11",
+      "system_name": "identityos_v2",
+      "text": "[dossier_narrative:008] (verified fact) Captain and Sports Secretary are roles given by peers and cannot be self-appointed. Professional practice of running blameless postmortems and publishing metrics that can embarrass the author. Believes institutional temperament means the institution outranks the incumbent. [dossier_narrative:012] (verified fact) States explicitly that full institutional P&L management at IITACB's scale would be a step up from cost-side ownership at Jinn Labs, and that this is experience not yet held. [belief:004] (belief, unknown, confidence=0.10) Is comfortable claiming full personal credit for joint work without qualification. \u2014 counter-evidence exists, do not state this as certain",
+      "claims": [
+        {
+          "text": "[dossier_narrative:008] (verified fact) Captain and Sports Secretary are roles given by peers and cannot be self-appointed.",
+          "evidence_refs": [
+            "dossier_narrative:008"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "Professional practice of running blameless postmortems and publishing metrics that can embarrass the author.",
+          "evidence_refs": [
+            "dossier_narrative:008"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "Believes institutional temperament means the institution outranks the incumbent.",
+          "evidence_refs": [
+            "dossier_narrative:008"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "[dossier_narrative:012] (verified fact) States explicitly that full institutional P&L management at IITACB's scale would be a step up from cost-side ownership at Jinn Labs, and that this is experience not yet held.",
+          "evidence_refs": [
+            "dossier_narrative:012"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[belief:004] (belief, unknown, confidence=0.10) Is comfortable claiming full personal credit for joint work without qualification.",
+          "evidence_refs": [
+            "belief:004"
+          ],
+          "claim_type": "unsupported",
+          "confidence": 0.1
+        },
+        {
+          "text": "\u2014 counter-evidence exists, do not state this as certain",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.5133333333333333,
+      "evidence_coverage": 0.8333333333333334,
+      "system_bucket": "partial",
+      "provider": "mock",
+      "latency_ms": 0.05245208740234375
+    },
+    {
+      "requirement_id": "req12",
+      "system_name": "identityos_v2",
+      "text": "[dossier_narrative:013] (verified fact) Confirmed relocation to Bengaluru on appointment, accepting the IITACB CEO role as primarily external-facing with sustained domestic travel to the 23 IIT campuses, Delhi, and industry forums nationally. States that being physically present in Bengaluru is regarded as non-negotiable for this job. [dossier_excerpts:010] (verified fact) States that relocating to Bengaluru and learning Kannada are conditions he is committing to for the IITACB CEO role specifically, not concessions being requested. [dossier_narrative:009] (verified fact) States a vision specifically for the IITACB CEO role: IITACB as India's default gateway to IIT research capability, brought through the academic-and-industrial credibility described above. [dossier_excerpts:003] (verified fact) Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group.",
+      "claims": [
+        {
+          "text": "[dossier_narrative:013] (verified fact) Confirmed relocation to Bengaluru on appointment, accepting the IITACB CEO role as primarily external-facing with sustained domestic travel to the 23 IIT campuses, Delhi, and industry forums nationally.",
+          "evidence_refs": [
+            "dossier_narrative:013"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "States that being physically present in Bengaluru is regarded as non-negotiable for this job.",
+          "evidence_refs": [
+            "dossier_narrative:013"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "[dossier_excerpts:010] (verified fact) States that relocating to Bengaluru and learning Kannada are conditions he is committing to for the IITACB CEO role specifically, not concessions being requested.",
+          "evidence_refs": [
+            "dossier_excerpts:010"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_narrative:009] (verified fact) States a vision specifically for the IITACB CEO role: IITACB as India's default gateway to IIT research capability, brought through the academic-and-industrial credibility described above.",
+          "evidence_refs": [
+            "dossier_narrative:009"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_excerpts:003] (verified fact) Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group.",
+          "evidence_refs": [
+            "dossier_excerpts:003"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        }
+      ],
+      "overall_confidence": 0.892,
+      "evidence_coverage": 1.0,
+      "system_bucket": "met_or_better",
+      "provider": "mock",
+      "latency_ms": 0.13518333435058594
+    },
+    {
+      "requirement_id": "req13",
+      "system_name": "identityos_v2",
+      "text": "[dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet fluent in Kannada. [dossier_excerpts:010] (verified fact) States that relocating to Bengaluru and learning Kannada are conditions he is committing to for the IITACB CEO role specifically, not concessions being requested.",
+      "claims": [
+        {
+          "text": "[dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet fluent in Kannada.",
+          "evidence_refs": [
+            "dossier_excerpts:007"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_excerpts:010] (verified fact) States that relocating to Bengaluru and learning Kannada are conditions he is committing to for the IITACB CEO role specifically, not concessions being requested.",
+          "evidence_refs": [
+            "dossier_excerpts:010"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        }
+      ],
+      "overall_confidence": 0.99,
+      "evidence_coverage": 1.0,
+      "system_bucket": "partial",
+      "provider": "mock",
+      "latency_ms": 0.033855438232421875
+    },
+    {
+      "requirement_id": "req14",
+      "system_name": "identityos_v2",
+      "text": "[dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record. [dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA. [dossier_excerpts:009] (verified fact) States that the IITACB Managing Committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to a record of building or running a professional membership body. [dossier_narrative:008] (verified fact) Captain and Sports Secretary are roles given by peers and cannot be self-appointed. Professional practice of running blameless postmortems and publishing metrics that can embarrass the author. Believes institutional temperament means the institution outranks the incumbent.",
+      "claims": [
+        {
+          "text": "[dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.",
+          "evidence_refs": [
+            "dossier_narrative:019"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA.",
+          "evidence_refs": [
+            "dossier_excerpts:006"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_excerpts:009] (verified fact) States that the IITACB Managing Committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to a record of building or running a professional membership body.",
+          "evidence_refs": [
+            "dossier_excerpts:009"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_narrative:008] (verified fact) Captain and Sports Secretary are roles given by peers and cannot be self-appointed.",
+          "evidence_refs": [
+            "dossier_narrative:008"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "Professional practice of running blameless postmortems and publishing metrics that can embarrass the author.",
+          "evidence_refs": [
+            "dossier_narrative:008"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "Believes institutional temperament means the institution outranks the incumbent.",
+          "evidence_refs": [
+            "dossier_narrative:008"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        }
+      ],
+      "overall_confidence": 0.8266666666666667,
+      "evidence_coverage": 1.0,
+      "system_bucket": "partial",
+      "provider": "mock",
+      "latency_ms": 0.15306472778320312
+    }
+  ],
+  "identityos_v2_semantic": [
+    {
+      "requirement_id": "req01",
+      "system_name": "identityos_v2_semantic",
+      "text": "I believe my track record speaks directly to this question. When it comes to bachelor and education and engineering, I have always taken a proactive, results-driven approach and delivered measurable impact. I look forward to bringing this strength to your organization.",
+      "claims": [
+        {
+          "text": "I believe my track record speaks directly to this question.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to bachelor and education and engineering, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "I look forward to bringing this strength to your organization.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.021457672119140625
+    },
+    {
+      "requirement_id": "req02",
+      "system_name": "identityos_v2_semantic",
+      "text": "I believe my track record speaks directly to this question. When it comes to alumnus and desired and iit, I have always taken a proactive, results-driven approach and delivered measurable impact. I look forward to bringing this strength to your organization.",
+      "claims": [
+        {
+          "text": "I believe my track record speaks directly to this question.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to alumnus and desired and iit, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "I look forward to bringing this strength to your organization.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.018358230590820312
+    },
+    {
+      "requirement_id": "req03",
+      "system_name": "identityos_v2_semantic",
+      "text": "[dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.",
+      "claims": [
+        {
+          "text": "[dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.",
+          "evidence_refs": [
+            "dossier_narrative:019"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        }
+      ],
+      "overall_confidence": 0.99,
+      "evidence_coverage": 1.0,
+      "system_bucket": "met_or_better",
+      "provider": "mock",
+      "latency_ms": 0.03337860107421875
+    },
+    {
+      "requirement_id": "req04",
+      "system_name": "identityos_v2_semantic",
+      "text": "I believe my track record speaks directly to this question. When it comes to credible and leadership and visionary, I have always taken a proactive, results-driven approach and delivered measurable impact. This has shaped my approach to every project I take on.",
+      "claims": [
+        {
+          "text": "I believe my track record speaks directly to this question.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to credible and leadership and visionary, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "This has shaped my approach to every project I take on.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.01621246337890625
+    },
+    {
+      "requirement_id": "req05",
+      "system_name": "identityos_v2_semantic",
+      "text": "Over the years, I have built a reputation for excellence here. When it comes to entrepreneurial and mindset, I have always taken a proactive, results-driven approach and delivered measurable impact. I am confident this reflects who I am professionally.",
+      "claims": [
+        {
+          "text": "Over the years, I have built a reputation for excellence here.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to entrepreneurial and mindset, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "I am confident this reflects who I am professionally.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.01430511474609375
+    },
+    {
+      "requirement_id": "req06",
+      "system_name": "identityos_v2_semantic",
+      "text": "Over the years, I have built a reputation for excellence here. When it comes to building and institution and planning, I have always taken a proactive, results-driven approach and delivered measurable impact. This has shaped my approach to every project I take on.",
+      "claims": [
+        {
+          "text": "Over the years, I have built a reputation for excellence here.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to building and institution and planning, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "This has shaped my approach to every project I take on.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.015735626220703125
+    },
+    {
+      "requirement_id": "req07",
+      "system_name": "identityos_v2_semantic",
+      "text": "I have consistently demonstrated strong ability in this area. When it comes to management and stakeholder, I have always taken a proactive, results-driven approach and delivered measurable impact. This has shaped my approach to every project I take on.",
+      "claims": [
+        {
+          "text": "I have consistently demonstrated strong ability in this area.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to management and stakeholder, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "This has shaped my approach to every project I take on.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.0152587890625
+    },
+    {
+      "requirement_id": "req08",
+      "system_name": "identityos_v2_semantic",
+      "text": "Over the years, I have built a reputation for excellence here. When it comes to management and revenue, I have always taken a proactive, results-driven approach and delivered measurable impact. I am confident this reflects who I am professionally.",
+      "claims": [
+        {
+          "text": "Over the years, I have built a reputation for excellence here.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to management and revenue, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "I am confident this reflects who I am professionally.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.015974044799804688
+    },
+    {
+      "requirement_id": "req09",
+      "system_name": "identityos_v2_semantic",
+      "text": "Over the years, I have built a reputation for excellence here. When it comes to aayog and council and dst, I have always taken a proactive, results-driven approach and delivered measurable impact. I look forward to bringing this strength to your organization.",
+      "claims": [
+        {
+          "text": "Over the years, I have built a reputation for excellence here.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to aayog and council and dst, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "I look forward to bringing this strength to your organization.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.019311904907226562
+    },
+    {
+      "requirement_id": "req10",
+      "system_name": "identityos_v2_semantic",
+      "text": "I have consistently demonstrated strong ability in this area. When it comes to communication and exceptional, I have always taken a proactive, results-driven approach and delivered measurable impact. This has shaped my approach to every project I take on.",
+      "claims": [
+        {
+          "text": "I have consistently demonstrated strong ability in this area.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to communication and exceptional, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "This has shaped my approach to every project I take on.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.01430511474609375
+    },
+    {
+      "requirement_id": "req11",
+      "system_name": "identityos_v2_semantic",
+      "text": "[dossier_narrative:008] (verified fact) Captain and Sports Secretary are roles given by peers and cannot be self-appointed. Professional practice of running blameless postmortems and publishing metrics that can embarrass the author. Believes institutional temperament means the institution outranks the incumbent.",
+      "claims": [
+        {
+          "text": "[dossier_narrative:008] (verified fact) Captain and Sports Secretary are roles given by peers and cannot be self-appointed.",
+          "evidence_refs": [
+            "dossier_narrative:008"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "Professional practice of running blameless postmortems and publishing metrics that can embarrass the author.",
+          "evidence_refs": [
+            "dossier_narrative:008"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "Believes institutional temperament means the institution outranks the incumbent.",
+          "evidence_refs": [
+            "dossier_narrative:008"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        }
+      ],
+      "overall_confidence": 0.6633333333333333,
+      "evidence_coverage": 1.0,
+      "system_bucket": "partial",
+      "provider": "mock",
+      "latency_ms": 0.029325485229492188
+    },
+    {
+      "requirement_id": "req12",
+      "system_name": "identityos_v2_semantic",
+      "text": "[dossier_narrative:013] (verified fact) Confirmed relocation to Bengaluru on appointment, accepting the IITACB CEO role as primarily external-facing with sustained domestic travel to the 23 IIT campuses, Delhi, and industry forums nationally. States that being physically present in Bengaluru is regarded as non-negotiable for this job.",
+      "claims": [
+        {
+          "text": "[dossier_narrative:013] (verified fact) Confirmed relocation to Bengaluru on appointment, accepting the IITACB CEO role as primarily external-facing with sustained domestic travel to the 23 IIT campuses, Delhi, and industry forums nationally.",
+          "evidence_refs": [
+            "dossier_narrative:013"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "States that being physically present in Bengaluru is regarded as non-negotiable for this job.",
+          "evidence_refs": [
+            "dossier_narrative:013"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        }
+      ],
+      "overall_confidence": 0.745,
+      "evidence_coverage": 1.0,
+      "system_bucket": "met_or_better",
+      "provider": "mock",
+      "latency_ms": 0.035762786865234375
+    },
+    {
+      "requirement_id": "req13",
+      "system_name": "identityos_v2_semantic",
+      "text": "Over the years, I have built a reputation for excellence here. When it comes to english and hindi and kannada, I have always taken a proactive, results-driven approach and delivered measurable impact. I look forward to bringing this strength to your organization.",
+      "claims": [
+        {
+          "text": "Over the years, I have built a reputation for excellence here.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to english and hindi and kannada, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "I look forward to bringing this strength to your organization.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.019550323486328125
+    },
+    {
+      "requirement_id": "req14",
+      "system_name": "identityos_v2_semantic",
+      "text": "[dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record. [dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA. [dossier_excerpts:009] (verified fact) States that the IITACB Managing Committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to a record of building or running a professional membership body.",
+      "claims": [
+        {
+          "text": "[dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.",
+          "evidence_refs": [
+            "dossier_narrative:019"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA.",
+          "evidence_refs": [
+            "dossier_excerpts:006"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_excerpts:009] (verified fact) States that the IITACB Managing Committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to a record of building or running a professional membership body.",
+          "evidence_refs": [
+            "dossier_excerpts:009"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        }
+      ],
+      "overall_confidence": 0.9899999999999999,
+      "evidence_coverage": 1.0,
+      "system_bucket": "partial",
+      "provider": "mock",
+      "latency_ms": 0.06556510925292969
+    }
+  ],
+  "identityos_v2_hybrid": [
+    {
+      "requirement_id": "req01",
+      "system_name": "identityos_v2_hybrid",
+      "text": "[dossier_narrative:007] (verified fact) Accustomed to explaining deep technology to non-technical boards and to translating executive intent into engineering commitments, built over six years of guest lectures, mentoring programmes and hackathon judging panels plus representing India at the Japan Hackathon 2021. [dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical \u2014 it is 24x7 production accountability across live customer sites. [dossier_narrative:016] (verified fact) Proposes re-engineering corporate membership tiers around named deliverables rather than privileges: Platinum buys named CoE co-investment and a reserved research slot, Gold buys the Problem Register and curated hiring access, Associate buys events and community.",
+      "claims": [
+        {
+          "text": "[dossier_narrative:007] (verified fact) Accustomed to explaining deep technology to non-technical boards and to translating executive intent into engineering commitments, built over six years of guest lectures, mentoring programmes and hackathon judging panels plus representing India at the Japan Hackathon 2021.",
+          "evidence_refs": [
+            "dossier_narrative:007"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "evidence_refs": [
+            "dossier_excerpts:008"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles.",
+          "evidence_refs": [
+            "dossier_narrative:001"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "Operations leadership here is not theoretical \u2014 it is 24x7 production accountability across live customer sites.",
+          "evidence_refs": [
+            "dossier_narrative:001"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "[dossier_narrative:016] (verified fact) Proposes re-engineering corporate membership tiers around named deliverables rather than privileges: Platinum buys named CoE co-investment and a reserved research slot, Gold buys the Problem Register and curated hiring access, Associate buys events and community.",
+          "evidence_refs": [
+            "dossier_narrative:016"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        }
+      ],
+      "overall_confidence": 0.892,
+      "evidence_coverage": 1.0,
+      "system_bucket": "met_or_better",
+      "provider": "mock",
+      "latency_ms": 0.15211105346679688
+    },
+    {
+      "requirement_id": "req02",
+      "system_name": "identityos_v2_hybrid",
+      "text": "[dossier_excerpts:003] (verified fact) Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group. [dossier_narrative:002] (verified fact) Credibility earned in two currencies: academic (IIT M.Tech, guest faculty across universities) and industrial (Samsung Research, Qualcomm, CTO of a venture shipping into live enterprise sites). [dossier_narrative:009] (verified fact) States a vision specifically for the IITACB CEO role: IITACB as India's default gateway to IIT research capability, brought through the academic-and-industrial credibility described above. [dossier_narrative:013] (verified fact) Confirmed relocation to Bengaluru on appointment, accepting the IITACB CEO role as primarily external-facing with sustained domestic travel to the 23 IIT campuses, Delhi, and industry forums nationally. States that being physically present in Bengaluru is regarded as non-negotiable for this job.",
+      "claims": [
+        {
+          "text": "[dossier_excerpts:003] (verified fact) Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group.",
+          "evidence_refs": [
+            "dossier_excerpts:003"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_narrative:002] (verified fact) Credibility earned in two currencies: academic (IIT M.Tech, guest faculty across universities) and industrial (Samsung Research, Qualcomm, CTO of a venture shipping into live enterprise sites).",
+          "evidence_refs": [
+            "dossier_narrative:002"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_narrative:009] (verified fact) States a vision specifically for the IITACB CEO role: IITACB as India's default gateway to IIT research capability, brought through the academic-and-industrial credibility described above.",
+          "evidence_refs": [
+            "dossier_narrative:009"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_narrative:013] (verified fact) Confirmed relocation to Bengaluru on appointment, accepting the IITACB CEO role as primarily external-facing with sustained domestic travel to the 23 IIT campuses, Delhi, and industry forums nationally.",
+          "evidence_refs": [
+            "dossier_narrative:013"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "States that being physically present in Bengaluru is regarded as non-negotiable for this job.",
+          "evidence_refs": [
+            "dossier_narrative:013"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        }
+      ],
+      "overall_confidence": 0.892,
+      "evidence_coverage": 1.0,
+      "system_bucket": "met_or_better",
+      "provider": "mock",
+      "latency_ms": 0.11491775512695312
+    },
+    {
+      "requirement_id": "req03",
+      "system_name": "identityos_v2_hybrid",
+      "text": "[dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical \u2014 it is 24x7 production accountability across live customer sites. [dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record. [dossier_excerpts:004] (verified fact) Six years of unpaid guest sessions, mentoring, and hackathon judging across universities, described in the dossier as predating any formal title or compensation.",
+      "claims": [
+        {
+          "text": "[dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles.",
+          "evidence_refs": [
+            "dossier_narrative:001"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "Operations leadership here is not theoretical \u2014 it is 24x7 production accountability across live customer sites.",
+          "evidence_refs": [
+            "dossier_narrative:001"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "evidence_refs": [
+            "dossier_excerpts:008"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.",
+          "evidence_refs": [
+            "dossier_narrative:019"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_excerpts:004] (verified fact) Six years of unpaid guest sessions, mentoring, and hackathon judging across universities, described in the dossier as predating any formal title or compensation.",
+          "evidence_refs": [
+            "dossier_excerpts:004"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        }
+      ],
+      "overall_confidence": 0.892,
+      "evidence_coverage": 1.0,
+      "system_bucket": "met_or_better",
+      "provider": "mock",
+      "latency_ms": 0.1304149627685547
+    },
+    {
+      "requirement_id": "req04",
+      "system_name": "identityos_v2_hybrid",
+      "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical \u2014 it is 24x7 production accountability across live customer sites. [dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record. [resume:046] (verified fact) System Design, Leadership, JavaScript, HTML, CSS, Hardware Abstraction Layer, Linux, Shell Scripting.",
+      "claims": [
+        {
+          "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "evidence_refs": [
+            "dossier_excerpts:008"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles.",
+          "evidence_refs": [
+            "dossier_narrative:001"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "Operations leadership here is not theoretical \u2014 it is 24x7 production accountability across live customer sites.",
+          "evidence_refs": [
+            "dossier_narrative:001"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "[dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.",
+          "evidence_refs": [
+            "dossier_narrative:019"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[resume:046] (verified fact) System Design, Leadership, JavaScript, HTML, CSS, Hardware Abstraction Layer, Linux, Shell Scripting.",
+          "evidence_refs": [
+            "resume:046"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        }
+      ],
+      "overall_confidence": 0.892,
+      "evidence_coverage": 1.0,
+      "system_bucket": "met_or_better",
+      "provider": "mock",
+      "latency_ms": 0.07891654968261719
+    },
+    {
+      "requirement_id": "req05",
+      "system_name": "identityos_v2_hybrid",
+      "text": "Over the years, I have built a reputation for excellence here. When it comes to entrepreneurial and mindset, I have always taken a proactive, results-driven approach and delivered measurable impact. I am confident this reflects who I am professionally.",
+      "claims": [
+        {
+          "text": "Over the years, I have built a reputation for excellence here.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to entrepreneurial and mindset, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "I am confident this reflects who I am professionally.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.015020370483398438
+    },
+    {
+      "requirement_id": "req06",
+      "system_name": "identityos_v2_hybrid",
+      "text": "[dossier_excerpts:012] (verified fact) Siddhartha's dossier states a preference for institution-building and zero-to-one problems, describing it as \"the only kind of problem I have ever been hired to solve.\" [dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA. [dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_excerpts:009] (verified fact) States that the IITACB Managing Committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to a record of building or running a professional membership body.",
+      "claims": [
+        {
+          "text": "[dossier_excerpts:012] (verified fact) Siddhartha's dossier states a preference for institution-building and zero-to-one problems, describing it as \"the only kind of problem I have ever been hired to solve.\" [dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA.",
+          "evidence_refs": [
+            "dossier_excerpts:012",
+            "dossier_excerpts:006"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "evidence_refs": [
+            "dossier_excerpts:008"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_excerpts:009] (verified fact) States that the IITACB Managing Committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to a record of building or running a professional membership body.",
+          "evidence_refs": [
+            "dossier_excerpts:009"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        }
+      ],
+      "overall_confidence": 0.9899999999999999,
+      "evidence_coverage": 1.0,
+      "system_bucket": "partial",
+      "provider": "mock",
+      "latency_ms": 0.11897087097167969
+    },
+    {
+      "requirement_id": "req07",
+      "system_name": "identityos_v2_hybrid",
+      "text": "[dossier_narrative:011] (verified fact) States that the practice of aligning many stakeholder types around one roadmap functions as the alumni-and-institution interface the IITACB CEO role requires, in miniature. [dossier_narrative:012] (verified fact) States explicitly that full institutional P&L management at IITACB's scale would be a step up from cost-side ownership at Jinn Labs, and that this is experience not yet held. [resume:061] (verified fact) Dual-processor smartwatch power management architecture at Qualcomm, increasing battery backup by about 40%.",
+      "claims": [
+        {
+          "text": "[dossier_narrative:011] (verified fact) States that the practice of aligning many stakeholder types around one roadmap functions as the alumni-and-institution interface the IITACB CEO role requires, in miniature.",
+          "evidence_refs": [
+            "dossier_narrative:011"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_narrative:012] (verified fact) States explicitly that full institutional P&L management at IITACB's scale would be a step up from cost-side ownership at Jinn Labs, and that this is experience not yet held.",
+          "evidence_refs": [
+            "dossier_narrative:012"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[resume:061] (verified fact) Dual-processor smartwatch power management architecture at Qualcomm, increasing battery backup by about 40%.",
+          "evidence_refs": [
+            "resume:061"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        }
+      ],
+      "overall_confidence": 0.9899999999999999,
+      "evidence_coverage": 1.0,
+      "system_bucket": "partial",
+      "provider": "mock",
+      "latency_ms": 0.043392181396484375
+    },
+    {
+      "requirement_id": "req08",
+      "system_name": "identityos_v2_hybrid",
+      "text": "[dossier_narrative:012] (verified fact) States explicitly that full institutional P&L management at IITACB's scale would be a step up from cost-side ownership at Jinn Labs, and that this is experience not yet held. [dossier_narrative:017] (verified fact) Proposes an eight-stream revenue architecture for the \u20b9500 crore pipeline target, deliberately weighted toward large-ticket, low-volume streams (CoE sponsorships, industry-sponsored research, government grants) rather than membership fees alone, with corporate memberships as the annuity that funds the Secretariat. [dossier_narrative:018] (verified fact) Commits to a first-30-days deliverable of a baseline diagnostic pack (revenue by stream, member churn, facility utilisation, a mapped relationship inventory across all 23 IITs) before writing any strategy, and a first-100-days deliverable of signed members, a live problem-matching pipeline, and a working quarterly milestone dashboard. [resume:025] (verified fact) Did API development, bug resolution, fraud detection, and revenue forecasting using Java, Python, Mockito, Postman, MySQL, machine learning, and NLP.",
+      "claims": [
+        {
+          "text": "[dossier_narrative:012] (verified fact) States explicitly that full institutional P&L management at IITACB's scale would be a step up from cost-side ownership at Jinn Labs, and that this is experience not yet held.",
+          "evidence_refs": [
+            "dossier_narrative:012"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_narrative:017] (verified fact) Proposes an eight-stream revenue architecture for the \u20b9500 crore pipeline target, deliberately weighted toward large-ticket, low-volume streams (CoE sponsorships, industry-sponsored research, government grants) rather than membership fees alone, with corporate memberships as the annuity that funds the Secretariat.",
+          "evidence_refs": [
+            "dossier_narrative:017"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_narrative:018] (verified fact) Commits to a first-30-days deliverable of a baseline diagnostic pack (revenue by stream, member churn, facility utilisation, a mapped relationship inventory across all 23 IITs) before writing any strategy, and a first-100-days deliverable of signed members, a live problem-matching pipeline, and a working quarterly milestone dashboard.",
+          "evidence_refs": [
+            "dossier_narrative:018"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[resume:025] (verified fact) Did API development, bug resolution, fraud detection, and revenue forecasting using Java, Python, Mockito, Postman, MySQL, machine learning, and NLP.",
+          "evidence_refs": [
+            "resume:025"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        }
+      ],
+      "overall_confidence": 0.99,
+      "evidence_coverage": 1.0,
+      "system_bucket": "partial",
+      "provider": "mock",
+      "latency_ms": 0.08034706115722656
+    },
+    {
+      "requirement_id": "req09",
+      "system_name": "identityos_v2_hybrid",
+      "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:014] (verified fact) States a reading of the mandate: IITACB does not need a manager, it needs a founder for its second act \u2014 turning a facility and a 50,000-strong Bengaluru alumni base into an institution industry pays to join, government treats as an implementation partner, and IIT Directors route their best research through. [dossier_excerpts:003] (verified fact) Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group. [dossier_excerpts:005] (verified fact) Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.",
+      "claims": [
+        {
+          "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+          "evidence_refs": [
+            "dossier_excerpts:008"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_narrative:014] (verified fact) States a reading of the mandate: IITACB does not need a manager, it needs a founder for its second act \u2014 turning a facility and a 50,000-strong Bengaluru alumni base into an institution industry pays to join, government treats as an implementation partner, and IIT Directors route their best research through.",
+          "evidence_refs": [
+            "dossier_narrative:014"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_excerpts:003] (verified fact) Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group.",
+          "evidence_refs": [
+            "dossier_excerpts:003"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_excerpts:005] (verified fact) Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.",
+          "evidence_refs": [
+            "dossier_excerpts:005"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        }
+      ],
+      "overall_confidence": 0.99,
+      "evidence_coverage": 1.0,
+      "system_bucket": "partial",
+      "provider": "mock",
+      "latency_ms": 0.16021728515625
+    },
+    {
+      "requirement_id": "req10",
+      "system_name": "identityos_v2_hybrid",
+      "text": "I have consistently demonstrated strong ability in this area. When it comes to communication and exceptional, I have always taken a proactive, results-driven approach and delivered measurable impact. This has shaped my approach to every project I take on.",
+      "claims": [
+        {
+          "text": "I have consistently demonstrated strong ability in this area.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "When it comes to communication and exceptional, I have always taken a proactive, results-driven approach and delivered measurable impact.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "This has shaped my approach to every project I take on.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "evidence_coverage": 0.0,
+      "system_bucket": "gap",
+      "provider": "mock",
+      "latency_ms": 0.01430511474609375
+    },
+    {
+      "requirement_id": "req11",
+      "system_name": "identityos_v2_hybrid",
+      "text": "[dossier_narrative:008] (verified fact) Captain and Sports Secretary are roles given by peers and cannot be self-appointed. Professional practice of running blameless postmortems and publishing metrics that can embarrass the author. Believes institutional temperament means the institution outranks the incumbent. [dossier_narrative:012] (verified fact) States explicitly that full institutional P&L management at IITACB's scale would be a step up from cost-side ownership at Jinn Labs, and that this is experience not yet held. [belief:004] (belief, unknown, confidence=0.10) Is comfortable claiming full personal credit for joint work without qualification. \u2014 counter-evidence exists, do not state this as certain",
+      "claims": [
+        {
+          "text": "[dossier_narrative:008] (verified fact) Captain and Sports Secretary are roles given by peers and cannot be self-appointed.",
+          "evidence_refs": [
+            "dossier_narrative:008"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "Professional practice of running blameless postmortems and publishing metrics that can embarrass the author.",
+          "evidence_refs": [
+            "dossier_narrative:008"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "Believes institutional temperament means the institution outranks the incumbent.",
+          "evidence_refs": [
+            "dossier_narrative:008"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "[dossier_narrative:012] (verified fact) States explicitly that full institutional P&L management at IITACB's scale would be a step up from cost-side ownership at Jinn Labs, and that this is experience not yet held.",
+          "evidence_refs": [
+            "dossier_narrative:012"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[belief:004] (belief, unknown, confidence=0.10) Is comfortable claiming full personal credit for joint work without qualification.",
+          "evidence_refs": [
+            "belief:004"
+          ],
+          "claim_type": "unsupported",
+          "confidence": 0.1
+        },
+        {
+          "text": "\u2014 counter-evidence exists, do not state this as certain",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.5133333333333333,
+      "evidence_coverage": 0.8333333333333334,
+      "system_bucket": "partial",
+      "provider": "mock",
+      "latency_ms": 0.053882598876953125
+    },
+    {
+      "requirement_id": "req12",
+      "system_name": "identityos_v2_hybrid",
+      "text": "[dossier_narrative:013] (verified fact) Confirmed relocation to Bengaluru on appointment, accepting the IITACB CEO role as primarily external-facing with sustained domestic travel to the 23 IIT campuses, Delhi, and industry forums nationally. States that being physically present in Bengaluru is regarded as non-negotiable for this job. [dossier_excerpts:010] (verified fact) States that relocating to Bengaluru and learning Kannada are conditions he is committing to for the IITACB CEO role specifically, not concessions being requested. [dossier_narrative:009] (verified fact) States a vision specifically for the IITACB CEO role: IITACB as India's default gateway to IIT research capability, brought through the academic-and-industrial credibility described above. [dossier_excerpts:003] (verified fact) Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group.",
+      "claims": [
+        {
+          "text": "[dossier_narrative:013] (verified fact) Confirmed relocation to Bengaluru on appointment, accepting the IITACB CEO role as primarily external-facing with sustained domestic travel to the 23 IIT campuses, Delhi, and industry forums nationally.",
+          "evidence_refs": [
+            "dossier_narrative:013"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "States that being physically present in Bengaluru is regarded as non-negotiable for this job.",
+          "evidence_refs": [
+            "dossier_narrative:013"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "[dossier_excerpts:010] (verified fact) States that relocating to Bengaluru and learning Kannada are conditions he is committing to for the IITACB CEO role specifically, not concessions being requested.",
+          "evidence_refs": [
+            "dossier_excerpts:010"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_narrative:009] (verified fact) States a vision specifically for the IITACB CEO role: IITACB as India's default gateway to IIT research capability, brought through the academic-and-industrial credibility described above.",
+          "evidence_refs": [
+            "dossier_narrative:009"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_excerpts:003] (verified fact) Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group.",
+          "evidence_refs": [
+            "dossier_excerpts:003"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        }
+      ],
+      "overall_confidence": 0.892,
+      "evidence_coverage": 1.0,
+      "system_bucket": "met_or_better",
+      "provider": "mock",
+      "latency_ms": 0.13327598571777344
+    },
+    {
+      "requirement_id": "req13",
+      "system_name": "identityos_v2_hybrid",
+      "text": "[dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet fluent in Kannada. [dossier_excerpts:010] (verified fact) States that relocating to Bengaluru and learning Kannada are conditions he is committing to for the IITACB CEO role specifically, not concessions being requested.",
+      "claims": [
+        {
+          "text": "[dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet fluent in Kannada.",
+          "evidence_refs": [
+            "dossier_excerpts:007"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_excerpts:010] (verified fact) States that relocating to Bengaluru and learning Kannada are conditions he is committing to for the IITACB CEO role specifically, not concessions being requested.",
+          "evidence_refs": [
+            "dossier_excerpts:010"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        }
+      ],
+      "overall_confidence": 0.99,
+      "evidence_coverage": 1.0,
+      "system_bucket": "partial",
+      "provider": "mock",
+      "latency_ms": 0.03314018249511719
+    },
+    {
+      "requirement_id": "req14",
+      "system_name": "identityos_v2_hybrid",
+      "text": "[dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record. [dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA. [dossier_excerpts:009] (verified fact) States that the IITACB Managing Committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to a record of building or running a professional membership body. [dossier_narrative:008] (verified fact) Captain and Sports Secretary are roles given by peers and cannot be self-appointed. Professional practice of running blameless postmortems and publishing metrics that can embarrass the author. Believes institutional temperament means the institution outranks the incumbent.",
+      "claims": [
+        {
+          "text": "[dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.",
+          "evidence_refs": [
+            "dossier_narrative:019"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA.",
+          "evidence_refs": [
+            "dossier_excerpts:006"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_excerpts:009] (verified fact) States that the IITACB Managing Committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to a record of building or running a professional membership body.",
+          "evidence_refs": [
+            "dossier_excerpts:009"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_narrative:008] (verified fact) Captain and Sports Secretary are roles given by peers and cannot be self-appointed.",
+          "evidence_refs": [
+            "dossier_narrative:008"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "Professional practice of running blameless postmortems and publishing metrics that can embarrass the author.",
+          "evidence_refs": [
+            "dossier_narrative:008"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "Believes institutional temperament means the institution outranks the incumbent.",
+          "evidence_refs": [
+            "dossier_narrative:008"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        }
+      ],
+      "overall_confidence": 0.8266666666666667,
+      "evidence_coverage": 1.0,
+      "system_bucket": "partial",
+      "provider": "mock",
+      "latency_ms": 0.14591217041015625
+    }
+  ]
+}

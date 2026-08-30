@@ -19,6 +19,21 @@ Behavior:
   generic, confident-sounding, ungrounded answer from stock phrasing plus
   keywords borrowed from the question itself — this deliberately simulates
   the hallucination failure mode a context-free LLM call actually produces.
+
+v3 fix: parsing used to require the final section be labeled literally
+"QUESTION:" — every other caller in this codebase (v2's "REQUIREMENT:",
+v2.5's "SECTION PROMPT:", v3's "FIELD LABEL:") silently fell through to
+treating the *entire prompt* as both context and question, which meant the
+question/label text itself could rank as an "extractable context line" and
+leak verbatim into the answer. Normally invisible, because real matching
+facts outscore a line that trivially matches itself — visible only when
+retrieval was already weak, which is exactly when a silent bug is most
+dangerous. Fixed generally: the parser no longer looks for a specific
+keyword. It treats the text after the LAST blank line as the query
+(stripping whatever ALL-CAPS header precedes it, whatever that header is
+named) and everything before it, after the "CONTEXT:" prefix, as context —
+correct for every caller, present and future, not just the ones audited
+after this bug was found. See docs/hot_take.md's v3 addendum.
 """
 from __future__ import annotations
 
@@ -67,10 +82,13 @@ class MockProvider(LLMProvider):
     name = "mock"
 
     def complete(self, system: str, prompt: str, max_tokens: int = 600) -> str:
-        question_match = re.search(r"QUESTION:\s*(.+?)(?:\n\n|\Z)", prompt, re.S)
-        question = question_match.group(1).strip() if question_match else prompt.strip()
-        context_match = re.search(r"CONTEXT:\s*(.+?)(?:\n\nQUESTION:|\Z)", prompt, re.S)
-        context = context_match.group(1).strip() if context_match else ""
+        if "\n\n" in prompt:
+            context_part, _, query_part = prompt.rpartition("\n\n")
+        else:
+            context_part, query_part = "", prompt
+
+        context = re.sub(r"^CONTEXT:\s*", "", context_part.strip(), flags=re.S).strip()
+        question = re.sub(r"^[A-Z][A-Z ]*:\s*", "", query_part.strip()).strip()
 
         if not context:
             return self._hallucinate(question)

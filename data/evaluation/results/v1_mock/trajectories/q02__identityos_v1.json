@@ -3,7 +3,7 @@
   "system_name": "identityos_v1",
   "steps": [
     {
-      "timestamp": "2026-08-30T07:30:44.660008Z",
+      "timestamp": "2026-08-30T08:33:20.860621Z",
       "stage": "classify",
       "input_summary": "Which university awarded your M.Tech in Artificial Intelligence, and what was your research topic?",
       "action": "use declared question.type (v1 simplification, not a learned classifier)",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T07:30:44.660895Z",
+      "timestamp": "2026-08-30T08:33:20.861507Z",
       "stage": "retrieve",
       "input_summary": "Which university awarded your M.Tech in Artificial Intelligence, and what was your research topic?",
       "action": "lexical retrieval over Digital Self: top 6 facts, 1 beliefs",
@@ -23,7 +23,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T07:30:44.661053Z",
+      "timestamp": "2026-08-30T08:33:20.861621Z",
       "stage": "generate",
       "input_summary": "Which university awarded your M.Tech in Artificial Intelligence, and what was your research topic?",
       "action": "call provider with structured, citation-tagged, confidence-annotated context",
@@ -33,7 +33,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T07:30:44.661237Z",
+      "timestamp": "2026-08-30T08:33:20.861768Z",
       "stage": "verify",
       "input_summary": "[resume:039] (verified fact) M.Tech, Artificial Intelligence, IIT (ISM) Dhanbad, 2018-2020. Research on medical image processing using Cycle GAN. [dossier_narrative:002] (verified fact) Credibility earned in two currencies: academic (IIT M.Tech, guest faculty across universities) and industrial (Samsung Research, Qualcomm, CTO of a venture shipping into live enterprise sites). [resume:043] (verified fact) Artificial Intelligence, Deep Learning, Machine Learning, Image Processing, Computer Vision, Natural Language Processing. [dossier_excerpts:001] (verified fact) Named inventor, patent Application No. 202511076834, \"Generative AI based video codecs utilizing image-to-video generation\", filed through Samsung Research Noida and assigned to Samsung Electronics Co., Ltd.",
       "action": "check every sentence for an explicit citation, else a lexical grounding match",
@@ -43,7 +43,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T07:30:44.661248Z",
+      "timestamp": "2026-08-30T08:33:20.861779Z",
       "stage": "complete",
       "input_summary": "q02",
       "action": "return final answer",

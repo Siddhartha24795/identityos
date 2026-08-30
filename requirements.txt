@@ -13,3 +13,8 @@ anthropic>=0.40
 # runtime, no torch, ~65MB model cache on first use, no API key needed.
 # The default EMBEDDING_PROVIDER=hash needs none of this.
 fastembed>=0.5
+
+# v3 — browser automation. Needs a one-time `python -m playwright install
+# chromium` after pip install (see Makefile's setup target); downloads a
+# ~300MB Chromium build, cached under ~/.cache/ms-playwright/.
+playwright>=1.40

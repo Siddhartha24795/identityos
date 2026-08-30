@@ -3,7 +3,7 @@
   "system_name": "baseline_rag",
   "steps": [
     {
-      "timestamp": "2026-08-30T07:30:44.661760Z",
+      "timestamp": "2026-08-30T08:33:20.862263Z",
       "stage": "retrieve",
       "input_summary": "What battery-life improvement did your dual-processor architecture achieve on Qualcomm smartwatches?",
       "action": "dump the entire fact store as unstructured text (no ranking, no ids)",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T07:30:44.663139Z",
+      "timestamp": "2026-08-30T08:33:20.863180Z",
       "stage": "generate",
       "input_summary": "What battery-life improvement did your dual-processor architecture achieve on Qualcomm smartwatches?",
       "action": "call provider with the full unstructured context dump",

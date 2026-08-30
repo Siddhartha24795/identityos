@@ -397,3 +397,48 @@ extractive, not generative, so it tends to preserve source wording
 pressure. A real LLM run (`PROVIDER=anthropic` / `PROVIDER=openai`) is the
 next step for a qualitative read on whether these same failure patterns
 get better or worse under real generation.
+
+## v3 addendum: a shared-infrastructure bug in MockProvider, and what re-verifying it changed
+
+Building v3 (browser automation, docs/evaluation_browser.md) surfaced a bug
+in `services/providers/mock_provider.py` itself, not in anything v2-specific:
+its prompt parser hardcoded the literal string `"QUESTION:"` to find where
+context ends and the question begins. v1's prompts use that label; v2's
+`assess.py` uses `"REQUIREMENT:"` instead — a label the old parser never
+matched. When it failed to match, it silently fell back to treating the
+*entire prompt*, including the requirement text itself, as both context and
+question, so the requirement's own wording could be extracted as
+"evidence" for itself. This was invisible in most cases because real
+matching facts usually outscore a line that trivially matches itself; it
+only became visible once v3's own field labels made the effect concrete
+enough to trace (docs/hot_take.md's v3 addendum has the full mechanism).
+
+Fixed generally in `mock_provider.py` only (no caller changed) — treats the
+text after the last blank line as the query regardless of what header
+precedes it. Per this project's standing practice, re-ran every existing
+eval suite afterward rather than assuming a shared-infrastructure fix was
+side-effect-free:
+
+| System | Metric | Before fix | After fix |
+|---|---|---|---|
+| identityos_v2 (lexical) | agreement rate | 0.57 | **0.57 (unchanged)** |
+| identityos_v2_hybrid | agreement rate / dangerous overclaim rate | 0.71 / 0.00 | **0.71 / 0.00 (unchanged)** |
+| identityos_v2_semantic | agreement rate | 0.64 | **0.64 (unchanged)** |
+| identityos_v2_semantic | dangerous overclaim rate | 0.50 (2/4) | **0.75 (3/4) — worse** |
+
+The shipped default (hybrid) and the lexical arm were completely
+unaffected — expected, since the bug's effect only shows up when retrieval
+is already weak enough that the label text can out-rank real evidence, and
+hybrid's fallback design keeps it out of that regime for every requirement
+lexical can already answer. `identityos_v2_semantic`, which was never the
+shipped path specifically *because* its dangerous-overclaim rate was
+already the worst of the three arms, got measurably worse once the bug
+that had been partially masking it was removed — a third real requirement
+now overclaims under semantic-only retrieval. **This is not a new problem
+introduced by the fix; it's the bug that was previously hiding part of an
+existing one.** Not investigated further here, for the same reason as
+before: `identityos_v2_semantic` standalone was already not the shipped
+system, and this makes the case for keeping it that way stronger, not
+weaker. Full mechanism and the parallel effect on v2.5's document
+generation: docs/hot_take.md's v3 addendum, docs/evaluation_documents.md's
+v3 addendum.

@@ -1,0 +1,75 @@
+<!--
+Synthetic, local, offline application form for v3's browser-automation
+demo (docs/architecture.md v3, docs/roadmap.md).
+
+Deliberately NOT a real company's website: this project automates arbitrary
+real sites for exactly zero companies. Testing against a form we control
+ourselves is what "don't hard-code one company's website, build a
+generalized abstraction" (PROMPT.md) actually asks for when there is no
+named real target and no ToS to negotiate — every field type the brief
+calls out (text, textarea, select, checkbox) is represented, and the
+"Submit Application" button is wired to do nothing (see the trailing
+script) so this file is safe to open, fill, and "submit" as many times as
+a judge likes without contacting any real service.
+-->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Generic Technology Role — Application Form (local demo)</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 640px; margin: 40px auto; color: #1a1a1a; }
+  label { display: block; font-weight: 600; margin-top: 20px; }
+  input[type=text], textarea, select { width: 100%; padding: 8px; margin-top: 6px; box-sizing: border-box; font-size: 14px; }
+  textarea { min-height: 90px; }
+  .hint { color: #666; font-size: 12px; margin-top: 2px; }
+  #result { margin-top: 24px; padding: 12px; border-radius: 6px; display: none; }
+</style>
+</head>
+<body>
+<h1>Application — Technology Leadership Role</h1>
+<p class="hint">This is a local, synthetic form for testing IdentityOS's browser agent. Nothing here is submitted anywhere.</p>
+
+<form id="application-form">
+  <label for="full_name">Full name</label>
+  <input type="text" id="full_name" name="full_name">
+
+  <label for="email">Email address</label>
+  <input type="text" id="email" name="email">
+
+  <label for="desired_role">Which of these best matches the role you're applying for?</label>
+  <select id="desired_role" name="desired_role">
+    <option value="">-- select --</option>
+    <option value="ic_engineer">Individual-contributor software engineer</option>
+    <option value="research_scientist">Research scientist</option>
+    <option value="eng_manager">Engineering manager</option>
+    <option value="cto_leadership">CTO / technical leadership</option>
+  </select>
+
+  <label for="impactful_project">What is your most impactful project, and why?</label>
+  <textarea id="impactful_project" name="impactful_project"></textarea>
+
+  <label for="motivation">Why are you a strong fit for a technology leadership role, and what drives you professionally?</label>
+  <textarea id="motivation" name="motivation"></textarea>
+
+  <label>
+    <input type="checkbox" id="confirm_accurate" name="confirm_accurate">
+    I confirm the information provided above is accurate to the best of my knowledge.
+  </label>
+
+  <button type="button" id="submit-btn" style="margin-top:24px;">Submit Application</button>
+  <div id="result"></div>
+</form>
+
+<script>
+  // Deliberately inert: this demo form never contacts a network. Clicking
+  // submit just displays a local confirmation message.
+  document.getElementById('submit-btn').addEventListener('click', function () {
+    var r = document.getElementById('result');
+    r.style.display = 'block';
+    r.style.background = '#e6f4ea';
+    r.textContent = 'Local demo only — no data was sent anywhere. Form values remain in this page.';
+  });
+</script>
+</body>
+</html>

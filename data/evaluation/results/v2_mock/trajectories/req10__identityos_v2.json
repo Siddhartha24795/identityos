@@ -1,0 +1,46 @@
+{
+  "question_id": "req10",
+  "system_name": "identityos_v2",
+  "steps": [
+    {
+      "timestamp": "2026-08-30T08:33:21.331568Z",
+      "stage": "retrieve",
+      "input_summary": "Exceptional communication",
+      "action": "lexical retrieval over Digital Self: top 0 facts, 0 beliefs",
+      "observation": "(no matching evidence found)",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T08:33:21.331587Z",
+      "stage": "generate",
+      "input_summary": "Exceptional communication",
+      "action": "call provider with cited, confidence-annotated context",
+      "observation": "I have consistently demonstrated strong ability in this area. When it comes to communication and exceptional, I have always taken a proactive, results-driven approach and delivered measurable impact. This has shaped my approach to every project I take on.",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T08:33:21.331625Z",
+      "stage": "verify",
+      "input_summary": "I have consistently demonstrated strong ability in this area. When it comes to communication and exceptional, I have always taken a proactive, results-driven approach and delivered measurable impact. This has shaped my approach to every project I take on.",
+      "action": "per-sentence grounding check (same verifier as v1)",
+      "observation": "coverage=0.00 confidence=0.00",
+      "reasoning": "",
+      "confidence": 0.0,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T08:33:21.331629Z",
+      "stage": "bucket",
+      "input_summary": "I have consistently demonstrated strong ability in this area. When it comes to communication and exceptional, I have always taken a proactive, results-driven approach and delivered measurable impact. This has shaped my approach to every project I take on.",
+      "action": "derive fit bucket from coverage+confidence, not a self-reported label",
+      "observation": "gap",
+      "reasoning": "A self-reported label from generation isn't independently checkable; a derived one is.",
+      "confidence": null,
+      "decision": "gap"
+    }
+  ]
+}

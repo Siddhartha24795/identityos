@@ -122,11 +122,59 @@ confidence.** Discovered as a real bug during v2's own eval run, not
 designed in from the start — see docs/hot_take.md's v2 addendum. A claim
 can be fully grounded and still be a "no."
 
-## What is explicitly NOT in v1 or v2
+## v3 addendum — Browser Automation
 
-- Browser automation / form filling (docs/roadmap.md v3)
+v3 adds one more pipeline (`services/browser_engine/`), reusing v1/v2's
+retrieval + generation + verification unmodified for free-text fields —
+only field detection, mapping, and the human-approval checkpoint are new:
+
+```
+BrowserController.open(url) -> observe()  (DOM inspection: label text +
+  input type -> DetectedField[], packages/schemas/browser.py)
+        |
+        v
+  field_mapper.map_field() per field, dispatched on field_type:
+    text     -> known-profile lookup (name/email) or HALT
+    select   -> lexical overlap between options and Digital Self facts
+    textarea -> retrieve_hybrid() -> format_context() -> provider.complete()
+                -> verify_answer()   [the exact v1/v2 pipeline, unmodified]
+    checkbox -> deferred until every other field's confidence is known
+        |
+        v
+  fill + re-observe -> BROWSER VERIFICATION: compare each field's live DOM
+  value to the intended fill value (not just "did fill() raise")
+        |
+        v
+  checkbox decision from aggregate confidence + verification
+        |
+        v
+  agent.py: HALT FOR APPROVAL, always logged — submit only if the CALLER
+  passed approve_submit=True; no code path lets the agent submit on its own
+```
+
+**Why the human-approval gate lives in `agent.py`, not the CLI script.**
+Ground rule 4 ("keep consequential actions controlled through a sandbox or
+simulation; add human approval before the action happens") is enforced at
+the layer that actually calls `browser.click(submit_selector)`, not at the
+UI wrapping it — `scripts/run_browser_demo.py`'s `--approve-submit` flag
+is the only way a human ever sets that argument true, and
+`services/evaluation/run_eval_browser.py` never does. This mirrors v2's
+"derive, don't self-report" principle above: the checkpoint is a hard gate
+in code, not a convention a caller is trusted to follow.
+
+Full pipeline, results, and the two bugs found by reading v3's own
+trajectory output: docs/evaluation_browser.md.
+
+## What is explicitly NOT in v1, v2, or v3
+
+- Multi-page navigation, file uploads, CAPTCHA/OTP/MFA handling
+  (docs/roadmap.md v3.1+) — v3.0's synthetic form has none of these, so
+  nothing has been built or tested against them yet.
+- A real third-party browser target — v3.0 demonstrates against a local,
+  offline, synthetic form the project controls, for the same reason v1/v2
+  use the author's own documents rather than a scraped corpus.
 - Multi-agent orchestrator, opportunity discovery, application strategy
-  narrative planning, document generation (v2.1/v3)
+  narrative planning (v4)
 - Self-improvement / learning engine with counterfactual promotion (v4)
 - Graph database, web UI, Next.js frontend (v5)
 - Automatic belief inference from unstructured documents (v1/v2 hand-seed

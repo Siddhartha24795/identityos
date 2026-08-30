@@ -9,6 +9,15 @@ from .qa import (
 )
 from .application import RealAssessment, FitBucket, ApplicationRequirement, Assessment
 from .document import DocumentSection, GeneratedDocument
+from .browser import (
+    FieldType,
+    DetectedField,
+    BrowserObservation,
+    ActionType,
+    BrowserAction,
+    FieldResult,
+    BrowserTaskResult,
+)
 
 __all__ = [
     "Confidence",
@@ -29,4 +38,11 @@ __all__ = [
     "Assessment",
     "DocumentSection",
     "GeneratedDocument",
+    "FieldType",
+    "DetectedField",
+    "BrowserObservation",
+    "ActionType",
+    "BrowserAction",
+    "FieldResult",
+    "BrowserTaskResult",
 ]

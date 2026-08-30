@@ -1,9 +1,10 @@
-.PHONY: setup build-identity eval-mock eval-real eval-v2-mock eval-v2-real eval-v2-semantic eval-documents test clean
+.PHONY: setup build-identity eval-mock eval-real eval-v2-mock eval-v2-real eval-v2-semantic eval-documents eval-browser test clean
 
 setup:
 	python3 -m venv .venv
 	.venv/bin/pip install --upgrade pip
 	.venv/bin/pip install -r requirements.txt
+	.venv/bin/python -m playwright install chromium
 
 build-identity:
 	.venv/bin/python scripts/build_digital_self.py
@@ -35,6 +36,12 @@ eval-v2-real: build-identity
 # retrieval (fastembed) so the real narrative-state/citation behavior shows.
 eval-documents: build-identity
 	.venv/bin/python scripts/run_eval_documents.py mock docs_mock fastembed
+
+# v3 — fills the local synthetic application form (data/applications/local_demo/),
+# verifies each field, and halts before submit (never submits — no --approve-submit
+# flag is passed here; see scripts/run_browser_demo.py for that checkpoint).
+eval-browser: build-identity
+	.venv/bin/python scripts/run_browser_demo.py mock browser_mock fastembed
 
 test:
 	.venv/bin/python -m pytest tests/ -q

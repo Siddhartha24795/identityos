@@ -3,7 +3,7 @@
   "system_name": "baseline_rag",
   "steps": [
     {
-      "timestamp": "2026-08-30T07:30:44.703405Z",
+      "timestamp": "2026-08-30T08:33:20.897225Z",
       "stage": "retrieve",
       "input_summary": "Do you have experience building or running a professional membership organization?",
       "action": "dump the entire fact store as unstructured text (no ranking, no ids)",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T07:30:44.704717Z",
+      "timestamp": "2026-08-30T08:33:20.898124Z",
       "stage": "generate",
       "input_summary": "Do you have experience building or running a professional membership organization?",
       "action": "call provider with the full unstructured context dump",

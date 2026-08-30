@@ -176,3 +176,31 @@ formula wouldn't fix it, because the signal being weighted isn't the
 signal the decision needs. req07 and req12 stay open, unfixed, with the
 conclusion recorded rather than a third heuristic attempted: the next real
 step needs semantic judgment (a real LLM call), not another lexical proxy.
+
+---
+
+# v3 — Browser automation, plus two real bugs found by reading its own trajectory
+
+Building the browser agent (`services/browser_engine/`) followed the same
+build-then-read-the-actual-output discipline as every prior version, and it
+found two real bugs on the very first run — one scoped to v3, one in
+infrastructure every prior version had also been silently exposed to.
+
+| Stage | What we tried and why | Evidence | Decision / learning |
+|---|---|---|---|
+| **Iteration 16 (v3.0) — select-field verification bug** | First full run filled and re-observed all 6 fields of the local synthetic application form to verify each fill. | The "desired role" `<select>` field showed `FAIL` on verification despite being filled with the correct, visible option label. Traced to `BrowserController.observe()` using `el.input_value()`, which returns the option's `value` attribute (e.g. `cto_leadership`), while `field_mapper.py` fills and compares by the option's visible *label* text (e.g. `CTO / technical leadership`). | **Fixed**: `observe()` now reads `option:checked`'s `inner_text()` instead, so fill/observe/compare all use the same representation. Re-ran the demo: verification now shows `OK` for every field (`n_verified` 4/6 -> 6/6). |
+| **Iteration 17 (v3.0) — MockProvider prompt-parsing bug, found via v3, scoped beyond it** | Reading the generated text for the "most impactful project" field found the literal fragment `"...Perforce. What is your most impactful project, and why? FIELD LABEL:"` leaked into the answer — clearly not real evidence. | Traced to `MockProvider.complete()`'s parser hardcoding a literal `"QUESTION:"` header; v3's `field_mapper.py` prompts with `"FIELD LABEL:"` instead, so the parser fell back to treating the whole prompt (label included) as its own context, letting the label self-match and leak into the answer. Grepped the rest of the codebase and confirmed the identical latent defect in v2's `assess.py` (`"REQUIREMENT:"`) and v2.5's `generate.py` (`"SECTION PROMPT:"`) — masked there because real matching facts normally outscore a self-matching label, until v3's weaker-retrieval case made it visible. | **Fixed at the root, in `mock_provider.py` only** — the parser no longer requires a specific keyword; it treats the text after the last blank line as the query regardless of the header's name. Re-ran v1, v2 (all three retrieval arms), and v2.5's eval suites afterward, not just v3's: v1, `identityos_v2` (lexical), and `identityos_v2_hybrid` were completely unaffected; `identityos_v2_semantic`'s dangerous overclaim rate — already the worst of the three arms and never the shipped default — got honestly worse (0.50 -> 0.75), because the bug had been partially masking an existing weakness rather than causing a new one. Full numbers: docs/evaluation_v2.md's v3 addendum, docs/evaluation_documents.md's v3 addendum, docs/hot_take.md's v3 addendum. |
+| **Final (v3.0)** | Full run: observe -> map 6 fields -> fill -> re-observe/verify -> decide the accuracy-confirmation checkbox from aggregate confidence + verification -> halt for human approval (never submits without `--approve-submit`, ground rule 4). | `n_fields: 6, n_filled: 6, n_verified: 6, avg_evidence_coverage: 1.0, avg_confidence: 0.934, halted_for_approval: true, submitted: false`. Full trajectory: docs/evaluation_browser.md. | Shipped. Added 7 regression tests (`tests/test_browser_engine.py`), including an end-to-end Chromium-launching test that would fail again if either bug regressed. |
+
+## Main failure mode, v3.0 (see docs/hot_take.md for the full writeup)
+
+Both bugs share the same shape as every prior finding in this project: a
+component that looked correct because its passing score hid the actual
+mechanism, caught only by reading the real trajectory output rather than
+trusting the summary number. The second bug is the more important one —
+it lived in shared test infrastructure (`mock_provider.py`), had been
+present since v2.0, and was never caught earlier because every earlier
+caller's retrieval happened to be strong enough to mask it. It is not
+scoped to v3; it is a general lesson about deterministic test harnesses
+needing the same "does this generalize past the one caller that motivated
+it" scrutiny as the pipeline they test.

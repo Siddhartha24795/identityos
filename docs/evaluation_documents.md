@@ -109,3 +109,32 @@ and why the fix is verifiable by literally reading the diff) rather than
 paraphrasing it away. A real LLM run would likely produce more natural
 prose while needing the exact same source-correction discipline to avoid
 the same leak in different words.
+
+## v3 addendum: re-checked after a shared MockProvider fix
+
+v3's development found and fixed a general bug in
+`services/providers/mock_provider.py` (its prompt parser only recognized a
+literal `"QUESTION:"` header; v2.5's `document_engine/generate.py` uses
+`"SECTION PROMPT:"`, which it never matched — full mechanism in
+docs/evaluation_v2.md's v3 addendum and docs/hot_take.md). Re-ran this
+eval suite afterward, per this project's standing practice of re-verifying
+every consumer of shared infrastructure whenever it changes:
+
+| Metric | Before fix (post-v2.7) | After fix |
+|---|---|---|
+| Evidence coverage | 0.91 | **1.00** |
+| Unsupported claim rate | 0.10 | **0.00** |
+| Repeated-evidence rate | 0.39 | 0.41 |
+
+Coverage and unsupported-claim rate both moved in the expected direction:
+the old bug could let a section prompt's own label text leak into a
+generated section as unlabeled prose, which the verifier correctly scored
+as an unsupported claim; with that fixed, every section's claims trace
+cleanly to cited evidence. Repeated-evidence rate moved slightly the other
+way (0.39 -> 0.41) — a side effect of which facts each section's retrieval
+now actually surfaces, not a regression in `_prefer_unused()` itself
+(unchanged in this fix). Not chased further: it's a narrative-diversity
+metric, not a safety one, and the movement is well within the range
+already seen across v2.5-v2.7's corpus changes (0.32 -> 0.39). Regenerated
+letter re-read after the fix: still clean of every application-specific
+phrase flagged in v2.5-v2.7.

@@ -1,0 +1,96 @@
+{
+  "question_id": "browser_demo",
+  "system_name": "identityos_browser_v3",
+  "steps": [
+    {
+      "timestamp": "2026-08-30T08:34:05.388083Z",
+      "stage": "observe",
+      "input_summary": "file:///home/siddhartha/siddhartha/features/identityos-v3.0/data/applications/local_demo/application_form.html",
+      "action": "detected 6 fields via DOM inspection",
+      "observation": "Full name (text), Email address (text), Which of these best matches the role you're applying for? (select), What is your most impactful project, and why? (textarea), Why are you a strong fit for a technology leadership role, and what drives you professionally? (textarea), I confirm the information provided above is accurate to the best of my knowledge. (checkbox)",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T08:34:05.388118Z",
+      "stage": "plan",
+      "input_summary": "Full name",
+      "action": "mapped as fill_text (direct/known-profile mapping)",
+      "observation": "Siddhartha Mishra",
+      "reasoning": "",
+      "confidence": 0.99,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T08:34:05.394969Z",
+      "stage": "plan",
+      "input_summary": "Email address",
+      "action": "mapped as fill_text (direct/known-profile mapping)",
+      "observation": "siddharthamishra24795@gmail.com",
+      "reasoning": "",
+      "confidence": 0.95,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T08:34:05.399547Z",
+      "stage": "plan",
+      "input_summary": "Which of these best matches the role you're applying for?",
+      "action": "mapped as select_option (lexical option match)",
+      "observation": "CTO / technical leadership",
+      "reasoning": "",
+      "confidence": 0.85,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T08:34:05.501192Z",
+      "stage": "plan",
+      "input_summary": "What is your most impactful project, and why?",
+      "action": "mapped as fill_text (coverage=1.00 confidence=0.99)",
+      "observation": "[resume:045] (verified fact) Python, NumPy, Pandas, Matplotlib, SQL, Android, Java, C++, C, Git, Perforce.",
+      "reasoning": "",
+      "confidence": 0.99,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T08:34:05.517145Z",
+      "stage": "plan",
+      "input_summary": "Why are you a strong fit for a technology leadership role, and what drives you professionally?",
+      "action": "mapped as fill_text (coverage=1.00 confidence=0.89)",
+      "observation": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizatio",
+      "reasoning": "",
+      "confidence": 0.892,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T08:34:05.635368Z",
+      "stage": "verify",
+      "input_summary": "re-observed page after filling",
+      "action": "compared each field's current DOM value to the intended fill value",
+      "observation": "Full name: OK; Email address: OK; Which of these best matches the role you're applying for?: OK; What is your most impactful project, and why?: OK; Why are you a strong fit for a technology leadership role, and what drives you professionally?: OK",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T08:34:07.473934Z",
+      "stage": "verify",
+      "input_summary": "I confirm the information provided above is accurate to the best of my knowledge.",
+      "action": "decide accuracy-confirmation checkbox from aggregate field confidence + verification",
+      "observation": "avg field confidence 0.93 >= 0.7 and every field verified",
+      "reasoning": "",
+      "confidence": 0.9343999999999999,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T08:34:07.473944Z",
+      "stage": "halt_for_approval",
+      "input_summary": "submit action",
+      "action": "pausing before any submit click (ground rule 4: sandbox consequential actions)",
+      "observation": "awaiting explicit approve_submit=True from a human-invoked caller",
+      "reasoning": "",
+      "confidence": null,
+      "decision": "not approved — halted"
+    }
+  ]
+}

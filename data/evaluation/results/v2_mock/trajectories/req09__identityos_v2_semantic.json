@@ -1,0 +1,46 @@
+{
+  "question_id": "req09",
+  "system_name": "identityos_v2_semantic",
+  "steps": [
+    {
+      "timestamp": "2026-08-30T08:33:21.327502Z",
+      "stage": "retrieve",
+      "input_summary": "Government & policy engagement (MeitY, DST, NITI Aayog, IIT Council)",
+      "action": "embedding-similarity retrieval (hash): top 0 facts, 0 beliefs",
+      "observation": "(no matching evidence found)",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T08:33:21.327526Z",
+      "stage": "generate",
+      "input_summary": "Government & policy engagement (MeitY, DST, NITI Aayog, IIT Council)",
+      "action": "call provider with cited, confidence-annotated context",
+      "observation": "Over the years, I have built a reputation for excellence here. When it comes to aayog and council and dst, I have always taken a proactive, results-driven approach and delivered measurable impact. I look forward to bringing this strength to your organization.",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T08:33:21.327566Z",
+      "stage": "verify",
+      "input_summary": "Over the years, I have built a reputation for excellence here. When it comes to aayog and council and dst, I have always taken a proactive, results-driven approach and delivered measurable impact. I look forward to bringing this strength to your organization.",
+      "action": "per-sentence grounding check (same verifier as lexical identityos_v2)",
+      "observation": "coverage=0.00 confidence=0.00",
+      "reasoning": "",
+      "confidence": 0.0,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T08:33:21.327570Z",
+      "stage": "bucket",
+      "input_summary": "Over the years, I have built a reputation for excellence here. When it comes to aayog and council and dst, I have always taken a proactive, results-driven approach and delivered measurable impact. I look forward to bringing this strength to your organization.",
+      "action": "derive fit bucket from coverage+confidence+polarity (same bucketing.py as lexical)",
+      "observation": "gap",
+      "reasoning": "",
+      "confidence": null,
+      "decision": "gap"
+    }
+  ]
+}

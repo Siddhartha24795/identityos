@@ -1,0 +1,197 @@
+{
+  "observation": {
+    "url": "file:///home/siddhartha/siddhartha/features/identityos-v3.0/data/applications/local_demo/application_form.html",
+    "title": "Generic Technology Role \u2014 Application Form (local demo)",
+    "visible_text": "Application \u2014 Technology Leadership Role\n\nThis is a local, synthetic form for testing IdentityOS's browser agent. Nothing here is submitted anywhere.\n\nFull name\nEmail address\nWhich of these best matches the role you're applying for?\n-- select --\nIndividual-contributor software engineer\nResearch scientist\nEngineering manager\nCTO / technical leadership\nWhat is your most impactful project, and why?\nWhy are you a strong fit for a technology leadership role, and what drives you professionally?\n I confirm the information provided above is accurate to the best of my knowledge.\nSubmit Application",
+    "fields": [
+      {
+        "selector": "#full_name",
+        "label": "Full name",
+        "field_type": "text",
+        "options": [],
+        "current_value": ""
+      },
+      {
+        "selector": "#email",
+        "label": "Email address",
+        "field_type": "text",
+        "options": [],
+        "current_value": ""
+      },
+      {
+        "selector": "#desired_role",
+        "label": "Which of these best matches the role you're applying for?",
+        "field_type": "select",
+        "options": [
+          "Individual-contributor software engineer",
+          "Research scientist",
+          "Engineering manager",
+          "CTO / technical leadership"
+        ],
+        "current_value": "-- select --"
+      },
+      {
+        "selector": "#impactful_project",
+        "label": "What is your most impactful project, and why?",
+        "field_type": "textarea",
+        "options": [],
+        "current_value": ""
+      },
+      {
+        "selector": "#motivation",
+        "label": "Why are you a strong fit for a technology leadership role, and what drives you professionally?",
+        "field_type": "textarea",
+        "options": [],
+        "current_value": ""
+      },
+      {
+        "selector": "#confirm_accurate",
+        "label": "I confirm the information provided above is accurate to the best of my knowledge.",
+        "field_type": "checkbox",
+        "options": [],
+        "current_value": ""
+      }
+    ],
+    "submit_selector": "#submit-btn",
+    "errors": []
+  },
+  "field_results": [
+    {
+      "field": {
+        "selector": "#full_name",
+        "label": "Full name",
+        "field_type": "text",
+        "options": [],
+        "current_value": ""
+      },
+      "action": {
+        "action_type": "fill_text",
+        "target_selector": "#full_name",
+        "value": "Siddhartha Mishra",
+        "rationale": "Digital Self person_name",
+        "confidence": 0.99,
+        "evidence_refs": []
+      },
+      "filled_value": "Siddhartha Mishra",
+      "verified": true,
+      "verification_note": "confirmed on re-observation"
+    },
+    {
+      "field": {
+        "selector": "#email",
+        "label": "Email address",
+        "field_type": "text",
+        "options": [],
+        "current_value": ""
+      },
+      "action": {
+        "action_type": "fill_text",
+        "target_selector": "#email",
+        "value": "siddharthamishra24795@gmail.com",
+        "rationale": "known profile field, not a Fact/Belief claim",
+        "confidence": 0.95,
+        "evidence_refs": []
+      },
+      "filled_value": "siddharthamishra24795@gmail.com",
+      "verified": true,
+      "verification_note": "confirmed on re-observation"
+    },
+    {
+      "field": {
+        "selector": "#desired_role",
+        "label": "Which of these best matches the role you're applying for?",
+        "field_type": "select",
+        "options": [
+          "Individual-contributor software engineer",
+          "Research scientist",
+          "Engineering manager",
+          "CTO / technical leadership"
+        ],
+        "current_value": "-- select --"
+      },
+      "action": {
+        "action_type": "select_option",
+        "target_selector": "#desired_role",
+        "value": "CTO / technical leadership",
+        "rationale": "current role matches option 'CTO / technical leadership'",
+        "confidence": 0.85,
+        "evidence_refs": []
+      },
+      "filled_value": "CTO / technical leadership",
+      "verified": true,
+      "verification_note": "confirmed on re-observation"
+    },
+    {
+      "field": {
+        "selector": "#impactful_project",
+        "label": "What is your most impactful project, and why?",
+        "field_type": "textarea",
+        "options": [],
+        "current_value": ""
+      },
+      "action": {
+        "action_type": "fill_text",
+        "target_selector": "#impactful_project",
+        "value": "[resume:045] (verified fact) Python, NumPy, Pandas, Matplotlib, SQL, Android, Java, C++, C, Git, Perforce.",
+        "rationale": "generated from 1 facts + 0 beliefs via hybrid retrieval",
+        "confidence": 0.99,
+        "evidence_refs": [
+          "resume:045"
+        ]
+      },
+      "filled_value": "[resume:045] (verified fact) Python, NumPy, Pandas, Matplotlib, SQL, Android, Java, C++, C, Git, Perforce.",
+      "verified": true,
+      "verification_note": "confirmed on re-observation"
+    },
+    {
+      "field": {
+        "selector": "#motivation",
+        "label": "Why are you a strong fit for a technology leadership role, and what drives you professionally?",
+        "field_type": "textarea",
+        "options": [],
+        "current_value": ""
+      },
+      "action": {
+        "action_type": "fill_text",
+        "target_selector": "#motivation",
+        "value": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical \u2014 it is 24x7 production accountability across live customer sites. [dossier_excerpts:010] (verified fact) States that relocating to Bengaluru and learning Kannada are conditions he is committing to for the IITACB CEO role specifically, not concessions being requested. [dossier_narrative:007] (verified fact) Accustomed to explaining deep technology to non-technical boards and to translating executive intent into engineering commitments, built over six years of guest lectures, mentoring programmes and hackathon judging panels plus representing India at the Japan Hackathon 2021.",
+        "rationale": "generated from 8 facts + 0 beliefs via hybrid retrieval",
+        "confidence": 0.892,
+        "evidence_refs": [
+          "dossier_excerpts:008",
+          "dossier_narrative:001",
+          "dossier_narrative:001",
+          "dossier_excerpts:010",
+          "dossier_narrative:007"
+        ]
+      },
+      "filled_value": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical \u2014 it is 24x7 production accountability across live customer sites. [dossier_excerpts:010] (verified fact) States that relocating to Bengaluru and learning Kannada are conditions he is committing to for the IITACB CEO role specifically, not concessions being requested. [dossier_narrative:007] (verified fact) Accustomed to explaining deep technology to non-technical boards and to translating executive intent into engineering commitments, built over six years of guest lectures, mentoring programmes and hackathon judging panels plus representing India at the Japan Hackathon 2021.",
+      "verified": true,
+      "verification_note": "confirmed on re-observation"
+    },
+    {
+      "field": {
+        "selector": "#confirm_accurate",
+        "label": "I confirm the information provided above is accurate to the best of my knowledge.",
+        "field_type": "checkbox",
+        "options": [],
+        "current_value": ""
+      },
+      "action": {
+        "action_type": "check",
+        "target_selector": "#confirm_accurate",
+        "value": "checked",
+        "rationale": "avg field confidence 0.93 >= 0.7 and every field verified",
+        "confidence": 0.9343999999999999,
+        "evidence_refs": []
+      },
+      "filled_value": "checked",
+      "verified": true,
+      "verification_note": ""
+    }
+  ],
+  "submitted": false,
+  "halted_for_approval": true,
+  "avg_evidence_coverage": 1.0,
+  "avg_confidence": 0.9343999999999999
+}

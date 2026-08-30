@@ -3,7 +3,7 @@
   "system_name": "identityos_v2_hybrid",
   "steps": [
     {
-      "timestamp": "2026-08-30T07:31:00.372666Z",
+      "timestamp": "2026-08-30T08:33:37.407696Z",
       "stage": "retrieve",
       "input_summary": "Strategic planning & institution-building",
       "action": "lexical retrieval, semantic fallback only if empty: 8 facts, 0 beliefs",
@@ -13,34 +13,34 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T07:31:00.372951Z",
+      "timestamp": "2026-08-30T08:33:37.407833Z",
       "stage": "generate",
       "input_summary": "Strategic planning & institution-building",
       "action": "call provider with cited, confidence-annotated context",
-      "observation": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:004] (verified fact) Defined technical strategy, architecture and organisation-wide evaluation frameworks at Jinn Labs, building governance structures where none existed; the same machinery run earlier at student scale heading four chapters simultaneously and organising festivals at KNIT Sultanpur. [dossier_excerpts:011] (verified fact) Siddhartha's dossier states: \"I am a working generative-AI practitioner... I can tell a real deep-tech proposition from AI theatre before [an institution]'s name is on it,\" offered as a self-description of his professional judgment. [dossier_excerpts:013] (verified fact) Siddhartha's dossier states he replaced subjective judgement with eval-driven release discipline at Jinn Labs, tracking every claim as a metric release over release, and that he would apply the same discipline to any institution he leads.",
+      "observation": "[dossier_excerpts:012] (verified fact) Siddhartha's dossier states a preference for institution-building and zero-to-one problems, describing it as \"the only kind of problem I have ever been hired to solve.\" [dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA. [dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_excerpts:009] (verified fact) States that the IITACB Managing Committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to a record of building or running a professional membership body.",
       "reasoning": "",
       "confidence": null,
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T07:31:00.373231Z",
+      "timestamp": "2026-08-30T08:33:37.408060Z",
       "stage": "verify",
-      "input_summary": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:004] (verified fact) Defined technical strategy, architecture and organisation-wide evaluation frameworks at Jinn Labs, building governance structures where none existed; the same machinery run earlier at student scale heading four chapters simultaneously and organising festivals at KNIT Sultanpur. [dossier_excerpts:011] (verified fact) Siddhartha's dossier states: \"I am a working generative-AI practitioner... I can tell a real deep-tech proposition from AI theatre before [an institution]'s name is on it,\" offered as a self-description of his professional judgment. [dossier_excerpts:013] (verified fact) Siddhartha's dossier states he replaced subjective judgement with eval-driven release discipline at Jinn Labs, tracking every claim as a metric release over release, and that he would apply the same discipline to any institution he leads.",
+      "input_summary": "[dossier_excerpts:012] (verified fact) Siddhartha's dossier states a preference for institution-building and zero-to-one problems, describing it as \"the only kind of problem I have ever been hired to solve.\" [dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA. [dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_excerpts:009] (verified fact) States that the IITACB Managing Committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to a record of building or running a professional membership body.",
       "action": "per-sentence grounding check (same verifier as lexical identityos_v2)",
-      "observation": "coverage=1.00 confidence=0.89",
+      "observation": "coverage=1.00 confidence=0.99",
       "reasoning": "",
-      "confidence": 0.892,
+      "confidence": 0.9899999999999999,
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T07:31:00.373237Z",
+      "timestamp": "2026-08-30T08:33:37.408065Z",
       "stage": "bucket",
-      "input_summary": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:004] (verified fact) Defined technical strategy, architecture and organisation-wide evaluation frameworks at Jinn Labs, building governance structures where none existed; the same machinery run earlier at student scale heading four chapters simultaneously and organising festivals at KNIT Sultanpur. [dossier_excerpts:011] (verified fact) Siddhartha's dossier states: \"I am a working generative-AI practitioner... I can tell a real deep-tech proposition from AI theatre before [an institution]'s name is on it,\" offered as a self-description of his professional judgment. [dossier_excerpts:013] (verified fact) Siddhartha's dossier states he replaced subjective judgement with eval-driven release discipline at Jinn Labs, tracking every claim as a metric release over release, and that he would apply the same discipline to any institution he leads.",
+      "input_summary": "[dossier_excerpts:012] (verified fact) Siddhartha's dossier states a preference for institution-building and zero-to-one problems, describing it as \"the only kind of problem I have ever been hired to solve.\" [dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA. [dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_excerpts:009] (verified fact) States that the IITACB Managing Committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to a record of building or running a professional membership body.",
       "action": "derive fit bucket from coverage+confidence+polarity (same bucketing.py)",
-      "observation": "met_or_better",
+      "observation": "partial",
       "reasoning": "",
       "confidence": null,
-      "decision": "met_or_better"
+      "decision": "partial"
     }
   ]
 }

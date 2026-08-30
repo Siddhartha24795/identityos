@@ -1,21 +1,24 @@
-# IdentityOS — v2.9
+# IdentityOS — v3.0
 
 **An autonomous representative that answers application questions,
-assesses job-requirement fit, and generates application documents on a
-person's behalf, with evidence, calibrated confidence, and refusal instead
-of fabrication.**
+assesses job-requirement fit, generates application documents, and fills
+(never submits without a human) real application forms in a browser, on a
+person's behalf — with evidence, calibrated confidence, and refusal
+instead of fabrication.**
 
 Built for the micro1 Agentic Workflows Hackathon, against the full brief
 preserved in `PROMPT.md`. This repo builds v1 (Q&A), v2 (requirement-fit
 assessment against a real, adjudicated application, iterated through
-v2.4), and v2.5-v2.9 (document generation, two corpus authoring
-corrections, and two diagnosed-but-rejected retrieval experiments that
-together identify a real boundary of lexical retrieval) of that brief —
-see [docs/roadmap.md](docs/roadmap.md) for what's deferred to v2.10-v5 and
+v2.4), v2.5-v2.9 (document generation, two corpus authoring corrections,
+and two diagnosed-but-rejected retrieval experiments that together
+identify a real boundary of lexical retrieval), and v3.0 (a Playwright
+browser agent that fills and browser-verifies a form, gated by a literal,
+unconditional human-approval checkpoint before any submit) of that brief —
+see [docs/roadmap.md](docs/roadmap.md) for what's deferred to v3.1-v5 and
 why. Prior versions frozen at `../identityos-v1/`, `../identityos-v2/`,
 `../identityos-v2.1/`, `../identityos-v2.2/`, `../identityos-v2.3/`,
 `../identityos-v2.4/`, `../identityos-v2.5/`, `../identityos-v2.6/`,
-`../identityos-v2.7/`, `../identityos-v2.8/`.
+`../identityos-v2.7/`, `../identityos-v2.8/`, `../identityos-v2.9/`.
 
 ## Who has this problem, and why it's worth solving
 
@@ -56,27 +59,35 @@ make eval-mock         # v1: builds Digital Self, runs all 3 systems on 19 Q&A q
 make eval-v2-mock      # v2: runs baselines + lexical identityos_v2 on 14 real requirements
 make eval-v2-semantic  # v2.3/v2.4: adds the semantic + hybrid retrieval comparison arms
 make eval-documents    # v2.5: generates an actual cover letter with each system
+make eval-browser      # v3.0: fills + browser-verifies a local synthetic application form, halts before submit
 ```
 
 Expect each in under 10 seconds, $0 cost — the default `PROVIDER=mock` (LLM)
 and `EMBEDDING_PROVIDER=hash` (embeddings) are deterministic, dependency-light
 stand-ins built exactly so judges can reproduce the main result from a clean
-environment (see docs/evaluation.md, docs/evaluation_v2.md, and
-docs/evaluation_documents.md for what that does and doesn't prove).
-`make eval-v2-semantic` / `make eval-documents` download a ~65MB ONNX
-embedding model on first run (fastembed, no API key, no torch) — still $0,
-but does need one-time network access. Output per run:
-- `data/evaluation/results/<tag>/summary.json` (v1), `application_summary.json` (v2), or `document_summary.json` (v2.5)
+environment (see docs/evaluation.md, docs/evaluation_v2.md,
+docs/evaluation_documents.md, and docs/evaluation_browser.md for what that
+does and doesn't prove).
+`make eval-v2-semantic` / `make eval-documents` / `make eval-browser`
+download a ~65MB ONNX embedding model on first run (fastembed, no API key,
+no torch); `make eval-browser` additionally needs a one-time
+`playwright install chromium` (~300MB, handled by `make setup`) — still
+$0, but does need one-time network access. Output per run:
+- `data/evaluation/results/<tag>/summary.json` (v1), `application_summary.json` (v2), `document_summary.json` (v2.5), or `browser_result.json` (v3)
 - `data/evaluation/results/<tag>/answers.json` (v1) or `application_answers.json` (v2)
 - `data/evaluation/results/<tag>/documents/<system>.md` — the actual generated cover letters (v2.5)
 - `data/evaluation/results/<tag>/trajectories/*.md` — one file per
-  (question-or-requirement-or-section, system) pair, human-readable, per
-  the hackathon's trajectory deliverable
+  (question-or-requirement-or-section-or-form-fill, system) pair,
+  human-readable, per the hackathon's trajectory deliverable
 
 To get a qualitative read with a real model: copy `.env.example` to `.env`,
-set `ANTHROPIC_API_KEY` or `OPENAI_API_KEY`, then `make eval-real` / `make eval-v2-real`.
+set `ANTHROPIC_API_KEY` or `OPENAI_API_KEY`, then `make eval-real` / `make eval-v2-real`
+(v3's browser agent accepts the same `PROVIDER` argument — see
+`scripts/run_browser_demo.py`).
 
-Run the smoke test suite: `make test` (26 tests, <1s, no keys/downloads needed).
+Run the smoke test suite: `make test` (33 tests, ~3s including one real
+Chromium launch for v3's end-to-end regression test, no keys/downloads
+beyond the one-time Chromium install needed).
 
 ## Results (reference runs, `PROVIDER=mock`)
 
@@ -130,7 +141,11 @@ stayed the default. Full trade-off: [docs/evaluation_v2.md](docs/evaluation_v2.m
 |---|---|---|---|
 | Evidence coverage | 0.85 | 0.99 | **0.99** |
 | Assessment agreement rate | 0.57 | 0.64 | **0.71** |
-| Dangerous overclaim rate | **0.00** | 0.50 | **0.00** |
+| Dangerous overclaim rate | **0.00** | 0.75* | **0.00** |
+
+*Re-measured after v3.0 fixed a shared MockProvider bug (below) — was
+0.50 before the fix, a previously-masked weakness in a system that was
+never the shipped default. Full story: [docs/evaluation_v2.md](docs/evaluation_v2.md).
 
 Diagnosing *why* v2.3 regressed (noise only appeared when semantic
 overrode a working lexical answer, never when filling a real gap) led
@@ -182,15 +197,54 @@ applied the identical fix there too, and re-reading again confirmed the
 letter is now clean of every flagged phrase across both rounds. Full
 story, and the actual generated letters: [docs/evaluation_documents.md](docs/evaluation_documents.md).
 
+**v3.0 — browser automation, halted before submit:**
+
+| Metric | Value |
+|---|---|
+| Fields detected / filled | 6 / 6 |
+| Fields browser-verified (DOM value matches intended fill) | **6 / 6** |
+| Avg. evidence coverage (free-text fields) | **1.00** |
+| Avg. confidence (fillable fields) | **0.93** |
+| Halted for approval / Submitted | **true / false** |
+
+A real Playwright agent (`services/browser_engine/`) opens a local,
+offline, synthetic application form, detects all four field types the
+brief names (text, textarea, select, checkbox) via DOM inspection —
+generalized, not hard-coded to this form's markup — maps each to Digital
+Self data (reusing v1/v2's hybrid retrieval and verification unmodified
+for free-text fields), fills it, re-observes the live DOM to verify the
+value actually stuck, and **halts before any submit**: there is no code
+path where the agent can decide on its own to click submit — a human must
+explicitly pass `--approve-submit`, which the eval harness never does.
+This is ground rule 4 ("sandbox consequential actions, add human approval
+before the action happens") implemented literally, not just described.
+
+The first run reported only 4/6 fields verified. Reading the actual
+trajectory — the same discipline behind every other finding in this
+project — found two real bugs: a select-field verification mismatch
+(comparing an option's underlying value against its visible label text),
+and a systemic bug in the shared `MockProvider` test harness that had been
+silently present since v2.0 (its prompt parser only recognized v1's exact
+`"QUESTION:"` header, so v2/v2.5/v3's differently-labeled prompts fell
+through to a generic path that could leak label text into generated
+answers when retrieval was already weak). Both fixed at the root; every
+earlier eval suite was re-run afterward to check for drift, not assumed
+side-effect-free — the only real change was `identityos_v2_semantic`'s
+already-worst dangerous-overclaim rate getting honestly worse (0.50 ->
+0.75), a previously-masked weakness in a system that was never shipped as
+the default. Full story: [docs/evaluation_browser.md](docs/evaluation_browser.md).
+
 ## Improvement changelog
 
 [docs/improvement_changelog.md](docs/improvement_changelog.md) — baseline
-through final for both versions, including experiments we removed or that
+through final for every version, including experiments we removed or that
 stayed only partially fixed: a scoring rule fooled by the mock provider, a
 process mistake where a background research agent overstepped its brief
-mid-v1-build, and (v2) a bucketing rule that overclaimed a real admitted
-gap until a negation check was added — which itself only partly closes
-the gap (documented, not hidden).
+mid-v1-build, (v2) a bucketing rule that overclaimed a real admitted gap
+until a negation check was added, and (v3) two real bugs — a select-field
+verification mismatch and a shared MockProvider parsing bug dating to
+v2.0 — both found by reading the browser agent's own trajectory output
+(documented, not hidden).
 
 ## Main failure mode / hot take
 
@@ -225,8 +279,13 @@ test the fix against everything, not just the case that motivated it.
 v2.9: tried the actual fix v2.8 called for, twice, both ways rejected on
 the same full-benchmark test — a lexical relevance score just isn't the
 same signal as "which fact actually settles this question," and no amount
-of reweighting changes that. Full writeup, including what's still
-unfixed: [docs/hot_take.md](docs/hot_take.md).
+of reweighting changes that. v3: the same underlying mistake found one
+layer down, in the evaluation harness itself rather than the pipeline — a
+mock-provider parser built and validated against one caller's prompt
+shape quietly stopped being general the moment a second caller used a
+different one, and it took three versions and a browser agent's own field
+labels to finally produce a case weak enough to expose it. Full writeup,
+including what's still unfixed: [docs/hot_take.md](docs/hot_take.md).
 
 ## Hackathon compliance self-check
 
@@ -242,11 +301,12 @@ Full disclosure, and what "agent-use evidence" means in this repo:
 ## Repository map
 
 ```
-docs/                  problem statement, architecture, roadmap, evaluation (v1, v2, documents),
+docs/                  problem statement, architecture, roadmap, evaluation (v1, v2, documents, browser),
                         changelog, research hypotheses, hot take, demo script, agent disclosure
 packages/schemas/      typed Fact / Belief / Evidence / Question / Answer / Trajectory /
                         ApplicationRequirement / Assessment / FitBucket /
-                        DocumentSection / GeneratedDocument
+                        DocumentSection / GeneratedDocument /
+                        BrowserObservation / BrowserAction / FieldResult / BrowserTaskResult
 services/identity_engine/    ingestion + belief seeding + versioned storage
 services/providers/          pluggable LLM backend: mock (default) / openai / anthropic
 services/embeddings/         pluggable embedding backend: hash (default) / fastembed (v2.3)
@@ -256,9 +316,12 @@ services/application_engine/ v2: requirement-fit assessors (lexical, semantic,
                               hybrid) + polarity-aware bucketing
 services/document_engine/    v2.5: section-planned cover-letter generation +
                               narrative-state (avoid repeating evidence)
-services/evaluation/         scoring + all three eval harnesses
+services/browser_engine/     v3.0: Playwright controller + field mapping +
+                              human-approval-gated form-fill agent
+services/evaluation/         scoring + all four eval harnesses
 data/identity_sources/       the real source documents (owner's own, consented)
-data/applications/           the real 14-requirement application + its real human ground truth
+data/applications/           the real 14-requirement application + its real human ground truth,
+                              plus a local synthetic form for the v3 browser demo
 data/evaluation/              question bank + every eval harness's results/trajectories/documents
 data/.embedding_cache/        fastembed's downloaded model (gitignored, regenerable)
 scripts/               the commands judges actually run
@@ -268,15 +331,23 @@ PROMPT.md              the full original design brief, unabridged
 
 ## Ground-rules compliance (hackathon requirement)
 
-- Consequential actions: neither v1 nor v2 has any yet — no browser
-  execution, no real submission exists until v3 (docs/roadmap.md), so there
-  is nothing to sandbox or gate in this version.
+- Consequential actions: v3.0's browser agent can fill a form but has no
+  code path to submit one on its own — `services/browser_engine/agent.py`
+  submits only if the caller explicitly passes `approve_submit=True`
+  (`scripts/run_browser_demo.py`'s `--approve-submit` flag, off by
+  default and never set by the eval harness). Demonstrated against a
+  local, offline, synthetic form the project controls, never a real
+  third-party site. v1/v2/v2.5 have no consequential actions at all —
+  nothing to sandbox in those versions.
 - Data: the author's own resume/dossier and their own real, already-written
   CEO-application self-assessment, used with the data owner's consent
-  (the author is both the user and the subject).
+  (the author is both the user and the subject). The v3 demo form is a
+  new, self-authored, self-labeled synthetic page, not scraped from
+  anywhere.
 - No credentials in this submission; `.env.example` documents required
   vars, `.env` is gitignored.
-- Every claim in every generated answer/assessment is either citation-tagged
-  or flagged unsupported by `services/qa_engine/verification.py` — see
-  `data/evaluation/results/v1_mock/` and `data/evaluation/results/v2_mock/`
+- Every claim in every generated answer/assessment/form field is either
+  citation-tagged or flagged unsupported by
+  `services/qa_engine/verification.py` — see `data/evaluation/results/v1_mock/`,
+  `data/evaluation/results/v2_mock/`, and `data/evaluation/results/browser_mock/`
   for the evidence behind every number in this README.

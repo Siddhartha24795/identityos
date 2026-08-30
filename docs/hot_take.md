@@ -288,6 +288,60 @@ next real step is a system that can judge relevance semantically (a real
 LLM call, not a token-overlap proxy) rather than a fourth heuristic aimed
 at the same two requirements.
 
+## v3 addendum: a fifth substitution, this time in the harness itself, not the pipeline
+
+Every addendum above is about the pipeline substituting one question for
+another — grounding for relevance, for polarity, for scope. v3 found the
+same *shape* of mistake one level down, in the evaluation infrastructure
+those pipelines share. `MockProvider.complete()` (`services/providers/mock_provider.py`)
+parsed "where does context end and the question begin" by matching a
+literal `"QUESTION:"` string. That was never a general contract — it was
+v1's specific label, generalized to "the" label by an implicit assumption
+nobody wrote down. v2's `assess.py` prompts with `"REQUIREMENT:"`, v2.5's
+`document_engine/generate.py` with `"SECTION PROMPT:"`, and v3's own
+`field_mapper.py` with `"FIELD LABEL:"` — every one of them silently fell
+through to a fallback that treated the entire prompt, label included, as
+its own context. A label can trivially "match itself" under word-overlap
+scoring, so in exactly the cases where real retrieval was already weak,
+the label text itself became the highest-scoring "evidence" and leaked
+into the generated answer.
+
+**This is the same lesson as v1's original finding, aimed at a different
+layer**: a mechanism built and validated against one caller's shape
+(v1's `"QUESTION:"` prompts) quietly stops being general the moment a
+second caller uses a different shape, and nothing forces that gap to
+surface — it hides behind whichever cases still have strong-enough
+retrieval to outscore the self-match. It survived three versions
+(v2.0-v2.5) built on top of it before v3's own field-label prompts finally
+produced a case weak enough to make it visible in the actual trajectory
+output — the same "read the actual output, not just the score" discipline
+that found every other finding in this file, working exactly as intended,
+just slower this time because the earlier callers' retrieval was usually
+strong enough to mask it.
+
+**The fix generalizes on purpose, not just to the four known callers.**
+Rather than teaching the parser a fifth keyword, it now treats the text
+after the last blank line as the query regardless of what header precedes
+it — correct for any future caller's prompt shape, not just the ones this
+bug happened to be caught by. Re-running every existing eval suite
+afterward (the same discipline v2.6-v2.9 established for corpus changes,
+now applied to a shared-infrastructure change) found the fix was inert for
+every arm actually shipped as a default (v1, `identityos_v2` lexical,
+`identityos_v2_hybrid`), and made `identityos_v2_semantic`'s already-worst
+dangerous-overclaim rate honestly worse (0.50 -> 0.75) — a bug that had
+been *partially hiding* a real weakness in a system that was already never
+the shipped path. Full numbers: docs/evaluation_v2.md's v3 addendum,
+docs/evaluation_documents.md's v3 addendum.
+
+**The general point this adds**: a deterministic offline test harness is
+supposed to be the one part of a project where "the answer is knowable
+just by reading the code," and this bug shows that isn't automatic —
+harness code needs the same "does this generalize past the one case that
+motivated it" scrutiny as the pipeline it's testing, and re-running the
+full regression suite after fixing shared infrastructure is not optional
+paperwork, it's the only way to know a fix that looks purely additive
+didn't also change a number three versions upstream.
+
 ## The experiment we removed
 
 An earlier version of the hard-case scoring (services/evaluation/scoring.py)

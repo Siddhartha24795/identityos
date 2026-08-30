@@ -179,9 +179,10 @@ call), not a third heuristic. See docs/improvement_changelog.md
   short-answer set) and to a *named* target opportunity (a real
   `ApplicationIntentModel`, not just a generic-role system prompt).
 - identityos_v2_semantic (standalone) remains unsafe as its own system
-  (dangerous overclaim rate 0.50 as of v2.6-v2.7) — not a priority to fix
-  directly, since it was never the shipped path; hybrid already achieves
-  the safety guarantee semantic-alone doesn't.
+  (dangerous overclaim rate 0.50 as of v2.6-v2.7, re-measured at 0.75 as of
+  v3's MockProvider fix — see docs/evaluation_v2.md's v3 addendum) — not a
+  priority to fix directly, since it was never the shipped path; hybrid
+  already achieves the safety guarantee semantic-alone doesn't.
 - req11 (genuinely low retrieval confidence, 0.51) and req14 (the real gap
   case, system says `partial` on the shipped default, a safe underclaim)
   remain open — both already understood, neither a new finding.
@@ -192,16 +193,49 @@ call), not a third heuristic. See docs/improvement_changelog.md
   further audit needed there; both files that actually had the defect
   (from the IITACB dossier) are now fixed.
 
-## v3 — Browser execution  ·  not started
+## v3.0 — Browser execution  ·  **built**
 
-- Real browser agent (Playwright): open an application, detect fields, map
-  them to Digital Self data, fill and verify entered values.
-- Sandboxed by construction: no submission of a real application without an
-  explicit human-approval checkpoint (ground rule 4). OTP/MFA is a
-  human-in-the-loop pause, never bypassed (ground rule 3, and the original
-  brief's own authentication section).
-- `BrowserObservation` / `BrowserAction` abstraction, generalized — not
-  hard-coded to one site.
+Real browser agent (Playwright, `services/browser_engine/`): opens a form,
+detects fields via DOM inspection (label text + input type, generalized —
+not hard-coded to one page's markup), maps each to Digital Self data
+(direct/known-profile for name/email, lexical option-match for selects,
+the full v1/v2 hybrid-retrieval + generation + verification pipeline reused
+unmodified for free-text fields), fills, re-observes and verifies each
+value against the live DOM (the brief's `BROWSER VERIFICATION` dimension),
+decides the accuracy-confirmation checkbox from aggregate confidence +
+verification, then **halts for human approval before any submit** — there
+is no code path where the agent can decide on its own to submit
+(`services/browser_engine/agent.py`; ground rule 4, implemented literally,
+not just described). Demonstrated against a local, offline, synthetic
+application form (`data/applications/local_demo/`) rather than a real
+third-party site, for the same ToS/safety/generalization reasons v1/v2 use
+the author's own real documents instead of scraping anything. Result:
+`n_fields: 6, n_filled: 6, n_verified: 6, avg_evidence_coverage: 1.0,
+avg_confidence: 0.934, halted_for_approval: true, submitted: false`. Found
+and fixed two real bugs by reading the actual trajectory output (a
+select-field verification mismatch, and a systemic MockProvider
+prompt-parsing bug that turned out to predate v3 and affect v2/v2.5 too)
+— documented, not hidden, per the hackathon's own instruction. See
+docs/evaluation_browser.md, docs/improvement_changelog.md (Iteration
+16-17), docs/hot_take.md's v3 addendum.
+
+## v3.1+ — Browser execution, deferred scope  ·  not started
+
+- Multi-page navigation (the local demo form is single-page).
+- File upload fields (resume/portfolio attachments).
+- CAPTCHA/OTP/MFA handling — the brief's authentication section and ground
+  rule 3 ("never bypass MFA/CAPTCHA/anti-bot protections") both require
+  this to be a human-in-the-loop pause, never an automated bypass, when it
+  is eventually built; v3.0's synthetic form has none of these, so nothing
+  has been implemented to test yet — an honest gap, not a hidden one.
+- A real third-party target site, once one is explicitly named and its
+  terms of use reviewed — deliberately deferred past this hackathon
+  submission for the same reason v1/v2 use the author's own documents.
+- `identityos_v2_semantic`'s dangerous overclaim rate, re-measured at 0.75
+  after v3's MockProvider fix (up from 0.50) — not a v3 regression, but a
+  previously-masked weakness in a system that was never the shipped path;
+  still not a priority to chase directly (see docs/roadmap.md's v2.10+
+  section above).
 
 ## v4 — Multi-agent orchestration + self-improvement  ·  not started
 

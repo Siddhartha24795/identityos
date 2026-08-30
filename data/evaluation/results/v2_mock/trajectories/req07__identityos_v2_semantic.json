@@ -1,0 +1,46 @@
+{
+  "question_id": "req07",
+  "system_name": "identityos_v2_semantic",
+  "steps": [
+    {
+      "timestamp": "2026-08-30T08:33:21.311837Z",
+      "stage": "retrieve",
+      "input_summary": "Stakeholder management",
+      "action": "embedding-similarity retrieval (hash): top 0 facts, 0 beliefs",
+      "observation": "(no matching evidence found)",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T08:33:21.311858Z",
+      "stage": "generate",
+      "input_summary": "Stakeholder management",
+      "action": "call provider with cited, confidence-annotated context",
+      "observation": "I have consistently demonstrated strong ability in this area. When it comes to management and stakeholder, I have always taken a proactive, results-driven approach and delivered measurable impact. This has shaped my approach to every project I take on.",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T08:33:21.311896Z",
+      "stage": "verify",
+      "input_summary": "I have consistently demonstrated strong ability in this area. When it comes to management and stakeholder, I have always taken a proactive, results-driven approach and delivered measurable impact. This has shaped my approach to every project I take on.",
+      "action": "per-sentence grounding check (same verifier as lexical identityos_v2)",
+      "observation": "coverage=0.00 confidence=0.00",
+      "reasoning": "",
+      "confidence": 0.0,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T08:33:21.311900Z",
+      "stage": "bucket",
+      "input_summary": "I have consistently demonstrated strong ability in this area. When it comes to management and stakeholder, I have always taken a proactive, results-driven approach and delivered measurable impact. This has shaped my approach to every project I take on.",
+      "action": "derive fit bucket from coverage+confidence+polarity (same bucketing.py as lexical)",
+      "observation": "gap",
+      "reasoning": "",
+      "confidence": null,
+      "decision": "gap"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "question_id": "req02",
+  "system_name": "identityos_v2_semantic",
+  "steps": [
+    {
+      "timestamp": "2026-08-30T08:33:21.269578Z",
+      "stage": "retrieve",
+      "input_summary": "Desired — IIT alumnus",
+      "action": "embedding-similarity retrieval (hash): top 0 facts, 0 beliefs",
+      "observation": "(no matching evidence found)",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T08:33:21.269604Z",
+      "stage": "generate",
+      "input_summary": "Desired — IIT alumnus",
+      "action": "call provider with cited, confidence-annotated context",
+      "observation": "I believe my track record speaks directly to this question. When it comes to alumnus and desired and iit, I have always taken a proactive, results-driven approach and delivered measurable impact. I look forward to bringing this strength to your organization.",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T08:33:21.269644Z",
+      "stage": "verify",
+      "input_summary": "I believe my track record speaks directly to this question. When it comes to alumnus and desired and iit, I have always taken a proactive, results-driven approach and delivered measurable impact. I look forward to bringing this strength to your organization.",
+      "action": "per-sentence grounding check (same verifier as lexical identityos_v2)",
+      "observation": "coverage=0.00 confidence=0.00",
+      "reasoning": "",
+      "confidence": 0.0,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T08:33:21.269649Z",
+      "stage": "bucket",
+      "input_summary": "I believe my track record speaks directly to this question. When it comes to alumnus and desired and iit, I have always taken a proactive, results-driven approach and delivered measurable impact. I look forward to bringing this strength to your organization.",
+      "action": "derive fit bucket from coverage+confidence+polarity (same bucketing.py as lexical)",
+      "observation": "gap",
+      "reasoning": "",
+      "confidence": null,
+      "decision": "gap"
+    }
+  ]
+}
