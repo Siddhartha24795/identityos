@@ -3,7 +3,7 @@
   "system_name": "identityos_v2_semantic",
   "steps": [
     {
-      "timestamp": "2026-08-30T03:55:28.129046Z",
+      "timestamp": "2026-08-30T04:03:21.816611Z",
       "stage": "retrieve",
       "input_summary": "Personal integrity & institutional temperament",
       "action": "embedding-similarity retrieval (fastembed): top 4 facts, 1 beliefs",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T03:55:28.129312Z",
+      "timestamp": "2026-08-30T04:03:21.816881Z",
       "stage": "generate",
       "input_summary": "Personal integrity & institutional temperament",
       "action": "call provider with cited, confidence-annotated context",
@@ -23,7 +23,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T03:55:28.129628Z",
+      "timestamp": "2026-08-30T04:03:21.817186Z",
       "stage": "verify",
       "input_summary": "[dossier_narrative:006] (verified fact) Owned the cost side with rigour: order-of-magnitude inference cost reduction through quantization, pruning, distillation and parameter-efficient adaptation, and ownership of the edge-versus-cloud partitioning strategy, a direct unit-economics decision. States explicitly that full institutional P&L management at IITACB's scale would be a step up, and that this is experience not yet held. [dossier_narrative:008] (verified fact) Captain and Sports Secretary are roles given by peers and cannot be self-appointed. Professional practice of running blameless postmortems and publishing metrics that can embarrass the author. States that institutional temperament means the institution outranks the incumbent, including the CEO. [dossier_narrative:016] (verified fact) Closing statement: describes leading the Secretariat as the most consequential work available, and explicitly invites being tested hard on the parts of the candidacy that are short rather than only the parts that are strong. [resume:007] (verified fact) Defined evaluation frameworks pairing offline metrics with live ground-truth validation, POS-occupancy eval at approximately 87% accuracy, tracked release over release.",
       "action": "per-sentence grounding check (same verifier as lexical identityos_v2)",
@@ -33,7 +33,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T03:55:28.129635Z",
+      "timestamp": "2026-08-30T04:03:21.817192Z",
       "stage": "bucket",
       "input_summary": "[dossier_narrative:006] (verified fact) Owned the cost side with rigour: order-of-magnitude inference cost reduction through quantization, pruning, distillation and parameter-efficient adaptation, and ownership of the edge-versus-cloud partitioning strategy, a direct unit-economics decision. States explicitly that full institutional P&L management at IITACB's scale would be a step up, and that this is experience not yet held. [dossier_narrative:008] (verified fact) Captain and Sports Secretary are roles given by peers and cannot be self-appointed. Professional practice of running blameless postmortems and publishing metrics that can embarrass the author. States that institutional temperament means the institution outranks the incumbent, including the CEO. [dossier_narrative:016] (verified fact) Closing statement: describes leading the Secretariat as the most consequential work available, and explicitly invites being tested hard on the parts of the candidacy that are short rather than only the parts that are strong. [resume:007] (verified fact) Defined evaluation frameworks pairing offline metrics with live ground-truth validation, POS-occupancy eval at approximately 87% accuracy, tracked release over release.",
       "action": "derive fit bucket from coverage+confidence+polarity (same bucketing.py as lexical)",

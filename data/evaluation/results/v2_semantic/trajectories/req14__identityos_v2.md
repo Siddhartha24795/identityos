@@ -1,6 +1,6 @@
 ### Trajectory — identityos_v2 — req14
 
-**03:55:28 · retrieve**
+**04:03:21 · retrieve**
 - input: Desired — record of building or running a professional body (CII / NASSCOM / FICCI / AIMA)
 - action: lexical retrieval over Digital Self: top 8 facts, 1 beliefs
 - observation: [dossier_narrative:015] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.
@@ -13,18 +13,18 @@
 [dossier_narrative:004] (verified fact) Defined technical strategy, architecture and organisation-wide evaluation frameworks at Jinn Labs, building governance structures where none existed; the same machinery run earlier at student scale heading four chapters simultaneously and organising festivals at KNIT Sultanpur.
 [belief:003] (belief, weak inference, confidence=0.45) Considers himself an experienced builder and leader of professional/membership institutions, not just engineering teams. — counter-evidence exists, do not state this as certain
 
-**03:55:28 · generate**
+**04:03:21 · generate**
 - input: Desired — record of building or running a professional body (CII / NASSCOM / FICCI / AIMA)
 - action: call provider with cited, confidence-annotated context
 - observation: [dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:004] (verified fact) Defined technical strategy, architecture and organisation-wide evaluation frameworks at Jinn Labs, building governance structures where none existed; the same machinery run earlier at student scale heading four chapters simultaneously and organising festivals at KNIT Sultanpur. [dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. [dossier_narrative:015] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.
 
-**03:55:28 · verify**
+**04:03:21 · verify**
 - input: [dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:004] (verified fact) Defined technical strategy, architecture and organisation-wide evaluation frameworks at Jinn Labs, building governance structures where none existed; the same machinery run earlier at student scale heading four chapters simultaneously and organising festivals at KNIT Sultanpur. [dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. [dossier_narrative:015] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.
 - action: per-sentence grounding check (same verifier as v1)
 - observation: coverage=1.00 confidence=0.99
 - confidence: 0.99
 
-**03:55:28 · bucket**
+**04:03:21 · bucket**
 - input: [dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:004] (verified fact) Defined technical strategy, architecture and organisation-wide evaluation frameworks at Jinn Labs, building governance structures where none existed; the same machinery run earlier at student scale heading four chapters simultaneously and organising festivals at KNIT Sultanpur. [dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. [dossier_narrative:015] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.
 - action: derive fit bucket from coverage+confidence, not a self-reported label
 - observation: partial

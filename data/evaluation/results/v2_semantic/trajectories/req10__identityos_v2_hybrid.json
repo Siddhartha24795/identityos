@@ -1,0 +1,46 @@
+{
+  "question_id": "req10",
+  "system_name": "identityos_v2_hybrid",
+  "steps": [
+    {
+      "timestamp": "2026-08-30T04:03:21.769743Z",
+      "stage": "retrieve",
+      "input_summary": "Exceptional communication",
+      "action": "lexical retrieval, semantic fallback only if empty: 8 facts, 0 beliefs",
+      "observation": "[resume:018] (verified fact) Senior Software Engineer, Qualcomm, Hyderabad India, Mar 2021 - Aug 2023.\n[resume:021] (verified fact) Applied ML techniques to sensor data for tilt detection, automated sleep alarms, and cardiovascular health monitoring.\n[resume:001] (verified fact) Chief Technical Officer, Jinn Labs, Remote India, Nov 2025 - Present.\n[resume:006] (verified fact) Adapted VLMs/LLMs efficiently using LoRA, QLoRA, and soft-prompting to specialize models per use case at a fraction of full fine-tuning cost.\n[resume:059] (verified fact) Real-time computer-vision platform at Jinn Labs ingesting 2000+ concurrent RTSP streams with VLM-based suspicious-event detection.\n[resume:004] (verified fact) Built a fault-tolerant FFmpeg ingestion layer handling transcoding, frame extraction, reconnection, and backpressure under sustained load.\n[resume:058] (verified fact) On-device NanoVLM visual assistant replacing Gemini API calls in Samsung's Circle to Search feature.\n[resume:034] (verified fact) Developed APIs for live tracking of trucks and notifications using Java, JavaScript, and Python, and suggested dynamic routes based on real-time traffic analysis and driver behavior.",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T04:03:21.769953Z",
+      "stage": "generate",
+      "input_summary": "Exceptional communication",
+      "action": "call provider with cited, confidence-annotated context",
+      "observation": "[resume:034] (verified fact) Developed APIs for live tracking of trucks and notifications using Java, JavaScript, and Python, and suggested dynamic routes based on real-time traffic analysis and driver behavior. [resume:006] (verified fact) Adapted VLMs/LLMs efficiently using LoRA, QLoRA, and soft-prompting to specialize models per use case at a fraction of full fine-tuning cost. [resume:059] (verified fact) Real-time computer-vision platform at Jinn Labs ingesting 2000+ concurrent RTSP streams with VLM-based suspicious-event detection. [resume:004] (verified fact) Built a fault-tolerant FFmpeg ingestion layer handling transcoding, frame extraction, reconnection, and backpressure under sustained load.",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T04:03:21.770134Z",
+      "stage": "verify",
+      "input_summary": "[resume:034] (verified fact) Developed APIs for live tracking of trucks and notifications using Java, JavaScript, and Python, and suggested dynamic routes based on real-time traffic analysis and driver behavior. [resume:006] (verified fact) Adapted VLMs/LLMs efficiently using LoRA, QLoRA, and soft-prompting to specialize models per use case at a fraction of full fine-tuning cost. [resume:059] (verified fact) Real-time computer-vision platform at Jinn Labs ingesting 2000+ concurrent RTSP streams with VLM-based suspicious-event detection. [resume:004] (verified fact) Built a fault-tolerant FFmpeg ingestion layer handling transcoding, frame extraction, reconnection, and backpressure under sustained load.",
+      "action": "per-sentence grounding check (same verifier as lexical identityos_v2)",
+      "observation": "coverage=1.00 confidence=0.99",
+      "reasoning": "",
+      "confidence": 0.99,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T04:03:21.770140Z",
+      "stage": "bucket",
+      "input_summary": "[resume:034] (verified fact) Developed APIs for live tracking of trucks and notifications using Java, JavaScript, and Python, and suggested dynamic routes based on real-time traffic analysis and driver behavior. [resume:006] (verified fact) Adapted VLMs/LLMs efficiently using LoRA, QLoRA, and soft-prompting to specialize models per use case at a fraction of full fine-tuning cost. [resume:059] (verified fact) Real-time computer-vision platform at Jinn Labs ingesting 2000+ concurrent RTSP streams with VLM-based suspicious-event detection. [resume:004] (verified fact) Built a fault-tolerant FFmpeg ingestion layer handling transcoding, frame extraction, reconnection, and backpressure under sustained load.",
+      "action": "derive fit bucket from coverage+confidence+polarity (same bucketing.py)",
+      "observation": "met_or_better",
+      "reasoning": "",
+      "confidence": null,
+      "decision": "met_or_better"
+    }
+  ]
+}

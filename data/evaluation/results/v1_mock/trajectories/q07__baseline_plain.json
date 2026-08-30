@@ -3,7 +3,7 @@
   "system_name": "baseline_plain",
   "steps": [
     {
-      "timestamp": "2026-08-30T03:55:06.818636Z",
+      "timestamp": "2026-08-30T04:03:06.419423Z",
       "stage": "generate",
       "input_summary": "What motivates your research?",
       "action": "call provider with zero context, zero verification",

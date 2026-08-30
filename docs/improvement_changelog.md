@@ -48,15 +48,15 @@ against the IITACB CEO dossier's real 14-requirement fit table
 
 | **Iteration 8 (v2.3) — kept as a comparison arm, not promoted to default** | Built `identityos_v2_semantic`: identical pipeline to `identityos_v2`, with embedding-cosine retrieval (fastembed, BAAI/bge-small-en-v1.5, chosen for zero API key + ~65MB ONNX footprint) instead of lexical word-overlap. Hypothesis: this fixes req05/req10 (real evidence exists, zero lexical overlap). | It did — req10 moved to a fully correct `met_or_better`, req05 to a `partial` (real improvement). But agreement rate fell 0.43 -> 0.36 and **dangerous overclaim rate rose 0.00 -> 0.25**: req09 (a real, admitted government-engagement gap) started overclaiming, because semantic retrieval's higher recall / lower precision pulled in more topically-adjacent facts, and the v2.2 polarity check can't distinguish "negative claim about this topic" from "negative claim about something merely embedding-adjacent." | **Not promoted to default.** Kept running in the harness as an honest, ongoing comparison arm. Fixing part of a known limitation while reintroducing a worse one elsewhere is not a net improvement — see docs/hot_take.md and docs/evaluation_v2.md for the full trade-off, not just the number that improved. |
 
-## Main failure mode, v2.3 (see docs/hot_take.md for the full writeup)
+| **Iteration 9 (v2.4) — promoted, the targeted fix worked** | Diagnosed the exact mechanism behind Iteration 8's regression: semantic noise only appeared when it overrode requirements lexical already had evidence for, never when filling a genuine gap. Built `retrieve_hybrid()`: lexical first, semantic fallback *only* when lexical returns nothing. | Agreement rate **0.50** (best of all five systems, vs. 0.43 lexical / 0.36 semantic). Dangerous overclaim rate **0.00** (matches lexical). Verified requirement-by-requirement, not assumed: all 12 requirements lexical could already answer are byte-identical to pure lexical output, including req09 (semantic alone had broken it; hybrid never touches it). Only req05/req10 (lexical's real gaps) changed, one fully fixed. | **Promoted as the recommended retrieval strategy**, kept alongside lexical-only and semantic-only as permanent comparison arms — not deleting the data that led here. |
 
-Embedding retrieval is not a strict upgrade over lexical retrieval on this
-benchmark, and we did not tune it until it looked like one. Two
-safe-direction failures remain on the shipped default (`identityos_v2`,
-lexical): req05 and req10 still retrieve zero facts, because lexical
-overlap can't match an abstract requirement phrase ("entrepreneurial
-mindset") against evidence phrased differently ("comfortable with
-ambiguity, unfunded mandates"). The semantic arm proves this is fixable,
-but at a real, measured cost elsewhere (see Iteration 8) — a genuinely
-better fix (combining both signals, or a precision-aware bucketing rule)
-is future work, not a threshold tweak.
+## Main failure mode, v2.4 (see docs/hot_take.md for the full writeup)
+
+Six requirements (req03, req06, req07, req11, req12, req14) still don't
+reach an exact bucket match on any retrieval arm, including hybrid — mostly
+a coarse-3-bucket-scale nuance problem ("MET with a stated caveat", or a
+forward commitment, doesn't cleanly fit met_or_better/partial/gap) rather
+than a new finding. req05 improved (`gap` -> `partial`) under hybrid but
+isn't an exact match yet, because the semantic fallback's citation is real
+but not confidently grounded enough to cross the met_or_better threshold.
+None of these are dangerous — the safety metric stays at 0.00.

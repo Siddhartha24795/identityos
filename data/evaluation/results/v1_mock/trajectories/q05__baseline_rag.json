@@ -3,7 +3,7 @@
   "system_name": "baseline_rag",
   "steps": [
     {
-      "timestamp": "2026-08-30T03:55:06.813166Z",
+      "timestamp": "2026-08-30T04:03:06.413858Z",
       "stage": "retrieve",
       "input_summary": "What research did you do during your Siemens Healthineers internship, and what made the result notable?",
       "action": "dump the entire fact store as unstructured text (no ranking, no ids)",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T03:55:06.814419Z",
+      "timestamp": "2026-08-30T04:03:06.415116Z",
       "stage": "generate",
       "input_summary": "What research did you do during your Siemens Healthineers internship, and what made the result notable?",
       "action": "call provider with the full unstructured context dump",

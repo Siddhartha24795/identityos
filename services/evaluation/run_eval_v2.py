@@ -1,4 +1,4 @@
-"""Runs all four requirement-fit assessors over the real 14-requirement
+"""Runs all five requirement-fit assessors over the real 14-requirement
 IITACB CEO application, scores each against the REAL human's own prior
 self-assessment, and writes the same shape of artifacts as v1:
   - data/evaluation/results/<tag>/application_answers.json
@@ -10,6 +10,11 @@ embedding-based retrieval instead of lexical (services/qa_engine/retrieval.py
 retrieve_semantic). Runs with EMBEDDING_PROVIDER=hash by default (zero
 dependency); pass "fastembed" for the real semantic comparison — see
 docs/evaluation_v2.md for why the two give very different results.
+
+v2.4 adds identityos_v2_hybrid: lexical retrieval, semantic fallback only
+when lexical finds nothing at all (retrieve_hybrid) — a direct, targeted
+response to v2.3's finding that semantic retrieval's noise only showed up
+when it was overriding good lexical results, not filling real gaps.
 """
 from __future__ import annotations
 
@@ -22,6 +27,7 @@ from services.application_engine.assess import (
     assess_baseline_plain,
     assess_baseline_rag,
     assess_identityos,
+    assess_identityos_hybrid,
     assess_identityos_semantic,
 )
 from services.application_engine.intent_model import load_requirements
@@ -61,6 +67,7 @@ def run(
         "baseline_rag": [],
         "identityos_v2": [],
         "identityos_v2_semantic": [],
+        "identityos_v2_hybrid": [],
     }
 
     for req in requirements:
@@ -68,13 +75,15 @@ def run(
         a_rag, t_rag = assess_baseline_rag(req, ds, provider)
         a_sys, t_sys = assess_identityos(req, ds, provider)
         a_sem, t_sem = assess_identityos_semantic(req, embedding_index, provider)
+        a_hyb, t_hyb = assess_identityos_hybrid(req, ds, embedding_index, provider)
 
         all_assessments["baseline_plain"].append(a_plain)
         all_assessments["baseline_rag"].append(a_rag)
         all_assessments["identityos_v2"].append(a_sys)
         all_assessments["identityos_v2_semantic"].append(a_sem)
+        all_assessments["identityos_v2_hybrid"].append(a_hyb)
 
-        for traj in (t_plain, t_rag, t_sys, t_sem):
+        for traj in (t_plain, t_rag, t_sys, t_sem, t_hyb):
             stem = f"{req.id}__{traj.system_name}"
             (traj_dir / f"{stem}.md").write_text(traj.to_markdown(), encoding="utf-8")
             (traj_dir / f"{stem}.json").write_text(

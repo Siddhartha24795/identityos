@@ -3,7 +3,7 @@
   "system_name": "identityos_v2_semantic",
   "steps": [
     {
-      "timestamp": "2026-08-30T03:55:28.243992Z",
+      "timestamp": "2026-08-30T04:03:21.933932Z",
       "stage": "retrieve",
       "input_summary": "Languages — English, Hindi, Kannada preferred",
       "action": "embedding-similarity retrieval (fastembed): top 8 facts, 0 beliefs",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T03:55:28.244217Z",
+      "timestamp": "2026-08-30T04:03:21.934151Z",
       "stage": "generate",
       "input_summary": "Languages — English, Hindi, Kannada preferred",
       "action": "call provider with cited, confidence-annotated context",
@@ -23,7 +23,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T03:55:28.244384Z",
+      "timestamp": "2026-08-30T04:03:21.934321Z",
       "stage": "verify",
       "input_summary": "[dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet in Kannada, and frames relocation plus Kannada learning as conditions he is committing to, not concessions being requested. [resume:043] (verified fact) Artificial Intelligence, Deep Learning, Machine Learning, Image Processing, Computer Vision, Natural Language Processing. [resume:044] (verified fact) Augmented Reality, ARCore, Large Language Models, VLMs, RAG, MCP, LangChain. [resume:024] (verified fact) Software Engineer, Amdocs, Pune India, Aug 2020 - Feb 2021, on Billing and RTB teams.",
       "action": "per-sentence grounding check (same verifier as lexical identityos_v2)",
@@ -33,7 +33,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T03:55:28.244391Z",
+      "timestamp": "2026-08-30T04:03:21.934327Z",
       "stage": "bucket",
       "input_summary": "[dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet in Kannada, and frames relocation plus Kannada learning as conditions he is committing to, not concessions being requested. [resume:043] (verified fact) Artificial Intelligence, Deep Learning, Machine Learning, Image Processing, Computer Vision, Natural Language Processing. [resume:044] (verified fact) Augmented Reality, ARCore, Large Language Models, VLMs, RAG, MCP, LangChain. [resume:024] (verified fact) Software Engineer, Amdocs, Pune India, Aug 2020 - Feb 2021, on Billing and RTB teams.",
       "action": "derive fit bucket from coverage+confidence+polarity (same bucketing.py as lexical)",

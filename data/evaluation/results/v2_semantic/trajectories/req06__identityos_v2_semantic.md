@@ -1,6 +1,6 @@
 ### Trajectory — identityos_v2_semantic — req06
 
-**03:55:27 · retrieve**
+**04:03:21 · retrieve**
 - input: Strategic planning & institution-building
 - action: embedding-similarity retrieval (fastembed): top 8 facts, 1 beliefs
 - observation: [dossier_narrative:006] (verified fact) Owned the cost side with rigour: order-of-magnitude inference cost reduction through quantization, pruning, distillation and parameter-efficient adaptation, and ownership of the edge-versus-cloud partitioning strategy, a direct unit-economics decision. States explicitly that full institutional P&L management at IITACB's scale would be a step up, and that this is experience not yet held.
@@ -13,18 +13,18 @@
 [resume:025] (verified fact) Did API development, bug resolution, fraud detection, and revenue forecasting using Java, Python, Mockito, Postman, MySQL, machine learning, and NLP.
 [belief:003] (belief, weak inference, confidence=0.45) Considers himself an experienced builder and leader of professional/membership institutions, not just engineering teams. — counter-evidence exists, do not state this as certain
 
-**03:55:27 · generate**
+**04:03:21 · generate**
 - input: Strategic planning & institution-building
 - action: call provider with cited, confidence-annotated context
 - observation: [dossier_narrative:006] (verified fact) Owned the cost side with rigour: order-of-magnitude inference cost reduction through quantization, pruning, distillation and parameter-efficient adaptation, and ownership of the edge-versus-cloud partitioning strategy, a direct unit-economics decision. States explicitly that full institutional P&L management at IITACB's scale would be a step up, and that this is experience not yet held. [dossier_narrative:002] (verified fact) Credibility earned in two currencies IITACB's stakeholders recognise: academic (IIT M.Tech, guest faculty across universities) and industrial (Samsung Research, Qualcomm, CTO of a venture shipping into live enterprise sites). The vision brought is concrete: IITACB as India's default gateway to IIT research capability. [dossier_narrative:004] (verified fact) Defined technical strategy, architecture and organisation-wide evaluation frameworks at Jinn Labs, building governance structures where none existed; the same machinery run earlier at student scale heading four chapters simultaneously and organising festivals at KNIT Sultanpur. [dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical — it is 24x7 production accountability across live customer sites.
 
-**03:55:27 · verify**
+**04:03:21 · verify**
 - input: [dossier_narrative:006] (verified fact) Owned the cost side with rigour: order-of-magnitude inference cost reduction through quantization, pruning, distillation and parameter-efficient adaptation, and ownership of the edge-versus-cloud partitioning strategy, a direct unit-economics decision. States explicitly that full institutional P&L management at IITACB's scale would be a step up, and that this is experience not yet held. [dossier_narrative:002] (verified fact) Credibility earned in two currencies IITACB's stakeholders recognise: academic (IIT M.Tech, guest faculty across universities) and industrial (Samsung Research, Qualcomm, CTO of a venture shipping into live enterprise sites). The vision brought is concrete: IITACB as India's default gateway to IIT research capability. [dossier_narrative:004] (verified fact) Defined technical strategy, architecture and organisation-wide evaluation frameworks at Jinn Labs, building governance structures where none existed; the same machinery run earlier at student scale heading four chapters simultaneously and organising festivals at KNIT Sultanpur. [dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical — it is 24x7 production accountability across live customer sites.
 - action: per-sentence grounding check (same verifier as lexical identityos_v2)
 - observation: coverage=1.00 confidence=0.78
 - confidence: 0.78
 
-**03:55:27 · bucket**
+**04:03:21 · bucket**
 - input: [dossier_narrative:006] (verified fact) Owned the cost side with rigour: order-of-magnitude inference cost reduction through quantization, pruning, distillation and parameter-efficient adaptation, and ownership of the edge-versus-cloud partitioning strategy, a direct unit-economics decision. States explicitly that full institutional P&L management at IITACB's scale would be a step up, and that this is experience not yet held. [dossier_narrative:002] (verified fact) Credibility earned in two currencies IITACB's stakeholders recognise: academic (IIT M.Tech, guest faculty across universities) and industrial (Samsung Research, Qualcomm, CTO of a venture shipping into live enterprise sites). The vision brought is concrete: IITACB as India's default gateway to IIT research capability. [dossier_narrative:004] (verified fact) Defined technical strategy, architecture and organisation-wide evaluation frameworks at Jinn Labs, building governance structures where none existed; the same machinery run earlier at student scale heading four chapters simultaneously and organising festivals at KNIT Sultanpur. [dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical — it is 24x7 production accountability across live customer sites.
 - action: derive fit bucket from coverage+confidence+polarity (same bucketing.py as lexical)
 - observation: partial

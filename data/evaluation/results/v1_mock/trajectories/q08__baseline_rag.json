@@ -3,7 +3,7 @@
   "system_name": "baseline_rag",
   "steps": [
     {
-      "timestamp": "2026-08-30T03:55:06.821673Z",
+      "timestamp": "2026-08-30T04:03:06.422437Z",
       "stage": "retrieve",
       "input_summary": "Why should we choose you instead of another candidate?",
       "action": "dump the entire fact store as unstructured text (no ranking, no ids)",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T03:55:06.822904Z",
+      "timestamp": "2026-08-30T04:03:06.423695Z",
       "stage": "generate",
       "input_summary": "Why should we choose you instead of another candidate?",
       "action": "call provider with the full unstructured context dump",

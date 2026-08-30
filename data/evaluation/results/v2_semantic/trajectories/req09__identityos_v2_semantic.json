@@ -3,7 +3,7 @@
   "system_name": "identityos_v2_semantic",
   "steps": [
     {
-      "timestamp": "2026-08-30T03:55:28.040611Z",
+      "timestamp": "2026-08-30T04:03:21.691019Z",
       "stage": "retrieve",
       "input_summary": "Government & policy engagement (MeitY, DST, NITI Aayog, IIT Council)",
       "action": "embedding-similarity retrieval (fastembed): top 8 facts, 0 beliefs",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T03:55:28.040860Z",
+      "timestamp": "2026-08-30T04:03:21.691259Z",
       "stage": "generate",
       "input_summary": "Government & policy engagement (MeitY, DST, NITI Aayog, IIT Council)",
       "action": "call provider with cited, confidence-annotated context",
@@ -23,7 +23,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T03:55:28.041126Z",
+      "timestamp": "2026-08-30T04:03:21.691537Z",
       "stage": "verify",
       "input_summary": "[dossier_narrative:002] (verified fact) Credibility earned in two currencies IITACB's stakeholders recognise: academic (IIT M.Tech, guest faculty across universities) and industrial (Samsung Research, Qualcomm, CTO of a venture shipping into live enterprise sites). The vision brought is concrete: IITACB as India's default gateway to IIT research capability. [dossier_narrative:009] (verified fact) Confirmed relocation to Bengaluru on appointment, accepting the role as primarily external-facing with sustained domestic travel to the 23 IIT campuses, Delhi, and industry forums nationally. States that being physically present in Bengaluru is regarded as non-negotiable for this job. [resume:039] (verified fact) M.Tech, Artificial Intelligence, IIT (ISM) Dhanbad, 2018-2020. Research on medical image processing using Cycle GAN. [resume:011] (verified fact) Staff Computer Vision Researcher, Samsung Research (AR Core Team), Noida India, Sep 2023 - Nov 2025.",
       "action": "per-sentence grounding check (same verifier as lexical identityos_v2)",
@@ -33,7 +33,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T03:55:28.041132Z",
+      "timestamp": "2026-08-30T04:03:21.691544Z",
       "stage": "bucket",
       "input_summary": "[dossier_narrative:002] (verified fact) Credibility earned in two currencies IITACB's stakeholders recognise: academic (IIT M.Tech, guest faculty across universities) and industrial (Samsung Research, Qualcomm, CTO of a venture shipping into live enterprise sites). The vision brought is concrete: IITACB as India's default gateway to IIT research capability. [dossier_narrative:009] (verified fact) Confirmed relocation to Bengaluru on appointment, accepting the role as primarily external-facing with sustained domestic travel to the 23 IIT campuses, Delhi, and industry forums nationally. States that being physically present in Bengaluru is regarded as non-negotiable for this job. [resume:039] (verified fact) M.Tech, Artificial Intelligence, IIT (ISM) Dhanbad, 2018-2020. Research on medical image processing using Cycle GAN. [resume:011] (verified fact) Staff Computer Vision Researcher, Samsung Research (AR Core Team), Noida India, Sep 2023 - Nov 2025.",
       "action": "derive fit bucket from coverage+confidence+polarity (same bucketing.py as lexical)",

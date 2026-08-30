@@ -15,11 +15,16 @@ eval-mock: build-identity
 eval-real: build-identity
 	.venv/bin/python scripts/run_eval.py anthropic v1_real
 
+# Runs all 5 systems: baseline_plain, baseline_rag, identityos_v2 (lexical),
+# identityos_v2_semantic, identityos_v2_hybrid (recommended — see docs/evaluation_v2.md).
+# EMBEDDING_PROVIDER=hash here means the two embedding-based arms are not
+# meaningfully semantic yet (zero dependency, zero network).
 eval-v2-mock: build-identity
 	.venv/bin/python scripts/run_eval_v2.py mock v2_mock hash
 
 # Real semantic embeddings (fastembed): downloads a ~65MB ONNX model on
-# first run, cached under data/.embedding_cache/. No API key needed.
+# first run, cached under data/.embedding_cache/. No API key needed. This
+# is what makes identityos_v2_semantic and identityos_v2_hybrid meaningful.
 eval-v2-semantic: build-identity
 	.venv/bin/python scripts/run_eval_v2.py mock v2_semantic fastembed
 

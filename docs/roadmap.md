@@ -59,24 +59,41 @@ improved req05, confirming the lexical-retrieval limitation was real and
 addressable. It also reintroduced a dangerous overclaim (req09) and
 downgraded six previously-correct requirements, because higher-recall
 retrieval interacts badly with v2.2's polarity check — see
-docs/hot_take.md's v2.3 addendum. **Decision: keep lexical retrieval as the
-shipped default**; the semantic arm stays in the harness, not deleted, as
-an honest ongoing comparison. See docs/improvement_changelog.md
+docs/hot_take.md's v2.3 addendum. **Decision at the time: keep lexical
+retrieval as the shipped default**; the semantic arm stays in the harness,
+not deleted, as an honest ongoing comparison. (Superseded by v2.4 below —
+kept here because the changelog shouldn't quietly rewrite what was
+actually decided at each point.) See docs/improvement_changelog.md
 (Iteration 8), docs/evaluation_v2.md.
 
-## v2.4+ — deferred from the original v2 scope  ·  not started
+## v2.4 — hybrid retrieval  ·  **built, promoted**
 
-- Precision-aware bucketing or a hybrid retrieval signal (combine lexical
-  + semantic scores rather than swapping one for the other) — the direct
-  follow-up to v2.3's finding that higher-recall retrieval alone made the
-  polarity check noisier. Not attempted yet because it needs its own
-  careful evaluation, not a quick threshold change.
+Diagnosed the exact mechanism behind v2.3's regression — semantic noise
+only appeared when it overrode requirements lexical already had evidence
+for — and built `retrieve_hybrid()` to target exactly that: lexical first,
+semantic fallback only when lexical returns nothing. Verified
+requirement-by-requirement, not assumed: all 12 requirements lexical could
+already answer are byte-identical to pure lexical output. Result:
+agreement rate 0.50 (best of all five systems), dangerous overclaim rate
+0.00 (matches lexical). **This supersedes v2.3's decision — hybrid
+retrieval is now the recommended strategy**, kept alongside lexical-only
+and semantic-only as permanent comparison arms. See
+docs/improvement_changelog.md (Iteration 9), docs/evaluation_v2.md,
+docs/hot_take.md's v2.4 addendum.
+
+## v2.5+ — deferred from the original v2 scope  ·  not started
+
 - Automatic belief inference from raw unstructured text (replacing v1/v2's
   hand-seeded beliefs) with an LLM pass plus counter-evidence search.
 - `APPLICATION_NARRATIVE_STATE`: answer a full application's question set as
   a coherent set (no contradicting Q1 vs Q3), not independently.
 - Document generators: cover letter, SOP, short-answer set, each claim
   still traceable per docs/architecture.md.
+- Six requirements (req03/06/07/11/12/14) still don't reach an exact bucket
+  match under any retrieval arm — mostly a coarse-3-bucket-scale nuance
+  problem, not a retrieval problem. Would need either a finer-grained real
+  assessment scale or a smarter bucketing rule; not attempted yet because
+  neither is a quick fix and both need their own evaluation.
 
 ## v3 — Browser execution  ·  not started
 

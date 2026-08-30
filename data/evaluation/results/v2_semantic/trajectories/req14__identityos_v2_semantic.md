@@ -1,6 +1,6 @@
 ### Trajectory — identityos_v2_semantic — req14
 
-**03:55:28 · retrieve**
+**04:03:22 · retrieve**
 - input: Desired — record of building or running a professional body (CII / NASSCOM / FICCI / AIMA)
 - action: embedding-similarity retrieval (fastembed): top 8 facts, 0 beliefs
 - observation: [dossier_narrative:015] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.
@@ -12,18 +12,18 @@
 [resume:014] (verified fact) Worked on "Generative Image Dynamics": generating a seamlessly looping video from a single image in 3 seconds, versus the best existing time of around 17 seconds, by interpreting spectral volumes as image-space modal bases that approximate object dynamics.
 [resume:039] (verified fact) M.Tech, Artificial Intelligence, IIT (ISM) Dhanbad, 2018-2020. Research on medical image processing using Cycle GAN.
 
-**03:55:28 · generate**
+**04:03:22 · generate**
 - input: Desired — record of building or running a professional body (CII / NASSCOM / FICCI / AIMA)
 - action: call provider with cited, confidence-annotated context
 - observation: [dossier_narrative:006] (verified fact) Owned the cost side with rigour: order-of-magnitude inference cost reduction through quantization, pruning, distillation and parameter-efficient adaptation, and ownership of the edge-versus-cloud partitioning strategy, a direct unit-economics decision. States explicitly that full institutional P&L management at IITACB's scale would be a step up, and that this is experience not yet held. [dossier_narrative:015] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record. [resume:014] (verified fact) Worked on "Generative Image Dynamics": generating a seamlessly looping video from a single image in 3 seconds, versus the best existing time of around 17 seconds, by interpreting spectral volumes as image-space modal bases that approximate object dynamics. [resume:019] (verified fact) On the AI-ML IoT Framework Team (Mar 2023 - Aug 2023), wrote plugins for object detection and tracking with different colored bounding boxes per object plus trajectory prediction, using GStreamer, TensorFlow Lite, ByteTrack, C++, and C.
 
-**03:55:28 · verify**
+**04:03:22 · verify**
 - input: [dossier_narrative:006] (verified fact) Owned the cost side with rigour: order-of-magnitude inference cost reduction through quantization, pruning, distillation and parameter-efficient adaptation, and ownership of the edge-versus-cloud partitioning strategy, a direct unit-economics decision. States explicitly that full institutional P&L management at IITACB's scale would be a step up, and that this is experience not yet held. [dossier_narrative:015] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record. [resume:014] (verified fact) Worked on "Generative Image Dynamics": generating a seamlessly looping video from a single image in 3 seconds, versus the best existing time of around 17 seconds, by interpreting spectral volumes as image-space modal bases that approximate object dynamics. [resume:019] (verified fact) On the AI-ML IoT Framework Team (Mar 2023 - Aug 2023), wrote plugins for object detection and tracking with different colored bounding boxes per object plus trajectory prediction, using GStreamer, TensorFlow Lite, ByteTrack, C++, and C.
 - action: per-sentence grounding check (same verifier as lexical identityos_v2)
 - observation: coverage=1.00 confidence=0.89
 - confidence: 0.89
 
-**03:55:28 · bucket**
+**04:03:22 · bucket**
 - input: [dossier_narrative:006] (verified fact) Owned the cost side with rigour: order-of-magnitude inference cost reduction through quantization, pruning, distillation and parameter-efficient adaptation, and ownership of the edge-versus-cloud partitioning strategy, a direct unit-economics decision. States explicitly that full institutional P&L management at IITACB's scale would be a step up, and that this is experience not yet held. [dossier_narrative:015] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record. [resume:014] (verified fact) Worked on "Generative Image Dynamics": generating a seamlessly looping video from a single image in 3 seconds, versus the best existing time of around 17 seconds, by interpreting spectral volumes as image-space modal bases that approximate object dynamics. [resume:019] (verified fact) On the AI-ML IoT Framework Team (Mar 2023 - Aug 2023), wrote plugins for object detection and tracking with different colored bounding boxes per object plus trajectory prediction, using GStreamer, TensorFlow Lite, ByteTrack, C++, and C.
 - action: derive fit bucket from coverage+confidence+polarity (same bucketing.py as lexical)
 - observation: partial

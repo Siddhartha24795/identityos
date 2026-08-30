@@ -1,4 +1,4 @@
-# IdentityOS — v2.3
+# IdentityOS — v2.4
 
 **An autonomous representative that answers application questions and
 assesses job-requirement fit on a person's behalf, with evidence,
@@ -6,10 +6,11 @@ calibrated confidence, and refusal instead of fabrication.**
 
 Built for the micro1 Agentic Workflows Hackathon, against the full brief
 preserved in `PROMPT.md`. This repo builds v1 (Q&A) and v2 (requirement-fit
-assessment against a real, adjudicated application, iterated through v2.3)
+assessment against a real, adjudicated application, iterated through v2.4)
 of that brief — see [docs/roadmap.md](docs/roadmap.md) for what's deferred
-to v2.4-v5 and why. Prior versions frozen at `../identityos-v1/`,
-`../identityos-v2/`, `../identityos-v2.1/`, `../identityos-v2.2/`.
+to v2.5-v5 and why. Prior versions frozen at `../identityos-v1/`,
+`../identityos-v2/`, `../identityos-v2.1/`, `../identityos-v2.2/`,
+`../identityos-v2.3/`.
 
 ## Who has this problem, and why it's worth solving
 
@@ -67,7 +68,7 @@ but does need one-time network access. Output per run:
 To get a qualitative read with a real model: copy `.env.example` to `.env`,
 set `ANTHROPIC_API_KEY` or `OPENAI_API_KEY`, then `make eval-real` / `make eval-v2-real`.
 
-Run the smoke test suite: `make test` (16 tests, <1s, no keys/downloads needed).
+Run the smoke test suite: `make test` (18 tests, <1s, no keys/downloads needed).
 
 ## Results (reference runs, `PROVIDER=mock`)
 
@@ -112,8 +113,26 @@ Real semantic retrieval fixed the two requirements it targeted (one fully,
 one partially) — and reintroduced a dangerous overclaim elsewhere, because
 higher recall pulled in more topically-adjacent (but off-topic) evidence
 that the polarity check from v2.2 couldn't tell apart from the real thing.
-We did not tune this until it looked better; lexical retrieval stays the
-default. Full trade-off: [docs/evaluation_v2.md](docs/evaluation_v2.md).
+We did not tune this until it looked better; at the time, lexical retrieval
+stayed the default. Full trade-off: [docs/evaluation_v2.md](docs/evaluation_v2.md).
+
+**v2.4 — hybrid retrieval, now the recommended strategy:**
+
+| Metric | identityos_v2 (lexical) | identityos_v2_semantic (fastembed) | identityos_v2_hybrid |
+|---|---|---|---|
+| Evidence coverage | 0.83 | 1.00 | **0.97** |
+| Assessment agreement rate | 0.43 | 0.36 | **0.50** |
+| Dangerous overclaim rate | **0.00** | 0.25 | **0.00** |
+
+Diagnosing *why* v2.3 regressed (noise only appeared when semantic
+overrode a working lexical answer, never when filling a real gap) led
+directly to the fix: lexical first, semantic only as a fallback when
+lexical finds nothing. Verified requirement-by-requirement, not assumed —
+all 12 requirements lexical could already answer are byte-identical to
+pure lexical output. Best agreement rate of all five systems, same safety
+as lexical. All three retrieval arms (lexical, semantic, hybrid) stay in
+the harness as permanent comparison points. Full story:
+[docs/evaluation_v2.md](docs/evaluation_v2.md).
 
 ## Improvement changelog
 
@@ -136,8 +155,11 @@ answer can still be a "no" (confidence stood in for polarity it never
 measured) — caught on the single highest-stakes requirement in a real
 application. v2.3: "smarter" embedding retrieval made the polarity check
 *worse*, because a safety check tuned against one retrieval method's error
-profile isn't automatically safe against a different one. Full writeup,
-including what's still unfixed: [docs/hot_take.md](docs/hot_take.md).
+profile isn't automatically safe against a different one. v2.4: diagnosing
+*why* — the noise only ever overrode working answers, never filled real
+gaps — produced a fix (semantic as a fallback only) that beat every other
+system and was verified requirement-by-requirement, not assumed. Full
+writeup, including what's still unfixed: [docs/hot_take.md](docs/hot_take.md).
 
 ## Hackathon compliance self-check
 
@@ -160,10 +182,10 @@ packages/schemas/      typed Fact / Belief / Evidence / Question / Answer / Traj
 services/identity_engine/    ingestion + belief seeding + versioned storage
 services/providers/          pluggable LLM backend: mock (default) / openai / anthropic
 services/embeddings/         pluggable embedding backend: hash (default) / fastembed (v2.3)
-services/qa_engine/          v1+: lexical + semantic retrieval, the two baselines,
-                              the IdentityOS agent, verification
-services/application_engine/ v2: requirement-fit assessors (lexical + semantic) +
-                              polarity-aware bucketing
+services/qa_engine/          v1+: lexical, semantic + hybrid retrieval, the two
+                              baselines, the IdentityOS agent, verification
+services/application_engine/ v2: requirement-fit assessors (lexical, semantic,
+                              hybrid) + polarity-aware bucketing
 services/evaluation/         scoring + both eval harnesses
 data/identity_sources/       the real source documents (owner's own, consented)
 data/applications/           the real 14-requirement application + its real human ground truth

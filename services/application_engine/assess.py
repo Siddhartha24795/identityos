@@ -17,6 +17,7 @@ from services.qa_engine.retrieval import (
     DigitalSelfEmbeddingIndex,
     format_context,
     retrieve,
+    retrieve_hybrid,
     retrieve_semantic,
 )
 from services.qa_engine.verification import evidence_coverage, verify_answer
@@ -242,6 +243,66 @@ def assess_identityos_semantic(
     assessment = Assessment(
         requirement_id=req.id,
         system_name="identityos_v2_semantic",
+        text=text,
+        claims=claims,
+        overall_confidence=overall,
+        evidence_coverage=coverage,
+        system_bucket=bucket,
+        provider=provider.name,
+        latency_ms=latency,
+    )
+    return assessment, traj
+
+
+def assess_identityos_hybrid(
+    req: ApplicationRequirement,
+    ds: DigitalSelf,
+    embedding_index: DigitalSelfEmbeddingIndex,
+    provider,
+) -> tuple[Assessment, Trajectory]:
+    """v2.4 — lexical retrieval first, semantic fallback only when lexical
+    finds nothing (retrieve_hybrid). Same generation/verification/bucketing
+    as the other two identityos_v2 variants; only retrieval differs."""
+    traj = Trajectory(question_id=req.id, system_name="identityos_v2_hybrid")
+    q = _as_question(req)
+    facts, beliefs = retrieve_hybrid(ds, q, embedding_index, top_k_facts=8, top_k_beliefs=4)
+    context = format_context(facts, beliefs)
+    traj.add(
+        stage="retrieve",
+        input_summary=req.text,
+        action=f"lexical retrieval, semantic fallback only if empty: {len(facts)} facts, {len(beliefs)} beliefs",
+        observation=context or "(no matching evidence found)",
+    )
+    prompt = f"CONTEXT:\n{context}\n\nREQUIREMENT:\n{req.text}\n"
+    t0 = time.time()
+    text = provider.complete(SYSTEM_PROMPT_IDENTITYOS, prompt)
+    latency = (time.time() - t0) * 1000
+    traj.add(
+        stage="generate",
+        input_summary=req.text,
+        action="call provider with cited, confidence-annotated context",
+        observation=text,
+    )
+    claims, overall = verify_answer(text, facts, beliefs)
+    coverage = evidence_coverage(claims)
+    bucket = bucket_from_signals(coverage, overall, claims)
+    traj.add(
+        stage="verify",
+        input_summary=text,
+        action="per-sentence grounding check (same verifier as lexical identityos_v2)",
+        observation=f"coverage={coverage:.2f} confidence={overall:.2f}",
+        confidence=overall,
+    )
+    traj.add(
+        stage="bucket",
+        input_summary=text,
+        action="derive fit bucket from coverage+confidence+polarity (same bucketing.py)",
+        observation=bucket.value,
+        decision=bucket.value,
+    )
+    assessment = Assessment(
+        requirement_id=req.id,
+        system_name="identityos_v2_hybrid",
         text=text,
         claims=claims,
         overall_confidence=overall,

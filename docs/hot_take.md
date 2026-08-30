@@ -132,6 +132,28 @@ check that retrieval got better on its own terms. We didn't chase a
 threshold that would make embeddings look good; we reported the trade-off
 and kept lexical retrieval as the shipped default.
 
+## v2.4 addendum: the diagnosis, taken seriously, produced a real fix
+
+Once the mechanism was understood — semantic retrieval's noise appeared
+*only* when it overrode requirements lexical retrieval already had
+evidence for, never when it was filling a genuine gap — the fix followed
+directly: run semantic retrieval *only* as a fallback when lexical finds
+nothing. `identityos_v2_hybrid` (docs/evaluation_v2.md) beat every other
+arm on agreement rate and matched lexical's dangerous-overclaim rate
+exactly, and this was verified requirement-by-requirement, not assumed: all
+twelve requirements lexical could already answer produced byte-identical
+outputs to pure lexical retrieval, including the one (req09) semantic
+retrieval alone had broken.
+
+The general point this adds to the first: **a correctly diagnosed
+mechanism — not a bigger model, not a cleverer threshold — produces a fix
+that's actually verifiable.** "Embeddings are more semantic, so they should
+help" was the intuition behind v2.3, and it was wrong on its own terms.
+"Semantic retrieval only ever hurt when it overrode a working answer" was
+a mechanism, and building a fix that targets exactly that claim is what
+made v2.4 checkable claim-by-claim rather than another number to trust on
+faith.
+
 ## The experiment we removed
 
 An earlier version of the hard-case scoring (services/evaluation/scoring.py)

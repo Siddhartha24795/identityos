@@ -149,20 +149,53 @@ retrieval signals, or a precision-aware bucketing rule that discounts
 weakly-scored citations), just not worth shipping as the default on the
 evidence collected so far. See docs/hot_take.md.
 
+## v2.4: hybrid retrieval — the targeted fix, verified mechanically
+
+v2.3's finding was specific: semantic retrieval's noise only appeared when
+it *overrode* requirements where lexical retrieval already had good
+evidence (req09 and six others) — it never helped where lexical had
+nothing (req05, req10) without also hurting elsewhere. `retrieve_hybrid()`
+(`services/qa_engine/retrieval.py`) responds to exactly that: run lexical
+retrieval first; fall back to semantic *only* when lexical returns nothing
+at all. Reproduce: `python scripts/run_eval_v2.py mock v2_hybrid fastembed`.
+
+| Metric | identityos_v2 (lexical) | identityos_v2_semantic | identityos_v2_hybrid |
+|---|---|---|---|
+| Evidence coverage | 0.83 | 1.00 | **0.97** |
+| Assessment agreement rate | 0.43 | 0.36 | **0.50** |
+| Dangerous overclaim rate | **0.00** | 0.25 | **0.00** |
+
+Hybrid beats both individual arms on agreement rate and matches lexical's
+safety exactly. This isn't asserted from the design — it's verified
+requirement by requirement: all 12 requirements where lexical had any
+evidence produced **byte-identical buckets** to pure lexical retrieval
+(including req09, which stays correctly `partial` — the semantic fallback
+never even runs there, so the noise that caused v2.3's dangerous overclaim
+structurally cannot recur). Only the two requirements where lexical found
+nothing changed: req10 moved to a fully correct `met_or_better`, and req05
+moved from `gap` to `partial` (a real improvement, not yet an exact match).
+
+**This is now the recommended retrieval strategy going forward** — kept
+alongside the lexical-only and semantic-only arms as permanent comparison
+points, not replacing them, per this project's practice of measuring
+every claim rather than assuming a "hybrid" label makes something better.
+See docs/hot_take.md for why the *mechanism* (fallback-only, not fusion)
+is what made this work where naive semantic retrieval didn't.
+
 ## What's still wrong (not hidden)
 
-**req05 (Entrepreneurial mindset) and req10 (Exceptional communication),
-on the shipped default (`identityos_v2`, lexical), still underclaim to
-`gap` with zero facts retrieved at all**, despite real, relevant evidence
-existing in the corpus (the "comfortable with ambiguity, unfunded
-mandates" and "translating executive intent" lines in
-`dossier_narrative.md`). This is the lexical-retrieval limitation flagged
-from the start (docs/architecture.md). v2.3's semantic retrieval arm
-(`identityos_v2_semantic`) does find this evidence — proving the
-limitation is real and addressable — but isn't the shipped default, for
-the reasons above. Both remaining default-path issues are safe-direction
-(underclaims, not overclaims) — the metric that matters most, dangerous
-overclaim rate, is clean on the default system.
+**req03, req06, req07, req11, req12, req14 still don't reach an exact
+bucket match on any retrieval arm**, including hybrid — mostly the same
+nuance-collapsing issue from earlier versions (a real "MET at chief level,
+with a stated caveat" or a forward commitment reads differently than a
+plain MET once bucketed into a coarse 3-way scale) rather than a new
+finding. **req05 specifically improved (gap -> partial) but still isn't an
+exact match** even under hybrid, because the semantic fallback's top
+citation for it is real and relevant but not confidently-enough grounded
+to cross the `met_or_better` threshold — a smaller, second-order version of
+the same "recall found something, but not the strongest possible evidence"
+limitation. None of these are dangerous overclaims — the metric that
+matters most stays at 0.00 across lexical and hybrid.
 
 ## What this run does and doesn't prove
 

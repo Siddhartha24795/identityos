@@ -37,19 +37,22 @@ the on-screen evidence.
    was completing the identity corpus with the rest of the real source
    document (v2.1) — resolved as a side effect, not a targeted patch.
 
-6. **The experiment we tried and did NOT ship (45s).** State the v2.3
-   finding directly: embedding-based retrieval (real semantic search, no
-   API key, ~65MB local model) genuinely fixed two weak spots — and
-   reintroduced a dangerous overclaim elsewhere, because higher-recall
-   retrieval fed a noisier signal into the same polarity check. Show the
-   table: dangerous overclaim rate 0.00 (lexical, shipped) vs 0.25
-   (semantic, kept only as a comparison arm). Say it plainly: we measured
-   it, it wasn't a net win, so it isn't the default.
+6. **The experiment we tried, didn't ship, then fixed properly (55s).**
+   State the v2.3 finding directly: embedding-based retrieval (real
+   semantic search, no API key, ~65MB local model) genuinely fixed two weak
+   spots — and reintroduced a dangerous overclaim elsewhere, because
+   higher-recall retrieval fed a noisier signal into the same polarity
+   check. We measured it, it wasn't a net win, so it didn't ship. Then:
+   diagnosing *why* — the noise only ever overrode a working lexical
+   answer, never filled a real gap — led to v2.4's fix: semantic only as a
+   fallback when lexical finds nothing. Show the final table: agreement
+   rate 0.50, dangerous overclaim rate 0.00 — best of all five systems,
+   verified requirement-by-requirement, not assumed.
 
-7. **Close (20s).** One sentence: the same mistake surfaced three times in
+7. **Close (20s).** One sentence: the same mistake surfaced repeatedly in
    different disguises — grounding tells you a claim is real, not what it
    means or how solid the retrieval behind it was — and every time,
-   completing or re-measuring the system beat trusting that "smarter"
+   correctly diagnosing the mechanism beat trusting that "smarter"
    automatically means "better."
 
-Total: ~4:20, leaving headroom for a clean start/stop.
+Total: ~4:30, leaving headroom for a clean start/stop.

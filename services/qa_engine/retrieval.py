@@ -112,6 +112,36 @@ def retrieve_semantic(
     return facts, beliefs
 
 
+def retrieve_hybrid(
+    ds: DigitalSelf,
+    question: Question,
+    index: DigitalSelfEmbeddingIndex,
+    top_k_facts: int = 6,
+    top_k_beliefs: int = 3,
+    min_similarity: float = 0.55,
+) -> tuple[list[Fact], list[Belief]]:
+    """v2.4 — lexical first, semantic ONLY as a fallback when lexical finds
+    nothing at all.
+
+    This is a direct, evidence-based response to the v2.3 finding
+    (docs/hot_take.md, docs/evaluation_v2.md): semantic retrieval's failure
+    mode was adding noisy, topically-adjacent-but-wrong evidence to
+    requirements where lexical retrieval ALREADY had good evidence (req09
+    and six others) — not fixing the cases where lexical genuinely found
+    nothing (req05, req10). Scoring fusion (blending both signals on every
+    query) would reintroduce that same noise on every query. Falling back
+    only when lexical is empty targets exactly the diagnosed failure mode
+    and nothing else — verified by re-running the full 14-requirement
+    comparison, not assumed from the design alone (docs/evaluation_v2.md).
+    """
+    facts, beliefs = retrieve(ds, question, top_k_facts, top_k_beliefs)
+    if not facts and not beliefs:
+        facts, beliefs = retrieve_semantic(
+            index, question, top_k_facts, top_k_beliefs, min_similarity
+        )
+    return facts, beliefs
+
+
 def _bucket_label(bucket: Confidence) -> str:
     return bucket.value.replace("_", " ")
 
