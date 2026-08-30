@@ -1,4 +1,4 @@
-.PHONY: setup build-identity eval-mock eval-real eval-v2-mock eval-v2-real eval-v2-semantic test clean
+.PHONY: setup build-identity eval-mock eval-real eval-v2-mock eval-v2-real eval-v2-semantic eval-documents test clean
 
 setup:
 	python3 -m venv .venv
@@ -30,6 +30,11 @@ eval-v2-semantic: build-identity
 
 eval-v2-real: build-identity
 	.venv/bin/python scripts/run_eval_v2.py anthropic v2_real fastembed
+
+# v2.5 — generates an actual cover letter with each system. Uses hybrid
+# retrieval (fastembed) so the real narrative-state/citation behavior shows.
+eval-documents: build-identity
+	.venv/bin/python scripts/run_eval_documents.py mock docs_mock fastembed
 
 test:
 	.venv/bin/python -m pytest tests/ -q

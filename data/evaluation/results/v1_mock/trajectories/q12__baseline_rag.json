@@ -3,7 +3,7 @@
   "system_name": "baseline_rag",
   "steps": [
     {
-      "timestamp": "2026-08-30T04:03:06.433289Z",
+      "timestamp": "2026-08-30T04:16:38.162424Z",
       "stage": "retrieve",
       "input_summary": "Describe your leadership experience.",
       "action": "dump the entire fact store as unstructured text (no ranking, no ids)",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T04:03:06.434530Z",
+      "timestamp": "2026-08-30T04:16:38.163688Z",
       "stage": "generate",
       "input_summary": "Describe your leadership experience.",
       "action": "call provider with the full unstructured context dump",

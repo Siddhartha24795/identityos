@@ -3,7 +3,7 @@
   "system_name": "identityos_v1",
   "steps": [
     {
-      "timestamp": "2026-08-30T04:03:06.443222Z",
+      "timestamp": "2026-08-30T04:16:38.172510Z",
       "stage": "classify",
       "input_summary": "What is your fluency level in Kannada?",
       "action": "use declared question.type (v1 simplification, not a learned classifier)",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T04:03:06.444019Z",
+      "timestamp": "2026-08-30T04:16:38.173342Z",
       "stage": "retrieve",
       "input_summary": "What is your fluency level in Kannada?",
       "action": "lexical retrieval over Digital Self: top 3 facts, 0 beliefs",
@@ -23,7 +23,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T04:03:06.444112Z",
+      "timestamp": "2026-08-30T04:16:38.173436Z",
       "stage": "generate",
       "input_summary": "What is your fluency level in Kannada?",
       "action": "call provider with structured, citation-tagged, confidence-annotated context",
@@ -33,7 +33,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T04:03:06.444201Z",
+      "timestamp": "2026-08-30T04:16:38.173541Z",
       "stage": "verify",
       "input_summary": "[dossier_excerpts:005] (verified fact) Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. [dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet in Kannada, and frames relocation plus Kannada learning as conditions he is committing to, not concessions being requested. [dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
       "action": "check every sentence for an explicit citation, else a lexical grounding match",
@@ -43,7 +43,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T04:03:06.444211Z",
+      "timestamp": "2026-08-30T04:16:38.173551Z",
       "stage": "complete",
       "input_summary": "q15",
       "action": "return final answer",

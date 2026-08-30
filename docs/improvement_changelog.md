@@ -60,3 +60,30 @@ than a new finding. req05 improved (`gap` -> `partial`) under hybrid but
 isn't an exact match yet, because the semantic fallback's citation is real
 but not confidently grounded enough to cross the met_or_better threshold.
 None of these are dangerous — the safety metric stays at 0.00.
+
+---
+
+# v2.5 — Document Generation (cover letter)
+
+All results from `python scripts/run_eval_documents.py mock docs_mock fastembed`
+(docs/evaluation_documents.md has full numbers and the actual generated letters).
+
+| Stage | What we tried and why | Evidence | Decision / learning |
+|---|---|---|---|
+| **Baseline (v2.5)** | `baseline_plain` / `baseline_rag`, same structure as v1/v2, applied to a 4-section cover letter instead of short answers. | Evidence coverage 0.00, unsupported-claim rate 1.00 for both — identical structural story to v1/v2 on a new task shape. | Confirms the core thesis generalizes to full-document generation, not just short answers. |
+| **Iteration 1 (v2.5)** | `identityos_v2_5`: section-by-section generation reusing hybrid retrieval + verification unmodified, plus `_prefer_unused()` to deprioritize (not forbid) re-citing evidence already used in an earlier section — a concrete test of the brief's `APPLICATION_NARRATIVE_STATE` concept. | Evidence coverage 0.95-1.00, unsupported-claim rate 0.00-0.05, repeated-evidence rate ~0.28-0.32 (most citations are fresh per section, not the same two facts four times). | Kept. First working multi-paragraph artifact, not just a short answer or a label. |
+| **Iteration 2 (v2.5) — found by reading the letter, not the score** | Inspected the actual generated letter (not just its passing metrics) before calling it done. | It read like an application for one specific prior role ("the Secretariat," "the committee") — every cited sentence real and grounded, none of it appropriate for a generic letter. No existing metric (coverage, unsupported-claim rate, polarity) flagged this. | Root-caused to one identity-source section written as strategy narrative for a specific prior candidacy, not general evidence about the person. |
+| **Iteration 3 (v2.5)** | Added `FactCategory.APPLICATION_SPECIFIC`, tagged the offending source section at ingestion, excluded it from generic document generation. Verified v1/v2's own scores were unaffected (category never fed their scoring) before trusting the fix. | 7 facts tagged and excluded; the most egregious IITACB-strategy sentences no longer appear. | Kept, but **not treated as fully solved** — see next row. |
+| **Iteration 4 (v2.5) — diagnosed, not patched further** | Re-inspected the letter after Iteration 3. | Residual role-specific framing survives inside individual sentences of otherwise-general, correctly-categorized facts ("precisely the condition of a Secretariat being stood up") — a sentence-level leak inside a whole-fact-level filter. | **Not fixed here.** Rewriting the source facts to strip this framing, having just seen it look bad in an eval run, is the same reactive-corpus-editing pattern already declined for req08/req13. Named as an open v2.6+ item instead (docs/roadmap.md). |
+| **Final (v2.5)** | Section-based generation + hybrid retrieval + narrative-state deprioritization + category-scoped exclusion = `identityos_v2_5`. | Evidence coverage 0.95, unsupported-claim rate 0.05, repeated-evidence rate 0.32, vs. 0.00/1.00/n-a for both baselines. | Main contribution: the first real generated artifact, with a genuinely new finding (evidence can be true, grounded, *and* out of scope) that no prior verification dimension caught. |
+
+## Main failure mode, v2.5 (see docs/hot_take.md for the full writeup)
+
+The application-specific exclusion fix operates at the whole-fact level;
+the contamination it was built to catch also exists at the sentence level,
+inside facts that are otherwise correctly scoped as general. This is the
+same granularity mismatch as v2.2's negation fix (sentence vs. clause),
+now appearing a third time (fact vs. sentence). The honest fix — rewrite
+source facts to strip role-specific framing, or LLM-assisted neutral
+rephrasing at generation time — needs its own evaluation and a real
+provider key respectively; neither was attempted reactively here.

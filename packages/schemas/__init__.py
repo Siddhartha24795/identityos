@@ -8,6 +8,7 @@ from .qa import (
     Trajectory,
 )
 from .application import RealAssessment, FitBucket, ApplicationRequirement, Assessment
+from .document import DocumentSection, GeneratedDocument
 
 __all__ = [
     "Confidence",
@@ -26,4 +27,6 @@ __all__ = [
     "FitBucket",
     "ApplicationRequirement",
     "Assessment",
+    "DocumentSection",
+    "GeneratedDocument",
 ]

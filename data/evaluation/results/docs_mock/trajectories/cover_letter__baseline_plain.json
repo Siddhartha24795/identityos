@@ -1,0 +1,46 @@
+{
+  "question_id": "cover_letter",
+  "system_name": "baseline_plain",
+  "steps": [
+    {
+      "timestamp": "2026-08-30T04:16:52.716545Z",
+      "stage": "generate",
+      "input_summary": "Why are you a strong fit for a technology leadership role, and what drives you professionally?",
+      "action": "call provider with zero context, zero verification",
+      "observation": "I have consistently demonstrated strong ability in this area. When it comes to drives and fit and leadership, I have always taken a proactive, results-driven approach and delivered measurable impact. I am confident this reflects who I am professionally.",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T04:16:52.716617Z",
+      "stage": "generate",
+      "input_summary": "Describe your most significant hands-on technical achievements and engineering work.",
+      "action": "call provider with zero context, zero verification",
+      "observation": "Over the years, I have built a reputation for excellence here. When it comes to achievements and engineering and hands, I have always taken a proactive, results-driven approach and delivered measurable impact. I am confident this reflects who I am professionally.",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T04:16:52.716675Z",
+      "stage": "generate",
+      "input_summary": "Describe your leadership experience and how you build, mentor, and manage teams.",
+      "action": "call provider with zero context, zero verification",
+      "observation": "Over the years, I have built a reputation for excellence here. When it comes to build and experience and leadership, I have always taken a proactive, results-driven approach and delivered measurable impact. I am confident this reflects who I am professionally.",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T04:16:52.716727Z",
+      "stage": "generate",
+      "input_summary": "What are your career goals, and why should an employer choose you over another candidate?",
+      "action": "call provider with zero context, zero verification",
+      "observation": "This is something I have thought about carefully throughout my career. When it comes to another and candidate and career, I have always taken a proactive, results-driven approach and delivered measurable impact. I look forward to bringing this strength to your organization.",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    }
+  ]
+}

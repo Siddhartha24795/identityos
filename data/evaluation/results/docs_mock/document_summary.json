@@ -1,0 +1,27 @@
+{
+  "document_type": "cover_letter",
+  "provider": "mock",
+  "embedding_provider": "fastembed",
+  "digital_self_version": 1,
+  "generated_at": "2026-08-30T04:16:52.733174+00:00",
+  "scores": {
+    "baseline_plain": {
+      "avg_evidence_coverage": 0.0,
+      "avg_unsupported_claim_rate": 1.0,
+      "repeated_evidence_rate": 0.0,
+      "n_sections": 4
+    },
+    "baseline_rag": {
+      "avg_evidence_coverage": 0.0,
+      "avg_unsupported_claim_rate": 1.0,
+      "repeated_evidence_rate": 0.0,
+      "n_sections": 4
+    },
+    "identityos_v2_5": {
+      "avg_evidence_coverage": 0.95,
+      "avg_unsupported_claim_rate": 0.05,
+      "repeated_evidence_rate": 0.316,
+      "n_sections": 4
+    }
+  }
+}

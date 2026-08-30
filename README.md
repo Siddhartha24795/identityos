@@ -1,16 +1,18 @@
-# IdentityOS — v2.4
+# IdentityOS — v2.5
 
-**An autonomous representative that answers application questions and
-assesses job-requirement fit on a person's behalf, with evidence,
-calibrated confidence, and refusal instead of fabrication.**
+**An autonomous representative that answers application questions,
+assesses job-requirement fit, and generates application documents on a
+person's behalf, with evidence, calibrated confidence, and refusal instead
+of fabrication.**
 
 Built for the micro1 Agentic Workflows Hackathon, against the full brief
-preserved in `PROMPT.md`. This repo builds v1 (Q&A) and v2 (requirement-fit
-assessment against a real, adjudicated application, iterated through v2.4)
-of that brief — see [docs/roadmap.md](docs/roadmap.md) for what's deferred
-to v2.5-v5 and why. Prior versions frozen at `../identityos-v1/`,
-`../identityos-v2/`, `../identityos-v2.1/`, `../identityos-v2.2/`,
-`../identityos-v2.3/`.
+preserved in `PROMPT.md`. This repo builds v1 (Q&A), v2 (requirement-fit
+assessment against a real, adjudicated application, iterated through
+v2.4), and v2.5 (document generation) of that brief — see
+[docs/roadmap.md](docs/roadmap.md) for what's deferred to v2.6-v5 and why.
+Prior versions frozen at `../identityos-v1/`, `../identityos-v2/`,
+`../identityos-v2.1/`, `../identityos-v2.2/`, `../identityos-v2.3/`,
+`../identityos-v2.4/`.
 
 ## Who has this problem, and why it's worth solving
 
@@ -49,26 +51,29 @@ git clone <this repo> && cd identityos
 make setup            # venv + deps
 make eval-mock         # v1: builds Digital Self, runs all 3 systems on 19 Q&A questions
 make eval-v2-mock      # v2: runs baselines + lexical identityos_v2 on 14 real requirements
-make eval-v2-semantic  # v2.3: adds the real embedding-retrieval comparison arm (see below)
+make eval-v2-semantic  # v2.3/v2.4: adds the semantic + hybrid retrieval comparison arms
+make eval-documents    # v2.5: generates an actual cover letter with each system
 ```
 
 Expect each in under 10 seconds, $0 cost — the default `PROVIDER=mock` (LLM)
 and `EMBEDDING_PROVIDER=hash` (embeddings) are deterministic, dependency-light
 stand-ins built exactly so judges can reproduce the main result from a clean
-environment (see docs/evaluation.md and docs/evaluation_v2.md for what that
-does and doesn't prove). `make eval-v2-semantic` downloads a ~65MB ONNX
+environment (see docs/evaluation.md, docs/evaluation_v2.md, and
+docs/evaluation_documents.md for what that does and doesn't prove).
+`make eval-v2-semantic` / `make eval-documents` download a ~65MB ONNX
 embedding model on first run (fastembed, no API key, no torch) — still $0,
 but does need one-time network access. Output per run:
-- `data/evaluation/results/<tag>/summary.json` (v1) or `application_summary.json` (v2)
+- `data/evaluation/results/<tag>/summary.json` (v1), `application_summary.json` (v2), or `document_summary.json` (v2.5)
 - `data/evaluation/results/<tag>/answers.json` (v1) or `application_answers.json` (v2)
+- `data/evaluation/results/<tag>/documents/<system>.md` — the actual generated cover letters (v2.5)
 - `data/evaluation/results/<tag>/trajectories/*.md` — one file per
-  (question-or-requirement, system) pair, human-readable, per the
-  hackathon's trajectory deliverable
+  (question-or-requirement-or-section, system) pair, human-readable, per
+  the hackathon's trajectory deliverable
 
 To get a qualitative read with a real model: copy `.env.example` to `.env`,
 set `ANTHROPIC_API_KEY` or `OPENAI_API_KEY`, then `make eval-real` / `make eval-v2-real`.
 
-Run the smoke test suite: `make test` (18 tests, <1s, no keys/downloads needed).
+Run the smoke test suite: `make test` (22 tests, <1s, no keys/downloads needed).
 
 ## Results (reference runs, `PROVIDER=mock`)
 
@@ -134,6 +139,24 @@ as lexical. All three retrieval arms (lexical, semantic, hybrid) stay in
 the harness as permanent comparison points. Full story:
 [docs/evaluation_v2.md](docs/evaluation_v2.md).
 
+**v2.5 — document generation, the first real generated artifact:**
+
+| Metric | baseline_plain | baseline_rag | identityos_v2_5 |
+|---|---|---|---|
+| Evidence coverage | 0.00 | 0.00 | **0.95** |
+| Unsupported claim rate | 1.00 | 1.00 | **0.05** |
+| Repeated-evidence rate (narrative diversity across sections) | n/a | n/a | **0.32** |
+
+A 4-section cover letter, generated with the same hybrid retrieval and
+verification as v2 plus a simple narrative-state rule (prefer not citing
+the same fact twice across sections). Reading the actual generated letter
+— not just its passing score — found a genuinely new failure mode: real,
+grounded evidence can still be the *wrong scope* for the document (in this
+case, strategy narrative written for one specific prior job application,
+showing up in what was supposed to be a generic letter). Fixed the
+obvious case; found, and left open, a subtler one. Full story, and the
+actual generated letters: [docs/evaluation_documents.md](docs/evaluation_documents.md).
+
 ## Improvement changelog
 
 [docs/improvement_changelog.md](docs/improvement_changelog.md) — baseline
@@ -158,7 +181,10 @@ application. v2.3: "smarter" embedding retrieval made the polarity check
 profile isn't automatically safe against a different one. v2.4: diagnosing
 *why* — the noise only ever overrode working answers, never filled real
 gaps — produced a fix (semantic as a fallback only) that beat every other
-system and was verified requirement-by-requirement, not assumed. Full
+system and was verified requirement-by-requirement, not assumed. v2.5: the
+same substitution once more, at a fourth level — grounded and true isn't
+the same as *in scope for this document*; a real, correctly-cited fact can
+still be narrative written for a different, specific context. Full
 writeup, including what's still unfixed: [docs/hot_take.md](docs/hot_take.md).
 
 ## Hackathon compliance self-check
@@ -175,10 +201,11 @@ Full disclosure, and what "agent-use evidence" means in this repo:
 ## Repository map
 
 ```
-docs/                  problem statement, architecture, roadmap, evaluation (v1 + v2),
+docs/                  problem statement, architecture, roadmap, evaluation (v1, v2, documents),
                         changelog, research hypotheses, hot take, demo script, agent disclosure
 packages/schemas/      typed Fact / Belief / Evidence / Question / Answer / Trajectory /
-                        ApplicationRequirement / Assessment / FitBucket
+                        ApplicationRequirement / Assessment / FitBucket /
+                        DocumentSection / GeneratedDocument
 services/identity_engine/    ingestion + belief seeding + versioned storage
 services/providers/          pluggable LLM backend: mock (default) / openai / anthropic
 services/embeddings/         pluggable embedding backend: hash (default) / fastembed (v2.3)
@@ -186,10 +213,12 @@ services/qa_engine/          v1+: lexical, semantic + hybrid retrieval, the two
                               baselines, the IdentityOS agent, verification
 services/application_engine/ v2: requirement-fit assessors (lexical, semantic,
                               hybrid) + polarity-aware bucketing
-services/evaluation/         scoring + both eval harnesses
+services/document_engine/    v2.5: section-planned cover-letter generation +
+                              narrative-state (avoid repeating evidence)
+services/evaluation/         scoring + all three eval harnesses
 data/identity_sources/       the real source documents (owner's own, consented)
 data/applications/           the real 14-requirement application + its real human ground truth
-data/evaluation/              question bank + both eval harnesses' results/trajectories
+data/evaluation/              question bank + every eval harness's results/trajectories/documents
 data/.embedding_cache/        fastembed's downloaded model (gitignored, regenerable)
 scripts/               the commands judges actually run
 tests/                 smoke tests (make test)

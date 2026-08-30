@@ -3,7 +3,7 @@
   "system_name": "baseline_rag",
   "steps": [
     {
-      "timestamp": "2026-08-30T04:03:06.453754Z",
+      "timestamp": "2026-08-30T04:16:38.183200Z",
       "stage": "retrieve",
       "input_summary": "What common thread connects your work at Qualcomm, Samsung Research, and Jinn Labs?",
       "action": "dump the entire fact store as unstructured text (no ranking, no ids)",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T04:03:06.454993Z",
+      "timestamp": "2026-08-30T04:16:38.184458Z",
       "stage": "generate",
       "input_summary": "What common thread connects your work at Qualcomm, Samsung Research, and Jinn Labs?",
       "action": "call provider with the full unstructured context dump",

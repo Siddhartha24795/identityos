@@ -26,6 +26,13 @@ _CATEGORY_MAP = {
     "PROJECT": FactCategory.PROJECT,
     "SELF-ASSESSED GAP": FactCategory.OTHER,
     "BELIEF-RELEVANT STATEMENT": FactCategory.OTHER,
+    "REQUIREMENT EVIDENCE": FactCategory.OTHER,
+    # v2.5: this section is strategy/proposal narrative written FOR the
+    # IITACB CEO candidature specifically (see data/identity_sources/
+    # dossier_narrative.md) — real and true, but not general evidence
+    # about the person, so document generation for any other target
+    # should not draw on it by default. docs/hot_take.md v2.5 addendum.
+    "STRATEGY AND ACCOUNTABILITY": FactCategory.APPLICATION_SPECIFIC,
 }
 
 

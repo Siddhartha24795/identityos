@@ -64,6 +64,13 @@ class FactCategory(str, Enum):
     TECHNOLOGY = "technology"
     ACHIEVEMENT = "achievement"
     OTHER = "other"
+    # v2.5 — content that is real and true, but was written as strategy/
+    # proposal narrative for a SPECIFIC prior application (e.g. the IITACB
+    # CEO candidature), not general evidence about the person's
+    # capabilities. Grounded and non-hallucinated, but the wrong kind of
+    # evidence for a document aimed at a different (or generic) target —
+    # see docs/hot_take.md's v2.5 addendum.
+    APPLICATION_SPECIFIC = "application_specific"
 
 
 class Fact(BaseModel):

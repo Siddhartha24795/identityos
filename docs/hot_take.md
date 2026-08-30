@@ -11,7 +11,10 @@ against a real, adjudicated application. Both read as the same underlying
 mistake once you see them side by side. v2.3 then found a third, related
 lesson: a verification layer's safety guarantee is coupled to the specific
 error profile of whatever retrieval feeds it, so "improving" retrieval in
-isolation can make the safety check worse, not better.
+isolation can make the safety check worse, not better. v2.5 found a fourth:
+grounded and true isn't the same as "the right evidence for this
+document" — a fact can correctly describe the person and still be
+narrative written for a different, specific context entirely.
 
 ## What we observed
 
@@ -153,6 +156,33 @@ help" was the intuition behind v2.3, and it was wrong on its own terms.
 a mechanism, and building a fix that targets exactly that claim is what
 made v2.4 checkable claim-by-claim rather than another number to trust on
 faith.
+
+## v2.5 addendum: grounded and true still isn't "the right evidence"
+
+Building the first multi-paragraph artifact (a generic cover letter,
+`services/document_engine/`) surfaced a fourth substitution, distinct from
+the first three. The generated letter read like an application for one
+specific prior role — "the Secretariat," "the committee" — because a
+source section written as strategy narrative for that specific candidacy
+got cited as if it were general evidence about the person. Every sentence
+was real, true, and correctly grounded. No metric already built (evidence
+coverage, unsupported-claim rate, polarity) would have caught it, because
+none of them ask the question that matters here: is this evidence *in
+scope* for what's being written, not just *true* of the person.
+
+The fix — tagging that source section and excluding it from generic
+document generation — closed the obvious case and, on inspection, did not
+close a subtler one: individual sentences inside otherwise-general facts
+still carry the same specific role's framing baked in ("precisely the
+condition of a Secretariat being stood up"), because those facts were
+transcribed by paraphrasing a table whose own language compared everything
+to that one role. Category-level tagging operates on whole facts; this
+contamination lives inside a sentence within a mostly-fine fact — the same
+granularity mismatch as v2.2's negation fix, appearing a third time at a
+different level. We did not rewrite the source facts to chase a clean
+result once diagnosed; that would be corpus-editing for the same reason
+already declined for req08 and req13. It's an open, named item for v2.6+
+(docs/roadmap.md), not a hidden one.
 
 ## The experiment we removed
 

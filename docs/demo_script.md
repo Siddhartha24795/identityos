@@ -11,7 +11,7 @@ the on-screen evidence.
    that invite overclaiming. Show `data/evaluation/question_bank.json`
    pointing at q13 (patent credit — a real 75%/25% shared inventorship).
 
-2. **Baseline vs. system, live (60s).** Run
+2. **Baseline vs. system, live (45s).** Run
    `python scripts/build_digital_self.py && python scripts/run_eval.py mock live_demo`.
    While it runs, narrate the pipeline (docs/architecture.md). Open
    `data/evaluation/results/live_demo/trajectories/q13__baseline_rag.md`
@@ -29,7 +29,7 @@ the on-screen evidence.
    `data/evaluation/results/v2_demo/trajectories/req14__identityos_v2.md` —
    the single most important requirement, a real admitted governance gap.
 
-5. **The bug, found and fixed (45s).** Show that the system correctly
+5. **The bug, found and fixed (35s).** Show that the system correctly
    retrieved and cited the exact sentence admitting the gap — and initially
    still mislabeled it a match, because grounding and polarity got
    conflated (docs/hot_take.md). State plainly: the fix that actually
@@ -37,7 +37,7 @@ the on-screen evidence.
    was completing the identity corpus with the rest of the real source
    document (v2.1) — resolved as a side effect, not a targeted patch.
 
-6. **The experiment we tried, didn't ship, then fixed properly (55s).**
+6. **The experiment we tried, didn't ship, then fixed properly (50s).**
    State the v2.3 finding directly: embedding-based retrieval (real
    semantic search, no API key, ~65MB local model) genuinely fixed two weak
    spots — and reintroduced a dangerous overclaim elsewhere, because
@@ -49,10 +49,19 @@ the on-screen evidence.
    rate 0.50, dangerous overclaim rate 0.00 — best of all five systems,
    verified requirement-by-requirement, not assumed.
 
-7. **Close (20s).** One sentence: the same mistake surfaced repeatedly in
-   different disguises — grounding tells you a claim is real, not what it
-   means or how solid the retrieval behind it was — and every time,
-   correctly diagnosing the mechanism beat trusting that "smarter"
-   automatically means "better."
+7. **The first real artifact, and the finding hiding inside it (35s).**
+   Run `make eval-documents` and open the generated letter at
+   `data/evaluation/results/docs_mock/documents/identityos_v2_5.md`. State
+   plainly: it initially read like an application for one specific prior
+   role, because real, grounded evidence turned out to be strategy
+   narrative written for a different, specific context — not general
+   evidence about the person. Fixed the obvious case; name the subtler one
+   that's still open (sentence-level framing) rather than claim it's clean.
 
-Total: ~4:30, leaving headroom for a clean start/stop.
+8. **Close (15s).** One sentence: the same mistake surfaced repeatedly in
+   different disguises — grounding tells you a claim is real, not what it
+   means, how solid the retrieval behind it was, or whether it's in scope
+   — and every time, correctly diagnosing the mechanism beat trusting that
+   "smarter" automatically means "better."
+
+Total: ~4:45, leaving minimal headroom — trim narration, not evidence, if recording runs long.

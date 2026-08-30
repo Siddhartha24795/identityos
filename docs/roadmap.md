@@ -81,14 +81,41 @@ and semantic-only as permanent comparison arms. See
 docs/improvement_changelog.md (Iteration 9), docs/evaluation_v2.md,
 docs/hot_take.md's v2.4 addendum.
 
-## v2.5+ — deferred from the original v2 scope  ·  not started
+## v2.5 — Document Generation (cover letter)  ·  **built**
 
+First real generated artifact: a 4-section cover letter
+(`services/document_engine/`), reusing hybrid retrieval and verification
+unmodified, plus `_prefer_unused()` — a concrete, working instance of the
+brief's `APPLICATION_NARRATIVE_STATE` (spread evidence across sections
+instead of repeating the same two facts). Evidence coverage 0.95,
+unsupported-claim rate 0.05, repeated-evidence rate 0.32, vs. the usual
+0.00/1.00/n-a for both baselines.
+
+Found a genuinely new failure mode by reading the actual letter, not just
+its passing score: real, grounded, true evidence can still be the *wrong
+scope* for the document being written (strategy narrative for one specific
+prior application, cited as if it were general evidence about the
+person). Added `FactCategory.APPLICATION_SPECIFIC` to tag and exclude it.
+This closed the obvious case and — found on re-inspection, not hidden —
+left a subtler one: the same contamination survives inside individual
+sentences of otherwise-general facts, one level more granular than the fix
+addresses. See docs/evaluation_documents.md, docs/hot_take.md's v2.5
+addendum, docs/improvement_changelog.md.
+
+## v2.6+ — deferred  ·  not started
+
+- Sentence/clause-level content-scope classification, or LLM-assisted
+  neutral rephrasing at generation time — the direct follow-up to v2.5's
+  residual finding. Needs its own evaluation (the former) or a real
+  provider key (the latter); not attempted as a reactive corpus edit.
 - Automatic belief inference from raw unstructured text (replacing v1/v2's
   hand-seeded beliefs) with an LLM pass plus counter-evidence search.
-- `APPLICATION_NARRATIVE_STATE`: answer a full application's question set as
-  a coherent set (no contradicting Q1 vs Q3), not independently.
-- Document generators: cover letter, SOP, short-answer set, each claim
-  still traceable per docs/architecture.md.
+- Extend document generation to other types (SOP, research statement,
+  short-answer set) and to a *named* target opportunity (a real
+  `ApplicationIntentModel`, not just a generic-role system prompt) — would
+  also directly address the v2.5 scope-contamination finding, since a
+  named target makes "in scope for this document" a checkable fact instead
+  of an implicit assumption.
 - Six requirements (req03/06/07/11/12/14) still don't reach an exact bucket
   match under any retrieval arm — mostly a coarse-3-bucket-scale nuance
   problem, not a retrieval problem. Would need either a finer-grained real
