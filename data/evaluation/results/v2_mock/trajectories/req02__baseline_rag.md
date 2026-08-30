@@ -1,16 +1,16 @@
 ### Trajectory — baseline_rag — req02
 
-**03:01:05 · retrieve**
+**03:11:45 · retrieve**
 - input: Desired — IIT alumnus
 - action: dump all 92 facts as unstructured text, no ranking, no ids
 - observation: no relevance filtering applied
 
-**03:01:05 · generate**
+**03:11:45 · generate**
 - input: Desired — IIT alumnus
 - action: call provider with the unstructured context dump
 - observation: Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. Owned the cost side with rigour: order-of-magnitude inference cost reduction through quantization, pruning, distillation and parameter-efficient adaptation, and ownership of the edge-versus-cloud partitioning strategy, a direct unit-economics decision. States explicitly that full institutional P&L management at IITACB's scale would be a step up, and that this is experience not yet held. States a reading of the mandate: IITACB does not need a manager, it needs a founder for its second act — turning a facility and a 50,000-strong Bengaluru alumni base into an institution industry pays to join, government treats as an implementation partner, and IIT Directors route their best research through. Proposes running IITACB as a two-sided marketplace between a curated Industry Problem Register (real, scoped, budgeted problems from member corporates) and a Faculty Capability Index across the 23 IITs, matched by someone who can assess technical viability before either side commits.
 
-**03:01:05 · verify**
+**03:11:45 · verify**
 - input: Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. Owned the cost side with rigour: order-of-magnitude inference cost reduction through quantization, pruning, distillation and parameter-efficient adaptation, and ownership of the edge-versus-cloud partitioning strategy, a direct unit-economics decision. States explicitly that full institutional P&L management at IITACB's scale would be a step up, and that this is experience not yet held. States a reading of the mandate: IITACB does not need a manager, it needs a founder for its second act — turning a facility and a 50,000-strong Bengaluru alumni base into an institution industry pays to join, government treats as an implementation partner, and IIT Directors route their best research through. Proposes running IITACB as a two-sided marketplace between a curated Industry Problem Register (real, scoped, budgeted problems from member corporates) and a Faculty Capability Index across the 23 IITs, matched by someone who can assess technical viability before either side commits.
 - action: check for citations/grounding (none possible: no ids in context)
 - observation: coverage=0.00 confidence=0.00

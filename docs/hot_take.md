@@ -76,11 +76,19 @@ transcribed into the Digital Self. **The fix that actually closed it
 wasn't a smarter rule — it was completing the record.** A general
 corpus-completion pass (docs/improvement_changelog.md, Iteration 6)
 transcribed the rest of the same source document, without regard to which
-eval question needed what, and req08 resolved as a side effect. Two safe
-(non-dangerous) failures remain — a sentence-level negation check that
-should be clause-level, and a lexical retriever that can't match
-"entrepreneurial mindset" against evidence phrased as "comfortable with
-ambiguity" — both documented in docs/evaluation_v2.md, neither patched away.
+eval question needed what, and req08 resolved as a side effect.
+
+A second, smaller instance of the same "coverage/confidence isn't the
+whole story" pattern showed up right after: a claim mixing a positive
+clause ("fluent in English and Hindi") and a negative one ("not yet in
+Kannada") was scored fully negative by whole-sentence detection, when the
+honest read is "mixed" — safely fixed with clause-level splitting
+(Iteration 7, v2.2). One safe (non-dangerous) failure remains — a lexical
+retriever that can't match "entrepreneurial mindset" against evidence
+phrased as "comfortable with ambiguity" — documented in
+docs/evaluation_v2.md, not patched away with a keyword-list hack, because
+that would be tuning to the two known failing terms rather than fixing the
+general problem (embedding-based retrieval, its own version, v2.3).
 
 The pattern across both versions: **grounding verification answers "did
 this really come from evidence," and every time we've needed it to also

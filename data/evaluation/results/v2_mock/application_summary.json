@@ -3,7 +3,7 @@
   "provider": "mock",
   "digital_self_version": 1,
   "n_requirements": 14,
-  "generated_at": "2026-08-30T03:01:05.169252+00:00",
+  "generated_at": "2026-08-30T03:11:45.553644+00:00",
   "scores": {
     "baseline_plain": {
       "n_requirements": 14,
@@ -25,8 +25,8 @@
     },
     "identityos_v2": {
       "n_requirements": 14,
-      "agreements": 5,
-      "agreement_rate": 0.357,
+      "agreements": 6,
+      "agreement_rate": 0.429,
       "avg_evidence_coverage": 0.829,
       "non_met_requirements": 4,
       "dangerous_overclaims": 0,
@@ -402,8 +402,8 @@
       "req13": {
         "real_assessment": "partial",
         "real_bucket": "partial",
-        "system_bucket": "gap",
-        "agrees": false,
+        "system_bucket": "partial",
+        "agrees": true,
         "dangerous_overclaim": false,
         "evidence_coverage": 1.0,
         "overall_confidence": 0.745

@@ -1,12 +1,12 @@
 ### Trajectory — baseline_rag — q14
 
-**03:01:04 · retrieve**
+**03:11:45 · retrieve**
 - input: What professional body or industry association have you personally founded or run?
 - action: dump the entire fact store as unstructured text (no ranking, no ids)
 - observation: 92 facts included, no relevance filtering
 - reasoning: Baseline 2 has retrieval but no structure and no grounding check.
 
-**03:01:04 · generate**
+**03:11:45 · generate**
 - input: What professional body or industry association have you personally founded or run?
 - action: call provider with the full unstructured context dump
 - observation: Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record. Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group. Siddhartha's dossier states: "I am a working generative-AI practitioner... I can tell a real deep-tech proposition from AI theatre before [an institution]'s name is on it," offered as a self-description of his professional judgment.

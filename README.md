@@ -1,4 +1,4 @@
-# IdentityOS — v2
+# IdentityOS — v2.2
 
 **An autonomous representative that answers application questions and
 assesses job-requirement fit on a person's behalf, with evidence,
@@ -6,9 +6,10 @@ calibrated confidence, and refusal instead of fabrication.**
 
 Built for the micro1 Agentic Workflows Hackathon, against the full brief
 preserved in `PROMPT.md`. This repo builds v1 (Q&A) and v2 (requirement-fit
-assessment against a real, adjudicated application) of that brief — see
-[docs/roadmap.md](docs/roadmap.md) for what's deferred to v2.1-v5 and why.
-Prior version frozen at `../identityos-v1/`.
+assessment against a real, adjudicated application, iterated through v2.2)
+of that brief — see [docs/roadmap.md](docs/roadmap.md) for what's deferred
+to v2.3-v5 and why. Prior versions frozen at `../identityos-v1/`,
+`../identityos-v2/`, `../identityos-v2.1/`.
 
 ## Who has this problem, and why it's worth solving
 
@@ -82,7 +83,7 @@ this offline run: [docs/evaluation.md](docs/evaluation.md).
 | Metric | baseline_plain | baseline_rag | identityos_v2 |
 |---|---|---|---|
 | Evidence coverage | 0.00 | 0.00 | **0.83** |
-| Assessment agreement rate | 0.07 | 0.07 | **0.36** |
+| Assessment agreement rate | 0.07 | 0.07 | **0.43** |
 | Dangerous overclaim rate (of 4 non-MET requirements) | 0.00* | 0.00* | **0.00** |
 
 *Trivial — both baselines say "gap" to every requirement regardless of
@@ -90,9 +91,10 @@ truth, so they cannot overclaim, but they also can't answer anything
 correctly except by accident. identityos_v2's dangerous-overclaim rate
 started at 0.25 (the system briefly overclaimed the single most important
 requirement — a real, admitted governance gap — because grounding and
-polarity got conflated) and reached 0.00 after a v2.1 corpus-completion
-pass fixed the remaining case as a side effect, not a targeted patch. Full
-story: [docs/evaluation_v2.md](docs/evaluation_v2.md).
+polarity got conflated), reached 0.00 after a v2.1 corpus-completion pass
+fixed the remaining case as a side effect, and agreement rate improved
+further in v2.2 (clause-level negation detection). Full story:
+[docs/evaluation_v2.md](docs/evaluation_v2.md).
 
 ## Improvement changelog
 

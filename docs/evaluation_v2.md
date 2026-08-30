@@ -18,7 +18,7 @@ Reproduce: `python scripts/build_digital_self.py && python scripts/run_eval_v2.p
 | Metric | baseline_plain | baseline_rag | identityos_v2 |
 |---|---|---|---|
 | Evidence coverage | 0.00 | 0.00 | **0.83** |
-| Assessment agreement rate (14 reqs) | 0.07 | 0.07 | **0.36** |
+| Assessment agreement rate (14 reqs) | 0.07 | 0.07 | **0.43** |
 | Dangerous overclaim rate (4 non-MET reqs) | 0.00* | 0.00* | **0.00** |
 
 *Both baselines never cite anything (evidence_coverage 0.00 for both, same
@@ -32,7 +32,7 @@ know" cannot overclaim and also cannot be useful — those are the same fact
 viewed two ways.
 
 **Assessment agreement rate is the headline metric the design brief asks
-for, and it is genuinely improved (0.07 -> 0.36) — but it is a noisier
+for, and it is genuinely improved (0.07 -> 0.43) — but it is a noisier
 signal than it looks**, because it penalizes a safe underclaim (system says
 `partial`/`gap`, real answer is `met_or_better`) exactly as harshly as a
 dangerous overclaim (system says `met_or_better`, real answer is `partial`
@@ -85,14 +85,22 @@ dangerous_overclaim_rate dropped to 0.00 — as a side effect of completing
 the record, not a targeted fix.** The general fix was better than the
 specific one would have been.
 
-## What's still wrong (not hidden)
+## v2.2: clause-level negation
 
-**req13 (Kannada fluency, real = `partial`) underclaims to `gap`.** Safer
-direction than an overclaim, but still wrong: the single retrieved sentence
-mixes a positive clause ("fluent in English and Hindi") and a negative one
-("not yet in Kannada"), and the negation check operates on the whole
-sentence, not the clause. Fix needs clause-level negation detection
-(docs/roadmap.md v2.1, still open).
+req13 (Kannada fluency, real = `partial`) had been underclaiming to `gap`:
+the single retrieved sentence mixes a positive clause ("fluent in English
+and Hindi") and a negative one ("not yet in Kannada"), and whole-sentence
+negation detection scored the entire sentence negative. Fix: split cited
+claim text on unambiguous contrastive conjunctions (" but ", "; ",
+"however", "though", "while" — never bare "yet", which already does double
+duty inside the "not yet" negation marker) and classify each claim as
+`negative` / `mixed` / `positive`; a `mixed` claim now buckets `partial`,
+not `gap` (`services/application_engine/bucketing.py`). **req13 now
+correctly agrees.** No other requirement's bucket changed — verified by
+re-running the full 14-requirement comparison before and after, not just
+inspecting req13 in isolation.
+
+## What's still wrong (not hidden)
 
 **req05 (Entrepreneurial mindset) and req10 (Exceptional communication)
 underclaim to `gap` with zero facts retrieved at all**, despite real,
@@ -103,7 +111,9 @@ from the start (docs/architecture.md): the requirement's abstract phrasing
 ("entrepreneurial mindset") shares no literal words with evidence phrased
 differently ("comfortable with ambiguity"). Confirms the known limitation
 concretely rather than surfacing a new one — the documented fix is
-embedding-based retrieval (docs/roadmap.md v2.1+).
+embedding-based retrieval, scoped as its own version (docs/roadmap.md v2.3)
+rather than bundled into v2.2, since it needs a new dependency decision and
+a real lexical-vs-semantic comparison.
 
 Both remaining issues are safe-direction (underclaims, not overclaims) —
 the metric that matters most, dangerous overclaim rate, is clean.

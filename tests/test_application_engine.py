@@ -50,3 +50,19 @@ def test_bucket_from_signals_negation_downgrades_confident_claim():
         evidence_coverage=1.0, overall_confidence=0.9, claims=[negative_claim]
     )
     assert bucket != FitBucket.MET_OR_BETTER
+
+
+def test_bucket_from_signals_mixed_clause_is_partial_not_gap():
+    """Regression test for the req13 finding (v2.2): a single sentence
+    mixing a positive and a negative clause must bucket as PARTIAL, not
+    GAP — whole-sentence negation detection previously over-penalized it."""
+    mixed_claim = AnswerClaim(
+        text="He is fluent in English and Hindi but not yet in Kannada.",
+        evidence_refs=["dossier_excerpts:007"],
+        claim_type=ClaimType.VERIFIED_FACT,
+        confidence=0.99,
+    )
+    bucket = bucket_from_signals(
+        evidence_coverage=1.0, overall_confidence=0.9, claims=[mixed_claim]
+    )
+    assert bucket == FitBucket.PARTIAL

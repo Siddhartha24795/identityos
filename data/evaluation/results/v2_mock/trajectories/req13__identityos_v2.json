@@ -3,7 +3,7 @@
   "system_name": "identityos_v2",
   "steps": [
     {
-      "timestamp": "2026-08-30T03:01:05.161933Z",
+      "timestamp": "2026-08-30T03:11:45.546448Z",
       "stage": "retrieve",
       "input_summary": "Languages — English, Hindi, Kannada preferred",
       "action": "lexical retrieval over Digital Self: top 1 facts, 0 beliefs",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T03:01:05.162001Z",
+      "timestamp": "2026-08-30T03:11:45.546530Z",
       "stage": "generate",
       "input_summary": "Languages — English, Hindi, Kannada preferred",
       "action": "call provider with cited, confidence-annotated context",
@@ -23,7 +23,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T03:01:05.162054Z",
+      "timestamp": "2026-08-30T03:11:45.546611Z",
       "stage": "verify",
       "input_summary": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet in Kannada, and frames relocation plus Kannada learning as conditions he is committing to, not concessions being requested. Languages — English, Hindi, Kannada preferred REQUIREMENT:",
       "action": "per-sentence grounding check (same verifier as v1)",
@@ -33,14 +33,14 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T03:01:05.162059Z",
+      "timestamp": "2026-08-30T03:11:45.546617Z",
       "stage": "bucket",
       "input_summary": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet in Kannada, and frames relocation plus Kannada learning as conditions he is committing to, not concessions being requested. Languages — English, Hindi, Kannada preferred REQUIREMENT:",
       "action": "derive fit bucket from coverage+confidence, not a self-reported label",
-      "observation": "gap",
+      "observation": "partial",
       "reasoning": "A self-reported label from generation isn't independently checkable; a derived one is.",
       "confidence": null,
-      "decision": "gap"
+      "decision": "partial"
     }
   ]
 }

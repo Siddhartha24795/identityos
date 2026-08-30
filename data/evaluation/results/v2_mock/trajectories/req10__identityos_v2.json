@@ -3,7 +3,7 @@
   "system_name": "identityos_v2",
   "steps": [
     {
-      "timestamp": "2026-08-30T03:01:05.149862Z",
+      "timestamp": "2026-08-30T03:11:45.534370Z",
       "stage": "retrieve",
       "input_summary": "Exceptional communication",
       "action": "lexical retrieval over Digital Self: top 0 facts, 0 beliefs",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T03:01:05.149900Z",
+      "timestamp": "2026-08-30T03:11:45.534391Z",
       "stage": "generate",
       "input_summary": "Exceptional communication",
       "action": "call provider with cited, confidence-annotated context",
@@ -23,7 +23,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T03:01:05.149916Z",
+      "timestamp": "2026-08-30T03:11:45.534406Z",
       "stage": "verify",
       "input_summary": "Exceptional communication REQUIREMENT:",
       "action": "per-sentence grounding check (same verifier as v1)",
@@ -33,7 +33,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T03:01:05.149921Z",
+      "timestamp": "2026-08-30T03:11:45.534410Z",
       "stage": "bucket",
       "input_summary": "Exceptional communication REQUIREMENT:",
       "action": "derive fit bucket from coverage+confidence, not a self-reported label",

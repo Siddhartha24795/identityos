@@ -53,10 +53,20 @@ file, not slides.
    Show that the system correctly retrieved and cited the exact sentence
    admitting the gap — and initially still mislabeled it a positive match,
    because grounding and polarity got conflated (docs/hot_take.md's v2
-   addendum). Show the fix, and say plainly that one case (req08) is still
-   wrong today.
+   addendum).
 
-8. **Close (15s).** One sentence: the throughline across both versions is
+8. **v2.1 + v2.2, the two fixes that actually worked (45s).** State plainly
+   that the negation-rule fix alone left one dangerous overclaim (req08)
+   standing — and that fixing it wasn't a smarter rule, it was completing
+   the identity corpus with the rest of the real source document (v2.1),
+   which resolved it as a side effect. Then the smaller case: a sentence
+   mixing a positive and negative clause (Kannada fluency) was scored fully
+   negative until clause-level splitting was added (v2.2) — verified not to
+   change any of the other 13 requirements' scores before calling it done.
+   One case remains open (req05/req10, a lexical-retrieval limit) —
+   say so on camera.
+
+9. **Close (15s).** One sentence: the throughline across both versions is
    the same mistake in two different disguises — grounding tells you a
-   claim is real, not what it means. That's the thing to fix next, not to
-   paper over.
+   claim is real, not what it means — and twice now, completing the
+   representation beat making the checking logic cleverer.

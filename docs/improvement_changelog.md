@@ -44,18 +44,15 @@ against the IITACB CEO dossier's real 14-requirement fit table
 | **Final (v2.0)** | Combined structured retrieval + citation + verification + negation-aware bucketing + two eval-triggered corpus patches = `identityos_v2`. | Evidence coverage 0.74 vs 0.00 (both baselines). Agreement rate 0.29 vs 0.07. Dangerous overclaim rate 0.25 — one real, undismissed remaining failure (req08). | Shipped honestly with one known dangerous overclaim rather than tuning bucketing thresholds until the number looked clean. |
 | **Iteration 6 (v2.1)** | Instead of patching req08's specific missing sentence (the same shape of fix as req09, which risked "tuning until the 14 known cases pass"), did one general pass: transcribed the *entire* remaining requirement-evidence table plus the dossier's broader narrative (accountabilities, revenue architecture, first-100-days, closing) into `data/identity_sources/dossier_narrative.md` — real source content, not selected by which eval case needed it, and mostly untested by any current question. | Digital Self grew 76 -> 92 facts. Evidence coverage 0.74 -> 0.83. Agreement rate 0.29 -> 0.36. **Dangerous overclaim rate 0.25 -> 0.00** — req08 fixed as a side effect. v1's own score also improved slightly (0.939 -> 0.958 Identity Fidelity Score), since both versions share one Digital Self. | Kept. The general fix (complete the record) resolved the specific problem (req08) better than a targeted patch would have, without touching bucketing logic at all. |
 
-## Main failure mode, v2.1 (see docs/hot_take.md for the full writeup)
+| **Iteration 7 (v2.2)** | Split cited claim text on unambiguous contrastive conjunctions (" but ", "; ", "however", "though", "while") and classified each claim as negative/mixed/positive, so a claim mixing a positive and a negative clause buckets `partial` instead of the old whole-sentence-negative `gap`. Added a regression test for the mixed-clause case before touching the eval. | req13 now correctly agrees (`partial` vs `partial`). Agreement rate 0.36 -> 0.43. No other requirement's bucket changed — re-ran the full comparison, not just req13. Dangerous overclaim rate stayed 0.00. | Kept. A precise fix to one diagnosed gap, verified not to have side effects — the opposite failure mode from the negation-rule iteration that first fixed req14 and briefly regressed other requirements. |
 
-Two safe-direction (not dangerous) failures remain, both already understood
-and neither hidden. First: the negation check is sentence-level, not
-clause-level, so a sentence mixing a positive clause ("fluent in English
-and Hindi") and a negative one ("but not yet in Kannada") gets treated as
-fully negative — req13 underclaims to `gap` instead of the correct
-`partial`. Second: req05 and req10 now have real, relevant evidence in the
-corpus but retrieve zero facts, because lexical overlap can't match an
-abstract requirement phrase ("entrepreneurial mindset") against evidence
-phrased differently ("comfortable with ambiguity, unfunded mandates") —
-the exact lexical-retrieval limitation flagged from v1's design, now
-confirmed concretely rather than staying theoretical. Both point to the
-same v2.1+ roadmap items: clause-level negation, and embedding-based
-retrieval.
+## Main failure mode, v2.2 (see docs/hot_take.md for the full writeup)
+
+One safe-direction (not dangerous) failure remains, already understood and
+not hidden: req05 and req10 now have real, relevant evidence in the corpus
+but retrieve zero facts, because lexical overlap can't match an abstract
+requirement phrase ("entrepreneurial mindset") against evidence phrased
+differently ("comfortable with ambiguity, unfunded mandates") — the exact
+lexical-retrieval limitation flagged from v1's design, now confirmed
+concretely rather than staying theoretical. Fix: embedding-based retrieval,
+scoped as its own version (docs/roadmap.md v2.3) rather than bundled here.

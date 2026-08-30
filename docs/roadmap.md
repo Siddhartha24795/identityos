@@ -40,7 +40,29 @@ question needed what. Result: dangerous_overclaim_rate 0.25 -> 0.00, and
 v1's own score also improved as a side effect. See
 docs/improvement_changelog.md (Iteration 6) and docs/evaluation_v2.md.
 
-## v2.2+ — deferred from the original v2 scope  ·  not started
+## v2.2 — clause-level negation  ·  **built**
+
+Fixed req13 (Kannada fluency): a claim mixing a positive and a negative
+clause in one sentence was scored fully negative by whole-sentence
+detection. Now splits on unambiguous contrastive conjunctions and buckets a
+mixed claim as `partial`, not `gap`. Agreement rate 0.36 -> 0.43, no
+regressions on the other 13 requirements (re-verified, not just inspected
+in isolation), dangerous overclaim rate held at 0.00. See
+docs/improvement_changelog.md (Iteration 7), docs/evaluation_v2.md.
+
+## v2.3 — embedding-based retrieval  ·  not started
+
+Confirmed necessary, not just theoretical, by v2.1/v2.2's own eval runs:
+req05/req10 have real, relevant evidence in the corpus and still retrieve
+zero facts, because lexical overlap can't match "entrepreneurial mindset"
+against evidence phrased as "comfortable with ambiguity, unfunded
+mandates." Scoped as its own version rather than folded into v2.2 because
+it needs a real dependency decision (a local embedding model vs. an API
+embedding call) and a genuine lexical-vs-semantic comparison — not a
+keyword-list patch keyed to the two known failing terms, which would be
+the same kind of overfitting already declined earlier in this build.
+
+## v2.4+ — deferred from the original v2 scope  ·  not started
 
 - Automatic belief inference from raw unstructured text (replacing v1/v2's
   hand-seeded beliefs) with an LLM pass plus counter-evidence search.
@@ -48,16 +70,6 @@ docs/improvement_changelog.md (Iteration 6) and docs/evaluation_v2.md.
   a coherent set (no contradicting Q1 vs Q3), not independently.
 - Document generators: cover letter, SOP, short-answer set, each claim
   still traceable per docs/architecture.md.
-- Embedding-based retrieval (pgvector) alongside the existing lexical
-  retrieval. Confirmed necessary, not just theoretical, by v2.1's own eval
-  run: req05/req10 have real, relevant evidence in the corpus now and still
-  retrieve zero facts, because "entrepreneurial mindset" shares no literal
-  words with "comfortable with ambiguity, unfunded mandates."
-- Clause-level (not sentence-level) negation detection — v2.0's fix
-  operates on whole generated sentences, so a single sentence mixing a
-  positive and a negative clause ("fluent in English and Hindi but not yet
-  in Kannada") gets treated as fully negative (req13). Known limitation,
-  see docs/hot_take.md.
 
 ## v3 — Browser execution  ·  not started
 

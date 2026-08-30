@@ -3,7 +3,7 @@
   "system_name": "baseline_plain",
   "steps": [
     {
-      "timestamp": "2026-08-30T03:01:05.162666Z",
+      "timestamp": "2026-08-30T03:11:45.547100Z",
       "stage": "generate",
       "input_summary": "Desired — record of building or running a professional body (CII / NASSCOM / FICCI / AIMA)",
       "action": "call provider with zero context, zero verification",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T03:01:05.162711Z",
+      "timestamp": "2026-08-30T03:11:45.547145Z",
       "stage": "bucket",
       "input_summary": "This is something I have thought about carefully throughout my career. When it comes to aima and body and building, I have always taken a proactive, results-driven approach and delivered measurable impact. I look forward to bringing this strength to your organization.",
       "action": "derive fit bucket from coverage+confidence",

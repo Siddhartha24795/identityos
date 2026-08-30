@@ -3,7 +3,7 @@
   "system_name": "baseline_rag",
   "steps": [
     {
-      "timestamp": "2026-08-30T03:01:04.743629Z",
+      "timestamp": "2026-08-30T03:11:45.139180Z",
       "stage": "retrieve",
       "input_summary": "Which university awarded your M.Tech in Artificial Intelligence, and what was your research topic?",
       "action": "dump the entire fact store as unstructured text (no ranking, no ids)",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T03:01:04.744907Z",
+      "timestamp": "2026-08-30T03:11:45.140497Z",
       "stage": "generate",
       "input_summary": "Which university awarded your M.Tech in Artificial Intelligence, and what was your research topic?",
       "action": "call provider with the full unstructured context dump",

@@ -1,7 +1,7 @@
 # Hackathon compliance self-check
 
 Re-verified after every version against `/home/siddhartha/siddhartha/micro1 - First Hackathon97ce7c5.pdf`.
-Last checked: **after v2.1**.
+Last checked: **after v2.2**.
 
 ## Judging rubric (100 pts)
 
@@ -36,6 +36,6 @@ Last checked: **after v2.1**.
 
 ## Open items carried forward
 
-- Demo video: still needs to be recorded by a human. `docs/demo_script.md` has a v2 segment; a v2.1 update (the corpus-completion story) is the next small addition before recording.
-- Two known safe-direction (non-dangerous) cases remain open: req13 (clause-level negation, not yet built) and req05/req10 (lexical retrieval can't match abstract requirement phrasing to differently-worded evidence — embedding retrieval, not yet built). Neither is hidden; both are in docs/evaluation_v2.md and docs/roadmap.md v2.2+.
-- req08's dangerous overclaim was resolved in v2.1 via general corpus completion, not a targeted patch.
+- Demo video: still needs to be recorded by a human. `docs/demo_script.md` needs a short update covering the v2.1/v2.2 story (corpus completion, clause-level negation) before recording.
+- One known safe-direction (non-dangerous) case remains open: req05/req10 (lexical retrieval can't match abstract requirement phrasing to differently-worded evidence — embedding retrieval, scoped as its own version, v2.3). Not hidden; in docs/evaluation_v2.md and docs/roadmap.md.
+- req08's dangerous overclaim was resolved in v2.1 via general corpus completion, not a targeted patch. req13's underclaim was resolved in v2.2 via clause-level negation, verified not to regress the other 13 requirements.

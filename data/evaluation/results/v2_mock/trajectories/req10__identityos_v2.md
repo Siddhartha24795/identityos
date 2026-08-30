@@ -1,22 +1,22 @@
 ### Trajectory — identityos_v2 — req10
 
-**03:01:05 · retrieve**
+**03:11:45 · retrieve**
 - input: Exceptional communication
 - action: lexical retrieval over Digital Self: top 0 facts, 0 beliefs
 - observation: (no matching evidence found)
 
-**03:01:05 · generate**
+**03:11:45 · generate**
 - input: Exceptional communication
 - action: call provider with cited, confidence-annotated context
 - observation: Exceptional communication REQUIREMENT:
 
-**03:01:05 · verify**
+**03:11:45 · verify**
 - input: Exceptional communication REQUIREMENT:
 - action: per-sentence grounding check (same verifier as v1)
 - observation: coverage=0.00 confidence=0.00
 - confidence: 0.00
 
-**03:01:05 · bucket**
+**03:11:45 · bucket**
 - input: Exceptional communication REQUIREMENT:
 - action: derive fit bucket from coverage+confidence, not a self-reported label
 - observation: gap
