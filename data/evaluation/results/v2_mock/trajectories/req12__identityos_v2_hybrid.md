@@ -1,6 +1,6 @@
 ### Trajectory — identityos_v2_hybrid — req12
 
-**09:54:08 · retrieve**
+**11:29:52 · retrieve**
 - input: Location — Bengaluru, India (domestic travel only); primarily external-facing role
 - action: lexical retrieval, semantic fallback only if empty: 8 facts, 0 beliefs
 - observation: [dossier_narrative:013] (verified fact) Confirmed relocation to Bengaluru on appointment, accepting the IITACB CEO role as primarily external-facing with sustained domestic travel to the 23 IIT campuses, Delhi, and industry forums nationally. States that being physically present in Bengaluru is regarded as non-negotiable for this job.
@@ -12,18 +12,18 @@
 [dossier_excerpts:012] (verified fact) Siddhartha's dossier states a preference for institution-building and zero-to-one problems, describing it as "the only kind of problem I have ever been hired to solve."
 [dossier_narrative:007] (verified fact) Accustomed to explaining deep technology to non-technical boards and to translating executive intent into engineering commitments, built over six years of guest lectures, mentoring programmes and hackathon judging panels plus representing India at the Japan Hackathon 2021.
 
-**09:54:08 · generate**
+**11:29:52 · generate**
 - input: Location — Bengaluru, India (domestic travel only); primarily external-facing role
 - action: call provider with cited, confidence-annotated context
 - observation: [dossier_narrative:013] (verified fact) Confirmed relocation to Bengaluru on appointment, accepting the IITACB CEO role as primarily external-facing with sustained domestic travel to the 23 IIT campuses, Delhi, and industry forums nationally. States that being physically present in Bengaluru is regarded as non-negotiable for this job. [dossier_excerpts:010] (verified fact) States that relocating to Bengaluru and learning Kannada are conditions he is committing to for the IITACB CEO role specifically, not concessions being requested. [dossier_narrative:009] (verified fact) States a vision specifically for the IITACB CEO role: IITACB as India's default gateway to IIT research capability, brought through the academic-and-industrial credibility described above. [dossier_excerpts:003] (verified fact) Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group.
 
-**09:54:08 · verify**
+**11:29:52 · verify**
 - input: [dossier_narrative:013] (verified fact) Confirmed relocation to Bengaluru on appointment, accepting the IITACB CEO role as primarily external-facing with sustained domestic travel to the 23 IIT campuses, Delhi, and industry forums nationally. States that being physically present in Bengaluru is regarded as non-negotiable for this job. [dossier_excerpts:010] (verified fact) States that relocating to Bengaluru and learning Kannada are conditions he is committing to for the IITACB CEO role specifically, not concessions being requested. [dossier_narrative:009] (verified fact) States a vision specifically for the IITACB CEO role: IITACB as India's default gateway to IIT research capability, brought through the academic-and-industrial credibility described above. [dossier_excerpts:003] (verified fact) Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group.
 - action: per-sentence grounding check (same verifier as lexical identityos_v2)
 - observation: coverage=1.00 confidence=0.89
 - confidence: 0.89
 
-**09:54:08 · bucket**
+**11:29:52 · bucket**
 - input: [dossier_narrative:013] (verified fact) Confirmed relocation to Bengaluru on appointment, accepting the IITACB CEO role as primarily external-facing with sustained domestic travel to the 23 IIT campuses, Delhi, and industry forums nationally. States that being physically present in Bengaluru is regarded as non-negotiable for this job. [dossier_excerpts:010] (verified fact) States that relocating to Bengaluru and learning Kannada are conditions he is committing to for the IITACB CEO role specifically, not concessions being requested. [dossier_narrative:009] (verified fact) States a vision specifically for the IITACB CEO role: IITACB as India's default gateway to IIT research capability, brought through the academic-and-industrial credibility described above. [dossier_excerpts:003] (verified fact) Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group.
 - action: derive fit bucket from coverage+confidence+polarity (same bucketing.py)
 - observation: met_or_better

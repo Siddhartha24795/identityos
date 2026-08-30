@@ -10,7 +10,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT))
 
-from packages.schemas.identity import Confidence
+from packages.schemas.identity import Confidence, Evidence, Fact, FactCategory
 from packages.schemas.qa import Question, QuestionType
 from services.identity_engine import ingest, seed_beliefs
 from services.providers import get_provider
@@ -97,6 +97,46 @@ def test_verification_flags_unsupported_sentence():
     )
     assert overall == 0.0
     assert all(c.claim_type.value == "unsupported" for c in claims)
+
+
+def _fact(fid: str, text: str) -> Fact:
+    return Fact(
+        id=fid, text=text, category=FactCategory.OTHER,
+        evidence=[Evidence(id=f"{fid}-ev", source_document="test", snippet=text)],
+    )
+
+
+def test_verification_parses_citation_with_internal_whitespace():
+    """Regression test: v3.3 found the citation regex required zero
+    whitespace inside brackets (`[id]`), which the deterministic
+    MockProvider always produces but a real LLM often doesn't
+    (`[ id ]`) — see docs/hot_take.md's v3.3 addendum. A real Groq run
+    dragged a correctly-cited patent answer into an unnecessary refusal
+    because of exactly this."""
+    fact = _fact("resume:014", "Filed a patent on generative AI video codecs.")
+    claims, overall = verify_answer(
+        "I filed the patent [ resume:014 ].", facts=[fact], beliefs=[]
+    )
+    assert claims[0].evidence_refs == ["resume:014"]
+    assert overall == fact.confidence
+
+
+def test_verification_parses_multiple_ids_in_one_bracket():
+    """A real LLM will sometimes cite two ids in one bracket, separated by
+    a semicolon or comma — the original regex's single-id character class
+    couldn't match this at all, silently scoring the sentence uncited."""
+    f1 = _fact("resume:014", "Filed a patent on generative AI video codecs.")
+    f2 = _fact("dossier:002", "Contribution on this patent is 75%.")
+    claims, overall = verify_answer(
+        "I contributed 75% of the work [resume:014; dossier:002].", facts=[f1, f2], beliefs=[]
+    )
+    assert set(claims[0].evidence_refs) == {"resume:014", "dossier:002"}
+    assert overall > 0.0
+
+    claims2, _ = verify_answer(
+        "I contributed 75% of the work [resume:014, dossier:002].", facts=[f1, f2], beliefs=[]
+    )
+    assert set(claims2[0].evidence_refs) == {"resume:014", "dossier:002"}
 
 
 def test_identityos_agent_end_to_end_with_mock_provider():

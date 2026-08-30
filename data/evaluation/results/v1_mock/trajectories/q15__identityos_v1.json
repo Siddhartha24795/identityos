@@ -3,7 +3,7 @@
   "system_name": "identityos_v1",
   "steps": [
     {
-      "timestamp": "2026-08-30T09:54:08.434541Z",
+      "timestamp": "2026-08-30T11:29:51.585701Z",
       "stage": "classify",
       "input_summary": "What is your fluency level in Kannada?",
       "action": "use declared question.type (v1 simplification, not a learned classifier)",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T09:54:08.435367Z",
+      "timestamp": "2026-08-30T11:29:51.586527Z",
       "stage": "retrieve",
       "input_summary": "What is your fluency level in Kannada?",
       "action": "lexical retrieval over Digital Self: top 4 facts, 0 beliefs",
@@ -23,7 +23,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T09:54:08.435445Z",
+      "timestamp": "2026-08-30T11:29:51.586624Z",
       "stage": "generate",
       "input_summary": "What is your fluency level in Kannada?",
       "action": "call provider with structured, citation-tagged, confidence-annotated context",
@@ -33,7 +33,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T09:54:08.435566Z",
+      "timestamp": "2026-08-30T11:29:51.586755Z",
       "stage": "verify",
       "input_summary": "[dossier_excerpts:005] (verified fact) Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. [dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet fluent in Kannada. [dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_excerpts:010] (verified fact) States that relocating to Bengaluru and learning Kannada are conditions he is committing to for the IITACB CEO role specifically, not concessions being requested.",
       "action": "check every sentence for an explicit citation, else a lexical grounding match",
@@ -43,7 +43,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T09:54:08.435576Z",
+      "timestamp": "2026-08-30T11:29:51.586765Z",
       "stage": "complete",
       "input_summary": "q15",
       "action": "return final answer",

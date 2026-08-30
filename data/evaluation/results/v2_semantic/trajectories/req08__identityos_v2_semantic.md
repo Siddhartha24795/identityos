@@ -1,6 +1,6 @@
 ### Trajectory — identityos_v2_semantic — req08
 
-**09:54:24 · retrieve**
+**11:30:07 · retrieve**
 - input: Revenue & P&L management
 - action: embedding-similarity retrieval (fastembed): top 8 facts, 1 beliefs
 - observation: [dossier_narrative:006] (verified fact) Owned the cost side with rigour: order-of-magnitude inference cost reduction through quantization, pruning, distillation and parameter-efficient adaptation, and ownership of the edge-versus-cloud partitioning strategy, a direct unit-economics decision.
@@ -13,18 +13,18 @@
 [resume:045] (verified fact) Python, NumPy, Pandas, Matplotlib, SQL, Android, Java, C++, C, Git, Perforce.
 [belief:004] (belief, unknown, confidence=0.10) Is comfortable claiming full personal credit for joint work without qualification. — counter-evidence exists, do not state this as certain
 
-**09:54:24 · generate**
+**11:30:07 · generate**
 - input: Revenue & P&L management
 - action: call provider with cited, confidence-annotated context
 - observation: [resume:025] (verified fact) Did API development, bug resolution, fraud detection, and revenue forecasting using Java, Python, Mockito, Postman, MySQL, machine learning, and NLP.
 
-**09:54:24 · verify**
+**11:30:07 · verify**
 - input: [resume:025] (verified fact) Did API development, bug resolution, fraud detection, and revenue forecasting using Java, Python, Mockito, Postman, MySQL, machine learning, and NLP.
 - action: per-sentence grounding check (same verifier as lexical identityos_v2)
 - observation: coverage=1.00 confidence=0.99
 - confidence: 0.99
 
-**09:54:24 · bucket**
+**11:30:07 · bucket**
 - input: [resume:025] (verified fact) Did API development, bug resolution, fraud detection, and revenue forecasting using Java, Python, Mockito, Postman, MySQL, machine learning, and NLP.
 - action: derive fit bucket from coverage+confidence+polarity (same bucketing.py as lexical)
 - observation: met_or_better

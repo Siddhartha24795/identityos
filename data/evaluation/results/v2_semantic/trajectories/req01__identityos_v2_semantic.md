@@ -1,6 +1,6 @@
 ### Trajectory — identityos_v2_semantic — req01
 
-**09:54:23 · retrieve**
+**11:30:07 · retrieve**
 - input: Education — Bachelor's in Engineering / Technology
 - action: embedding-similarity retrieval (fastembed): top 6 facts, 0 beliefs
 - observation: [resume:040] (verified fact) B.Tech, Computer Science and Engineering, KNIT Sultanpur, 2012-2016.
@@ -10,18 +10,18 @@
 [resume:039] (verified fact) M.Tech, Artificial Intelligence, IIT (ISM) Dhanbad, 2018-2020. Research on medical image processing using Cycle GAN.
 [resume:046] (verified fact) System Design, Leadership, JavaScript, HTML, CSS, Hardware Abstraction Layer, Linux, Shell Scripting.
 
-**09:54:23 · generate**
+**11:30:07 · generate**
 - input: Education — Bachelor's in Engineering / Technology
 - action: call provider with cited, confidence-annotated context
 - observation: [resume:040] (verified fact) B.Tech, Computer Science and Engineering, KNIT Sultanpur, 2012-2016.
 
-**09:54:23 · verify**
+**11:30:07 · verify**
 - input: [resume:040] (verified fact) B.Tech, Computer Science and Engineering, KNIT Sultanpur, 2012-2016.
 - action: per-sentence grounding check (same verifier as lexical identityos_v2)
 - observation: coverage=1.00 confidence=0.99
 - confidence: 0.99
 
-**09:54:23 · bucket**
+**11:30:07 · bucket**
 - input: [resume:040] (verified fact) B.Tech, Computer Science and Engineering, KNIT Sultanpur, 2012-2016.
 - action: derive fit bucket from coverage+confidence+polarity (same bucketing.py as lexical)
 - observation: met_or_better

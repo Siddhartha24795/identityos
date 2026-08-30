@@ -1,0 +1,16 @@
+{
+  "question_id": "q11",
+  "system_name": "baseline_plain",
+  "steps": [
+    {
+      "timestamp": "2026-08-30T11:07:57.571861Z",
+      "stage": "generate",
+      "input_summary": "What is your most impactful project?",
+      "action": "call provider with zero context, zero verification",
+      "observation": "My most impactful project was the development and launch of a community‑driven mobile health platform called **WellnessConnect** during my senior year as a software engineering intern at a regional nonprofit health organization.\n\n**Context and Goal**  \nThe organization served low‑income neighborhoods where access to preventive care and health education was limited. We set out to create a free, multilingual app that would (1) provide reliable health information, (2) enable users to schedule free screenings, and (3) connect them with local health workers for follow‑up support. The aim was to improve health literacy and increase screening rates for chronic conditions such as diabetes and hypertension.\n\n**My Role**  \n- **Product lead:** Defined user stories, prioritized features based on community feedback, and created a roadmap that aligned with the nonprofit’s mission and budget constraints.  \n- **Full‑stack developer:** Designed the backend in Node.js with a PostgreSQL database, built RESTful APIs, and integrated a secure authentication system using OAuth 2.0. On the front end, I used React Native to deliver a responsive experience on both Android and iOS.  \n- **Community liaison:** Conducted focus groups with local residents, partnered with three community health centers, and translated key UI elements into Spanish and Arabic.  \n- **Data analyst:** Set up analytics dashboards (Google Analytics for Firebase) to track usage, retention, and health outcomes.\n\n**Challenges Overcome**  \n- **Limited resources:** The nonprofit’s budget allowed only a small development team. I leveraged open‑source libraries and cloud‑based services (AWS Free Tier) to keep costs low while maintaining scalability.  \n- **Digital literacy gap:** Many target users were unfamiliar with smartphones. We implemented a guided onboarding flow with voice‑over instructions and built an offline mode that cached essential content.  \n- **Privacy concerns:** To comply with HIPAA, I encrypted all personal health data at rest and in transit, and conducted a third‑party security audit.\n\n**Outcomes and Impact**  \n- **User adoption:** Within six months of launch, the app reached 4,200 active users—exceeding our initial target of 2,500.  \n- **Health outcomes:** Screening appointments booked through the app increased by 38%, and follow‑up visit compliance rose from 45% to 72% among users who completed the in",
+      "reasoning": "Baseline 1 has no retrieval and no grounding check by design.",
+      "confidence": null,
+      "decision": "answered_unverified"
+    }
+  ]
+}

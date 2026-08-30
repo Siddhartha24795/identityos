@@ -1,6 +1,6 @@
 ### Trajectory — identityos_v2 — req03
 
-**09:54:08 · retrieve**
+**11:29:51 · retrieve**
 - input: Minimum 10 years senior leadership, with a strong track record of operations leadership
 - action: lexical retrieval over Digital Self: top 8 facts, 0 beliefs
 - observation: [dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical — it is 24x7 production accountability across live customer sites.
@@ -12,18 +12,18 @@
 [dossier_narrative:005] (verified fact) Routine practice of aligning research scientists, infrastructure engineers, product owners, enterprise customers and executive sponsors around one roadmap. Six years of running an unpaid academia-industry bridge.
 [dossier_narrative:007] (verified fact) Accustomed to explaining deep technology to non-technical boards and to translating executive intent into engineering commitments, built over six years of guest lectures, mentoring programmes and hackathon judging panels plus representing India at the Japan Hackathon 2021.
 
-**09:54:08 · generate**
+**11:29:51 · generate**
 - input: Minimum 10 years senior leadership, with a strong track record of operations leadership
 - action: call provider with cited, confidence-annotated context
 - observation: [dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical — it is 24x7 production accountability across live customer sites. [dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record. [dossier_excerpts:004] (verified fact) Six years of unpaid guest sessions, mentoring, and hackathon judging across universities, described in the dossier as predating any formal title or compensation.
 
-**09:54:08 · verify**
+**11:29:51 · verify**
 - input: [dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical — it is 24x7 production accountability across live customer sites. [dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record. [dossier_excerpts:004] (verified fact) Six years of unpaid guest sessions, mentoring, and hackathon judging across universities, described in the dossier as predating any formal title or compensation.
 - action: per-sentence grounding check (same verifier as v1)
 - observation: coverage=1.00 confidence=0.89
 - confidence: 0.89
 
-**09:54:08 · bucket**
+**11:29:51 · bucket**
 - input: [dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical — it is 24x7 production accountability across live customer sites. [dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record. [dossier_excerpts:004] (verified fact) Six years of unpaid guest sessions, mentoring, and hackathon judging across universities, described in the dossier as predating any formal title or compensation.
 - action: derive fit bucket from coverage+confidence, not a self-reported label
 - observation: met_or_better

@@ -3,7 +3,7 @@
   "system_name": "identityos_v2_hybrid",
   "steps": [
     {
-      "timestamp": "2026-08-30T09:54:24.196130Z",
+      "timestamp": "2026-08-30T11:30:07.862544Z",
       "stage": "retrieve",
       "input_summary": "Stakeholder management",
       "action": "lexical retrieval, semantic fallback only if empty: 3 facts, 0 beliefs",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T09:54:24.196182Z",
+      "timestamp": "2026-08-30T11:30:07.862595Z",
       "stage": "generate",
       "input_summary": "Stakeholder management",
       "action": "call provider with cited, confidence-annotated context",
@@ -23,7 +23,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T09:54:24.196297Z",
+      "timestamp": "2026-08-30T11:30:07.862719Z",
       "stage": "verify",
       "input_summary": "[dossier_narrative:011] (verified fact) States that the practice of aligning many stakeholder types around one roadmap functions as the alumni-and-institution interface the IITACB CEO role requires, in miniature. [dossier_narrative:012] (verified fact) States explicitly that full institutional P&L management at IITACB's scale would be a step up from cost-side ownership at Jinn Labs, and that this is experience not yet held. [resume:061] (verified fact) Dual-processor smartwatch power management architecture at Qualcomm, increasing battery backup by about 40%.",
       "action": "per-sentence grounding check (same verifier as lexical identityos_v2)",
@@ -33,7 +33,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T09:54:24.196302Z",
+      "timestamp": "2026-08-30T11:30:07.862724Z",
       "stage": "bucket",
       "input_summary": "[dossier_narrative:011] (verified fact) States that the practice of aligning many stakeholder types around one roadmap functions as the alumni-and-institution interface the IITACB CEO role requires, in miniature. [dossier_narrative:012] (verified fact) States explicitly that full institutional P&L management at IITACB's scale would be a step up from cost-side ownership at Jinn Labs, and that this is experience not yet held. [resume:061] (verified fact) Dual-processor smartwatch power management architecture at Qualcomm, increasing battery backup by about 40%.",
       "action": "derive fit bucket from coverage+confidence+polarity (same bucketing.py)",

@@ -67,10 +67,23 @@ them is real:
 **This is the single most important limitation of the reference run**: a
 real generative LLM given naive unstructured RAG context, no citation
 requirement, and length pressure is meaningfully more likely to smooth over
-a qualifier than an extractive mock is. Re-run with `PROVIDER=anthropic` or
-`PROVIDER=openai` (requires an API key) to get a real measurement of this
-gap — see docs/hot_take.md, which turns this exact limitation into the
+a qualifier than an extractive mock is. Re-run with `PROVIDER=anthropic`,
+`PROVIDER=openai`, or `PROVIDER=groq` (groq is free, no credit card —
+https://console.groq.com/keys) to get a real measurement of this gap —
+see docs/hot_take.md, which turns this exact limitation into the
 project's main insight.
+
+**A real-model run is much slower than the mock, and by an uneven
+amount.** With `PROVIDER=groq` (`openai/gpt-oss-120b`, a reasoning
+model), individual `baseline_plain`/`identityos_v1` calls typically return
+in under a few seconds, but `baseline_rag` calls — which dump the entire
+~100-fact store as unstructured context, by design (see above) — routinely
+take 10-30 seconds each, because the model spends most of its token
+budget on hidden reasoning over that much text before answering. The full
+19-question v1 benchmark (57 calls total) takes on the order of 6-10
+minutes with a real reasoning model, versus under a second with the mock
+provider. This is expected, not a hang — worth knowing before assuming a
+real-provider run has stalled.
 
 ## The four hard cases (verbatim from the reference run)
 
@@ -106,3 +119,157 @@ questions, including the 5 unseen-inferential ones). Investigating why
 revealed a real gap: verification confidence reflects *source fidelity*
 (is this fact true?) not *question relevance* (is this fact a good answer
 to THIS question?). See docs/hot_take.md.
+
+## v3.3: the first real-model run (`PROVIDER=groq`), and what it found
+
+Every "re-run with a real provider" line in this project's docs had been a
+deferred next step until now. `PROVIDER=groq` (free, no credit card —
+https://console.groq.com/keys, `openai/gpt-oss-120b` via Groq's
+OpenAI-compatible endpoint) made that actually possible, and running it
+for the first time surfaced three real findings in one pass — exactly the
+pattern behind every other discovery in this project: build it, then read
+the actual output, don't just trust the score.
+
+### Result (`PROVIDER=groq`, `openai/gpt-oss-120b`)
+
+| Metric | baseline_plain | baseline_rag | identityos_v1 |
+|---|---|---|---|
+| Evidence coverage | 0.00 | 0.00 | 0.78 |
+| Unsupported claim rate | 1.00 | 1.00 | 0.22 |
+| Hard-case overclaim rate (4 cases) | **0.25 (1/4)** | 0.00 | 0.00 |
+| Refusal count | 0 | 0 | 5 |
+| **Identity Fidelity Score** | 0.15 | 0.20 | **0.824** |
+
+The core thesis holds with a real model: identityos_v1 still beats both
+baselines by a wide margin (0.824 vs. 0.15/0.20). But three numbers here
+are worse than the mock-provider reference run (0.958 IFS, 0.947
+coverage, 0 refusals) — and reading the actual answers explains why, and
+it's not simply "the real model is worse."
+
+### Finding 1 — baseline_plain, with zero context, fabricates specific, detailed, self-contradictory answers a mock never could
+
+The mock-provider reference run's own limitation section (above) already
+predicted this: an extractive, non-generative stand-in can't hallucinate
+the way a real LLM does. The real run confirms it concretely. Given zero
+context, `openai/gpt-oss-120b` invented, verbatim:
+
+- **q13 (patent credit):** a complete fake patent — `U.S. Patent No.
+  12,345,678`, titled *"Generative-AI-Driven Adaptive Video Codec"*, filed
+  "March 2024," issued "November 2025" — followed by four paragraphs of
+  invented technical detail ("I designed a conditional diffusion
+  network...", "I devised a lightweight RL agent...") with zero mention
+  of the real 75%/25% shared inventorship.
+- **q17 (professional-body leadership):** *"Yes. I have spent the past
+  three years overseeing the operations of a regional professional
+  association for engineers... I grew our active membership base by 28%
+  and increased renewal rates from 62% to 81%"* — a fully fabricated
+  three-year role with fabricated statistics. The real answer is that
+  this person has never done this.
+- **q14**, a differently-worded version of the *same* underlying real-world
+  fact as q17, got the opposite answer from the same context-free model in
+  the same run: *"I have not founded or run a professional body... to
+  date."* Two phrasings of one fact, one confident yes and one confident
+  no, from the same system with zero real information either time — a
+  clean, concrete demonstration that a context-free LLM's answers aren't
+  drawn from any actual belief about the person, real or otherwise.
+
+### Finding 2 — the hard-case overclaim detector, tuned against the mock's phrasing, missed 2 of these 3 severe fabrications
+
+`hard_case_overclaim_rate` reported only **1 of 4** hard cases as
+overclaimed (q15 — a fabricated claim of Kannada fluency, which happened
+to use the literal phrase `"fluent in Kannada"` the rule checks for).
+q13's fake patent and q17's fake leadership role — arguably the two most
+severe fabrications in the entire run — were **not** flagged, because
+`_HARD_CASE_RULES` (`services/evaluation/scoring.py`) checks for exact
+phrases like `"my patent"` / `"i hold the patent"` and `"yes, i have run"`
+/ `"i founded and ran"`, calibrated against the mock provider's specific
+extractive phrasing. The real model's actual wording (`"I hold U.S. Patent
+No..."`, `"Yes. I have spent the past three years overseeing..."`) never
+matches those exact strings, so both cases fall through to "no confident
+assertion detected either way" and score as safe. **Not fixed in this
+pass** — a more general check (e.g., an LLM-based "does this text assert
+sole credit/a leadership role" classifier, replacing today's rule-based
+phrase list) is a real v3.4+ candidate, named here rather than patched
+with a fifth or sixth hand-picked phrase, per this project's established
+position on that exact kind of fix (docs/hot_take.md's "the experiment we
+removed"). The mock-provider score of 0.00 dangerous/hard-case overclaims
+was never a claim that the *system* has no failure mode here — it was
+always a claim that *the mock provider's extractive style* doesn't
+exercise it. This is the first time a real generative model exercised it,
+and the detector's blind spot is now measured, not assumed away.
+
+### Finding 3 — a real, root-cause bug: the citation-parsing regex only ever matched the mock provider's exact bracket style
+
+`identityos_v1`'s 5 refusals looked, at first, like the confidence-gated
+refusal policy finally working as designed on genuinely hard questions.
+Reading the actual trajectory for q13 (the patent question) showed
+otherwise: the model generated a **correct, properly-hedged, honestly
+cited** answer — *"According to the inventorship record I have provided,
+I contributed 75% of the inventive work on this filing, with the
+remaining 25% attributed to a co-inventor..."* — citing real evidence as
+`[ dossier_excerpts:002 ]`. The verifier's citation regex
+(`services/qa_engine/verification.py`) required zero whitespace inside
+brackets (`[id]`, the only shape the deterministic MockProvider ever
+produces) and a single id with no separator — so `[ dossier_excerpts:002
+]` (space-padded) and `[dossier_excerpts:001; dossier_excerpts:002]`
+(two ids in one bracket) both silently failed to parse as citations,
+undercounting evidence and dragging confidence to 0.36 — below the 0.5
+refusal threshold — for a completely correct, well-grounded answer. A
+second, related format (`【dossier_excerpts:001】`, fullwidth CJK brackets
+this specific model sometimes emits) had the identical failure mode.
+
+**Fixed at the root** in `verification.py`: capture raw bracket contents
+(either ASCII `[...]` or fullwidth `【...】`) and split on `,`/`;`,
+instead of requiring one tightly-formatted ASCII id per bracket. Re-ran
+every mock-provider suite afterward (v1, all three v2 retrieval arms,
+v2.5, v3) — byte-identical to every previously documented number, since
+the mock provider's own citations were always in the one format the old
+regex already handled. **Re-verified offline against the same raw
+model outputs already collected** (re-running `verify_answer()` over the
+trajectory-logged generation text, not a new API call — Groq's free-tier
+daily token cap was reached before a fresh live re-run could be done; see
+below):
+
+| Metric | Before fix | After fix (offline re-verification, same raw outputs) |
+|---|---|---|
+| Evidence coverage | 0.78 | 0.798 |
+| Unsupported claim rate | 0.22 | 0.202 |
+| Refusal count | **5** | **1** |
+| Identity Fidelity Score | 0.824 | 0.838 |
+
+**4 of the 5 refusals (q10, q13, q16, q17) were pure artifacts of the
+bracket-formatting bug, not genuinely weak evidence** — their confidence
+jumped from 0.36-0.4 to 0.61-0.86 once their existing, correct citations
+were actually counted. Only q06 remains refused, which is a real,
+unrelated case (docs/hot_take.md's original v1 finding about relevance
+vs. grounding still applies there). This is the same shape of bug as
+v3.0's MockProvider parsing fix — infrastructure built and tested against
+exactly one caller's output format quietly breaking the moment a
+differently-formatted caller (here, an actual generative model instead of
+an extractive one) exercises it for the first time.
+
+### Token efficiency, found the hard way
+
+The same `q13` trajectory that surfaced Finding 3 also showed
+`openai/gpt-oss-120b` is a reasoning model: with no `reasoning_effort` set
+(the API default), a 600-token budget for that single call was consumed
+585 tokens by hidden chain-of-thought reasoning, leaving 15 tokens for the
+actual answer — which is why some answers in this run are visibly cut off
+mid-sentence. Measured directly (`services/providers/groq_provider.py`):
+setting `reasoning_effort="low"` cut per-call reasoning-token consumption
+by roughly 5-25x in side-by-side testing on this project's short,
+structured completions, with no observed loss of answer correctness or
+citation quality. **This is now the provider's default** — see its
+module docstring for the measurement, not just the claim.
+
+The default-reasoning-effort run above also consumed nearly this
+project's entire Groq free-tier daily token allowance (200,000 TPD) by
+itself — a `RateLimitError` blocked a fresh, `reasoning_effort="low"`
+re-run of the full suite from completing in this session. **The numbers
+in the "after fix" row above come from offline re-verification of
+already-collected outputs, not a second live run** — disclosed here
+rather than left implicit. A fresh end-to-end run with the low-effort
+default, once quota resets, is expected to reproduce very similar answers
+using a small fraction of the tokens the first run needed — that
+re-verification is the natural next step, not yet done as of this
+writing.

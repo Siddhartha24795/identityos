@@ -3,7 +3,7 @@
   "system_name": "identityos_v2_semantic",
   "steps": [
     {
-      "timestamp": "2026-08-30T09:54:24.151181Z",
+      "timestamp": "2026-08-30T11:30:07.817515Z",
       "stage": "retrieve",
       "input_summary": "Strategic planning & institution-building",
       "action": "embedding-similarity retrieval (fastembed): top 8 facts, 1 beliefs",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T09:54:24.151395Z",
+      "timestamp": "2026-08-30T11:30:07.817735Z",
       "stage": "generate",
       "input_summary": "Strategic planning & institution-building",
       "action": "call provider with cited, confidence-annotated context",
@@ -23,7 +23,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T09:54:24.151684Z",
+      "timestamp": "2026-08-30T11:30:07.818013Z",
       "stage": "verify",
       "input_summary": "[dossier_narrative:008] (verified fact) Captain and Sports Secretary are roles given by peers and cannot be self-appointed. Professional practice of running blameless postmortems and publishing metrics that can embarrass the author. Believes institutional temperament means the institution outranks the incumbent. [dossier_narrative:004] (verified fact) Defined technical strategy, architecture and organisation-wide evaluation frameworks at Jinn Labs, building governance structures where none existed; the same machinery run earlier at student scale heading four chapters simultaneously and organising festivals at KNIT Sultanpur. [dossier_narrative:011] (verified fact) States that the practice of aligning many stakeholder types around one roadmap functions as the alumni-and-institution interface the IITACB CEO role requires, in miniature.",
       "action": "per-sentence grounding check (same verifier as lexical identityos_v2)",
@@ -33,7 +33,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T09:54:24.151691Z",
+      "timestamp": "2026-08-30T11:30:07.818021Z",
       "stage": "bucket",
       "input_summary": "[dossier_narrative:008] (verified fact) Captain and Sports Secretary are roles given by peers and cannot be self-appointed. Professional practice of running blameless postmortems and publishing metrics that can embarrass the author. Believes institutional temperament means the institution outranks the incumbent. [dossier_narrative:004] (verified fact) Defined technical strategy, architecture and organisation-wide evaluation frameworks at Jinn Labs, building governance structures where none existed; the same machinery run earlier at student scale heading four chapters simultaneously and organising festivals at KNIT Sultanpur. [dossier_narrative:011] (verified fact) States that the practice of aligning many stakeholder types around one roadmap functions as the alumni-and-institution interface the IITACB CEO role requires, in miniature.",
       "action": "derive fit bucket from coverage+confidence+polarity (same bucketing.py as lexical)",

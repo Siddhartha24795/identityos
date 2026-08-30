@@ -1,4 +1,4 @@
-# IdentityOS — v3.2
+# IdentityOS — v3.3
 
 **An autonomous representative that answers application questions,
 assesses job-requirement fit, generates application documents, and fills
@@ -18,15 +18,18 @@ unconditional human-approval checkpoint before any submit), and v3.1-v3.2
 Security Policy Engine + Agent Auditor control plane, built against a
 larger security spec the project owner provided — preserved verbatim at
 [docs/security_spec.md](docs/security_spec.md) — plus per-application
-answer records for interview prep) of that brief — see
-[docs/roadmap.md](docs/roadmap.md) for what's deferred to v3.3-v5 and
-why. Prior versions frozen at `../identityos-v1/`, `../identityos-v2/`,
-`../identityos-v2.1/`, `../identityos-v2.2/`, `../identityos-v2.3/`,
-`../identityos-v2.4/`, `../identityos-v2.5/`, `../identityos-v2.6/`,
-`../identityos-v2.7/`, `../identityos-v2.8/`, `../identityos-v2.9/`,
-`../identityos-v3.0/`. (v3.1's guardrails were superseded by v3.2's
-centralized control plane in the same work session before a separate
-snapshot was taken — v3.2's snapshot below is the first one after v3.0.)
+answer records for interview prep), and v3.3 (a free, no-credit-card real
+LLM provider — Groq — and this project's first-ever real-model run,
+which found and fixed a third shared-infrastructure bug and honestly
+disclosed hitting the provider's free daily quota mid-verification) of
+that brief — see [docs/roadmap.md](docs/roadmap.md) for what's deferred
+to v3.4-v5 and why. Prior versions frozen at `../identityos-v1/`,
+`../identityos-v2/`, `../identityos-v2.1/`, `../identityos-v2.2/`,
+`../identityos-v2.3/`, `../identityos-v2.4/`, `../identityos-v2.5/`,
+`../identityos-v2.6/`, `../identityos-v2.7/`, `../identityos-v2.8/`,
+`../identityos-v2.9/`, `../identityos-v3.0/`, `../identityos-v3.2/`.
+(v3.1's guardrails were superseded by v3.2's centralized control plane in
+the same work session before a separate snapshot was taken.)
 
 ## Who has this problem, and why it's worth solving
 
@@ -90,11 +93,16 @@ $0, but does need one-time network access. Output per run:
   human-readable, per the hackathon's trajectory deliverable
 
 To get a qualitative read with a real model: copy `.env.example` to `.env`,
-set `ANTHROPIC_API_KEY` or `OPENAI_API_KEY`, then `make eval-real` / `make eval-v2-real`
-(v3's browser agent accepts the same `PROVIDER` argument — see
-`scripts/run_browser_demo.py`).
+set `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, or `GROQ_API_KEY`
+([free, no credit card](https://console.groq.com/keys) — the easiest way
+to try this without paying for anything), then `make eval-real` / `make
+eval-v2-real` / `make eval-documents-real-groq` / `make
+eval-browser-real-groq` (or swap `groq` into any `make eval-*-real*`
+target's `PROVIDER` argument — see `services/providers/groq_provider.py`,
+which reuses the `openai` client pointed at Groq's OpenAI-compatible
+endpoint, no new dependency).
 
-Run the smoke test suite: `make test` (56 tests, ~5s including several real
+Run the smoke test suite: `make test` (66 tests, ~6s including several real
 Chromium launches for v3's end-to-end regression tests, no keys/downloads
 beyond the one-time Chromium install needed).
 
@@ -284,6 +292,45 @@ not silently dropped. Full story:
 [docs/evaluation_browser.md](docs/evaluation_browser.md)'s v3.2 addendum,
 [docs/roadmap.md](docs/roadmap.md)'s v3.2 section.
 
+**v3.3 — the first real-model run this project has ever done**, using a
+free, no-credit-card provider (`PROVIDER=groq`, `openai/gpt-oss-120b` via
+Groq's OpenAI-compatible endpoint — get a key at
+[console.groq.com/keys](https://console.groq.com/keys)):
+
+| Metric | baseline_plain | baseline_rag | identityos_v1 |
+|---|---|---|---|
+| Evidence coverage | 0.00 | 0.00 | 0.78 |
+| Unsupported claim rate | 1.00 | 1.00 | 0.22 |
+| Refusal count | 0 | 0 | 5 |
+| **Identity Fidelity Score** | 0.15 | 0.20 | **0.824** |
+
+The core thesis holds with a real model (0.824 vs. 0.15/0.20), and it
+also delivered on exactly what the mock provider always said it
+couldn't: given zero context, `baseline_plain` fabricated a complete fake
+patent number with four paragraphs of invented technical detail, and a
+fake three-year nonprofit leadership role with fabricated growth
+statistics — while answering a differently-worded version of that same
+underlying fact the *opposite* way in the same run. The hand-authored
+hard-case detector (tuned to the mock provider's exact phrasing) missed
+both fabrications — a real, previously-only-predicted blind spot, now
+measured. And reading `identityos_v1`'s own trajectories found a real,
+root-cause bug: the citation-parsing regex only ever matched the mock
+provider's exact bracket format, so a real model's `[ id ]`/`[id1;
+id2]`/`【id】` formatting silently failed to parse, dragging a **correct,
+honestly-hedged** answer to the single highest-stakes question in the
+benchmark below the refusal threshold for the wrong reason. Fixed at the
+root, every mock-provider suite re-verified byte-identical afterward;
+offline re-verification of the same real-model outputs already collected
+showed 4 of 5 refusals were pure artifacts of the bug (refusal count 5 ->
+1, IFS 0.824 -> 0.838). Also found: the model is a reasoning model
+burning most of its token budget on hidden reasoning by default (585 of
+600 tokens on one call) — `reasoning_effort="low"` cut that 5-25x with no
+quality loss and is now the provider's default, though the *first* (less
+efficient) run had already consumed nearly this project's entire Groq
+free-tier daily allowance, honestly disclosed rather than hidden. Full
+story: [docs/evaluation.md](docs/evaluation.md)'s v3.3 section,
+[docs/hot_take.md](docs/hot_take.md)'s v3.3 addendum.
+
 ## Improvement changelog
 
 [docs/improvement_changelog.md](docs/improvement_changelog.md) — baseline
@@ -296,7 +343,10 @@ verification mismatch and a shared MockProvider parsing bug dating to
 v2.0 — both found by reading the browser agent's own trajectory output,
 and (v3.2) a page-level security check that would have halted an entire
 form over one ordinary field's wording, found by building the combined-attack
-demo the security spec itself asked for (documented, not hidden).
+demo the security spec itself asked for, and (v3.3) a third shared
+citation-parsing bug — tuned to the mock provider's exact bracket format
+for nine versions — found on this project's first-ever real-model run
+(documented, not hidden).
 
 ## Main failure mode / hot take
 
@@ -331,13 +381,23 @@ test the fix against everything, not just the case that motivated it.
 v2.9: tried the actual fix v2.8 called for, twice, both ways rejected on
 the same full-benchmark test — a lexical relevance score just isn't the
 same signal as "which fact actually settles this question," and no amount
-of reweighting changes that. v3: the same underlying mistake found one
+of reweighting changes that. v3.0: the same underlying mistake found one
 layer down, in the evaluation harness itself rather than the pipeline — a
 mock-provider parser built and validated against one caller's prompt
 shape quietly stopped being general the moment a second caller used a
 different one, and it took three versions and a browser agent's own field
-labels to finally produce a case weak enough to expose it. Full writeup,
-including what's still unfixed: [docs/hot_take.md](docs/hot_take.md).
+labels to finally produce a case weak enough to expose it. v3.3: the
+identical lesson one layer deeper still — the citation-parsing regex was
+validated against exactly one LLM backend (the deterministic mock) for
+nine straight versions, and it took this project's first-ever real-model
+run to discover that a real model's bracket formatting had been silently
+unparseable the entire time, dragging a correct, well-grounded answer to
+the single highest-stakes question in the v1 benchmark into an
+unnecessary refusal. A codebase's zero-cost, always-green reference path
+being green is not the same claim as "this code has actually been
+exercised" — the gap between them only shows up the first time something
+outside that path runs. Full writeup, including what's still unfixed:
+[docs/hot_take.md](docs/hot_take.md).
 
 ## Hackathon compliance self-check
 
@@ -363,7 +423,7 @@ packages/schemas/      typed Fact / Belief / Evidence / Question / Answer / Traj
                         RiskLevel / PolicyDecision / PolicyResult / AuditVerdict / ActionRecord /
                         QAEntry / ApplicationRecord
 services/identity_engine/    ingestion + belief seeding + versioned storage
-services/providers/          pluggable LLM backend: mock (default) / openai / anthropic
+services/providers/          pluggable LLM backend: mock (default) / openai / anthropic / groq (free)
 services/embeddings/         pluggable embedding backend: hash (default) / fastembed (v2.3)
 services/qa_engine/          v1+: lexical, semantic + hybrid retrieval, the two
                               baselines, the IdentityOS agent, verification

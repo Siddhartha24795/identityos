@@ -3,7 +3,7 @@
   "system_name": "identityos_v2",
   "steps": [
     {
-      "timestamp": "2026-08-30T09:54:08.871615Z",
+      "timestamp": "2026-08-30T11:29:52.029134Z",
       "stage": "retrieve",
       "input_summary": "Government & policy engagement (MeitY, DST, NITI Aayog, IIT Council)",
       "action": "lexical retrieval over Digital Self: top 8 facts, 0 beliefs",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T09:54:08.871765Z",
+      "timestamp": "2026-08-30T11:29:52.029284Z",
       "stage": "generate",
       "input_summary": "Government & policy engagement (MeitY, DST, NITI Aayog, IIT Council)",
       "action": "call provider with cited, confidence-annotated context",
@@ -23,7 +23,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T09:54:08.872057Z",
+      "timestamp": "2026-08-30T11:29:52.029659Z",
       "stage": "verify",
       "input_summary": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:014] (verified fact) States a reading of the mandate: IITACB does not need a manager, it needs a founder for its second act — turning a facility and a 50,000-strong Bengaluru alumni base into an institution industry pays to join, government treats as an implementation partner, and IIT Directors route their best research through. [dossier_excerpts:003] (verified fact) Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group. [dossier_excerpts:005] (verified fact) Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.",
       "action": "per-sentence grounding check (same verifier as v1)",
@@ -33,7 +33,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T09:54:08.872062Z",
+      "timestamp": "2026-08-30T11:29:52.029665Z",
       "stage": "bucket",
       "input_summary": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:014] (verified fact) States a reading of the mandate: IITACB does not need a manager, it needs a founder for its second act — turning a facility and a 50,000-strong Bengaluru alumni base into an institution industry pays to join, government treats as an implementation partner, and IIT Directors route their best research through. [dossier_excerpts:003] (verified fact) Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group. [dossier_excerpts:005] (verified fact) Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.",
       "action": "derive fit bucket from coverage+confidence, not a self-reported label",

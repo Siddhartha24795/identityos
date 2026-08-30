@@ -1,0 +1,26 @@
+{
+  "question_id": "q03",
+  "system_name": "baseline_rag",
+  "steps": [
+    {
+      "timestamp": "2026-08-30T11:04:24.526288Z",
+      "stage": "retrieve",
+      "input_summary": "What battery-life improvement did your dual-processor architecture achieve on Qualcomm smartwatches?",
+      "action": "dump the entire fact store as unstructured text (no ranking, no ids)",
+      "observation": "96 facts included, no relevance filtering",
+      "reasoning": "Baseline 2 has retrieval but no structure and no grounding check.",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T11:04:35.439007Z",
+      "stage": "generate",
+      "input_summary": "What battery-life improvement did your dual-processor architecture achieve on Qualcomm smartwatches?",
+      "action": "call provider with the full unstructured context dump",
+      "observation": "My dual‑processor design boosted the smartwatch’s battery life by roughly 40 percent – the device stayed powered about forty percent longer than the previous single‑processor implementation.",
+      "reasoning": "",
+      "confidence": null,
+      "decision": "answered_unverified"
+    }
+  ]
+}

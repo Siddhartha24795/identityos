@@ -28,7 +28,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.25081634521484375
+      "latency_ms": 0.24271011352539062
     },
     {
       "requirement_id": "req02",
@@ -58,7 +58,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.034332275390625
+      "latency_ms": 0.034809112548828125
     },
     {
       "requirement_id": "req03",
@@ -88,7 +88,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.03528594970703125
+      "latency_ms": 0.03409385681152344
     },
     {
       "requirement_id": "req04",
@@ -118,7 +118,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.030040740966796875
+      "latency_ms": 0.03170967102050781
     },
     {
       "requirement_id": "req05",
@@ -178,7 +178,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.030755996704101562
+      "latency_ms": 0.030040740966796875
     },
     {
       "requirement_id": "req07",
@@ -208,7 +208,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.029325485229492188
+      "latency_ms": 0.029087066650390625
     },
     {
       "requirement_id": "req08",
@@ -238,7 +238,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.029802322387695312
+      "latency_ms": 0.030517578125
     },
     {
       "requirement_id": "req09",
@@ -268,7 +268,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.03409385681152344
+      "latency_ms": 0.0324249267578125
     },
     {
       "requirement_id": "req10",
@@ -298,7 +298,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.02956390380859375
+      "latency_ms": 0.030755996704101562
     },
     {
       "requirement_id": "req11",
@@ -328,7 +328,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.030755996704101562
+      "latency_ms": 0.030279159545898438
     },
     {
       "requirement_id": "req12",
@@ -358,7 +358,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.0362396240234375
+      "latency_ms": 0.03552436828613281
     },
     {
       "requirement_id": "req13",
@@ -388,7 +388,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.03337860107421875
+      "latency_ms": 0.0324249267578125
     },
     {
       "requirement_id": "req14",
@@ -462,7 +462,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 1.0166168212890625
+      "latency_ms": 0.949859619140625
     },
     {
       "requirement_id": "req02",
@@ -504,7 +504,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.9186267852783203
+      "latency_ms": 0.9467601776123047
     },
     {
       "requirement_id": "req03",
@@ -546,7 +546,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.9243488311767578
+      "latency_ms": 0.9300708770751953
     },
     {
       "requirement_id": "req04",
@@ -588,7 +588,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.9069442749023438
+      "latency_ms": 0.9427070617675781
     },
     {
       "requirement_id": "req05",
@@ -618,7 +618,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.8976459503173828
+      "latency_ms": 0.8959770202636719
     },
     {
       "requirement_id": "req06",
@@ -648,7 +648,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.9179115295410156
+      "latency_ms": 0.9207725524902344
     },
     {
       "requirement_id": "req07",
@@ -678,7 +678,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.8955001831054688
+      "latency_ms": 0.8974075317382812
     },
     {
       "requirement_id": "req08",
@@ -714,7 +714,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.9138584136962891
+      "latency_ms": 0.8976459503173828
     },
     {
       "requirement_id": "req09",
@@ -750,7 +750,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.9548664093017578
+      "latency_ms": 0.9434223175048828
     },
     {
       "requirement_id": "req10",
@@ -780,7 +780,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.9317398071289062
+      "latency_ms": 0.8876323699951172
     },
     {
       "requirement_id": "req11",
@@ -816,7 +816,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.9443759918212891
+      "latency_ms": 0.896453857421875
     },
     {
       "requirement_id": "req12",
@@ -858,7 +858,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.9329319000244141
+      "latency_ms": 0.9179115295410156
     },
     {
       "requirement_id": "req13",
@@ -882,7 +882,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.9083747863769531
+      "latency_ms": 1.0483264923095703
     },
     {
       "requirement_id": "req14",
@@ -930,7 +930,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.9174346923828125
+      "latency_ms": 1.0836124420166016
     }
   ],
   "identityos_v2": [
@@ -984,7 +984,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.14543533325195312
+      "latency_ms": 0.13947486877441406
     },
     {
       "requirement_id": "req02",
@@ -1036,7 +1036,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.13899803161621094
+      "latency_ms": 0.11944770812988281
     },
     {
       "requirement_id": "req03",
@@ -1088,7 +1088,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.13780593872070312
+      "latency_ms": 0.13685226440429688
     },
     {
       "requirement_id": "req04",
@@ -1140,7 +1140,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.07772445678710938
+      "latency_ms": 0.07700920104980469
     },
     {
       "requirement_id": "req05",
@@ -1170,7 +1170,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.01621246337890625
+      "latency_ms": 0.015497207641601562
     },
     {
       "requirement_id": "req06",
@@ -1207,7 +1207,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "partial",
       "provider": "mock",
-      "latency_ms": 0.12874603271484375
+      "latency_ms": 0.12493133544921875
     },
     {
       "requirement_id": "req07",
@@ -1243,7 +1243,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "partial",
       "provider": "mock",
-      "latency_ms": 0.0457763671875
+      "latency_ms": 0.04410743713378906
     },
     {
       "requirement_id": "req08",
@@ -1287,7 +1287,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "partial",
       "provider": "mock",
-      "latency_ms": 0.0858306884765625
+      "latency_ms": 0.08416175842285156
     },
     {
       "requirement_id": "req09",
@@ -1331,7 +1331,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "partial",
       "provider": "mock",
-      "latency_ms": 0.42557716369628906
+      "latency_ms": 0.15497207641601562
     },
     {
       "requirement_id": "req10",
@@ -1361,7 +1361,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.015974044799804688
+      "latency_ms": 0.015735626220703125
     },
     {
       "requirement_id": "req11",
@@ -1471,7 +1471,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.1468658447265625
+      "latency_ms": 0.1361370086669922
     },
     {
       "requirement_id": "req13",
@@ -1499,7 +1499,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "partial",
       "provider": "mock",
-      "latency_ms": 0.03504753112792969
+      "latency_ms": 0.041484832763671875
     },
     {
       "requirement_id": "req14",
@@ -1559,7 +1559,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "partial",
       "provider": "mock",
-      "latency_ms": 0.15783309936523438
+      "latency_ms": 0.15020370483398438
     }
   ],
   "identityos_v2_semantic": [
@@ -1581,7 +1581,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.0934600830078125
+      "latency_ms": 0.09036064147949219
     },
     {
       "requirement_id": "req02",
@@ -1641,7 +1641,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.18477439880371094
+      "latency_ms": 0.20313262939453125
     },
     {
       "requirement_id": "req03",
@@ -1685,7 +1685,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.1919269561767578
+      "latency_ms": 0.15783309936523438
     },
     {
       "requirement_id": "req04",
@@ -1713,7 +1713,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.23293495178222656
+      "latency_ms": 0.21576881408691406
     },
     {
       "requirement_id": "req05",
@@ -1757,7 +1757,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.1423358917236328
+      "latency_ms": 0.15354156494140625
     },
     {
       "requirement_id": "req06",
@@ -1809,7 +1809,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "partial",
       "provider": "mock",
-      "latency_ms": 0.1964569091796875
+      "latency_ms": 0.202178955078125
     },
     {
       "requirement_id": "req07",
@@ -1829,7 +1829,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.171661376953125
+      "latency_ms": 0.17070770263671875
     },
     {
       "requirement_id": "req08",
@@ -1909,7 +1909,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.1575946807861328
+      "latency_ms": 0.1747608184814453
     },
     {
       "requirement_id": "req10",
@@ -1937,7 +1937,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.1327991485595703
+      "latency_ms": 0.13303756713867188
     },
     {
       "requirement_id": "req11",
@@ -1987,7 +1987,7 @@
       "evidence_coverage": 0.8,
       "system_bucket": "partial",
       "provider": "mock",
-      "latency_ms": 0.11897087097167969
+      "latency_ms": 0.12063980102539062
     },
     {
       "requirement_id": "req12",
@@ -2039,7 +2039,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.1671314239501953
+      "latency_ms": 0.13637542724609375
     },
     {
       "requirement_id": "req13",
@@ -2059,7 +2059,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "partial",
       "provider": "mock",
-      "latency_ms": 0.11563301086425781
+      "latency_ms": 0.11897087097167969
     },
     {
       "requirement_id": "req14",
@@ -2079,7 +2079,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.18143653869628906
+      "latency_ms": 0.18358230590820312
     }
   ],
   "identityos_v2_hybrid": [
@@ -2133,7 +2133,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.1475811004638672
+      "latency_ms": 0.13971328735351562
     },
     {
       "requirement_id": "req02",
@@ -2185,7 +2185,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.1201629638671875
+      "latency_ms": 0.118255615234375
     },
     {
       "requirement_id": "req03",
@@ -2237,7 +2237,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.13828277587890625
+      "latency_ms": 0.1366138458251953
     },
     {
       "requirement_id": "req04",
@@ -2289,7 +2289,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.08392333984375
+      "latency_ms": 0.0762939453125
     },
     {
       "requirement_id": "req05",
@@ -2333,7 +2333,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.13971328735351562
+      "latency_ms": 0.1544952392578125
     },
     {
       "requirement_id": "req06",
@@ -2406,7 +2406,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "partial",
       "provider": "mock",
-      "latency_ms": 0.04601478576660156
+      "latency_ms": 0.0457763671875
     },
     {
       "requirement_id": "req08",
@@ -2450,7 +2450,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "partial",
       "provider": "mock",
-      "latency_ms": 0.08559226989746094
+      "latency_ms": 0.08511543273925781
     },
     {
       "requirement_id": "req09",
@@ -2494,7 +2494,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "partial",
       "provider": "mock",
-      "latency_ms": 0.15878677368164062
+      "latency_ms": 0.156402587890625
     },
     {
       "requirement_id": "req10",
@@ -2522,7 +2522,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.1342296600341797
+      "latency_ms": 0.1316070556640625
     },
     {
       "requirement_id": "req11",
@@ -2580,7 +2580,7 @@
       "evidence_coverage": 0.8333333333333334,
       "system_bucket": "partial",
       "provider": "mock",
-      "latency_ms": 0.05698204040527344
+      "latency_ms": 0.056743621826171875
     },
     {
       "requirement_id": "req12",
@@ -2632,7 +2632,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.15687942504882812
+      "latency_ms": 0.1366138458251953
     },
     {
       "requirement_id": "req13",
@@ -2660,7 +2660,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "partial",
       "provider": "mock",
-      "latency_ms": 0.05030632019042969
+      "latency_ms": 0.035762786865234375
     },
     {
       "requirement_id": "req14",
@@ -2720,7 +2720,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "partial",
       "provider": "mock",
-      "latency_ms": 0.15306472778320312
+      "latency_ms": 0.15807151794433594
     }
   ]
 }

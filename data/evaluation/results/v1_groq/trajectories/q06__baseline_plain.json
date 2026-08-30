@@ -1,0 +1,16 @@
+{
+  "question_id": "q06",
+  "system_name": "baseline_plain",
+  "steps": [
+    {
+      "timestamp": "2026-08-30T11:05:25.933592Z",
+      "stage": "generate",
+      "input_summary": "What failure taught you the most in your career?",
+      "action": "call provider with zero context, zero verification",
+      "observation": "One of the most formative failures in my career occurred early on when I was leading a cross‑functional project to launch a new software feature on a tight deadline. I was eager to prove my capability as a project lead, so I took on the responsibility for defining the scope, setting milestones, and coordinating the team without first securing a realistic timeline from the engineering and QA departments. As a result, we missed several critical development checkpoints, the feature was delivered late, and the rushed testing phase uncovered a series of bugs that affected user experience after release.\n\nThe experience forced me to confront two key shortcomings in my approach: over‑confidence in my ability to manage complexity without sufficient input, and a reluctance to push back on unrealistic expectations. I learned to:\n\n1. **Involve stakeholders early and continuously** – I now schedule discovery workshops with engineers, designers, and QA to build a shared understanding of feasibility and risk before committing to dates.  \n2. **Prioritize transparent communication** – I set up regular status updates and explicitly flag any scope creep or timeline pressure, ensuring leadership and the team have the same view of progress.  \n3. **Embrace iterative delivery** – Rather than aiming for a single “big bang” launch, I break projects into MVPs that can be validated early, reducing the impact of any single failure.\n\nSince that setback, every project I lead has benefited from a more collaborative planning process, realistic scheduling, and a culture of open feedback. The failure not only sharpened my project‑management skills but also reinforced the importance of humility and teamwork—principles that continue to guide my career growth.",
+      "reasoning": "Baseline 1 has no retrieval and no grounding check by design.",
+      "confidence": null,
+      "decision": "answered_unverified"
+    }
+  ]
+}

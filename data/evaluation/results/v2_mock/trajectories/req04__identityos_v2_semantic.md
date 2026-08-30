@@ -1,22 +1,22 @@
 ### Trajectory — identityos_v2_semantic — req04
 
-**09:54:08 · retrieve**
+**11:29:51 · retrieve**
 - input: Visionary & credible leadership
 - action: embedding-similarity retrieval (hash): top 0 facts, 0 beliefs
 - observation: (no matching evidence found)
 
-**09:54:08 · generate**
+**11:29:51 · generate**
 - input: Visionary & credible leadership
 - action: call provider with cited, confidence-annotated context
 - observation: I believe my track record speaks directly to this question. When it comes to credible and leadership and visionary, I have always taken a proactive, results-driven approach and delivered measurable impact. This has shaped my approach to every project I take on.
 
-**09:54:08 · verify**
+**11:29:51 · verify**
 - input: I believe my track record speaks directly to this question. When it comes to credible and leadership and visionary, I have always taken a proactive, results-driven approach and delivered measurable impact. This has shaped my approach to every project I take on.
 - action: per-sentence grounding check (same verifier as lexical identityos_v2)
 - observation: coverage=0.00 confidence=0.00
 - confidence: 0.00
 
-**09:54:08 · bucket**
+**11:29:51 · bucket**
 - input: I believe my track record speaks directly to this question. When it comes to credible and leadership and visionary, I have always taken a proactive, results-driven approach and delivered measurable impact. This has shaped my approach to every project I take on.
 - action: derive fit bucket from coverage+confidence+polarity (same bucketing.py as lexical)
 - observation: gap

@@ -1,0 +1,16 @@
+{
+  "question_id": "q15",
+  "system_name": "baseline_plain",
+  "steps": [
+    {
+      "timestamp": "2026-08-30T11:09:45.744377Z",
+      "stage": "generate",
+      "input_summary": "What is your fluency level in Kannada?",
+      "action": "call provider with zero context, zero verification",
+      "observation": "I am fluent in Kannada, with native‑level proficiency in speaking, reading, and writing.",
+      "reasoning": "Baseline 1 has no retrieval and no grounding check by design.",
+      "confidence": null,
+      "decision": "answered_unverified"
+    }
+  ]
+}

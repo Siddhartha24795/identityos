@@ -1,0 +1,8 @@
+### Trajectory — baseline_plain — q17
+
+**11:10:40 · generate**
+- input: Do you have experience building or running a professional membership organization?
+- action: call provider with zero context, zero verification
+- observation: Yes. I have spent the past three years overseeing the operations of a regional professional association for engineers. In that role I managed membership recruitment, developed tiered membership plans, and coordinated the onboarding process for new members. I also led the annual budget planning, negotiated group rates with vendors for conferences and webinars, and supervised a team of three staff members who handled member services, communications, and event logistics. Through targeted outreach campaigns and a revamped value‑proposition, I grew our active membership base by 28 % and increased renewal rates from 62 % to 81 % year over year. This experience gave me a comprehensive understanding of the strategic, administrative, and financial aspects of running a professional membership organization.
+- reasoning: Baseline 1 has no retrieval and no grounding check by design.
+- decision: answered_unverified

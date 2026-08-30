@@ -21,7 +21,11 @@ def get_provider(name: str | None = None) -> LLMProvider:
         from .anthropic_provider import AnthropicProvider
 
         return AnthropicProvider()
-    raise ValueError(f"Unknown provider '{name}'. Use one of: mock, openai, anthropic.")
+    if name == "groq":
+        from .groq_provider import GroqProvider
+
+        return GroqProvider()
+    raise ValueError(f"Unknown provider '{name}'. Use one of: mock, openai, anthropic, groq.")
 
 
 __all__ = ["LLMProvider", "MockProvider", "get_provider"]

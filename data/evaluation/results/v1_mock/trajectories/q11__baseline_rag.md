@@ -1,12 +1,12 @@
 ### Trajectory — baseline_rag — q11
 
-**09:54:08 · retrieve**
+**11:29:51 · retrieve**
 - input: What is your most impactful project?
 - action: dump the entire fact store as unstructured text (no ranking, no ids)
 - observation: 96 facts included, no relevance filtering
 - reasoning: Baseline 2 has retrieval but no structure and no grounding check.
 
-**09:54:08 · generate**
+**11:29:51 · generate**
 - input: What is your most impactful project?
 - action: call provider with the full unstructured context dump
 - observation: Closing statement: describes leading the Secretariat as the most consequential work available, and explicitly invites being tested hard on the parts of the candidacy that are short rather than only the parts that are strong.

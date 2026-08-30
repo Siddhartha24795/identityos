@@ -342,6 +342,65 @@ full regression suite after fixing shared infrastructure is not optional
 paperwork, it's the only way to know a fix that looks purely additive
 didn't also change a number three versions upstream.
 
+## v3.3 addendum: the mock provider hid a bug in the pipeline itself, not just in the mock
+
+Every "re-run with a real provider" line in this project's docs, since
+v1, was a deferred next step — until v3.3, when `PROVIDER=groq` made a
+real run actually free to try. It found the same underlying mistake as
+v3's MockProvider bug, one layer deeper: **infrastructure built and
+tested against exactly one caller's output shape breaks silently the
+moment a differently-shaped caller exercises it, and the difference this
+time wasn't between two of this project's own modules — it was between an
+extractive stand-in and an actual generative model.**
+
+The citation regex in `services/qa_engine/verification.py` required a
+bracket to contain exactly one id with zero internal whitespace
+(`[resume:014]`). That was never a documented contract; it was simply the
+only shape `MockProvider` — deterministic, extractive, copy-pastes
+source text — could ever produce. A real model pads brackets with spaces
+(`[ resume:014 ]`), cites two ids in one bracket
+(`[resume:014; belief:002]`), and this specific model sometimes uses
+fullwidth CJK brackets (`【resume:014】`) instead of ASCII ones — three
+real formats, one real run, all silently unparseable. The consequence
+wasn't cosmetic: it dragged a **correct, honestly-hedged, properly-cited**
+answer about the single highest-stakes question in the benchmark (the
+patent-credit question, q13) below the refusal threshold, for a reason
+that had nothing to do with the answer's actual quality. Re-verifying the
+same generated text after the fix showed 4 of the run's 5 refusals were
+pure artifacts of this bug, not genuinely low confidence.
+
+**The general point, stated plainly**: this project's whole verification
+and evaluation harness had run, byte-identical, dozens of times across
+nine prior versions — and every one of those runs used the one LLM
+backend that could never expose this defect. A deterministic mock
+provider is exactly what a judge needs to reproduce a result with zero
+setup (docs/evaluation.md's stated purpose for it), and it is also, by
+construction, incapable of revealing any bug whose trigger condition is
+"a real model's actual writing style." Neither property was wrong to
+build; the lesson is that a codebase's zero-cost, always-green reference
+path is not the same claim as "this code has been exercised," and the
+gap between those two only shows up the first time something outside
+that path actually runs.
+
+**A second, independent finding from the same run**: the hard-case
+overclaim detector (`_HARD_CASE_RULES`, mentioned below) — already
+flagged in "the experiment we removed" as calibrated against the mock
+provider's phrasing — turned out to have exactly the blind spot that
+flag predicted, empirically, for the first time. Given zero context, the
+real model fabricated a complete fake patent number and a fake three-year
+nonprofit leadership role with fabricated statistics — arguably the two
+most severe hallucinations anywhere in this benchmark — and neither
+tripped the rule, because neither used the exact hand-picked phrases the
+rule checks for. The rule caught the one hard case (Kannada fluency)
+where the model's wording happened to match by coincidence. This isn't a
+new insight so much as a predicted one finally getting measured: a
+rule-based, phrase-matching safety check is exactly as brittle against a
+real model's paraphrasing as the mock-provider ceiling always said it
+would be — see docs/evaluation.md's v3.3 section for what a general fix
+would need to look like (semantic judgment, not a longer phrase list),
+the same conclusion v2.9 reached independently for a completely different
+metric.
+
 ## The experiment we removed
 
 An earlier version of the hard-case scoring (services/evaluation/scoring.py)

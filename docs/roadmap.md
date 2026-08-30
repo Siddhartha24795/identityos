@@ -385,7 +385,54 @@ full text of every section named below):
   fabricated evidence, identity-verification fields) are built and passing
   (`tests/test_security.py`, `tests/test_browser_engine.py`).
 
-## v3.3+ — Browser execution, deferred scope  ·  not started
+## v3.3 — First real-model run, a free provider, and a shared citation-parsing bug  ·  **built**
+
+Every "re-run with a real provider" line across this project's docs, since
+v1, was a deferred next step. Added `GroqProvider`
+(`services/providers/groq_provider.py`, free, no credit card, reuses the
+`openai` client already a dependency, pointed at Groq's OpenAI-compatible
+endpoint) and actually took that step for the first time. It found three
+real things in one pass:
+
+1. **A real generative model fabricates specific, detailed, mutually
+   contradictory answers a deterministic mock never could** — given zero
+   context, `baseline_plain` invented a complete fake patent number and a
+   fake three-year nonprofit leadership role with fabricated statistics,
+   while answering a differently-worded version of that same underlying
+   fact the opposite way in the same run.
+2. **The hard-case overclaim detector's predicted blind spot, now
+   measured**: `_HARD_CASE_RULES`' exact-phrase matching, calibrated
+   against the mock provider's wording, missed both fabrications above —
+   named as a real v3.4+ item (semantic judgment, not a longer phrase
+   list), not patched with more hand-picked phrases.
+3. **A real, root-cause bug in shared verification infrastructure**: the
+   citation-parsing regex only ever matched the mock provider's exact
+   bracket style (`[id]`, zero whitespace, one id) — a real model's
+   `[ id ]`, `[id1; id2]`, and fullwidth `【id】` brackets all silently
+   failed to parse, which dragged a **correct, honestly-hedged** answer
+   to the single highest-stakes question in the v1 benchmark below the
+   refusal threshold for the wrong reason. **Fixed at the root**
+   (`services/qa_engine/verification.py`); every mock-provider suite
+   re-verified byte-identical afterward; offline re-verification of the
+   already-collected real-model outputs showed 4 of 5 refusals were pure
+   artifacts of this bug (refusal count 5 -> 1, IFS 0.824 -> 0.838).
+
+Also found and fixed, while wiring the provider up: `python-dotenv` was a
+listed dependency nothing actually imported, so `.env` was never loaded
+automatically by any script — fixed by adding `load_dotenv()` to every
+eval script's entry point. And measured a real token-efficiency issue:
+the default model is a reasoning model that was burning most of its
+token budget on hidden reasoning (585 of 600 tokens on one call);
+`reasoning_effort="low"` cut that 5-25x with no observed quality loss and
+is now the provider's default.
+
+Full write-up, exact fabricated text, and the honest disclosure that the
+Groq free tier's daily token cap was hit before a fresh low-effort re-run
+could complete in this session: docs/evaluation.md's v3.3 section,
+docs/hot_take.md's v3.3 addendum, docs/improvement_changelog.md
+(Iteration 27-31).
+
+## v3.4+ — Browser execution, deferred scope  ·  not started
 
 - Multi-page navigation (the local demo form is single-page).
 - File upload fields (resume/portfolio attachments).
@@ -405,6 +452,17 @@ full text of every section named below):
   previously-masked weakness in a system that was never the shipped path;
   still not a priority to chase directly (see docs/roadmap.md's v2.10+
   section above).
+- The hard-case overclaim detector's exact-phrase blind spot, found in
+  v3.3: `_HARD_CASE_RULES` missed two real, severe fabrications (a fake
+  patent, a fake nonprofit leadership role) because neither used the
+  hand-picked phrases the rule checks for. The real fix needs semantic
+  judgment (does this text assert sole credit / a leadership role that
+  didn't happen), not a longer phrase list — the same conclusion v2.9
+  reached independently for a different metric.
+- A fresh, full real-model re-run of v1 (and v2/v2.5/v3) with
+  `reasoning_effort="low"` — v3.3's corrected numbers for v1 come from
+  offline re-verification of already-collected outputs, not a new live
+  run, because the Groq free tier's daily token cap was reached first.
 
 ## v4 — Multi-agent orchestration + self-improvement  ·  not started
 

@@ -1,4 +1,4 @@
-.PHONY: setup build-identity eval-mock eval-real eval-v2-mock eval-v2-real eval-v2-semantic eval-documents eval-browser eval-security-demo test clean
+.PHONY: setup build-identity eval-mock eval-real eval-real-groq eval-v2-mock eval-v2-real eval-v2-real-groq eval-v2-semantic eval-documents eval-documents-real-groq eval-browser eval-browser-real-groq eval-security-demo test clean
 
 setup:
 	python3 -m venv .venv
@@ -16,6 +16,10 @@ eval-mock: build-identity
 eval-real: build-identity
 	.venv/bin/python scripts/run_eval.py anthropic v1_real
 
+# Requires GROQ_API_KEY in .env — free, no credit card: https://console.groq.com/keys
+eval-real-groq: build-identity
+	.venv/bin/python scripts/run_eval.py groq v1_real_groq
+
 # Runs all 5 systems: baseline_plain, baseline_rag, identityos_v2 (lexical),
 # identityos_v2_semantic, identityos_v2_hybrid (recommended — see docs/evaluation_v2.md).
 # EMBEDDING_PROVIDER=hash here means the two embedding-based arms are not
@@ -32,16 +36,28 @@ eval-v2-semantic: build-identity
 eval-v2-real: build-identity
 	.venv/bin/python scripts/run_eval_v2.py anthropic v2_real fastembed
 
+# Requires GROQ_API_KEY in .env — free, no credit card: https://console.groq.com/keys
+eval-v2-real-groq: build-identity
+	.venv/bin/python scripts/run_eval_v2.py groq v2_real_groq fastembed
+
 # v2.5 — generates an actual cover letter with each system. Uses hybrid
 # retrieval (fastembed) so the real narrative-state/citation behavior shows.
 eval-documents: build-identity
 	.venv/bin/python scripts/run_eval_documents.py mock docs_mock fastembed
+
+# Requires GROQ_API_KEY in .env — free, no credit card: https://console.groq.com/keys
+eval-documents-real-groq: build-identity
+	.venv/bin/python scripts/run_eval_documents.py groq docs_real_groq fastembed
 
 # v3 — fills the local synthetic application form (data/applications/local_demo/),
 # verifies each field, and halts before submit (never submits — no --approve-submit
 # flag is passed here; see scripts/run_browser_demo.py for that checkpoint).
 eval-browser: build-identity
 	.venv/bin/python scripts/run_browser_demo.py mock browser_mock fastembed
+
+# Requires GROQ_API_KEY in .env — free, no credit card: https://console.groq.com/keys
+eval-browser-real-groq: build-identity
+	.venv/bin/python scripts/run_browser_demo.py groq browser_real_groq fastembed
 
 # v3.2 — runs two adversarial local fixtures (mixed prompt-injection/
 # identity-verification/off-topic attacks alongside legitimate fields, and

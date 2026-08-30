@@ -1,0 +1,31 @@
+### Trajectory — identityos_v1 — q08
+
+**11:07:00 · classify**
+- input: Why should we choose you instead of another candidate?
+- action: use declared question.type (v1 simplification, not a learned classifier)
+- observation: unseen
+- reasoning: v2 replaces this with an automatic classifier over question text alone.
+
+**11:07:00 · retrieve**
+- input: Why should we choose you instead of another candidate?
+- action: lexical retrieval over Digital Self: top 2 facts, 0 beliefs
+- observation: [dossier_excerpts:009] (verified fact) States that the IITACB Managing Committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to a record of building or running a professional membership body.
+[dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.
+
+**11:07:01 · generate**
+- input: Why should we choose you instead of another candidate?
+- action: call provider with structured, citation-tagged, confidence-annotated context
+- observation: We should be chosen because we are completely transparent about the one genuine gap in our background – we do **not** have a record of building or running a professional membership body such as CII, NASSCOM, FICCI or AIMA, and we do not try to present adjacent activities (student‑chapter leadership or alumni‑association membership) as equivalent experience [ dossier_excerpts:009 ][ dossier_narrative:019 ]. By respecting the committee’s explicit guidance that such adjacent experience should not be treated as a substitute, we demonstrate honesty and an understanding of the true criteria for the role.
+
+**11:07:01 · verify**
+- input: We should be chosen because we are completely transparent about the one genuine gap in our background – we do **not** have a record of building or running a professional membership body such as CII, NASSCOM, FICCI or AIMA, and we do not try to present adjacent activities (student‑chapter leadership or alumni‑association membership) as equivalent experience [ dossier_excerpts:009 ][ dossier_narrative:019 ]. By respecting the committee’s explicit guidance that such adjacent experience should not be treated as a substitute, we demonstrate honesty and an understanding of the true criteria for the role.
+- action: check every sentence for an explicit citation, else a lexical grounding match
+- observation: evidence_coverage=1.00 unsupported_claim_rate=0.00 overall_confidence=0.50
+- confidence: 0.50
+
+**11:07:01 · complete**
+- input: q08
+- action: return final answer
+- observation: We should be chosen because we are completely transparent about the one genuine gap in our background – we do **not** have a record of building or running a professional membership body such as CII, NASSCOM, FICCI or AIMA, and we do not try to present adjacent activities (student‑chapter leadership or alumni‑association membership) as equivalent experience [ dossier_excerpts:009 ][ dossier_narrative:019 ]. By respecting the committee’s explicit guidance that such adjacent experience should not be treated as a substitute, we demonstrate honesty and an understanding of the true criteria for the role.
+- confidence: 0.50
+- decision: answered

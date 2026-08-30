@@ -1,22 +1,22 @@
 ### Trajectory — identityos_v2_hybrid — req05
 
-**09:54:08 · retrieve**
+**11:29:52 · retrieve**
 - input: Entrepreneurial mindset
 - action: lexical retrieval, semantic fallback only if empty: 0 facts, 0 beliefs
 - observation: (no matching evidence found)
 
-**09:54:08 · generate**
+**11:29:52 · generate**
 - input: Entrepreneurial mindset
 - action: call provider with cited, confidence-annotated context
 - observation: Over the years, I have built a reputation for excellence here. When it comes to entrepreneurial and mindset, I have always taken a proactive, results-driven approach and delivered measurable impact. I am confident this reflects who I am professionally.
 
-**09:54:08 · verify**
+**11:29:52 · verify**
 - input: Over the years, I have built a reputation for excellence here. When it comes to entrepreneurial and mindset, I have always taken a proactive, results-driven approach and delivered measurable impact. I am confident this reflects who I am professionally.
 - action: per-sentence grounding check (same verifier as lexical identityos_v2)
 - observation: coverage=0.00 confidence=0.00
 - confidence: 0.00
 
-**09:54:08 · bucket**
+**11:29:52 · bucket**
 - input: Over the years, I have built a reputation for excellence here. When it comes to entrepreneurial and mindset, I have always taken a proactive, results-driven approach and delivered measurable impact. I am confident this reflects who I am professionally.
 - action: derive fit bucket from coverage+confidence+polarity (same bucketing.py)
 - observation: gap

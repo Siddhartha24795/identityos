@@ -1,23 +1,23 @@
 ### Trajectory — identityos_v2 — req13
 
-**09:54:08 · retrieve**
+**11:29:52 · retrieve**
 - input: Languages — English, Hindi, Kannada preferred
 - action: lexical retrieval over Digital Self: top 2 facts, 0 beliefs
 - observation: [dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet fluent in Kannada.
 [dossier_excerpts:010] (verified fact) States that relocating to Bengaluru and learning Kannada are conditions he is committing to for the IITACB CEO role specifically, not concessions being requested.
 
-**09:54:08 · generate**
+**11:29:52 · generate**
 - input: Languages — English, Hindi, Kannada preferred
 - action: call provider with cited, confidence-annotated context
 - observation: [dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet fluent in Kannada. [dossier_excerpts:010] (verified fact) States that relocating to Bengaluru and learning Kannada are conditions he is committing to for the IITACB CEO role specifically, not concessions being requested.
 
-**09:54:08 · verify**
+**11:29:52 · verify**
 - input: [dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet fluent in Kannada. [dossier_excerpts:010] (verified fact) States that relocating to Bengaluru and learning Kannada are conditions he is committing to for the IITACB CEO role specifically, not concessions being requested.
 - action: per-sentence grounding check (same verifier as v1)
 - observation: coverage=1.00 confidence=0.99
 - confidence: 0.99
 
-**09:54:08 · bucket**
+**11:29:52 · bucket**
 - input: [dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet fluent in Kannada. [dossier_excerpts:010] (verified fact) States that relocating to Bengaluru and learning Kannada are conditions he is committing to for the IITACB CEO role specifically, not concessions being requested.
 - action: derive fit bucket from coverage+confidence, not a self-reported label
 - observation: partial

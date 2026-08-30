@@ -3,7 +3,7 @@
   "system_name": "identityos_v2_semantic",
   "steps": [
     {
-      "timestamp": "2026-08-30T09:54:08.834026Z",
+      "timestamp": "2026-08-30T11:29:51.990617Z",
       "stage": "retrieve",
       "input_summary": "Visionary & credible leadership",
       "action": "embedding-similarity retrieval (hash): top 0 facts, 0 beliefs",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T09:54:08.834048Z",
+      "timestamp": "2026-08-30T11:29:51.990640Z",
       "stage": "generate",
       "input_summary": "Visionary & credible leadership",
       "action": "call provider with cited, confidence-annotated context",
@@ -23,7 +23,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T09:54:08.834087Z",
+      "timestamp": "2026-08-30T11:29:51.990681Z",
       "stage": "verify",
       "input_summary": "I believe my track record speaks directly to this question. When it comes to credible and leadership and visionary, I have always taken a proactive, results-driven approach and delivered measurable impact. This has shaped my approach to every project I take on.",
       "action": "per-sentence grounding check (same verifier as lexical identityos_v2)",
@@ -33,7 +33,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T09:54:08.834091Z",
+      "timestamp": "2026-08-30T11:29:51.990686Z",
       "stage": "bucket",
       "input_summary": "I believe my track record speaks directly to this question. When it comes to credible and leadership and visionary, I have always taken a proactive, results-driven approach and delivered measurable impact. This has shaped my approach to every project I take on.",
       "action": "derive fit bucket from coverage+confidence+polarity (same bucketing.py as lexical)",

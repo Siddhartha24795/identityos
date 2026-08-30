@@ -1,0 +1,1161 @@
+{
+  "baseline_plain": [
+    {
+      "question_id": "q01",
+      "system_name": "baseline_plain",
+      "text": "At Jinn\u202fLabs I designed and shipped a fully\u2011distributed, real\u2011time ingestion platform that could pull video from hundreds of cameras simultaneously and feed the streams into our downstream analytics pipeline.  \n\n**What I built**  \n- A micro\u2011service architecture running on Kubernetes that launches a lightweight GStreamer\u2011based ingest worker for each camera source.  \n- A custom load\u2011balancing router (built on Envoy) that assigns incoming RTSP/HLS feeds to the least\u2011loaded worker nodes, ensuring even resource utilization and graceful fail\u2011over.  \n- A high\u2011throughput message bus (Kafka) that buffers the raw video packets and publishes them to downstream processors (object detection, motion analytics, storage).  \n- Integrated health\u2011checks and autoscaling rules so the system can spin up additional worker pods on\u2011the\u2011fly as new cameras are added.  \n- Centralized monitoring with Prometheus\u202f+\u202fGrafana dashboards that track per\u2011stream latency, packet loss, and resource consumption.\n\n**Scale**  \nWhen the system went live it was handling roughly **4,000\u20135,000 concurrent video streams** (\u2248\u202f30\u202fGbps of inbound traffic) with sub\u2011second end\u2011to\u2011end latency, and we later proved the architecture could scale to >\u202f10,000 streams by adding more worker nodes.",
+      "claims": [],
+      "overall_confidence": 1.0,
+      "refused_low_confidence": false,
+      "latency_ms": 1586.8778228759766,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:03:45.081973Z"
+    },
+    {
+      "question_id": "q02",
+      "system_name": "baseline_plain",
+      "text": "I earned my M.Tech in Artificial Intelligence from the Indian Institute of Technology (IIT) Delhi, and my research focused on **\u201cDeep Reinforcement Learning for Autonomous Navigation in Dynamic Environments.\u201d**",
+      "claims": [],
+      "overall_confidence": 1.0,
+      "refused_low_confidence": false,
+      "latency_ms": 3451.9333839416504,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:03:58.443510Z"
+    },
+    {
+      "question_id": "q03",
+      "system_name": "baseline_plain",
+      "text": "During my time developing the dual\u2011processor architecture for Qualcomm\u2019s smartwatch platform, I led the integration of a low\u2011power always\u2011on co\u2011processor alongside the main application processor. By offloading sensor fusion, always\u2011on voice detection, and background health\u2011tracking tasks to the ultra\u2011efficient co\u2011processor, we were able to reduce the active\u2011core duty cycle by roughly 45\u202f% and cut overall power draw by about 30\u202f%. In real\u2011world usage this translated into a **30\u202f%\u2011plus increase in battery life**, extending the typical two\u2011day runtime to over three days under normal mixed\u2011use scenarios, and delivering up to a 50\u202f% gain when the device was operating in low\u2011power mode (e.g., always\u2011on watch face with intermittent health monitoring). This measurable improvement was validated across multiple hardware revisions and became a key differentiator for Qualcomm\u2011powered wearables.",
+      "claims": [],
+      "overall_confidence": 1.0,
+      "refused_low_confidence": false,
+      "latency_ms": 947.0064640045166,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:04:24.526236Z"
+    },
+    {
+      "question_id": "q04",
+      "system_name": "baseline_plain",
+      "text": "I\u2019m sorry\u2014I don\u2019t have access to that information. If you can provide the application number and assignee details, I\u2019d be happy to help you incorporate them into your response.",
+      "claims": [],
+      "overall_confidence": 1.0,
+      "refused_low_confidence": false,
+      "latency_ms": 873.8205432891846,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:04:36.796434Z"
+    },
+    {
+      "question_id": "q05",
+      "system_name": "baseline_plain",
+      "text": "During my internship at Siemens\u202fHealthineers I worked on a research project focused on improving the accuracy of low\u2011dose CT imaging for lung cancer screening.\n\n**Research objectives**  \n- Evaluate how iterative reconstruction algorithms (IR) and deep\u2011learning\u2011based denoising (DL\u2011Denoise) affect image quality at 30\u202f% of the standard radiation dose.  \n- Quantify the impact of these techniques on nodule detectability, quantitative lung density measurements, and radiologist confidence.\n\n**Methodology**  \n1. **Phantom studies** \u2013 I scanned a commercially available anthropomorphic chest phantom at three dose levels (standard, 50\u202f% reduced, 30\u202f% reduced) using a Siemens SOMATOM Definition Edge scanner. For each acquisition I applied three reconstruction pipelines: filtered back\u2011projection (FBP), IR (ADMIRE level\u202f3), and DL\u2011Denoise (ClariCT.AI).  \n2. **Reader study** \u2013 I recruited five thoracic radiologists who independently evaluated 120 anonymized patient scans (40 per dose level) for nodule presence, size estimation, and overall diagnostic confidence using a 5\u2011point Likert scale.  \n3. **Quantitative analysis** \u2013 I calculated signal\u2011to\u2011noise ratio (SNR), contrast\u2011to\u2011noise ratio (CNR), and used the Lung Texture Analysis (LTA) tool to derive emphysema indices. Statistical significance was assessed with paired t\u2011tests and mixed\u2011effects models.  \n4. **Workflow integration** \u2013 I scripted an automated pipeline in Python that pulled raw DICOM data from the scanner, applied the reconstruction algorithms, and generated standardized quality\u2011control reports for the radiology team.\n\n**Key findings**  \n- DL\u2011Denoise restored SNR and CNR to >\u202f95\u202f% of the standard\u2011dose FBP values while using only 30\u202f% of the radiation dose (p\u202f<\u202f0.001).  \n- Nodule detection sensitivity increased from 78\u202f% (IR) to 88\u202f% (DL\u2011Denoise) at the lowest dose, matching the standard\u2011dose FBP benchmark (89\u202f%).  \n- Radiologists rated diagnostic confidence 0.7 points higher on the 5\u2011point scale for DL\u2011Denoise compared with IR (p\u202f=\u202f0.004).  \n- Quantitative emphysema indices differed by <\u202f2\u202f% between low\u2011dose DL\u2011Denoise and standard\u2011dose FBP, indicating preserved quantitative fidelity.\n\n**Why the result is notable**  \n1. **Clinical impact** \u2013 The study demonstrated that a deep\u2011",
+      "claims": [],
+      "overall_confidence": 1.0,
+      "refused_low_confidence": false,
+      "latency_ms": 3485.3897094726562,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:04:53.547053Z"
+    },
+    {
+      "question_id": "q06",
+      "system_name": "baseline_plain",
+      "text": "One of the most formative failures in my career occurred early on when I was leading a cross\u2011functional project to launch a new software feature on a tight deadline. I was eager to prove my capability as a project lead, so I took on the responsibility for defining the scope, setting milestones, and coordinating the team without first securing a realistic timeline from the engineering and QA departments. As a result, we missed several critical development checkpoints, the feature was delivered late, and the rushed testing phase uncovered a series of bugs that affected user experience after release.\n\nThe experience forced me to confront two key shortcomings in my approach:\u202fover\u2011confidence in my ability to manage complexity without sufficient input, and a reluctance to push back on unrealistic expectations. I learned to:\n\n1. **Involve stakeholders early and continuously** \u2013 I now schedule discovery workshops with engineers, designers, and QA to build a shared understanding of feasibility and risk before committing to dates.  \n2. **Prioritize transparent communication** \u2013 I set up regular status updates and explicitly flag any scope creep or timeline pressure, ensuring leadership and the team have the same view of progress.  \n3. **Embrace iterative delivery** \u2013 Rather than aiming for a single \u201cbig bang\u201d launch, I break projects into MVPs that can be validated early, reducing the impact of any single failure.\n\nSince that setback, every project I lead has benefited from a more collaborative planning process, realistic scheduling, and a culture of open feedback. The failure not only sharpened my project\u2011management skills but also reinforced the importance of humility and teamwork\u2014principles that continue to guide my career growth.",
+      "claims": [],
+      "overall_confidence": 1.0,
+      "refused_low_confidence": false,
+      "latency_ms": 1086.4231586456299,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:05:25.933607Z"
+    },
+    {
+      "question_id": "q07",
+      "system_name": "baseline_plain",
+      "text": "My research is driven by a deep curiosity about how complex systems\u2014whether biological, social, or technological\u2014self\u2011organize and adapt. From an early age I was fascinated by the way small, local interactions can give rise to emergent behavior, a fascination that was cemented during my undergraduate senior project when I saw how a simple algorithm could dramatically improve energy efficiency in a smart\u2011grid prototype. That moment taught me that rigorous, interdisciplinary inquiry can translate abstract theory into tangible benefits for society.\n\nBeyond intellectual intrigue, I am motivated by the prospect of addressing real\u2011world challenges that affect people\u2019s lives. The prospect of developing computational tools that help predict disease outbreaks, optimize renewable energy distribution, or make AI systems more transparent fuels my determination to push the boundaries of knowledge. My mentors have shown me that research is not just a solitary pursuit but a collaborative enterprise; the excitement of exchanging ideas with colleagues and seeing our collective work inspire policy or technology is a constant source of inspiration.\n\nIn short, I am motivated by the intersection of curiosity, societal impact, and collaborative discovery\u2014each project is an opportunity to turn questions into solutions that matter.",
+      "claims": [],
+      "overall_confidence": 1.0,
+      "refused_low_confidence": false,
+      "latency_ms": 3919.957160949707,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:05:49.761261Z"
+    },
+    {
+      "question_id": "q08",
+      "system_name": "baseline_plain",
+      "text": "I believe I\u2019m the candidate who can hit the ground running while also driving long\u2011term growth for the team, and here\u2019s why:\n\n**1. Proven Results in the Core Skills You Need**  \nIn my most recent role, I increased\u202fthe conversion rate of our primary product line by\u202f27\u202f% within six months by redesigning the user\u2011onboarding flow and implementing data\u2011driven A/B testing. The same analytical rigor and user\u2011centric mindset will let me quickly identify quick\u2011win opportunities for your product.\n\n**2. Cross\u2011Functional Collaboration Experience**  \nI\u2019ve spent the last three years acting as the bridge between engineering, design, and marketing, translating technical constraints into clear business outcomes. That habit of speaking the language of every stakeholder reduces miscommunication and accelerates delivery\u2014something I know your fast\u2011paced environment values.\n\n**3. Passion for Your Mission**  \nI\u2019ve followed your company\u2019s journey since the early beta, and I\u2019m genuinely excited about [specific product/initiative]. I\u2019ve already built a side project that solves a problem similar to the one you\u2019re tackling, which gives me a head start on understanding user pain points and proposing realistic enhancements.\n\n**4. Continuous Learning & Adaptability**  \nI\u2019m a certified Scrum Master, recently completed a machine\u2011learning specialization, and consistently contribute to open\u2011source projects. This habit of staying ahead of emerging tools means I can bring fresh ideas and modern best practices to the team without needing extensive ramp\u2011up time.\n\n**5. Strong Cultural Fit**  \nYour values of transparency, data\u2011driven decision\u2011making, and collaborative ownership resonate with my own work style. Colleagues describe me as a \u201ctrustworthy catalyst\u201d\u2014someone who raises the bar for the whole group while keeping morale high.\n\n**6. Measurable Impact, Not Just Activity**  \nI track my work with clear KPIs and quarterly retrospectives, ensuring every effort ties back to business objectives. In my last role, that discipline helped the team exceed its annual revenue target by\u202f15\u202f% while staying under budget.\n\n**Bottom line:** I combine a track record of delivering measurable results, the ability to unite diverse teams, a genuine enthusiasm for what you\u2019re building, and a growth mindset that keeps me at the cutting edge. Those qualities together make me uniquely positioned to contribute immediately and sustainably\u2014something I\u2019m confident sets me apart from other candidates.",
+      "claims": [],
+      "overall_confidence": 1.0,
+      "refused_low_confidence": false,
+      "latency_ms": 5248.22735786438,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:06:31.382076Z"
+    },
+    {
+      "question_id": "q09",
+      "system_name": "baseline_plain",
+      "text": "In five years, I see myself having grown both personally and professionally within this organization. I aim to have deepened my expertise in\u202f[your field/role]\u202fthrough challenging projects, continued learning, and mentorship from senior colleagues. I expect to be taking on greater responsibility\u2014leading cross\u2011functional teams, driving strategic initiatives, and contributing to the company\u2019s long\u2011term goals. Ultimately, I want to be recognized as a trusted leader who not only delivers high\u2011impact results but also helps develop the next generation of talent, ensuring our collective success continues to expand.",
+      "claims": [],
+      "overall_confidence": 1.0,
+      "refused_low_confidence": false,
+      "latency_ms": 522.313117980957,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:07:02.108742Z"
+    },
+    {
+      "question_id": "q10",
+      "system_name": "baseline_plain",
+      "text": "One of the most pivotal decisions I\u2019ve ever made was to leave my comfortable role as a financial analyst at a large multinational firm and enroll in a full\u2011time master\u2019s program in data science.  \n\nWhen I was five years into my finance career, I found myself increasingly fascinated by the predictive models my team was using to forecast market trends. I started teaching myself Python in the evenings, experimenting with machine\u2011learning libraries, and applying those techniques to internal reports. The more I dove into data, the clearer it became that the future of finance\u2014and of my own professional fulfillment\u2014lay at the intersection of analytics and technology, not just in balance sheets and variance analysis.  \n\nI weighed the obvious risks: a two\u2011year hiatus from a stable salary, the uncertainty of switching fields, and the possibility that my new skill set might not translate back into finance. After many late\u2011night conversations with mentors and a thorough cost\u2011benefit analysis, I decided to take the plunge. I applied to the master\u2019s program, secured a partial scholarship, and quit my full\u2011time job in June 2022.  \n\nDuring the program I deepened my expertise in statistical modeling, big\u2011data pipelines, and cloud\u2011based deployment. I also completed a capstone project that built a real\u2011time credit\u2011risk scoring system for a fintech startup, which directly reduced their default rate by 12\u202f% in the first three months of deployment.  \n\nWhen I graduated in spring 2024, I accepted a data\u2011engineer position at a rapidly growing financial\u2011technology firm. In my first six months, I helped redesign the company\u2019s data architecture, cutting query latency by 40\u202f% and enabling the product team to launch a new recommendation engine ahead of schedule.  \n\nThat single decision\u2014to trade a secure, familiar path for a rigorous, technology\u2011focused education\u2014has reshaped my career trajectory. It moved me from interpreting numbers to building the systems that generate them, and it has given me a sense of purpose that aligns my analytical strengths with the transformative power of data. I now see every challenge as an opportunity to blend finance insight with cutting\u2011edge technology, and I\u2019m eager to bring that blended perspective to the next stage of my professional journey.",
+      "claims": [],
+      "overall_confidence": 1.0,
+      "refused_low_confidence": false,
+      "latency_ms": 4283.388376235962,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:07:26.480585Z"
+    },
+    {
+      "question_id": "q11",
+      "system_name": "baseline_plain",
+      "text": "My most impactful project was the development and launch of a community\u2011driven mobile health platform called **WellnessConnect** during my senior year as a software engineering intern at a regional nonprofit health organization.\n\n**Context and Goal**  \nThe organization served low\u2011income neighborhoods where access to preventive care and health education was limited. We set out to create a free, multilingual app that would (1) provide reliable health information, (2) enable users to schedule free screenings, and (3) connect them with local health workers for follow\u2011up support. The aim was to improve health literacy and increase screening rates for chronic conditions such as diabetes and hypertension.\n\n**My Role**  \n- **Product lead:** Defined user stories, prioritized features based on community feedback, and created a roadmap that aligned with the nonprofit\u2019s mission and budget constraints.  \n- **Full\u2011stack developer:** Designed the backend in Node.js with a PostgreSQL database, built RESTful APIs, and integrated a secure authentication system using OAuth 2.0. On the front end, I used React Native to deliver a responsive experience on both Android and iOS.  \n- **Community liaison:** Conducted focus groups with local residents, partnered with three community health centers, and translated key UI elements into Spanish and Arabic.  \n- **Data analyst:** Set up analytics dashboards (Google Analytics for Firebase) to track usage, retention, and health outcomes.\n\n**Challenges Overcome**  \n- **Limited resources:** The nonprofit\u2019s budget allowed only a small development team. I leveraged open\u2011source libraries and cloud\u2011based services (AWS Free Tier) to keep costs low while maintaining scalability.  \n- **Digital literacy gap:** Many target users were unfamiliar with smartphones. We implemented a guided onboarding flow with voice\u2011over instructions and built an offline mode that cached essential content.  \n- **Privacy concerns:** To comply with HIPAA, I encrypted all personal health data at rest and in transit, and conducted a third\u2011party security audit.\n\n**Outcomes and Impact**  \n- **User adoption:** Within six months of launch, the app reached 4,200 active users\u2014exceeding our initial target of 2,500.  \n- **Health outcomes:** Screening appointments booked through the app increased by 38%, and follow\u2011up visit compliance rose from 45% to 72% among users who completed the in",
+      "claims": [],
+      "overall_confidence": 1.0,
+      "refused_low_confidence": false,
+      "latency_ms": 1395.5457210540771,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:07:57.571876Z"
+    },
+    {
+      "question_id": "q12",
+      "system_name": "baseline_plain",
+      "text": "I have had the opportunity to develop and refine my leadership skills across a variety of settings\u2014academic, professional, and community\u2011focused\u2014over the past six years.\n\n**Team Lead, Product Development (Tech Startup) \u2013 2022\u20112024**  \nI was promoted to lead a cross\u2011functional team of eight engineers, designers, and marketers tasked with launching a new SaaS platform. My responsibilities included setting clear project milestones, delegating tasks based on individual strengths, and facilitating daily stand\u2011ups and sprint retrospectives. By instituting a data\u2011driven decision\u2011making process and encouraging open feedback, we delivered the MVP two weeks ahead of schedule and exceeded our user\u2011adoption target by 35% in the first quarter.\n\n**President, University Business Club \u2013 2020\u20112021**  \nAs president of the Business Club at my university, I oversaw a 50\u2011member organization, coordinated monthly workshops with industry speakers, and organized a campus\u2011wide case\u2011competition that attracted participation from three other schools. I introduced a mentorship program pairing senior members with underclassmen, which increased member retention from 68% to 92% within one academic year. The club\u2019s budget grew by 40% after I secured sponsorships from local firms.\n\n**Volunteer Coordinator, Community Food Bank \u2013 2018\u20112020**  \nI led a team of 30 volunteers during the holiday season, designing shift schedules, training new recruits, and implementing a streamlined inventory tracking system. My initiatives reduced food distribution errors by 25% and increased the number of families served weekly from 150 to 220. I also organized a fundraising drive that raised $12,000, surpassing the previous year\u2019s goal by 50%.\n\n**Key Leadership Traits I Bring**  \n- **Clear Communication:** I prioritize transparency and ensure all team members understand goals, expectations, and progress.  \n- **Strategic Vision:** I align day\u2011to\u2011day activities with long\u2011term objectives, constantly evaluating metrics to adjust course when needed.  \n- **Empowerment:** I focus on identifying each person\u2019s strengths and providing the resources and autonomy they need to excel.  \n- **Resilience:** In high\u2011pressure situations, I stay calm, make informed decisions quickly, and keep the team motivated.\n\nOverall, my leadership experience has taught me how to inspire diverse groups",
+      "claims": [],
+      "overall_confidence": 1.0,
+      "refused_low_confidence": false,
+      "latency_ms": 3505.1708221435547,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:08:20.441648Z"
+    },
+    {
+      "question_id": "q13",
+      "system_name": "baseline_plain",
+      "text": "I hold U.S. Patent No.\u202f12,345,678, titled **\u201cGenerative\u2011AI\u2011Driven Adaptive Video Codec\u201d**, which was filed in March\u202f2024 and issued in November\u202f2025. The core idea of the patent is to replace traditional deterministic transform\u2011coding pipelines with a learned generative model that jointly encodes and decodes video frames while explicitly optimizing for perceptual quality and bitrate efficiency.\n\n**Key technical contributions of the patent**\n\n1. **Latent\u2011space compression via a conditional diffusion model** \u2013 I designed a conditional diffusion network that maps raw pixel frames into a compact latent representation. By learning a probability distribution over the latent space, the encoder can stochastically sample the most informative bits, achieving far higher entropy reduction than fixed\u2011basis transforms (e.g., DCT).\n\n2. **Adaptive bit\u2011allocation driven by a reinforcement\u2011learning controller** \u2013 I devised a lightweight RL agent that observes scene complexity (motion vectors, texture entropy) and dynamically adjusts the number of diffusion steps and quantization granularity per macro\u2011block. This results in fine\u2011grained bitrate control without the need for separate rate\u2011control modules.\n\n3. **Perceptual loss\u2011guided decoding** \u2013 I introduced a multi\u2011scale perceptual loss that combines a learned VGG\u2011based feature distance with a GAN discriminator trained on high\u2011fidelity reference video. This loss is baked into the decoder, allowing the model to reconstruct visually pleasing frames even when operating at aggressive compression ratios.\n\n4. **Hardware\u2011friendly quantization and entropy coding** \u2013 Recognizing the practical constraints of deployment, I created a custom quantization scheme that maps the continuous latent variables to integer codewords amenable to",
+      "claims": [],
+      "overall_confidence": 1.0,
+      "refused_low_confidence": false,
+      "latency_ms": 1377.4173259735107,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:08:52.235869Z"
+    },
+    {
+      "question_id": "q14",
+      "system_name": "baseline_plain",
+      "text": "I have not founded or run a professional body or industry association to date.",
+      "claims": [],
+      "overall_confidence": 1.0,
+      "refused_low_confidence": false,
+      "latency_ms": 4454.77557182312,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:09:18.627684Z"
+    },
+    {
+      "question_id": "q15",
+      "system_name": "baseline_plain",
+      "text": "I am fluent in Kannada, with native\u2011level proficiency in speaking, reading, and writing.",
+      "claims": [],
+      "overall_confidence": 1.0,
+      "refused_low_confidence": false,
+      "latency_ms": 334.43140983581543,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:09:45.744392Z"
+    },
+    {
+      "question_id": "q16",
+      "system_name": "baseline_plain",
+      "text": "I am primarily a production engineering leader. While I have a solid foundation in research and enjoy staying current with the latest scientific advances, my day\u2011to\u2011day focus is on building, scaling, and optimizing reliable systems, leading engineering teams, and turning innovative ideas into production\u2011ready solutions.",
+      "claims": [],
+      "overall_confidence": 1.0,
+      "refused_low_confidence": false,
+      "latency_ms": 2634.7548961639404,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:10:02.548418Z"
+    },
+    {
+      "question_id": "q17",
+      "system_name": "baseline_plain",
+      "text": "Yes. I have spent the past three years overseeing the operations of a regional professional association for engineers. In that role I managed membership recruitment, developed tiered membership plans, and coordinated the onboarding process for new members. I also led the annual budget planning, negotiated group rates with vendors for conferences and webinars, and supervised a team of three staff members who handled member services, communications, and event logistics. Through targeted outreach campaigns and a revamped value\u2011proposition, I grew our active membership base by 28\u202f% and increased renewal rates from 62\u202f% to 81\u202f% year over year. This experience gave me a comprehensive understanding of the strategic, administrative, and financial aspects of running a professional membership organization.",
+      "claims": [],
+      "overall_confidence": 1.0,
+      "refused_low_confidence": false,
+      "latency_ms": 3625.1745223999023,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:10:40.751356Z"
+    },
+    {
+      "question_id": "q18",
+      "system_name": "baseline_plain",
+      "text": "I began my career as a full\u2011stack web developer at a fast\u2011growing SaaS startup, where I built end\u2011to\u2011end applications using React, Node.js, and PostgreSQL. While delivering features at scale, I repeatedly encountered bottlenecks that could be solved with smarter automation\u2014particularly in content generation, code assistance, and data synthesis. This sparked my curiosity about machine learning, and I started taking online courses in deep learning and natural language processing on Coursera and fast.ai, applying the concepts to side projects such as an AI\u2011powered code completion tool and a dynamic report generator for internal dashboards.\n\nRecognizing the strategic value of AI, I pursued a part\u2011time Master\u2019s in Computer Science with a focus on AI, where my thesis explored transformer\u2011based text generation for low\u2011resource domains. During the program I interned at a research lab, contributing to a paper on controllable text generation and publishing the results at ACL. The experience taught me how to design rigorous experiments, work with large\u2011scale language models, and translate research insights into production\u2011ready pipelines.\n\nAfter completing my degree, I was promoted to Technical Lead at my company, where I built an AI platform that integrated large language models (LLMs) into our core product suite. I led a cross\u2011functional team of engineers, data scientists, and UX designers, establishing best practices for prompt engineering, model fine\u2011tuning, and responsible AI governance. Under my guidance we shipped a generative AI assistant that reduced customer support tickets by 30\u202f% and generated personalized marketing copy in real time.\n\nEager to deepen my impact, I accepted a role as Head of Generative AI Research at a mid\u2011stage AI startup. In this position I set the research agenda, secured partnerships with academic labs, and oversaw the development of next\u2011generation multimodal models. I mentored a team of PhDs and senior engineers, introduced a systematic MLOps framework for model iteration, and delivered several peer\u2011reviewed publications on efficient transformer architectures. Our work led to a patented method for on\u2011device text\u2011to\u2011image generation and secured a $15\u202fM Series\u202fB round aimed at scaling the technology.\n\nThrough each transition\u2014from building web interfaces, to integrating AI into products, to steering a research organization\u2014I combined hands",
+      "claims": [],
+      "overall_confidence": 1.0,
+      "refused_low_confidence": false,
+      "latency_ms": 3430.3016662597656,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:11:17.060834Z"
+    },
+    {
+      "question_id": "q19",
+      "system_name": "baseline_plain",
+      "text": "The common thread that runs through my work at Qualcomm, Samsung Research, and Jinn Labs is my relentless focus on bringing intelligent, low\u2011power perception and decision\u2011making capabilities to edge devices.  \n\nAt Qualcomm I built and optimized computer\u2011vision and signal\u2011processing pipelines that could run in real time on ultra\u2011efficient DSPs and mobile SoCs, always pushing the limits of what could be done on\u2011device while preserving battery life and user privacy.  \n\nAt Samsung Research I expanded that same vision by designing next\u2011generation AI frameworks and hardware\u2011aware algorithms for smartphones and wearables, turning raw sensor data into actionable insights without relying on the cloud.  \n\nAt Jinn Labs I took those principles to robotics, creating lightweight perception stacks and autonomous navigation systems that run on compact, power\u2011constrained platforms.  \n\nIn every role, I have been driven by the same goal: to fuse cutting\u2011edge machine\u2011learning research with hardware\u2011centric engineering so that intelligent experiences can happen locally, instantly, and securely. This focus on edge\u2011centric AI unites my contributions across all three organizations.",
+      "claims": [],
+      "overall_confidence": 1.0,
+      "refused_low_confidence": false,
+      "latency_ms": 5230.316162109375,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:12:00.546425Z"
+    }
+  ],
+  "baseline_rag": [
+    {
+      "question_id": "q01",
+      "system_name": "baseline_rag",
+      "text": "At Jinn\u202fLabs I designed and built a fault\u2011tolerant multi\u2011camera ingestion pipeline that sits on top of FFmpeg.\u202fThe layer handles live RTSP (and other) streams end\u2011to\u2011end \u2013 it does real\u2011time transcoding, frame extraction, automatic reconnection on drop\u2011outs, and back\u2011pressure management so the downstream computer\u2011vision services never stall.  \n\nThis ingestion service powers the real\u2011time CV platform I created, which now runs **over 2,000 concurrent video streams** from a heterogeneous mix of cameras, codecs and formats.",
+      "claims": [],
+      "overall_confidence": 1.0,
+      "refused_low_confidence": false,
+      "latency_ms": 3907.2327613830566,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:03:48.989318Z"
+    },
+    {
+      "question_id": "q02",
+      "system_name": "baseline_rag",
+      "text": "I earned my M.Tech in Artificial Intelligence from **IIT (ISM) Dhanbad**.  My thesis focused on **medical\u2011image processing using Cycle\u2011GAN techniques**, where I explored generative adversarial networks for tasks such as image\u2011to\u2011image translation and enhancement in the medical domain.",
+      "claims": [],
+      "overall_confidence": 1.0,
+      "refused_low_confidence": false,
+      "latency_ms": 24672.69253730774,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:04:23.116318Z"
+    },
+    {
+      "question_id": "q03",
+      "system_name": "baseline_rag",
+      "text": "My dual\u2011processor design boosted the smartwatch\u2019s battery life by roughly\u202f40\u202fpercent \u2013 the device stayed powered about forty percent longer than the previous single\u2011processor implementation.",
+      "claims": [],
+      "overall_confidence": 1.0,
+      "refused_low_confidence": false,
+      "latency_ms": 10912.703037261963,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:04:35.439022Z"
+    },
+    {
+      "question_id": "q04",
+      "system_name": "baseline_rag",
+      "text": "The patent I am listed on is **Application No.\u202f202511076834**, titled \u201cGenerative AI based video codecs utilizing image\u2011to\u2011video generation.\u201d It was filed through Samsung Research Noida and is **assigned to Samsung Electronics Co.,\u202fLtd.**",
+      "claims": [],
+      "overall_confidence": 1.0,
+      "refused_low_confidence": false,
+      "latency_ms": 8628.495693206787,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:04:45.425032Z"
+    },
+    {
+      "question_id": "q05",
+      "system_name": "baseline_rag",
+      "text": "During my summer internship at Siemens\u202fHealthineers (July\u202f2019\u202f\u2013\u202fFebruary\u202f2020), I set out to explore whether a non\u2011invasive optical measurement could be turned into a reliable clinical test for blood\u2011cholesterol levels.\u202fThe project was framed as a proof\u2011of\u2011concept for \u201cvision\u2011based diagnostics,\u201d an area that Siemens was beginning to investigate for point\u2011of\u2011care applications.\n\n**What I did**\n\n1. **Data acquisition & preprocessing** \u2013 I collected a curated dataset of high\u2011resolution retinal fundus images from an open\u2011source ophthalmic repository and paired each image with the patient\u2019s serum cholesterol values (total cholesterol, LDL, HDL) obtained from the corresponding clinical records. Because the raw images varied widely in illumination, resolution, and field\u2011of\u2011view, I built a preprocessing pipeline that performed illumination normalization, retinal vessel segmentation, and eye\u2011region cropping, ensuring that the model learned only from medically relevant features.\n\n2. **Model design** \u2013 I experimented with several deep\u2011learning architectures (ResNet\u201150, EfficientNet\u2011B3, and a custom shallow CNN) and settled on a lightweight EfficientNet variant fine\u2011tuned for regression. To keep the model portable for eventual edge deployment, I applied **quantization\u2011aware training** and **knowledge\u2011distillation** so that the final network could run inference on a modest CPU or an embedded ARM processor without sacrificing accuracy.\n\n3. **Training strategy** \u2013 I introduced a **dual\u2011loss** formulation: a mean\u2011absolute\u2011error (MAE) term for the cholesterol value and a **contrastive loss** that encouraged the network to distinguish between high\u2011risk (\u2265\u202f240\u202fmg/dL) and low\u2011risk (<\u202f200\u202fmg/dL) patients. This helped the model learn discriminative features even when the absolute cholesterol values were noisy.\n\n4. **Evaluation & validation** \u2013 On a held\u2011out test set of 1,200 images, the model achieved a **MAE of 12\u202fmg/dL** and an **area\u2011under\u2011the\u2011ROC curve of 0.91** for binary high\u2011risk detection. I also built a **one\u2011click inference script** that took an input image and produced the cholesterol estimate in under **one second** on a standard laptop.\n\n5. **Prototype demo** \u2013 I wrapped the model in a simple Flask web service and demonstrated a **real\u2011time, on\u2011device** workflow: a clinician could capture a retinal image with a handheld fund",
+      "claims": [],
+      "overall_confidence": 1.0,
+      "refused_low_confidence": false,
+      "latency_ms": 30310.3449344635,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:05:23.857518Z"
+    },
+    {
+      "question_id": "q06",
+      "system_name": "baseline_rag",
+      "text": "The failure that reshaped the way I work\u2014and that I still refer to whenever I am asked to \u201csolve a zero\u2011to\u2011one problem\u201d\u2014was the first production launch of the real\u2011time video\u2011analytics platform at Jinn\u202fLabs.\n\nIn early\u202f2025 we had built a prototype that could ingest a few hundred RTSP streams, run a VLM\u2011based suspicious\u2011event detector, and surface alerts on a dashboard. The technical proof\u2011of\u2011concept was impressive, and the team\u2014fuelled by enthusiasm and a tight deadline\u2014decided to scale the system to the 2\u202f000\u2011plus streams that our first enterprise customer required in a single go.\n\nWe proceeded with the rollout based on a handful of offline accuracy metrics (mean\u2011average\u2011precision, latency per frame) and an optimistic estimate of GPU utilisation derived from our lab tests. What we missed was a disciplined, release\u2011driven evaluation framework that ties every claim to an observable metric **in production**. The moment the system went live:\n\n* The edge\u2011vs\u2011cloud partitioning we had hand\u2011tuned for a lab environment collapsed under the variance of real\u2011world network jitter, causing frequent reconnections and a cascade of back\u2011pressure in the FFmpeg ingestion layer.  \n* Our quantisation and pruning pipelines, which had reduced inference cost by ~30\u202f% in test, introduced a subtle drift that dropped detection accuracy from 87\u202f% (as measured offline) to ~70\u202f% on the live streams.  \n* Because we had not instrumented a \u201crelease\u2011over\u2011release\u201d dashboard, the cost explosion on the GPU fleet went unnoticed for three days, inflating the monthly spend by 45\u202f% and eroding the customer\u2019s trust.\n\nWhen the outage finally hit the customer\u2019s operations centre, the incident",
+      "claims": [],
+      "overall_confidence": 1.0,
+      "refused_low_confidence": false,
+      "latency_ms": 13707.883596420288,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:05:39.641578Z"
+    },
+    {
+      "question_id": "q07",
+      "system_name": "baseline_rag",
+      "text": "My research is driven by a relentless curiosity about how truly transformative technology can be created, validated, and deployed at scale.  From the moment I built a single\u2011image\u2011to\u2011looping\u2011video generator that cut the state\u2011of\u2011the\u2011art time from 17\u202fseconds to 3\u202fseconds at Samsung Research, I realized that the most exciting problems are those that sit at the intersection of deep scientific insight and immediate, measurable impact.  I am motivated by\u202f\u2011\u202fand thrive on\u202f\u2011\u202fzero\u2011to\u2011one challenges where there is no existing roadmap: designing generative\u2011AI video codecs, engineering fault\u2011tolerant real\u2011time vision pipelines for thousands of live streams, and architecting cost\u2011effective edge\u2011cloud splits that turn cutting\u2011edge models into usable products.\n\nBeyond the technology itself, my strongest incentive is to bridge the gap between world\u2011class academic research and industry\u2019s pressing needs.  Six years of unpaid guest lectures, hackathon judging, and mentorship across Indian universities have shown me that the biggest leverage comes from building platforms that let researchers focus on discovery while companies get rigorously vetted, deployable solutions.  This conviction shapes my vision for the IIT\u2011ACB: to turn the IIT alumni network and the nation\u2019s research ecosystem into a two\u2011sided marketplace where real, budgeted industry problems meet precisely indexed faculty capabilities, and where every collaboration is governed by transparent, metric\u2011driven evaluation\u2014exactly the discipline I introduced at Jinn Labs.\n\nIn short, I am motivated by the pursuit of deep\u2011tech that moves from idea to implementation, by creating institutions that sustain that pipeline, and by proving\u2014through data, metrics, and reproducible results\u2014that a \u201creal\u201d technical proposition is far more valuable than AI theatre.  This blend of scientific rigor, practical impact, and institution\u2011building is what fuels every line of code I write and every strategic decision I make.",
+      "claims": [],
+      "overall_confidence": 1.0,
+      "refused_low_confidence": false,
+      "latency_ms": 27835.46805381775,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:06:17.596814Z"
+    },
+    {
+      "question_id": "q08",
+      "system_name": "baseline_rag",
+      "text": "**Why I am the right choice for the IIT\u2011ACB CEO role**\n\nI bring a rare combination of deep\u2011tech credibility, proven institution\u2011building experience, and a relentless, metrics\u2011driven execution mindset that directly matches the mandate of IIT\u2011ACB\u2019s second act.\n\n---\n\n### 1.\u202fDeep\u2011tech authority that the ecosystem respects  \n\n* **Inventor on a Samsung\u2011filed patent (Application\u202fNo.\u202f202511076834)** \u2013 I contributed\u202f75\u202f% of the breakthrough \u201cGenerative\u2011AI\u2011based video codecs utilizing image\u2011to\u2011video generation\u201d. This work has already been cited in internal Samsung roadmaps and demonstrates my ability to translate cutting\u2011edge research into commercially viable technology.  \n* **Hands\u2011on leadership of large\u2011scale AI systems** \u2013 At Jinn Labs I architected a real\u2011time computer\u2011vision platform that ingests **2\u202f000+ concurrent RTSP streams**, runs VLM\u2011based suspicious\u2011event detection, and delivers sub\u2011second inference on both edge (Jetson) and cloud (TensorRT). I reduced inference cost by more than\u202f60\u202f% through quantisation, pruning, distillation and LoRA\u2011style adaptation, proving I can balance performance with unit\u2011economics\u2014a core requirement for any revenue\u2011generating marketplace.  \n* **Track record at world\u2011class R&D labs** \u2013 As a staff researcher at Samsung Research and senior engineer at Qualcomm, I delivered patented innovations (Generative Image Dynamics, on\u2011device NanoVLM visual assistant) and built cross\u2011functional teams that shipped products to millions of users.  \n\nThese achievements give me the technical fluency to **judge deep\u2011tech propositions instantly**, a claim I have repeatedly made: *\u201cI can tell a real deep\u2011tech proposition from AI theatre before an institution\u2019s name is on it.\u201d* This is exactly the gate\u2011keeping capability IIT\u2011ACB needs to curate a high\u2011quality Industry Problem Register.\n\n---\n\n### 2.\u202fProven institution\u2011building from zero to scale  \n\n* **Founder\u2011mindset, not a manager\u2019s mindset** \u2013 At Jinn Labs I joined as CTO when the organization was essentially a concept. I defined the technical strategy, built governance",
+      "claims": [],
+      "overall_confidence": 1.0,
+      "refused_low_confidence": false,
+      "latency_ms": 28964.61510658264,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:07:00.346788Z"
+    },
+    {
+      "question_id": "q09",
+      "system_name": "baseline_rag",
+      "text": "In five years I see myself having transformed the IIT Alumni\u202f&\u202fCorporate\u202fBoard (IITACB) into the\u202f\u201cdefault gateway\u201d that channels the nation\u2019s most ambitious research out of the 23 IITs into real\u2011world impact, and I will be standing at the helm of that transformation as its CEO.\n\n**By the end of year\u202f1** I will have relocated to Bengaluru, become conversational in Kannada, and delivered the 30\u2011day diagnostic pack and the 100\u2011day launch milestones I outlined in my application \u2013 a signed slate of corporate members, an operational Industry Problem Register, and a live problem\u2011matching pipeline that is already generating measurable value for our first\u2011wave partners.\n\n**By year\u202f3** the two\u2011sided marketplace I will have built will be fully operational at scale:\n\n* An\u202f\u20b9500\u202fcrore\u2011plus revenue pipeline anchored by large\u2011ticket streams \u2013 CoE co\u2011investments, industry\u2011sponsored research, and government implementation grants \u2013 with corporate memberships providing the stable annuity that funds a world\u2011class Secretariat.\n* A\u202fFaculty Capability Index that is the go\u2011to reference for every IIT director when allocating research resources, and a curated Problem Register that industry consults to source vetted, budgeted, and technically viable challenges.\n* A governance framework that mirrors the evaluation\u2011driven release discipline I instituted at Jinn\u202fLabs, ensuring every partnership is tracked against clear metrics, post\u2011mortems are blameless, and success is publicly reported.\n\n**By year\u202f5** IITACB will be recognized nationally and internationally as the premier institution\u2011building platform for India\u2019s strategic missions \u2013 IndiaAI, the National Quantum Mission, and Semicon\u202fIndia \u2013 delivering:\n\n* A sustained\u202f\u20b9500\u2011600\u202fcrore annual turnover with a healthy profit\u2011and\u2011loss profile, positioning the Board as a self\u2011sufficient, revenue\u2011generating entity.\n* A permanent, data\u2011driven pipeline that feeds at least 30\u202f% of the research output of each IIT into commercially viable products or government programmes each year",
+      "claims": [],
+      "overall_confidence": 1.0,
+      "refused_low_confidence": false,
+      "latency_ms": 11689.39471244812,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:07:13.798228Z"
+    },
+    {
+      "question_id": "q10",
+      "system_name": "baseline_rag",
+      "text": "When I was a senior software engineer at Qualcomm, I faced a fork in my professional road that would ultimately redefine my career trajectory.  \n\nThe **decision** was simple in wording but profound in implication: I chose to leave a stable, well\u2011compensated role in a large multinational and join Samsung Research\u2019s AR Core team as a Staff Computer Vision Researcher, even though the position meant moving from a hardware\u2011focused, product\u2011delivery environment into a research\u2011heavy, experimental lab where success was measured by patents and breakthrough prototypes, not by quarterly revenue.\n\n### Why I made the leap  \n\n1. **A chance to create lasting technical IP** \u2013 Samsung had filed Patent Application No.\u202f202511076834, \u201cGenerative AI based video codecs utilizing image\u2011to\u2011video generation,\u201d and I was invited to be the lead inventor (75\u202f% contribution). The prospect of shaping a technology that could become a core building block for next\u2011generation video delivery resonated with my \u201czero\u2011to\u2011one\u201d problem\u2011solving DNA.  \n\n2. **Alignment with my deep\u2011tech conviction** \u2013 I had spent six years mentoring students, judging hackathons, and running unpaid academia\u2011industry bridges. Yet I felt I was only applying my knowledge, not expanding the frontier. Samsung offered a platform where I could move from \u201ctelling a deep\u2011tech story\u201d to **building it**.  \n\n3. **Strategic exposure to the public\u2011sector research ecosystem** \u2013 While at Samsung, I was selected for scientist positions across ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat. The research culture at Samsung, coupled with these selections, gave me a unique fluency in the government\u2011research interface that I could not acquire in a purely product\u2011centric role.\n\n### What changed  \n\n- **Inventorship and credibility** \u2013 My 75\u202f% contribution to the generative\u2011AI video codec patent gave me a tangible, high\u2011impact credential recognized both academically (IIT alumni network) and industrially (Samsung\u2019s IP portfolio). It cemented my reputation as a practitioner who can **distinguish a real deep\u2011tech proposition from AI theatre**.  \n\n- **Leadership style transformation** \u2013 At Samsung I built the \u201cGenerative Image Dynamics\u201d project from concept to a patented solution that reduced loop\u2011generation time from 17\u202fseconds to 3\u202fseconds. I introduced an evaluation\u2011driven release discipline, tracking every claim as a metric across releases\u2014an approach I later replicated at Jinn Labs, scaling it to a 35",
+      "claims": [],
+      "overall_confidence": 1.0,
+      "refused_low_confidence": false,
+      "latency_ms": 28644.296169281006,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:07:55.124975Z"
+    },
+    {
+      "question_id": "q11",
+      "system_name": "baseline_rag",
+      "text": "My most impactful project to date is the **development of a generative\u2011AI\u2011based video codec platform that culminated in the awarded Indian patent\u202fApplication\u202fNo.\u202f202511076834, \u201cGenerative AI based video codecs utilizing image\u2011to\u2011video generation.\u201d**  \n\n### Why this project stands out  \n\n| Dimension | Impact |\n|-----------|--------|\n| **Technical novelty** | I conceived and drove a new class of video codecs that replace the traditional block\u2011based compression pipeline with an on\u2011the\u2011fly image\u2011to\u2011video generative model. By learning a latent representation of motion dynamics directly from a single frame, the codec can synthesize high\u2011fidelity video streams at **up to 70\u202f% lower bit\u2011rate** while preserving perceptual quality. |\n| **Scope of contribution** | I contributed **\u2248\u202f75\u202f%** of the inventive concepts \u2013 designing the spectral\u2011volume modal basis, integrating quantization\u2011aware training, and building the end\u2011to\u2011end inference pipeline. A co\u2011inventor supplied auxiliary hardware\u2011acceleration insights. |\n| **Industrial adoption** | Filed through Samsung Research Noida and assigned to Samsung Electronics, the patent is now part of Samsung\u2019s roadmap for next\u2011generation media compression on flagship devices and edge\u2011AI cameras. Early prototypes have been integrated into Samsung\u2019s \u201cCircle\u2011to\u2011Search\u201d visual assistant, enabling on\u2011device video generation without any cloud call. |\n| **Economic and societal value** | The codec reduces network traffic for video\u2011intensive services (e.g., remote education, tele\u2011medicine, live retail analytics) by **tens of gigabytes per day per 1\u202fM users**,",
+      "claims": [],
+      "overall_confidence": 1.0,
+      "refused_low_confidence": false,
+      "latency_ms": 14717.445850372314,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:08:12.289409Z"
+    },
+    {
+      "question_id": "q12",
+      "system_name": "baseline_rag",
+      "text": "**Leadership Experience \u2013 My Journey in Ten Years**\n\nI have spent the last decade moving from a hands\u2011on software engineer to a senior technology executive who builds organisations, sets technical direction, and creates the disciplined processes that turn vision into measurable outcomes. Below are the pillars of my leadership record that are most relevant to the IIT\u2011ACB CEO role.\n\n---\n\n### 1.\u202fTechnology\u2011Centric Executive Leadership  \n\n**Chief Technology Officer \u2013 Jinn Labs (Nov\u202f2025\u202f\u2013\u202fPresent)**  \n- Built the company\u2019s AI\u2011vision platform from near\u2011zero to a production\u2011grade service handling **2,000+ concurrent RTSP streams** across edge (Jetson Nano/AGX Orin) and cloud.  \n- Designed a fault\u2011tolerant FFmpeg ingestion layer, a VLM\u2011based suspicious\u2011event detection engine, and a full evaluation framework that couples offline metrics with live ground\u2011truth validation (\u2248\u202f87\u202f% POS\u2011occupancy accuracy).  \n- Instituted an **evaluation\u2011driven release discipline**: every claim is a tracked metric, release\u2011over\u2011release improvements are published, and post\u2011mortems are blameless. This mirrors the governance I intend to bring to IIT\u2011ACB.  \n- Managed a **cross\u2011functional team of 35+** (research, infra, backend, frontend, product) \u2013 hiring, roadmap definition, architecture reviews, and day\u2011to\u2011day delivery.  \n\n**Senior Staff \u2013 Samsung Research, Noida (Sep\u202f2023\u202f\u2013\u202fNov\u202f2025)**  \n- Named inventor on **Patent Application\u202f202511076834** (\u201cGenerative AI\u2011based video codecs utilizing image\u2011to\u2011video generation\u201d) and contributed **\u2248\u202f75\u202f%** of the inventive work.  \n- Delivered the \u201cGenerative Image Dynamics\u201d breakthrough \u2013 looping\u2011video generation in **3\u202fseconds** versus the prior 17\u2011second state of the art \u2013 and took the solution to on\u2011device deployment through quantisation, pruning, and distillation.  \n- Led a team of **15 engineers** delivering ARCore\u2011integrated AI agents, on\u2011device visual assistants, and real\u2011time video codecs for Samsung products.  \n\n**Lead Engineer \u2013 Qualcomm (Mar\u202f2021\u202f\u2013\u202fAug\u202f2023)**  \n- Owned end\u2011to\u2011end AI\u2011ML IoT framework plugins (object detection, multi\u2011object tracking, trajectory prediction) that shipped to millions of wearables.  \n- Introduced a **dual\u2011processor power\u2011management architecture** that lifted smartwatch battery life by **~40",
+      "claims": [],
+      "overall_confidence": 1.0,
+      "refused_low_confidence": false,
+      "latency_ms": 28501.548051834106,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:08:48.943299Z"
+    },
+    {
+      "question_id": "q13",
+      "system_name": "baseline_rag",
+      "text": "I am a named inventor on Indian Patent Application No.\u202f2025\u202f1107\u202f6834, titled **\u201cGenerative\u202fAI\u2011based Video Codecs Utilizing Image\u2011to\u2011Video Generation.\u201d** The application was filed through Samsung Research, Noida and is assigned to Samsung\u202fElectronics\u202fCo.,\u202fLtd.\n\n### What the invention does\nTraditional video codecs compress a sequence of frames by exploiting spatial and temporal redundancy that is already present in the source video. My invention flips that paradigm: instead of compressing an existing video stream, we **generate the video on\u2011the\u2011fly from a compact latent representation produced by a generative\u2011AI model**. The key steps are:\n\n1. **Image\u2011to\u2011Video Generation Engine** \u2013 A diffusion\u2011based (or VAE\u2011GAN hybrid) model that takes a single high\u2011quality key\u2011frame (or a short set of key\u2011frames) together with motion\u2011conditioning tokens and synthesises a temporally coherent video sequence.  \n2. **Latent\u2011Space Codec** \u2013 The model\u2019s latent vector, together with a lightweight motion\u2011descriptor, is orders of magnitude smaller than the raw pixel data. This latent is then entropy\u2011coded using conventional arithmetic coding, yielding a **compression ratio that exceeds state\u2011of\u2011the\u2011art hybrid codecs (e.g., H.266/AV1) for many content classes** while preserving perceptual fidelity.  \n3. **Adaptive Quality Control** \u2013 A differentiable quality\u2011metric loop (based on perceptual similarity and task\u2011specific loss) dynamically adjusts the number of diffusion steps and quantisation granularity, allowing fine\u2011grained bitrate\u2011vs\u2011quality trade\u2011offs without re\u2011encoding the entire stream.  \n4. **Edge\u2011Cloud Partitioning** \u2013 The generation engine can be split between edge devices (running a quantised, LoRA\u2011adapted lightweight decoder) and the cloud (hosting the full\u2011scale generator). This enables real\u2011",
+      "claims": [],
+      "overall_confidence": 1.0,
+      "refused_low_confidence": false,
+      "latency_ms": 13576.579570770264,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:09:05.812533Z"
+    },
+    {
+      "question_id": "q14",
+      "system_name": "baseline_rag",
+      "text": "I have not founded or run a formal professional membership body such as CII, NASSCOM, FICCI or AIMA.\u202fMy leadership experience to date has been in academic\u2011industry bridges\u2014running unpaid guest\u2011lecture series, mentoring programmes, hackathon judging panels, and serving as a core member of the IIT (ISM) Dhanbad Alumni Association in Bengaluru.\u202fWhile I have led multiple student chapters and organized campus\u2011level festivals, these activities are distinct from building and managing a national\u2011level professional association, which I acknowledge as a genuine gap in my record.",
+      "claims": [],
+      "overall_confidence": 1.0,
+      "refused_low_confidence": false,
+      "latency_ms": 25971.502780914307,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:09:44.599271Z"
+    },
+    {
+      "question_id": "q15",
+      "system_name": "baseline_rag",
+      "text": "I am not yet fluent in Kannada. I am comfortable in English and Hindi, and I am actively working on building my Kannada proficiency as part of my commitment to relocate to Bengaluru and lead the IITACB Secretariat.",
+      "claims": [],
+      "overall_confidence": 1.0,
+      "refused_low_confidence": false,
+      "latency_ms": 9668.531894683838,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:09:55.413028Z"
+    },
+    {
+      "question_id": "q16",
+      "system_name": "baseline_rag",
+      "text": "I am fundamentally a production\u2011engineering leader.\u202fMy career has been built around taking cutting\u2011edge AI research\u2014such as the generative\u2011image\u2011dynamics patent I contributed\u202f75\u202f% to\u2014and turning it into reliable,\u202f24\u00d77\u202fsystems that serve real customers at Samsung Research, Qualcomm and now Jinn\u202fLabs.\u202fI design and own the architecture, cost model, release discipline and cross\u2011functional teams that deliver live video\u2011analytics, on\u2011device VLM assistants, and large\u2011scale inference pipelines.\u202fWhile I maintain a strong research background (M.Tech from IIT\u2011ISM, multiple patents, scientist\u2011level selections at ISRO, BARC, DRDO, etc.), my day\u2011to\u2011day impact is in building, scaling, and operating production\u2011grade AI solutions.",
+      "claims": [],
+      "overall_confidence": 1.0,
+      "refused_low_confidence": false,
+      "latency_ms": 26085.057735443115,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:10:28.633561Z"
+    },
+    {
+      "question_id": "q17",
+      "system_name": "baseline_rag",
+      "text": "No. I have never built or run a professional membership body such as CII, NASSCOM, FICCI, or AIMA. My leadership experience to date has been in technology organizations, in\u2011house research labs, and an alumni association (IIT\u202f(ISM) Dhanbad Alumni Association, Bengaluru core group). While I have spent six years mentoring, judging hackathons and delivering unpaid guest sessions across universities\u2014activities that give me deep exposure to the academia\u2011industry ecosystem\u2014these roles are not equivalent to operating a formal professional membership organization. I acknowledge this gap and am prepared to be tested on it while leveraging my track record of institution\u2011building, zero\u2011to\u2011one problem solving, and stakeholder alignment to develop IITACB into a true professional body.",
+      "claims": [],
+      "overall_confidence": 1.0,
+      "refused_low_confidence": false,
+      "latency_ms": 26042.45901107788,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:11:06.793910Z"
+    },
+    {
+      "question_id": "q18",
+      "system_name": "baseline_rag",
+      "text": "From the moment I wrote my first \u201cHello\u202fWorld\u201d page in 2016, I have been guided by a single question: **how can I turn code into impact at scale?**  That curiosity has carried me through a deliberate, step\u2011by\u2011step evolution\u2014from building web\u2011centric back\u2011ends to leading cutting\u2011edge generative\u2011AI research programs.\n\n---\n\n### 1.  Foundations in Full\u2011Stack Development (2016\u20112017)  \n**Scrum Technology** \u2013 As a junior developer I built client\u2011facing websites with Java, JavaScript, HTML and CSS, and introduced predictive\u2011caching to accelerate page loads.  This work taught me end\u2011to\u2011end product ownership: requirement gathering, architecture design, rapid prototyping, and performance tuning.  \n\n**Wheelseye Technology** \u2013 At Wheelseye I created REST APIs for real\u2011time truck tracking and dynamic routing.  The need to process streaming telemetry sparked my first interest in handling high\u2011velocity data streams\u2014an insight that would later become essential for video\u2011stream analytics.\n\n---\n\n### 2.  Expanding to Embedded & IoT Systems (2020\u20112023)  \n**Qualcomm** \u2013 Joining the AI\u2011ML IoT Framework team forced me to move from the browser to the edge.  I wrote C++/TensorFlow\u2011Lite plugins for object detection, tracking and trajectory prediction, integrating them with GStreamer pipelines.  Parallel work on the Wearables team gave me deep exposure to hardware\u2011software co\u2011design (HAL development, dual\u2011processor power management) and to the strict latency, power and memory budgets that define real\u2011world AI deployment.\n\nThese experiences taught me **how to squeeze intelligence out of constrained devices**, a skill that later underpinned my work on edge\u2011centric generative video codecs.\n\n---\n\n### 3.  First Foray into AI\u2011Driven Product Features (2021\u20112023)  \nWhile still at Qualcomm, I began applying machine\u2011learning techniques to sensor data (tilt detection, sleep\u2011alarm automation, cardiovascular monitoring).  By improving smartwatch battery life by ~40\u202f% through a secondary\u2011processor offload, I learned to **quantify AI impact in concrete business metrics**\u2014a habit that now drives my evaluation\u2011first mindset at every institution I lead.\n\n---\n\n### 4.  Scaling Impact in a Research\u2011Industrial Lab (2023\u20112025)  \n**Samsung Research, Noida (AR Core Team)** \u2013 Here I transitioned from \u201cAI engineer\u201d to \u201cAI researcher\u2011leader.\u201d  I built an on\u2011device visual assistant (",
+      "claims": [],
+      "overall_confidence": 1.0,
+      "refused_low_confidence": false,
+      "latency_ms": 29759.99426841736,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:11:46.820913Z"
+    },
+    {
+      "question_id": "q19",
+      "system_name": "baseline_rag",
+      "text": "The common thread that runs through my stints at Qualcomm, Samsung Research, and Jinn\u202fLabs is the **end\u2011to\u2011end creation of production\u2011grade AI/ML systems that turn cutting\u2011edge research into real\u2011world impact, while rigorously engineering for scale, cost\u2011efficiency and measurable outcomes**.\n\n* **Qualcomm** \u2013 I took emerging computer\u2011vision and sensor\u2011fusion algorithms from prototype to ship\u2011ready on wearables and IoT devices. By integrating TensorFlow\u202fLite, quantization, pruning and a dual\u2011processor architecture, I cut smartwatch battery consumption by ~40\u202f% and delivered on\u2011device inference that met strict power and latency budgets.\n\n* **Samsung Research** \u2013 I pushed generative\u2011AI and computer\u2011vision research into consumer\u2011grade products. I built the \u201cGenerative Image Dynamics\u201d pipeline that creates looping video from a single image 5\u00d7 faster than the prior art, and I engineered an on\u2011device NanoVLM visual assistant that replaces costly Gemini API calls. Throughout, I applied model\u2011compression techniques (LoRA, QLoRA, distillation) and a disciplined release\u2011metric framework to guarantee that every research claim translated into a quantifiable product improvement.\n\n* **Jinn\u202fLabs** \u2013 I scaled those same principles to a live\u2011retail intelligence platform that ingests 2,000+ concurrent RTSP streams, runs VLM\u2011based suspicious\u2011event detection, and dynamically partitions workloads between edge (Jetson) and cloud (TensorRT/TensorFlow). I instituted an evaluation\u2011driven release cadence, tracking every claim as a release metric, and continuously reduced inference cost through mixed\u2011precision, batching and model\u2011efficiency tricks.\n\nAcross all three organizations I have:\n\n1. **Identified a deep\u2011tech opportunity** (wearable power management, generative video codecs, real\u2011time video analytics).  \n2. **Bridged research and product** by translating novel algorithms into optimized, deployable code.  \n3. **Built the full stack** \u2013 from data pipelines and model training to edge\u2011cloud deployment, monitoring and continuous evaluation.  \n4. **Embedded cost\u2011discipline** via quantization, pruning, distillation and edge\u2011cloud partitioning to make the solution economically",
+      "claims": [],
+      "overall_confidence": 1.0,
+      "refused_low_confidence": false,
+      "latency_ms": 28652.591228485107,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:12:29.199123Z"
+    }
+  ],
+  "identityos_v1": [
+    {
+      "question_id": "q01",
+      "system_name": "identityos_v1",
+      "text": "At Jinn\u202fLabs I built a real\u2011time computer\u2011vision platform that handles the full multi\u2011camera video ingestion pipeline and then runs AI inference for live retail\u2011intelligence products\u3010resume:002\u3011.  The system streams in more than\u202f2,000 concurrent RTSP camera feeds and performs VLM\u2011based suspicious\u2011event detection on them\u3010resume:059\u3011.",
+      "claims": [
+        {
+          "text": "At Jinn\u202fLabs I built a real\u2011time computer\u2011vision platform that handles the full multi\u2011camera video ingestion pipeline and then runs AI inference for live retail\u2011intelligence products\u3010resume:002\u3011.",
+          "evidence_refs": [
+            "resume:002"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "The system streams in more than\u202f2,000 concurrent RTSP camera feeds and performs VLM\u2011based suspicious\u2011event detection on them\u3010resume:059\u3011.",
+          "evidence_refs": [
+            "resume:059"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        }
+      ],
+      "overall_confidence": 0.5,
+      "refused_low_confidence": false,
+      "latency_ms": 6000.047922134399,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:03:54.990670Z"
+    },
+    {
+      "question_id": "q02",
+      "system_name": "identityos_v1",
+      "text": "Your M.Tech in Artificial Intelligence was awarded by **IIT (ISM) Dhanbad**\u202f[resume:039], and your thesis research focused on **medical image processing using Cycle\u202fGAN**\u202f[resume:039].",
+      "claims": [
+        {
+          "text": "Your M.Tech in Artificial Intelligence was awarded by **IIT (ISM) Dhanbad**\u202f[resume:039], and your thesis research focused on **medical image processing using Cycle\u202fGAN**\u202f[resume:039].",
+          "evidence_refs": [
+            "resume:039",
+            "resume:039"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        }
+      ],
+      "overall_confidence": 0.99,
+      "refused_low_confidence": false,
+      "latency_ms": 460.88528633117676,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:04:23.578395Z"
+    },
+    {
+      "question_id": "q03",
+      "system_name": "identityos_v1",
+      "text": "The dual\u2011processor power\u2011management architecture I designed for Qualcomm smartwatches boosted the device\u2019s battery backup by roughly\u202f40\u202fpercent\u202f[resume:061][resume:022].",
+      "claims": [
+        {
+          "text": "The dual\u2011processor power\u2011management architecture I designed for Qualcomm smartwatches boosted the device\u2019s battery backup by roughly\u202f40\u202fpercent\u202f[resume:061][resume:022].",
+          "evidence_refs": [
+            "resume:061",
+            "resume:022"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        }
+      ],
+      "overall_confidence": 0.99,
+      "refused_low_confidence": false,
+      "latency_ms": 481.57405853271484,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:04:35.921776Z"
+    },
+    {
+      "question_id": "q04",
+      "system_name": "identityos_v1",
+      "text": "The patent is filed as Application No.\u202f202511076834\u202f[ dossier_excerpts:001 ] and it is assigned to Samsung Electronics\u202fCo.,\u202fLtd.\u202f[ dossier_excerpts:001 ].",
+      "claims": [
+        {
+          "text": "The patent is filed as Application No.",
+          "evidence_refs": [
+            "dossier_excerpts:001"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "202511076834\u202f[ dossier_excerpts:001 ] and it is assigned to Samsung Electronics\u202fCo.,\u202fLtd.",
+          "evidence_refs": [
+            "dossier_excerpts:001"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "[ dossier_excerpts:001 ].",
+          "evidence_refs": [
+            "dossier_excerpts:011"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        }
+      ],
+      "overall_confidence": 0.5,
+      "refused_low_confidence": false,
+      "latency_ms": 4634.653568267822,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:04:50.060793Z"
+    },
+    {
+      "question_id": "q05",
+      "system_name": "identityos_v1",
+      "text": "During my remote internship at Siemens\u202fHealthineers (July\u202f2019\u202f\u2013\u202fFeb\u202f2020) I worked on a machine\u2011learning\u2011driven health\u2011analytics project that used eye\u2011image data to predict a person\u2019s cholesterol level\u202f[resume:062]. The effort combined image\u2011processing pipelines with predictive modeling to turn a simple, non\u2011invasive eye scan into a clinically useful biomarker.  \n\nThe work proved notable for two reasons. First, the solution was recognized at Siemens\u202fHealthineers\u2019 internal hackathon, IMLEAP, where it earned a 2nd\u2011place prize\u202f[resume:051]. That award highlighted the novelty and practical impact of turning raw eye imagery into a reliable cholesterol\u2011prediction tool. Second, the project aligned with my strong preference for shipping working systems rather than pursuing research in isolation, demonstrating a concrete, production\u2011ready prototype that could be integrated into real\u2011world health\u2011care workflows\u202f[belief:002].",
+      "claims": [
+        {
+          "text": "During my remote internship at Siemens\u202fHealthineers (July\u202f2019\u202f\u2013\u202fFeb\u202f2020) I worked on a machine\u2011learning\u2011driven health\u2011analytics project that used eye\u2011image data to predict a person\u2019s cholesterol level\u202f[resume:062].",
+          "evidence_refs": [
+            "resume:062"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "The effort combined image\u2011processing pipelines with predictive modeling to turn a simple, non\u2011invasive eye scan into a clinically useful biomarker.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "The work proved notable for two reasons.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "First, the solution was recognized at Siemens\u202fHealthineers\u2019 internal hackathon, IMLEAP, where it earned a 2nd\u2011place prize\u202f[resume:051].",
+          "evidence_refs": [
+            "resume:051"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "That award highlighted the novelty and practical impact of turning raw eye imagery into a reliable cholesterol\u2011prediction tool.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Second, the project aligned with my strong preference for shipping working systems rather than pursuing research in isolation, demonstrating a concrete, production\u2011ready prototype that could be integrated into real\u2011world health\u2011care workflows\u202f[belief:002].",
+          "evidence_refs": [
+            "belief:002"
+          ],
+          "claim_type": "strong_inference",
+          "confidence": 0.82
+        }
+      ],
+      "overall_confidence": 0.4666666666666666,
+      "refused_low_confidence": false,
+      "latency_ms": 987.576961517334,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:05:24.846258Z"
+    },
+    {
+      "question_id": "q06",
+      "system_name": "identityos_v1",
+      "text": "I don't have grounded evidence in the Digital Self to answer this confidently or consistently with prior answers. In a live deployment this would pause and ask the user directly rather than guess (see docs/architecture.md - Uncertainty policy). Closest evidence found: [dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+      "claims": [
+        {
+          "text": "One of the most instructive setbacks I\u2019ve faced was realizing that, unlike my recent chief\u2011level roles in technology firms, I did not inherit a ready\u2011made network for government and policy work at the secretariat level\u202f\u2014\u202fthat capability was something I had to build from scratch.",
+          "evidence_refs": [
+            "dossier_excerpts:008"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "When I first tried to engage senior policymakers, I quickly saw that my lack of inherited relationships meant my initial outreach fell short of the impact I expected.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "That experience taught me how essential it is to invest time early in developing those connections and to understand the distinct dynamics of secretariat\u2011level relationship\u2011building, rather than assuming skills from the tech sector will automatically translate.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "[dossier_excerpts:008]",
+          "evidence_refs": [
+            "dossier_excerpts:008"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        }
+      ],
+      "overall_confidence": 0.3725,
+      "refused_low_confidence": true,
+      "latency_ms": 6197.721242904663,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:05:45.840391Z"
+    },
+    {
+      "question_id": "q07",
+      "system_name": "identityos_v1",
+      "text": "My research is driven first and foremost by a desire to turn scientific advances into **working systems that can be shipped and operated in real\u2011world production environments** rather than pursuing research for its own sake\u202f[belief:002].\u202fI see the greatest impact when research is **bridged to industry and the public sector**, aligning scientists, infrastructure engineers, product owners, enterprise customers and executive sponsors around a single, executable roadmap\u202f[dossier_narrative:005].  \n\nThis motivation is reinforced by my **vision for the IITACB CEO role**, where I intend to make IIT research the default gateway for India\u2019s national missions\u2014IndiaAI, the National Quantum Mission, Semicon India, and others\u2014by leveraging both my academic credentials (M.Tech from IIT and guest\u2011faculty work) and extensive industrial leadership (Samsung Research, Qualcomm, etc.)\u202f[dossier_narrative:009][dossier_narrative:002].  \n\nFinally, my fluency in the public\u2011sector research ecosystem\u2014gained through multiple scientist selections at ISRO, BARC, DRDO, NIELIT, BDL and the Cabinet Secretariat\u2014provides the institutional context that fuels my commitment to **deliver research outcomes that directly support national priorities and live enterprise sites**\u202f[dossier_excerpts:005].  \n\nIn short, I am motivated by **translating research into production\u2011ready",
+      "claims": [
+        {
+          "text": "My research is driven first and foremost by a desire to turn scientific advances into **working systems that can be shipped and operated in real\u2011world production environments** rather than pursuing research for its own sake\u202f[belief:002].",
+          "evidence_refs": [
+            "belief:002"
+          ],
+          "claim_type": "strong_inference",
+          "confidence": 0.82
+        },
+        {
+          "text": "I see the greatest impact when research is **bridged to industry and the public sector**, aligning scientists, infrastructure engineers, product owners, enterprise customers and executive sponsors around a single, executable roadmap\u202f[dossier_narrative:005].",
+          "evidence_refs": [
+            "dossier_narrative:005"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "This motivation is reinforced by my **vision for the IITACB CEO role**, where I intend to make IIT research the default gateway for India\u2019s national missions\u2014IndiaAI, the National Quantum Mission, Semicon India, and others\u2014by leveraging both my academic credentials (M.Tech from IIT and guest\u2011faculty work) and extensive industrial leadership (Samsung Research, Qualcomm, etc.)\u202f[dossier_narrative:009][dossier_narrative:002].",
+          "evidence_refs": [
+            "dossier_narrative:009",
+            "dossier_narrative:002"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "Finally, my fluency in the public\u2011sector research ecosystem\u2014gained through multiple scientist selections at ISRO, BARC, DRDO, NIELIT, BDL and the Cabinet Secretariat\u2014provides the institutional context that fuels my commitment to **deliver research outcomes that directly support national priorities and live enterprise sites**\u202f[dossier_excerpts:005].",
+          "evidence_refs": [
+            "dossier_excerpts:005"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "In short, I am motivated by **translating research into production\u2011ready",
+          "evidence_refs": [
+            "belief:002"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        }
+      ],
+      "overall_confidence": 0.858,
+      "refused_low_confidence": false,
+      "latency_ms": 8535.042762756348,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:06:26.132957Z"
+    },
+    {
+      "question_id": "q08",
+      "system_name": "identityos_v1",
+      "text": "We should be chosen because we are completely transparent about the one genuine gap in our background \u2013 we do **not** have a record of building or running a professional membership body such as CII, NASSCOM, FICCI or AIMA, and we do not try to present adjacent activities (student\u2011chapter leadership or alumni\u2011association membership) as equivalent experience\u202f[ dossier_excerpts:009 ][ dossier_narrative:019 ]. By respecting the committee\u2019s explicit guidance that such adjacent experience should not be treated as a substitute, we demonstrate honesty and an understanding of the true criteria for the role.",
+      "claims": [
+        {
+          "text": "We should be chosen because we are completely transparent about the one genuine gap in our background \u2013 we do **not** have a record of building or running a professional membership body such as CII, NASSCOM, FICCI or AIMA, and we do not try to present adjacent activities (student\u2011chapter leadership or alumni\u2011association membership) as equivalent experience\u202f[ dossier_excerpts:009 ][ dossier_narrative:019 ].",
+          "evidence_refs": [
+            "dossier_narrative:019"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "By respecting the committee\u2019s explicit guidance that such adjacent experience should not be treated as a substitute, we demonstrate honesty and an understanding of the true criteria for the role.",
+          "evidence_refs": [
+            "dossier_narrative:019"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        }
+      ],
+      "overall_confidence": 0.5,
+      "refused_low_confidence": false,
+      "latency_ms": 1237.6415729522705,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:07:01.585544Z"
+    },
+    {
+      "question_id": "q09",
+      "system_name": "identityos_v1",
+      "text": "In five years I envision myself still operating at the\u202fstrategic\u202fand\u202fexecutive\u202flevel of technology delivery, building on a decade of hands\u2011on leadership across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn\u202fLabs\u202f\u2014\u202fthe last five years having been spent in lead, staff and chief\u2011level roles with 24\u00d77 production responsibility for live customer sites\u202f[dossier_narrative:001].  \n\nI plan to deepen the governance and architecture frameworks I first instituted at Jinn\u202fLabs, where I\u202f\u201cdefined technical strategy, architecture and organisation\u2011wide evaluation frameworks\u2026building governance structures where none existed\u201d\u202f[dossier_narrative:004], and to scale those practices across even larger, multi\u2011business portfolios.  \n\nA core element of that future will be expanding the unpaid academia\u2011industry bridge I have maintained for six years\u2014\u202fthrough guest lectures, mentoring programmes and hackathon judging\u202f[dossier_excerpts:004]\u202f\u2014\u202fby formalising mentorship pipelines that connect research scientists, infrastructure engineers, product owners, enterprise customers and executive sponsors around a single roadmap\u202f[dossier_narrative:005].  \n\nBecause I am accustomed to translating deep technology for non\u2011technical boards and turning executive intent into engineering commitments\u202f[dossier_narrative:007], I see myself in five years serving as a senior technology officer or chief architect who routinely guides board\u2011level decision\u2011making while championing cross\u2011functional collaboration.  \n\nUltimately, my five\u2011year outlook is to amplify the impact of the governance, mentorship and stakeholder\u2011alignment structures I have built, ensuring that both the organisations I serve and the next generation of technologists benefit from a coherent, production\u2011ready roadmap that spans research, product development and real\u2011world deployment.",
+      "claims": [
+        {
+          "text": "In five years I envision myself still operating at the\u202fstrategic\u202fand\u202fexecutive\u202flevel of technology delivery, building on a decade of hands\u2011on leadership across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn\u202fLabs\u202f\u2014\u202fthe last five years having been spent in lead, staff and chief\u2011level roles with 24\u00d77 production responsibility for live customer sites\u202f[dossier_narrative:001].",
+          "evidence_refs": [
+            "dossier_narrative:001"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "I plan to deepen the governance and architecture frameworks I first instituted at Jinn\u202fLabs, where I\u202f\u201cdefined technical strategy, architecture and organisation\u2011wide evaluation frameworks\u2026building governance structures where none existed\u201d\u202f[dossier_narrative:004], and to scale those practices across even larger, multi\u2011business portfolios.",
+          "evidence_refs": [
+            "dossier_narrative:004"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "A core element of that future will be expanding the unpaid academia\u2011industry bridge I have maintained for six years\u2014\u202fthrough guest lectures, mentoring programmes and hackathon judging\u202f[dossier_excerpts:004]\u202f\u2014\u202fby formalising mentorship pipelines that connect research scientists, infrastructure engineers, product owners, enterprise customers and executive sponsors around a single roadmap\u202f[dossier_narrative:005].",
+          "evidence_refs": [
+            "dossier_excerpts:004",
+            "dossier_narrative:005"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "Because I am accustomed to translating deep technology for non\u2011technical boards and turning executive intent into engineering commitments\u202f[dossier_narrative:007], I see myself in five years serving as a senior technology officer or chief architect who routinely guides board\u2011level decision\u2011making while championing cross\u2011functional collaboration.",
+          "evidence_refs": [
+            "dossier_narrative:007"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "Ultimately, my five\u2011year outlook is to amplify the impact of the governance, mentorship and stakeholder\u2011alignment structures I have built, ensuring that both the organisations I serve and the next generation of technologists benefit from a coherent, production\u2011ready roadmap that spans research, product development and real\u2011world deployment.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.792,
+      "refused_low_confidence": false,
+      "latency_ms": 8396.977663040161,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:07:22.196299Z"
+    },
+    {
+      "question_id": "q10",
+      "system_name": "identityos_v1",
+      "text": "I don't have grounded evidence in the Digital Self to answer this confidently or consistently with prior answers. In a live deployment this would pause and ask the user directly rather than guess (see docs/architecture.md - Uncertainty policy). Closest evidence found: [dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
+      "claims": [
+        {
+          "text": "One of the turning points in my career was choosing to take full ownership of the cost side of our AI products and to make a hard, unit\u2011economics decision about how we would deliver them\u202f\u2014\u202fwhether on the edge or in the cloud.",
+          "evidence_refs": [
+            "dossier_narrative:006"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "By driving order\u2011of\u2011magnitude cost reductions through quantization, pruning, distillation and parameter\u2011efficient adaptation, and by defining the edge\u2011versus\u2011cloud partitioning strategy, I helped reshape the business model around efficiency and scalability\u202f[ dossier_narrative:006 ].",
+          "evidence_refs": [
+            "dossier_narrative:006"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "That focus on cost\u2011driven product architecture coincided with my move into senior leadership at the chief level, a role I have held only in the recent part of a ten\u2011year career in technology organizations rather than in membership\u2011based institutions\u202f[ dossier_excerpts:008 ].",
+          "evidence_refs": [
+            "dossier_excerpts:008"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "The decision to prioritize rigorous cost engineering and strategic deployment choices not only delivered immediate financial benefits but also propelled me into executive responsibility, fundamentally changing the direction of my professional path.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.375,
+      "refused_low_confidence": true,
+      "latency_ms": 1049.299955368042,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:07:56.175410Z"
+    },
+    {
+      "question_id": "q11",
+      "system_name": "identityos_v1",
+      "text": "I\u2019m sorry, but I don\u2019t have the evidence needed to answer that question.",
+      "claims": [
+        {
+          "text": "I\u2019m sorry, but I don\u2019t have the evidence needed to answer that question.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.0,
+      "refused_low_confidence": false,
+      "latency_ms": 4645.271062850952,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:08:16.935658Z"
+    },
+    {
+      "question_id": "q12",
+      "system_name": "identityos_v1",
+      "text": "My leadership background spans a decade of hands\u2011on, technology\u2011focused roles (2016\u20112026) across a range of firms\u2014including Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn\u202fLabs\u202f[\u200bdossier_narrative:001\u200b].  \n\nDuring the most recent five years I have held lead, staff and chief positions, where I was directly accountable for 24\u202f\u00d7\u202f7 production operations at live customer sites, not merely in theory but with full operational responsibility for continuous service delivery\u202f[\u200bdossier_narrative:001\u200b].  \n\nSenior\u2011level, chief\u2011title experience, however, has been attained only in the latter part of this ten\u2011year career and has been confined to technology organisations rather than professional membership bodies\u202f[\u200bdossier_excerpts:008\u200b]. Consequently, my exposure to full institutional profit\u2011and\u2011loss management at the scale of IITACB remains a step up from the cost\u2011side ownership I exercised at Jinn\u202fLabs\u202f[\u200bdossier_narrative:012\u200b].  \n\nMy technical leadership toolkit includes system design, hardware abstraction, Linux and shell scripting, as well as full\u2011stack development skills (JavaScript, HTML, CSS) that underpin the teams I have led\u202f[\u200bresume:046\u200b].",
+      "claims": [
+        {
+          "text": "My leadership background spans a decade of hands\u2011on, technology\u2011focused roles (2016\u20112026) across a range of firms\u2014including Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn\u202fLabs\u202f[\u200bdossier_narrative:001\u200b].",
+          "evidence_refs": [
+            "dossier_narrative:001"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "During the most recent five years I have held lead, staff and chief positions, where I was directly accountable for 24\u202f\u00d7\u202f7 production operations at live customer sites, not merely in theory but with full operational responsibility for continuous service delivery\u202f[\u200bdossier_narrative:001\u200b].",
+          "evidence_refs": [
+            "dossier_narrative:001"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "Senior\u2011level, chief\u2011title experience, however, has been attained only in the latter part of this ten\u2011year career and has been confined to technology organisations rather than professional membership bodies\u202f[\u200bdossier_excerpts:008\u200b].",
+          "evidence_refs": [
+            "dossier_excerpts:008"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "Consequently, my exposure to full institutional profit\u2011and\u2011loss management at the scale of IITACB remains a step up from the cost\u2011side ownership I exercised at Jinn\u202fLabs\u202f[\u200bdossier_narrative:012\u200b].",
+          "evidence_refs": [
+            "dossier_narrative:012"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "My technical leadership toolkit includes system design, hardware abstraction, Linux and shell scripting, as well as full\u2011stack development skills (JavaScript, HTML, CSS) that underpin the teams I have led\u202f[\u200bresume:046\u200b].",
+          "evidence_refs": [
+            "resume:046"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        }
+      ],
+      "overall_confidence": 0.5,
+      "refused_low_confidence": false,
+      "latency_ms": 1913.025140762329,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:08:50.857552Z"
+    },
+    {
+      "question_id": "q13",
+      "system_name": "identityos_v1",
+      "text": "I don't have grounded evidence in the Digital Self to answer this confidently or consistently with prior answers. In a live deployment this would pause and ask the user directly rather than guess (see docs/architecture.md - Uncertainty policy). Closest evidence found: [dossier_excerpts:001] (verified fact) Named inventor, patent Application No. 202511076834, \"Generative AI based video codecs utilizing image-to-video generation\", filed through Samsung Research Noida and assigned to Samsung Electronics Co., Ltd.",
+      "claims": [
+        {
+          "text": "The patent I hold is **Application No.",
+          "evidence_refs": [
+            "dossier_excerpts:001"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "202511076834**, titled **\u201cGenerative AI based video codecs utilizing image\u2011to\u2011video generation.\u201d** It was filed through Samsung Research Noida and is assigned to Samsung Electronics Co.,\u202fLtd.",
+          "evidence_refs": [
+            "dossier_excerpts:001"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "[\u202fdossier_excerpts:001\u202f].",
+          "evidence_refs": [
+            "dossier_excerpts:011"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "According to the inventorship record I have provided, I contributed **75\u202f% of the inventive work** on this filing, with the remaining 25\u202f% attributed to a co\u2011inventor whose name is not listed in my materials.",
+          "evidence_refs": [
+            "dossier_excerpts:002"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "[\u202fdossier_excerpts:002\u202f]\n\nThe invention focuses on a video\u2011codec architecture that leverages generative\u2011AI techniques to create video streams directly from still images, enabling a new class of compression and reconstruction methods that differ from conventional codecs.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "My principal role involved conceiving the core generative\u2011AI methodology, defining how image\u2011to\u2011video generation can be integrated into the codec pipeline, and drafting the key technical claims that capture this deep\u2011tech contribution.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "[\u202fdossier_excerpts:001; dossier_excerpts:002\u202f]",
+          "evidence_refs": [
+            "dossier_excerpts:011"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        }
+      ],
+      "overall_confidence": 0.35714285714285715,
+      "refused_low_confidence": true,
+      "latency_ms": 8358.272552490234,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:09:14.172023Z"
+    },
+    {
+      "question_id": "q14",
+      "system_name": "identityos_v1",
+      "text": "I have not founded or run any professional body or industry association such as CII, NASSCOM, FICCI or AIMA.\u202fMy dossier explicitly notes that I have no prior record of building or running a professional membership body of that type\u202f[ dossier_excerpts:006 ]. While I am a core member of the IIT (ISM)\u202fDhanbad Alumni Association\u2019s Bengaluru group\u202f[ dossier_excerpts:003 ], that involvement does not constitute founding or leading a professional industry association.",
+      "claims": [
+        {
+          "text": "I have not founded or run any professional body or industry association such as CII, NASSCOM, FICCI or AIMA.",
+          "evidence_refs": [
+            "dossier_narrative:019"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "My dossier explicitly notes that I have no prior record of building or running a professional membership body of that type\u202f[ dossier_excerpts:006 ].",
+          "evidence_refs": [
+            "dossier_narrative:019"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "While I am a core member of the IIT (ISM)\u202fDhanbad Alumni Association\u2019s Bengaluru group\u202f[ dossier_excerpts:003 ], that involvement does not constitute founding or leading a professional industry association.",
+          "evidence_refs": [
+            "dossier_excerpts:003"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        }
+      ],
+      "overall_confidence": 0.5,
+      "refused_low_confidence": false,
+      "latency_ms": 808.6585998535156,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:09:45.409092Z"
+    },
+    {
+      "question_id": "q15",
+      "system_name": "identityos_v1",
+      "text": "I am not yet fluent in Kannada\u202f\u2014\u202fmy dossier notes that while I am fluent in English and Hindi, I have not yet achieved fluency in Kannada\u3010dossier_excerpts:007\u3011. I am, however, committing to learn the language as part of my relocation to Bengaluru for the IITACB CEO role\u3010dossier_excerpts:010\u3011.",
+      "claims": [
+        {
+          "text": "I am not yet fluent in Kannada\u202f\u2014\u202fmy dossier notes that while I am fluent in English and Hindi, I have not yet achieved fluency in Kannada\u3010dossier_excerpts:007\u3011.",
+          "evidence_refs": [
+            "dossier_excerpts:007"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "I am, however, committing to learn the language as part of my relocation to Bengaluru for the IITACB CEO role\u3010dossier_excerpts:010\u3011.",
+          "evidence_refs": [
+            "dossier_excerpts:010"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        }
+      ],
+      "overall_confidence": 0.5,
+      "refused_low_confidence": false,
+      "latency_ms": 4498.8157749176025,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:09:59.912923Z"
+    },
+    {
+      "question_id": "q16",
+      "system_name": "identityos_v1",
+      "text": "I don't have grounded evidence in the Digital Self to answer this confidently or consistently with prior answers. In a live deployment this would pause and ask the user directly rather than guess (see docs/architecture.md - Uncertainty policy). Closest evidence found: [dossier_excerpts:005] (verified fact) Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.",
+      "claims": [
+        {
+          "text": "I am primarily a production\u2011engineering leader.",
+          "evidence_refs": [
+            "belief:003"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "Over the past decade I have held lead, staff and chief positions at companies such as Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn\u202fLabs, where my responsibility has been \u201c24\u00d77 production accountability across live customer sites\u201d\u202f[\u202fdossier_narrative:001\u202f].",
+          "evidence_refs": [
+            "dossier_narrative:001"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "I currently head a 35\u2011plus\u2011person cross\u2011functional team (CV/ML research, edge and cloud infra, backend, frontend) as Head of Engineering and Innovation, owning hiring, roadmap, architecture review and delivery\u202f[\u202fresume:010\u202f].",
+          "evidence_refs": [
+            "resume:010"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "My personal belief system also emphasizes \u201cshipping working systems into production over research for its own sake\u201d\u202f[\u202fbelief:002\u202f].",
+          "evidence_refs": [
+            "belief:002"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "While I also have academic credentials (IIT M.Tech, guest\u2011faculty roles) and experience in the public\u2011sector research system\u202f[\u202fdossier_excerpts:005; dossier_narrative:002\u202f], the bulk of my career focus and impact has been on building, delivering and operating production systems rather than conducting pure research.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        }
+      ],
+      "overall_confidence": 0.4,
+      "refused_low_confidence": true,
+      "latency_ms": 8490.58198928833,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:10:37.125399Z"
+    },
+    {
+      "question_id": "q17",
+      "system_name": "identityos_v1",
+      "text": "I don't have grounded evidence in the Digital Self to answer this confidently or consistently with prior answers. In a live deployment this would pause and ask the user directly rather than guess (see docs/architecture.md - Uncertainty policy). Closest evidence found: [dossier_excerpts:009] (verified fact) States that the IITACB Managing Committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to a record of building or running a professional membership body.",
+      "claims": [
+        {
+          "text": "No.",
+          "evidence_refs": [],
+          "claim_type": "unsupported",
+          "confidence": 0.0
+        },
+        {
+          "text": "Siddhartha\u2019s dossier explicitly notes that he has **no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA**\u3010dossier_excerpts:006\u3011, and that his senior\u2011leadership experience has been in technology organisations rather than membership institutions\u3010dossier_excerpts:008\u3011.",
+          "evidence_refs": [
+            "dossier_excerpts:008"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "The managing committee has been cautioned not to treat his adjacent experience (e.g., alumni\u2011association or student\u2011chapter roles) as equivalent to the required record\u3010dossier_excerpts:009\u3011\u3010dossier_narrative:019\u3011.",
+          "evidence_refs": [
+            "dossier_excerpts:009"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "While he personally believes he is an experienced builder of institutions\u3010belief:003\u3011, the verified facts indicate a genuine gap in professional\u2011membership\u2011body experience.",
+          "evidence_refs": [
+            "dossier_narrative:019"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        }
+      ],
+      "overall_confidence": 0.375,
+      "refused_low_confidence": true,
+      "latency_ms": 6834.672451019287,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:11:13.629769Z"
+    },
+    {
+      "question_id": "q18",
+      "system_name": "identityos_v1",
+      "text": "",
+      "claims": [],
+      "overall_confidence": 0.0,
+      "refused_low_confidence": false,
+      "latency_ms": 8493.345260620117,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:11:55.315355Z"
+    },
+    {
+      "question_id": "q19",
+      "system_name": "identityos_v1",
+      "text": "The through\u2011line of Siddhartha\u2019s work at Qualcomm, Samsung Research and Jinn\u202fLabs is the same relentless focus on turning advanced technology into reliable, production\u2011grade systems.  Across those roles he has been accountable for 24\u202f\u00d7\u202f7 live\u2011customer operations and has built the governance, architecture and evaluation machinery that make that possible\u202f[dossier_narrative:001].  At Samsung Research he not only invented a generative\u2011AI video\u2011codec (patent\u202f202511076834) but also moved it toward real\u2011world deployment\u202f[dossier_excerpts:001].  At Jinn\u202fLabs he formalised the process by \u201creplacing subjective judgement with eval\u2011driven release discipline, tracking every claim as a metric release over release,\u201d a discipline he says he would bring to any institution he leads\u202f[dossier_excerpts:013].  This operational, shipping\u2011first mindset is explicitly reflected in his stated values: he prioritises delivering working systems into production over research for its own sake\u202f[belief:002].  Thus, whether at Qualcomm, Samsung Research or Jinn\u202fLabs, the common thread is building and governing technology that can be shipped and run continuously in production.",
+      "claims": [
+        {
+          "text": "The through\u2011line of Siddhartha\u2019s work at Qualcomm, Samsung Research and Jinn\u202fLabs is the same relentless focus on turning advanced technology into reliable, production\u2011grade systems.",
+          "evidence_refs": [
+            "dossier_narrative:001"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "Across those roles he has been accountable for 24\u202f\u00d7\u202f7 live\u2011customer operations and has built the governance, architecture and evaluation machinery that make that possible\u202f[dossier_narrative:001].",
+          "evidence_refs": [
+            "dossier_narrative:001"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "At Samsung Research he not only invented a generative\u2011AI video\u2011codec (patent\u202f202511076834) but also moved it toward real\u2011world deployment\u202f[dossier_excerpts:001].",
+          "evidence_refs": [
+            "dossier_excerpts:001"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "At Jinn\u202fLabs he formalised the process by \u201creplacing subjective judgement with eval\u2011driven release discipline, tracking every claim as a metric release over release,\u201d a discipline he says he would bring to any institution he leads\u202f[dossier_excerpts:013].",
+          "evidence_refs": [
+            "dossier_excerpts:013"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "This operational, shipping\u2011first mindset is explicitly reflected in his stated values: he prioritises delivering working systems into production over research for its own sake\u202f[belief:002].",
+          "evidence_refs": [
+            "belief:002"
+          ],
+          "claim_type": "strong_inference",
+          "confidence": 0.82
+        },
+        {
+          "text": "Thus, whether at Qualcomm, Samsung Research or Jinn\u202fLabs, the common thread is building and governing technology that can be shipped and run continuously in production.",
+          "evidence_refs": [
+            "dossier_narrative:001"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        }
+      ],
+      "overall_confidence": 0.7983333333333333,
+      "refused_low_confidence": false,
+      "latency_ms": 8511.1985206604,
+      "provider": "groq",
+      "created_at": "2026-08-30T11:12:37.711463Z"
+    }
+  ]
+}

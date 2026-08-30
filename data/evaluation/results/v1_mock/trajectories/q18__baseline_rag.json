@@ -3,7 +3,7 @@
   "system_name": "baseline_rag",
   "steps": [
     {
-      "timestamp": "2026-08-30T09:54:08.441201Z",
+      "timestamp": "2026-08-30T11:29:51.592537Z",
       "stage": "retrieve",
       "input_summary": "Trace how your career moved from full-stack web development to generative AI research leadership.",
       "action": "dump the entire fact store as unstructured text (no ranking, no ids)",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T09:54:08.442098Z",
+      "timestamp": "2026-08-30T11:29:51.593447Z",
       "stage": "generate",
       "input_summary": "Trace how your career moved from full-stack web development to generative AI research leadership.",
       "action": "call provider with the full unstructured context dump",

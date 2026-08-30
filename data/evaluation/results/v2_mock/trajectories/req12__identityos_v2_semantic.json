@@ -3,7 +3,7 @@
   "system_name": "identityos_v2_semantic",
   "steps": [
     {
-      "timestamp": "2026-08-30T09:54:08.902068Z",
+      "timestamp": "2026-08-30T11:29:52.060346Z",
       "stage": "retrieve",
       "input_summary": "Location — Bengaluru, India (domestic travel only); primarily external-facing role",
       "action": "embedding-similarity retrieval (hash): top 1 facts, 0 beliefs",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T09:54:08.902110Z",
+      "timestamp": "2026-08-30T11:29:52.060396Z",
       "stage": "generate",
       "input_summary": "Location — Bengaluru, India (domestic travel only); primarily external-facing role",
       "action": "call provider with cited, confidence-annotated context",
@@ -23,7 +23,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T09:54:08.902193Z",
+      "timestamp": "2026-08-30T11:29:52.060528Z",
       "stage": "verify",
       "input_summary": "[dossier_narrative:013] (verified fact) Confirmed relocation to Bengaluru on appointment, accepting the IITACB CEO role as primarily external-facing with sustained domestic travel to the 23 IIT campuses, Delhi, and industry forums nationally. States that being physically present in Bengaluru is regarded as non-negotiable for this job.",
       "action": "per-sentence grounding check (same verifier as lexical identityos_v2)",
@@ -33,7 +33,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T09:54:08.902197Z",
+      "timestamp": "2026-08-30T11:29:52.060536Z",
       "stage": "bucket",
       "input_summary": "[dossier_narrative:013] (verified fact) Confirmed relocation to Bengaluru on appointment, accepting the IITACB CEO role as primarily external-facing with sustained domestic travel to the 23 IIT campuses, Delhi, and industry forums nationally. States that being physically present in Bengaluru is regarded as non-negotiable for this job.",
       "action": "derive fit bucket from coverage+confidence+polarity (same bucketing.py as lexical)",

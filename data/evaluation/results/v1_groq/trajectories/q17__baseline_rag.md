@@ -1,0 +1,13 @@
+### Trajectory — baseline_rag — q17
+
+**11:10:40 · retrieve**
+- input: Do you have experience building or running a professional membership organization?
+- action: dump the entire fact store as unstructured text (no ranking, no ids)
+- observation: 96 facts included, no relevance filtering
+- reasoning: Baseline 2 has retrieval but no structure and no grounding check.
+
+**11:11:06 · generate**
+- input: Do you have experience building or running a professional membership organization?
+- action: call provider with the full unstructured context dump
+- observation: No. I have never built or run a professional membership body such as CII, NASSCOM, FICCI, or AIMA. My leadership experience to date has been in technology organizations, in‑house research labs, and an alumni association (IIT (ISM) Dhanbad Alumni Association, Bengaluru core group). While I have spent six years mentoring, judging hackathons and delivering unpaid guest sessions across universities—activities that give me deep exposure to the academia‑industry ecosystem—these roles are not equivalent to operating a formal professional membership organization. I acknowledge this gap and am prepared to be tested on it while leveraging my track record of institution‑building, zero‑to‑one problem solving, and stakeholder alignment to develop IITACB into a true professional body.
+- decision: answered_unverified

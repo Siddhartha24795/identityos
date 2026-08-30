@@ -265,3 +265,35 @@ because the demo the security spec itself demanded forced a fixture that
 combined legitimate fields with an attack on the same page, and because
 the practice of reading the actual trajectory output before trusting a
 result stayed in place for a security feature, not just an accuracy one.
+
+---
+
+# v3.3 — the first real-model run, a free Groq provider, and a shared citation-parsing bug
+
+Every "re-run with a real provider" line in this project's docs, since
+v1, was a deferred next step. `PROVIDER=groq` (free, no credit card,
+`openai/gpt-oss-120b` via Groq's OpenAI-compatible endpoint, reusing the
+`openai` client already a dependency — `services/providers/groq_provider.py`)
+made that step actually free to take, and taking it for the first time
+found three real things, all documented in full in docs/evaluation.md's
+v3.3 section and docs/hot_take.md's v3.3 addendum:
+
+| Stage | What we built/found and why | Evidence | Decision / learning |
+|---|---|---|---|
+| **Iteration 27 (v3.3)** | Added `GroqProvider`, reusing the `openai` client pointed at Groq's endpoint — no new dependency, no new abstraction. Wired into `get_provider()`, `.env.example`, and new `make eval-real-groq` / `eval-v2-real-groq` / `eval-documents-real-groq` / `eval-browser-real-groq` targets. | 6 unit tests (`tests/test_providers.py`), all mocked — never hit the real network. | Shipped. Also found and fixed a separate, pre-existing gap while wiring it up: `python-dotenv` was a listed dependency that no script anywhere actually imported, so `.env` was never being loaded automatically — every `PROVIDER=anthropic`/`openai` instruction in this project's docs, before this fix, only worked if the user separately exported the env var into their shell. Fixed by adding `load_dotenv(REPO_ROOT / ".env")` to every eval-running script's entry point. |
+| **Iteration 28 (v3.3) — baseline_plain fabricates a fake patent and a fake nonprofit role a mock never could** | First real run of the 19-question v1 benchmark with an actual generative model. Read the actual answers, not just the score. | `baseline_plain` invented, with zero context: a complete fake patent (number, title, four paragraphs of fabricated technical detail, zero mention of the real 75/25 shared inventorship) for q13, and a fake three-year professional-association leadership role with fabricated growth statistics for q17 — while answering q14 (a differently-worded version of the *same* underlying fact as q17) with the correct "I have not..." in the same run. | Not a bug to fix — this is baseline_plain behaving exactly as it should to make the point: a context-free LLM's confident answer carries no relationship to the truth, and a real generative model demonstrates this far more concretely than the mock's generic filler ever could. |
+| **Iteration 29 (v3.3) — the hard-case detector's predicted blind spot, now measured** | `hard_case_overclaim_rate` flagged only 1 of the 4 fabrications above/nearby (q15, Kannada fluency) — q13's fake patent and q17's fake leadership role were *not* flagged. | Traced to `_HARD_CASE_RULES` (`services/evaluation/scoring.py`) requiring an exact phrase match ("my patent", "yes, i have run", etc.) calibrated against the mock provider's specific extractive wording; the real model's actual phrasing ("I hold U.S. Patent No...", "Yes. I have spent the past three years...") never matches. | **Not fixed in this pass** — named as a real v3.4+ item (a semantic classifier, not a longer phrase list) rather than patched with a 5th/6th hand-picked phrase, consistent with this project's position on exactly this kind of fix (see "the experiment we removed," above, and docs/hot_take.md's v2.9 addendum reaching the same conclusion for a different metric). |
+| **Iteration 30 (v3.3) — a real, root-cause citation-parsing bug, found on the highest-stakes question in the benchmark** | `identityos_v1` refused 5 of 19 questions with the real model, vs. 0 with the mock. Reading q13's trajectory (the patent question) found the model had generated a **correct, honestly-hedged, properly-cited** answer — refused anyway. | The citation regex in `services/qa_engine/verification.py` required a bracket with exactly one id and zero internal whitespace (`[id]`) — the only shape `MockProvider` ever produces. The real model used `[ id ]` (space-padded), `[id1; id2]` (two ids in one bracket), and `【id】` (fullwidth CJK brackets) — all three silently failed to parse, undercounting evidence and dragging a correct answer's confidence below the refusal threshold. | **Fixed at the root**: capture raw bracket contents (ASCII or fullwidth) and split on `,`/`;`, instead of requiring one tightly-formatted ASCII id. Re-ran every mock-provider suite (v1, all three v2 arms, v2.5, v3) — byte-identical, since the mock's own citation format was always the one shape the old regex handled. Offline re-verification of the already-collected real-model outputs (same generated text, re-run through the fixed verifier, no new API call) showed 4 of the 5 refusals were pure artifacts of this bug: refusal count 5 -> 1, IFS 0.824 -> 0.838. 2 new regression tests (`tests/test_pipeline.py`) cover both formats. |
+| **Iteration 31 (v3.3) — token efficiency, found by reading a truncated answer** | The same q13 trajectory showed `openai/gpt-oss-120b` (a reasoning model) consumed 585 of a 600-token budget on hidden reasoning for one call, leaving 15 tokens for the actual answer — visibly truncating some answers in the run. | Measured directly: setting `reasoning_effort="low"` cut reasoning-token consumption by roughly 5-25x in side-by-side testing on this project's short, structured completions, with no observed loss of answer correctness. | **Made the provider's default**, configurable via `GROQ_REASONING_EFFORT`. The original (implicit "high" effort) full-suite run had also consumed nearly this project's entire Groq free-tier daily token allowance (200,000 TPD) by itself, which blocked a fresh low-effort re-run of the full suite from completing in this session — disclosed in docs/evaluation.md rather than silently worked around, since it's real information about what this free tier actually costs to use. |
+
+## Main failure mode, v3.3 (see docs/hot_take.md's v3.3 addendum for the full writeup)
+
+The same underlying mistake as v3.0's MockProvider bug, one layer deeper:
+this project's entire verification harness had run byte-identical dozens
+of times across nine prior versions, always against the one LLM backend
+structurally incapable of exposing a bug whose trigger condition is "a
+real model's actual writing style." The mock provider's reproducibility
+guarantee and its blindness to this class of bug are the same property,
+not two separate ones — worth naming plainly rather than treating the
+mock-only track record as evidence the pipeline had actually been
+exercised.

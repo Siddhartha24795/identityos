@@ -1,6 +1,6 @@
 ### Trajectory — identityos_v2_semantic — req10
 
-**09:54:24 · retrieve**
+**11:30:08 · retrieve**
 - input: Exceptional communication
 - action: embedding-similarity retrieval (fastembed): top 8 facts, 0 beliefs
 - observation: [resume:018] (verified fact) Senior Software Engineer, Qualcomm, Hyderabad India, Mar 2021 - Aug 2023.
@@ -12,18 +12,18 @@
 [resume:058] (verified fact) On-device NanoVLM visual assistant replacing Gemini API calls in Samsung's Circle to Search feature.
 [resume:034] (verified fact) Developed APIs for live tracking of trucks and notifications using Java, JavaScript, and Python, and suggested dynamic routes based on real-time traffic analysis and driver behavior.
 
-**09:54:24 · generate**
+**11:30:08 · generate**
 - input: Exceptional communication
 - action: call provider with cited, confidence-annotated context
 - observation: [resume:018] (verified fact) Senior Software Engineer, Qualcomm, Hyderabad India, Mar 2021 - Aug 2023. [resume:021] (verified fact) Applied ML techniques to sensor data for tilt detection, automated sleep alarms, and cardiovascular health monitoring.
 
-**09:54:24 · verify**
+**11:30:08 · verify**
 - input: [resume:018] (verified fact) Senior Software Engineer, Qualcomm, Hyderabad India, Mar 2021 - Aug 2023. [resume:021] (verified fact) Applied ML techniques to sensor data for tilt detection, automated sleep alarms, and cardiovascular health monitoring.
 - action: per-sentence grounding check (same verifier as lexical identityos_v2)
 - observation: coverage=1.00 confidence=0.99
 - confidence: 0.99
 
-**09:54:24 · bucket**
+**11:30:08 · bucket**
 - input: [resume:018] (verified fact) Senior Software Engineer, Qualcomm, Hyderabad India, Mar 2021 - Aug 2023. [resume:021] (verified fact) Applied ML techniques to sensor data for tilt detection, automated sleep alarms, and cardiovascular health monitoring.
 - action: derive fit bucket from coverage+confidence+polarity (same bucketing.py as lexical)
 - observation: met_or_better

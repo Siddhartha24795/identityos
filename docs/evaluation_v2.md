@@ -394,7 +394,8 @@ retrieval experiments now.
 Same mock-provider caveat as v1 (docs/evaluation.md): the mock provider is
 extractive, not generative, so it tends to preserve source wording
 (including qualifiers) rather than smoothing them away under paraphrase
-pressure. A real LLM run (`PROVIDER=anthropic` / `PROVIDER=openai`) is the
+pressure. A real LLM run (`PROVIDER=anthropic` / `PROVIDER=openai` / `PROVIDER=groq`,
+the last free with no credit card) is the
 next step for a qualitative read on whether these same failure patterns
 get better or worse under real generation.
 

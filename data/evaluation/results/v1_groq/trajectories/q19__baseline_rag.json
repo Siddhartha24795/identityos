@@ -1,0 +1,26 @@
+{
+  "question_id": "q19",
+  "system_name": "baseline_rag",
+  "steps": [
+    {
+      "timestamp": "2026-08-30T11:12:00.546499Z",
+      "stage": "retrieve",
+      "input_summary": "What common thread connects your work at Qualcomm, Samsung Research, and Jinn Labs?",
+      "action": "dump the entire fact store as unstructured text (no ranking, no ids)",
+      "observation": "96 facts included, no relevance filtering",
+      "reasoning": "Baseline 2 has retrieval but no structure and no grounding check.",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T11:12:29.199107Z",
+      "stage": "generate",
+      "input_summary": "What common thread connects your work at Qualcomm, Samsung Research, and Jinn Labs?",
+      "action": "call provider with the full unstructured context dump",
+      "observation": "The common thread that runs through my stints at Qualcomm, Samsung Research, and Jinn Labs is the **end‑to‑end creation of production‑grade AI/ML systems that turn cutting‑edge research into real‑world impact, while rigorously engineering for scale, cost‑efficiency and measurable outcomes**.\n\n* **Qualcomm** – I took emerging computer‑vision and sensor‑fusion algorithms from prototype to ship‑ready on wearables and IoT devices. By integrating TensorFlow Lite, quantization, pruning and a dual‑processor architecture, I cut smartwatch battery consumption by ~40 % and delivered on‑device inference that met strict power and latency budgets.\n\n* **Samsung Research** – I pushed generative‑AI and computer‑vision research into consumer‑grade products. I built the “Generative Image Dynamics” pipeline that creates looping video from a single image 5× faster than the prior art, and I engineered an on‑device NanoVLM visual assistant that replaces costly Gemini API calls. Throughout, I applied model‑compression techniques (LoRA, QLoRA, distillation) and a disciplined release‑metric framework to guarantee that every research claim translated into a quantifiable product improvement.\n\n* **Jinn Labs** – I scaled those same principles to a live‑retail intelligence platform that ingests 2,000+ concurrent RTSP streams, runs VLM‑based suspicious‑event detection, and dynamically partitions workloads between edge (Jetson) and cloud (TensorRT/TensorFlow). I instituted an evaluation‑driven release cadence, tracking every claim as a release metric, and continuously reduced inference cost through mixed‑precision, batching and model‑efficiency tricks.\n\nAcross all three organizations I have:\n\n1. **Identified a deep‑tech opportunity** (wearable power management, generative video codecs, real‑time video analytics).  \n2. **Bridged research and product** by translating novel algorithms into optimized, deployable code.  \n3. **Built the full stack** – from data pipelines and model training to edge‑cloud deployment, monitoring and continuous evaluation.  \n4. **Embedded cost‑discipline** via quantization, pruning, distillation and edge‑cloud partitioning to make the solution economically",
+      "reasoning": "",
+      "confidence": null,
+      "decision": "answered_unverified"
+    }
+  ]
+}

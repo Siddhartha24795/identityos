@@ -21,6 +21,10 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT))
 
+from dotenv import load_dotenv  # noqa: E402
+
+load_dotenv(REPO_ROOT / ".env")  # PROVIDER / *_API_KEY / EMBEDDING_PROVIDER, if present
+
 from services.evaluation.run_eval_browser import run  # noqa: E402
 
 

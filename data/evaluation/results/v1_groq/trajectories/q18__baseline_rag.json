@@ -1,0 +1,26 @@
+{
+  "question_id": "q18",
+  "system_name": "baseline_rag",
+  "steps": [
+    {
+      "timestamp": "2026-08-30T11:11:17.060888Z",
+      "stage": "retrieve",
+      "input_summary": "Trace how your career moved from full-stack web development to generative AI research leadership.",
+      "action": "dump the entire fact store as unstructured text (no ranking, no ids)",
+      "observation": "96 facts included, no relevance filtering",
+      "reasoning": "Baseline 2 has retrieval but no structure and no grounding check.",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T11:11:46.820898Z",
+      "stage": "generate",
+      "input_summary": "Trace how your career moved from full-stack web development to generative AI research leadership.",
+      "action": "call provider with the full unstructured context dump",
+      "observation": "From the moment I wrote my first “Hello World” page in 2016, I have been guided by a single question: **how can I turn code into impact at scale?**  That curiosity has carried me through a deliberate, step‑by‑step evolution—from building web‑centric back‑ends to leading cutting‑edge generative‑AI research programs.\n\n---\n\n### 1.  Foundations in Full‑Stack Development (2016‑2017)  \n**Scrum Technology** – As a junior developer I built client‑facing websites with Java, JavaScript, HTML and CSS, and introduced predictive‑caching to accelerate page loads.  This work taught me end‑to‑end product ownership: requirement gathering, architecture design, rapid prototyping, and performance tuning.  \n\n**Wheelseye Technology** – At Wheelseye I created REST APIs for real‑time truck tracking and dynamic routing.  The need to process streaming telemetry sparked my first interest in handling high‑velocity data streams—an insight that would later become essential for video‑stream analytics.\n\n---\n\n### 2.  Expanding to Embedded & IoT Systems (2020‑2023)  \n**Qualcomm** – Joining the AI‑ML IoT Framework team forced me to move from the browser to the edge.  I wrote C++/TensorFlow‑Lite plugins for object detection, tracking and trajectory prediction, integrating them with GStreamer pipelines.  Parallel work on the Wearables team gave me deep exposure to hardware‑software co‑design (HAL development, dual‑processor power management) and to the strict latency, power and memory budgets that define real‑world AI deployment.\n\nThese experiences taught me **how to squeeze intelligence out of constrained devices**, a skill that later underpinned my work on edge‑centric generative video codecs.\n\n---\n\n### 3.  First Foray into AI‑Driven Product Features (2021‑2023)  \nWhile still at Qualcomm, I began applying machine‑learning techniques to sensor data (tilt detection, sleep‑alarm automation, cardiovascular monitoring).  By improving smartwatch battery life by ~40 % through a secondary‑processor offload, I learned to **quantify AI impact in concrete business metrics**—a habit that now drives my evaluation‑first mindset at every institution I lead.\n\n---\n\n### 4.  Scaling Impact in a Research‑Industrial Lab (2023‑2025)  \n**Samsung Research, Noida (AR Core Team)** – Here I transitioned from “AI engineer” to “AI researcher‑leader.”  I built an on‑device visual assistant (",
+      "reasoning": "",
+      "confidence": null,
+      "decision": "answered_unverified"
+    }
+  ]
+}

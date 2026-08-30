@@ -3,7 +3,7 @@
   "system_name": "identityos_v2_semantic",
   "steps": [
     {
-      "timestamp": "2026-08-30T09:54:08.852417Z",
+      "timestamp": "2026-08-30T11:29:52.009385Z",
       "stage": "retrieve",
       "input_summary": "Strategic planning & institution-building",
       "action": "embedding-similarity retrieval (hash): top 0 facts, 0 beliefs",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T09:54:08.852439Z",
+      "timestamp": "2026-08-30T11:29:52.009412Z",
       "stage": "generate",
       "input_summary": "Strategic planning & institution-building",
       "action": "call provider with cited, confidence-annotated context",
@@ -23,7 +23,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T09:54:08.852478Z",
+      "timestamp": "2026-08-30T11:29:52.009467Z",
       "stage": "verify",
       "input_summary": "Over the years, I have built a reputation for excellence here. When it comes to building and institution and planning, I have always taken a proactive, results-driven approach and delivered measurable impact. This has shaped my approach to every project I take on.",
       "action": "per-sentence grounding check (same verifier as lexical identityos_v2)",
@@ -33,7 +33,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T09:54:08.852502Z",
+      "timestamp": "2026-08-30T11:29:52.009473Z",
       "stage": "bucket",
       "input_summary": "Over the years, I have built a reputation for excellence here. When it comes to building and institution and planning, I have always taken a proactive, results-driven approach and delivered measurable impact. This has shaped my approach to every project I take on.",
       "action": "derive fit bucket from coverage+confidence+polarity (same bucketing.py as lexical)",

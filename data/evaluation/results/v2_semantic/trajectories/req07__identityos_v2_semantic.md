@@ -1,6 +1,6 @@
 ### Trajectory — identityos_v2_semantic — req07
 
-**09:54:24 · retrieve**
+**11:30:07 · retrieve**
 - input: Stakeholder management
 - action: embedding-similarity retrieval (fastembed): top 8 facts, 0 beliefs
 - observation: [dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical — it is 24x7 production accountability across live customer sites.
@@ -12,18 +12,18 @@
 [resume:023] (verified fact) Mentored interns and other developers, with end-to-end ownership of feature requests at Qualcomm.
 [resume:007] (verified fact) Defined evaluation frameworks pairing offline metrics with live ground-truth validation, POS-occupancy eval at approximately 87% accuracy, tracked release over release.
 
-**09:54:24 · generate**
+**11:30:07 · generate**
 - input: Stakeholder management
 - action: call provider with cited, confidence-annotated context
 - observation: [dossier_narrative:011] (verified fact) States that the practice of aligning many stakeholder types around one roadmap functions as the alumni-and-institution interface the IITACB CEO role requires, in miniature.
 
-**09:54:24 · verify**
+**11:30:07 · verify**
 - input: [dossier_narrative:011] (verified fact) States that the practice of aligning many stakeholder types around one roadmap functions as the alumni-and-institution interface the IITACB CEO role requires, in miniature.
 - action: per-sentence grounding check (same verifier as lexical identityos_v2)
 - observation: coverage=1.00 confidence=0.99
 - confidence: 0.99
 
-**09:54:24 · bucket**
+**11:30:07 · bucket**
 - input: [dossier_narrative:011] (verified fact) States that the practice of aligning many stakeholder types around one roadmap functions as the alumni-and-institution interface the IITACB CEO role requires, in miniature.
 - action: derive fit bucket from coverage+confidence+polarity (same bucketing.py as lexical)
 - observation: met_or_better

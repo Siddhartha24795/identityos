@@ -1,0 +1,16 @@
+{
+  "question_id": "q08",
+  "system_name": "baseline_plain",
+  "steps": [
+    {
+      "timestamp": "2026-08-30T11:06:31.382061Z",
+      "stage": "generate",
+      "input_summary": "Why should we choose you instead of another candidate?",
+      "action": "call provider with zero context, zero verification",
+      "observation": "I believe I’m the candidate who can hit the ground running while also driving long‑term growth for the team, and here’s why:\n\n**1. Proven Results in the Core Skills You Need**  \nIn my most recent role, I increased the conversion rate of our primary product line by 27 % within six months by redesigning the user‑onboarding flow and implementing data‑driven A/B testing. The same analytical rigor and user‑centric mindset will let me quickly identify quick‑win opportunities for your product.\n\n**2. Cross‑Functional Collaboration Experience**  \nI’ve spent the last three years acting as the bridge between engineering, design, and marketing, translating technical constraints into clear business outcomes. That habit of speaking the language of every stakeholder reduces miscommunication and accelerates delivery—something I know your fast‑paced environment values.\n\n**3. Passion for Your Mission**  \nI’ve followed your company’s journey since the early beta, and I’m genuinely excited about [specific product/initiative]. I’ve already built a side project that solves a problem similar to the one you’re tackling, which gives me a head start on understanding user pain points and proposing realistic enhancements.\n\n**4. Continuous Learning & Adaptability**  \nI’m a certified Scrum Master, recently completed a machine‑learning specialization, and consistently contribute to open‑source projects. This habit of staying ahead of emerging tools means I can bring fresh ideas and modern best practices to the team without needing extensive ramp‑up time.\n\n**5. Strong Cultural Fit**  \nYour values of transparency, data‑driven decision‑making, and collaborative ownership resonate with my own work style. Colleagues describe me as a “trustworthy catalyst”—someone who raises the bar for the whole group while keeping morale high.\n\n**6. Measurable Impact, Not Just Activity**  \nI track my work with clear KPIs and quarterly retrospectives, ensuring every effort ties back to business objectives. In my last role, that discipline helped the team exceed its annual revenue target by 15 % while staying under budget.\n\n**Bottom line:** I combine a track record of delivering measurable results, the ability to unite diverse teams, a genuine enthusiasm for what you’re building, and a growth mindset that keeps me at the cutting edge. Those qualities together make me uniquely positioned to contribute immediately and sustainably—something I’m confident sets me apart from other candidates.",
+      "reasoning": "Baseline 1 has no retrieval and no grounding check by design.",
+      "confidence": null,
+      "decision": "answered_unverified"
+    }
+  ]
+}

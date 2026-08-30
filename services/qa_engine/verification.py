@@ -6,6 +6,20 @@ v1 implements the FACTUAL VERIFICATION dimension from docs/architecture.md
 browser — are out of scope until browser execution and a full application
 narrative exist; see docs/roadmap.md). This is the dimension that most
 directly measures hallucination, which is the core research question.
+
+Citation parsing (v3.3): the original regex required a bracket to contain
+exactly one id with zero internal whitespace (`[resume:014]`) — the only
+shape the deterministic MockProvider ever produces. This project's first
+real-LLM run (PROVIDER=groq, docs/evaluation.md) found it silently failed
+on `[ resume:014 ]` (real models routinely pad brackets with spaces),
+`[resume:014; belief:002]` (a real model citing two ids in one bracket),
+and `【resume:014】` (fullwidth CJK brackets — Groq's `gpt-oss-120b`
+sometimes emits these instead of ASCII ones) — every such sentence was
+scored as uncited, which dragged a correctly-cited, honestly-hedged
+patent-question answer's confidence below the refusal threshold for the
+wrong reason (see docs/hot_take.md's v3.3 addendum). Fixed generally:
+capture the raw contents of either bracket style, then split on `,`/`;`
+and trim, rather than requiring one tightly-formatted ASCII-only id.
 """
 from __future__ import annotations
 
@@ -15,7 +29,24 @@ from packages.schemas.identity import Belief, Confidence, Fact
 from packages.schemas.qa import AnswerClaim, ClaimType
 
 _SENTENCE_SPLIT_RE = re.compile(r"(?<=[.!?])\s+")
-_CITATION_RE = re.compile(r"\[([\w:.\-]+)\]")
+_BRACKET_RE = re.compile(r"\[([^\[\]]+)\]|【([^【】]+)】")
+
+
+def _extract_citation_ids(text: str) -> list[str]:
+    """Every id inside every bracket in `text`, whitespace-trimmed, brackets
+    possibly holding more than one id separated by a comma or semicolon.
+    `_BRACKET_RE` has two alternatives (ASCII `[...]` / fullwidth `【...】`),
+    so each match is a 2-tuple with exactly one side populated. Membership
+    in the real evidence store is checked by the caller — this just parses
+    *candidate* ids, it doesn't validate them."""
+    ids: list[str] = []
+    for ascii_group, fullwidth_group in _BRACKET_RE.findall(text):
+        group = ascii_group or fullwidth_group
+        for part in re.split(r"[;,]", group):
+            part = part.strip()
+            if part:
+                ids.append(part)
+    return ids
 
 
 def _tokens(text: str) -> set[str]:
@@ -48,7 +79,7 @@ def verify_answer(
     claims: list[AnswerClaim] = []
 
     for sentence in sentences:
-        cited_ids = [m for m in _CITATION_RE.findall(sentence) if m in by_id]
+        cited_ids = [m for m in _extract_citation_ids(sentence) if m in by_id]
         if cited_ids:
             # Ground truth via explicit citation: trust the weakest cited source.
             worst = min(cited_ids, key=lambda i: by_id[i][2])

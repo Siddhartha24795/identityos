@@ -1,0 +1,26 @@
+{
+  "question_id": "q02",
+  "system_name": "baseline_rag",
+  "steps": [
+    {
+      "timestamp": "2026-08-30T11:03:58.443594Z",
+      "stage": "retrieve",
+      "input_summary": "Which university awarded your M.Tech in Artificial Intelligence, and what was your research topic?",
+      "action": "dump the entire fact store as unstructured text (no ranking, no ids)",
+      "observation": "96 facts included, no relevance filtering",
+      "reasoning": "Baseline 2 has retrieval but no structure and no grounding check.",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T11:04:23.116304Z",
+      "stage": "generate",
+      "input_summary": "Which university awarded your M.Tech in Artificial Intelligence, and what was your research topic?",
+      "action": "call provider with the full unstructured context dump",
+      "observation": "I earned my M.Tech in Artificial Intelligence from **IIT (ISM) Dhanbad**.  My thesis focused on **medical‑image processing using Cycle‑GAN techniques**, where I explored generative adversarial networks for tasks such as image‑to‑image translation and enhancement in the medical domain.",
+      "reasoning": "",
+      "confidence": null,
+      "decision": "answered_unverified"
+    }
+  ]
+}

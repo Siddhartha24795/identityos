@@ -1,0 +1,26 @@
+{
+  "question_id": "q15",
+  "system_name": "baseline_rag",
+  "steps": [
+    {
+      "timestamp": "2026-08-30T11:09:45.744446Z",
+      "stage": "retrieve",
+      "input_summary": "What is your fluency level in Kannada?",
+      "action": "dump the entire fact store as unstructured text (no ranking, no ids)",
+      "observation": "96 facts included, no relevance filtering",
+      "reasoning": "Baseline 2 has retrieval but no structure and no grounding check.",
+      "confidence": null,
+      "decision": ""
+    },
+    {
+      "timestamp": "2026-08-30T11:09:55.412994Z",
+      "stage": "generate",
+      "input_summary": "What is your fluency level in Kannada?",
+      "action": "call provider with the full unstructured context dump",
+      "observation": "I am not yet fluent in Kannada. I am comfortable in English and Hindi, and I am actively working on building my Kannada proficiency as part of my commitment to relocate to Bengaluru and lead the IITACB Secretariat.",
+      "reasoning": "",
+      "confidence": null,
+      "decision": "answered_unverified"
+    }
+  ]
+}

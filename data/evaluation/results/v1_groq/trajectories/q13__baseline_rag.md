@@ -1,0 +1,21 @@
+### Trajectory — baseline_rag — q13
+
+**11:08:52 · retrieve**
+- input: Describe the patent you hold on generative AI video codecs and your contribution to it.
+- action: dump the entire fact store as unstructured text (no ranking, no ids)
+- observation: 96 facts included, no relevance filtering
+- reasoning: Baseline 2 has retrieval but no structure and no grounding check.
+
+**11:09:05 · generate**
+- input: Describe the patent you hold on generative AI video codecs and your contribution to it.
+- action: call provider with the full unstructured context dump
+- observation: I am a named inventor on Indian Patent Application No. 2025 1107 6834, titled **“Generative AI‑based Video Codecs Utilizing Image‑to‑Video Generation.”** The application was filed through Samsung Research, Noida and is assigned to Samsung Electronics Co., Ltd.
+
+### What the invention does
+Traditional video codecs compress a sequence of frames by exploiting spatial and temporal redundancy that is already present in the source video. My invention flips that paradigm: instead of compressing an existing video stream, we **generate the video on‑the‑fly from a compact latent representation produced by a generative‑AI model**. The key steps are:
+
+1. **Image‑to‑Video Generation Engine** – A diffusion‑based (or VAE‑GAN hybrid) model that takes a single high‑quality key‑frame (or a short set of key‑frames) together with motion‑conditioning tokens and synthesises a temporally coherent video sequence.  
+2. **Latent‑Space Codec** – The model’s latent vector, together with a lightweight motion‑descriptor, is orders of magnitude smaller than the raw pixel data. This latent is then entropy‑coded using conventional arithmetic coding, yielding a **compression ratio that exceeds state‑of‑the‑art hybrid codecs (e.g., H.266/AV1) for many content classes** while preserving perceptual fidelity.  
+3. **Adaptive Quality Control** – A differentiable quality‑metric loop (based on perceptual similarity and task‑specific loss) dynamically adjusts the number of diffusion steps and quantisation granularity, allowing fine‑grained bitrate‑vs‑quality trade‑offs without re‑encoding the entire stream.  
+4. **Edge‑Cloud Partitioning** – The generation engine can be split between edge devices (running a quantised, LoRA‑adapted lightweight decoder) and the cloud (hosting the full‑scale generator). This enables real‑
+- decision: answered_unverified

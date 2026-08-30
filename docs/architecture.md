@@ -69,7 +69,8 @@ classifier") rather than silently assumed.
 (services/providers/).** `PROVIDER=mock` (default) runs the entire pipeline
 with zero API calls and byte-identical output on every run — required for
 judges to reproduce results from a clean environment with no credentials.
-`PROVIDER=anthropic` / `PROVIDER=openai` swap in a real model via env vars
+`PROVIDER=anthropic` / `PROVIDER=openai` / `PROVIDER=groq` swap in a real
+model via env vars (groq is free, no credit card required)
 with no code changes. See docs/evaluation.md for what changes, and doesn't,
 between the two.
 

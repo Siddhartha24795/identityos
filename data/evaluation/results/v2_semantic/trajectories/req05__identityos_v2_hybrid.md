@@ -1,6 +1,6 @@
 ### Trajectory — identityos_v2_hybrid — req05
 
-**09:54:24 · retrieve**
+**11:30:07 · retrieve**
 - input: Entrepreneurial mindset
 - action: lexical retrieval, semantic fallback only if empty: 6 facts, 1 beliefs
 - observation: [dossier_narrative:005] (verified fact) Routine practice of aligning research scientists, infrastructure engineers, product owners, enterprise customers and executive sponsors around one roadmap. Six years of running an unpaid academia-industry bridge.
@@ -11,18 +11,18 @@
 [resume:032] (verified fact) Mentored students and created content for GATE CSE.
 [belief:002] (belief, strong inference, confidence=0.82) Values shipping working systems into production over research for its own sake.
 
-**09:54:24 · generate**
+**11:30:07 · generate**
 - input: Entrepreneurial mindset
 - action: call provider with cited, confidence-annotated context
 - observation: [dossier_narrative:005] (verified fact) Routine practice of aligning research scientists, infrastructure engineers, product owners, enterprise customers and executive sponsors around one roadmap. Six years of running an unpaid academia-industry bridge. [dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical — it is 24x7 production accountability across live customer sites.
 
-**09:54:24 · verify**
+**11:30:07 · verify**
 - input: [dossier_narrative:005] (verified fact) Routine practice of aligning research scientists, infrastructure engineers, product owners, enterprise customers and executive sponsors around one roadmap. Six years of running an unpaid academia-industry bridge. [dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical — it is 24x7 production accountability across live customer sites.
 - action: per-sentence grounding check (same verifier as lexical identityos_v2)
 - observation: coverage=1.00 confidence=0.74
 - confidence: 0.74
 
-**09:54:24 · bucket**
+**11:30:07 · bucket**
 - input: [dossier_narrative:005] (verified fact) Routine practice of aligning research scientists, infrastructure engineers, product owners, enterprise customers and executive sponsors around one roadmap. Six years of running an unpaid academia-industry bridge. [dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical — it is 24x7 production accountability across live customer sites.
 - action: derive fit bucket from coverage+confidence+polarity (same bucketing.py)
 - observation: met_or_better
