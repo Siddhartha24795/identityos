@@ -52,6 +52,23 @@ def test_bucket_from_signals_negation_downgrades_confident_claim():
     assert bucket != FitBucket.MET_OR_BETTER
 
 
+def test_bucket_from_signals_relevance_scores_default_is_backward_compatible():
+    """v2.9 added an optional relevance_scores parameter — omitting it (the
+    shipped default everywhere in services/application_engine/assess.py)
+    must behave exactly as before the parameter existed."""
+    claim = AnswerClaim(
+        text="He has no prior record of building or running a professional body.",
+        evidence_refs=["dossier_excerpts:006"],
+        claim_type=ClaimType.VERIFIED_FACT,
+        confidence=0.99,
+    )
+    without = bucket_from_signals(evidence_coverage=1.0, overall_confidence=0.9, claims=[claim])
+    with_none = bucket_from_signals(
+        evidence_coverage=1.0, overall_confidence=0.9, claims=[claim], relevance_scores=None
+    )
+    assert without == with_none == FitBucket.GAP
+
+
 def test_bucket_from_signals_mixed_clause_is_partial_not_gap():
     """Regression test for the req13 finding (v2.2): a single sentence
     mixing a positive and a negative clause must bucket as PARTIAL, not

@@ -1,4 +1,4 @@
-# IdentityOS — v2.8
+# IdentityOS — v2.9
 
 **An autonomous representative that answers application questions,
 assesses job-requirement fit, and generates application documents on a
@@ -8,13 +8,14 @@ of fabrication.**
 Built for the micro1 Agentic Workflows Hackathon, against the full brief
 preserved in `PROMPT.md`. This repo builds v1 (Q&A), v2 (requirement-fit
 assessment against a real, adjudicated application, iterated through
-v2.4), and v2.5-v2.8 (document generation, two corpus authoring
-corrections, and a diagnosed-but-rejected retrieval experiment) of that
-brief — see [docs/roadmap.md](docs/roadmap.md) for what's deferred to
-v2.9-v5 and why. Prior versions frozen at `../identityos-v1/`,
-`../identityos-v2/`, `../identityos-v2.1/`, `../identityos-v2.2/`,
-`../identityos-v2.3/`, `../identityos-v2.4/`, `../identityos-v2.5/`,
-`../identityos-v2.6/`, `../identityos-v2.7/`.
+v2.4), and v2.5-v2.9 (document generation, two corpus authoring
+corrections, and two diagnosed-but-rejected retrieval experiments that
+together identify a real boundary of lexical retrieval) of that brief —
+see [docs/roadmap.md](docs/roadmap.md) for what's deferred to v2.10-v5 and
+why. Prior versions frozen at `../identityos-v1/`, `../identityos-v2/`,
+`../identityos-v2.1/`, `../identityos-v2.2/`, `../identityos-v2.3/`,
+`../identityos-v2.4/`, `../identityos-v2.5/`, `../identityos-v2.6/`,
+`../identityos-v2.7/`, `../identityos-v2.8/`.
 
 ## Who has this problem, and why it's worth solving
 
@@ -75,7 +76,7 @@ but does need one-time network access. Output per run:
 To get a qualitative read with a real model: copy `.env.example` to `.env`,
 set `ANTHROPIC_API_KEY` or `OPENAI_API_KEY`, then `make eval-real` / `make eval-v2-real`.
 
-Run the smoke test suite: `make test` (25 tests, <1s, no keys/downloads needed).
+Run the smoke test suite: `make test` (26 tests, <1s, no keys/downloads needed).
 
 ## Results (reference runs, `PROVIDER=mock`)
 
@@ -123,7 +124,7 @@ that the polarity check from v2.2 couldn't tell apart from the real thing.
 We did not tune this until it looked better; at the time, lexical retrieval
 stayed the default. Full trade-off: [docs/evaluation_v2.md](docs/evaluation_v2.md).
 
-**v2.4-v2.8 — hybrid retrieval, now the recommended strategy:**
+**v2.4-v2.9 — hybrid retrieval, now the recommended strategy:**
 
 | Metric | identityos_v2 (lexical) | identityos_v2_semantic (fastembed) | identityos_v2_hybrid |
 |---|---|---|---|
@@ -147,8 +148,15 @@ never the shipped default. v2.8 then diagnosed and tested the obvious next
 fix for two remaining mismatches (require 2+ shared tokens for lexical
 retrieval) — it fixed those two and pushed dangerous overclaim rate to
 0.50 by breaking two others that relied on the exact same weak-match
-mechanism. **Not shipped**, kept as a documented negative result. Full
-story: [docs/evaluation_v2.md](docs/evaluation_v2.md).
+mechanism. **Not shipped**, kept as a documented negative result. v2.9
+tried the fix v2.8 actually pointed to (weight the polarity vote by
+citation relevance, not a blanket exclusion) two different ways — both
+tested against the full benchmark, both rejected: one had no effect
+(reordering doesn't change what's *included*), the other fixed one
+requirement and turned req14, the single highest-stakes case in the whole
+benchmark, into a dangerous overclaim. Two independent fixes failing the
+same way is itself the finding: lexical relevance scoring has a real
+ceiling here, not a tuning problem. Full story: [docs/evaluation_v2.md](docs/evaluation_v2.md).
 
 **v2.5-v2.7 — document generation, the first real generated artifact:**
 
@@ -213,8 +221,12 @@ weakly-relevant evidence that was noise for one requirement was the only
 thing keeping a *different* requirement honest, at the same retrieval
 threshold. "This match looks noisy" and "matches like this are noise in
 general" are different claims, and the difference only shows up when you
-test the fix against everything, not just the case that motivated it. Full
-writeup, including what's still unfixed: [docs/hot_take.md](docs/hot_take.md).
+test the fix against everything, not just the case that motivated it.
+v2.9: tried the actual fix v2.8 called for, twice, both ways rejected on
+the same full-benchmark test — a lexical relevance score just isn't the
+same signal as "which fact actually settles this question," and no amount
+of reweighting changes that. Full writeup, including what's still
+unfixed: [docs/hot_take.md](docs/hot_take.md).
 
 ## Hackathon compliance self-check
 

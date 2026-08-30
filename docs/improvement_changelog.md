@@ -150,3 +150,29 @@ all retrieved facts as equally trustworthy — needs retrieval relevance
 scores threaded through to the bucketing decision, a larger architectural
 change than fits one version's scope. Named for v2.9, not attempted
 reactively here.
+
+---
+
+# v2.9 — Removed experiment: relevance-weighted polarity (also rejected)
+
+All results from a direct pipeline run (`services/qa_engine/retrieval.py`'s
+new `build_idf_table()`/`retrieve_idf()`/`idf_relevance_map()` plus
+`bucket_from_signals(..., relevance_scores=...)`) against the full
+14-requirement benchmark, not assumed from the two motivating cases
+(docs/evaluation_v2.md and docs/hot_take.md have the full writeup).
+
+| Stage | What we tried and why | Evidence | Decision / learning |
+|---|---|---|---|
+| **Iteration 14 (v2.9) — attempt 1, IDF reordering** | Built IDF-weighted lexical scoring: down-weight common tokens ("management"), up-weight distinctive ones ("stakeholder"). Hypothesis: better ranking keeps the irrelevant fact out of the cited set. | Ranking order was correct (the relevant fact for req07 now outscores the irrelevant one). Nothing else changed — with a generous top-k, a fact ranked #2 is still retrieved and cited regardless of order. | Rejected on its own: reordering doesn't affect what's included when count stays below top-k. |
+| **Iteration 15 (v2.9) — attempt 2, relevance-dominance gating** | Added an optional `relevance_scores` parameter to `bucket_from_signals()`: a negative/mixed citation only votes toward a downgrade if its IDF score is at least half the strongest citation's score in that context. Tested against all 14 requirements before trusting it. | req12 became a full exact match. But **req14 — the single highest-stakes requirement in the benchmark — flipped from a safe `partial` to a dangerous `met_or_better`**, because the correct gap-stating fact scored *lower* by IDF than an unrelated fact cited alongside it. req09 broke the same way. req07 still wasn't fixed. Dangerous overclaim rate: 0.00 -> 0.14. | **Not adopted.** Parameter kept at its backward-compatible default (verified via the eval harness, not just unit tests) — shipped behavior unchanged. |
+
+## Main failure mode, v2.9 (see docs/hot_take.md for the full writeup)
+
+Two independently-built fixes for the same two requirements (req07, req12)
+both failed for the same structural reason: a lexical/statistical
+relevance score is not a reliable proxy for which fact actually settles a
+question. This isn't a tuning problem — a different threshold or weighting
+formula wouldn't fix it, because the signal being weighted isn't the
+signal the decision needs. req07 and req12 stay open, unfixed, with the
+conclusion recorded rather than a third heuristic attempted: the next real
+step needs semantic judgment (a real LLM call), not another lexical proxy.

@@ -63,6 +63,60 @@ def retrieve(
     return facts, beliefs
 
 
+def build_idf_table(ds: DigitalSelf) -> dict[str, float]:
+    """Standard smoothed IDF, computed once per Digital Self (the same
+    "precompute once, query many times" pattern as DigitalSelfEmbeddingIndex).
+
+    v2.9 — the direct fix v2.8 pointed to. Raw shared-token *count* scores
+    "management" (common across many facts: P&L management, power
+    management, team management...) the same as "stakeholder" (rare,
+    appears in exactly the fact that actually matters) — that's why a
+    weakly-relevant fact could tie or beat the genuinely relevant one and
+    inject an unrelated negation marker (docs/evaluation_v2.md's v2.8
+    section). IDF weighting down-weights common tokens and up-weights
+    distinctive ones without excluding anything or needing a hand-picked
+    threshold.
+    """
+    docs = [_tokens(f.text) for f in ds.facts] + [_tokens(b.statement) for b in ds.beliefs]
+    n = len(docs)
+    df: dict[str, int] = {}
+    for tokens in docs:
+        for t in tokens:
+            df[t] = df.get(t, 0) + 1
+    return {t: math.log((n + 1) / (d + 1)) + 1 for t, d in df.items()}
+
+
+def _idf_score(item_tokens: set[str], q_tokens: set[str], idf_table: dict[str, float]) -> float:
+    return sum(idf_table.get(t, 1.0) for t in (item_tokens & q_tokens))
+
+
+def retrieve_idf(
+    ds: DigitalSelf,
+    question: Question,
+    idf_table: dict[str, float],
+    top_k_facts: int = 6,
+    top_k_beliefs: int = 3,
+    min_score: float = 0.0,
+) -> tuple[list[Fact], list[Belief]]:
+    """Same contract as retrieve(), IDF-weighted instead of raw-count
+    scored. See build_idf_table() for why."""
+    q_tokens = _tokens(question.text)
+
+    scored_facts = sorted(
+        ((_idf_score(_tokens(f.text), q_tokens, idf_table), f) for f in ds.facts),
+        key=lambda t: -t[0],
+    )
+    facts = [f for score, f in scored_facts[:top_k_facts] if score > min_score]
+
+    scored_beliefs = sorted(
+        ((_idf_score(_tokens(b.statement), q_tokens, idf_table), b) for b in ds.beliefs),
+        key=lambda t: -t[0],
+    )
+    beliefs = [b for score, b in scored_beliefs[:top_k_beliefs] if score > min_score]
+
+    return facts, beliefs
+
+
 class DigitalSelfEmbeddingIndex:
     """Precomputed embeddings for every fact/belief in a Digital Self,
     computed once per eval run (not per query) — the realistic pattern for
@@ -154,6 +208,24 @@ def retrieve_hybrid(
             index, question, top_k_facts, top_k_beliefs, min_similarity
         )
     return facts, beliefs
+
+
+def idf_relevance_map(
+    question: Question,
+    idf_table: dict[str, float],
+    facts: list[Fact],
+    beliefs: list[Belief],
+) -> dict[str, float]:
+    """IDF relevance score per id, for exactly the facts/beliefs already
+    retrieved for this question — the map bucket_from_signals()'s
+    relevance_scores parameter expects (v2.9)."""
+    q_tokens = _tokens(question.text)
+    scores: dict[str, float] = {}
+    for f in facts:
+        scores[f.id] = _idf_score(_tokens(f.text), q_tokens, idf_table)
+    for b in beliefs:
+        scores[b.id] = _idf_score(_tokens(b.statement), q_tokens, idf_table)
+    return scores
 
 
 def _bucket_label(bucket: Confidence) -> str:

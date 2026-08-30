@@ -3,7 +3,7 @@
   "provider": "mock",
   "embedding_provider": "fastembed",
   "digital_self_version": 1,
-  "generated_at": "2026-08-30T07:00:56.988011+00:00",
+  "generated_at": "2026-08-30T07:31:14.279528+00:00",
   "scores": {
     "baseline_plain": {
       "avg_evidence_coverage": 0.0,

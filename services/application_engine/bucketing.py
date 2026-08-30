@@ -69,16 +69,41 @@ def _claim_polarity(text: str) -> str:
     return "positive"
 
 
+RELEVANCE_DOMINANCE_RATIO = 0.5
+
+
+def _claim_relevance(claim: AnswerClaim, relevance_scores: dict[str, float]) -> float:
+    """A claim can cite multiple ids; use the strongest one — "is at least
+    one of this claim's citations a genuinely strong match," not the
+    average, since a claim naming one weak and one strong id is still as
+    trustworthy as the strong id alone."""
+    scores = [relevance_scores.get(ref, 0.0) for ref in claim.evidence_refs]
+    return max(scores) if scores else 0.0
+
+
 def bucket_from_signals(
     evidence_coverage: float,
     overall_confidence: float,
     claims: list[AnswerClaim] | None = None,
+    relevance_scores: dict[str, float] | None = None,
 ) -> FitBucket:
     """Derive the system's own fit bucket purely from its verification
     signals (evidence_coverage, overall_confidence, and — critically — the
     polarity of the cited claim text) rather than asking the provider to
     self-report a label. The provider (mock or real) is not trusted to
     self-report a label; this function is the single place that decides.
+
+    v2.9 — relevance_scores (retrieval score per evidence id, e.g. from
+    services/qa_engine/retrieval.py's IDF scoring) is optional and, when
+    provided, gates which negative/mixed claims are allowed to trigger a
+    downgrade: only a claim whose strongest citation scores at least
+    RELEVANCE_DOMINANCE_RATIO of the best-scoring citation anywhere in this
+    context counts toward negative_ratio. This directly targets the v2.8
+    finding — a fact sharing one weak, incidental token with the question
+    could out-vote (or tie) the actual intended evidence purely by being
+    negatively phrased. Facts, claims, or context with no relevance_scores
+    provided fall back to the original v2.2 behavior exactly (every cited
+    claim counted equally) — fully backward compatible.
     """
     if evidence_coverage <= 0.0:
         return FitBucket.GAP
@@ -86,8 +111,22 @@ def bucket_from_signals(
     if claims:
         cited = [c for c in claims if c.evidence_refs]
         if cited:
-            polarities = [_claim_polarity(c.text) for c in cited]
-            negative_ratio = polarities.count("negative") / len(cited)
+            if relevance_scores:
+                best_score = max(
+                    (relevance_scores.get(ref, 0.0) for c in cited for ref in c.evidence_refs),
+                    default=0.0,
+                )
+                dominant = [
+                    c for c in cited
+                    if best_score <= 0
+                    or _claim_relevance(c, relevance_scores) >= RELEVANCE_DOMINANCE_RATIO * best_score
+                ]
+                voting_claims = dominant or cited
+            else:
+                voting_claims = cited
+
+            polarities = [_claim_polarity(c.text) for c in voting_claims]
+            negative_ratio = polarities.count("negative") / len(voting_claims)
             mixed_count = polarities.count("mixed")
             if negative_ratio >= 0.5:
                 return FitBucket.GAP

@@ -1,6 +1,6 @@
 ### Trajectory — baseline_plain — q01
 
-**07:00:27 · generate**
+**07:30:44 · generate**
 - input: What did you build at Jinn Labs to handle multi-camera video ingestion, and roughly how many streams does it process?
 - action: call provider with zero context, zero verification
 - observation: I believe my track record speaks directly to this question. When it comes to build and camera and handle, I have always taken a proactive, results-driven approach and delivered measurable impact. I am confident this reflects who I am professionally.

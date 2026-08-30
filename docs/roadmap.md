@@ -145,17 +145,36 @@ evidence for the other. **Not adopted**; shipped retrieval behavior is
 unchanged. See docs/improvement_changelog.md (Iteration 13),
 docs/evaluation_v2.md, docs/hot_take.md's v2.8 addendum.
 
-## v2.9+ — deferred  ·  not started
+## v2.9 — relevance-weighted polarity, tried two ways, both rejected  ·  **built**
 
-- Relevance-weighted polarity checking — the real fix v2.8 points to:
-  weight the negation/polarity vote by how relevant each citation actually
-  is (its retrieval score), rather than an inclusion-bar change that
-  treats every retrieved fact as equally trustworthy. Needs retrieval
-  relevance scores threaded through to the bucketing decision — a larger
-  architectural change than fits one version's scope, not attempted
-  reactively in v2.8.
+Implemented the fix v2.8 pointed to: IDF-weighted retrieval scoring
+(`build_idf_table()`, `retrieve_idf()`) and a relevance-dominance gate on
+the polarity vote (`bucket_from_signals(..., relevance_scores=...)`).
+Tested both against the full benchmark. IDF reordering changed rank but
+not inclusion (a fact ranked #2 is still retrieved and cited under a
+generous top-k) — no effect. The dominance gate fixed req12, and flipped
+req14 — the single highest-stakes requirement in the benchmark — into a
+dangerous overclaim, because the correct gap-stating fact scored lower by
+IDF than an unrelated fact cited alongside it. **Not adopted.** Both
+tools stay in the codebase at safe, unused-by-default configurations.
+**Conclusion**: two independent heuristic fixes for req07/req12 have now
+failed for the same structural reason — lexical/statistical relevance
+scoring cannot reliably identify "the fact that actually settles this
+question." This is a real ceiling on the lexical-retrieval approach, not a
+tuning problem; the next real step needs semantic judgment (a real LLM
+call), not a third heuristic. See docs/improvement_changelog.md
+(Iteration 14-15), docs/evaluation_v2.md, docs/hot_take.md's v2.9 addendum.
+
+## v2.10+ — deferred  ·  not started
+
+- req07/req12 stay open pending real semantic relevance judgment (a real
+  LLM call scoring "does this fact actually address this requirement"),
+  which needs a provider API key — not another lexical heuristic. This is
+  now a well-evidenced architectural boundary (v2.8-v2.9), not an
+  unexplored option.
 - Automatic belief inference from raw unstructured text (replacing v1/v2's
-  hand-seeded beliefs) with an LLM pass plus counter-evidence search.
+  hand-seeded beliefs) with an LLM pass plus counter-evidence search — the
+  same missing ingredient (real semantic judgment) as the item above.
 - Extend document generation to other types (SOP, research statement,
   short-answer set) and to a *named* target opportunity (a real
   `ApplicationIntentModel`, not just a generic-role system prompt).
@@ -164,8 +183,8 @@ docs/evaluation_v2.md, docs/hot_take.md's v2.8 addendum.
   directly, since it was never the shipped path; hybrid already achieves
   the safety guarantee semantic-alone doesn't.
 - req11 (genuinely low retrieval confidence, 0.51) and req14 (the real gap
-  case, system says `partial`, a safe underclaim) remain open — both
-  already understood, neither a new finding.
+  case, system says `partial` on the shipped default, a safe underclaim)
+  remain open — both already understood, neither a new finding.
 - `resume.md` was checked for the same conflation pattern (grepped for
   IITACB/committee/secretariat/role-specific framing) and found clean —
   its one "Secretariat" mention is the same legitimate "Cabinet

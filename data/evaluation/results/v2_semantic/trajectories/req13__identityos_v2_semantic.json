@@ -3,7 +3,7 @@
   "system_name": "identityos_v2_semantic",
   "steps": [
     {
-      "timestamp": "2026-08-30T07:00:43.993963Z",
+      "timestamp": "2026-08-30T07:31:00.798385Z",
       "stage": "retrieve",
       "input_summary": "Languages — English, Hindi, Kannada preferred",
       "action": "embedding-similarity retrieval (fastembed): top 8 facts, 0 beliefs",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T07:00:43.994202Z",
+      "timestamp": "2026-08-30T07:31:00.798594Z",
       "stage": "generate",
       "input_summary": "Languages — English, Hindi, Kannada preferred",
       "action": "call provider with cited, confidence-annotated context",
@@ -23,7 +23,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T07:00:43.994367Z",
+      "timestamp": "2026-08-30T07:31:00.798745Z",
       "stage": "verify",
       "input_summary": "[dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet fluent in Kannada. [resume:043] (verified fact) Artificial Intelligence, Deep Learning, Machine Learning, Image Processing, Computer Vision, Natural Language Processing. [resume:044] (verified fact) Augmented Reality, ARCore, Large Language Models, VLMs, RAG, MCP, LangChain. [resume:024] (verified fact) Software Engineer, Amdocs, Pune India, Aug 2020 - Feb 2021, on Billing and RTB teams.",
       "action": "per-sentence grounding check (same verifier as lexical identityos_v2)",
@@ -33,7 +33,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T07:00:43.994373Z",
+      "timestamp": "2026-08-30T07:31:00.798751Z",
       "stage": "bucket",
       "input_summary": "[dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet fluent in Kannada. [resume:043] (verified fact) Artificial Intelligence, Deep Learning, Machine Learning, Image Processing, Computer Vision, Natural Language Processing. [resume:044] (verified fact) Augmented Reality, ARCore, Large Language Models, VLMs, RAG, MCP, LangChain. [resume:024] (verified fact) Software Engineer, Amdocs, Pune India, Aug 2020 - Feb 2021, on Billing and RTB teams.",
       "action": "derive fit bucket from coverage+confidence+polarity (same bucketing.py as lexical)",

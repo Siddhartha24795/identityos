@@ -311,28 +311,83 @@ behavior change) because it's a legitimate, tested knob for future work —
 see docs/roadmap.md v2.9 for the fix this actually points to
 (relevance-weighted polarity checking, not a blanket inclusion-bar change).
 
+## v2.9: the "real fix" from v2.8, tried, and also rejected
+
+v2.8 named the fix that should work: weight the polarity vote by how
+relevant each citation actually is, instead of a blanket inclusion-bar
+change. Implemented it two ways, both tested against the full benchmark
+before trusting either:
+
+1. **IDF-weighted retrieval ranking** (`build_idf_table()`,
+   `retrieve_idf()`, `services/qa_engine/retrieval.py`) — down-weight
+   common tokens ("management," appears in many facts) relative to
+   distinctive ones ("stakeholder," appears in one). This changed *rank
+   order* correctly (the genuinely relevant fact for req07 does score
+   higher than the irrelevant one) but didn't change what gets *included*:
+   with a generous top-k, a fact ranked #2 is still retrieved and still
+   cited, so reordering alone doesn't stop the noise.
+
+2. **Relevance-dominance gating** (`bucket_from_signals(...,
+   relevance_scores=...)`, optional parameter, backward compatible) — a
+   negative/mixed citation only votes toward a downgrade if its IDF score
+   is at least half the strongest citation's score in that context.
+
+| Metric | shipped default | tested (relevance-dominance gating) |
+|---|---|---|
+| Agreement rate | **0.71** | 0.71 (unchanged) |
+| Dangerous overclaim rate | **0.00** | **0.14** (2 of 14) |
+
+req12 became a full exact match — the gate worked as intended there. But
+**req14 — the single highest-stakes case in the whole benchmark — flipped
+from a safe `partial` to a dangerous `met_or_better`**, because the fact
+correctly stating the professional-body gap scored *lower* by IDF than
+another, less central fact retrieved alongside it, so the gate excluded
+the correct negative vote. req09 broke the same way. req07 wasn't even
+fixed. **Not adopted** — shipped behavior is unaffected (verified via the
+same eval harness, not just unit tests).
+
+**The conclusion this points to, stated plainly: two independent,
+reasonably-motivated heuristic fixes (v2.8's inclusion threshold, v2.9's
+relevance weighting) both failed for a structurally similar reason** — a
+purely lexical/statistical relevance signal is not a reliable proxy for
+"is this the semantically central evidence for this specific
+requirement." A fact can score highly by coincidence and score low for
+the right reasons. This isn't a case of picking the wrong threshold or
+weighting formula; it's evidence that the fix these two cases actually
+need is semantic judgment, which lexical scoring cannot provide by
+construction. See docs/hot_take.md for the full argument.
+
 ## What's still wrong (not hidden)
 
 **req07, req11, req12, req14 still don't reach an exact bucket match under
-the shipped default** (4 of 14, down from 6). **req03, req05, and req06
-are now fully fixed** (v2.6-v2.7, above) — no longer on this list. Of the
-remaining four, three now have a specific, understood cause rather than a
-generic "nuance" label:
+the shipped default** (4 of 14, down from 6, unchanged since v2.7).
+**req03, req05, and req06 are now fully fixed** (v2.6-v2.7, above) — no
+longer on this list. Of the remaining four, three now have a specific,
+understood cause rather than a generic "nuance" label:
 
-- **req07, req12**: diagnosed in v2.8, above — a weakly-relevant fact with
-  an unrelated negation marker gets cited alongside the real evidence. The
-  general fix (raise the lexical inclusion bar) was tested and rejected
-  because it broke req08/req09 in the process. Open for v2.9
-  (relevance-weighted polarity checking).
+- **req07, req12**: diagnosed in v2.8 — a weakly-relevant fact with an
+  unrelated negation marker gets cited alongside the real evidence. Two
+  independent fixes were tested against the full benchmark (v2.8: raise
+  the lexical inclusion bar; v2.9: relevance-weighted polarity gating) and
+  both rejected — each fixed part of this pair while introducing a *new*
+  dangerous overclaim elsewhere (req08/req09 in v2.8; req09/req14 in
+  v2.9). Left unfixed deliberately, with the conclusion this points to
+  (lexical relevance scoring has hit a real ceiling here) recorded in
+  docs/hot_take.md rather than patched around a third time.
 - **req11**: genuinely low retrieval confidence (0.51, just under the 0.6
   threshold) rather than a negation false-positive — the honest "weak but
   real evidence" case the confidence threshold exists to catch.
 - **req14**: the real `gap` case; system says `partial` (safe underclaim,
-  not a match) — already understood since v2.1.
+  not a match) — already understood since v2.1, and confirmed twice more
+  fragile than it looks: both v2.8 and v2.9's rejected fixes broke it in
+  different ways when tested, which is exactly why testing every claim
+  against the full benchmark before shipping anything matters most on the
+  cases that matter most.
 
-None of the remaining four are dangerous overclaims — the metric that
-matters most stays at 0.00 under both lexical and hybrid, through three
-consecutive real corpus changes now.
+None of the remaining four are dangerous overclaims *on the shipped
+default* — the metric that matters most stays at 0.00 under both lexical
+and hybrid, through three consecutive real corpus changes and two rejected
+retrieval experiments now.
 
 ## What this run does and doesn't prove
 

@@ -256,6 +256,38 @@ threshold. We didn't ship the fix, and we didn't discover this by
 reasoning about it — only by running the one experiment that would have
 looked like a strict win if we'd stopped at the two cases we started from.
 
+## v2.9 addendum: the real fix, tried properly, also didn't work — and that's the finding
+
+v2.8 named what should have been the real fix: don't blanket-exclude weak
+matches, *weight* the polarity vote by how relevant each citation actually
+is. Built it two ways — IDF-weighted retrieval scoring, and a
+relevance-dominance gate on the polarity vote — and tested both against
+the full benchmark before trusting either, exactly the discipline v2.8
+established.
+
+Reordering by IDF correctly ranked the relevant fact above the irrelevant
+one for req07, and changed nothing that mattered: with a generous top-k,
+a fact ranked second is still retrieved and still cited. Rank isn't
+inclusion. The relevance-dominance gate, which does affect inclusion,
+fixed req12 — and flipped **req14, the single highest-stakes requirement
+in the entire benchmark**, from a safe `partial` into a dangerous
+`met_or_better`, because the fact stating the real professional-body gap
+scored *lower* by IDF than an unrelated fact retrieved alongside it. The
+gate excluded the correct negative vote for exactly the wrong reason.
+
+Two independently-motivated fixes, built two different ways, both failed
+on the same structural point: **a lexical or statistical relevance score
+is not a reliable stand-in for "is this the fact that actually settles the
+question."** A fact can score high by coincidence of vocabulary and score
+low for the exact evidence that matters. Neither failure was a tuning
+mistake — better thresholds or better weights wouldn't fix this, because
+the signal being weighted isn't the signal the decision actually needs.
+That's a boundary of what lexical retrieval can do here, not a bug in how
+we used it, and it's the strongest argument in this project for why the
+next real step is a system that can judge relevance semantically (a real
+LLM call, not a token-overlap proxy) rather than a fourth heuristic aimed
+at the same two requirements.
+
 ## The experiment we removed
 
 An earlier version of the hard-case scoring (services/evaluation/scoring.py)

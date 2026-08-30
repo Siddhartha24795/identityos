@@ -1,6 +1,6 @@
 ### Trajectory — baseline_plain — q08
 
-**07:00:27 · generate**
+**07:30:44 · generate**
 - input: Why should we choose you instead of another candidate?
 - action: call provider with zero context, zero verification
 - observation: I have consistently demonstrated strong ability in this area. When it comes to another and candidate and choose, I have always taken a proactive, results-driven approach and delivered measurable impact. I am confident this reflects who I am professionally.

@@ -3,7 +3,7 @@
   "system_name": "identityos_v1",
   "steps": [
     {
-      "timestamp": "2026-08-30T07:00:27.626327Z",
+      "timestamp": "2026-08-30T07:30:44.704729Z",
       "stage": "classify",
       "input_summary": "Do you have experience building or running a professional membership organization?",
       "action": "use declared question.type (v1 simplification, not a learned classifier)",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T07:00:27.627171Z",
+      "timestamp": "2026-08-30T07:30:44.705611Z",
       "stage": "retrieve",
       "input_summary": "Do you have experience building or running a professional membership organization?",
       "action": "lexical retrieval over Digital Self: top 6 facts, 1 beliefs",
@@ -23,7 +23,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T07:00:27.627349Z",
+      "timestamp": "2026-08-30T07:30:44.705792Z",
       "stage": "generate",
       "input_summary": "Do you have experience building or running a professional membership organization?",
       "action": "call provider with structured, citation-tagged, confidence-annotated context",
@@ -33,7 +33,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T07:00:27.627499Z",
+      "timestamp": "2026-08-30T07:30:44.705919Z",
       "stage": "verify",
       "input_summary": "[dossier_excerpts:009] (verified fact) States that the IITACB Managing Committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to a record of building or running a professional membership body. [dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record. [dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA. [dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
       "action": "check every sentence for an explicit citation, else a lexical grounding match",
@@ -43,7 +43,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T07:00:27.627510Z",
+      "timestamp": "2026-08-30T07:30:44.705929Z",
       "stage": "complete",
       "input_summary": "q17",
       "action": "return final answer",

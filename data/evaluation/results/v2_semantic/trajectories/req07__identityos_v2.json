@@ -3,7 +3,7 @@
   "system_name": "identityos_v2",
   "steps": [
     {
-      "timestamp": "2026-08-30T07:00:43.582248Z",
+      "timestamp": "2026-08-30T07:31:00.380443Z",
       "stage": "retrieve",
       "input_summary": "Stakeholder management",
       "action": "lexical retrieval over Digital Self: top 3 facts, 0 beliefs",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T07:00:43.582348Z",
+      "timestamp": "2026-08-30T07:31:00.383593Z",
       "stage": "generate",
       "input_summary": "Stakeholder management",
       "action": "call provider with cited, confidence-annotated context",
@@ -23,7 +23,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T07:00:43.582476Z",
+      "timestamp": "2026-08-30T07:31:00.383731Z",
       "stage": "verify",
       "input_summary": "[dossier_narrative:011] (verified fact) States that the practice of aligning many stakeholder types around one roadmap functions as the alumni-and-institution interface the IITACB CEO role requires, in miniature. [dossier_narrative:012] (verified fact) States explicitly that full institutional P&L management at IITACB's scale would be a step up from cost-side ownership at Jinn Labs, and that this is experience not yet held. [resume:061] (verified fact) Dual-processor smartwatch power management architecture at Qualcomm, increasing battery backup by about 40%. Stakeholder management",
       "action": "per-sentence grounding check (same verifier as v1)",
@@ -33,7 +33,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T07:00:43.582498Z",
+      "timestamp": "2026-08-30T07:31:00.383737Z",
       "stage": "bucket",
       "input_summary": "[dossier_narrative:011] (verified fact) States that the practice of aligning many stakeholder types around one roadmap functions as the alumni-and-institution interface the IITACB CEO role requires, in miniature. [dossier_narrative:012] (verified fact) States explicitly that full institutional P&L management at IITACB's scale would be a step up from cost-side ownership at Jinn Labs, and that this is experience not yet held. [resume:061] (verified fact) Dual-processor smartwatch power management architecture at Qualcomm, increasing battery backup by about 40%. Stakeholder management",
       "action": "derive fit bucket from coverage+confidence, not a self-reported label",
