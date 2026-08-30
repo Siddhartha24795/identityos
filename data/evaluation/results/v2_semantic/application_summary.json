@@ -4,7 +4,7 @@
   "embedding_provider": "fastembed",
   "digital_self_version": 1,
   "n_requirements": 14,
-  "generated_at": "2026-08-30T04:29:03.958035+00:00",
+  "generated_at": "2026-08-30T04:41:28.553302+00:00",
   "scores": {
     "baseline_plain": {
       "n_requirements": 14,
@@ -26,8 +26,8 @@
     },
     "identityos_v2": {
       "n_requirements": 14,
-      "agreements": 6,
-      "agreement_rate": 0.429,
+      "agreements": 8,
+      "agreement_rate": 0.571,
       "avg_evidence_coverage": 0.845,
       "non_met_requirements": 4,
       "dangerous_overclaims": 0,
@@ -44,8 +44,8 @@
     },
     "identityos_v2_hybrid": {
       "n_requirements": 14,
-      "agreements": 8,
-      "agreement_rate": 0.571,
+      "agreements": 10,
+      "agreement_rate": 0.714,
       "avg_evidence_coverage": 0.988,
       "non_met_requirements": 4,
       "dangerous_overclaims": 0,
@@ -331,8 +331,8 @@
       "req03": {
         "real_assessment": "met",
         "real_bucket": "met_or_better",
-        "system_bucket": "partial",
-        "agrees": false,
+        "system_bucket": "met_or_better",
+        "agrees": true,
         "dangerous_overclaim": false,
         "evidence_coverage": 1.0,
         "overall_confidence": 0.892
@@ -358,11 +358,11 @@
       "req06": {
         "real_assessment": "met",
         "real_bucket": "met_or_better",
-        "system_bucket": "partial",
-        "agrees": false,
+        "system_bucket": "met_or_better",
+        "agrees": true,
         "dangerous_overclaim": false,
         "evidence_coverage": 1.0,
-        "overall_confidence": 0.827
+        "overall_confidence": 0.892
       },
       "req07": {
         "real_assessment": "met",
@@ -425,7 +425,7 @@
         "agrees": true,
         "dangerous_overclaim": false,
         "evidence_coverage": 1.0,
-        "overall_confidence": 0.745
+        "overall_confidence": 0.827
       },
       "req14": {
         "real_assessment": "gap",
@@ -434,7 +434,7 @@
         "agrees": false,
         "dangerous_overclaim": false,
         "evidence_coverage": 1.0,
-        "overall_confidence": 0.99
+        "overall_confidence": 0.78
       }
     },
     "identityos_v2_semantic": {
@@ -587,8 +587,8 @@
       "req03": {
         "real_assessment": "met",
         "real_bucket": "met_or_better",
-        "system_bucket": "partial",
-        "agrees": false,
+        "system_bucket": "met_or_better",
+        "agrees": true,
         "dangerous_overclaim": false,
         "evidence_coverage": 1.0,
         "overall_confidence": 0.892
@@ -614,11 +614,11 @@
       "req06": {
         "real_assessment": "met",
         "real_bucket": "met_or_better",
-        "system_bucket": "partial",
-        "agrees": false,
+        "system_bucket": "met_or_better",
+        "agrees": true,
         "dangerous_overclaim": false,
         "evidence_coverage": 1.0,
-        "overall_confidence": 0.827
+        "overall_confidence": 0.892
       },
       "req07": {
         "real_assessment": "met",
@@ -681,7 +681,7 @@
         "agrees": true,
         "dangerous_overclaim": false,
         "evidence_coverage": 1.0,
-        "overall_confidence": 0.745
+        "overall_confidence": 0.827
       },
       "req14": {
         "real_assessment": "gap",
@@ -690,7 +690,7 @@
         "agrees": false,
         "dangerous_overclaim": false,
         "evidence_coverage": 1.0,
-        "overall_confidence": 0.99
+        "overall_confidence": 0.78
       }
     }
   }

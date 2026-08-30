@@ -207,8 +207,28 @@ correcting a mistake and tuning a benchmark: one generalizes to content
 nothing has tested yet, the other doesn't. Re-reading the regenerated
 output surfaced a near-identical mistake in a *different* source file,
 confirming this is a real authoring pattern worth watching for, not a
-one-off — named as the next item rather than fixed reactively in the same
-pass.
+one-off.
+
+## v2.7 addendum: applying the same correction where it was actually found
+
+Fixed the near-identical conflation named at the end of v2.6, in the file
+where it actually was (`dossier_excerpts.md`), the same way: split each
+conflated bullet into a general fact and a separately-tagged
+application-specific one. The regenerated letter is now clean of every
+flagged phrase across two versions of this fix. The requirement-fit
+benchmark moved again — req03 and req06 became exact matches, hybrid's
+agreement rate rose from 0.57 to 0.71 — while its dangerous overclaim rate
+held at 0.00 through a *second* consecutive real corpus change.
+
+Two fixes of the identical shape, in two different files, both holding the
+safety metric steady while measurably improving the accuracy one, is
+stronger evidence than either fix alone that the mechanism — not luck, not
+a threshold tuned to one snapshot — is what's doing the work. It's also a
+concrete answer to "how do you know you're not just overfitting to what
+you've already seen": the second fix was found by re-reading output *after
+already believing the problem was solved*, and the discipline that caught
+it (keep reading, don't declare victory at a passing score) is repeatable,
+not a one-time insight.
 
 ## The experiment we removed
 

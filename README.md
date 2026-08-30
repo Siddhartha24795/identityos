@@ -1,4 +1,4 @@
-# IdentityOS — v2.6
+# IdentityOS — v2.7
 
 **An autonomous representative that answers application questions,
 assesses job-requirement fit, and generates application documents on a
@@ -8,11 +8,12 @@ of fabrication.**
 Built for the micro1 Agentic Workflows Hackathon, against the full brief
 preserved in `PROMPT.md`. This repo builds v1 (Q&A), v2 (requirement-fit
 assessment against a real, adjudicated application, iterated through
-v2.4), and v2.5-v2.6 (document generation + a corpus authoring correction)
-of that brief — see [docs/roadmap.md](docs/roadmap.md) for what's deferred
-to v2.7-v5 and why. Prior versions frozen at `../identityos-v1/`,
-`../identityos-v2/`, `../identityos-v2.1/`, `../identityos-v2.2/`,
-`../identityos-v2.3/`, `../identityos-v2.4/`, `../identityos-v2.5/`.
+v2.4), and v2.5-v2.7 (document generation + two corpus authoring
+corrections) of that brief — see [docs/roadmap.md](docs/roadmap.md) for
+what's deferred to v2.8-v5 and why. Prior versions frozen at
+`../identityos-v1/`, `../identityos-v2/`, `../identityos-v2.1/`,
+`../identityos-v2.2/`, `../identityos-v2.3/`, `../identityos-v2.4/`,
+`../identityos-v2.5/`, `../identityos-v2.6/`.
 
 ## Who has this problem, and why it's worth solving
 
@@ -73,7 +74,7 @@ but does need one-time network access. Output per run:
 To get a qualitative read with a real model: copy `.env.example` to `.env`,
 set `ANTHROPIC_API_KEY` or `OPENAI_API_KEY`, then `make eval-real` / `make eval-v2-real`.
 
-Run the smoke test suite: `make test` (23 tests, <1s, no keys/downloads needed).
+Run the smoke test suite: `make test` (24 tests, <1s, no keys/downloads needed).
 
 ## Results (reference runs, `PROVIDER=mock`)
 
@@ -121,12 +122,12 @@ that the polarity check from v2.2 couldn't tell apart from the real thing.
 We did not tune this until it looked better; at the time, lexical retrieval
 stayed the default. Full trade-off: [docs/evaluation_v2.md](docs/evaluation_v2.md).
 
-**v2.4 — hybrid retrieval, now the recommended strategy:**
+**v2.4-v2.7 — hybrid retrieval, now the recommended strategy:**
 
 | Metric | identityos_v2 (lexical) | identityos_v2_semantic (fastembed) | identityos_v2_hybrid |
 |---|---|---|---|
-| Evidence coverage | 0.84 | 0.99 | **0.99** |
-| Assessment agreement rate | 0.43 | 0.64 | **0.57** |
+| Evidence coverage | 0.85 | 0.99 | **0.99** |
+| Assessment agreement rate | 0.57 | 0.64 | **0.71** |
 | Dangerous overclaim rate | **0.00** | 0.50 | **0.00** |
 
 Diagnosing *why* v2.3 regressed (noise only appeared when semantic
@@ -134,21 +135,22 @@ overrode a working lexical answer, never when filling a real gap) led
 directly to the fix: lexical first, semantic only as a fallback when
 lexical finds nothing. Verified requirement-by-requirement, not assumed —
 all 12 requirements lexical could already answer are byte-identical to
-pure lexical output. Best safety-plus-agreement combination of all five
-systems — semantic-only's numbers above are *after* v2.6's corpus fix, and
-its dangerous-overclaim rate got *worse* (0.25 -> 0.50, on different
-requirements), which is further confirmation semantic-alone was correctly
-never promoted, not a new problem. All three retrieval arms (lexical,
-semantic, hybrid) stay in the harness as permanent comparison points. Full
-story: [docs/evaluation_v2.md](docs/evaluation_v2.md).
+pure lexical output. Two consecutive corpus authoring corrections (v2.6,
+v2.7 — see below) then raised hybrid's agreement rate from 0.50 to 0.71
+while its dangerous-overclaim rate held at 0.00 through both real corpus
+changes — the clearest evidence yet the fallback-only design isn't fit to
+one snapshot of data. identityos_v2_semantic's dangerous-overclaim rate,
+by contrast, *worsened* under the same corpus changes (0.25 -> 0.50, on
+different requirements each time), which is why it stays a comparison arm,
+never the shipped default. Full story: [docs/evaluation_v2.md](docs/evaluation_v2.md).
 
-**v2.5-v2.6 — document generation, the first real generated artifact:**
+**v2.5-v2.7 — document generation, the first real generated artifact:**
 
 | Metric | baseline_plain | baseline_rag | identityos_v2_5 |
 |---|---|---|---|
-| Evidence coverage | 0.00 | 0.00 | **0.95** |
-| Unsupported claim rate | 1.00 | 1.00 | **0.05** |
-| Repeated-evidence rate (narrative diversity across sections) | n/a | n/a | **0.44** |
+| Evidence coverage | 0.00 | 0.00 | **0.91** |
+| Unsupported claim rate | 1.00 | 1.00 | **0.10** |
+| Repeated-evidence rate (narrative diversity across sections) | n/a | n/a | **0.39** |
 
 A 4-section cover letter, generated with the same hybrid retrieval and
 verification as v2 plus a simple narrative-state rule (prefer not citing
@@ -159,11 +161,12 @@ case, strategy narrative written for one specific prior job application,
 showing up in what was supposed to be a generic letter). v2.6 traced the
 root cause to an actual authoring error (five bullets conflating general
 statements with role-specific comparisons in one sentence, not a missing
-classifier) and fixed it — verified it improved v2's own numbers as a side
-effect, not just the letter. Re-reading the fixed letter found a
-near-identical mistake in a different source file, named as the next open
-item rather than expanded into this version. Full story, and the actual
-generated letters: [docs/evaluation_documents.md](docs/evaluation_documents.md).
+classifier) and fixed it in one source file — verified it improved v2's
+own numbers as a side effect, not just the letter. Re-reading the fixed
+letter found a near-identical mistake in a *different* source file; v2.7
+applied the identical fix there too, and re-reading again confirmed the
+letter is now clean of every flagged phrase across both rounds. Full
+story, and the actual generated letters: [docs/evaluation_documents.md](docs/evaluation_documents.md).
 
 ## Improvement changelog
 
@@ -196,7 +199,11 @@ still be narrative written for a different, specific context. v2.6: the
 fix wasn't a smarter classifier, it was correcting an actual authoring
 mistake — and doing so consistently (all five affected bullets, not just
 the visible one) is what separates a correction from tuning a benchmark.
-Full writeup, including what's still unfixed: [docs/hot_take.md](docs/hot_take.md).
+v2.7: applying the identical correction to a second file, found by
+continuing to read the output after already believing the problem was
+solved, is what actually demonstrates the fix generalizes rather than
+happening to work once. Full writeup, including what's still unfixed:
+[docs/hot_take.md](docs/hot_take.md).
 
 ## Hackathon compliance self-check
 

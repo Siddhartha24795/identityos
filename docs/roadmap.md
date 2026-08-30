@@ -116,26 +116,44 @@ a near-identical conflation in a different source file. See
 docs/improvement_changelog.md (Iteration 10-11), docs/evaluation_v2.md,
 docs/evaluation_documents.md, docs/hot_take.md's v2.6 addendum.
 
-## v2.7+ — deferred  ·  not started
+## v2.7 — corpus authoring correction, second file  ·  **built**
 
-- Audit `dossier_excerpts.md`'s "SELF-ASSESSED GAP" section for the same
-  general-statement-conflated-with-application-specific-framing pattern
-  found and fixed in `dossier_narrative.md` (v2.6) — found on re-reading
-  the v2.6 regenerated letter, not yet fixed.
+Applied the exact v2.6 audit to `dossier_excerpts.md`'s "SELF-ASSESSED
+GAP" section — the file where v2.6 itself had found a near-identical
+conflation on re-reading the regenerated letter. Split a general
+capability-gap fact from "the committee should not be persuaded..."
+(IITACB's Managing Committee), and a general language-fluency fact from a
+relocation commitment made specifically for the IITACB role. Result:
+hybrid retrieval's agreement rate 0.57 -> 0.71 (req03 and req06 now exact
+matches), dangerous overclaim rate held at 0.00 through a *second*
+consecutive real corpus change. Generated letter re-verified clean of
+every application-specific phrase flagged across v2.5-v2.6. See
+docs/improvement_changelog.md (Iteration 12), docs/evaluation_v2.md,
+docs/evaluation_documents.md, docs/hot_take.md's v2.7 addendum.
+
+## v2.8+ — deferred  ·  not started
+
 - Automatic belief inference from raw unstructured text (replacing v1/v2's
   hand-seeded beliefs) with an LLM pass plus counter-evidence search.
 - Extend document generation to other types (SOP, research statement,
   short-answer set) and to a *named* target opportunity (a real
   `ApplicationIntentModel`, not just a generic-role system prompt).
 - identityos_v2_semantic (standalone) remains unsafe as its own system
-  (dangerous overclaim rate 0.50 as of v2.6) — not a priority to fix
+  (dangerous overclaim rate 0.50 as of v2.6-v2.7) — not a priority to fix
   directly, since it was never the shipped path; hybrid already achieves
   the safety guarantee semantic-alone doesn't.
-- Six requirements (req03/06/07/11/12/14) still don't reach an exact bucket
-  match under hybrid — mostly a coarse-3-bucket-scale nuance problem, not
-  a retrieval problem. Would need either a finer-grained real assessment
-  scale or a smarter bucketing rule; not attempted yet because neither is
-  a quick fix and both need their own evaluation.
+- Four requirements (req07/11/12/14) still don't reach an exact bucket
+  match under hybrid, down from six at v2.5 — mostly a coarse-3-bucket-scale
+  nuance problem, not a retrieval problem. Would need either a
+  finer-grained real assessment scale or a smarter bucketing rule; not
+  attempted yet because neither is a quick fix and both need their own
+  evaluation.
+- `resume.md` was checked for the same conflation pattern (grepped for
+  IITACB/committee/secretariat/role-specific framing) and found clean —
+  its one "Secretariat" mention is the same legitimate "Cabinet
+  Secretariat" government body already distinguished in v2.6's test. No
+  further audit needed there; both files that actually had the defect
+  (from the IITACB dossier) are now fixed.
 
 ## v3 — Browser execution  ·  not started
 

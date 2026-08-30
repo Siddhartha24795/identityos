@@ -10,13 +10,13 @@
         {
           "id": "dossier_excerpts:001:ev1",
           "source_document": "dossier_excerpts.md",
-          "locator": "line 11",
+          "locator": "line 25",
           "snippet": "Named inventor, patent Application No. 202511076834, \"Generative AI based video codecs utilizing image-to-video generation\", filed through Samsung Research Noida and assigned to Samsung Electronics Co., Ltd.",
-          "extracted_at": "2026-08-31T13:48:30.056272Z"
+          "extracted_at": "2026-08-31T13:48:30.778084Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056293Z"
+      "added_at": "2026-08-31T13:48:30.778106Z"
     },
     {
       "id": "dossier_excerpts:002",
@@ -26,13 +26,13 @@
         {
           "id": "dossier_excerpts:002:ev1",
           "source_document": "dossier_excerpts.md",
-          "locator": "line 12",
+          "locator": "line 26",
           "snippet": "Siddhartha's stated inventorship contribution on this patent is 75%, with the remaining 25% attributed to a co-inventor who is not named in Siddhartha's own materials.",
-          "extracted_at": "2026-08-31T13:48:30.056302Z"
+          "extracted_at": "2026-08-31T13:48:30.778114Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056305Z"
+      "added_at": "2026-08-31T13:48:30.778118Z"
     },
     {
       "id": "dossier_excerpts:003",
@@ -42,13 +42,13 @@
         {
           "id": "dossier_excerpts:003:ev1",
           "source_document": "dossier_excerpts.md",
-          "locator": "line 13",
+          "locator": "line 27",
           "snippet": "Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group.",
-          "extracted_at": "2026-08-31T13:48:30.056310Z"
+          "extracted_at": "2026-08-31T13:48:30.778123Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056313Z"
+      "added_at": "2026-08-31T13:48:30.778125Z"
     },
     {
       "id": "dossier_excerpts:004",
@@ -58,13 +58,13 @@
         {
           "id": "dossier_excerpts:004:ev1",
           "source_document": "dossier_excerpts.md",
-          "locator": "line 14",
+          "locator": "line 28",
           "snippet": "Six years of unpaid guest sessions, mentoring, and hackathon judging across universities, described in the dossier as predating any formal title or compensation.",
-          "extracted_at": "2026-08-31T13:48:30.056317Z"
+          "extracted_at": "2026-08-31T13:48:30.778129Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056319Z"
+      "added_at": "2026-08-31T13:48:30.778132Z"
     },
     {
       "id": "dossier_excerpts:005",
@@ -74,45 +74,45 @@
         {
           "id": "dossier_excerpts:005:ev1",
           "source_document": "dossier_excerpts.md",
-          "locator": "line 16",
+          "locator": "line 30",
           "snippet": "Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.",
-          "extracted_at": "2026-08-31T13:48:30.056323Z"
+          "extracted_at": "2026-08-31T13:48:30.778136Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056326Z"
+      "added_at": "2026-08-31T13:48:30.778139Z"
     },
     {
       "id": "dossier_excerpts:006",
-      "text": "Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.",
+      "text": "Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA.",
       "category": "other",
       "evidence": [
         {
           "id": "dossier_excerpts:006:ev1",
           "source_document": "dossier_excerpts.md",
-          "locator": "line 19",
-          "snippet": "Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.",
-          "extracted_at": "2026-08-31T13:48:30.056332Z"
+          "locator": "line 33",
+          "snippet": "Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA.",
+          "extracted_at": "2026-08-31T13:48:30.778147Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056335Z"
+      "added_at": "2026-08-31T13:48:30.778149Z"
     },
     {
       "id": "dossier_excerpts:007",
-      "text": "Siddhartha's own dossier states he is fluent in English and Hindi but not yet in Kannada, and frames relocation plus Kannada learning as conditions he is committing to, not concessions being requested.",
+      "text": "Siddhartha's own dossier states he is fluent in English and Hindi but not yet fluent in Kannada.",
       "category": "other",
       "evidence": [
         {
           "id": "dossier_excerpts:007:ev1",
           "source_document": "dossier_excerpts.md",
-          "locator": "line 20",
-          "snippet": "Siddhartha's own dossier states he is fluent in English and Hindi but not yet in Kannada, and frames relocation plus Kannada learning as conditions he is committing to, not concessions being requested.",
-          "extracted_at": "2026-08-31T13:48:30.056339Z"
+          "locator": "line 34",
+          "snippet": "Siddhartha's own dossier states he is fluent in English and Hindi but not yet fluent in Kannada.",
+          "extracted_at": "2026-08-31T13:48:30.778153Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056341Z"
+      "added_at": "2026-08-31T13:48:30.778155Z"
     },
     {
       "id": "dossier_excerpts:008",
@@ -122,61 +122,93 @@
         {
           "id": "dossier_excerpts:008:ev1",
           "source_document": "dossier_excerpts.md",
-          "locator": "line 21",
+          "locator": "line 35",
           "snippet": "Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
-          "extracted_at": "2026-08-31T13:48:30.056348Z"
+          "extracted_at": "2026-08-31T13:48:30.778162Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056350Z"
+      "added_at": "2026-08-31T13:48:30.778164Z"
     },
     {
       "id": "dossier_excerpts:009",
-      "text": "Siddhartha's dossier states: \"I am a working generative-AI practitioner... I can tell a real deep-tech proposition from AI theatre before [an institution]'s name is on it,\" offered as a self-description of his professional judgment.",
-      "category": "other",
+      "text": "States that the IITACB Managing Committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to a record of building or running a professional membership body.",
+      "category": "application_specific",
       "evidence": [
         {
           "id": "dossier_excerpts:009:ev1",
           "source_document": "dossier_excerpts.md",
-          "locator": "line 24",
-          "snippet": "Siddhartha's dossier states: \"I am a working generative-AI practitioner... I can tell a real deep-tech proposition from AI theatre before [an institution]'s name is on it,\" offered as a self-description of his professional judgment.",
-          "extracted_at": "2026-08-31T13:48:30.056355Z"
+          "locator": "line 38",
+          "snippet": "States that the IITACB Managing Committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to a record of building or running a professional membership body.",
+          "extracted_at": "2026-08-31T13:48:30.778170Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056357Z"
+      "added_at": "2026-08-31T13:48:30.778172Z"
     },
     {
       "id": "dossier_excerpts:010",
-      "text": "Siddhartha's dossier states a preference for institution-building and zero-to-one problems, describing it as \"the only kind of problem I have ever been hired to solve.\"",
-      "category": "other",
+      "text": "States that relocating to Bengaluru and learning Kannada are conditions he is committing to for the IITACB CEO role specifically, not concessions being requested.",
+      "category": "application_specific",
       "evidence": [
         {
           "id": "dossier_excerpts:010:ev1",
           "source_document": "dossier_excerpts.md",
-          "locator": "line 25",
-          "snippet": "Siddhartha's dossier states a preference for institution-building and zero-to-one problems, describing it as \"the only kind of problem I have ever been hired to solve.\"",
-          "extracted_at": "2026-08-31T13:48:30.056361Z"
+          "locator": "line 39",
+          "snippet": "States that relocating to Bengaluru and learning Kannada are conditions he is committing to for the IITACB CEO role specifically, not concessions being requested.",
+          "extracted_at": "2026-08-31T13:48:30.778176Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056364Z"
+      "added_at": "2026-08-31T13:48:30.778179Z"
     },
     {
       "id": "dossier_excerpts:011",
-      "text": "Siddhartha's dossier states he replaced subjective judgement with eval-driven release discipline at Jinn Labs, tracking every claim as a metric release over release, and that he would apply the same discipline to any institution he leads.",
+      "text": "Siddhartha's dossier states: \"I am a working generative-AI practitioner... I can tell a real deep-tech proposition from AI theatre before [an institution]'s name is on it,\" offered as a self-description of his professional judgment.",
       "category": "other",
       "evidence": [
         {
           "id": "dossier_excerpts:011:ev1",
           "source_document": "dossier_excerpts.md",
-          "locator": "line 26",
-          "snippet": "Siddhartha's dossier states he replaced subjective judgement with eval-driven release discipline at Jinn Labs, tracking every claim as a metric release over release, and that he would apply the same discipline to any institution he leads.",
-          "extracted_at": "2026-08-31T13:48:30.056368Z"
+          "locator": "line 42",
+          "snippet": "Siddhartha's dossier states: \"I am a working generative-AI practitioner... I can tell a real deep-tech proposition from AI theatre before [an institution]'s name is on it,\" offered as a self-description of his professional judgment.",
+          "extracted_at": "2026-08-31T13:48:30.778185Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056370Z"
+      "added_at": "2026-08-31T13:48:30.778188Z"
+    },
+    {
+      "id": "dossier_excerpts:012",
+      "text": "Siddhartha's dossier states a preference for institution-building and zero-to-one problems, describing it as \"the only kind of problem I have ever been hired to solve.\"",
+      "category": "other",
+      "evidence": [
+        {
+          "id": "dossier_excerpts:012:ev1",
+          "source_document": "dossier_excerpts.md",
+          "locator": "line 43",
+          "snippet": "Siddhartha's dossier states a preference for institution-building and zero-to-one problems, describing it as \"the only kind of problem I have ever been hired to solve.\"",
+          "extracted_at": "2026-08-31T13:48:30.778192Z"
+        }
+      ],
+      "confidence": 0.99,
+      "added_at": "2026-08-31T13:48:30.778196Z"
+    },
+    {
+      "id": "dossier_excerpts:013",
+      "text": "Siddhartha's dossier states he replaced subjective judgement with eval-driven release discipline at Jinn Labs, tracking every claim as a metric release over release, and that he would apply the same discipline to any institution he leads.",
+      "category": "other",
+      "evidence": [
+        {
+          "id": "dossier_excerpts:013:ev1",
+          "source_document": "dossier_excerpts.md",
+          "locator": "line 44",
+          "snippet": "Siddhartha's dossier states he replaced subjective judgement with eval-driven release discipline at Jinn Labs, tracking every claim as a metric release over release, and that he would apply the same discipline to any institution he leads.",
+          "extracted_at": "2026-08-31T13:48:30.778200Z"
+        }
+      ],
+      "confidence": 0.99,
+      "added_at": "2026-08-31T13:48:30.778202Z"
     },
     {
       "id": "dossier_narrative:001",
@@ -188,11 +220,11 @@
           "source_document": "dossier_narrative.md",
           "locator": "line 35",
           "snippet": "Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical — it is 24x7 production accountability across live customer sites.",
-          "extracted_at": "2026-08-31T13:48:30.056436Z"
+          "extracted_at": "2026-08-31T13:48:30.778269Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056441Z"
+      "added_at": "2026-08-31T13:48:30.778272Z"
     },
     {
       "id": "dossier_narrative:002",
@@ -204,11 +236,11 @@
           "source_document": "dossier_narrative.md",
           "locator": "line 36",
           "snippet": "Credibility earned in two currencies: academic (IIT M.Tech, guest faculty across universities) and industrial (Samsung Research, Qualcomm, CTO of a venture shipping into live enterprise sites).",
-          "extracted_at": "2026-08-31T13:48:30.056446Z"
+          "extracted_at": "2026-08-31T13:48:30.778279Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056448Z"
+      "added_at": "2026-08-31T13:48:30.778281Z"
     },
     {
       "id": "dossier_narrative:003",
@@ -220,11 +252,11 @@
           "source_document": "dossier_narrative.md",
           "locator": "line 37",
           "snippet": "Joined Jinn Labs as CTO to build from near-zero, comfortable with ambiguity, unfunded mandates, and building the function before the headcount exists.",
-          "extracted_at": "2026-08-31T13:48:30.056452Z"
+          "extracted_at": "2026-08-31T13:48:30.778285Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056455Z"
+      "added_at": "2026-08-31T13:48:30.778289Z"
     },
     {
       "id": "dossier_narrative:004",
@@ -236,11 +268,11 @@
           "source_document": "dossier_narrative.md",
           "locator": "line 38",
           "snippet": "Defined technical strategy, architecture and organisation-wide evaluation frameworks at Jinn Labs, building governance structures where none existed; the same machinery run earlier at student scale heading four chapters simultaneously and organising festivals at KNIT Sultanpur.",
-          "extracted_at": "2026-08-31T13:48:30.056461Z"
+          "extracted_at": "2026-08-31T13:48:30.778293Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056464Z"
+      "added_at": "2026-08-31T13:48:30.778295Z"
     },
     {
       "id": "dossier_narrative:005",
@@ -252,11 +284,11 @@
           "source_document": "dossier_narrative.md",
           "locator": "line 39",
           "snippet": "Routine practice of aligning research scientists, infrastructure engineers, product owners, enterprise customers and executive sponsors around one roadmap. Six years of running an unpaid academia-industry bridge.",
-          "extracted_at": "2026-08-31T13:48:30.056468Z"
+          "extracted_at": "2026-08-31T13:48:30.778299Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056472Z"
+      "added_at": "2026-08-31T13:48:30.778301Z"
     },
     {
       "id": "dossier_narrative:006",
@@ -268,11 +300,11 @@
           "source_document": "dossier_narrative.md",
           "locator": "line 40",
           "snippet": "Owned the cost side with rigour: order-of-magnitude inference cost reduction through quantization, pruning, distillation and parameter-efficient adaptation, and ownership of the edge-versus-cloud partitioning strategy, a direct unit-economics decision.",
-          "extracted_at": "2026-08-31T13:48:30.056476Z"
+          "extracted_at": "2026-08-31T13:48:30.778305Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056478Z"
+      "added_at": "2026-08-31T13:48:30.778307Z"
     },
     {
       "id": "dossier_narrative:007",
@@ -284,11 +316,11 @@
           "source_document": "dossier_narrative.md",
           "locator": "line 41",
           "snippet": "Accustomed to explaining deep technology to non-technical boards and to translating executive intent into engineering commitments, built over six years of guest lectures, mentoring programmes and hackathon judging panels plus representing India at the Japan Hackathon 2021.",
-          "extracted_at": "2026-08-31T13:48:30.056501Z"
+          "extracted_at": "2026-08-31T13:48:30.778311Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056504Z"
+      "added_at": "2026-08-31T13:48:30.778313Z"
     },
     {
       "id": "dossier_narrative:008",
@@ -300,11 +332,11 @@
           "source_document": "dossier_narrative.md",
           "locator": "line 42",
           "snippet": "Captain and Sports Secretary are roles given by peers and cannot be self-appointed. Professional practice of running blameless postmortems and publishing metrics that can embarrass the author. Believes institutional temperament means the institution outranks the incumbent.",
-          "extracted_at": "2026-08-31T13:48:30.056509Z"
+          "extracted_at": "2026-08-31T13:48:30.778317Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056511Z"
+      "added_at": "2026-08-31T13:48:30.778319Z"
     },
     {
       "id": "dossier_narrative:009",
@@ -316,11 +348,11 @@
           "source_document": "dossier_narrative.md",
           "locator": "line 45",
           "snippet": "States a vision specifically for the IITACB CEO role: IITACB as India's default gateway to IIT research capability, brought through the academic-and-industrial credibility described above.",
-          "extracted_at": "2026-08-31T13:48:30.056517Z"
+          "extracted_at": "2026-08-31T13:48:30.778326Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056519Z"
+      "added_at": "2026-08-31T13:48:30.778329Z"
     },
     {
       "id": "dossier_narrative:010",
@@ -332,11 +364,11 @@
           "source_document": "dossier_narrative.md",
           "locator": "line 46",
           "snippet": "States that comfort with ambiguity and unfunded mandates is precisely the condition of the IITACB Secretariat being stood up.",
-          "extracted_at": "2026-08-31T13:48:30.056523Z"
+          "extracted_at": "2026-08-31T13:48:30.778333Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056525Z"
+      "added_at": "2026-08-31T13:48:30.778335Z"
     },
     {
       "id": "dossier_narrative:011",
@@ -348,11 +380,11 @@
           "source_document": "dossier_narrative.md",
           "locator": "line 47",
           "snippet": "States that the practice of aligning many stakeholder types around one roadmap functions as the alumni-and-institution interface the IITACB CEO role requires, in miniature.",
-          "extracted_at": "2026-08-31T13:48:30.056532Z"
+          "extracted_at": "2026-08-31T13:48:30.778339Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056534Z"
+      "added_at": "2026-08-31T13:48:30.778341Z"
     },
     {
       "id": "dossier_narrative:012",
@@ -364,11 +396,11 @@
           "source_document": "dossier_narrative.md",
           "locator": "line 48",
           "snippet": "States explicitly that full institutional P&L management at IITACB's scale would be a step up from cost-side ownership at Jinn Labs, and that this is experience not yet held.",
-          "extracted_at": "2026-08-31T13:48:30.056538Z"
+          "extracted_at": "2026-08-31T13:48:30.778345Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056540Z"
+      "added_at": "2026-08-31T13:48:30.778349Z"
     },
     {
       "id": "dossier_narrative:013",
@@ -380,11 +412,11 @@
           "source_document": "dossier_narrative.md",
           "locator": "line 49",
           "snippet": "Confirmed relocation to Bengaluru on appointment, accepting the IITACB CEO role as primarily external-facing with sustained domestic travel to the 23 IIT campuses, Delhi, and industry forums nationally. States that being physically present in Bengaluru is regarded as non-negotiable for this job.",
-          "extracted_at": "2026-08-31T13:48:30.056544Z"
+          "extracted_at": "2026-08-31T13:48:30.778352Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056546Z"
+      "added_at": "2026-08-31T13:48:30.778355Z"
     },
     {
       "id": "dossier_narrative:014",
@@ -396,11 +428,11 @@
           "source_document": "dossier_narrative.md",
           "locator": "line 52",
           "snippet": "States a reading of the mandate: IITACB does not need a manager, it needs a founder for its second act — turning a facility and a 50,000-strong Bengaluru alumni base into an institution industry pays to join, government treats as an implementation partner, and IIT Directors route their best research through.",
-          "extracted_at": "2026-08-31T13:48:30.056551Z"
+          "extracted_at": "2026-08-31T13:48:30.778360Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056556Z"
+      "added_at": "2026-08-31T13:48:30.778362Z"
     },
     {
       "id": "dossier_narrative:015",
@@ -412,11 +444,11 @@
           "source_document": "dossier_narrative.md",
           "locator": "line 53",
           "snippet": "Proposes running IITACB as a two-sided marketplace between a curated Industry Problem Register (real, scoped, budgeted problems from member corporates) and a Faculty Capability Index across the 23 IITs, matched by someone who can assess technical viability before either side commits.",
-          "extracted_at": "2026-08-31T13:48:30.056559Z"
+          "extracted_at": "2026-08-31T13:48:30.778367Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056562Z"
+      "added_at": "2026-08-31T13:48:30.778370Z"
     },
     {
       "id": "dossier_narrative:016",
@@ -428,11 +460,11 @@
           "source_document": "dossier_narrative.md",
           "locator": "line 54",
           "snippet": "Proposes re-engineering corporate membership tiers around named deliverables rather than privileges: Platinum buys named CoE co-investment and a reserved research slot, Gold buys the Problem Register and curated hiring access, Associate buys events and community.",
-          "extracted_at": "2026-08-31T13:48:30.056566Z"
+          "extracted_at": "2026-08-31T13:48:30.778374Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056568Z"
+      "added_at": "2026-08-31T13:48:30.778376Z"
     },
     {
       "id": "dossier_narrative:017",
@@ -444,11 +476,11 @@
           "source_document": "dossier_narrative.md",
           "locator": "line 55",
           "snippet": "Proposes an eight-stream revenue architecture for the ₹500 crore pipeline target, deliberately weighted toward large-ticket, low-volume streams (CoE sponsorships, industry-sponsored research, government grants) rather than membership fees alone, with corporate memberships as the annuity that funds the Secretariat.",
-          "extracted_at": "2026-08-31T13:48:30.056573Z"
+          "extracted_at": "2026-08-31T13:48:30.778381Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056576Z"
+      "added_at": "2026-08-31T13:48:30.778383Z"
     },
     {
       "id": "dossier_narrative:018",
@@ -460,11 +492,11 @@
           "source_document": "dossier_narrative.md",
           "locator": "line 56",
           "snippet": "Commits to a first-30-days deliverable of a baseline diagnostic pack (revenue by stream, member churn, facility utilisation, a mapped relationship inventory across all 23 IITs) before writing any strategy, and a first-100-days deliverable of signed members, a live problem-matching pipeline, and a working quarterly milestone dashboard.",
-          "extracted_at": "2026-08-31T13:48:30.056580Z"
+          "extracted_at": "2026-08-31T13:48:30.778387Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056582Z"
+      "added_at": "2026-08-31T13:48:30.778389Z"
     },
     {
       "id": "dossier_narrative:019",
@@ -476,11 +508,11 @@
           "source_document": "dossier_narrative.md",
           "locator": "line 57",
           "snippet": "States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.",
-          "extracted_at": "2026-08-31T13:48:30.056587Z"
+          "extracted_at": "2026-08-31T13:48:30.778393Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056590Z"
+      "added_at": "2026-08-31T13:48:30.778395Z"
     },
     {
       "id": "dossier_narrative:020",
@@ -492,11 +524,11 @@
           "source_document": "dossier_narrative.md",
           "locator": "line 58",
           "snippet": "Closing statement: describes leading the Secretariat as the most consequential work available, and explicitly invites being tested hard on the parts of the candidacy that are short rather than only the parts that are strong.",
-          "extracted_at": "2026-08-31T13:48:30.056593Z"
+          "extracted_at": "2026-08-31T13:48:30.778400Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056595Z"
+      "added_at": "2026-08-31T13:48:30.778403Z"
     },
     {
       "id": "resume:001",
@@ -508,11 +540,11 @@
           "source_document": "resume.md",
           "locator": "line 9",
           "snippet": "Chief Technical Officer, Jinn Labs, Remote India, Nov 2025 - Present.",
-          "extracted_at": "2026-08-31T13:48:30.056644Z"
+          "extracted_at": "2026-08-31T13:48:30.778451Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056647Z"
+      "added_at": "2026-08-31T13:48:30.778454Z"
     },
     {
       "id": "resume:002",
@@ -524,11 +556,11 @@
           "source_document": "resume.md",
           "locator": "line 10",
           "snippet": "Owns end-to-end AI feature development from multi-camera ingestion to real-time inference for live retail-intelligence products.",
-          "extracted_at": "2026-08-31T13:48:30.056655Z"
+          "extracted_at": "2026-08-31T13:48:30.778459Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056658Z"
+      "added_at": "2026-08-31T13:48:30.778461Z"
     },
     {
       "id": "resume:003",
@@ -540,11 +572,11 @@
           "source_document": "resume.md",
           "locator": "line 11",
           "snippet": "Architected a real-time CV platform processing 2000+ RTSP streams in parallel across heterogeneous cameras, codecs, and video formats.",
-          "extracted_at": "2026-08-31T13:48:30.056662Z"
+          "extracted_at": "2026-08-31T13:48:30.778465Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056664Z"
+      "added_at": "2026-08-31T13:48:30.778467Z"
     },
     {
       "id": "resume:004",
@@ -556,11 +588,11 @@
           "source_document": "resume.md",
           "locator": "line 12",
           "snippet": "Built a fault-tolerant FFmpeg ingestion layer handling transcoding, frame extraction, reconnection, and backpressure under sustained load.",
-          "extracted_at": "2026-08-31T13:48:30.056668Z"
+          "extracted_at": "2026-08-31T13:48:30.778471Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056670Z"
+      "added_at": "2026-08-31T13:48:30.778473Z"
     },
     {
       "id": "resume:005",
@@ -572,11 +604,11 @@
           "source_document": "resume.md",
           "locator": "line 13",
           "snippet": "Built VLM-based suspicious-event detection over live video, flagging theft, loitering, and anomalous behavior in real time with temporal context across frames.",
-          "extracted_at": "2026-08-31T13:48:30.056673Z"
+          "extracted_at": "2026-08-31T13:48:30.778477Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056676Z"
+      "added_at": "2026-08-31T13:48:30.778479Z"
     },
     {
       "id": "resume:006",
@@ -588,11 +620,11 @@
           "source_document": "resume.md",
           "locator": "line 14",
           "snippet": "Adapted VLMs/LLMs efficiently using LoRA, QLoRA, and soft-prompting to specialize models per use case at a fraction of full fine-tuning cost.",
-          "extracted_at": "2026-08-31T13:48:30.056680Z"
+          "extracted_at": "2026-08-31T13:48:30.778513Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056683Z"
+      "added_at": "2026-08-31T13:48:30.778521Z"
     },
     {
       "id": "resume:007",
@@ -604,11 +636,11 @@
           "source_document": "resume.md",
           "locator": "line 15",
           "snippet": "Defined evaluation frameworks pairing offline metrics with live ground-truth validation, POS-occupancy eval at approximately 87% accuracy, tracked release over release.",
-          "extracted_at": "2026-08-31T13:48:30.056687Z"
+          "extracted_at": "2026-08-31T13:48:30.778525Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056689Z"
+      "added_at": "2026-08-31T13:48:30.778527Z"
     },
     {
       "id": "resume:008",
@@ -620,11 +652,11 @@
           "source_document": "resume.md",
           "locator": "line 16",
           "snippet": "Drove inference optimization via quantization, pruning, distillation, mixed precision, ONNX/TensorRT, and batching to cut GPU cost while holding accuracy.",
-          "extracted_at": "2026-08-31T13:48:30.056694Z"
+          "extracted_at": "2026-08-31T13:48:30.778531Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056697Z"
+      "added_at": "2026-08-31T13:48:30.778533Z"
     },
     {
       "id": "resume:009",
@@ -636,11 +668,11 @@
           "source_document": "resume.md",
           "locator": "line 17",
           "snippet": "Deployed the same workloads on the edge (NVIDIA Jetson Nano and AGX Orin) and cloud, owning the edge-vs-cloud partitioning strategy.",
-          "extracted_at": "2026-08-31T13:48:30.056700Z"
+          "extracted_at": "2026-08-31T13:48:30.778538Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056703Z"
+      "added_at": "2026-08-31T13:48:30.778540Z"
     },
     {
       "id": "resume:010",
@@ -652,11 +684,11 @@
           "source_document": "resume.md",
           "locator": "line 18",
           "snippet": "Leads a 35+ member cross-functional team (CV/ML research, edge and cloud infra, backend, frontend) as Head of Engineering and Innovation, owning hiring, roadmap, architecture review, and delivery.",
-          "extracted_at": "2026-08-31T13:48:30.056706Z"
+          "extracted_at": "2026-08-31T13:48:30.778546Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056709Z"
+      "added_at": "2026-08-31T13:48:30.778548Z"
     },
     {
       "id": "resume:011",
@@ -668,11 +700,11 @@
           "source_document": "resume.md",
           "locator": "line 19",
           "snippet": "Staff Computer Vision Researcher, Samsung Research (AR Core Team), Noida India, Sep 2023 - Nov 2025.",
-          "extracted_at": "2026-08-31T13:48:30.056714Z"
+          "extracted_at": "2026-08-31T13:48:30.778551Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056717Z"
+      "added_at": "2026-08-31T13:48:30.778554Z"
     },
     {
       "id": "resume:012",
@@ -684,11 +716,11 @@
           "source_document": "resume.md",
           "locator": "line 20",
           "snippet": "Designed and deployed AI agents using LangChain, Vertex AI, CrewAI, and Firebase Studio, integrating with n8n to automate workflows.",
-          "extracted_at": "2026-08-31T13:48:30.056721Z"
+          "extracted_at": "2026-08-31T13:48:30.778557Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056723Z"
+      "added_at": "2026-08-31T13:48:30.778559Z"
     },
     {
       "id": "resume:013",
@@ -700,11 +732,11 @@
           "source_document": "resume.md",
           "locator": "line 21",
           "snippet": "Developed an on-device visual assistant to replace Gemini API usage in Samsung's \"Circle to Search\" feature using NanoVLM for real-time image understanding, RAG for retrieving contextual facts, and MCP to generate diverse responses.",
-          "extracted_at": "2026-08-31T13:48:30.056727Z"
+          "extracted_at": "2026-08-31T13:48:30.778563Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056729Z"
+      "added_at": "2026-08-31T13:48:30.778565Z"
     },
     {
       "id": "resume:014",
@@ -716,11 +748,11 @@
           "source_document": "resume.md",
           "locator": "line 22",
           "snippet": "Worked on \"Generative Image Dynamics\": generating a seamlessly looping video from a single image in 3 seconds, versus the best existing time of around 17 seconds, by interpreting spectral volumes as image-space modal bases that approximate object dynamics.",
-          "extracted_at": "2026-08-31T13:48:30.056733Z"
+          "extracted_at": "2026-08-31T13:48:30.778571Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056735Z"
+      "added_at": "2026-08-31T13:48:30.778573Z"
     },
     {
       "id": "resume:015",
@@ -732,11 +764,11 @@
           "source_document": "resume.md",
           "locator": "line 23",
           "snippet": "Applied quantization, pruning, and distillation to run the Generative Image Dynamics solution on-device on mobile phones.",
-          "extracted_at": "2026-08-31T13:48:30.056739Z"
+          "extracted_at": "2026-08-31T13:48:30.778576Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056741Z"
+      "added_at": "2026-08-31T13:48:30.778579Z"
     },
     {
       "id": "resume:016",
@@ -748,11 +780,11 @@
           "source_document": "resume.md",
           "locator": "line 24",
           "snippet": "Worked on Augmented Reality using ARCore and computer vision techniques including height detection, dimension detection, live stickers, emoji, doodle, and touchless doodling.",
-          "extracted_at": "2026-08-31T13:48:30.056748Z"
+          "extracted_at": "2026-08-31T13:48:30.778582Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056750Z"
+      "added_at": "2026-08-31T13:48:30.778584Z"
     },
     {
       "id": "resume:017",
@@ -764,11 +796,11 @@
           "source_document": "resume.md",
           "locator": "line 25",
           "snippet": "Led a team of 15 developers with end-to-end ownership of development at Samsung Research.",
-          "extracted_at": "2026-08-31T13:48:30.056755Z"
+          "extracted_at": "2026-08-31T13:48:30.778588Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056758Z"
+      "added_at": "2026-08-31T13:48:30.778590Z"
     },
     {
       "id": "resume:018",
@@ -780,11 +812,11 @@
           "source_document": "resume.md",
           "locator": "line 26",
           "snippet": "Senior Software Engineer, Qualcomm, Hyderabad India, Mar 2021 - Aug 2023.",
-          "extracted_at": "2026-08-31T13:48:30.056762Z"
+          "extracted_at": "2026-08-31T13:48:30.778596Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056764Z"
+      "added_at": "2026-08-31T13:48:30.778598Z"
     },
     {
       "id": "resume:019",
@@ -796,11 +828,11 @@
           "source_document": "resume.md",
           "locator": "line 27",
           "snippet": "On the AI-ML IoT Framework Team (Mar 2023 - Aug 2023), wrote plugins for object detection and tracking with different colored bounding boxes per object plus trajectory prediction, using GStreamer, TensorFlow Lite, ByteTrack, C++, and C.",
-          "extracted_at": "2026-08-31T13:48:30.056768Z"
+          "extracted_at": "2026-08-31T13:48:30.778603Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056770Z"
+      "added_at": "2026-08-31T13:48:30.778606Z"
     },
     {
       "id": "resume:020",
@@ -812,11 +844,11 @@
           "source_document": "resume.md",
           "locator": "line 28",
           "snippet": "On the Wearables IoT Tech Team (Mar 2021 - Feb 2023), did HAL development for smartwatch display, wrist tilt, brightness, and orientation, plus Android apps, VTS unit testing, and log-analysis automation scripts.",
-          "extracted_at": "2026-08-31T13:48:30.056775Z"
+          "extracted_at": "2026-08-31T13:48:30.778610Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056777Z"
+      "added_at": "2026-08-31T13:48:30.778613Z"
     },
     {
       "id": "resume:021",
@@ -828,11 +860,11 @@
           "source_document": "resume.md",
           "locator": "line 29",
           "snippet": "Applied ML techniques to sensor data for tilt detection, automated sleep alarms, and cardiovascular health monitoring.",
-          "extracted_at": "2026-08-31T13:48:30.056782Z"
+          "extracted_at": "2026-08-31T13:48:30.778617Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056785Z"
+      "added_at": "2026-08-31T13:48:30.778620Z"
     },
     {
       "id": "resume:022",
@@ -844,11 +876,11 @@
           "source_document": "resume.md",
           "locator": "line 30",
           "snippet": "Increased smartwatch battery backup by around 40% using a dual-processor concept that offloaded display and controls to a secondary processor.",
-          "extracted_at": "2026-08-31T13:48:30.056791Z"
+          "extracted_at": "2026-08-31T13:48:30.778623Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056795Z"
+      "added_at": "2026-08-31T13:48:30.778626Z"
     },
     {
       "id": "resume:023",
@@ -860,11 +892,11 @@
           "source_document": "resume.md",
           "locator": "line 31",
           "snippet": "Mentored interns and other developers, with end-to-end ownership of feature requests at Qualcomm.",
-          "extracted_at": "2026-08-31T13:48:30.056800Z"
+          "extracted_at": "2026-08-31T13:48:30.778629Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056803Z"
+      "added_at": "2026-08-31T13:48:30.778632Z"
     },
     {
       "id": "resume:024",
@@ -876,11 +908,11 @@
           "source_document": "resume.md",
           "locator": "line 32",
           "snippet": "Software Engineer, Amdocs, Pune India, Aug 2020 - Feb 2021, on Billing and RTB teams.",
-          "extracted_at": "2026-08-31T13:48:30.056808Z"
+          "extracted_at": "2026-08-31T13:48:30.778635Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056810Z"
+      "added_at": "2026-08-31T13:48:30.778637Z"
     },
     {
       "id": "resume:025",
@@ -892,11 +924,11 @@
           "source_document": "resume.md",
           "locator": "line 33",
           "snippet": "Did API development, bug resolution, fraud detection, and revenue forecasting using Java, Python, Mockito, Postman, MySQL, machine learning, and NLP.",
-          "extracted_at": "2026-08-31T13:48:30.056814Z"
+          "extracted_at": "2026-08-31T13:48:30.778641Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056816Z"
+      "added_at": "2026-08-31T13:48:30.778764Z"
     },
     {
       "id": "resume:026",
@@ -908,11 +940,11 @@
           "source_document": "resume.md",
           "locator": "line 34",
           "snippet": "Created an environment of bug resolution within 24 hours at Amdocs.",
-          "extracted_at": "2026-08-31T13:48:30.056820Z"
+          "extracted_at": "2026-08-31T13:48:30.778770Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056822Z"
+      "added_at": "2026-08-31T13:48:30.778773Z"
     },
     {
       "id": "resume:027",
@@ -924,11 +956,11 @@
           "source_document": "resume.md",
           "locator": "line 35",
           "snippet": "Guest sessions and hackathon judging for GLA University and others, Remote, Sept 2020 - Present.",
-          "extracted_at": "2026-08-31T13:48:30.056826Z"
+          "extracted_at": "2026-08-31T13:48:30.778779Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056949Z"
+      "added_at": "2026-08-31T13:48:30.778782Z"
     },
     {
       "id": "resume:028",
@@ -940,11 +972,11 @@
           "source_document": "resume.md",
           "locator": "line 36",
           "snippet": "Provides competitive-coding and data-science mentoring, shaping thousands of students a year and bridging the gap between institutions and the tech industry.",
-          "extracted_at": "2026-08-31T13:48:30.056955Z"
+          "extracted_at": "2026-08-31T13:48:30.778786Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056958Z"
+      "added_at": "2026-08-31T13:48:30.778788Z"
     },
     {
       "id": "resume:029",
@@ -956,11 +988,11 @@
           "source_document": "resume.md",
           "locator": "line 37",
           "snippet": "Intern, Siemens Healthineers, Remote, July 2019 - Feb 2020.",
-          "extracted_at": "2026-08-31T13:48:30.056967Z"
+          "extracted_at": "2026-08-31T13:48:30.778794Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056970Z"
+      "added_at": "2026-08-31T13:48:30.778796Z"
     },
     {
       "id": "resume:030",
@@ -972,11 +1004,11 @@
           "source_document": "resume.md",
           "locator": "line 38",
           "snippet": "Built cholesterol prediction from eye images using machine learning and image processing, giving a one-click, one-second prediction with no blistering required.",
-          "extracted_at": "2026-08-31T13:48:30.056974Z"
+          "extracted_at": "2026-08-31T13:48:30.778800Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056976Z"
+      "added_at": "2026-08-31T13:48:30.778802Z"
     },
     {
       "id": "resume:031",
@@ -988,11 +1020,11 @@
           "source_document": "resume.md",
           "locator": "line 39",
           "snippet": "Instructor, Digiimento Education Pvt. Ltd, Delhi India, Dec 2017 - June 2018.",
-          "extracted_at": "2026-08-31T13:48:30.056982Z"
+          "extracted_at": "2026-08-31T13:48:30.778805Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056984Z"
+      "added_at": "2026-08-31T13:48:30.778808Z"
     },
     {
       "id": "resume:032",
@@ -1004,11 +1036,11 @@
           "source_document": "resume.md",
           "locator": "line 40",
           "snippet": "Mentored students and created content for GATE CSE.",
-          "extracted_at": "2026-08-31T13:48:30.056988Z"
+          "extracted_at": "2026-08-31T13:48:30.778811Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056990Z"
+      "added_at": "2026-08-31T13:48:30.778814Z"
     },
     {
       "id": "resume:033",
@@ -1020,11 +1052,11 @@
           "source_document": "resume.md",
           "locator": "line 41",
           "snippet": "Full Stack Developer, Wheelseye Technology, Gurgaon India, Sept 2017 - Dec 2017.",
-          "extracted_at": "2026-08-31T13:48:30.056994Z"
+          "extracted_at": "2026-08-31T13:48:30.778818Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.056996Z"
+      "added_at": "2026-08-31T13:48:30.778820Z"
     },
     {
       "id": "resume:034",
@@ -1036,11 +1068,11 @@
           "source_document": "resume.md",
           "locator": "line 42",
           "snippet": "Developed APIs for live tracking of trucks and notifications using Java, JavaScript, and Python, and suggested dynamic routes based on real-time traffic analysis and driver behavior.",
-          "extracted_at": "2026-08-31T13:48:30.057000Z"
+          "extracted_at": "2026-08-31T13:48:30.778824Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.057002Z"
+      "added_at": "2026-08-31T13:48:30.778826Z"
     },
     {
       "id": "resume:035",
@@ -1052,11 +1084,11 @@
           "source_document": "resume.md",
           "locator": "line 43",
           "snippet": "Full Stack Developer, Scrum Technology, Delhi India, June 2016 - Aug 2017.",
-          "extracted_at": "2026-08-31T13:48:30.057007Z"
+          "extracted_at": "2026-08-31T13:48:30.778830Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.057009Z"
+      "added_at": "2026-08-31T13:48:30.778832Z"
     },
     {
       "id": "resume:036",
@@ -1068,11 +1100,11 @@
           "source_document": "resume.md",
           "locator": "line 44",
           "snippet": "Built websites for various clients using Java, JavaScript, HTML, and CSS, and applied predictive caching to pre-cache likely-visited elements for faster load times.",
-          "extracted_at": "2026-08-31T13:48:30.057013Z"
+          "extracted_at": "2026-08-31T13:48:30.778837Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.057015Z"
+      "added_at": "2026-08-31T13:48:30.778840Z"
     },
     {
       "id": "resume:037",
@@ -1084,11 +1116,11 @@
           "source_document": "resume.md",
           "locator": "line 45",
           "snippet": "Intern, IIT BHU, Varanasi India, June 2015 - July 2015.",
-          "extracted_at": "2026-08-31T13:48:30.057019Z"
+          "extracted_at": "2026-08-31T13:48:30.778845Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.057021Z"
+      "added_at": "2026-08-31T13:48:30.778847Z"
     },
     {
       "id": "resume:038",
@@ -1100,11 +1132,11 @@
           "source_document": "resume.md",
           "locator": "line 46",
           "snippet": "Built proxy-less internet access over LAN/WAN.",
-          "extracted_at": "2026-08-31T13:48:30.057026Z"
+          "extracted_at": "2026-08-31T13:48:30.778851Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.057028Z"
+      "added_at": "2026-08-31T13:48:30.778853Z"
     },
     {
       "id": "resume:039",
@@ -1116,11 +1148,11 @@
           "source_document": "resume.md",
           "locator": "line 49",
           "snippet": "M.Tech, Artificial Intelligence, IIT (ISM) Dhanbad, 2018-2020. Research on medical image processing using Cycle GAN.",
-          "extracted_at": "2026-08-31T13:48:30.057036Z"
+          "extracted_at": "2026-08-31T13:48:30.778859Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.057038Z"
+      "added_at": "2026-08-31T13:48:30.778861Z"
     },
     {
       "id": "resume:040",
@@ -1132,11 +1164,11 @@
           "source_document": "resume.md",
           "locator": "line 50",
           "snippet": "B.Tech, Computer Science and Engineering, KNIT Sultanpur, 2012-2016.",
-          "extracted_at": "2026-08-31T13:48:30.057042Z"
+          "extracted_at": "2026-08-31T13:48:30.778865Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.057044Z"
+      "added_at": "2026-08-31T13:48:30.778867Z"
     },
     {
       "id": "resume:041",
@@ -1148,11 +1180,11 @@
           "source_document": "resume.md",
           "locator": "line 51",
           "snippet": "Intermediate, PCM Mathematics, CBSE Varanasi, 2010-2011.",
-          "extracted_at": "2026-08-31T13:48:30.057048Z"
+          "extracted_at": "2026-08-31T13:48:30.778872Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.057050Z"
+      "added_at": "2026-08-31T13:48:30.778874Z"
     },
     {
       "id": "resume:042",
@@ -1164,11 +1196,11 @@
           "source_document": "resume.md",
           "locator": "line 52",
           "snippet": "High School, PCM Mathematics, CBSE Varanasi, 2008-2009.",
-          "extracted_at": "2026-08-31T13:48:30.057056Z"
+          "extracted_at": "2026-08-31T13:48:30.778880Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.057058Z"
+      "added_at": "2026-08-31T13:48:30.778883Z"
     },
     {
       "id": "resume:043",
@@ -1180,11 +1212,11 @@
           "source_document": "resume.md",
           "locator": "line 55",
           "snippet": "Artificial Intelligence, Deep Learning, Machine Learning, Image Processing, Computer Vision, Natural Language Processing.",
-          "extracted_at": "2026-08-31T13:48:30.057063Z"
+          "extracted_at": "2026-08-31T13:48:30.778889Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.057065Z"
+      "added_at": "2026-08-31T13:48:30.778891Z"
     },
     {
       "id": "resume:044",
@@ -1196,11 +1228,11 @@
           "source_document": "resume.md",
           "locator": "line 56",
           "snippet": "Augmented Reality, ARCore, Large Language Models, VLMs, RAG, MCP, LangChain.",
-          "extracted_at": "2026-08-31T13:48:30.057071Z"
+          "extracted_at": "2026-08-31T13:48:30.778895Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.057074Z"
+      "added_at": "2026-08-31T13:48:30.778897Z"
     },
     {
       "id": "resume:045",
@@ -1212,11 +1244,11 @@
           "source_document": "resume.md",
           "locator": "line 57",
           "snippet": "Python, NumPy, Pandas, Matplotlib, SQL, Android, Java, C++, C, Git, Perforce.",
-          "extracted_at": "2026-08-31T13:48:30.057078Z"
+          "extracted_at": "2026-08-31T13:48:30.778903Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.057080Z"
+      "added_at": "2026-08-31T13:48:30.778905Z"
     },
     {
       "id": "resume:046",
@@ -1228,11 +1260,11 @@
           "source_document": "resume.md",
           "locator": "line 58",
           "snippet": "System Design, Leadership, JavaScript, HTML, CSS, Hardware Abstraction Layer, Linux, Shell Scripting.",
-          "extracted_at": "2026-08-31T13:48:30.057084Z"
+          "extracted_at": "2026-08-31T13:48:30.778909Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.057086Z"
+      "added_at": "2026-08-31T13:48:30.778911Z"
     },
     {
       "id": "resume:047",
@@ -1244,11 +1276,11 @@
           "source_document": "resume.md",
           "locator": "line 59",
           "snippet": "PyTorch, TensorFlow, Internet of Things, Agentic AI, Quantization, Pruning, Distillation.",
-          "extracted_at": "2026-08-31T13:48:30.057093Z"
+          "extracted_at": "2026-08-31T13:48:30.778916Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.057095Z"
+      "added_at": "2026-08-31T13:48:30.778919Z"
     },
     {
       "id": "resume:048",
@@ -1260,11 +1292,11 @@
           "source_document": "resume.md",
           "locator": "line 62",
           "snippet": "Top Ranker in GATE, four separate times.",
-          "extracted_at": "2026-08-31T13:48:30.057100Z"
+          "extracted_at": "2026-08-31T13:48:30.778924Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.057102Z"
+      "added_at": "2026-08-31T13:48:30.778926Z"
     },
     {
       "id": "resume:049",
@@ -1276,11 +1308,11 @@
           "source_document": "resume.md",
           "locator": "line 63",
           "snippet": "Selected for scientist positions at ISRO, BARC, NIELIT, DRDO, BDL, and the Cabinet Secretariat.",
-          "extracted_at": "2026-08-31T13:48:30.057106Z"
+          "extracted_at": "2026-08-31T13:48:30.778930Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.057108Z"
+      "added_at": "2026-08-31T13:48:30.778932Z"
     },
     {
       "id": "resume:050",
@@ -1292,11 +1324,11 @@
           "source_document": "resume.md",
           "locator": "line 64",
           "snippet": "2nd Prize, Japan Hackathon 2021, representing India.",
-          "extracted_at": "2026-08-31T13:48:30.057113Z"
+          "extracted_at": "2026-08-31T13:48:30.778936Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.057116Z"
+      "added_at": "2026-08-31T13:48:30.778938Z"
     },
     {
       "id": "resume:051",
@@ -1308,11 +1340,11 @@
           "source_document": "resume.md",
           "locator": "line 65",
           "snippet": "2nd Prize, IMLEAP (Siemens Healthineers Hackathon).",
-          "extracted_at": "2026-08-31T13:48:30.057120Z"
+          "extracted_at": "2026-08-31T13:48:30.778942Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.057122Z"
+      "added_at": "2026-08-31T13:48:30.778944Z"
     },
     {
       "id": "resume:052",
@@ -1324,11 +1356,11 @@
           "source_document": "resume.md",
           "locator": "line 66",
           "snippet": "Finalist, Mercedes-Benz Hackathon, Techgium (L&T Infotech) Hackathon, and Code Gladiator Coding Competition.",
-          "extracted_at": "2026-08-31T13:48:30.057126Z"
+          "extracted_at": "2026-08-31T13:48:30.778949Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.057128Z"
+      "added_at": "2026-08-31T13:48:30.778952Z"
     },
     {
       "id": "resume:053",
@@ -1340,11 +1372,11 @@
           "source_document": "resume.md",
           "locator": "line 67",
           "snippet": "Sports Secretary 2015-2016 and Captain of the IIT Dhanbad Cricket Team; represented IIT Dhanbad at Inter-IIT in 2018 and 2019.",
-          "extracted_at": "2026-08-31T13:48:30.057132Z"
+          "extracted_at": "2026-08-31T13:48:30.778955Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.057134Z"
+      "added_at": "2026-08-31T13:48:30.778957Z"
     },
     {
       "id": "resume:054",
@@ -1356,11 +1388,11 @@
           "source_document": "resume.md",
           "locator": "line 68",
           "snippet": "Headed four student chapters simultaneously: IEI, CSI, ISTE, and DrishtiCone.",
-          "extracted_at": "2026-08-31T13:48:30.057139Z"
+          "extracted_at": "2026-08-31T13:48:30.778963Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.057141Z"
+      "added_at": "2026-08-31T13:48:30.778965Z"
     },
     {
       "id": "resume:055",
@@ -1372,11 +1404,11 @@
           "source_document": "resume.md",
           "locator": "line 69",
           "snippet": "Lead organizer of the Sports and Technical fest at KNIT Sultanpur.",
-          "extracted_at": "2026-08-31T13:48:30.057145Z"
+          "extracted_at": "2026-08-31T13:48:30.778969Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.057147Z"
+      "added_at": "2026-08-31T13:48:30.778971Z"
     },
     {
       "id": "resume:056",
@@ -1388,11 +1420,11 @@
           "source_document": "resume.md",
           "locator": "line 70",
           "snippet": "3rd Prize, Ramanujan Mathematics Olympiad, 2010.",
-          "extracted_at": "2026-08-31T13:48:30.057153Z"
+          "extracted_at": "2026-08-31T13:48:30.778974Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.057155Z"
+      "added_at": "2026-08-31T13:48:30.778977Z"
     },
     {
       "id": "resume:057",
@@ -1404,11 +1436,11 @@
           "source_document": "resume.md",
           "locator": "line 73",
           "snippet": "Generative Image Dynamics: single-image-to-looping-video generation in 3 seconds versus a 17-second prior state of the art, at Samsung Research.",
-          "extracted_at": "2026-08-31T13:48:30.057160Z"
+          "extracted_at": "2026-08-31T13:48:30.778981Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.057162Z"
+      "added_at": "2026-08-31T13:48:30.778984Z"
     },
     {
       "id": "resume:058",
@@ -1420,11 +1452,11 @@
           "source_document": "resume.md",
           "locator": "line 74",
           "snippet": "On-device NanoVLM visual assistant replacing Gemini API calls in Samsung's Circle to Search feature.",
-          "extracted_at": "2026-08-31T13:48:30.057166Z"
+          "extracted_at": "2026-08-31T13:48:30.778987Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.057168Z"
+      "added_at": "2026-08-31T13:48:30.778990Z"
     },
     {
       "id": "resume:059",
@@ -1436,11 +1468,11 @@
           "source_document": "resume.md",
           "locator": "line 75",
           "snippet": "Real-time computer-vision platform at Jinn Labs ingesting 2000+ concurrent RTSP streams with VLM-based suspicious-event detection.",
-          "extracted_at": "2026-08-31T13:48:30.057172Z"
+          "extracted_at": "2026-08-31T13:48:30.778995Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.057174Z"
+      "added_at": "2026-08-31T13:48:30.778997Z"
     },
     {
       "id": "resume:060",
@@ -1452,11 +1484,11 @@
           "source_document": "resume.md",
           "locator": "line 76",
           "snippet": "Object detection and tracking plugins with trajectory prediction for Qualcomm's AI-ML IoT Framework.",
-          "extracted_at": "2026-08-31T13:48:30.057178Z"
+          "extracted_at": "2026-08-31T13:48:30.779001Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.057180Z"
+      "added_at": "2026-08-31T13:48:30.779003Z"
     },
     {
       "id": "resume:061",
@@ -1468,11 +1500,11 @@
           "source_document": "resume.md",
           "locator": "line 77",
           "snippet": "Dual-processor smartwatch power management architecture at Qualcomm, increasing battery backup by about 40%.",
-          "extracted_at": "2026-08-31T13:48:30.057185Z"
+          "extracted_at": "2026-08-31T13:48:30.779008Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.057187Z"
+      "added_at": "2026-08-31T13:48:30.779010Z"
     },
     {
       "id": "resume:062",
@@ -1484,11 +1516,11 @@
           "source_document": "resume.md",
           "locator": "line 78",
           "snippet": "Cholesterol prediction from eye images using machine learning and image processing at Siemens Healthineers.",
-          "extracted_at": "2026-08-31T13:48:30.057191Z"
+          "extracted_at": "2026-08-31T13:48:30.779014Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.057193Z"
+      "added_at": "2026-08-31T13:48:30.779017Z"
     },
     {
       "id": "resume:063",
@@ -1500,11 +1532,11 @@
           "source_document": "resume.md",
           "locator": "line 79",
           "snippet": "M.Tech thesis: medical image processing using Cycle GAN at IIT (ISM) Dhanbad.",
-          "extracted_at": "2026-08-31T13:48:30.057197Z"
+          "extracted_at": "2026-08-31T13:48:30.779022Z"
         }
       ],
       "confidence": 0.99,
-      "added_at": "2026-08-31T13:48:30.057199Z"
+      "added_at": "2026-08-31T13:48:30.779025Z"
     }
   ],
   "beliefs": [
@@ -1513,7 +1545,7 @@
       "statement": "Prefers technically unsolved, zero-to-one problems over routine engineering maintenance.",
       "supporting_evidence": [
         "dossier_excerpts:004",
-        "dossier_excerpts:010",
+        "dossier_excerpts:012",
         "dossier_narrative:007",
         "resume:014",
         "resume:015",
@@ -1526,8 +1558,8 @@
       ],
       "counter_evidence": [],
       "confidence": 0.86,
-      "first_observed": "2026-08-31T13:48:30.057385Z",
-      "last_validated": "2026-08-31T13:48:30.057386Z",
+      "first_observed": "2026-08-31T13:48:30.779215Z",
+      "last_validated": "2026-08-31T13:48:30.779216Z",
       "source_refs": [
         "resume.md",
         "dossier_excerpts.md"
@@ -1537,14 +1569,14 @@
       "id": "belief:002",
       "statement": "Values shipping working systems into production over research for its own sake.",
       "supporting_evidence": [
-        "dossier_excerpts:011",
+        "dossier_excerpts:013",
         "resume:001",
         "resume:007"
       ],
       "counter_evidence": [],
       "confidence": 0.82,
-      "first_observed": "2026-08-31T13:48:30.057545Z",
-      "last_validated": "2026-08-31T13:48:30.057546Z",
+      "first_observed": "2026-08-31T13:48:30.779348Z",
+      "last_validated": "2026-08-31T13:48:30.779348Z",
       "source_refs": [
         "resume.md",
         "dossier_excerpts.md"
@@ -1561,8 +1593,8 @@
         "dossier_excerpts:006"
       ],
       "confidence": 0.45,
-      "first_observed": "2026-08-31T13:48:30.057707Z",
-      "last_validated": "2026-08-31T13:48:30.057708Z",
+      "first_observed": "2026-08-31T13:48:30.779529Z",
+      "last_validated": "2026-08-31T13:48:30.779529Z",
       "source_refs": [
         "dossier_excerpts.md"
       ]
@@ -1575,14 +1607,14 @@
         "dossier_excerpts:002"
       ],
       "confidence": 0.1,
-      "first_observed": "2026-08-31T13:48:30.057808Z",
-      "last_validated": "2026-08-31T13:48:30.057809Z",
+      "first_observed": "2026-08-31T13:48:30.779631Z",
+      "last_validated": "2026-08-31T13:48:30.779632Z",
       "source_refs": [
         "dossier_excerpts.md"
       ]
     }
   ],
-  "created_at": "2026-08-31T13:48:30.057210Z",
+  "created_at": "2026-08-31T13:48:30.779034Z",
   "source_documents": [
     "dossier_excerpts.md",
     "dossier_narrative.md",

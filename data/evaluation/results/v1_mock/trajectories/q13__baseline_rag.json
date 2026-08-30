@@ -3,17 +3,17 @@
   "system_name": "baseline_rag",
   "steps": [
     {
-      "timestamp": "2026-08-30T04:28:48.149508Z",
+      "timestamp": "2026-08-30T04:41:12.343425Z",
       "stage": "retrieve",
       "input_summary": "Describe the patent you hold on generative AI video codecs and your contribution to it.",
       "action": "dump the entire fact store as unstructured text (no ranking, no ids)",
-      "observation": "94 facts included, no relevance filtering",
+      "observation": "96 facts included, no relevance filtering",
       "reasoning": "Baseline 2 has retrieval but no structure and no grounding check.",
       "confidence": null,
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T04:28:48.150777Z",
+      "timestamp": "2026-08-30T04:41:12.344724Z",
       "stage": "generate",
       "input_summary": "Describe the patent you hold on generative AI video codecs and your contribution to it.",
       "action": "call provider with the full unstructured context dump",

@@ -44,6 +44,26 @@ def test_exclude_application_specific_filters_correctly():
     assert len(filtered) == len(ds.facts) - len(application_specific)
 
 
+def test_dossier_excerpts_general_facts_do_not_name_the_committee_or_relocation_commitment():
+    """Regression test for the v2.7 fix, scoped to the source file it
+    fixed: general facts from dossier_excerpts.md must not reference "the
+    committee" (IITACB's Managing Committee) or frame relocation/Kannada
+    learning as a commitment made for a specific role — that content
+    belongs in the separately-tagged APPLICATION_SPECIFIC facts."""
+    ds = _build_test_digital_self()
+    general_excerpt_facts = [
+        f for f in ds.facts
+        if f.id.startswith("dossier_excerpts:")
+        and f.category != FactCategory.APPLICATION_SPECIFIC
+    ]
+    assert general_excerpt_facts  # sanity
+    offending = [
+        f for f in general_excerpt_facts
+        if "committee" in f.text.lower() or "relocat" in f.text.lower()
+    ]
+    assert offending == [], f"application-specific framing leaked into general facts: {offending}"
+
+
 def test_prefer_unused_puts_fresh_evidence_first():
     ds = _build_test_digital_self()
     facts = ds.facts[:4]

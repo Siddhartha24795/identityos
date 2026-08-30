@@ -28,7 +28,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.28634071350097656
+      "latency_ms": 0.2970695495605469
     },
     {
       "requirement_id": "req02",
@@ -58,7 +58,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.03170967102050781
+      "latency_ms": 0.032901763916015625
     },
     {
       "requirement_id": "req03",
@@ -88,7 +88,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.03552436828613281
+      "latency_ms": 0.035762786865234375
     },
     {
       "requirement_id": "req04",
@@ -118,7 +118,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.028371810913085938
+      "latency_ms": 0.029325485229492188
     },
     {
       "requirement_id": "req05",
@@ -148,7 +148,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.0286102294921875
+      "latency_ms": 0.028133392333984375
     },
     {
       "requirement_id": "req06",
@@ -178,7 +178,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.030517578125
+      "latency_ms": 0.030040740966796875
     },
     {
       "requirement_id": "req07",
@@ -208,7 +208,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.027179718017578125
+      "latency_ms": 0.03266334533691406
     },
     {
       "requirement_id": "req08",
@@ -238,7 +238,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.029087066650390625
+      "latency_ms": 0.027894973754882812
     },
     {
       "requirement_id": "req09",
@@ -298,7 +298,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.029325485229492188
+      "latency_ms": 0.028848648071289062
     },
     {
       "requirement_id": "req11",
@@ -328,7 +328,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.029802322387695312
+      "latency_ms": 0.030755996704101562
     },
     {
       "requirement_id": "req12",
@@ -358,7 +358,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.034332275390625
+      "latency_ms": 0.034809112548828125
     },
     {
       "requirement_id": "req13",
@@ -388,7 +388,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.0324249267578125
+      "latency_ms": 0.03170967102050781
     },
     {
       "requirement_id": "req14",
@@ -418,7 +418,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.037670135498046875
+      "latency_ms": 0.035762786865234375
     }
   ],
   "baseline_rag": [
@@ -456,7 +456,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 2.3179054260253906
+      "latency_ms": 2.187013626098633
     },
     {
       "requirement_id": "req02",
@@ -492,7 +492,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 2.1970272064208984
+      "latency_ms": 2.277851104736328
     },
     {
       "requirement_id": "req03",
@@ -528,7 +528,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 2.2170543670654297
+      "latency_ms": 2.352476119995117
     },
     {
       "requirement_id": "req04",
@@ -564,7 +564,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 2.1791458129882812
+      "latency_ms": 2.2215843200683594
     },
     {
       "requirement_id": "req05",
@@ -600,7 +600,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 2.1877288818359375
+      "latency_ms": 2.245187759399414
     },
     {
       "requirement_id": "req06",
@@ -636,7 +636,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 2.196788787841797
+      "latency_ms": 2.2270679473876953
     },
     {
       "requirement_id": "req07",
@@ -672,7 +672,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 2.1665096282958984
+      "latency_ms": 2.2187232971191406
     },
     {
       "requirement_id": "req08",
@@ -708,7 +708,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 2.234220504760742
+      "latency_ms": 2.2041797637939453
     },
     {
       "requirement_id": "req09",
@@ -744,7 +744,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 2.230405807495117
+      "latency_ms": 2.343416213989258
     },
     {
       "requirement_id": "req10",
@@ -780,7 +780,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 2.17437744140625
+      "latency_ms": 2.23541259765625
     },
     {
       "requirement_id": "req11",
@@ -816,7 +816,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 2.171039581298828
+      "latency_ms": 2.2268295288085938
     },
     {
       "requirement_id": "req12",
@@ -852,7 +852,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 2.1851062774658203
+      "latency_ms": 2.323627471923828
     },
     {
       "requirement_id": "req13",
@@ -888,7 +888,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 2.195119857788086
+      "latency_ms": 2.206563949584961
     },
     {
       "requirement_id": "req14",
@@ -924,7 +924,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 2.2122859954833984
+      "latency_ms": 2.228260040283203
     }
   ],
   "identityos_v2": [
@@ -978,7 +978,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.3380775451660156
+      "latency_ms": 0.3509521484375
     },
     {
       "requirement_id": "req02",
@@ -1030,21 +1030,13 @@
       "evidence_coverage": 1.0,
       "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.2880096435546875
+      "latency_ms": 0.28634071350097656
     },
     {
       "requirement_id": "req03",
       "system_name": "identityos_v2",
-      "text": "[dossier_narrative:014] (verified fact) States a reading of the mandate: IITACB does not need a manager, it needs a founder for its second act \u2014 turning a facility and a 50,000-strong Bengaluru alumni base into an institution industry pays to join, government treats as an implementation partner, and IIT Directors route their best research through. [dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical \u2014 it is 24x7 production accountability across live customer sites. [dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.",
+      "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical \u2014 it is 24x7 production accountability across live customer sites. [dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record. [dossier_narrative:007] (verified fact) Accustomed to explaining deep technology to non-technical boards and to translating executive intent into engineering commitments, built over six years of guest lectures, mentoring programmes and hackathon judging panels plus representing India at the Japan Hackathon 2021.",
       "claims": [
-        {
-          "text": "[dossier_narrative:014] (verified fact) States a reading of the mandate: IITACB does not need a manager, it needs a founder for its second act \u2014 turning a facility and a 50,000-strong Bengaluru alumni base into an institution industry pays to join, government treats as an implementation partner, and IIT Directors route their best research through.",
-          "evidence_refs": [
-            "dossier_narrative:014"
-          ],
-          "claim_type": "verified_fact",
-          "confidence": 0.99
-        },
         {
           "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
           "evidence_refs": [
@@ -1070,9 +1062,17 @@
           "confidence": 0.5
         },
         {
-          "text": "[dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.",
+          "text": "[dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.",
           "evidence_refs": [
-            "dossier_excerpts:006"
+            "dossier_narrative:019"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_narrative:007] (verified fact) Accustomed to explaining deep technology to non-technical boards and to translating executive intent into engineering commitments, built over six years of guest lectures, mentoring programmes and hackathon judging panels plus representing India at the Japan Hackathon 2021.",
+          "evidence_refs": [
+            "dossier_narrative:007"
           ],
           "claim_type": "verified_fact",
           "confidence": 0.99
@@ -1080,9 +1080,9 @@
       ],
       "overall_confidence": 0.892,
       "evidence_coverage": 1.0,
-      "system_bucket": "partial",
+      "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.3821849822998047
+      "latency_ms": 0.3466606140136719
     },
     {
       "requirement_id": "req04",
@@ -1134,7 +1134,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.1914501190185547
+      "latency_ms": 0.18453598022460938
     },
     {
       "requirement_id": "req05",
@@ -1152,12 +1152,12 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.016927719116210938
+      "latency_ms": 0.0171661376953125
     },
     {
       "requirement_id": "req06",
       "system_name": "identityos_v2",
-      "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:004] (verified fact) Defined technical strategy, architecture and organisation-wide evaluation frameworks at Jinn Labs, building governance structures where none existed; the same machinery run earlier at student scale heading four chapters simultaneously and organising festivals at KNIT Sultanpur. [dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. [dossier_narrative:008] (verified fact) Captain and Sports Secretary are roles given by peers and cannot be self-appointed. Professional practice of running blameless postmortems and publishing metrics that can embarrass the author. Believes institutional temperament means the institution outranks the incumbent.",
+      "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:004] (verified fact) Defined technical strategy, architecture and organisation-wide evaluation frameworks at Jinn Labs, building governance structures where none existed; the same machinery run earlier at student scale heading four chapters simultaneously and organising festivals at KNIT Sultanpur. [dossier_excerpts:011] (verified fact) Siddhartha's dossier states: \"I am a working generative-AI practitioner... I can tell a real deep-tech proposition from AI theatre before [an institution]'s name is on it,\" offered as a self-description of his professional judgment. [dossier_excerpts:013] (verified fact) Siddhartha's dossier states he replaced subjective judgement with eval-driven release discipline at Jinn Labs, tracking every claim as a metric release over release, and that he would apply the same discipline to any institution he leads.",
       "claims": [
         {
           "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
@@ -1176,43 +1176,35 @@
           "confidence": 0.99
         },
         {
-          "text": "[dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.",
+          "text": "[dossier_excerpts:011] (verified fact) Siddhartha's dossier states: \"I am a working generative-AI practitioner...",
           "evidence_refs": [
-            "dossier_excerpts:006"
+            "dossier_excerpts:011"
           ],
           "claim_type": "verified_fact",
           "confidence": 0.99
         },
         {
-          "text": "[dossier_narrative:008] (verified fact) Captain and Sports Secretary are roles given by peers and cannot be self-appointed.",
+          "text": "I can tell a real deep-tech proposition from AI theatre before [an institution]'s name is on it,\" offered as a self-description of his professional judgment.",
           "evidence_refs": [
-            "dossier_narrative:008"
+            "dossier_excerpts:011"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "[dossier_excerpts:013] (verified fact) Siddhartha's dossier states he replaced subjective judgement with eval-driven release discipline at Jinn Labs, tracking every claim as a metric release over release, and that he would apply the same discipline to any institution he leads.",
+          "evidence_refs": [
+            "dossier_excerpts:013"
           ],
           "claim_type": "verified_fact",
           "confidence": 0.99
-        },
-        {
-          "text": "Professional practice of running blameless postmortems and publishing metrics that can embarrass the author.",
-          "evidence_refs": [
-            "dossier_narrative:008"
-          ],
-          "claim_type": "weak_inference",
-          "confidence": 0.5
-        },
-        {
-          "text": "Believes institutional temperament means the institution outranks the incumbent.",
-          "evidence_refs": [
-            "dossier_narrative:008"
-          ],
-          "claim_type": "weak_inference",
-          "confidence": 0.5
         }
       ],
-      "overall_confidence": 0.8266666666666667,
+      "overall_confidence": 0.892,
       "evidence_coverage": 1.0,
-      "system_bucket": "partial",
+      "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.3204345703125
+      "latency_ms": 0.2808570861816406
     },
     {
       "requirement_id": "req07",
@@ -1256,7 +1248,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "partial",
       "provider": "mock",
-      "latency_ms": 0.10561943054199219
+      "latency_ms": 0.09179115295410156
     },
     {
       "requirement_id": "req08",
@@ -1300,7 +1292,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "partial",
       "provider": "mock",
-      "latency_ms": 0.19741058349609375
+      "latency_ms": 0.2028942108154297
     },
     {
       "requirement_id": "req09",
@@ -1344,7 +1336,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "partial",
       "provider": "mock",
-      "latency_ms": 0.3998279571533203
+      "latency_ms": 0.37479400634765625
     },
     {
       "requirement_id": "req10",
@@ -1362,7 +1354,7 @@
       "evidence_coverage": 0.0,
       "system_bucket": "gap",
       "provider": "mock",
-      "latency_ms": 0.016450881958007812
+      "latency_ms": 0.0209808349609375
     },
     {
       "requirement_id": "req11",
@@ -1420,7 +1412,7 @@
       "evidence_coverage": 0.8333333333333334,
       "system_bucket": "partial",
       "provider": "mock",
-      "latency_ms": 0.12350082397460938
+      "latency_ms": 0.12469291687011719
     },
     {
       "requirement_id": "req12",
@@ -1472,15 +1464,23 @@
       "evidence_coverage": 1.0,
       "system_bucket": "partial",
       "provider": "mock",
-      "latency_ms": 0.3414154052734375
+      "latency_ms": 0.3769397735595703
     },
     {
       "requirement_id": "req13",
       "system_name": "identityos_v2",
-      "text": "[dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet in Kannada, and frames relocation plus Kannada learning as conditions he is committing to, not concessions being requested. Languages \u2014 English, Hindi, Kannada preferred REQUIREMENT:",
+      "text": "[dossier_excerpts:010] (verified fact) States that relocating to Bengaluru and learning Kannada are conditions he is committing to for the IITACB CEO role specifically, not concessions being requested. [dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet fluent in Kannada. Languages \u2014 English, Hindi, Kannada preferred REQUIREMENT:",
       "claims": [
         {
-          "text": "[dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet in Kannada, and frames relocation plus Kannada learning as conditions he is committing to, not concessions being requested.",
+          "text": "[dossier_excerpts:010] (verified fact) States that relocating to Bengaluru and learning Kannada are conditions he is committing to for the IITACB CEO role specifically, not concessions being requested.",
+          "evidence_refs": [
+            "dossier_excerpts:010"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet fluent in Kannada.",
           "evidence_refs": [
             "dossier_excerpts:007"
           ],
@@ -1496,37 +1496,21 @@
           "confidence": 0.5
         }
       ],
-      "overall_confidence": 0.745,
+      "overall_confidence": 0.8266666666666667,
       "evidence_coverage": 1.0,
       "system_bucket": "partial",
       "provider": "mock",
-      "latency_ms": 0.06175041198730469
+      "latency_ms": 0.07486343383789062
     },
     {
       "requirement_id": "req14",
       "system_name": "identityos_v2",
-      "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:004] (verified fact) Defined technical strategy, architecture and organisation-wide evaluation frameworks at Jinn Labs, building governance structures where none existed; the same machinery run earlier at student scale heading four chapters simultaneously and organising festivals at KNIT Sultanpur. [dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. [dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.",
+      "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record. [dossier_narrative:008] (verified fact) Captain and Sports Secretary are roles given by peers and cannot be self-appointed. Professional practice of running blameless postmortems and publishing metrics that can embarrass the author. Believes institutional temperament means the institution outranks the incumbent. [dossier_excerpts:011] (verified fact) Siddhartha's dossier states: \"I am a working generative-AI practitioner... I can tell a real deep-tech proposition from AI theatre before [an institution]'s name is on it,\" offered as a self-description of his professional judgment.",
       "claims": [
         {
           "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
           "evidence_refs": [
             "dossier_excerpts:008"
-          ],
-          "claim_type": "verified_fact",
-          "confidence": 0.99
-        },
-        {
-          "text": "[dossier_narrative:004] (verified fact) Defined technical strategy, architecture and organisation-wide evaluation frameworks at Jinn Labs, building governance structures where none existed; the same machinery run earlier at student scale heading four chapters simultaneously and organising festivals at KNIT Sultanpur.",
-          "evidence_refs": [
-            "dossier_narrative:004"
-          ],
-          "claim_type": "verified_fact",
-          "confidence": 0.99
-        },
-        {
-          "text": "[dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.",
-          "evidence_refs": [
-            "dossier_excerpts:006"
           ],
           "claim_type": "verified_fact",
           "confidence": 0.99
@@ -1538,13 +1522,53 @@
           ],
           "claim_type": "verified_fact",
           "confidence": 0.99
+        },
+        {
+          "text": "[dossier_narrative:008] (verified fact) Captain and Sports Secretary are roles given by peers and cannot be self-appointed.",
+          "evidence_refs": [
+            "dossier_narrative:008"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "Professional practice of running blameless postmortems and publishing metrics that can embarrass the author.",
+          "evidence_refs": [
+            "dossier_narrative:008"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "Believes institutional temperament means the institution outranks the incumbent.",
+          "evidence_refs": [
+            "dossier_narrative:008"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "[dossier_excerpts:011] (verified fact) Siddhartha's dossier states: \"I am a working generative-AI practitioner...",
+          "evidence_refs": [
+            "dossier_excerpts:011"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "I can tell a real deep-tech proposition from AI theatre before [an institution]'s name is on it,\" offered as a self-description of his professional judgment.",
+          "evidence_refs": [
+            "dossier_excerpts:011"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
         }
       ],
-      "overall_confidence": 0.99,
+      "overall_confidence": 0.78,
       "evidence_coverage": 1.0,
       "system_bucket": "partial",
       "provider": "mock",
-      "latency_ms": 0.3914833068847656
+      "latency_ms": 0.38552284240722656
     }
   ],
   "identityos_v2_semantic": [
@@ -1598,7 +1622,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.1804828643798828
+      "latency_ms": 0.1838207244873047
     },
     {
       "requirement_id": "req02",
@@ -1650,7 +1674,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.3190040588378906
+      "latency_ms": 0.3113746643066406
     },
     {
       "requirement_id": "req03",
@@ -1702,7 +1726,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.3993511199951172
+      "latency_ms": 0.3917217254638672
     },
     {
       "requirement_id": "req04",
@@ -1778,7 +1802,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "partial",
       "provider": "mock",
-      "latency_ms": 0.396728515625
+      "latency_ms": 0.38623809814453125
     },
     {
       "requirement_id": "req05",
@@ -1838,7 +1862,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.2262592315673828
+      "latency_ms": 0.2193450927734375
     },
     {
       "requirement_id": "req06",
@@ -1914,7 +1938,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "partial",
       "provider": "mock",
-      "latency_ms": 0.34308433532714844
+      "latency_ms": 0.34427642822265625
     },
     {
       "requirement_id": "req07",
@@ -1974,7 +1998,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.2868175506591797
+      "latency_ms": 0.2963542938232422
     },
     {
       "requirement_id": "req08",
@@ -2026,7 +2050,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.3266334533691406
+      "latency_ms": 0.3349781036376953
     },
     {
       "requirement_id": "req09",
@@ -2086,7 +2110,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "partial",
       "provider": "mock",
-      "latency_ms": 0.2956390380859375
+      "latency_ms": 0.30422210693359375
     },
     {
       "requirement_id": "req10",
@@ -2130,7 +2154,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.26607513427734375
+      "latency_ms": 0.25391578674316406
     },
     {
       "requirement_id": "req11",
@@ -2196,12 +2220,12 @@
       "evidence_coverage": 0.8571428571428571,
       "system_bucket": "partial",
       "provider": "mock",
-      "latency_ms": 0.18858909606933594
+      "latency_ms": 0.2486705780029297
     },
     {
       "requirement_id": "req12",
       "system_name": "identityos_v2_semantic",
-      "text": "[dossier_narrative:014] (verified fact) States a reading of the mandate: IITACB does not need a manager, it needs a founder for its second act \u2014 turning a facility and a 50,000-strong Bengaluru alumni base into an institution industry pays to join, government treats as an implementation partner, and IIT Directors route their best research through. [dossier_narrative:013] (verified fact) Confirmed relocation to Bengaluru on appointment, accepting the IITACB CEO role as primarily external-facing with sustained domestic travel to the 23 IIT campuses, Delhi, and industry forums nationally. States that being physically present in Bengaluru is regarded as non-negotiable for this job. [dossier_excerpts:003] (verified fact) Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group. [resume:024] (verified fact) Software Engineer, Amdocs, Pune India, Aug 2020 - Feb 2021, on Billing and RTB teams.",
+      "text": "[dossier_narrative:014] (verified fact) States a reading of the mandate: IITACB does not need a manager, it needs a founder for its second act \u2014 turning a facility and a 50,000-strong Bengaluru alumni base into an institution industry pays to join, government treats as an implementation partner, and IIT Directors route their best research through. [dossier_narrative:013] (verified fact) Confirmed relocation to Bengaluru on appointment, accepting the IITACB CEO role as primarily external-facing with sustained domestic travel to the 23 IIT campuses, Delhi, and industry forums nationally. States that being physically present in Bengaluru is regarded as non-negotiable for this job. [dossier_excerpts:010] (verified fact) States that relocating to Bengaluru and learning Kannada are conditions he is committing to for the IITACB CEO role specifically, not concessions being requested. [dossier_excerpts:003] (verified fact) Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group.",
       "claims": [
         {
           "text": "[dossier_narrative:014] (verified fact) States a reading of the mandate: IITACB does not need a manager, it needs a founder for its second act \u2014 turning a facility and a 50,000-strong Bengaluru alumni base into an institution industry pays to join, government treats as an implementation partner, and IIT Directors route their best research through.",
@@ -2228,17 +2252,17 @@
           "confidence": 0.5
         },
         {
-          "text": "[dossier_excerpts:003] (verified fact) Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group.",
+          "text": "[dossier_excerpts:010] (verified fact) States that relocating to Bengaluru and learning Kannada are conditions he is committing to for the IITACB CEO role specifically, not concessions being requested.",
           "evidence_refs": [
-            "dossier_excerpts:003"
+            "dossier_excerpts:010"
           ],
           "claim_type": "verified_fact",
           "confidence": 0.99
         },
         {
-          "text": "[resume:024] (verified fact) Software Engineer, Amdocs, Pune India, Aug 2020 - Feb 2021, on Billing and RTB teams.",
+          "text": "[dossier_excerpts:003] (verified fact) Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group.",
           "evidence_refs": [
-            "resume:024"
+            "dossier_excerpts:003"
           ],
           "claim_type": "verified_fact",
           "confidence": 0.99
@@ -2248,15 +2272,15 @@
       "evidence_coverage": 1.0,
       "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.3097057342529297
+      "latency_ms": 0.2720355987548828
     },
     {
       "requirement_id": "req13",
       "system_name": "identityos_v2_semantic",
-      "text": "[dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet in Kannada, and frames relocation plus Kannada learning as conditions he is committing to, not concessions being requested. [resume:043] (verified fact) Artificial Intelligence, Deep Learning, Machine Learning, Image Processing, Computer Vision, Natural Language Processing. [resume:044] (verified fact) Augmented Reality, ARCore, Large Language Models, VLMs, RAG, MCP, LangChain. [resume:024] (verified fact) Software Engineer, Amdocs, Pune India, Aug 2020 - Feb 2021, on Billing and RTB teams.",
+      "text": "[dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet fluent in Kannada. [resume:043] (verified fact) Artificial Intelligence, Deep Learning, Machine Learning, Image Processing, Computer Vision, Natural Language Processing. [resume:044] (verified fact) Augmented Reality, ARCore, Large Language Models, VLMs, RAG, MCP, LangChain. [resume:024] (verified fact) Software Engineer, Amdocs, Pune India, Aug 2020 - Feb 2021, on Billing and RTB teams.",
       "claims": [
         {
-          "text": "[dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet in Kannada, and frames relocation plus Kannada learning as conditions he is committing to, not concessions being requested.",
+          "text": "[dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet fluent in Kannada.",
           "evidence_refs": [
             "dossier_excerpts:007"
           ],
@@ -2292,7 +2316,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "partial",
       "provider": "mock",
-      "latency_ms": 0.24580955505371094
+      "latency_ms": 0.24008750915527344
     },
     {
       "requirement_id": "req14",
@@ -2336,7 +2360,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.35691261291503906
+      "latency_ms": 0.36263465881347656
     }
   ],
   "identityos_v2_hybrid": [
@@ -2390,7 +2414,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.34880638122558594
+      "latency_ms": 0.36072731018066406
     },
     {
       "requirement_id": "req02",
@@ -2442,21 +2466,13 @@
       "evidence_coverage": 1.0,
       "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.2911090850830078
+      "latency_ms": 0.3094673156738281
     },
     {
       "requirement_id": "req03",
       "system_name": "identityos_v2_hybrid",
-      "text": "[dossier_narrative:014] (verified fact) States a reading of the mandate: IITACB does not need a manager, it needs a founder for its second act \u2014 turning a facility and a 50,000-strong Bengaluru alumni base into an institution industry pays to join, government treats as an implementation partner, and IIT Directors route their best research through. [dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical \u2014 it is 24x7 production accountability across live customer sites. [dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.",
+      "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:001] (verified fact) Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical \u2014 it is 24x7 production accountability across live customer sites. [dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record. [dossier_narrative:007] (verified fact) Accustomed to explaining deep technology to non-technical boards and to translating executive intent into engineering commitments, built over six years of guest lectures, mentoring programmes and hackathon judging panels plus representing India at the Japan Hackathon 2021.",
       "claims": [
-        {
-          "text": "[dossier_narrative:014] (verified fact) States a reading of the mandate: IITACB does not need a manager, it needs a founder for its second act \u2014 turning a facility and a 50,000-strong Bengaluru alumni base into an institution industry pays to join, government treats as an implementation partner, and IIT Directors route their best research through.",
-          "evidence_refs": [
-            "dossier_narrative:014"
-          ],
-          "claim_type": "verified_fact",
-          "confidence": 0.99
-        },
         {
           "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
           "evidence_refs": [
@@ -2482,9 +2498,17 @@
           "confidence": 0.5
         },
         {
-          "text": "[dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.",
+          "text": "[dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.",
           "evidence_refs": [
-            "dossier_excerpts:006"
+            "dossier_narrative:019"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_narrative:007] (verified fact) Accustomed to explaining deep technology to non-technical boards and to translating executive intent into engineering commitments, built over six years of guest lectures, mentoring programmes and hackathon judging panels plus representing India at the Japan Hackathon 2021.",
+          "evidence_refs": [
+            "dossier_narrative:007"
           ],
           "claim_type": "verified_fact",
           "confidence": 0.99
@@ -2492,9 +2516,9 @@
       ],
       "overall_confidence": 0.892,
       "evidence_coverage": 1.0,
-      "system_bucket": "partial",
+      "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.3745555877685547
+      "latency_ms": 0.3769397735595703
     },
     {
       "requirement_id": "req04",
@@ -2546,7 +2570,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.18215179443359375
+      "latency_ms": 0.1819133758544922
     },
     {
       "requirement_id": "req05",
@@ -2606,12 +2630,12 @@
       "evidence_coverage": 1.0,
       "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.2789497375488281
+      "latency_ms": 0.22363662719726562
     },
     {
       "requirement_id": "req06",
       "system_name": "identityos_v2_hybrid",
-      "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:004] (verified fact) Defined technical strategy, architecture and organisation-wide evaluation frameworks at Jinn Labs, building governance structures where none existed; the same machinery run earlier at student scale heading four chapters simultaneously and organising festivals at KNIT Sultanpur. [dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. [dossier_narrative:008] (verified fact) Captain and Sports Secretary are roles given by peers and cannot be self-appointed. Professional practice of running blameless postmortems and publishing metrics that can embarrass the author. Believes institutional temperament means the institution outranks the incumbent.",
+      "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:004] (verified fact) Defined technical strategy, architecture and organisation-wide evaluation frameworks at Jinn Labs, building governance structures where none existed; the same machinery run earlier at student scale heading four chapters simultaneously and organising festivals at KNIT Sultanpur. [dossier_excerpts:011] (verified fact) Siddhartha's dossier states: \"I am a working generative-AI practitioner... I can tell a real deep-tech proposition from AI theatre before [an institution]'s name is on it,\" offered as a self-description of his professional judgment. [dossier_excerpts:013] (verified fact) Siddhartha's dossier states he replaced subjective judgement with eval-driven release discipline at Jinn Labs, tracking every claim as a metric release over release, and that he would apply the same discipline to any institution he leads.",
       "claims": [
         {
           "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
@@ -2630,43 +2654,35 @@
           "confidence": 0.99
         },
         {
-          "text": "[dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.",
+          "text": "[dossier_excerpts:011] (verified fact) Siddhartha's dossier states: \"I am a working generative-AI practitioner...",
           "evidence_refs": [
-            "dossier_excerpts:006"
+            "dossier_excerpts:011"
           ],
           "claim_type": "verified_fact",
           "confidence": 0.99
         },
         {
-          "text": "[dossier_narrative:008] (verified fact) Captain and Sports Secretary are roles given by peers and cannot be self-appointed.",
+          "text": "I can tell a real deep-tech proposition from AI theatre before [an institution]'s name is on it,\" offered as a self-description of his professional judgment.",
           "evidence_refs": [
-            "dossier_narrative:008"
+            "dossier_excerpts:011"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "[dossier_excerpts:013] (verified fact) Siddhartha's dossier states he replaced subjective judgement with eval-driven release discipline at Jinn Labs, tracking every claim as a metric release over release, and that he would apply the same discipline to any institution he leads.",
+          "evidence_refs": [
+            "dossier_excerpts:013"
           ],
           "claim_type": "verified_fact",
           "confidence": 0.99
-        },
-        {
-          "text": "Professional practice of running blameless postmortems and publishing metrics that can embarrass the author.",
-          "evidence_refs": [
-            "dossier_narrative:008"
-          ],
-          "claim_type": "weak_inference",
-          "confidence": 0.5
-        },
-        {
-          "text": "Believes institutional temperament means the institution outranks the incumbent.",
-          "evidence_refs": [
-            "dossier_narrative:008"
-          ],
-          "claim_type": "weak_inference",
-          "confidence": 0.5
         }
       ],
-      "overall_confidence": 0.8266666666666667,
+      "overall_confidence": 0.892,
       "evidence_coverage": 1.0,
-      "system_bucket": "partial",
+      "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.2999305725097656
+      "latency_ms": 0.2799034118652344
     },
     {
       "requirement_id": "req07",
@@ -2710,7 +2726,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "partial",
       "provider": "mock",
-      "latency_ms": 0.09059906005859375
+      "latency_ms": 0.11277198791503906
     },
     {
       "requirement_id": "req08",
@@ -2754,7 +2770,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "partial",
       "provider": "mock",
-      "latency_ms": 0.19669532775878906
+      "latency_ms": 0.19812583923339844
     },
     {
       "requirement_id": "req09",
@@ -2798,7 +2814,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "partial",
       "provider": "mock",
-      "latency_ms": 0.37860870361328125
+      "latency_ms": 0.4215240478515625
     },
     {
       "requirement_id": "req10",
@@ -2842,7 +2858,7 @@
       "evidence_coverage": 1.0,
       "system_bucket": "met_or_better",
       "provider": "mock",
-      "latency_ms": 0.25343894958496094
+      "latency_ms": 0.2677440643310547
     },
     {
       "requirement_id": "req11",
@@ -2900,7 +2916,7 @@
       "evidence_coverage": 0.8333333333333334,
       "system_bucket": "partial",
       "provider": "mock",
-      "latency_ms": 0.12946128845214844
+      "latency_ms": 0.14352798461914062
     },
     {
       "requirement_id": "req12",
@@ -2952,15 +2968,23 @@
       "evidence_coverage": 1.0,
       "system_bucket": "partial",
       "provider": "mock",
-      "latency_ms": 0.3714561462402344
+      "latency_ms": 0.35381317138671875
     },
     {
       "requirement_id": "req13",
       "system_name": "identityos_v2_hybrid",
-      "text": "[dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet in Kannada, and frames relocation plus Kannada learning as conditions he is committing to, not concessions being requested. Languages \u2014 English, Hindi, Kannada preferred REQUIREMENT:",
+      "text": "[dossier_excerpts:010] (verified fact) States that relocating to Bengaluru and learning Kannada are conditions he is committing to for the IITACB CEO role specifically, not concessions being requested. [dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet fluent in Kannada. Languages \u2014 English, Hindi, Kannada preferred REQUIREMENT:",
       "claims": [
         {
-          "text": "[dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet in Kannada, and frames relocation plus Kannada learning as conditions he is committing to, not concessions being requested.",
+          "text": "[dossier_excerpts:010] (verified fact) States that relocating to Bengaluru and learning Kannada are conditions he is committing to for the IITACB CEO role specifically, not concessions being requested.",
+          "evidence_refs": [
+            "dossier_excerpts:010"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "[dossier_excerpts:007] (verified fact) Siddhartha's own dossier states he is fluent in English and Hindi but not yet fluent in Kannada.",
           "evidence_refs": [
             "dossier_excerpts:007"
           ],
@@ -2976,37 +3000,21 @@
           "confidence": 0.5
         }
       ],
-      "overall_confidence": 0.745,
+      "overall_confidence": 0.8266666666666667,
       "evidence_coverage": 1.0,
       "system_bucket": "partial",
       "provider": "mock",
-      "latency_ms": 0.06175041198730469
+      "latency_ms": 0.07510185241699219
     },
     {
       "requirement_id": "req14",
       "system_name": "identityos_v2_hybrid",
-      "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:004] (verified fact) Defined technical strategy, architecture and organisation-wide evaluation frameworks at Jinn Labs, building governance structures where none existed; the same machinery run earlier at student scale heading four chapters simultaneously and organising festivals at KNIT Sultanpur. [dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record. [dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.",
+      "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. [dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record. [dossier_narrative:008] (verified fact) Captain and Sports Secretary are roles given by peers and cannot be self-appointed. Professional practice of running blameless postmortems and publishing metrics that can embarrass the author. Believes institutional temperament means the institution outranks the incumbent. [dossier_excerpts:011] (verified fact) Siddhartha's dossier states: \"I am a working generative-AI practitioner... I can tell a real deep-tech proposition from AI theatre before [an institution]'s name is on it,\" offered as a self-description of his professional judgment.",
       "claims": [
         {
           "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.",
           "evidence_refs": [
             "dossier_excerpts:008"
-          ],
-          "claim_type": "verified_fact",
-          "confidence": 0.99
-        },
-        {
-          "text": "[dossier_narrative:004] (verified fact) Defined technical strategy, architecture and organisation-wide evaluation frameworks at Jinn Labs, building governance structures where none existed; the same machinery run earlier at student scale heading four chapters simultaneously and organising festivals at KNIT Sultanpur.",
-          "evidence_refs": [
-            "dossier_narrative:004"
-          ],
-          "claim_type": "verified_fact",
-          "confidence": 0.99
-        },
-        {
-          "text": "[dossier_excerpts:006] (verified fact) Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.",
-          "evidence_refs": [
-            "dossier_excerpts:006"
           ],
           "claim_type": "verified_fact",
           "confidence": 0.99
@@ -3018,13 +3026,53 @@
           ],
           "claim_type": "verified_fact",
           "confidence": 0.99
+        },
+        {
+          "text": "[dossier_narrative:008] (verified fact) Captain and Sports Secretary are roles given by peers and cannot be self-appointed.",
+          "evidence_refs": [
+            "dossier_narrative:008"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "Professional practice of running blameless postmortems and publishing metrics that can embarrass the author.",
+          "evidence_refs": [
+            "dossier_narrative:008"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "Believes institutional temperament means the institution outranks the incumbent.",
+          "evidence_refs": [
+            "dossier_narrative:008"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
+        },
+        {
+          "text": "[dossier_excerpts:011] (verified fact) Siddhartha's dossier states: \"I am a working generative-AI practitioner...",
+          "evidence_refs": [
+            "dossier_excerpts:011"
+          ],
+          "claim_type": "verified_fact",
+          "confidence": 0.99
+        },
+        {
+          "text": "I can tell a real deep-tech proposition from AI theatre before [an institution]'s name is on it,\" offered as a self-description of his professional judgment.",
+          "evidence_refs": [
+            "dossier_excerpts:011"
+          ],
+          "claim_type": "weak_inference",
+          "confidence": 0.5
         }
       ],
-      "overall_confidence": 0.99,
+      "overall_confidence": 0.78,
       "evidence_coverage": 1.0,
       "system_bucket": "partial",
       "provider": "mock",
-      "latency_ms": 0.4062652587890625
+      "latency_ms": 0.3707408905029297
     }
   ]
 }

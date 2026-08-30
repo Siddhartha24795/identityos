@@ -107,3 +107,23 @@ identityos_v2_semantic remains unsafe as a standalone system — worse here
 than in v2.3/v2.4, on different requirements — which is a confirmation of
 the existing finding, not a new one requiring its own fix, since semantic
 alone was never the shipped path.
+
+---
+
+# v2.7 — Corpus authoring correction, second file
+
+All results from re-running all three eval suites after the source edit
+(docs/evaluation_v2.md and docs/evaluation_documents.md have full numbers).
+
+| Stage | What we tried and why | Evidence | Decision / learning |
+|---|---|---|---|
+| **Iteration 12 (v2.7)** | Applied the exact v2.6 audit to the file where v2.6 itself had found a near-identical conflation: `dossier_excerpts.md`'s "SELF-ASSESSED GAP" section mixed a general capability-gap fact with "the committee should not be persuaded..." (IITACB's Managing Committee), and a general language-fluency fact with a relocation commitment made specifically for the IITACB role. Split both. | identityos_v2 (lexical) agreement rate 0.43 -> **0.57**. identityos_v2_hybrid: 0.57 -> **0.71**, dangerous overclaim rate held at 0.00 through a *second* consecutive real corpus change. req03 and req06 became full exact matches. Generated letter re-read and confirmed clean of every application-specific phrase flagged across v2.5-v2.6. | Kept. Two fixes of the identical shape, in two different files, both holding the safety metric steady while measurably improving accuracy — stronger evidence the mechanism generalizes than either fix alone. |
+
+## Main failure mode, v2.7 (see docs/hot_take.md for the full writeup)
+
+Four requirements (req07/11/12/14) still don't reach an exact bucket match
+under hybrid, down from six — the same coarse-3-bucket-scale nuance
+limitation, unaffected by either corpus fix, still open for v2.8+.
+identityos_v2_semantic (standalone) was unaffected by this fix, consistent
+with it not depending heavily on either corrected fact either way — still
+not the shipped path.

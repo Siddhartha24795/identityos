@@ -235,16 +235,55 @@ regenerated letter, not fixed in this pass. Named as the next item
 (docs/roadmap.md v2.7) rather than expanded into this version, matching
 this project's practice of shipping one diagnosed fix at a time.
 
+## v2.7: the same authoring correction, applied to the file it was found in
+
+The v2.6 fix was made in `dossier_narrative.md`. Re-reading the
+regenerated letter (docs/evaluation_documents.md) found the identical
+authoring pattern in a different file, `dossier_excerpts.md`'s
+"SELF-ASSESSED GAP" section: a general capability-gap admission mixed with
+"...the committee should not be persuaded that adjacent experience... is
+equivalent to that record" (IITACB's Managing Committee), and a general
+language-fluency fact mixed with a relocation commitment made specifically
+for the IITACB role. Same fix as v2.6, same file-audit method, applied to
+the file where it was actually found.
+
+| Metric | before (v2.6) | after (v2.7) |
+|---|---|---|
+| identityos_v2 (lexical) agreement rate | 0.43 | **0.57** |
+| identityos_v2_hybrid agreement rate | 0.57 | **0.71** |
+| identityos_v2_hybrid dangerous overclaim rate | 0.00 | **0.00** (held) |
+| identityos_v2_semantic agreement rate / dangerous overclaim rate | 0.64 / 0.50 | 0.64 / 0.50 (unchanged) |
+
+req03 and req06 both moved from `partial` to a full, exact `met_or_better`
+match under both lexical and hybrid retrieval — general leadership and
+strategy facts that were previously diluted by an adjacent
+application-specific clause are now clean, standalone citations. Hybrid's
+dangerous overclaim rate held at 0.00 through a second real corpus change
+in a row — two independent confirmations the fallback-only design doesn't
+depend on the specific shape of any one corpus snapshot.
+identityos_v2_semantic (standalone) was unaffected, consistent with it not
+relying heavily on these two specific facts either way.
+
+**The generated cover letter (docs/evaluation_documents.md) is now clean
+of every application-specific phrase flagged across v2.5-v2.6** — no
+"Secretariat" comparison, no "the committee," no relocation commitment.
+Evidence coverage dipped slightly (0.95 -> 0.91) as a minor, disclosed side
+effect of the corpus split changing which facts a couple of sections
+retrieve — not chased further, since the qualitative goal (no scope
+contamination) was achieved and verified by reading the output, the same
+standard applied throughout this project.
+
 ## What's still wrong (not hidden)
 
-**req03, req06, req07, req11, req12, req14 still don't reach an exact
-bucket match under hybrid** (6 of 14) — mostly the same nuance-collapsing
-issue from earlier versions (a real "MET at chief level, with a stated
-caveat" or a forward commitment reads differently than a plain MET once
-bucketed into a coarse 3-way scale) rather than a new finding. **req05 is
-now fully fixed** (v2.6, above) — no longer on this list. None of the
-remaining six are dangerous overclaims — the metric that matters most
-stays at 0.00 under both lexical and hybrid.
+**req07, req11, req12, req14 still don't reach an exact bucket match under
+hybrid** (4 of 14, down from 6) — mostly the same nuance-collapsing issue
+from earlier versions (a real "MET at chief level, with a stated caveat"
+or a forward commitment reads differently than a plain MET once bucketed
+into a coarse 3-way scale) rather than a new finding. **req03, req05, and
+req06 are now fully fixed** (v2.6-v2.7, above) — no longer on this list.
+None of the remaining four are dangerous overclaims — the metric that
+matters most stays at 0.00 under both lexical and hybrid, through three
+consecutive real corpus changes now.
 
 ## What this run does and doesn't prove
 

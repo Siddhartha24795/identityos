@@ -1,4 +1,4 @@
-# Evaluation — v2.5-v2.6 (Document Generation)
+# Evaluation — v2.5-v2.7 (Document Generation)
 
 ## What this is
 
@@ -16,21 +16,23 @@ would?
 Reproduce: `python scripts/build_digital_self.py && python scripts/run_eval_documents.py mock docs_mock fastembed`.
 Generated letters are saved as plain text at `data/evaluation/results/<tag>/documents/<system>.md` — read them, not just the scores.
 
-## Result (post-v2.6)
+## Result (post-v2.7)
 
 | Metric | baseline_plain | baseline_rag | identityos_v2_5 |
 |---|---|---|---|
-| Evidence coverage | 0.00 | 0.00 | **0.95** |
-| Unsupported claim rate | 1.00 | 1.00 | **0.05** |
-| Repeated-evidence rate (narrative diversity) | n/a (no citations) | n/a | **0.44** |
+| Evidence coverage | 0.00 | 0.00 | **0.91** |
+| Unsupported claim rate | 1.00 | 1.00 | **0.10** |
+| Repeated-evidence rate (narrative diversity) | n/a (no citations) | n/a | **0.39** |
 
 Same structural story as v1/v2: neither baseline has a citation mechanism,
 so neither can be scored above the trivial floor regardless of prose
-quality. identityos_v2_5 grounds 95% of its sentences. Repeated-evidence
-rate rose from 0.32 (v2.5) to 0.44 here because the v2.6 corpus split
-below reduced the pool of distinct general facts available to some
-sections — a real, disclosed side effect, not hidden because the other two
-numbers didn't move.
+quality. Evidence coverage and unsupported-claim rate both moved slightly
+across v2.5 (0.95/0.05) -> v2.6 (0.95/0.05) -> v2.7 (0.91/0.10) as the two
+corpus splits changed which facts a couple of sections retrieve — real,
+disclosed side effects of a fix aimed at content *scope*, not at these
+numbers, and small enough not to chase further once the qualitative goal
+(a letter free of application-specific leakage — see below) was verified
+by reading the actual output.
 
 ## v2.5: a real finding, from reading the actual letter, not just the score
 
@@ -77,11 +79,27 @@ authoring pattern in a different source file
 (`dossier_excerpts.md`'s "SELF-ASSESSED GAP" section mixes a general
 capability-gap admission with "...the committee should not be persuaded
 that adjacent experience... is equivalent to that record" — "the
-committee" is IITACB's Managing Committee). Named as the next item
-(docs/roadmap.md v2.7), not expanded into this version. This is the same
-granularity lesson as v2.2's negation fix, now confirmed a third time: the
-right fix at this level of the codebase has consistently been "read the
-actual output and correct the source," not "build a cleverer filter."
+committee" is IITACB's Managing Committee). This is the same granularity
+lesson as v2.2's negation fix, now confirmed a third time: the right fix
+at this level of the codebase has consistently been "read the actual
+output and correct the source," not "build a cleverer filter."
+
+## v2.7: the same correction, applied to the file it was actually found in
+
+Fixed `dossier_excerpts.md`'s two conflated bullets the same way as v2.6:
+split the general capability-gap fact from "the committee should not be
+persuaded..." (IITACB's Managing Committee), and split the general
+English/Hindi/Kannada fluency fact from the relocation-and-Kannada-learning
+commitment made specifically for the IITACB role.
+
+**The regenerated letter is now clean of every application-specific
+phrase flagged across v2.5-v2.6** — no "Secretariat," no "the committee,"
+no role-specific relocation commitment. Verified by reading the letter
+again, not assumed from the diff. On the requirement-fit benchmark, the
+same fix moved req03 and req06 to full exact matches under both lexical
+and hybrid retrieval, with hybrid's dangerous overclaim rate holding at
+0.00 through a second consecutive real corpus change (docs/evaluation_v2.md
+has full numbers).
 
 ## What this run does and doesn't prove
 

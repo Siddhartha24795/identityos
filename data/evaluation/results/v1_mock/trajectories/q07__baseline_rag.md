@@ -1,12 +1,12 @@
 ### Trajectory — baseline_rag — q07
 
-**04:28:48 · retrieve**
+**04:41:12 · retrieve**
 - input: What motivates your research?
 - action: dump the entire fact store as unstructured text (no ranking, no ids)
-- observation: 94 facts included, no relevance filtering
+- observation: 96 facts included, no relevance filtering
 - reasoning: Baseline 2 has retrieval but no structure and no grounding check.
 
-**04:28:48 · generate**
+**04:41:12 · generate**
 - input: What motivates your research?
 - action: call provider with the full unstructured context dump
 - observation: Named inventor, patent Application No. 202511076834, "Generative AI based video codecs utilizing image-to-video generation", filed through Samsung Research Noida and assigned to Samsung Electronics Co., Ltd. Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India. Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical — it is 24x7 production accountability across live customer sites. Credibility earned in two currencies: academic (IIT M.Tech, guest faculty across universities) and industrial (Samsung Research, Qualcomm, CTO of a venture shipping into live enterprise sites).

@@ -5,6 +5,20 @@ Transcribed for IdentityOS v1 ingestion — this is the only source that
 contains the patent detail and the candid, self-scored gap analysis, both of
 which are useful stress tests for the belief/contradiction layer.
 Used with the data owner's consent (Siddhartha is both the user and subject).
+
+v2.7 correction: applying the same audit that fixed dossier_narrative.md
+in v2.6, two bullets below originally conflated a general, portable fact
+about the person with a clause specific to the IITACB CEO candidature in
+the same sentence (naming "the committee", or framing a commitment as
+being "for this job"). Split each into a general fact plus a separate,
+correctly-tagged APPLICATION-SPECIFIC one — real content moved, not
+deleted or reworded to say something different, and both original
+facts' sentences are still fully present, just as two bullets instead of
+one. "Cabinet Secretariat" / "secretariat-level" elsewhere in this file
+are left untouched: they are genuinely general terms for government
+hierarchy, not a comparison to IITACB's own Secretariat (v2.6 already
+established this distinction via a regression test that caught a false
+positive on exactly this phrase).
 -->
 
 ## ACHIEVEMENT
@@ -16,9 +30,13 @@ Six years of unpaid guest sessions, mentoring, and hackathon judging across univ
 Siddhartha's dossier states he has no prior secretariat-level government relations mandate, but brings substantive fluency in the public-sector research system through selection for scientist positions at ISRO, BARC, DRDO, NIELIT, BDL, and the Cabinet Secretariat across six independent national selection processes, plus domain authority in areas current missions fund such as the IndiaAI Mission, National Quantum Mission, and Semicon India.
 
 ## SELF-ASSESSED GAP
-Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA, and explicitly says the committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to that record.
-Siddhartha's own dossier states he is fluent in English and Hindi but not yet in Kannada, and frames relocation plus Kannada learning as conditions he is committing to, not concessions being requested.
+Siddhartha's own dossier states he has no prior record of building or running a professional membership body such as CII, NASSCOM, FICCI, or AIMA.
+Siddhartha's own dossier states he is fluent in English and Hindi but not yet fluent in Kannada.
 Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited.
+
+## APPLICATION-SPECIFIC EVIDENCE
+States that the IITACB Managing Committee should not be persuaded that adjacent experience (student chapters, alumni association membership) is equivalent to a record of building or running a professional membership body.
+States that relocating to Bengaluru and learning Kannada are conditions he is committing to for the IITACB CEO role specifically, not concessions being requested.
 
 ## BELIEF-RELEVANT STATEMENT
 Siddhartha's dossier states: "I am a working generative-AI practitioner... I can tell a real deep-tech proposition from AI theatre before [an institution]'s name is on it," offered as a self-description of his professional judgment.
