@@ -3,7 +3,7 @@
   "system_name": "baseline_rag",
   "steps": [
     {
-      "timestamp": "2026-08-30T04:41:12.325865Z",
+      "timestamp": "2026-08-30T07:00:27.595828Z",
       "stage": "retrieve",
       "input_summary": "What motivates your research?",
       "action": "dump the entire fact store as unstructured text (no ranking, no ids)",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T04:41:12.327213Z",
+      "timestamp": "2026-08-30T07:00:27.597129Z",
       "stage": "generate",
       "input_summary": "What motivates your research?",
       "action": "call provider with the full unstructured context dump",

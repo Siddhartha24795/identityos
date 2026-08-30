@@ -70,6 +70,25 @@ def test_retrieval_finds_relevant_fact():
     assert any("Jinn Labs" in f.text or "RTSP" in f.text for f in facts)
 
 
+def test_retrieve_min_shared_tokens_defaults_to_backward_compatible_behavior():
+    """v2.8 added a min_shared_tokens parameter to retrieve() after finding
+    a single shared token is a noisy inclusion bar (docs/evaluation_v2.md's
+    v2.8 section) — but the experiment tried at min_shared_tokens=2 traded
+    that noise reduction for a worse safety regression elsewhere and was
+    NOT adopted as the default. This just locks in that the default (1)
+    still behaves exactly as before the parameter existed."""
+    ds = _build_test_digital_self()
+    q = Question(
+        id="t4",
+        text="What did you build at Jinn Labs for video ingestion?",
+        type=QuestionType.FACTUAL,
+        application_context="test",
+    )
+    default_facts, _ = retrieve(ds, q)
+    explicit_facts, _ = retrieve(ds, q, min_shared_tokens=1)
+    assert [f.id for f in default_facts] == [f.id for f in explicit_facts]
+
+
 def test_verification_flags_unsupported_sentence():
     claims, overall = verify_answer(
         "This sentence has no citation and shares no words with any evidence at all.",

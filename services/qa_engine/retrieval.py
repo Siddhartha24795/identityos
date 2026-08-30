@@ -33,21 +33,32 @@ def _tokens(text: str) -> set[str]:
 
 
 def retrieve(
-    ds: DigitalSelf, question: Question, top_k_facts: int = 6, top_k_beliefs: int = 3
+    ds: DigitalSelf,
+    question: Question,
+    top_k_facts: int = 6,
+    top_k_beliefs: int = 3,
+    min_shared_tokens: int = 1,
 ) -> tuple[list[Fact], list[Belief]]:
+    """min_shared_tokens defaults to 1 (any shared non-stopword token) for
+    backward compatibility. v2.8 found that a single shared token is a
+    noisy inclusion bar: a fact can rank into the top-k on one incidental
+    word overlap, contribute an unrelated negation marker, and wrongly
+    downgrade an otherwise strong, clearly relevant answer
+    (docs/evaluation_v2.md's v2.8 section). See retrieve_hybrid() for where
+    a higher bar is actually used."""
     q_tokens = _tokens(question.text)
 
     scored_facts = sorted(
         ((len(_tokens(f.text) & q_tokens), f) for f in ds.facts),
         key=lambda t: -t[0],
     )
-    facts = [f for score, f in scored_facts[:top_k_facts] if score > 0]
+    facts = [f for score, f in scored_facts[:top_k_facts] if score >= min_shared_tokens]
 
     scored_beliefs = sorted(
         ((len(_tokens(b.statement) & q_tokens), b) for b in ds.beliefs),
         key=lambda t: -t[0],
     )
-    beliefs = [b for score, b in scored_beliefs[:top_k_beliefs] if score > 0]
+    beliefs = [b for score, b in scored_beliefs[:top_k_beliefs] if score >= min_shared_tokens]
 
     return facts, beliefs
 
@@ -119,6 +130,7 @@ def retrieve_hybrid(
     top_k_facts: int = 6,
     top_k_beliefs: int = 3,
     min_similarity: float = 0.55,
+    lexical_min_shared_tokens: int = 1,
 ) -> tuple[list[Fact], list[Belief]]:
     """v2.4 — lexical first, semantic ONLY as a fallback when lexical finds
     nothing at all.
@@ -134,7 +146,9 @@ def retrieve_hybrid(
     and nothing else — verified by re-running the full 14-requirement
     comparison, not assumed from the design alone (docs/evaluation_v2.md).
     """
-    facts, beliefs = retrieve(ds, question, top_k_facts, top_k_beliefs)
+    facts, beliefs = retrieve(
+        ds, question, top_k_facts, top_k_beliefs, min_shared_tokens=lexical_min_shared_tokens
+    )
     if not facts and not beliefs:
         facts, beliefs = retrieve_semantic(
             index, question, top_k_facts, top_k_beliefs, min_similarity

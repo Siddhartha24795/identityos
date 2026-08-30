@@ -273,14 +273,63 @@ retrieve — not chased further, since the qualitative goal (no scope
 contamination) was achieved and verified by reading the output, the same
 standard applied throughout this project.
 
+## v2.8: an experiment that didn't pan out, kept in the record
+
+Investigated the four remaining mismatches (req07, req11, req12, req14)
+before assuming they were all the same coarse-3-bucket-scale issue. Two of
+them (req07, req12) turned out to share a distinct, diagnosable mechanism:
+lexical retrieval's inclusion bar is "at least one shared non-stopword
+token," which is noisy — a fact can rank into the top-k on a single
+incidental word overlap, and if that weakly-relevant fact happens to
+contain a negation marker unrelated to the actual requirement, it wrongly
+drags an otherwise strong, clearly-grounded answer down to `partial`. For
+req07 ("Stakeholder management"), a fact about P&L management ("...this is
+experience not yet held") got cited alongside the genuinely relevant one,
+purely because "management" is a shared token. For req12 (relocation), an
+unrelated government-relations fact containing "no prior" did the same.
+
+The obvious general fix — raise the lexical inclusion bar to require 2+
+shared tokens (`retrieve(..., min_shared_tokens=2)`, added as an optional
+parameter, default unchanged at 1) — **was tested against the full
+14-requirement benchmark, not assumed, and made things worse overall**:
+
+| Metric | shipped default (min_shared_tokens=1) | tested (min_shared_tokens=2) |
+|---|---|---|
+| Agreement rate | **0.71** | 0.64 |
+| Dangerous overclaim rate | **0.00** | **0.50** |
+
+req07 and req12 did become exact matches. But req08 and req09 (both real
+`partial`) flipped to dangerous `met_or_better` overclaims, because the
+same weakly-shared-token facts that were noise for req07/req12 were the
+*load-bearing correct evidence* for req08/req09's qualifiers — raising the
+precision bar cut recall for cases that needed it. This is the same
+retrieval-precision/recall tension as v2.3, appearing inside lexical
+retrieval itself, not just at the lexical-vs-semantic boundary.
+
+**Not adopted.** The parameter stays in the codebase (default=1, i.e. no
+behavior change) because it's a legitimate, tested knob for future work —
+see docs/roadmap.md v2.9 for the fix this actually points to
+(relevance-weighted polarity checking, not a blanket inclusion-bar change).
+
 ## What's still wrong (not hidden)
 
 **req07, req11, req12, req14 still don't reach an exact bucket match under
-hybrid** (4 of 14, down from 6) — mostly the same nuance-collapsing issue
-from earlier versions (a real "MET at chief level, with a stated caveat"
-or a forward commitment reads differently than a plain MET once bucketed
-into a coarse 3-way scale) rather than a new finding. **req03, req05, and
-req06 are now fully fixed** (v2.6-v2.7, above) — no longer on this list.
+the shipped default** (4 of 14, down from 6). **req03, req05, and req06
+are now fully fixed** (v2.6-v2.7, above) — no longer on this list. Of the
+remaining four, three now have a specific, understood cause rather than a
+generic "nuance" label:
+
+- **req07, req12**: diagnosed in v2.8, above — a weakly-relevant fact with
+  an unrelated negation marker gets cited alongside the real evidence. The
+  general fix (raise the lexical inclusion bar) was tested and rejected
+  because it broke req08/req09 in the process. Open for v2.9
+  (relevance-weighted polarity checking).
+- **req11**: genuinely low retrieval confidence (0.51, just under the 0.6
+  threshold) rather than a negation false-positive — the honest "weak but
+  real evidence" case the confidence threshold exists to catch.
+- **req14**: the real `gap` case; system says `partial` (safe underclaim,
+  not a match) — already understood since v2.1.
+
 None of the remaining four are dangerous overclaims — the metric that
 matters most stays at 0.00 under both lexical and hybrid, through three
 consecutive real corpus changes now.

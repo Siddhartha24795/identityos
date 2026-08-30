@@ -1,4 +1,4 @@
-# IdentityOS — v2.7
+# IdentityOS — v2.8
 
 **An autonomous representative that answers application questions,
 assesses job-requirement fit, and generates application documents on a
@@ -8,12 +8,13 @@ of fabrication.**
 Built for the micro1 Agentic Workflows Hackathon, against the full brief
 preserved in `PROMPT.md`. This repo builds v1 (Q&A), v2 (requirement-fit
 assessment against a real, adjudicated application, iterated through
-v2.4), and v2.5-v2.7 (document generation + two corpus authoring
-corrections) of that brief — see [docs/roadmap.md](docs/roadmap.md) for
-what's deferred to v2.8-v5 and why. Prior versions frozen at
-`../identityos-v1/`, `../identityos-v2/`, `../identityos-v2.1/`,
-`../identityos-v2.2/`, `../identityos-v2.3/`, `../identityos-v2.4/`,
-`../identityos-v2.5/`, `../identityos-v2.6/`.
+v2.4), and v2.5-v2.8 (document generation, two corpus authoring
+corrections, and a diagnosed-but-rejected retrieval experiment) of that
+brief — see [docs/roadmap.md](docs/roadmap.md) for what's deferred to
+v2.9-v5 and why. Prior versions frozen at `../identityos-v1/`,
+`../identityos-v2/`, `../identityos-v2.1/`, `../identityos-v2.2/`,
+`../identityos-v2.3/`, `../identityos-v2.4/`, `../identityos-v2.5/`,
+`../identityos-v2.6/`, `../identityos-v2.7/`.
 
 ## Who has this problem, and why it's worth solving
 
@@ -74,7 +75,7 @@ but does need one-time network access. Output per run:
 To get a qualitative read with a real model: copy `.env.example` to `.env`,
 set `ANTHROPIC_API_KEY` or `OPENAI_API_KEY`, then `make eval-real` / `make eval-v2-real`.
 
-Run the smoke test suite: `make test` (24 tests, <1s, no keys/downloads needed).
+Run the smoke test suite: `make test` (25 tests, <1s, no keys/downloads needed).
 
 ## Results (reference runs, `PROVIDER=mock`)
 
@@ -122,7 +123,7 @@ that the polarity check from v2.2 couldn't tell apart from the real thing.
 We did not tune this until it looked better; at the time, lexical retrieval
 stayed the default. Full trade-off: [docs/evaluation_v2.md](docs/evaluation_v2.md).
 
-**v2.4-v2.7 — hybrid retrieval, now the recommended strategy:**
+**v2.4-v2.8 — hybrid retrieval, now the recommended strategy:**
 
 | Metric | identityos_v2 (lexical) | identityos_v2_semantic (fastembed) | identityos_v2_hybrid |
 |---|---|---|---|
@@ -142,7 +143,12 @@ changes — the clearest evidence yet the fallback-only design isn't fit to
 one snapshot of data. identityos_v2_semantic's dangerous-overclaim rate,
 by contrast, *worsened* under the same corpus changes (0.25 -> 0.50, on
 different requirements each time), which is why it stays a comparison arm,
-never the shipped default. Full story: [docs/evaluation_v2.md](docs/evaluation_v2.md).
+never the shipped default. v2.8 then diagnosed and tested the obvious next
+fix for two remaining mismatches (require 2+ shared tokens for lexical
+retrieval) — it fixed those two and pushed dangerous overclaim rate to
+0.50 by breaking two others that relied on the exact same weak-match
+mechanism. **Not shipped**, kept as a documented negative result. Full
+story: [docs/evaluation_v2.md](docs/evaluation_v2.md).
 
 **v2.5-v2.7 — document generation, the first real generated artifact:**
 
@@ -202,8 +208,13 @@ the visible one) is what separates a correction from tuning a benchmark.
 v2.7: applying the identical correction to a second file, found by
 continuing to read the output after already believing the problem was
 solved, is what actually demonstrates the fix generalizes rather than
-happening to work once. Full writeup, including what's still unfixed:
-[docs/hot_take.md](docs/hot_take.md).
+happening to work once. v2.8: the sharpest version of this yet — the same
+weakly-relevant evidence that was noise for one requirement was the only
+thing keeping a *different* requirement honest, at the same retrieval
+threshold. "This match looks noisy" and "matches like this are noise in
+general" are different claims, and the difference only shows up when you
+test the fix against everything, not just the case that motivated it. Full
+writeup, including what's still unfixed: [docs/hot_take.md](docs/hot_take.md).
 
 ## Hackathon compliance self-check
 

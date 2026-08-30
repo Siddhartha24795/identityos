@@ -3,7 +3,7 @@
   "system_name": "identityos_v2",
   "steps": [
     {
-      "timestamp": "2026-08-30T04:41:27.914549Z",
+      "timestamp": "2026-08-30T07:00:43.442479Z",
       "stage": "retrieve",
       "input_summary": "Entrepreneurial mindset",
       "action": "lexical retrieval over Digital Self: top 0 facts, 0 beliefs",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T04:41:27.914572Z",
+      "timestamp": "2026-08-30T07:00:43.442518Z",
       "stage": "generate",
       "input_summary": "Entrepreneurial mindset",
       "action": "call provider with cited, confidence-annotated context",
@@ -23,7 +23,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T04:41:27.914588Z",
+      "timestamp": "2026-08-30T07:00:43.442534Z",
       "stage": "verify",
       "input_summary": "Entrepreneurial mindset REQUIREMENT:",
       "action": "per-sentence grounding check (same verifier as v1)",
@@ -33,7 +33,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T04:41:27.914593Z",
+      "timestamp": "2026-08-30T07:00:43.442539Z",
       "stage": "bucket",
       "input_summary": "Entrepreneurial mindset REQUIREMENT:",
       "action": "derive fit bucket from coverage+confidence, not a self-reported label",

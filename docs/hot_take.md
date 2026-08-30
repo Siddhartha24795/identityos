@@ -230,6 +230,32 @@ already believing the problem was solved*, and the discipline that caught
 it (keep reading, don't declare victory at a passing score) is repeatable,
 not a one-time insight.
 
+## v2.8 addendum: the same weak evidence that hurts one requirement is what saves another
+
+Diagnosed why two remaining mismatches (req07, req12) were wrong: a fact
+sharing exactly one word with the requirement text ranked into the
+retrieved set, carried an unrelated negation marker, and dragged an
+otherwise-correct answer down. The obvious fix — require at least two
+shared words before a fact counts as retrieved — is the kind of change
+that looks safe in isolation and was tested, not assumed, against the full
+benchmark before being trusted.
+
+It made the dangerous-overclaim rate five times worse. The same
+weak-single-token matching that was noise for req07/req12 turned out to be
+the only thing keeping req08 and req09 honest — their correct `partial`
+verdicts depended on citing a fact that shared just one word with the
+requirement. Tightening precision for two cases silently starved two
+others of the evidence that had been keeping them safe.
+
+This is worth stating plainly because it's counterintuitive: **"this
+specific match looks noisy" and "matches like this are noise in general"
+are different claims, and only one of them is checkable by looking at the
+case in front of you.** The same retrieval mechanism was simultaneously
+the disease and the cure, for different requirements, at the same
+threshold. We didn't ship the fix, and we didn't discover this by
+reasoning about it — only by running the one experiment that would have
+looked like a strict win if we'd stopped at the two cases we started from.
+
 ## The experiment we removed
 
 An earlier version of the hard-case scoring (services/evaluation/scoring.py)

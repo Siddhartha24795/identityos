@@ -1,9 +1,9 @@
 # This is a frozen snapshot
 
-This folder is an immutable copy of IdentityOS **v2.7**, taken from the live
-working directory at `../identityos/` once the second corpus authoring
-correction was made and independently verified across all three eval
-suites from a clean environment.
+This folder is an immutable copy of IdentityOS **v2.8**, taken from the live
+working directory at `../identityos/` once a retrieval-precision experiment
+was diagnosed, tested against the full benchmark, and correctly rejected —
+verified from a clean environment that the shipped behavior is unchanged.
 
 - v1 (Q&A only) is frozen separately at `../identityos-v1/`.
 - v2.0 (requirement-fit assessment, one dangerous overclaim) at `../identityos-v2/`.
@@ -13,18 +13,18 @@ suites from a clean environment.
 - v2.4 (hybrid retrieval, promoted) at `../identityos-v2.4/`.
 - v2.5 (document generation, found the evidence-scope substitution) at `../identityos-v2.5/`.
 - v2.6 (corpus authoring correction, `dossier_narrative.md`) at `../identityos-v2.6/`.
-- v2.7 applies the identical correction to the second file where the same
-  conflation pattern was found (`dossier_excerpts.md`'s "SELF-ASSESSED
-  GAP" section: a general capability-gap fact mixed with "the committee
-  should not be persuaded..." [IITACB's Managing Committee], and a general
-  language-fluency fact mixed with a relocation commitment made
-  specifically for the IITACB role). Result: hybrid retrieval's agreement
-  rate 0.57 -> 0.71 (req03 and req06 now exact matches), dangerous
-  overclaim rate held at 0.00 through a *second* consecutive real corpus
-  change. Generated cover letter re-verified clean of every
-  application-specific phrase flagged across both correction rounds. See
-  `docs/improvement_changelog.md` (Iteration 12), `docs/evaluation_v2.md`,
-  `docs/evaluation_documents.md`, `docs/hot_take.md`'s v2.7 addendum.
+- v2.7 (corpus authoring correction, `dossier_excerpts.md`) at `../identityos-v2.7/`.
+- v2.8 diagnosed why req07 and req12 still mismatched (a fact sharing one
+  token with the requirement can inject an unrelated negation marker),
+  added an optional `min_shared_tokens` parameter to
+  `retrieve()`/`retrieve_hybrid()` (default unchanged at 1), and tested
+  raising it to 2 against the full 14-requirement benchmark. It fixed
+  req07/req12 and turned req08/req09 into dangerous overclaims — the same
+  weak matches were noise for one pair and load-bearing correct evidence
+  for the other. **Not adopted**; shipped retrieval behavior is
+  byte-identical to v2.7. See `docs/improvement_changelog.md`
+  (Iteration 13), `docs/evaluation_v2.md`, `docs/hot_take.md`'s v2.8
+  addendum.
 - Ongoing development continues in `../identityos/` (the live directory).
 - No `.venv`, `.git`, or cache directories were copied — `make setup` +
   `make eval-mock` / `make eval-v2-mock` need nothing beyond this folder

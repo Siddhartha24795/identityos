@@ -3,7 +3,7 @@
   "system_name": "baseline_rag",
   "steps": [
     {
-      "timestamp": "2026-08-30T04:41:12.334832Z",
+      "timestamp": "2026-08-30T07:00:27.604719Z",
       "stage": "retrieve",
       "input_summary": "Tell us about a decision that changed your career.",
       "action": "dump the entire fact store as unstructured text (no ranking, no ids)",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T04:41:12.336109Z",
+      "timestamp": "2026-08-30T07:00:27.605974Z",
       "stage": "generate",
       "input_summary": "Tell us about a decision that changed your career.",
       "action": "call provider with the full unstructured context dump",

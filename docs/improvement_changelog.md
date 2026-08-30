@@ -127,3 +127,26 @@ limitation, unaffected by either corpus fix, still open for v2.8+.
 identityos_v2_semantic (standalone) was unaffected by this fix, consistent
 with it not depending heavily on either corrected fact either way — still
 not the shipped path.
+
+---
+
+# v2.8 — Removed experiment: raising the lexical inclusion bar
+
+All results from re-running `run_eval_v2.py` with an ad hoc
+`min_shared_tokens=2` override against the shipped default of 1
+(docs/evaluation_v2.md has the full table).
+
+| Stage | What we tried and why | Evidence | Decision / learning |
+|---|---|---|---|
+| **Investigation (v2.8)** | Diagnosed, rather than assumed, why req07 and req12 still mismatched: a fact sharing exactly one non-stopword token with the requirement ranked into the retrieved set and contributed an unrelated negation marker, wrongly downgrading an otherwise-correct answer. | Traced via trajectories: req07 cited an irrelevant P&L fact ("...not yet held"); req12 cited an irrelevant government-relations fact ("no prior..."). | Root cause identified before attempting any fix. |
+| **Iteration 13 (v2.8) — tested and rejected** | Added `min_shared_tokens` as an optional parameter to `retrieve()`/`retrieve_hybrid()` (default 1, unchanged) and tested the obvious fix: require 2+ shared tokens before a fact counts as retrieved. | req07 and req12 became exact matches. But agreement rate fell 0.71 -> 0.64 and **dangerous overclaim rate rose 0.00 -> 0.50**: req08 and req09 flipped to dangerous overclaims, because the same weak single-token matches that were noise for req07/req12 were the load-bearing correct evidence for req08/req09's `partial` verdicts. | **Not adopted.** Parameter kept in the codebase at its backward-compatible default (a legitimate, tested knob), but the shipped retrieval behavior is unchanged. This is the clearest "looked like a strict win, measured as a net loss" result in the project. |
+
+## Main failure mode, v2.8 (see docs/hot_take.md for the full writeup)
+
+req07 and req12 remain unfixed, with a known, diagnosed cause and a known,
+rejected fix. The real fix — weight the polarity check by how relevant
+each citation actually is, rather than an inclusion-bar change that treats
+all retrieved facts as equally trustworthy — needs retrieval relevance
+scores threaded through to the bucketing decision, a larger architectural
+change than fits one version's scope. Named for v2.9, not attempted
+reactively here.

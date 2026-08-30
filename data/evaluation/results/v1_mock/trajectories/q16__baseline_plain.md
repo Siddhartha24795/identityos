@@ -1,6 +1,6 @@
 ### Trajectory — baseline_plain — q16
 
-**04:41:12 · generate**
+**07:00:27 · generate**
 - input: Are you primarily a research scientist or a production engineering leader?
 - action: call provider with zero context, zero verification
 - observation: Over the years, I have built a reputation for excellence here. When it comes to engineering and leader and primarily, I have always taken a proactive, results-driven approach and delivered measurable impact. I look forward to bringing this strength to your organization.

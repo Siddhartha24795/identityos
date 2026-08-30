@@ -131,8 +131,29 @@ every application-specific phrase flagged across v2.5-v2.6. See
 docs/improvement_changelog.md (Iteration 12), docs/evaluation_v2.md,
 docs/evaluation_documents.md, docs/hot_take.md's v2.7 addendum.
 
-## v2.8+ — deferred  ·  not started
+## v2.8 — investigated req07/req12, tested a fix, rejected it  ·  **built**
 
+Diagnosed the cause of two of the four remaining mismatches: a fact
+sharing exactly one token with the requirement can rank into the retrieved
+set and contribute an unrelated negation marker, wrongly downgrading an
+otherwise-correct answer. Added `min_shared_tokens` as an optional,
+backward-compatible parameter to `retrieve()`/`retrieve_hybrid()` and
+tested the obvious fix (require 2+ shared tokens) against the full
+benchmark. It fixed req07/req12 and broke req08/req09 — the same weak
+single-token matches were noise for one pair and load-bearing correct
+evidence for the other. **Not adopted**; shipped retrieval behavior is
+unchanged. See docs/improvement_changelog.md (Iteration 13),
+docs/evaluation_v2.md, docs/hot_take.md's v2.8 addendum.
+
+## v2.9+ — deferred  ·  not started
+
+- Relevance-weighted polarity checking — the real fix v2.8 points to:
+  weight the negation/polarity vote by how relevant each citation actually
+  is (its retrieval score), rather than an inclusion-bar change that
+  treats every retrieved fact as equally trustworthy. Needs retrieval
+  relevance scores threaded through to the bucketing decision — a larger
+  architectural change than fits one version's scope, not attempted
+  reactively in v2.8.
 - Automatic belief inference from raw unstructured text (replacing v1/v2's
   hand-seeded beliefs) with an LLM pass plus counter-evidence search.
 - Extend document generation to other types (SOP, research statement,
@@ -142,12 +163,9 @@ docs/evaluation_documents.md, docs/hot_take.md's v2.7 addendum.
   (dangerous overclaim rate 0.50 as of v2.6-v2.7) — not a priority to fix
   directly, since it was never the shipped path; hybrid already achieves
   the safety guarantee semantic-alone doesn't.
-- Four requirements (req07/11/12/14) still don't reach an exact bucket
-  match under hybrid, down from six at v2.5 — mostly a coarse-3-bucket-scale
-  nuance problem, not a retrieval problem. Would need either a
-  finer-grained real assessment scale or a smarter bucketing rule; not
-  attempted yet because neither is a quick fix and both need their own
-  evaluation.
+- req11 (genuinely low retrieval confidence, 0.51) and req14 (the real gap
+  case, system says `partial`, a safe underclaim) remain open — both
+  already understood, neither a new finding.
 - `resume.md` was checked for the same conflation pattern (grepped for
   IITACB/committee/secretariat/role-specific framing) and found clean —
   its one "Secretariat" mention is the same legitimate "Cabinet

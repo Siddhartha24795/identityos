@@ -3,7 +3,7 @@
   "system_name": "baseline_rag",
   "steps": [
     {
-      "timestamp": "2026-08-30T04:41:12.331801Z",
+      "timestamp": "2026-08-30T07:00:27.601780Z",
       "stage": "retrieve",
       "input_summary": "Where do you see yourself in five years?",
       "action": "dump the entire fact store as unstructured text (no ranking, no ids)",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T04:41:12.333099Z",
+      "timestamp": "2026-08-30T07:00:27.603057Z",
       "stage": "generate",
       "input_summary": "Where do you see yourself in five years?",
       "action": "call provider with the full unstructured context dump",
