@@ -66,6 +66,9 @@ structured sources -> Facts + Beliefs (provenance + confidence)
 ```
 
 Full architecture and every design trade-off: [docs/architecture.md](docs/architecture.md).
+For a single cross-cutting technical reference — schemas, function
+signatures, and an implementation-level deep dive on the v4.0 Orchestrator
+and v4.1 Learning Engine specifically — see [docs/design.md](docs/design.md).
 
 ## Quickstart (zero API keys required)
 
@@ -490,7 +493,8 @@ Full disclosure, and what "agent-use evidence" means in this repo:
 ```
 docs/                  problem statement, architecture, roadmap, evaluation (v1, v2, documents, browser),
                         changelog, research hypotheses, hot take, demo script, agent disclosure,
-                        security_spec.md (the full guardrail spec, preserved verbatim)
+                        design.md (cross-cutting technical reference: schemas, orchestrator + learning
+                        engine internals), security_spec.md (the full guardrail spec, preserved verbatim)
 packages/schemas/      typed Fact / Belief / Evidence / Question / Answer / Trajectory /
                         ApplicationRequirement / Assessment / FitBucket /
                         DocumentSection / GeneratedDocument /
