@@ -1,7 +1,27 @@
 # Hackathon compliance self-check
 
 Re-verified after every version against `/home/siddhartha/siddhartha/micro1 - First Hackathon97ce7c5.pdf`.
-Last checked: **after v3.3**.
+Last checked: **post-v3.3 audit** (git history reconstruction, PII
+redaction, cross-version reproduction, solution video).
+
+**Post-v3.3 audit findings, all fixed:**
+- The repository had zero git commits despite the README describing 14
+  versioned states. Rebuilt as 15 real commits — one per frozen snapshot
+  (`../identityos-v1/` through `../identityos-v3.3/`, dated by each
+  snapshot's actual filesystem timestamp) plus one final commit for the
+  live-directory fixes below — and pushed to
+  `github.com/Siddhartha24795/identityos`.
+- Cross-version reproduction: `build_digital_self.py` + `run_eval.py` /
+  `run_eval_v2.py` re-run inside each frozen snapshot (temporarily sharing
+  the live venv, since each snapshot's own requirements are a strict subset).
+  Numbers matched the changelog exactly: v2 agreement rate 0.286 -> v2.1
+  0.357 -> v2.2 0.429 (documented as 0.29/0.36/0.43), dangerous-overclaim
+  0.25 -> 0.0 -> 0.0, v1 IFS stable at 0.947-0.958 as the corpus grew
+  75->96 facts. All snapshot directories left unmodified afterward.
+- A real personal email was hardcoded in `services/browser_engine/field_mapper.py`
+  and had leaked into committed trajectory/history/security-demo artifacts
+  — see ground rule 8 below.
+- Solution video produced — see Final deliverables #3 below.
 
 ## Judging rubric (100 pts)
 
@@ -23,7 +43,7 @@ Last checked: **after v3.3**.
 5. Qualified human reviewer for anything that could significantly affect someone — the human-approval checkpoint in #4 *is* this reviewer step, made literal: nothing v3.0 does can affect a real application without a human explicitly invoking the approval flag. No real submission has been made in this project.
 6. Legal/ethical use case, data handled responsibly — yes: the author's own data, used with their own consent, for their own stated bottleneck; v3's demo form contains no real third party's data or infrastructure.
 7. Data you're allowed to share — yes: author's own resume/dossier, not a third party's; the local demo form is authored by this project, not scraped from anywhere.
-8. Credentials outside the submission — yes: `.env.example` has empty placeholders, `.env` gitignored, verified no key ever appears in any committed file.
+8. Credentials outside the submission — yes: `.env.example` has empty placeholders, `.env` gitignored, verified no key ever appears in any committed file. Also caught and fixed: `services/browser_engine/field_mapper.py` had hardcoded the project owner's real personal email as demo profile data, which had propagated into committed trajectory/history/security-demo artifacts — not a credential, but private information the same rule is meant to keep out of a submission the organizer may reuse for training/evaluation. Replaced with a synthetic placeholder (`identityos.demo@example.com`), every affected artifact regenerated, full test suite re-verified (66 passed).
 9. Every claim connected to evidence — yes: every generated claim/section/form field is citation-checked by `services/qa_engine/verification.py`, and every evaluation number in every doc is regenerated from the actual `data/evaluation/results/` JSON, not hand-typed. Both v2.8 and v2.9's negative results were measured against the full benchmark, not asserted from the cases that motivated them; v3's two bug fixes were verified the same way, including re-running every earlier suite for drift.
 10. Judges can reproduce the main result — yes: verified via a from-scratch `make setup` in separate, git/venv-free snapshots after every version. `make eval-v2-semantic` / `make eval-documents` need one-time network access to download the embedding model (~65MB); `make eval-browser` needs a one-time `playwright install chromium` (~300MB, done automatically by `make setup`); `make eval-v2-mock` needs none.
 
@@ -78,12 +98,34 @@ untested scaffolding or silently dropped.
 
 1. **Complete solution code + improvement changelog** — code in this repo; `docs/improvement_changelog.md` covers all versions, includes removed/partially-fixed/not-promoted/later-superseded/root-caused-twice/tested-and-rejected-twice experiments, closes with failure mode + hot take (per version), through v3.0's two bug fixes.
 2. **Reproduction guide** — README Quickstart + this file; exact commands, no external data needed beyond what's in the repo, runtime is seconds (or ~1 min including a one-time model download for the semantic/hybrid/document arms, or a one-time Chromium download for the browser arm), cost is $0.
-3. **Solution video** — **not yet produced** (requires an actual screen recording, which is a human action outside this session's tools). `docs/demo_script.md` covers v1 through v2.5 within the 5-minute cap (~4:45 budgeted); v2.6-v3.0 could be mentioned in one line but aren't required to hit the deliverable.
+3. **Solution video** — produced: `docs/media/solution_video.mp4` (3:41,
+   1280x720, H.264/AAC). Synthesized narration (espeak-ng) with burned-in
+   captions, not a human screen recording — every on-screen quote, number,
+   and citation id is copied verbatim from a real artifact already in this
+   repo, not invented for the video:
+   - the fabricated patent/leadership quotes are copied verbatim from
+     docs/evaluation.md's v3.3 "Finding 1" section (the real
+     `openai/gpt-oss-120b` output on q13/q17)
+   - the Digital Self build output ("96 facts, 4 beliefs", "0.165s") is
+     copied from an actual `python scripts/build_digital_self.py` run
+   - the Q&A example (`[dossier_excerpts:008]`, confidence 0.99) is copied
+     verbatim from `data/evaluation/results/v1_mock/trajectories/q06__identityos_v1.md`
+   - the browser-fill screenshots are real Playwright screenshots from a
+     live, unmodified `run_application()` call (video-asset capture script
+     hooked `BrowserController`'s existing methods for screenshots only —
+     no production code was changed to make the video)
+   - the comparison table and changelog numbers match README/evaluation.md exactly
+   `docs/demo_script.md` remains the plan for a human-narrated live
+   walkthrough (v1-v2.5) if one is ever recorded; the two are complementary,
+   not duplicates — the video additionally covers v3's browser agent and
+   human-approval gate, which the original script predates.
 4. **Agent trajectories** — `data/evaluation/results/*/trajectories/` for every agent across all versions (baseline_plain, baseline_rag, identityos_v1, identityos_v2, identityos_v2_semantic, identityos_v2_hybrid, identityos_v2_5's four document sections, identityos_browser_v3's single form-fill run), covering all 19 v1 questions, all 14 v2 requirements under all three retrieval backends, all 4 cover-letter sections, and all 6 v3 form fields plus the approval checkpoint.
 
 ## Open items carried forward
 
-- Demo video: still needs to be recorded by a human — script covers through v2.5 and is ready; v2.6-v3.0 mentions are optional polish, not a blocker.
+- Demo video: produced (see Final deliverables #3 above). A human-narrated
+  recording following docs/demo_script.md remains an option but is no
+  longer a gap.
 - req07 and req12 remain open with two independently-tried, independently-rejected fixes on record — the honest conclusion is that lexical/statistical relevance scoring cannot reliably solve this class of mismatch; the real fix needs semantic judgment (a real LLM call) and a provider key, named for v2.10.
 - req11 (genuinely low retrieval confidence) and req14 (the real gap case, safely under-matched on the shipped default) remain open, both already understood, neither new.
 - `identityos_v2_semantic` (standalone) remains unsafe as its own system (dangerous overclaim rate 0.50 as of v2.6-v2.7, re-measured at 0.75 after v3's shared-infrastructure bug fix — docs/evaluation_v2.md's v3 addendum) — expected and not a priority, since it was never the shipped path; `identityos_v2_hybrid` already achieves the safety guarantee, now confirmed stable across three consecutive real corpus changes, two rejected retrieval experiments, and one shared-infrastructure fix.

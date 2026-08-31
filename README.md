@@ -399,6 +399,19 @@ exercised" — the gap between them only shows up the first time something
 outside that path runs. Full writeup, including what's still unfixed:
 [docs/hot_take.md](docs/hot_take.md).
 
+## Solution video
+
+[docs/media/solution_video.mp4](docs/media/solution_video.mp4) (3:41).
+Problem and the real fabricated baseline output from v3.3's real-model run,
+Digital Self ingestion, cited-and-verified Q&A, the real v3 browser agent
+filling a real form (actual Playwright screenshots from a live run) through
+to the human-approval halt, the final comparison table, the single
+biggest changelog jump, one rejected experiment (v2.8), and the hot take.
+Narration is synthesized speech (espeak-ng) with captions, not a human
+recording — every on-screen number and quoted line is pulled verbatim from
+a file already in this repo (docs/hackathon_compliance_check.md traces
+each one).
+
 ## Hackathon compliance self-check
 
 Re-verified against the hackathon PDF's rubric, ground rules, and

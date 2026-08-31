@@ -1,3 +1,17 @@
+> **A produced solution video now exists**: `docs/media/solution_video.mp4`
+> (3:41, well under the 5-minute cap). It covers a different slice than the
+> script below — problem, the real fabricated baseline output from v3.3's
+> real-model run, Digital Self ingestion, Q&A with citation+verification,
+> the actual v3 browser agent filling a real form (real Playwright
+> screenshots, not mockups) through to the human-approval halt, the final
+> comparison table, changelog highlights (the citation-forcing jump), one
+> rejected experiment (v2.8), and the hot take — rather than this script's
+> v1/v2/v2.5 terminal walkthrough. Both are kept: this script remains the
+> plan for a live, presenter-narrated walkthrough if one is ever recorded;
+> the produced video is narrated (synthesized speech, captioned) and can be
+> watched standalone. See docs/hackathon_compliance_check.md for how each
+> claim in the video traces back to a real, checked artifact in this repo.
+
 # Demo script (target: under 5 minutes, hard cap per hackathon rules)
 
 v1/v2 have no browser/UI yet (docs/roadmap.md v3/v5), so the demo is a
