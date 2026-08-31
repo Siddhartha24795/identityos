@@ -14,7 +14,7 @@
       {
         "label": "Email address",
         "action": "fill_text",
-        "filled_value": "siddharthamishra24795@gmail.com",
+        "filled_value": "identityos.demo@example.com",
         "verified": true,
         "rationale": "known profile field, not a Fact/Belief claim"
       },

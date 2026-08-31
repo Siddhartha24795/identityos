@@ -3,7 +3,7 @@
   "system_name": "baseline_rag",
   "steps": [
     {
-      "timestamp": "2026-08-30T11:30:08.060523Z",
+      "timestamp": "2026-08-30T09:52:43.329565Z",
       "stage": "retrieve",
       "input_summary": "Personal integrity & institutional temperament",
       "action": "dump all 96 facts as unstructured text, no ranking, no ids",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:30:08.061429Z",
+      "timestamp": "2026-08-30T09:52:43.330461Z",
       "stage": "generate",
       "input_summary": "Personal integrity & institutional temperament",
       "action": "call provider with the unstructured context dump",
@@ -23,7 +23,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:30:08.061507Z",
+      "timestamp": "2026-08-30T09:52:43.330533Z",
       "stage": "verify",
       "input_summary": "Captain and Sports Secretary are roles given by peers and cannot be self-appointed. Professional practice of running blameless postmortems and publishing metrics that can embarrass the author. Believes institutional temperament means the institution outranks the incumbent. States explicitly that full institutional P&L management at IITACB's scale would be a step up from cost-side ownership at Jinn Labs, and that this is experience not yet held.",
       "action": "check for citations/grounding (none possible: no ids in context)",

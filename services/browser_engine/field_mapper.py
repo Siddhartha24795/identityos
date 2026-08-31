@@ -22,11 +22,13 @@ from services.qa_engine.verification import evidence_coverage, verify_answer
 # v3.0 simplification: basic contact-routing fields (name/email) are looked
 # up from a small known-profile table, not the Fact/Belief evidence system
 # — those exist to verify substantive claims, not route static contact
-# info. Real, not fabricated: this is the person's own name and email,
-# already used with consent throughout this repo (see docs/architecture.md).
+# info. The name is the person's own (see docs/architecture.md); the email
+# below is a synthetic placeholder, not the real address, since this value
+# flows into committed trajectory/eval artifacts that ship with the
+# submission (ground rule: keep private information out of the submission).
 _KNOWN_PROFILE_FIELDS = {
-    "email address": "siddharthamishra24795@gmail.com",
-    "email": "siddharthamishra24795@gmail.com",
+    "email address": "identityos.demo@example.com",
+    "email": "identityos.demo@example.com",
 }
 
 CHECKBOX_CONFIDENCE_THRESHOLD = 0.7

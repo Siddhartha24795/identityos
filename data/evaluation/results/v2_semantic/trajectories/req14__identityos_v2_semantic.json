@@ -3,7 +3,7 @@
   "system_name": "identityos_v2_semantic",
   "steps": [
     {
-      "timestamp": "2026-08-30T11:30:08.296754Z",
+      "timestamp": "2026-08-30T09:52:43.563035Z",
       "stage": "retrieve",
       "input_summary": "Desired — record of building or running a professional body (CII / NASSCOM / FICCI / AIMA)",
       "action": "embedding-similarity retrieval (fastembed): top 8 facts, 0 beliefs",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:30:08.296956Z",
+      "timestamp": "2026-08-30T09:52:43.563230Z",
       "stage": "generate",
       "input_summary": "Desired — record of building or running a professional body (CII / NASSCOM / FICCI / AIMA)",
       "action": "call provider with cited, confidence-annotated context",
@@ -23,7 +23,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:30:08.297143Z",
+      "timestamp": "2026-08-30T09:52:43.563413Z",
       "stage": "verify",
       "input_summary": "[dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.",
       "action": "per-sentence grounding check (same verifier as lexical identityos_v2)",
@@ -33,7 +33,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:30:08.297150Z",
+      "timestamp": "2026-08-30T09:52:43.563420Z",
       "stage": "bucket",
       "input_summary": "[dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.",
       "action": "derive fit bucket from coverage+confidence+polarity (same bucketing.py as lexical)",

@@ -3,7 +3,7 @@
   "system_name": "baseline_rag",
   "steps": [
     {
-      "timestamp": "2026-08-30T11:29:51.562380Z",
+      "timestamp": "2026-08-30T09:52:29.733734Z",
       "stage": "retrieve",
       "input_summary": "What failure taught you the most in your career?",
       "action": "dump the entire fact store as unstructured text (no ranking, no ids)",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:29:51.563290Z",
+      "timestamp": "2026-08-30T09:52:29.734615Z",
       "stage": "generate",
       "input_summary": "What failure taught you the most in your career?",
       "action": "call provider with the full unstructured context dump",

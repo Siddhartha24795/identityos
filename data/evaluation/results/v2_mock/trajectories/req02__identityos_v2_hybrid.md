@@ -1,6 +1,6 @@
 ### Trajectory — identityos_v2_hybrid — req02
 
-**11:29:51 · retrieve**
+**09:52:30 · retrieve**
 - input: Desired — IIT alumnus
 - action: lexical retrieval, semantic fallback only if empty: 8 facts, 0 beliefs
 - observation: [dossier_excerpts:003] (verified fact) Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group.
@@ -12,18 +12,18 @@
 [resume:037] (verified fact) Intern, IIT BHU, Varanasi India, June 2015 - July 2015.
 [resume:039] (verified fact) M.Tech, Artificial Intelligence, IIT (ISM) Dhanbad, 2018-2020. Research on medical image processing using Cycle GAN.
 
-**11:29:51 · generate**
+**09:52:30 · generate**
 - input: Desired — IIT alumnus
 - action: call provider with cited, confidence-annotated context
 - observation: [dossier_excerpts:003] (verified fact) Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group. [dossier_narrative:002] (verified fact) Credibility earned in two currencies: academic (IIT M.Tech, guest faculty across universities) and industrial (Samsung Research, Qualcomm, CTO of a venture shipping into live enterprise sites). [dossier_narrative:009] (verified fact) States a vision specifically for the IITACB CEO role: IITACB as India's default gateway to IIT research capability, brought through the academic-and-industrial credibility described above. [dossier_narrative:013] (verified fact) Confirmed relocation to Bengaluru on appointment, accepting the IITACB CEO role as primarily external-facing with sustained domestic travel to the 23 IIT campuses, Delhi, and industry forums nationally. States that being physically present in Bengaluru is regarded as non-negotiable for this job.
 
-**11:29:51 · verify**
+**09:52:30 · verify**
 - input: [dossier_excerpts:003] (verified fact) Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group. [dossier_narrative:002] (verified fact) Credibility earned in two currencies: academic (IIT M.Tech, guest faculty across universities) and industrial (Samsung Research, Qualcomm, CTO of a venture shipping into live enterprise sites). [dossier_narrative:009] (verified fact) States a vision specifically for the IITACB CEO role: IITACB as India's default gateway to IIT research capability, brought through the academic-and-industrial credibility described above. [dossier_narrative:013] (verified fact) Confirmed relocation to Bengaluru on appointment, accepting the IITACB CEO role as primarily external-facing with sustained domestic travel to the 23 IIT campuses, Delhi, and industry forums nationally. States that being physically present in Bengaluru is regarded as non-negotiable for this job.
 - action: per-sentence grounding check (same verifier as lexical identityos_v2)
 - observation: coverage=1.00 confidence=0.89
 - confidence: 0.89
 
-**11:29:51 · bucket**
+**09:52:30 · bucket**
 - input: [dossier_excerpts:003] (verified fact) Core Member of the IIT (ISM) Dhanbad Alumni Association, active in its Bengaluru core group. [dossier_narrative:002] (verified fact) Credibility earned in two currencies: academic (IIT M.Tech, guest faculty across universities) and industrial (Samsung Research, Qualcomm, CTO of a venture shipping into live enterprise sites). [dossier_narrative:009] (verified fact) States a vision specifically for the IITACB CEO role: IITACB as India's default gateway to IIT research capability, brought through the academic-and-industrial credibility described above. [dossier_narrative:013] (verified fact) Confirmed relocation to Bengaluru on appointment, accepting the IITACB CEO role as primarily external-facing with sustained domestic travel to the 23 IIT campuses, Delhi, and industry forums nationally. States that being physically present in Bengaluru is regarded as non-negotiable for this job.
 - action: derive fit bucket from coverage+confidence+polarity (same bucketing.py)
 - observation: met_or_better

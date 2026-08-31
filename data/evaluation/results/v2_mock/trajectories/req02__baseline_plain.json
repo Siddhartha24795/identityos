@@ -3,7 +3,7 @@
   "system_name": "baseline_plain",
   "steps": [
     {
-      "timestamp": "2026-08-30T11:29:51.967749Z",
+      "timestamp": "2026-08-30T09:52:30.046856Z",
       "stage": "generate",
       "input_summary": "Desired — IIT alumnus",
       "action": "call provider with zero context, zero verification",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:29:51.967797Z",
+      "timestamp": "2026-08-30T09:52:30.046902Z",
       "stage": "bucket",
       "input_summary": "I believe my track record speaks directly to this question. When it comes to alumnus and desired and iit, I have always taken a proactive, results-driven approach and delivered measurable impact. I look forward to bringing this strength to your organization.",
       "action": "derive fit bucket from coverage+confidence",

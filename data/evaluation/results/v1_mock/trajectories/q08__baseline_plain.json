@@ -3,7 +3,7 @@
   "system_name": "baseline_plain",
   "steps": [
     {
-      "timestamp": "2026-08-30T11:29:51.567400Z",
+      "timestamp": "2026-08-30T09:52:29.751559Z",
       "stage": "generate",
       "input_summary": "Why should we choose you instead of another candidate?",
       "action": "call provider with zero context, zero verification",

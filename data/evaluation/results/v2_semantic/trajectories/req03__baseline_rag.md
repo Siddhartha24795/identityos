@@ -1,16 +1,16 @@
 ### Trajectory — baseline_rag — req03
 
-**11:30:07 · retrieve**
+**09:52:42 · retrieve**
 - input: Minimum 10 years senior leadership, with a strong track record of operations leadership
 - action: dump all 96 facts as unstructured text, no ranking, no ids
 - observation: no relevance filtering applied
 
-**11:30:07 · generate**
+**09:52:42 · generate**
 - input: Minimum 10 years senior leadership, with a strong track record of operations leadership
 - action: call provider with the unstructured context dump
 - observation: Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical — it is 24x7 production accountability across live customer sites. Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record. Six years of unpaid guest sessions, mentoring, and hackathon judging across universities, described in the dossier as predating any formal title or compensation.
 
-**11:30:07 · verify**
+**09:52:42 · verify**
 - input: Ten years in the profession (2016-2026) across Scrum Technology, Wheelseye, Amdocs, Qualcomm, Samsung Research and Jinn Labs, the last five in lead, staff and chief roles. Operations leadership here is not theoretical — it is 24x7 production accountability across live customer sites. Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience at the secretariat level is being built, not inherited. States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record. Six years of unpaid guest sessions, mentoring, and hackathon judging across universities, described in the dossier as predating any formal title or compensation.
 - action: check for citations/grounding (none possible: no ids in context)
 - observation: coverage=0.00 confidence=0.00

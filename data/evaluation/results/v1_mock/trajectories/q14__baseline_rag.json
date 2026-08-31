@@ -3,7 +3,7 @@
   "system_name": "baseline_rag",
   "steps": [
     {
-      "timestamp": "2026-08-30T11:29:51.582195Z",
+      "timestamp": "2026-08-30T09:52:29.797907Z",
       "stage": "retrieve",
       "input_summary": "What professional body or industry association have you personally founded or run?",
       "action": "dump the entire fact store as unstructured text (no ranking, no ids)",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:29:51.583114Z",
+      "timestamp": "2026-08-30T09:52:29.798805Z",
       "stage": "generate",
       "input_summary": "What professional body or industry association have you personally founded or run?",
       "action": "call provider with the full unstructured context dump",

@@ -3,7 +3,7 @@
   "system_name": "baseline_rag",
   "steps": [
     {
-      "timestamp": "2026-08-30T11:29:51.574905Z",
+      "timestamp": "2026-08-30T09:52:29.759504Z",
       "stage": "retrieve",
       "input_summary": "What is your most impactful project?",
       "action": "dump the entire fact store as unstructured text (no ranking, no ids)",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:29:51.575780Z",
+      "timestamp": "2026-08-30T09:52:29.760372Z",
       "stage": "generate",
       "input_summary": "What is your most impactful project?",
       "action": "call provider with the full unstructured context dump",

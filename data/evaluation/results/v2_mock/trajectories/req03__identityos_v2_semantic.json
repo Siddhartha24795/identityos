@@ -3,7 +3,7 @@
   "system_name": "identityos_v2_semantic",
   "steps": [
     {
-      "timestamp": "2026-08-30T11:29:51.982346Z",
+      "timestamp": "2026-08-30T09:52:30.062005Z",
       "stage": "retrieve",
       "input_summary": "Minimum 10 years senior leadership, with a strong track record of operations leadership",
       "action": "embedding-similarity retrieval (hash): top 1 facts, 0 beliefs",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:29:51.982393Z",
+      "timestamp": "2026-08-30T09:52:30.062047Z",
       "stage": "generate",
       "input_summary": "Minimum 10 years senior leadership, with a strong track record of operations leadership",
       "action": "call provider with cited, confidence-annotated context",
@@ -23,7 +23,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:29:51.982470Z",
+      "timestamp": "2026-08-30T09:52:30.062120Z",
       "stage": "verify",
       "input_summary": "[dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.",
       "action": "per-sentence grounding check (same verifier as lexical identityos_v2)",
@@ -33,7 +33,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:29:51.982475Z",
+      "timestamp": "2026-08-30T09:52:30.062126Z",
       "stage": "bucket",
       "input_summary": "[dossier_narrative:019] (verified fact) States explicitly that the desired record of building or running a professional body (CII/NASSCOM/FICCI/AIMA) is one genuine gap, and that adjacent experience (alumni association membership, student chapter leadership) should not be treated by the committee as equivalent to that record.",
       "action": "derive fit bucket from coverage+confidence+polarity (same bucketing.py as lexical)",

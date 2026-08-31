@@ -3,9 +3,9 @@
   "system_name": "identityos_browser_v3",
   "steps": [
     {
-      "timestamp": "2026-08-30T11:30:35.252965Z",
+      "timestamp": "2026-08-31T13:50:28.636425Z",
       "stage": "observe",
-      "input_summary": "file:///home/siddhartha/siddhartha/features/identityos-v3.3/data/applications/local_demo/application_form.html",
+      "input_summary": "file:///home/siddhartha/siddhartha/features/identityos/data/applications/local_demo/application_form.html",
       "action": "detected 6 fields via DOM inspection",
       "observation": "Full name (text), Email address (text), Which of these best matches the role you're applying for? (select), What is your most impactful project, and why? (textarea), Why are you a strong fit for a technology leadership role, and what drives you professionally? (textarea), I confirm the information provided above is accurate to the best of my knowledge. (checkbox)",
       "reasoning": "",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:30:35.253056Z",
+      "timestamp": "2026-08-31T13:50:28.636539Z",
       "stage": "plan",
       "input_summary": "Full name",
       "action": "mapped as fill_text (direct/known-profile mapping)",
@@ -23,7 +23,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:30:35.253070Z",
+      "timestamp": "2026-08-31T13:50:28.636548Z",
       "stage": "policy_check",
       "input_summary": "Full name",
       "action": "policy=allow, audit=allow",
@@ -33,17 +33,17 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:30:35.259666Z",
+      "timestamp": "2026-08-31T13:50:28.643106Z",
       "stage": "plan",
       "input_summary": "Email address",
       "action": "mapped as fill_text (direct/known-profile mapping)",
-      "observation": "siddharthamishra24795@gmail.com",
+      "observation": "identityos.demo@example.com",
       "reasoning": "",
       "confidence": 0.95,
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:30:35.259679Z",
+      "timestamp": "2026-08-31T13:50:28.643118Z",
       "stage": "policy_check",
       "input_summary": "Email address",
       "action": "policy=allow, audit=allow",
@@ -53,7 +53,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:30:35.264515Z",
+      "timestamp": "2026-08-31T13:50:28.647339Z",
       "stage": "plan",
       "input_summary": "Which of these best matches the role you're applying for?",
       "action": "mapped as select_option (lexical option match)",
@@ -63,7 +63,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:30:35.264532Z",
+      "timestamp": "2026-08-31T13:50:28.647348Z",
       "stage": "policy_check",
       "input_summary": "Which of these best matches the role you're applying for?",
       "action": "policy=allow, audit=allow",
@@ -73,7 +73,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:30:35.372373Z",
+      "timestamp": "2026-08-31T13:50:28.755631Z",
       "stage": "plan",
       "input_summary": "What is your most impactful project, and why?",
       "action": "mapped as fill_text (coverage=1.00 confidence=0.99)",
@@ -83,7 +83,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:30:35.372385Z",
+      "timestamp": "2026-08-31T13:50:28.755642Z",
       "stage": "policy_check",
       "input_summary": "What is your most impactful project, and why?",
       "action": "policy=allow, audit=allow",
@@ -93,7 +93,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:30:35.395633Z",
+      "timestamp": "2026-08-31T13:50:28.802054Z",
       "stage": "plan",
       "input_summary": "Why are you a strong fit for a technology leadership role, and what drives you professionally?",
       "action": "mapped as fill_text (coverage=1.00 confidence=0.89)",
@@ -103,7 +103,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:30:35.395641Z",
+      "timestamp": "2026-08-31T13:50:28.802062Z",
       "stage": "policy_check",
       "input_summary": "Why are you a strong fit for a technology leadership role, and what drives you professionally?",
       "action": "policy=allow, audit=allow",
@@ -113,7 +113,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:30:35.504358Z",
+      "timestamp": "2026-08-31T13:50:28.895922Z",
       "stage": "verify",
       "input_summary": "re-observed page after filling",
       "action": "compared each field's current DOM value to the intended fill value",
@@ -123,7 +123,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:30:37.300529Z",
+      "timestamp": "2026-08-31T13:50:30.692446Z",
       "stage": "verify",
       "input_summary": "I confirm the information provided above is accurate to the best of my knowledge.",
       "action": "decide accuracy-confirmation checkbox from aggregate field confidence + verification",
@@ -133,7 +133,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:30:37.300557Z",
+      "timestamp": "2026-08-31T13:50:30.692475Z",
       "stage": "halt_for_approval",
       "input_summary": "submit action",
       "action": "pausing before any submit click (ground rule 4: sandbox consequential actions)",

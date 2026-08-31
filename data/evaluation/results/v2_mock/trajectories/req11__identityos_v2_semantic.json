@@ -3,7 +3,7 @@
   "system_name": "identityos_v2_semantic",
   "steps": [
     {
-      "timestamp": "2026-08-30T11:29:52.052288Z",
+      "timestamp": "2026-08-30T09:52:30.132377Z",
       "stage": "retrieve",
       "input_summary": "Personal integrity & institutional temperament",
       "action": "embedding-similarity retrieval (hash): top 1 facts, 0 beliefs",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:29:52.052322Z",
+      "timestamp": "2026-08-30T09:52:30.132411Z",
       "stage": "generate",
       "input_summary": "Personal integrity & institutional temperament",
       "action": "call provider with cited, confidence-annotated context",
@@ -23,7 +23,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:29:52.052412Z",
+      "timestamp": "2026-08-30T09:52:30.132523Z",
       "stage": "verify",
       "input_summary": "[dossier_narrative:008] (verified fact) Captain and Sports Secretary are roles given by peers and cannot be self-appointed. Professional practice of running blameless postmortems and publishing metrics that can embarrass the author. Believes institutional temperament means the institution outranks the incumbent.",
       "action": "per-sentence grounding check (same verifier as lexical identityos_v2)",
@@ -33,7 +33,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:29:52.052417Z",
+      "timestamp": "2026-08-30T09:52:30.132528Z",
       "stage": "bucket",
       "input_summary": "[dossier_narrative:008] (verified fact) Captain and Sports Secretary are roles given by peers and cannot be self-appointed. Professional practice of running blameless postmortems and publishing metrics that can embarrass the author. Believes institutional temperament means the institution outranks the incumbent.",
       "action": "derive fit bucket from coverage+confidence+polarity (same bucketing.py as lexical)",

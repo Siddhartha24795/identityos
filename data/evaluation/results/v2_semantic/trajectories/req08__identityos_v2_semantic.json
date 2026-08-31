@@ -3,7 +3,7 @@
   "system_name": "identityos_v2_semantic",
   "steps": [
     {
-      "timestamp": "2026-08-30T11:30:07.907794Z",
+      "timestamp": "2026-08-30T09:52:43.176383Z",
       "stage": "retrieve",
       "input_summary": "Revenue & P&L management",
       "action": "embedding-similarity retrieval (fastembed): top 8 facts, 1 beliefs",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:30:07.908001Z",
+      "timestamp": "2026-08-30T09:52:43.176607Z",
       "stage": "generate",
       "input_summary": "Revenue & P&L management",
       "action": "call provider with cited, confidence-annotated context",
@@ -23,7 +23,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:30:07.908173Z",
+      "timestamp": "2026-08-30T09:52:43.176762Z",
       "stage": "verify",
       "input_summary": "[resume:025] (verified fact) Did API development, bug resolution, fraud detection, and revenue forecasting using Java, Python, Mockito, Postman, MySQL, machine learning, and NLP.",
       "action": "per-sentence grounding check (same verifier as lexical identityos_v2)",
@@ -33,7 +33,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:30:07.908180Z",
+      "timestamp": "2026-08-30T09:52:43.176768Z",
       "stage": "bucket",
       "input_summary": "[resume:025] (verified fact) Did API development, bug resolution, fraud detection, and revenue forecasting using Java, Python, Mockito, Postman, MySQL, machine learning, and NLP.",
       "action": "derive fit bucket from coverage+confidence+polarity (same bucketing.py as lexical)",

@@ -3,7 +3,7 @@
   "system_name": "identityos_v2_semantic",
   "steps": [
     {
-      "timestamp": "2026-08-30T11:29:52.041248Z",
+      "timestamp": "2026-08-30T09:52:30.121256Z",
       "stage": "retrieve",
       "input_summary": "Exceptional communication",
       "action": "embedding-similarity retrieval (hash): top 0 facts, 0 beliefs",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:29:52.041269Z",
+      "timestamp": "2026-08-30T09:52:30.121275Z",
       "stage": "generate",
       "input_summary": "Exceptional communication",
       "action": "call provider with cited, confidence-annotated context",
@@ -23,7 +23,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:29:52.041307Z",
+      "timestamp": "2026-08-30T09:52:30.121312Z",
       "stage": "verify",
       "input_summary": "I have consistently demonstrated strong ability in this area. When it comes to communication and exceptional, I have always taken a proactive, results-driven approach and delivered measurable impact. This has shaped my approach to every project I take on.",
       "action": "per-sentence grounding check (same verifier as lexical identityos_v2)",
@@ -33,7 +33,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:29:52.041312Z",
+      "timestamp": "2026-08-30T09:52:30.121316Z",
       "stage": "bucket",
       "input_summary": "I have consistently demonstrated strong ability in this area. When it comes to communication and exceptional, I have always taken a proactive, results-driven approach and delivered measurable impact. This has shaped my approach to every project I take on.",
       "action": "derive fit bucket from coverage+confidence+polarity (same bucketing.py as lexical)",

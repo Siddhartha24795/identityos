@@ -3,7 +3,7 @@
   "system_name": "identityos_v2_hybrid",
   "steps": [
     {
-      "timestamp": "2026-08-30T11:30:08.059001Z",
+      "timestamp": "2026-08-30T09:52:43.327874Z",
       "stage": "retrieve",
       "input_summary": "Exceptional communication",
       "action": "lexical retrieval, semantic fallback only if empty: 8 facts, 0 beliefs",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:30:08.059149Z",
+      "timestamp": "2026-08-30T09:52:43.327996Z",
       "stage": "generate",
       "input_summary": "Exceptional communication",
       "action": "call provider with cited, confidence-annotated context",
@@ -23,7 +23,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:30:08.059306Z",
+      "timestamp": "2026-08-30T09:52:43.328130Z",
       "stage": "verify",
       "input_summary": "[resume:018] (verified fact) Senior Software Engineer, Qualcomm, Hyderabad India, Mar 2021 - Aug 2023. [resume:021] (verified fact) Applied ML techniques to sensor data for tilt detection, automated sleep alarms, and cardiovascular health monitoring.",
       "action": "per-sentence grounding check (same verifier as lexical identityos_v2)",
@@ -33,7 +33,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:30:08.059314Z",
+      "timestamp": "2026-08-30T09:52:43.328136Z",
       "stage": "bucket",
       "input_summary": "[resume:018] (verified fact) Senior Software Engineer, Qualcomm, Hyderabad India, Mar 2021 - Aug 2023. [resume:021] (verified fact) Applied ML techniques to sensor data for tilt detection, automated sleep alarms, and cardiovascular health monitoring.",
       "action": "derive fit bucket from coverage+confidence+polarity (same bucketing.py)",

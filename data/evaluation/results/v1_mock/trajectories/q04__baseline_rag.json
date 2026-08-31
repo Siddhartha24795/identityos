@@ -3,7 +3,7 @@
   "system_name": "baseline_rag",
   "steps": [
     {
-      "timestamp": "2026-08-30T11:29:51.557304Z",
+      "timestamp": "2026-08-30T09:52:29.728417Z",
       "stage": "retrieve",
       "input_summary": "What is the application number of your filed patent on generative AI video codecs, and who is it assigned to?",
       "action": "dump the entire fact store as unstructured text (no ranking, no ids)",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:29:51.558209Z",
+      "timestamp": "2026-08-30T09:52:29.729313Z",
       "stage": "generate",
       "input_summary": "What is the application number of your filed patent on generative AI video codecs, and who is it assigned to?",
       "action": "call provider with the full unstructured context dump",

@@ -3,7 +3,7 @@
   "system_name": "baseline_rag",
   "steps": [
     {
-      "timestamp": "2026-08-30T11:29:52.062899Z",
+      "timestamp": "2026-08-30T09:52:30.144403Z",
       "stage": "retrieve",
       "input_summary": "Languages — English, Hindi, Kannada preferred",
       "action": "dump all 96 facts as unstructured text, no ranking, no ids",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:29:52.063796Z",
+      "timestamp": "2026-08-30T09:52:30.145317Z",
       "stage": "generate",
       "input_summary": "Languages — English, Hindi, Kannada preferred",
       "action": "call provider with the unstructured context dump",
@@ -23,7 +23,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:29:52.063835Z",
+      "timestamp": "2026-08-30T09:52:30.145356Z",
       "stage": "verify",
       "input_summary": "Siddhartha's own dossier states he is fluent in English and Hindi but not yet fluent in Kannada. States that relocating to Bengaluru and learning Kannada are conditions he is committing to for the IITACB CEO role specifically, not concessions being requested.",
       "action": "check for citations/grounding (none possible: no ids in context)",

@@ -3,7 +3,7 @@
   "system_name": "baseline_plain",
   "steps": [
     {
-      "timestamp": "2026-08-30T11:29:51.562345Z",
+      "timestamp": "2026-08-30T09:52:29.733700Z",
       "stage": "generate",
       "input_summary": "What failure taught you the most in your career?",
       "action": "call provider with zero context, zero verification",

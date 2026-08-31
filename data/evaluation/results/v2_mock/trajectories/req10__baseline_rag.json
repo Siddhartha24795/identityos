@@ -3,7 +3,7 @@
   "system_name": "baseline_rag",
   "steps": [
     {
-      "timestamp": "2026-08-30T11:29:52.035786Z",
+      "timestamp": "2026-08-30T09:52:30.115864Z",
       "stage": "retrieve",
       "input_summary": "Exceptional communication",
       "action": "dump all 96 facts as unstructured text, no ranking, no ids",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:29:52.036672Z",
+      "timestamp": "2026-08-30T09:52:30.116759Z",
       "stage": "generate",
       "input_summary": "Exceptional communication",
       "action": "call provider with the unstructured context dump",
@@ -23,7 +23,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:29:52.036720Z",
+      "timestamp": "2026-08-30T09:52:30.116805Z",
       "stage": "verify",
       "input_summary": "Named inventor, patent Application No. 202511076834, \"Generative AI based video codecs utilizing image-to-video generation\", filed through Samsung Research Noida and assigned to Samsung Electronics Co., Ltd. Siddhartha's stated inventorship contribution on this patent is 75%, with the remaining 25% attributed to a co-inventor who is not named in Siddhartha's own materials.",
       "action": "check for citations/grounding (none possible: no ids in context)",

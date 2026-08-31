@@ -3,7 +3,7 @@
   "system_name": "identityos_v2_hybrid",
   "steps": [
     {
-      "timestamp": "2026-08-30T11:29:52.002645Z",
+      "timestamp": "2026-08-30T09:52:30.082565Z",
       "stage": "retrieve",
       "input_summary": "Entrepreneurial mindset",
       "action": "lexical retrieval, semantic fallback only if empty: 0 facts, 0 beliefs",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:29:52.002666Z",
+      "timestamp": "2026-08-30T09:52:30.082586Z",
       "stage": "generate",
       "input_summary": "Entrepreneurial mindset",
       "action": "call provider with cited, confidence-annotated context",
@@ -23,7 +23,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:29:52.002705Z",
+      "timestamp": "2026-08-30T09:52:30.082625Z",
       "stage": "verify",
       "input_summary": "Over the years, I have built a reputation for excellence here. When it comes to entrepreneurial and mindset, I have always taken a proactive, results-driven approach and delivered measurable impact. I am confident this reflects who I am professionally.",
       "action": "per-sentence grounding check (same verifier as lexical identityos_v2)",
@@ -33,7 +33,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:29:52.002710Z",
+      "timestamp": "2026-08-30T09:52:30.082629Z",
       "stage": "bucket",
       "input_summary": "Over the years, I have built a reputation for excellence here. When it comes to entrepreneurial and mindset, I have always taken a proactive, results-driven approach and delivered measurable impact. I am confident this reflects who I am professionally.",
       "action": "derive fit bucket from coverage+confidence+polarity (same bucketing.py)",

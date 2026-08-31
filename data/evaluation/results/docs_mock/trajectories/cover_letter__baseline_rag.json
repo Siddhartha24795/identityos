@@ -3,7 +3,7 @@
   "system_name": "baseline_rag",
   "steps": [
     {
-      "timestamp": "2026-08-30T11:30:21.619974Z",
+      "timestamp": "2026-08-30T09:52:56.294564Z",
       "stage": "generate",
       "input_summary": "Why are you a strong fit for a technology leadership role, and what drives you professionally?",
       "action": "call provider with unstructured full-fact dump, no ids",
@@ -13,7 +13,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:30:21.620900Z",
+      "timestamp": "2026-08-30T09:52:56.295560Z",
       "stage": "generate",
       "input_summary": "Describe your most significant hands-on technical achievements and engineering work.",
       "action": "call provider with unstructured full-fact dump, no ids",
@@ -23,7 +23,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:30:21.621832Z",
+      "timestamp": "2026-08-30T09:52:56.296554Z",
       "stage": "generate",
       "input_summary": "Describe your leadership experience and how you build, mentor, and manage teams.",
       "action": "call provider with unstructured full-fact dump, no ids",
@@ -33,7 +33,7 @@
       "decision": ""
     },
     {
-      "timestamp": "2026-08-30T11:30:21.622801Z",
+      "timestamp": "2026-08-30T09:52:56.297572Z",
       "stage": "generate",
       "input_summary": "What are your career goals, and why should an employer choose you over another candidate?",
       "action": "call provider with unstructured full-fact dump, no ids",
