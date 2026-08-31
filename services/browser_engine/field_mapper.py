@@ -8,6 +8,8 @@ asks for.
 """
 from __future__ import annotations
 
+import os
+
 from packages.schemas.browser import ActionType, BrowserAction, DetectedField, FieldType
 from packages.schemas.identity import DigitalSelf
 from packages.schemas.qa import Question, QuestionType
@@ -22,13 +24,15 @@ from services.qa_engine.verification import evidence_coverage, verify_answer
 # v3.0 simplification: basic contact-routing fields (name/email) are looked
 # up from a small known-profile table, not the Fact/Belief evidence system
 # — those exist to verify substantive claims, not route static contact
-# info. The name is the person's own (see docs/architecture.md); the email
-# below is a synthetic placeholder, not the real address, since this value
-# flows into committed trajectory/eval artifacts that ship with the
-# submission (ground rule: keep private information out of the submission).
+# info. The name is the person's own (see docs/architecture.md). The email
+# is read from APPLICANT_EMAIL (.env, gitignored) so a real address is
+# never hardcoded into source that ships with the submission — falls back
+# to a synthetic placeholder when unset, which is what every committed
+# trajectory/eval artifact in this repo was generated with.
+_APPLICANT_EMAIL = os.environ.get("APPLICANT_EMAIL", "identityos.demo@example.com")
 _KNOWN_PROFILE_FIELDS = {
-    "email address": "identityos.demo@example.com",
-    "email": "identityos.demo@example.com",
+    "email address": _APPLICANT_EMAIL,
+    "email": _APPLICANT_EMAIL,
 }
 
 CHECKBOX_CONFIDENCE_THRESHOLD = 0.7
