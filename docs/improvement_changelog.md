@@ -339,3 +339,25 @@ same signal as "which fact actually settles this question"), reached
 independently by an automated search rather than by reading trajectories
 by hand — which is itself worth noting: the algorithmic search and the
 human-driven investigation converged on the same real limit.
+
+---
+
+# v4.2 — Video Statement Generator
+
+Prompted by a real gap: many research/fellowship/accelerator applications
+require a video, not just text, and this project's own solution video used
+synthesized narration rather than the author's real voice — making the
+need concrete rather than hypothetical.
+
+| Stage | What we built and why | Evidence | Decision / learning |
+|---|---|---|---|
+| **Iteration 36 (v4.2)** | `services/video_engine/generate.py`: reuses v2.5's section-planning + hybrid-retrieval + citation + verification pipeline unmodified, applied to a 4-section pitch/introduction shape (`services/video_engine/sections.py`) instead of a cover letter's. | 4 unit tests (`tests/test_video_engine.py`) — baseline has zero coverage, identityos cites real evidence, application-specific facts stay excluded. `make eval-video-statement`: evidence coverage 0.70 vs. 0.00 for both baselines. | Shipped. Lower coverage than the cover letter's 0.91, honestly — the mock provider's extractive style matches these pitch-shaped prompts less often; disclosed, not hidden. |
+| **Iteration 37 (v4.2) — a real bug found immediately on first render** | `services/video_engine/render.py`'s first version wrote the per-section `.mp4` segment paths into ffmpeg's concat list as relative paths (relative to the script's cwd). | ffmpeg's concat demuxer resolves relative paths against the **list file's own directory**, not the caller's cwd — the path got prefixed twice and every segment failed to open (`Impossible to open '.../data/evaluation/.../data/evaluation/...mp4'`). | **Fixed**: write `path.resolve()` (absolute) into the concat list, not the path as originally constructed. Re-verified with a real render: a 4-section, ~3.5-minute narrated draft `.mp4` produced successfully, disclosure banner burned into every slide. |
+| **Iteration 38 (v4.2) — the scope boundary, decided before writing any code, not after** | Could have extended this to a synthetic talking-head video (voice clone + generated face) of the applicant. | Many programs require a video specifically to verify the real applicant exists and can speak to their own work — the same reason this project refuses to fabricate a fact anywhere else (docs/architecture.md's ETHICAL CONSTRAINT). | **Decided not to build it.** `render_narrated_draft()` produces generic text slides + synthesized narration only, every slide carrying a burned-in "AI-DRAFTED SCRIPT — RECORD YOURSELF FOR SUBMISSION" banner. Documented as a permanent boundary in docs/roadmap.md's v4.2 section, not a "not yet." |
+
+## Main failure mode, v4.2
+
+None in the generation pipeline itself — reusing v2.5's already-verified
+machinery unmodified meant the only new surface area was the render step,
+where the concat-path bug above was the sole failure, caught immediately
+by actually running the render rather than only reading the code.

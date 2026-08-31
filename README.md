@@ -1,4 +1,4 @@
-# IdentityOS — v4.1
+# IdentityOS — v4.2
 
 **An autonomous representative that answers application questions,
 assesses job-requirement fit, generates application documents, and fills
@@ -25,8 +25,12 @@ disclosed hitting the provider's free daily quota mid-verification), and
 v4.0-v4.1 (a real **Orchestrator** that routes a free-text request to the
 right existing agent, and a real **Learning Engine** that searches,
 counterfactually tests, and leave-one-out cross-validates a retrieval
-strategy improvement — see below) of that brief — see
-[docs/roadmap.md](docs/roadmap.md) for what's deferred to v4.2-v5 and why.
+strategy improvement — see below), and v4.2 (a **Video Statement
+Generator** — the same citation-verified pipeline as v2.5's cover letter,
+applied to a research-pitch/self-introduction script, plus an optional
+narrated draft render; deliberately stops short of any synthetic
+likeness of the applicant — see below) of that brief — see
+[docs/roadmap.md](docs/roadmap.md) for what's deferred to v5 and why.
 Prior versions frozen at `../identityos-v1/`, `../identityos-v2/`,
 `../identityos-v2.1/`, `../identityos-v2.2/`, `../identityos-v2.3/`,
 `../identityos-v2.4/`, `../identityos-v2.5/`, `../identityos-v2.6/`,
@@ -83,7 +87,16 @@ make eval-browser      # v3.0: fills + browser-verifies a local synthetic applic
 make eval-security-demo # v3.2: combined attack demo (injection/anti-bot/off-topic) alongside legitimate fields
 make eval-orchestrator-demo # v4.0: routes 3 requests to the QA / application-fit / browser-fill agents
 make eval-learning-engine   # v4.1: searches + leave-one-out validates a retrieval-strategy improvement
+make eval-video-statement   # v4.2: generates a video statement SCRIPT (not a video) with each system
 ```
+
+Optional, separate step — needs `apt-get install libttspico-utils ffmpeg`
+(not required by anything above): `make render-video-statement-draft`
+renders the generated script into a narrated draft `.mp4` (generic text
+slides + synthesized narration, burned-in disclosure banner) for
+timing/content review before a real recording. See
+[docs/architecture.md](docs/architecture.md)'s v4.2 addendum for why this
+never generates a synthetic likeness of the applicant.
 
 Expect each in under 10 seconds, $0 cost — the default `PROVIDER=mock` (LLM)
 and `EMBEDDING_PROVIDER=hash` (embeddings) are deterministic, dependency-light
@@ -113,7 +126,7 @@ target's `PROVIDER` argument — see `services/providers/groq_provider.py`,
 which reuses the `openai` client pointed at Groq's OpenAI-compatible
 endpoint, no new dependency).
 
-Run the smoke test suite: `make test` (79 tests, ~9s including several real
+Run the smoke test suite: `make test` (84 tests, ~12s including several real
 Chromium launches for v3's end-to-end regression tests, no keys/downloads
 beyond the one-time Chromium install needed).
 
@@ -380,6 +393,29 @@ false "beats hybrid" verdict). Full story:
 [docs/architecture.md](docs/architecture.md)'s v4.1 addendum,
 [docs/hot_take.md](docs/hot_take.md)'s v4.1 addendum.
 
+**v4.2 — Video Statement Generator:** many research/fellowship/accelerator
+applications require a video, not just text — a gap this project's own
+solution video made concrete (its narration is synthesized, not the
+author's real voice). `services/video_engine/generate.py` reuses v2.5's
+citation + verification pipeline unmodified for a 4-section pitch shape
+(introduction, motivation, key achievement, closing):
+
+| Metric | baseline_plain | baseline_rag | identityos_video_v4_2 |
+|---|---|---|---|
+| Evidence coverage | 0.00 | 0.00 | **0.70** |
+| Unsupported claim rate | 1.00 | 1.00 | **0.29** |
+
+Lower than the cover letter's 0.91, honestly disclosed — these pitch-shaped
+prompts match the mock provider's extractive style less often. Optionally
+renders a narrated *draft* (`make render-video-statement-draft`, needs
+`pico2wave` + `ffmpeg`): generic text slides plus synthesized narration,
+every slide carrying a burned-in disclosure banner. **Deliberately does
+not generate any synthetic likeness of the applicant** — no cloned voice,
+no generated face — a permanent boundary, not a "not yet": many programs
+require a video specifically to verify the real applicant, which a
+synthetic stand-in would defeat rather than satisfy. Full story:
+[docs/architecture.md](docs/architecture.md)'s v4.2 addendum.
+
 ## Improvement changelog
 
 [docs/improvement_changelog.md](docs/improvement_changelog.md) — baseline
@@ -395,10 +431,11 @@ form over one ordinary field's wording, found by building the combined-attack
 demo the security spec itself asked for, (v3.3) a third shared
 citation-parsing bug — tuned to the mock provider's exact bracket format
 for nine versions — found on this project's first-ever real-model run,
-and (v4.1) a precision bug where a full-precision computed rate was
+(v4.1) a precision bug where a full-precision computed rate was
 compared against a pre-rounded JSON summary value, producing a false
-"improvement" verdict before being caught and fixed (documented, not
-hidden, same as every other bug in this list).
+"improvement" verdict before being caught and fixed, and (v4.2) an ffmpeg
+concat-path bug that broke the very first narrated-draft render attempt
+(documented, not hidden, same as every other bug in this list).
 
 ## Main failure mode / hot take
 
@@ -519,8 +556,10 @@ services/application_record/ v3.2: per-application question/answer records for i
 services/orchestrator/       v4.0: routes a free-text request to the QA / application-fit / browser-fill agent
 services/learning_engine/    v4.1: threshold search + counterfactual test + leave-one-out validation
                               over the real v2_semantic per-requirement results
-services/evaluation/         scoring + all six eval harnesses (v1, v2, documents, browser, security,
-                              orchestrator) + the learning engine
+services/video_engine/       v4.2: video statement SCRIPT generation (reuses v2.5's pipeline) +
+                              optional narrated-draft render — never a synthetic likeness of the applicant
+services/evaluation/         scoring + all seven eval harnesses (v1, v2, documents, browser, security,
+                              orchestrator, video statement) + the learning engine
 data/identity_sources/       the real source documents (owner's own, consented)
 data/applications/           the real 14-requirement application + its real human ground truth,
                               local synthetic forms for the v3 browser demo and adversarial tests,

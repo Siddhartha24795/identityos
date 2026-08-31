@@ -49,6 +49,22 @@ eval-documents: build-identity
 eval-documents-real-groq: build-identity
 	.venv/bin/python scripts/run_eval_documents.py groq docs_real_groq fastembed
 
+# v4.2 — generates a video statement SCRIPT (not a video) with each system:
+# the same citation + verification pipeline as v2.5's cover letter, applied
+# to a research-pitch/self-introduction prompt shape. See
+# services/video_engine/generate.py for the scope boundary (no synthetic
+# likeness of the applicant is ever generated).
+eval-video-statement: build-identity
+	.venv/bin/python scripts/run_eval_video_statement.py mock video_statement_mock fastembed
+
+# Optional, separate step: renders the generated script into a narrated
+# DRAFT .mp4 (generic text slides + synthesized narration, burned-in
+# disclosure banner) for timing/content review before a real recording.
+# Needs two system tools NOT required by any other target here:
+#   apt-get install libttspico-utils ffmpeg
+render-video-statement-draft:
+	.venv/bin/python scripts/render_video_statement_draft.py video_statement_mock identityos_video_v4_2
+
 # v3 — fills the local synthetic application form (data/applications/local_demo/),
 # verifies each field, and halts before submit (never submits — no --approve-submit
 # flag is passed here; see scripts/run_browser_demo.py for that checkpoint).

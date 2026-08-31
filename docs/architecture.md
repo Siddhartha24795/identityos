@@ -251,7 +251,47 @@ existing strategies, not a Digital Self mutation, and not a persistent
 loop that keeps running and proposing its own next hypothesis — see
 docs/roadmap.md's v4.1 section for exactly where that line is drawn.
 
-## What is explicitly NOT in v1-v4.1
+## v4.2 addendum — Video Statement Generator
+
+Many real applications ask for a video, not just text — a research-program
+"introduce yourself" video, a fellowship pitch, an accelerator application
+video. `services/video_engine/generate.py` handles this the same way v2.5
+handles a cover letter: the identical section-planning + hybrid-retrieval
++ citation + verification pipeline
+(`generate_video_statement_baseline_plain/baseline_rag/identityos`),
+applied to a four-section pitch shape (introduction, motivation, key
+achievement, closing) instead of a cover letter's shape. Real, measured
+numbers (`make eval-video-statement`): evidence coverage 0.70 vs. 0.00 for
+both baselines — lower than the cover letter's 0.91, honestly, because the
+mock provider's extractive style matches these pitch-shaped prompts less
+often; the gap is disclosed, not hidden.
+
+**The scope boundary, stated as plainly as possible**: this module
+generates a script, and optionally (`services/video_engine/render.py`,
+`make render-video-statement-draft`) a narrated *draft* — generic text
+slides plus synthesized narration, every slide carrying a burned-in
+disclosure banner ("AI-DRAFTED SCRIPT — READ FOR TIMING ONLY — RECORD
+YOURSELF FOR SUBMISSION"). It does not, and will not, generate a synthetic
+likeness of the applicant — no cloned voice, no generated face, no
+deepfake of any kind. Many programs require a video specifically because
+they want to see and hear the real applicant, for the same authenticity
+reason this project refuses to fabricate a fact anywhere else (this doc's
+ETHICAL CONSTRAINT section). A synthetic stand-in would defeat that
+requirement, not satisfy it — so the render step is a timing/content aid
+for a human who will record themselves, never a submission-ready output.
+
+The render step needs two optional system tools neither `make setup` nor
+`make test` requires: `pico2wave` (`apt-get install libttspico-utils`) and
+`ffmpeg`. `render_narrated_draft()` checks for both explicitly and raises
+a clear, actionable error if either is missing, rather than failing deep
+inside a subprocess call. A real bug was caught building this: the first
+version wrote relative paths into ffmpeg's concat list, which ffmpeg
+resolves against the list file's own directory, not the caller's cwd —
+doubling the path and failing to open every segment. Fixed by writing
+resolved absolute paths into the concat list. See
+`docs/improvement_changelog.md`'s v4.2 entry.
+
+## What is explicitly NOT in v1-v4.2
 
 - Multi-page navigation, file uploads (docs/roadmap.md v3.3+) — v3.0's
   synthetic form has none of these, so nothing has been built or tested
@@ -267,6 +307,9 @@ docs/roadmap.md's v4.1 section for exactly where that line is drawn.
   its own next hypothesis — v4.1 built one scoped, one-shot instance of
   the EXPERIENCE→HYPOTHESIS→COUNTERFACTUAL TEST→PROMOTE/REJECT loop,
   not an ongoing one
+- A synthetic likeness (cloned voice or generated face) of the applicant
+  in any video output — v4.2 deliberately stops at a script and a
+  generic-slide narrated draft; see this doc's v4.2 addendum for why
 - Graph database, web UI, Next.js frontend (v5)
 - Automatic belief inference from unstructured documents (v1/v2 hand-seed
   4 beliefs from already-ingested facts instead; deferred to v2.1)

@@ -530,6 +530,36 @@ measured.
   brief's Identity/Opportunity/Browser/Verification/Contradiction agents
   as separate, independently-reasoning components) — still not started.
 
+## v4.2 — Video Statement Generator  ·  **built, script + optional draft render only**
+
+Prompted directly by a real gap: many research/fellowship/accelerator
+applications require a video, not just text, and the hackathon's own
+solution video for this project used synthesized narration, not the
+author's real voice — making the need for this feature concrete rather
+than hypothetical.
+`services/video_engine/generate.py` reuses v2.5's section-planning +
+hybrid-retrieval + citation + verification pipeline unmodified, applied to
+a pitch/introduction section shape instead of a cover letter's. Real
+numbers (`make eval-video-statement`): evidence coverage 0.70 vs. 0.00 for
+both baselines.
+
+**Deliberate scope boundary**: this generates a script and, optionally
+(`services/video_engine/render.py`, `make render-video-statement-draft`),
+a narrated draft over generic text slides with a burned-in disclosure
+banner — never a synthetic likeness (voice or face) of the applicant. Many
+programs require a video specifically to verify the real applicant; a
+synthetic stand-in would defeat that, not satisfy it. See
+docs/architecture.md's v4.2 addendum for the full reasoning and
+docs/improvement_changelog.md's v4.2 entry for a real ffmpeg path-resolution
+bug caught and fixed while building the render step.
+
+- A synthetic likeness (cloned voice, generated face, or full deepfake) of
+  the applicant — will not be built; this is a permanent ethical boundary
+  for this project, not a "not yet."
+- Automatic B-roll / visual generation beyond static text slides — not
+  started; would need a real reason beyond "the brief could support it,"
+  the same standard this project applies to every other feature.
+
 ## v5 — Graph store + opportunity discovery + web UI  ·  not started
 
 - Migrate Digital Self storage from flat JSON to a proper graph (the brief
