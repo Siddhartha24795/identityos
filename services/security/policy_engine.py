@@ -67,9 +67,19 @@ class SecurityPolicyEngine:
     def evaluate_page(self, obs: BrowserObservation) -> PolicyResult:
         """Ground rule 3: never bypass MFA/CAPTCHA/anti-bot protections.
         Page-level signals (controller.py's observe()) BLOCK the entire
-        task before a single field is touched."""
-        flags = [e for e in obs.errors if "anti-bot" in e or "CAPTCHA" in e or "MFA/OTP" in e]
-        checks_run = ["anti_bot_widget", "anti_bot_text", "mfa_text"]
+        task before a single field is touched.
+
+        v4.3: also blocks on "page never actually loaded" signals (a
+        failed HTTP status or blocked-page title phrasing) — found by
+        testing against a real site that returned a 403 which observe()
+        used to silently report as "0 fields, 0 errors," indistinguishable
+        from "this page has no form." See controller.py / safety.py."""
+        flags = [
+            e for e in obs.errors
+            if "anti-bot" in e or "CAPTCHA" in e or "MFA/OTP" in e
+            or "page failed to load" in e or "blocked-page" in e
+        ]
+        checks_run = ["anti_bot_widget", "anti_bot_text", "mfa_text", "page_load_status", "blocked_page_text"]
         if flags:
             result = PolicyResult(
                 decision=PolicyDecision.BLOCK, risk_level=RiskLevel.LEVEL_4_CRITICAL,

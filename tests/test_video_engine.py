@@ -23,7 +23,7 @@ from services.video_engine.generate import (
     generate_video_statement_baseline_rag,
     generate_video_statement_identityos,
 )
-from services.video_engine.render import DISCLOSURE_BANNER, render_narrated_draft
+from services.video_engine.render import DISCLOSURE_BANNER, _clean_for_narration, render_narrated_draft
 
 SOURCE_DIR = REPO_ROOT / "data" / "identity_sources"
 
@@ -66,6 +66,15 @@ def test_identityos_video_excludes_application_specific_facts():
     doc, _ = generate_video_statement_identityos(ds, idx, provider)
     full_text = doc.full_text
     assert "IITACB" not in full_text
+
+
+def test_clean_for_narration_strips_citations_and_dashes():
+    text = "[resume:014] I ship things -- fast, and I mean it — always."
+    cleaned = _clean_for_narration(text)
+    assert "[resume:014]" not in cleaned
+    assert "--" not in cleaned
+    assert "—" not in cleaned
+    assert cleaned == "I ship things, fast, and I mean it, always."
 
 
 def _make_tiny_document() -> GeneratedDocument:

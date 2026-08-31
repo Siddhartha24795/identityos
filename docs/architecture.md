@@ -291,16 +291,65 @@ doubling the path and failing to open every segment. Fixed by writing
 resolved absolute paths into the concat list. See
 `docs/improvement_changelog.md`'s v4.2 entry.
 
-## What is explicitly NOT in v1-v4.2
+## v4.3 addendum — first real third-party browser test, and two real bugs it found
+
+Every prior browser-agent demonstration (v3.0-v3.2) ran against a local,
+offline, synthetic form this project controls — a deliberate scoping
+decision, not an oversight (see "What is explicitly NOT in" below). The
+project owner asked directly whether the agent could detect fields on a
+real third-party page (a HackerEarth hackathon-registration page) — a
+genuine first, and it found two real things immediately:
+
+**Bug 1 — a blocked page read as an empty one.** The target returned an
+HTTP 403 (confirmed independently via plain `curl` with a normal
+browser user-agent too, so not headless-detection specifically — a
+WAF/anti-bot layer blocking the request outright) before any real content
+loaded. `observe()` reported "0 fields, 0 errors" — indistinguishable
+from "this page genuinely has no form," a real silent-failure mode.
+**Fixed**: `controller.py`'s `open()` now keeps the `Response` object;
+`observe()` flags any HTTP status >= 400, and, for the class of block page
+that returns 200 with a JS challenge instead (e.g. a Cloudflare
+interstitial), a title-phrase check
+(`services/browser_engine/safety.py`'s `looks_like_blocked_page()` —
+"403 forbidden," "just a moment," "attention required," the same
+"check the TITLE, not the body" scoping already used for anti-bot/MFA
+phrasing, for the same reason). `services/security/policy_engine.py`'s
+`evaluate_page()` was updated to BLOCK on either new signal, not just the
+three original anti-bot/CAPTCHA/MFA categories. Covered by a new local
+fixture (`adversarial_blocked_page.html`, title-phrasing path) plus the
+real, live 403 that motivated it (not part of the deterministic test
+suite, for the obvious reason that a live third-party response can't be a
+committed fixture).
+
+**Bug 2 — a video narration script read `--` aloud as "hyphen hyphen."**
+Found by ear in this project's own solution video, which used `--` as an
+em-dash substitute in its narration text. **Fixed** in
+`services/video_engine/render.py`'s `_clean_for_narration()`: strips
+citation brackets and replaces `--`/em-dash/en-dash punctuation with a
+comma before any text reaches `pico2wave`. The solution video was
+re-rendered with the fix (4:27, down from 4:29 — the corrected punctuation
+reads slightly faster, not the cause of the recut).
+
+Neither bug is specific to real third-party sites or to this one video —
+both are the same lesson this project keeps re-finding at a new layer
+(docs/hot_take.md): a code path that looks correct against everything
+it's been tested on can still have a real, silent gap the moment
+something genuinely new runs through it.
+
+## What is explicitly NOT in v1-v4.3
 
 - Multi-page navigation, file uploads (docs/roadmap.md v3.3+) — v3.0's
   synthetic form has none of these, so nothing has been built or tested
   against them yet. CAPTCHA/MFA/anti-bot *detection* is built (v3.1-v3.2);
   a real OTP-entry channel or a solved CAPTCHA is out of scope by design
   (ground rule 3 permits detect-and-halt only).
-- A real third-party browser target — v3.0 demonstrates against a local,
-  offline, synthetic form the project controls, for the same reason v1/v2
-  use the author's own documents rather than a scraped corpus.
+- A real third-party browser target for filling/submitting — v3.0's
+  canonical demo still runs against a local, offline, synthetic form the
+  project controls, for the same reason v1/v2 use the author's own
+  documents rather than a scraped corpus. v4.3 did point `observe()` (read-
+  only field detection, nothing filled or submitted) at one real
+  third-party page for the first time — see this doc's v4.3 addendum for
+  what that found.
 - A dynamic multi-agent roster beyond the 3-way orchestrator (v4.0) —
   opportunity discovery and a separate contradiction agent (v5)
 - A *persistent* self-improvement loop that keeps running and proposes

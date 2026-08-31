@@ -361,3 +361,28 @@ None in the generation pipeline itself — reusing v2.5's already-verified
 machinery unmodified meant the only new surface area was the render step,
 where the concat-path bug above was the sole failure, caught immediately
 by actually running the render rather than only reading the code.
+
+---
+
+# v4.3 — first real third-party browser test, and two real bugs it found
+
+Prompted directly by the project owner: does the browser agent's field
+detection actually work against a real, live site, not just the local
+synthetic form every prior version demonstrated against?
+
+| Stage | What we found/built and why | Evidence | Decision / learning |
+|---|---|---|---|
+| **Iteration 39 (v4.3) — a blocked page silently read as an empty one** | Pointed `observe()` (read-only field detection, nothing filled or submitted) at a real HackerEarth hackathon page for the first time ever. | The target returned HTTP 403 (confirmed independently via plain `curl` with a normal browser user-agent too — not headless-detection specifically) before any real content loaded. `observe()` reported "0 fields, 0 errors" — indistinguishable from "this page genuinely has no form." | **Fixed**: `controller.py`'s `open()` keeps the `Response` object; `observe()` now flags any HTTP status >= 400, plus a title-phrase check (`safety.py`'s `looks_like_blocked_page()`) for block pages that return 200 with a JS challenge instead. `policy_engine.py`'s `evaluate_page()` updated to BLOCK on either new signal. Regression test via a new local fixture (`adversarial_blocked_page.html`) plus the real 403 that motivated it. |
+| **Iteration 40 (v4.3) — a video narration script read `--` aloud as "hyphen hyphen"** | Found by ear in this project's own solution video, which used `--` as an em-dash substitute in its narration text — a real, audible quality bug in a shipped deliverable. | pico2wave reads a literal `--` as two separate "hyphen" words; nothing in `render_narrated_draft()` stripped or replaced it before synthesis. | **Fixed**: `services/video_engine/render.py`'s new `_clean_for_narration()` strips citation brackets and replaces `--`/em-dash/en-dash punctuation with a comma before any text reaches `pico2wave`. Unit tested directly. The solution video was re-rendered with the fix (4:29 -> 4:27; the recut is the corrected punctuation reading slightly faster, not a content change). |
+
+## Main failure mode, v4.3
+
+Both bugs are the same lesson at yet another layer (docs/hot_take.md): a
+code path that looks correct against everything it has been tested on can
+still have a real, silent gap the moment something genuinely new runs
+through it — a real third-party site for the browser agent, a real
+punctuation character for the narration pipeline. Neither gap was
+hypothetical or found by inspection; both were found by actually running
+the thing against something new and paying attention to the result
+(reading `obs.errors`, listening to the actual audio) rather than trusting
+that passing tests meant the code was exercised.

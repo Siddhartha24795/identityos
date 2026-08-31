@@ -38,6 +38,7 @@ FORM_PATH = REPO_ROOT / "data" / "applications" / "local_demo" / "application_fo
 CAPTCHA_FORM_PATH = REPO_ROOT / "data" / "applications" / "local_demo" / "adversarial_captcha.html"
 HONEYPOT_FORM_PATH = REPO_ROOT / "data" / "applications" / "local_demo" / "adversarial_honeypot.html"
 MIXED_FORM_PATH = REPO_ROOT / "data" / "applications" / "local_demo" / "adversarial_mixed.html"
+BLOCKED_PAGE_PATH = REPO_ROOT / "data" / "applications" / "local_demo" / "adversarial_blocked_page.html"
 
 
 def _build_test_digital_self():
@@ -212,6 +213,45 @@ def test_run_application_halts_entire_task_on_captcha_widget(tmp_path):
     assert result.field_results == []  # no field was ever touched
     stages = [step.stage for step in traj.steps]
     assert stages == ["observe", "halt_for_approval"]
+
+
+def test_run_application_halts_entire_task_on_blocked_page(tmp_path):
+    """v4.3: a WAF/anti-bot block page (title phrasing here; HTTP status
+    is the same code path, exercised for real against a live third-party
+    site, not by this local file:// fixture) halts the whole task before
+    any field is touched -- the same treatment as a CAPTCHA widget, not a
+    silent '0 fields found'."""
+    ds = _build_test_digital_self()
+    index = DigitalSelfEmbeddingIndex(ds, HashEmbeddingProvider())
+    provider = get_provider("mock")
+    result, traj = run_application(
+        ds, index, provider, f"file://{BLOCKED_PAGE_PATH}", approve_submit=False, headless=True,
+        history_dir=tmp_path,
+    )
+    assert result.halted_for_approval is True
+    assert result.submitted is False
+    assert result.field_results == []
+    stages = [step.stage for step in traj.steps]
+    assert stages == ["observe", "halt_for_approval"]
+
+
+def test_observe_flags_blocked_page_title_in_errors():
+    from services.browser_engine.controller import BrowserController
+
+    with BrowserController(headless=True) as browser:
+        browser.open(f"file://{BLOCKED_PAGE_PATH}")
+        obs = browser.observe()
+    assert any("blocked-page" in e for e in obs.errors)
+    assert obs.fields == []
+
+
+def test_looks_like_blocked_page():
+    from services.browser_engine.safety import looks_like_blocked_page
+
+    assert looks_like_blocked_page("403 Forbidden")
+    assert looks_like_blocked_page("Access Denied")
+    assert looks_like_blocked_page("Just a moment...")
+    assert not looks_like_blocked_page("Application — Technology Leadership Role")
 
 
 def test_run_application_never_fills_hidden_honeypot_field(tmp_path):

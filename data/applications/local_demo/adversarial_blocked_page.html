@@ -1,0 +1,22 @@
+<!--
+Synthetic, local, offline test fixture for v4.3's blocked-page guardrail
+(services/browser_engine/safety.py's looks_like_blocked_page(),
+controller.py's observe()). Simulates the TITLE a real WAF/anti-bot block
+page uses (found against a real site returning an actual HTTP 403 during
+a real capability test) — nothing here makes any network request. A
+file:// load has no HTTP status to check, so this fixture exercises the
+title-phrasing detection path specifically; the HTTP-status path is the
+same code, exercised for real against the live site that motivated this
+fix, not by this deterministic test suite.
+-->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>403 Forbidden</title>
+</head>
+<body>
+<h1>403 Forbidden</h1>
+<p>You don't have permission to access this resource.</p>
+</body>
+</html>

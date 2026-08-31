@@ -1,9 +1,21 @@
 # Hackathon compliance self-check
 
 Re-verified after every version against `/home/siddhartha/siddhartha/micro1 - First Hackathon97ce7c5.pdf`.
-Last checked: **post-v4.2** (git history reconstruction, PII redaction,
+Last checked: **post-v4.3** (git history reconstruction, PII redaction,
 cross-version reproduction, solution video, Orchestrator, Learning Engine,
-Video Statement Generator).
+Video Statement Generator, first real third-party browser test).
+
+**v4.3 addition, prompted directly by the project owner**: asked whether
+the browser agent's field detection actually works against a real, live
+site. It does, but the first one tried (a real HackerEarth page) returned
+an HTTP 403 (a WAF/anti-bot block), which `observe()` silently reported as
+"0 fields, 0 errors" — a real, silent gap, not a hypothetical one. Fixed:
+`observe()` now flags any failed HTTP status or blocked-page title
+phrasing, and `SecurityPolicyEngine.evaluate_page()` blocks on it, the
+same treatment as a CAPTCHA widget. Separately, the project owner flagged
+that the solution video's narration read `--` aloud as "hyphen hyphen" —
+fixed in `services/video_engine/render.py`, and the solution video was
+re-rendered. See docs/architecture.md's v4.3 addendum.
 
 **v4.0-v4.1 addition, prompted by re-reading the rubric's tie-break
 order** (Agent Solution & Engineering ranked first): the submission's
@@ -119,7 +131,7 @@ untested scaffolding or silently dropped.
 
 1. **Complete solution code + improvement changelog** — code in this repo; `docs/improvement_changelog.md` covers all versions, includes removed/partially-fixed/not-promoted/later-superseded/root-caused-twice/tested-and-rejected-twice experiments, closes with failure mode + hot take (per version), through v3.0's two bug fixes.
 2. **Reproduction guide** — README Quickstart + this file; exact commands, no external data needed beyond what's in the repo, runtime is seconds (or ~1 min including a one-time model download for the semantic/hybrid/document arms, or a one-time Chromium download for the browser arm), cost is $0.
-3. **Solution video** — produced: `docs/media/solution_video.mp4` (4:29,
+3. **Solution video** — produced: `docs/media/solution_video.mp4` (4:27,
    1280x720, H.264/AAC). Synthesized narration (SVOX Pico TTS) with burned-in
    captions, not a human screen recording — every on-screen quote, number,
    and citation id is copied verbatim from a real artifact already in this

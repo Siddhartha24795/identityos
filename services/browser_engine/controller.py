@@ -15,11 +15,23 @@ to solve it (ground rule 3: never bypass MFA/CAPTCHA/anti-bot protections).
 See services/browser_engine/safety.py for the text-pattern half of this
 and the two other guardrails (prompt-injection detection, zero-evidence
 refusal) that live closer to field mapping and generation.
+
+v4.3: `observe()` also flags a page that never actually loaded — an HTTP
+status >= 400 (`open()` now keeps the `Response` object) or blocked-page
+title phrasing (safety.py's `looks_like_blocked_page()`) — found by
+testing this project's browser agent against a real, live third-party
+site for the first time and getting a silent "0 fields, 0 errors" back
+from a page a WAF had actually blocked with a 403. See safety.py's
+module docstring, concern 4, for the full story.
 """
 from __future__ import annotations
 
 from packages.schemas.browser import BrowserObservation, DetectedField, FieldType
-from services.browser_engine.safety import looks_like_anti_bot_check, looks_like_mfa_challenge
+from services.browser_engine.safety import (
+    looks_like_anti_bot_check,
+    looks_like_blocked_page,
+    looks_like_mfa_challenge,
+)
 
 _FIELD_TYPE_MAP = {
     "textarea": FieldType.TEXTAREA,
@@ -34,9 +46,14 @@ class BrowserController:
         self._pw = sync_playwright().start()
         self._browser = self._pw.chromium.launch(headless=headless)
         self._page = self._browser.new_page()
+        self._last_response = None
 
     def open(self, url: str) -> None:
-        self._page.goto(url)
+        # Kept (not just checked-and-discarded) so observe() can tell a
+        # real page load apart from a WAF/anti-bot block that served an
+        # error status instead of the real content — see safety.py's
+        # concern 4 for why this matters and how it was found.
+        self._last_response = self._page.goto(url)
 
     def observe(self) -> BrowserObservation:
         page = self._page
@@ -140,6 +157,24 @@ class BrowserController:
             errors.append("anti-bot/identity-verification phrasing detected in page title — halting, not bypassing")
         if looks_like_mfa_challenge(page.title()):
             errors.append("MFA/OTP challenge phrasing detected in page title — halting, not bypassing")
+
+        # v4.3 — a page that never actually loaded (a WAF/anti-bot block,
+        # a dead link) must not be reported as "0 fields found" — that
+        # reads identically to "this page genuinely has no form," which
+        # is false and was found to be false against a real site. Two
+        # signals: the HTTP status itself, and, for a block page that
+        # returns 200 with a JS challenge instead, its title phrasing.
+        if self._last_response is not None and self._last_response.status >= 400:
+            errors.append(
+                f"page failed to load (HTTP {self._last_response.status}) — likely a "
+                "WAF/anti-bot block, not an empty form; halting rather than reporting "
+                "zero fields as 'no form here'"
+            )
+        if looks_like_blocked_page(page.title()):
+            errors.append(
+                "blocked-page phrasing detected in page title — halting, not treating "
+                "as a real page"
+            )
 
         return BrowserObservation(
             url=page.url,

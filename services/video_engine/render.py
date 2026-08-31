@@ -14,6 +14,7 @@ RuntimeError rather than failing deep inside a subprocess call.
 """
 from __future__ import annotations
 
+import re
 import shutil
 import subprocess
 from pathlib import Path
@@ -21,6 +22,18 @@ from pathlib import Path
 from packages.schemas.document import GeneratedDocument
 
 DISCLOSURE_BANNER = "AI-DRAFTED SCRIPT — READ FOR TIMING ONLY — RECORD YOURSELF FOR SUBMISSION"
+
+
+def _clean_for_narration(text: str) -> str:
+    """Strips citation brackets (a spoken script shouldn't read
+    "[resume:014]" aloud -- the written script in documents/*.md remains
+    the source of truth) and replaces "--"/em-dash/en-dash punctuation
+    with a comma. pico2wave reads a literal "--" as "hyphen hyphen" --
+    found by ear in an early render of this project's own solution video,
+    which used " -- " as an em-dash substitute in its narration script."""
+    cleaned = re.sub(r"\[[^\]]+\]\s*", "", text).strip()
+    cleaned = re.sub(r"\s*(--|—|–)\s*", ", ", cleaned)
+    return cleaned
 
 _SLIDE_HTML = """<!doctype html><html><head><meta charset="utf-8"><style>
   body {{ margin:0; width:1280px; height:720px; background:#0b1120; color:#eef2f7;
@@ -76,12 +89,7 @@ def render_narrated_draft(document: GeneratedDocument, out_dir: Path, tag: str) 
             wav_path = work_dir / f"{i:02d}_{section.section_name}.wav"
             seg_path = work_dir / f"{i:02d}_{section.section_name}.mp4"
 
-            # Strip citation brackets for narration -- a spoken script
-            # shouldn't read "[resume:014]" aloud; the written script with
-            # citations remains the source of truth (documents/*.md).
-            import re
-
-            speakable = re.sub(r"\[[^\]]+\]\s*", "", section.text).strip()
+            speakable = _clean_for_narration(section.text)
 
             page.set_content(_SLIDE_HTML.format(
                 section_name=section.section_name.replace("_", " ").upper(),

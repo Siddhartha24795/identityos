@@ -1,5 +1,5 @@
 > **A produced solution video now exists**: `docs/media/solution_video.mp4`
-> (4:29, well under the 5-minute cap). It covers a different slice than the
+> (4:27, well under the 5-minute cap). It covers a different slice than the
 > script below — problem, the real fabricated baseline output from v3.3's
 > real-model run, Digital Self ingestion, Q&A with citation+verification,
 > the actual v3 browser agent filling a real form (real Playwright

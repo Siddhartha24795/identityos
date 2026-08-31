@@ -29,6 +29,27 @@ HALT_FOR_APPROVAL, never a silent skip and never an automated bypass:
    would be deceptive either way; the honest behavior is to refuse and
    let a human answer it directly.
 
+4. v4.3 — a page that never actually loaded. Found by testing this
+   project's own browser agent against a real, live third-party site for
+   the first time ever (a HackerEarth hackathon-registration page,
+   requested directly by the project owner to confirm the capability):
+   the target returned an HTTP 403 (a WAF/anti-bot block, confirmed
+   independently via a plain `curl` with a normal browser user-agent too
+   — not headless-detection specifically) before any real page content
+   was served, and
+   `observe()` silently reported "0 fields, no errors" — indistinguishable
+   from "this page genuinely has no form." That is a real, silent failure
+   mode, not just an untested edge case: a caller reading "0 fields, no
+   errors" would reasonably (and wrongly) conclude the form is empty.
+   Detected two ways: the HTTP response status (controller.py's `open()`
+   now keeps the `Response` object; `observe()` flags any status >= 400),
+   and, for the class of block page that returns 200 with a JS challenge
+   instead (e.g. a Cloudflare interstitial), a title-phrase check
+   (`looks_like_blocked_page()`, this module) — the same "check the page
+   TITLE, not the whole body" scoping already used for anti-bot/MFA
+   phrasing, for the same reason (a body-text scan would also match an
+   ordinary field whose label happens to say "forbidden" or "blocked").
+
 What this does NOT solve: a field that is merely off-topic (small talk,
 trivia, "what's your favorite food?") with no anti-bot or injection
 markers at all relies on a different, existing mechanism —
@@ -100,3 +121,25 @@ def looks_like_anti_bot_check(text: str) -> bool:
 def looks_like_mfa_challenge(text: str) -> bool:
     lowered = text.lower()
     return any(marker in lowered for marker in _MFA_OTP_MARKERS)
+
+
+# v4.3 — a generic WAF/anti-bot block page, distinct from a CAPTCHA widget
+# (concern 1 above): no interactive challenge, just a page that refused to
+# serve real content. Deliberately narrow, real-world phrasing (checked
+# against the page TITLE only, same reasoning as the anti-bot/MFA checks
+# above) rather than a broad "blocked"/"denied" keyword filter that could
+# also match a legitimate page about e.g. a "blocked" feature.
+_BLOCKED_PAGE_MARKERS = [
+    "403 forbidden",
+    "404 not found",
+    "access denied",
+    "request blocked",
+    "just a moment",
+    "checking your browser",
+    "attention required",
+]
+
+
+def looks_like_blocked_page(title: str) -> bool:
+    lowered = title.lower()
+    return any(marker in lowered for marker in _BLOCKED_PAGE_MARKERS)
