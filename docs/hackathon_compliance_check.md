@@ -108,7 +108,7 @@ untested scaffolding or silently dropped.
 
 1. **Complete solution code + improvement changelog** — code in this repo; `docs/improvement_changelog.md` covers all versions, includes removed/partially-fixed/not-promoted/later-superseded/root-caused-twice/tested-and-rejected-twice experiments, closes with failure mode + hot take (per version), through v3.0's two bug fixes.
 2. **Reproduction guide** — README Quickstart + this file; exact commands, no external data needed beyond what's in the repo, runtime is seconds (or ~1 min including a one-time model download for the semantic/hybrid/document arms, or a one-time Chromium download for the browser arm), cost is $0.
-3. **Solution video** — produced: `docs/media/solution_video.mp4` (3:58,
+3. **Solution video** — produced: `docs/media/solution_video.mp4` (4:29,
    1280x720, H.264/AAC). Synthesized narration (SVOX Pico TTS) with burned-in
    captions, not a human screen recording — every on-screen quote, number,
    and citation id is copied verbatim from a real artifact already in this
@@ -124,11 +124,19 @@ untested scaffolding or silently dropped.
      live, unmodified `run_application()` call (video-asset capture script
      hooked `BrowserController`'s existing methods for screenshots only —
      no production code was changed to make the video)
+   - the v2 requirement-fit example (req14, the governance-gap citation) is
+     copied verbatim from `data/evaluation/results/v2_semantic/trajectories/req14__identityos_v2_hybrid.md`
+   - the orchestrator routing table (3 requests, matched signals, targets)
+     is copied verbatim from `data/evaluation/results/orchestrator_demo/orchestrator_decisions.json`
+   - the Learning Engine table (0.714 agreement / 0.00 dangerous-overclaim,
+     full-set and leave-one-out) is copied verbatim from
+     `data/evaluation/results/learning_v4_1/learning_report.json`
    - the comparison table and changelog numbers match README/evaluation.md exactly
    `docs/demo_script.md` remains the plan for a human-narrated live
    walkthrough (v1-v2.5) if one is ever recorded; the two are complementary,
-   not duplicates — the video additionally covers v3's browser agent and
-   human-approval gate, which the original script predates.
+   not duplicates — the video additionally covers v3's browser agent, the
+   security layer, and v4's orchestrator and learning engine, all of which
+   postdate the original script.
 4. **Agent trajectories** — `data/evaluation/results/*/trajectories/` for every agent across all versions (baseline_plain, baseline_rag, identityos_v1, identityos_v2, identityos_v2_semantic, identityos_v2_hybrid, identityos_v2_5's four document sections, identityos_browser_v3's single form-fill run, orchestrator_v4's 3 routing decisions plus each one's downstream agent trajectory, learning_engine_v4_1's full hypothesize/counterfactual-test/evaluate/leave-one-out-validate trace), covering all 19 v1 questions, all 14 v2 requirements under all three retrieval backends, all 4 cover-letter sections, all 6 v3 form fields plus the approval checkpoint, all 3 orchestrator routes, and all 11 learning-engine threshold candidates plus 14 leave-one-out folds.
 
 ## Open items carried forward

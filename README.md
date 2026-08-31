@@ -455,15 +455,23 @@ still unfixed: [docs/hot_take.md](docs/hot_take.md).
 
 ## Solution video
 
-[docs/media/solution_video.mp4](docs/media/solution_video.mp4) (3:58).
-Problem and the real fabricated baseline output from v3.3's real-model run,
-Digital Self ingestion, cited-and-verified Q&A, the real v3 browser agent
-filling a real form (actual Playwright screenshots from a live run) through
-to the human-approval halt, the final comparison table, the single
-biggest changelog jump, one rejected experiment (v2.8), and the hot take.
-Narration is synthesized speech (SVOX Pico TTS) with captions, not a human
-recording — every on-screen number and quoted line is pulled verbatim from
-a file already in this repo (docs/hackathon_compliance_check.md traces
+[docs/media/solution_video.mp4](docs/media/solution_video.mp4) (4:29).
+Problem and the real fabricated baseline output from v3.3's real-model run;
+the full agent architecture (generation agent, browser agent, an
+independent security policy engine + auditor, an orchestrator, a learning
+engine — not one model call); the version arc (v1 through v4.1, 35
+documented iterations); Digital Self ingestion and cited-and-verified Q&A;
+a real v2 requirement-fit example (the single most important requirement,
+a self-admitted governance gap, safely under-claimed rather than
+overclaimed); the v4.0 orchestrator routing 3 real requests to 3 real
+agents; the v3 browser agent filling a real form (actual Playwright
+screenshots from a live run) through DOM re-verification, the security
+layer, and the human-approval halt; the v4.1 Learning Engine's real,
+leave-one-out cross-validated result; the final comparison table; the
+single biggest changelog jump; one rejected experiment (v2.8); and the
+hot take. Narration is synthesized speech (SVOX Pico TTS) with captions,
+not a human recording — every on-screen number and quoted line is pulled
+verbatim from a file already in this repo (docs/hackathon_compliance_check.md traces
 each one).
 
 ## Hackathon compliance self-check
