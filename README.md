@@ -407,7 +407,7 @@ Digital Self ingestion, cited-and-verified Q&A, the real v3 browser agent
 filling a real form (actual Playwright screenshots from a live run) through
 to the human-approval halt, the final comparison table, the single
 biggest changelog jump, one rejected experiment (v2.8), and the hot take.
-Narration is synthesized speech (espeak-ng) with captions, not a human
+Narration is synthesized speech (SVOX Pico TTS) with captions, not a human
 recording — every on-screen number and quoted line is pulled verbatim from
 a file already in this repo (docs/hackathon_compliance_check.md traces
 each one).

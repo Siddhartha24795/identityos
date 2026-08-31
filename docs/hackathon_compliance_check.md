@@ -99,7 +99,7 @@ untested scaffolding or silently dropped.
 1. **Complete solution code + improvement changelog** — code in this repo; `docs/improvement_changelog.md` covers all versions, includes removed/partially-fixed/not-promoted/later-superseded/root-caused-twice/tested-and-rejected-twice experiments, closes with failure mode + hot take (per version), through v3.0's two bug fixes.
 2. **Reproduction guide** — README Quickstart + this file; exact commands, no external data needed beyond what's in the repo, runtime is seconds (or ~1 min including a one-time model download for the semantic/hybrid/document arms, or a one-time Chromium download for the browser arm), cost is $0.
 3. **Solution video** — produced: `docs/media/solution_video.mp4` (3:41,
-   1280x720, H.264/AAC). Synthesized narration (espeak-ng) with burned-in
+   1280x720, H.264/AAC). Synthesized narration (SVOX Pico TTS) with burned-in
    captions, not a human screen recording — every on-screen quote, number,
    and citation id is copied verbatim from a real artifact already in this
    repo, not invented for the video:
