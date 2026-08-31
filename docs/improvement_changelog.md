@@ -297,3 +297,45 @@ guarantee and its blindness to this class of bug are the same property,
 not two separate ones — worth naming plainly rather than treating the
 mock-only track record as evidence the pipeline had actually been
 exercised.
+
+---
+
+# v4.0 — Orchestrator
+
+| Stage | What we built and why | Evidence | Decision / learning |
+|---|---|---|---|
+| **Iteration 32 (v4.0)** | `services/orchestrator/router.py`: heuristic keyword/pattern classifier routes a free-text request to one of the three already-built agents (QA, application-fit, browser-fill), then dispatches into their real, unmodified entry points — no fourth agent reimplemented for this. The routing decision itself is written as its own `Trajectory`. | 8 unit tests (`tests/test_orchestrator.py`); `make eval-orchestrator-demo` routes 3 representative requests to all 3 targets correctly, each producing a real downstream result (a cited Q&A answer, a hybrid-retrieval fit assessment, a halted-for-approval browser fill). | Shipped. Deliberately the narrow reading of PROMPT.md's orchestrator — "decide which of the agents that exist are needed," not "build a bigger roster because the brief names one." |
+
+## Main failure mode, v4.0
+
+None found — this iteration shipped clean on the first real test run (8/8
+passed). The interesting design decision was negative: routing to
+application-fit or browser-fill needed synthetic placeholder fields
+(`RealAssessment.PARTIAL`, a fixed local form URL) to satisfy schemas built
+for the benchmark, not live use — documented inline rather than silently
+left implicit, since a future reader could otherwise mistake the
+placeholder for a real assessment.
+
+---
+
+# v4.1 — Learning Engine
+
+| Stage | What we built and why | Evidence | Decision / learning |
+|---|---|---|---|
+| **Iteration 33 (v4.1)** | `services/learning_engine/engine.py`: a real EXPERIENCE → HYPOTHESIS → COUNTERFACTUAL TEST → EVALUATION → PROMOTE/REJECT loop over one concrete, already-instrumented question — below what lexical-evidence-coverage threshold is swapping to semantic retrieval worth its known risk? Operates on the real, already-committed `v2_semantic` per-requirement results; no new LLM calls. | 5 unit tests (`tests/test_learning_engine.py`) on synthetic fixtures (so they don't drift with the real corpus); `make eval-learning-engine` runs it against the real data. | Shipped. |
+| **Iteration 34 (v4.1) — a real bug found while building this, before any doc was written** | First implementation compared the newly-computed learned-policy agreement rate (a raw fraction, e.g. `10/14 = 0.714285714...`) against `application_summary.json`'s already-**rounded** `agreement_rate` field (`0.714`, rounded to 3 decimals for display). | `0.7142857... <= 0.714 + 1e-9` evaluates **False** — the rounded value is very slightly smaller than the true fraction — so the promotion logic concluded the learned policy *beat* hybrid, when it actually matched exactly. Caught by manually cross-checking the "beats hybrid" claim against `10/14` by hand before writing it into any doc. | **Fixed**: every baseline (lexical, hybrid) is now recomputed directly from the unrounded per-requirement `agrees` counts, never read from a pre-rounded summary field. The general lesson, consistent with this project's other precision-adjacent findings: a value rounded for human display is not safe to use in a numeric comparison, even when the rounding looks harmless. |
+| **Iteration 35 (v4.1) — the actual research result** | Grid-searched 11 threshold candidates (0.0-1.0), then validated the promoted one with **leave-one-out cross-validation** — the first evaluation in this project that checks a decision rule against data withheld while the rule was chosen, rather than measuring a fixed system against the same benchmark it was designed against. | Every threshold in (0.0, 0.9] that changes anything reaches the identical result: agreement 0.714, dangerous-overclaim 0.0 — matching v2.4's hand-designed hybrid heuristic exactly, both on the full 14-requirement set and under all 14 leave-one-out folds (every fold independently selected the same threshold). | **No threshold promoted as an improvement** — the search confirms hybrid's hand-designed rule was already at the ceiling a coverage-only signal can reach for this benchmark, rather than silently leaving a better rule undiscovered. A negative result for "did we find something better," a positive one for "was the existing thing actually already good," reported with equal rigor as this project's positive findings (v2.4, v2.6, v2.7) and its other tested-and-rejected ones (v2.8, v2.9). |
+
+## Main failure mode, v4.1 (see docs/hot_take.md's v4.1 addendum)
+
+Coverage is blind to *confidently wrong* evidence: req06, req07, and req14
+all have lexical evidence_coverage of 1.0 (full, well-cited grounding) and
+still disagree with the real human assessment — no coverage-based
+threshold can ever trigger a fallback for them, because the failure isn't
+"not enough evidence was found," it's "the evidence that was found doesn't
+settle the question the way the retrieval score implies it does." This is
+the same finding as v2.9's conclusion (lexical relevance scoring isn't the
+same signal as "which fact actually settles this question"), reached
+independently by an automated search rather than by reading trajectories
+by hand — which is itself worth noting: the algorithmic search and the
+human-driven investigation converged on the same real limit.

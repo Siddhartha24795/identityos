@@ -362,12 +362,17 @@ full text of every section named below):
   consistency/dedup check is the natural v3.3+ item once there's more than
   one recorded application to test against.
 - **Self-improvement safety, identity regression CI, anti-promotion,
-  reward-hacking defense** — all assume a persistent learning/self-
-  improvement loop. This codebase doesn't have one; docs/roadmap.md's v4
-  section already names "Learning engine: EXPERIENCE -> FAILURE ANALYSIS
-  -> HYPOTHESIS -> COUNTERFACTUAL TEST -> PROMOTE/REJECT" as a v4 item.
-  Building CI gates for a loop that doesn't exist would have nothing real
-  to test against.
+  reward-hacking defense** — all assume a *persistent, general* learning/
+  self-improvement loop that keeps running and keeps proposing changes.
+  v4.1 (docs/roadmap.md's v4.1 section) built one scoped instance of the
+  EXPERIENCE -> HYPOTHESIS -> COUNTERFACTUAL TEST -> EVALUATION ->
+  PROMOTE/REJECT loop — a single, one-shot decision (a retrieval-fallback
+  threshold), validated with leave-one-out cross-validation rather than a
+  CI gate. It is not a persistent loop that runs on every future
+  application and proposes its own next hypothesis; building CI/anti-
+  reward-hacking guardrails around that larger, ongoing version of the
+  loop still has nothing real to test against, since that larger loop
+  itself doesn't exist yet.
 - **Domain/phishing validation, credential isolation, OTP-channel
   abstraction, file safety** — all assume real authenticated, multi-domain
   browsing (the current demo is a single local `file://` form) or real
@@ -464,16 +469,66 @@ docs/hot_take.md's v3.3 addendum, docs/improvement_changelog.md
   offline re-verification of already-collected outputs, not a new live
   run, because the Groq free tier's daily token cap was reached first.
 
-## v4 — Multi-agent orchestration + self-improvement  ·  not started
+## v4.0 — Orchestrator  ·  **built**
 
-- Orchestrator that decides which specialized agents are actually needed
-  per task (not a fixed roster) — Identity, Opportunity, Browser,
-  Verification, Contradiction agents from the brief's architecture.
-- Learning engine: EXPERIENCE -> FAILURE ANALYSIS -> HYPOTHESIS ->
-  COUNTERFACTUAL TEST -> PROMOTE/REJECT, never auto-trusting a successful
-  trajectory (docs/research_hypothesis.md #2).
+`services/orchestrator/router.py` classifies a free-text request
+(heuristic keyword/pattern match, not a learned classifier — same
+documented simplification as v1's question-type "classify" stage) and
+dispatches it into exactly one of the three already-built, independently-
+tested agents: QA (v1 `identityos_agent`), application-fit (v2
+`identityos_v2_hybrid`), or browser-fill (v3 `browser_engine.agent`). Its
+own routing decision is written as a first-class Trajectory, separate from
+the routed agent's own trajectory (`make eval-orchestrator-demo`).
+
+**Honestly scoped against the brief's fuller vision:** this is "decide
+which of three existing agents handles this," not the brief's full
+Identity/Opportunity/Browser/Verification/Contradiction multi-agent roster
+with dynamic agent creation. Opportunity discovery and a separate
+Contradiction agent remain v5-scope (below) — there was nothing in this
+codebase yet for an orchestrator to route *to* for either.
+
+## v4.1 — Learning Engine  ·  **built, narrowly scoped**
+
+`services/learning_engine/engine.py` implements EXPERIENCE -> HYPOTHESIS
+-> COUNTERFACTUAL TEST -> EVALUATION -> PROMOTE/REJECT
+(docs/research_hypothesis.md #2: "never auto-trust a successful
+trajectory") for one concrete, already-instrumented decision: below what
+lexical-evidence-coverage threshold does semantic retrieval become worth
+its known risk (docs/evaluation_v2.md's dangerous-overclaim finding)? It
+operates on the real, already-committed v2_semantic per-requirement
+results — no new LLM calls — searches a threshold grid, promotes only a
+candidate that is both dangerous-overclaim-free and at least as good as
+the already-shipped hybrid heuristic, and then validates the promoted rule
+with **leave-one-out cross-validation** (`make eval-learning-engine`) —
+the one place in this project a decision rule is checked against data it
+never saw while being chosen, rather than measured on the same benchmark
+it was designed against (every other version's honest limitation, named
+repeatedly in docs/hot_take.md).
+
+**Real result, not asserted**: no threshold beats hybrid's hand-designed
+rule; the search confirms hybrid was already at the ceiling a
+coverage-only signal can reach for this benchmark, with the same LOO
+numbers (agreement 0.714, dangerous-overclaim 0.0) as the full-set fit —
+a genuine negative-for-improvement, positive-for-validation outcome. Full
+story: docs/improvement_changelog.md's v4.1 entry.
+
+**Honestly scoped against the brief's fuller vision:** this is a
+meta-learning policy over one existing signal and two existing retrieval
+strategies, not a Digital Self mutation, not automatic belief updating,
+and not a general "propose arbitrary code changes" loop — the brief's
+COUNTERFACTUAL_EVALUATION section (question wording changes, a different
+organization asks it, the website layout changes) is a much larger claim
+than "this one retrieval-selection threshold generalizes across held-out
+requirements in this one benchmark," which is what was actually built and
+measured.
+
 - Contradiction graph made explicit and queryable, not just belief-level
-  counter-evidence fields.
+  counter-evidence fields — still not started; would need a second real
+  application (or a second version of this one) with an actual contradiction
+  to detect, not a synthetic one built to exercise the feature.
+- A dynamic multi-agent roster beyond the 3-way orchestrator above (the
+  brief's Identity/Opportunity/Browser/Verification/Contradiction agents
+  as separate, independently-reasoning components) — still not started.
 
 ## v5 — Graph store + opportunity discovery + web UI  ·  not started
 

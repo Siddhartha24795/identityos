@@ -1,0 +1,44 @@
+{
+  "provider": "mock",
+  "embedding_provider": "fastembed",
+  "digital_self_version": 1,
+  "generated_at": "2026-08-31T15:07:13.611239+00:00",
+  "decisions": [
+    {
+      "request_id": "orchestrator_demo_01",
+      "request_text": "What failure taught you the most in your career?",
+      "target": "qa",
+      "matched_signal": "(default \u2014 no browser/fit pattern matched)",
+      "confidence": 0.5,
+      "result_summary": {
+        "result_type": "Answer",
+        "text": "[dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior leadership experience has been at chief level only for the recent part of a ten-year career, in technology organizations rather than membership institutions, and that government/policy relationship-building experience ",
+        "overall_confidence": 0.99
+      }
+    },
+    {
+      "request_id": "orchestrator_demo_02",
+      "request_text": "Does the candidate meet the requirement for deep, hands-on distributed systems experience at scale?",
+      "target": "application_fit",
+      "matched_signal": "\\bdoes (the|this) candidate\\b",
+      "confidence": 0.8,
+      "result_summary": {
+        "result_type": "Assessment",
+        "text": "[dossier_narrative:012] (verified fact) States explicitly that full institutional P&L management at IITACB's scale would be a step up from cost-side ownership at Jinn Labs, and that this is experience not yet held. [dossier_excerpts:008] (verified fact) Siddhartha's own dossier states his senior lea",
+        "overall_confidence": 0.892
+      }
+    },
+    {
+      "request_id": "orchestrator_demo_03",
+      "request_text": "Please fill out the application form for this role",
+      "target": "browser_fill",
+      "matched_signal": "\\bfill\\b",
+      "confidence": 0.9,
+      "result_summary": {
+        "result_type": "BrowserTaskResult",
+        "halted_for_approval": true,
+        "submitted": false
+      }
+    }
+  ]
+}

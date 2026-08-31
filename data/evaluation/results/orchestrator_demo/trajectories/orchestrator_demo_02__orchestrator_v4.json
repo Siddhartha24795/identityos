@@ -1,0 +1,26 @@
+{
+  "question_id": "orchestrator_demo_02",
+  "system_name": "orchestrator_v4",
+  "steps": [
+    {
+      "timestamp": "2026-08-31T15:07:10.806910Z",
+      "stage": "classify_intent",
+      "input_summary": "Does the candidate meet the requirement for deep, hands-on distributed systems experience at scale?",
+      "action": "heuristic pattern match: matched '\\bdoes (the|this) candidate\\b'",
+      "observation": "routed to application_fit",
+      "reasoning": "",
+      "confidence": 0.8,
+      "decision": "application_fit"
+    },
+    {
+      "timestamp": "2026-08-31T15:07:10.806926Z",
+      "stage": "dispatch",
+      "input_summary": "Does the candidate meet the requirement for deep, hands-on distributed systems experience at scale?",
+      "action": "call services.application_engine.assess.assess_identityos_hybrid",
+      "observation": "ad-hoc ApplicationRequirement built from request text; no ground truth available",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    }
+  ]
+}

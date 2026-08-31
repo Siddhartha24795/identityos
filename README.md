@@ -1,4 +1,4 @@
-# IdentityOS — v3.3
+# IdentityOS — v4.1
 
 **An autonomous representative that answers application questions,
 assesses job-requirement fit, generates application documents, and fills
@@ -13,21 +13,27 @@ v2.4), v2.5-v2.9 (document generation, two corpus authoring corrections,
 and two diagnosed-but-rejected retrieval experiments that together
 identify a real boundary of lexical retrieval), v3.0 (a Playwright
 browser agent that fills and browser-verifies a form, gated by a literal,
-unconditional human-approval checkpoint before any submit), and v3.1-v3.2
+unconditional human-approval checkpoint before any submit), v3.1-v3.2
 (anti-bot/MFA/prompt-injection guardrails centralized into an independent
 Security Policy Engine + Agent Auditor control plane, built against a
 larger security spec the project owner provided — preserved verbatim at
 [docs/security_spec.md](docs/security_spec.md) — plus per-application
-answer records for interview prep), and v3.3 (a free, no-credit-card real
+answer records for interview prep), v3.3 (a free, no-credit-card real
 LLM provider — Groq — and this project's first-ever real-model run,
 which found and fixed a third shared-infrastructure bug and honestly
-disclosed hitting the provider's free daily quota mid-verification) of
-that brief — see [docs/roadmap.md](docs/roadmap.md) for what's deferred
-to v3.4-v5 and why. Prior versions frozen at `../identityos-v1/`,
-`../identityos-v2/`, `../identityos-v2.1/`, `../identityos-v2.2/`,
-`../identityos-v2.3/`, `../identityos-v2.4/`, `../identityos-v2.5/`,
-`../identityos-v2.6/`, `../identityos-v2.7/`, `../identityos-v2.8/`,
-`../identityos-v2.9/`, `../identityos-v3.0/`, `../identityos-v3.2/`.
+disclosed hitting the provider's free daily quota mid-verification), and
+v4.0-v4.1 (a real **Orchestrator** that routes a free-text request to the
+right existing agent, and a real **Learning Engine** that searches,
+counterfactually tests, and leave-one-out cross-validates a retrieval
+strategy improvement — see below) of that brief — see
+[docs/roadmap.md](docs/roadmap.md) for what's deferred to v4.2-v5 and why.
+Prior versions frozen at `../identityos-v1/`, `../identityos-v2/`,
+`../identityos-v2.1/`, `../identityos-v2.2/`, `../identityos-v2.3/`,
+`../identityos-v2.4/`, `../identityos-v2.5/`, `../identityos-v2.6/`,
+`../identityos-v2.7/`, `../identityos-v2.8/`, `../identityos-v2.9/`,
+`../identityos-v3.0/`, `../identityos-v3.2/`, `../identityos-v3.3/`, and
+tagged in git (`v1` through `v3.3`) at
+[github.com/Siddhartha24795/identityos/tags](https://github.com/Siddhartha24795/identityos/tags).
 (v3.1's guardrails were superseded by v3.2's centralized control plane in
 the same work session before a separate snapshot was taken.)
 
@@ -72,6 +78,8 @@ make eval-v2-semantic  # v2.3/v2.4: adds the semantic + hybrid retrieval compari
 make eval-documents    # v2.5: generates an actual cover letter with each system
 make eval-browser      # v3.0: fills + browser-verifies a local synthetic application form, halts before submit
 make eval-security-demo # v3.2: combined attack demo (injection/anti-bot/off-topic) alongside legitimate fields
+make eval-orchestrator-demo # v4.0: routes 3 requests to the QA / application-fit / browser-fill agents
+make eval-learning-engine   # v4.1: searches + leave-one-out validates a retrieval-strategy improvement
 ```
 
 Expect each in under 10 seconds, $0 cost — the default `PROVIDER=mock` (LLM)
@@ -102,7 +110,7 @@ target's `PROVIDER` argument — see `services/providers/groq_provider.py`,
 which reuses the `openai` client pointed at Groq's OpenAI-compatible
 endpoint, no new dependency).
 
-Run the smoke test suite: `make test` (66 tests, ~6s including several real
+Run the smoke test suite: `make test` (79 tests, ~9s including several real
 Chromium launches for v3's end-to-end regression tests, no keys/downloads
 beyond the one-time Chromium install needed).
 
@@ -331,6 +339,44 @@ free-tier daily allowance, honestly disclosed rather than hidden. Full
 story: [docs/evaluation.md](docs/evaluation.md)'s v3.3 section,
 [docs/hot_take.md](docs/hot_take.md)'s v3.3 addendum.
 
+**v4.0 — Orchestrator:** `services/orchestrator/router.py` routes a
+free-text request to one of the three already-built agents (QA,
+application-fit, browser-fill) via heuristic pattern matching, then
+dispatches into their real, unmodified entry points. `make
+eval-orchestrator-demo` routes 3 representative requests correctly to all
+3 targets, each producing a real downstream result. This is the narrow,
+purposeful reading of PROMPT.md's orchestrator — deciding between agents
+that already exist, not building a bigger roster because the brief names
+one. Full story: [docs/architecture.md](docs/architecture.md)'s v4.0
+addendum.
+
+**v4.1 — Learning Engine:** a real EXPERIENCE → HYPOTHESIS →
+COUNTERFACTUAL TEST → EVALUATION → PROMOTE/REJECT loop
+(`services/learning_engine/engine.py`) over one concrete question: below
+what lexical-evidence-coverage threshold is semantic retrieval worth its
+known risk? Grid-searched 11 thresholds against the real, already-committed
+`v2_semantic` results, then validated the promoted one with **leave-one-out
+cross-validation** — the first evaluation in this project that checks a
+rule against data withheld while it was chosen, not just measured on the
+same benchmark it was designed against:
+
+| Metric | v2.4's hand-designed hybrid heuristic | v4.1 learned policy (full-set fit) | v4.1 learned policy (leave-one-out) |
+|---|---|---|---|
+| Agreement rate | 0.714 | **0.714** | **0.714** |
+| Dangerous overclaim rate | 0.00 | **0.00** | **0.00** |
+
+No threshold beat the hand-designed rule — a genuine negative-for-
+improvement, positive-for-validation result: the automated search
+confirms hybrid was already at the ceiling a coverage-only signal can
+reach here (three real requirements have full lexical coverage and still
+disagree with ground truth — the failure isn't missing evidence, it's
+evidence that doesn't settle the question), the same limit v2.9 found
+independently by hand. A real precision bug was caught and fixed while
+building this (comparing against a pre-rounded summary value produced a
+false "beats hybrid" verdict). Full story:
+[docs/architecture.md](docs/architecture.md)'s v4.1 addendum,
+[docs/hot_take.md](docs/hot_take.md)'s v4.1 addendum.
+
 ## Improvement changelog
 
 [docs/improvement_changelog.md](docs/improvement_changelog.md) — baseline
@@ -341,12 +387,15 @@ mid-v1-build, (v2) a bucketing rule that overclaimed a real admitted gap
 until a negation check was added, (v3.0) two real bugs — a select-field
 verification mismatch and a shared MockProvider parsing bug dating to
 v2.0 — both found by reading the browser agent's own trajectory output,
-and (v3.2) a page-level security check that would have halted an entire
+(v3.2) a page-level security check that would have halted an entire
 form over one ordinary field's wording, found by building the combined-attack
-demo the security spec itself asked for, and (v3.3) a third shared
+demo the security spec itself asked for, (v3.3) a third shared
 citation-parsing bug — tuned to the mock provider's exact bracket format
-for nine versions — found on this project's first-ever real-model run
-(documented, not hidden).
+for nine versions — found on this project's first-ever real-model run,
+and (v4.1) a precision bug where a full-precision computed rate was
+compared against a pre-rounded JSON summary value, producing a false
+"improvement" verdict before being caught and fixed (documented, not
+hidden, same as every other bug in this list).
 
 ## Main failure mode / hot take
 
@@ -396,12 +445,17 @@ the single highest-stakes question in the v1 benchmark into an
 unnecessary refusal. A codebase's zero-cost, always-green reference path
 being green is not the same claim as "this code has actually been
 exercised" — the gap between them only shows up the first time something
-outside that path runs. Full writeup, including what's still unfixed:
-[docs/hot_take.md](docs/hot_take.md).
+outside that path runs. v4.1: the identical lesson reached from the
+opposite direction — an automated threshold search, validated with
+leave-one-out cross-validation, converges on the exact same limit v2.9
+found by reading trajectories by hand (coverage can't distinguish a real
+gap from confidently-wrong evidence), which is stronger evidence the
+limit is real than either method alone. Full writeup, including what's
+still unfixed: [docs/hot_take.md](docs/hot_take.md).
 
 ## Solution video
 
-[docs/media/solution_video.mp4](docs/media/solution_video.mp4) (3:41).
+[docs/media/solution_video.mp4](docs/media/solution_video.mp4) (3:58).
 Problem and the real fabricated baseline output from v3.3's real-model run,
 Digital Self ingestion, cited-and-verified Q&A, the real v3 browser agent
 filling a real form (actual Playwright screenshots from a live run) through
@@ -434,7 +488,8 @@ packages/schemas/      typed Fact / Belief / Evidence / Question / Answer / Traj
                         DocumentSection / GeneratedDocument /
                         BrowserObservation / BrowserAction / FieldResult / BrowserTaskResult /
                         RiskLevel / PolicyDecision / PolicyResult / AuditVerdict / ActionRecord /
-                        QAEntry / ApplicationRecord
+                        QAEntry / ApplicationRecord / AgentTarget / OrchestratorDecision /
+                        ThresholdCandidate / LeaveOneOutFold / LearningReport
 services/identity_engine/    ingestion + belief seeding + versioned storage
 services/providers/          pluggable LLM backend: mock (default) / openai / anthropic / groq (free)
 services/embeddings/         pluggable embedding backend: hash (default) / fastembed (v2.3)
@@ -449,7 +504,11 @@ services/browser_engine/     v3.0-v3.1: Playwright controller + field mapping +
 services/security/           v3.2: SecurityPolicyEngine + AgentAuditor + audit log —
                               the centralized control plane every browser action passes through
 services/application_record/ v3.2: per-application question/answer records for interview prep
-services/evaluation/         scoring + all four eval harnesses + the security demo
+services/orchestrator/       v4.0: routes a free-text request to the QA / application-fit / browser-fill agent
+services/learning_engine/    v4.1: threshold search + counterfactual test + leave-one-out validation
+                              over the real v2_semantic per-requirement results
+services/evaluation/         scoring + all six eval harnesses (v1, v2, documents, browser, security,
+                              orchestrator) + the learning engine
 data/identity_sources/       the real source documents (owner's own, consented)
 data/applications/           the real 14-requirement application + its real human ground truth,
                               local synthetic forms for the v3 browser demo and adversarial tests,

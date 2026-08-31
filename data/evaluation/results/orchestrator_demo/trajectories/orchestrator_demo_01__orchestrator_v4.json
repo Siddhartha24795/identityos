@@ -1,0 +1,26 @@
+{
+  "question_id": "orchestrator_demo_01",
+  "system_name": "orchestrator_v4",
+  "steps": [
+    {
+      "timestamp": "2026-08-31T15:07:10.804774Z",
+      "stage": "classify_intent",
+      "input_summary": "What failure taught you the most in your career?",
+      "action": "heuristic pattern match: matched '(default — no browser/fit pattern matched)'",
+      "observation": "routed to qa",
+      "reasoning": "",
+      "confidence": 0.5,
+      "decision": "qa"
+    },
+    {
+      "timestamp": "2026-08-31T15:07:10.804799Z",
+      "stage": "dispatch",
+      "input_summary": "What failure taught you the most in your career?",
+      "action": "call services.qa_engine.identityos_agent.answer_identityos",
+      "observation": "Question.type defaulted to UNSEEN_INFERENTIAL (conservative)",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    }
+  ]
+}

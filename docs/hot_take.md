@@ -415,3 +415,37 @@ mean something once a real, paraphrasing LLM is plugged in. See
 docs/evaluation.md's "Limitation" section for the honest version of this
 story — the mock-provider ceiling this created is still there, just
 labeled instead of hidden.
+
+## v4.1 addendum — a search converges on the same limit a human found by hand
+
+The Learning Engine (docs/architecture.md's v4.1 addendum) grid-searched
+eleven lexical-evidence-coverage thresholds for when semantic retrieval is
+worth its known risk, then validated the promoted one with leave-one-out
+cross-validation — the first evaluation in this project that checks a
+rule against data withheld while the rule was being chosen. It found
+nothing better than v2.4's hand-designed hybrid heuristic: every useful
+threshold reaches the identical 0.714 agreement / 0.0 dangerous-overclaim
+result, both on the full set and under all 14 held-out folds.
+
+The reason is visible in the per-requirement data: req06, req07, and req14
+all have lexical evidence_coverage of 1.0 — full, confident grounding —
+and still disagree with the real human assessment. No coverage-based
+threshold can ever help these, because the failure isn't "not enough
+evidence was retrieved," it's "the retrieved evidence doesn't settle the
+question the way its coverage score implies." That is exactly v2.9's
+conclusion (lexical relevance scoring isn't the same signal as "which fact
+actually settles this question"), reached independently months of
+project-versions apart, once by a human reading trajectories by hand and
+once by an automated search over a hypothesis space the human never fully
+enumerated. Two independent methods hitting the identical wall is stronger
+evidence the wall is real than either method alone would be.
+
+A smaller, second finding from the same build: comparing a freshly
+computed, full-precision agreement rate against a pre-rounded JSON summary
+value (`0.714` vs. the true `10/14 = 0.7142857...`) produced a false "the
+learned policy beats hybrid" verdict before it was caught and fixed —
+caught by manually checking the specific claim against the raw fraction
+before writing it into a doc, not by any test. The general lesson: a value
+rounded for human-readable display is not safe to reuse in a numeric
+comparison, even when the rounding looks negligible. See
+docs/improvement_changelog.md's v4.1 entry for the full story.

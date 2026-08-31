@@ -67,6 +67,23 @@ eval-browser-real-groq: build-identity
 eval-security-demo: build-identity
 	.venv/bin/python scripts/run_security_demo.py mock security_demo fastembed
 
+# v4.0 — routes 3 representative free-text requests (a Q&A question, a
+# fit-assessment question, a fill-out-the-form request) through the
+# orchestrator, which dispatches each into the real v1/v2/v3 agent rather
+# than a fourth thing built for this demo — see docs/architecture.md's
+# v4.0 section.
+eval-orchestrator-demo: build-identity
+	.venv/bin/python scripts/run_orchestrator_demo.py mock orchestrator_demo fastembed
+
+# v4.1 — Learning Engine: searches retrieval-fallback thresholds against
+# the real, already-committed v2_semantic run, promotes/rejects each by
+# counterfactual test against real per-requirement outcomes, and validates
+# the promoted rule with leave-one-out cross-validation. Needs
+# `make eval-v2-semantic` to have been run at least once (writes the
+# source data this reads). See docs/architecture.md's v4.1 section.
+eval-learning-engine:
+	.venv/bin/python scripts/run_learning_engine.py v2_semantic learning_v4_1
+
 test:
 	.venv/bin/python -m pytest tests/ -q
 

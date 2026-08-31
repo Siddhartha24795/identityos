@@ -194,7 +194,64 @@ complete, itemized scoping decision. Full story, including a real bug
 found while building the demo the spec itself required:
 docs/evaluation_browser.md's v3.2 addendum.
 
-## What is explicitly NOT in v1, v2, or v3
+## v4.0 addendum — Orchestrator
+
+`services/orchestrator/router.py`'s `classify_intent()` is a heuristic
+keyword/pattern match over free text (documented as such — same
+simplification as v1's "classify" stage) that decides which of three
+already-built agents a request goes to: QA (v1), application-fit (v2's
+hybrid arm), or browser-fill (v3). `route_and_execute()` then actually
+dispatches into the real functions — `answer_identityos()`,
+`assess_identityos_hybrid()`, `run_application()` — not a fourth
+reimplementation of any of them. The orchestrator's own routing decision
+is written as its own `Trajectory` (stage `classify_intent`, then
+`dispatch`), stored alongside the downstream agent's trajectory so a judge
+can audit "why did this go here" independently of "what did the routed
+agent do" (`make eval-orchestrator-demo`,
+`data/evaluation/results/orchestrator_demo/`).
+
+This is deliberately the narrow reading of PROMPT.md's orchestrator
+("decide which agents are actually necessary," not "instantiate N agents
+because the brief mentions them") — three real, useful routes, not a
+larger roster with nothing yet built for the extra routes to lead to.
+
+## v4.1 addendum — Learning Engine
+
+`services/learning_engine/engine.py` runs a real
+EXPERIENCE → HYPOTHESIS → COUNTERFACTUAL TEST → EVALUATION →
+PROMOTE/REJECT loop against one already-instrumented question: is there a
+lexical-evidence-coverage threshold below which swapping to semantic
+retrieval is worth its known risk (the dangerous-overclaim finding from
+v2.3/docs/evaluation_v2.md)? It reads the real, already-committed
+`v2_semantic` per-requirement results (no new LLM calls), grid-searches
+threshold candidates, and — critically — validates the promoted
+threshold with **leave-one-out cross-validation**: for each requirement,
+the threshold is chosen using only the *other* 13 requirements' outcomes,
+then applied to the held-out one. This is the one evaluation in this whole
+project that checks a decision rule against data it did not see while
+being chosen, rather than measuring a fixed system against the same
+benchmark it was designed against (a limitation named honestly in
+docs/hot_take.md at nearly every version).
+
+**The real result**: no threshold beats the hand-designed hybrid
+heuristic (`retrieve_hybrid()`, v2.4) — every promoted candidate matches
+its exact 0.714 agreement / 0.0 dangerous-overclaim rate, both on the
+full 14-requirement fit and under leave-one-out validation. This is a
+genuine negative-for-improvement result and a positive-for-validation one:
+an automated search over a wider hypothesis space than the hand-designed
+rule confirms hybrid was already at the ceiling a coverage-only signal can
+reach here, rather than silently leaving a better rule undiscovered. A
+real bug was caught building this (comparing a full-precision computed
+rate against a pre-rounded JSON summary value produced a false "beats
+hybrid" verdict) — fixed by deriving every baseline from unrounded
+per-requirement counts; see docs/improvement_changelog.md's v4.1 entry.
+
+Honestly scoped: this is a meta-learning policy over one signal and two
+existing strategies, not a Digital Self mutation, and not a persistent
+loop that keeps running and proposing its own next hypothesis — see
+docs/roadmap.md's v4.1 section for exactly where that line is drawn.
+
+## What is explicitly NOT in v1-v4.1
 
 - Multi-page navigation, file uploads (docs/roadmap.md v3.3+) — v3.0's
   synthetic form has none of these, so nothing has been built or tested
@@ -204,9 +261,12 @@ docs/evaluation_browser.md's v3.2 addendum.
 - A real third-party browser target — v3.0 demonstrates against a local,
   offline, synthetic form the project controls, for the same reason v1/v2
   use the author's own documents rather than a scraped corpus.
-- Multi-agent orchestrator, opportunity discovery, application strategy
-  narrative planning (v4)
-- Self-improvement / learning engine with counterfactual promotion (v4)
+- A dynamic multi-agent roster beyond the 3-way orchestrator (v4.0) —
+  opportunity discovery and a separate contradiction agent (v5)
+- A *persistent* self-improvement loop that keeps running and proposes
+  its own next hypothesis — v4.1 built one scoped, one-shot instance of
+  the EXPERIENCE→HYPOTHESIS→COUNTERFACTUAL TEST→PROMOTE/REJECT loop,
+  not an ongoing one
 - Graph database, web UI, Next.js frontend (v5)
 - Automatic belief inference from unstructured documents (v1/v2 hand-seed
   4 beliefs from already-ingested facts instead; deferred to v2.1)

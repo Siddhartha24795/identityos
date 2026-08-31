@@ -1,0 +1,26 @@
+{
+  "question_id": "orchestrator_demo_03",
+  "system_name": "orchestrator_v4",
+  "steps": [
+    {
+      "timestamp": "2026-08-31T15:07:10.808856Z",
+      "stage": "classify_intent",
+      "input_summary": "Please fill out the application form for this role",
+      "action": "heuristic pattern match: matched '\\bfill\\b'",
+      "observation": "routed to browser_fill",
+      "reasoning": "",
+      "confidence": 0.9,
+      "decision": "browser_fill"
+    },
+    {
+      "timestamp": "2026-08-31T15:07:10.811383Z",
+      "stage": "dispatch",
+      "input_summary": "Please fill out the application form for this role",
+      "action": "call services.browser_engine.agent.run_application",
+      "observation": "form_url=file:///home/siddhartha/siddhartha/features/identityos/data/applications/local_demo/application_form.html",
+      "reasoning": "",
+      "confidence": null,
+      "decision": ""
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "source_tag": "v2_semantic",
+  "generated_at": "2026-08-31T15:07:13.894157+00:00",
+  "report": {
+    "candidates": [
+      {
+        "threshold": 0.0,
+        "train_agreement_rate": 0.5714285714285714,
+        "train_dangerous_overclaim_rate": 0.0,
+        "n_semantic_used": 0,
+        "promoted": false,
+        "rationale": "rejected: agreement 0.571 does not beat the already-shipped hybrid heuristic's 0.714"
+      },
+      {
+        "threshold": 0.1,
+        "train_agreement_rate": 0.7142857142857143,
+        "train_dangerous_overclaim_rate": 0.0,
+        "n_semantic_used": 2,
+        "promoted": true,
+        "rationale": "promoted: matches/beats hybrid (0.714 >= 0.714) with zero dangerous overclaims"
+      },
+      {
+        "threshold": 0.2,
+        "train_agreement_rate": 0.7142857142857143,
+        "train_dangerous_overclaim_rate": 0.0,
+        "n_semantic_used": 2,
+        "promoted": true,
+        "rationale": "promoted: matches/beats hybrid (0.714 >= 0.714) with zero dangerous overclaims"
+      },
+      {
+        "threshold": 0.3,
+        "train_agreement_rate": 0.7142857142857143,
+        "train_dangerous_overclaim_rate": 0.0,
+        "n_semantic_used": 2,
+        "promoted": true,
+        "rationale": "promoted: matches/beats hybrid (0.714 >= 0.714) with zero dangerous overclaims"
+      },
+      {
+        "threshold": 0.4,
+        "train_agreement_rate": 0.7142857142857143,
+        "train_dangerous_overclaim_rate": 0.0,
+        "n_semantic_used": 2,
+        "promoted": true,
+        "rationale": "promoted: matches/beats hybrid (0.714 >= 0.714) with zero dangerous overclaims"
+      },
+      {
+        "threshold": 0.5,
+        "train_agreement_rate": 0.7142857142857143,
+        "train_dangerous_overclaim_rate": 0.0,
+        "n_semantic_used": 2,
+        "promoted": true,
+        "rationale": "promoted: matches/beats hybrid (0.714 >= 0.714) with zero dangerous overclaims"
+      },
+      {
+        "threshold": 0.6,
+        "train_agreement_rate": 0.7142857142857143,
+        "train_dangerous_overclaim_rate": 0.0,
+        "n_semantic_used": 2,
+        "promoted": true,
+        "rationale": "promoted: matches/beats hybrid (0.714 >= 0.714) with zero dangerous overclaims"
+      },
+      {
+        "threshold": 0.7,
+        "train_agreement_rate": 0.7142857142857143,
+        "train_dangerous_overclaim_rate": 0.0,
+        "n_semantic_used": 2,
+        "promoted": true,
+        "rationale": "promoted: matches/beats hybrid (0.714 >= 0.714) with zero dangerous overclaims"
+      },
+      {
+        "threshold": 0.8,
+        "train_agreement_rate": 0.7142857142857143,
+        "train_dangerous_overclaim_rate": 0.0,
+        "n_semantic_used": 2,
+        "promoted": true,
+        "rationale": "promoted: matches/beats hybrid (0.714 >= 0.714) with zero dangerous overclaims"
+      },
+      {
+        "threshold": 0.9,
+        "train_agreement_rate": 0.7142857142857143,
+        "train_dangerous_overclaim_rate": 0.0,
+        "n_semantic_used": 3,
+        "promoted": true,
+        "rationale": "promoted: matches/beats hybrid (0.714 >= 0.714) with zero dangerous overclaims"
+      },
+      {
+        "threshold": 1.0,
+        "train_agreement_rate": 0.7142857142857143,
+        "train_dangerous_overclaim_rate": 0.0,
+        "n_semantic_used": 3,
+        "promoted": true,
+        "rationale": "promoted: matches/beats hybrid (0.714 >= 0.714) with zero dangerous overclaims"
+      }
+    ],
+    "promoted_threshold": 0.1,
+    "per_requirement_choice": {
+      "req01": "lexical",
+      "req02": "lexical",
+      "req03": "lexical",
+      "req04": "lexical",
+      "req05": "semantic",
+      "req06": "lexical",
+      "req07": "lexical",
+      "req08": "lexical",
+      "req09": "lexical",
+      "req10": "semantic",
+      "req11": "lexical",
+      "req12": "lexical",
+      "req13": "lexical",
+      "req14": "lexical"
+    },
+    "baseline_lexical_agreement_rate": 0.5714285714285714,
+    "baseline_hybrid_agreement_rate": 0.7142857142857143,
+    "learned_agreement_rate": 0.7142857142857143,
+    "learned_dangerous_overclaim_rate": 0.0,
+    "loo_folds": [
+      {
+        "held_out_requirement_id": "req01",
+        "selected_threshold": 0.1,
+        "choice": "lexical",
+        "agreed": true,
+        "dangerous_overclaim": false
+      },
+      {
+        "held_out_requirement_id": "req02",
+        "selected_threshold": 0.1,
+        "choice": "lexical",
+        "agreed": true,
+        "dangerous_overclaim": false
+      },
+      {
+        "held_out_requirement_id": "req03",
+        "selected_threshold": 0.1,
+        "choice": "lexical",
+        "agreed": true,
+        "dangerous_overclaim": false
+      },
+      {
+        "held_out_requirement_id": "req04",
+        "selected_threshold": 0.1,
+        "choice": "lexical",
+        "agreed": true,
+        "dangerous_overclaim": false
+      },
+      {
+        "held_out_requirement_id": "req05",
+        "selected_threshold": 0.1,
+        "choice": "semantic",
+        "agreed": true,
+        "dangerous_overclaim": false
+      },
+      {
+        "held_out_requirement_id": "req06",
+        "selected_threshold": 0.1,
+        "choice": "lexical",
+        "agreed": false,
+        "dangerous_overclaim": false
+      },
+      {
+        "held_out_requirement_id": "req07",
+        "selected_threshold": 0.1,
+        "choice": "lexical",
+        "agreed": false,
+        "dangerous_overclaim": false
+      },
+      {
+        "held_out_requirement_id": "req08",
+        "selected_threshold": 0.1,
+        "choice": "lexical",
+        "agreed": true,
+        "dangerous_overclaim": false
+      },
+      {
+        "held_out_requirement_id": "req09",
+        "selected_threshold": 0.1,
+        "choice": "lexical",
+        "agreed": true,
+        "dangerous_overclaim": false
+      },
+      {
+        "held_out_requirement_id": "req10",
+        "selected_threshold": 0.1,
+        "choice": "semantic",
+        "agreed": true,
+        "dangerous_overclaim": false
+      },
+      {
+        "held_out_requirement_id": "req11",
+        "selected_threshold": 0.1,
+        "choice": "lexical",
+        "agreed": false,
+        "dangerous_overclaim": false
+      },
+      {
+        "held_out_requirement_id": "req12",
+        "selected_threshold": 0.1,
+        "choice": "lexical",
+        "agreed": true,
+        "dangerous_overclaim": false
+      },
+      {
+        "held_out_requirement_id": "req13",
+        "selected_threshold": 0.1,
+        "choice": "lexical",
+        "agreed": true,
+        "dangerous_overclaim": false
+      },
+      {
+        "held_out_requirement_id": "req14",
+        "selected_threshold": 0.1,
+        "choice": "lexical",
+        "agreed": false,
+        "dangerous_overclaim": false
+      }
+    ],
+    "loo_agreement_rate": 0.7142857142857143,
+    "loo_dangerous_overclaim_rate": 0.0,
+    "conclusion": "Promoted threshold=0.1 matches (does not exceed) the hand-designed hybrid heuristic's 0.714 agreement rate at 0.0 dangerous overclaims. This is a genuine negative-for-improvement, positive-for-validation result: an automated search over a wider hypothesis space than the hand-designed rule confirms the hand-designed rule was already at the ceiling a coverage-only signal can reach here \u2014 it does not find a better rule, it proves one wasn't being left on the table. Leave-one-out cross-validation (agreement=0.714, dangerous_overclaim=0.000) confirms this holds under held-out validation, not just a fit to all 14 items at once."
+  }
+}
